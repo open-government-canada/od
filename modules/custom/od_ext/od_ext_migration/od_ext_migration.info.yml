@@ -6,6 +6,7 @@ package: 'Open Data'
 
 # Required modules
 dependencies:
+  - drupal:bootstrap_layouts
   - drupal:migrate
   - drupal:migrate_plus
   - drupal:migrate_tools
@@ -13,4 +14,5 @@ dependencies:
   - drupal:od_ext_suggested_dataset
   - drupal:od_ext_taxonomy
   - drupal:od_ext_vote
+  - drupal:webform_migrate
   - drupal:wxt_ext_media_slideshow

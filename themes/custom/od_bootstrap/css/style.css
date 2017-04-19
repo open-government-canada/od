@@ -1,3 +1,39 @@
 /**
  * Place your custom styles here.
  */
+
+.pillars {
+    background-color: #eaebed;
+    display: inline-block;
+    padding: 10px 5px;
+}
+
+.pillars .ogov {
+    vertical-align: middle;
+}
+
+.pillars h2 {
+    display: inline;
+    font-size: 16px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pillars ul {
+    display: inline;
+    margin-left: 5px;
+    padding-left: 0;
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.pillars ul li {
+    display: inline-block;
+    margin: 0px 15px 0px 0px;
+    padding: 0;
+}
+
+.pillars ul li a {
+    color: #284162 !important;
+    text-decoration: none;
+}

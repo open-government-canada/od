@@ -12,10 +12,10 @@ source:
 process:
   filename: filename
   source_full_path:
-    plugin: od_priv_path
+    plugin: wxt_priv_path
     source: uri
   destination_full_path:
-    plugin: od_dest_path
+    plugin: wxt_dest_path
     source: uri
   uri:
     plugin: file_copy

@@ -1,0 +1,568 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+id: od_ext_node_landing_page
+migration_tags: null
+migration_group: od
+label: 'Embedded data feed of node landing page content'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      name: homepage
+      title: 'Open Government'
+      language: en
+      body: |
+        <p>Welcome to Canada’s new Open Government portal. Here you can explore
+        how the Government of Canada is working with the national and
+        international open government community to create greater transparency
+        and accountability, increase citizen engagement, and drive innovation
+        and economic opportunities through open data, open information, and
+        open dialogue.</p>
+      alias: /homepage
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 5
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: top_left
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:block_home'
+              label: Home
+              label_display: 0
+              region: top_left
+              view_mode: full
+              weight: 15
+            -
+              id: 'views_block:landing_page-block_1'
+              label: 'Landing page'
+              label_display: 0
+              region: top_left
+              view_mode: full
+              weight: 20
+            -
+              id: 'views_block:blog-block_1'
+              label: 'Latest blogs'
+              label_display: visible
+              region: top_right
+              view_mode: full
+              weight: 5
+            -
+              id: 'views_block:datasets-block_1'
+              label: 'Latest datasets'
+              label_display: visible
+              region: top_right
+              view_mode: full
+              weight: 5
+            -
+              id: 'entity_block:homepage'
+              label: Media
+              label_display: 0
+              region: top_right
+              view_mode: default
+              weight: 0
+            -
+              id: 'views_block:blocks-block_1'
+              label: 'Spotlight'
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-lg'
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: open_data
+      title: 'Open Data'
+      language: en
+      body: |
+        <p>Search open data that is relevant to Canadians, learn how to work
+        with datasets, and see what people have done with open data across
+        the country.</p>
+      alias: /open-data
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 1
+            -
+              id: 'block_content:block_open_data'
+              label: 'Open Data'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 0
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: open_dialogue
+      title: 'Open Dialogue'
+      language: en
+      body: |
+        <p>Open dialogue is the opportunity for all Canadians to weigh in and
+        help guide the Government of Canada’s efforts towards increased
+        transparency, public engagement, and improved access.</p>
+        <p>Join Canada’s open government community by interacting with those
+        who have a similar interest, participating in consultations, or
+        showcasing how you use Government of Canada datasets an
+        information.</p>
+      alias: /open-dialogue
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 1
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: open_info
+      title: 'Open Information'
+      language: en
+      body: |
+        <p>The goal of Open information is to provide easy access to all of the
+        Government of Canada’s information. This provides Canadians with
+        greater transparency of government programs, activities, publications
+        and spending.</p>
+      alias: /open-information
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 1
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: about_open_gov
+      title: 'About Open Government'
+      language: en
+      body: |
+        <p>Open Government is about making government more accessible to
+        everyone. This means giving greater access to government data and
+        information to the Canadian public and the businesses community.</p>
+      alias: /about-open-government
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 1
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+  ids:
+    name:
+      type: string
+process:
+  title: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: landing_page
+  sticky:
+    plugin: default_value
+    default_value: 0
+  body/value:
+    plugin: wxt_media_tags
+    source: body
+  body/format:
+    plugin: default_value
+    default_value: rich_text
+  langcode: language
+  path/pathauto:
+    plugin: default_value
+    default_value: 0
+  path/alias: alias
+  panelizer:
+    plugin: iterator
+    source: panelizer
+    process:
+      view_mode:
+        plugin: static_map
+        source: view_mode
+        bypass: true
+        map:
+          default: default
+          page_manager: full
+      default: default
+      panels_display/blocks:
+        plugin: wxt_block_plugin_id
+        source: blocks
+      panels_display/layout: layout
+      panels_display/layout_settings: layout_settings
+      panels_display/page_title: page_title
+      panels_display/storage_type: storage_type
+      panels_display/storage_id: storage_id
+      panels_display/pattern: pattern
+      panels_display/builder: builder
+      panels_display/static_context: static_context
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - od_ext_block_basic
+    - od_ext_block_search
+    - od_ext_block_spotlight
+    - od_ext_media_slideshow

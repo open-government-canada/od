@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_consultation_status
     - node.type.consultation
     - taxonomy.vocabulary.consultation_status
-_core:
-  default_config_hash: GXqgDMWhEeG8nej8ZLsxkvUKh4F64Rv9LqQHICqGXdY
 id: node.consultation.field_consultation_status
 field_name: field_consultation_status
 entity_type: node

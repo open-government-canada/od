@@ -1,0 +1,82 @@
+id: od_ext_block_basic
+migration_tags: null
+migration_group: od
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Embedded data import for custom block types (basic)'
+source:
+  plugin: embedded_data
+  # Enforce default language to english
+  default_lang: true
+  data_rows:
+    - bid: 'pillars'
+      language: 'en'
+      title: 'Pillars'
+      body: |
+        <section class="pillars mrgn-tp-md mrgn-bttm-md">
+          <h2>Follow:</h2>
+          <ul>
+            <li>
+              <a href="https://twitter.com/OpenGovCan" title="Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="wb-inv">Twitter</span></a>
+            </li>
+            <li>
+              <a href="http://open.canada.ca/en/rss-feeds" title="RSS">
+              <i class="fa fa-rss"></i>
+              <span class="wb-inv">RSS</span></a>
+            </li>
+            <li>
+              <a href="http://open.canada.ca/en/blog" title="Blog">
+              <i class="ogov opengov-blog"></i>
+              <span class="wb-inv">Blog</span></a>
+            </li>
+            <li>
+              <a href="http://open.canada.ca/en/about-open-government" title="About Open Government">
+              <i class="ogov opengov-open-gov"></i>
+              <span class="wb-inv">About Open Government</span></a>
+            </li>
+            <li>
+              <a href="http://open.canada.ca/en/open-data" title="Open Data">
+              <i class="ogov opengov-open-data"></i>
+              <span class="wb-inv">Open Data</span></a>
+            </li>
+            <li>
+              <a href="http://open.canada.ca/en/open-information" title="Open Information">
+              <i class="ogov opengov-open-info"></i>
+              <span class="wb-inv">Open Information</span></a>
+            </li>
+            <li>
+              <a href="http://open.canada.ca/en/open-dialogue" title="Open Dialogue">
+              <i class="ogov opengov-open-dialog"></i>
+              <span class="wb-inv">Open Dialogue</span></a>
+            </li>
+          </ul>
+        </section>
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    bid:
+      type: string
+process:
+  id: bid
+  info: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  'body/value': body
+  'body/format':
+    plugin: default_value
+    default_value: full_html
+  langcode: language
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: basic
+  no_stub: true
+migration_dependencies:
+  required:
+    - od_ext_db_file
+    - od_ext_db_taxonomy_term

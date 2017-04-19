@@ -14,6 +14,7 @@ dependencies:
   - drupal:od_ext_dataset
   - drupal:od_ext_deliverable
   - drupal:od_ext_idea
+  - drupal:od_ext_search
   - drupal:od_ext_suggested_app
   - drupal:od_ext_suggested_dataset
   - drupal:od_ext_taxonomy

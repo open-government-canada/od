@@ -13,8 +13,6 @@ dependencies:
     - path
     - text
     - workbench_moderation
-_core:
-  default_config_hash: y7kkV30wxJ3DWVG3fd3Rgm6P6qT3updrFXstuRcuem8
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation

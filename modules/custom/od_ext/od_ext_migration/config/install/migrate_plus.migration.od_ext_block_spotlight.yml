@@ -1,0 +1,73 @@
+id: od_ext_block_spotlight
+migration_tags: null
+migration_group: od
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Embedded data import for custom block types (spotlight)'
+source:
+  plugin: embedded_data
+  # Enforce default language to english
+  default_lang: true
+  data_rows:
+    - bid: 'open_gov_across_canada'
+      language: 'en'
+      title: 'Open government across Canada'
+      body: |
+        <p>Explore open government programs and events from coast to coast to
+        coast, get information and tools to help build your own portal,
+        including implementing the Open Government Licence in your
+        jurisdiction.</p>
+      fid: 1723
+      file_alt: 'A map of Canada'
+      file_title: ''
+    - bid: 'open_maps'
+      language: 'en'
+      title: 'Open maps'
+      body: |
+        <p>Explore the Government of Canada’s geospatial data, services, and
+        applications and create customized maps.</p>
+      fid: 1639
+      file_alt: 'Open Maps'
+      file_title: ''
+    - bid: 'open_gov_partnership'
+      language: 'en'
+      title: 'Third Biennial Plan to the Open Government Partnership (2016-18)'
+      body: |
+        <p>Read our Third Biennial Plan to the Open Government Partnership to
+        see where Open Government is going.</p>
+      fid: 1693
+      file_alt: 'Final action plan'
+      file_title: ''
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    bid:
+      type: string
+process:
+  id: bid
+  info: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  'body/value': body
+  'body/format':
+    plugin: default_value
+    default_value: rich_text
+  langcode: language
+  field_spotlight_image/target_id:
+    plugin: migration
+    migration: od_ext_db_file
+    source: fid
+  field_spotlight_image/alt: file_alt
+  field_spotlight_image/title: file_title
+destination:
+  plugin: entity:block_content
+  default_bundle: spotlight
+  no_stub: true
+migration_dependencies:
+  required:
+    - od_ext_db_file
+    - od_ext_db_taxonomy_term

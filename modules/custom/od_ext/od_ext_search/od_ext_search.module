@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Contains od_ext_search.module.
+ */
+
+use Drupal\node\Entity\NodeType;
+
+/**
+ * Implements hook_modules_installed().
+ */
+function od_ext_search_modules_installed(array $modules) {
+  if (in_array('lightning_search', $modules)) {
+    $node_type = NodeType::load('search');
+    lightning_search_node_type_insert($node_type);
+  }
+}

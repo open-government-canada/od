@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Contains installation and update routines.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function od_ext_search_install() {
+  if (\Drupal::moduleHandler()->moduleExists('lightning_search')) {
+    od_ext_search_modules_installed(['lightning_search']);
+  }
+}

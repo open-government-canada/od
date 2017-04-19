@@ -26,7 +26,7 @@ process:
     plugin: default_value
     default_value: 0
   body/value:
-    plugin: media_tags
+    plugin: wxt_media_tags
     source: body
   body/format:
     plugin: default_value

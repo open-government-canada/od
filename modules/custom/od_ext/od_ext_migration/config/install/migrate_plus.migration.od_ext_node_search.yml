@@ -1,0 +1,846 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+id: od_ext_node_search
+migration_tags: null
+migration_group: od
+label: 'Embedded data feed of node search content'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      name: contracts
+      title: 'Search Government Contracts'
+      language: en
+      body: |
+        <p>A policy on the mandatory publication of contracts over $10,000 was
+        announced by the Government of Canada in 2004 and updated in 2008 to
+        include disclosure of contract amendments valued over $10,000. For
+        further information on the disclosure of contracts please see the
+        <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?section=text&amp;id=14676">
+        <em>Guidelines on the Proactive Disclosure of Contracts</em></a>.</p>
+
+        <p>Information on contracts issued/amended by or on behalf of federal
+        institutions can be searched here using keyword, institution, quarter,
+        and year. Effective November 2014, contracts awarded by the federal
+        government in will be available for review and updated every three
+        months.</p>
+
+        <p>The Treasury Board
+        <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?section=text&amp;id=14494">
+        Contracting Policy</a> outlines the rules and principles governing
+        government contracting. The objective is to procure contracting of
+        goods and services in a manner that enhances access, competition and
+        fairness and results in best value to Canada. For further information
+        on federal government procurement, please visit
+        <a href="https://buyandsell.gc.ca/">Buyandsell.gc.ca</a>.</p>
+
+        <p>This site adheres to <em>Access to Information Act</em> and
+        <em>Privacy Act</em> requirements.</p>
+
+        <p><a href="http://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b">
+        Download datasets of the Proactive Disclosure - Contracts</a>.</p>
+      alias: /search/contracts
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 5
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-lg'
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:search:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: grants
+      title: 'Search Government Grants and Contributions'
+      language: en
+      body: |
+        <p>On October 21, 2005, the Government announced its commitment to
+        proactively disclose the awarding of grants and contributions over
+        $25,000 as part of its Management Improvement Agenda.</p>
+
+        <p>The rules and principles governing government grants and
+        contributions are outlined in the Treasury Board
+        <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=13525">
+        Policy on Transfer Payments</a>. Transfer payments are transfers of
+        money, goods, services or assets made from an appropriation to
+        individuals, organizations or other levels of government, without the
+        federal government directly receiving goods or services in return,
+        but which may require the recipient to provide a report or other
+        information subsequent to receiving payment. These expenditures are
+        reported in the
+        <a href="http://www.tpsgc-pwgsc.gc.ca/recgen/txt/72-eng.html">
+        Public Accounts of Canada</a>. The major types of transfer payments are
+        grants, contributions and 'other transfer payments'.</p>
+
+        <p>Included in this category, but not to be reported under proactive
+        disclosure of awards, are (1) transfers to other levels of government
+        such as Equalization payments as well as Canada Health and Social
+        Transfer payments. (2) Grants and contributions reallocated or
+        otherwise redistributed by the recipient to third parties; and (3)
+        information that would normally be withheld under the
+        <a href="http://laws-lois.justice.gc.ca/eng/acts/A-1/index.html">
+        <em>Access to Information Act</em></a> and the
+        <a href="http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html">
+        <em>Privacy Act</em></a>.</p>
+
+        <p><a href="http://open.canada.ca/data/en/dataset/432527ab-7aac-45b5-81d6-7597107a7013">
+        Download datasets of the Proactive Disclosure - Grants and
+        Contributions</a>.</p>
+      alias: /search/grants
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 5
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-lg'
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:search:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: reclassifications
+      title: 'Search Government Position Reclassifications'
+      language: en
+      body: |
+        <p>On February 25,&nbsp;2004, the government announced the mandatory
+        publication of information concerning the reclassification of positions
+        in the Public Service of Canada.</p>
+
+        <p>This web site provides information on the reclassification of
+        positions by department and agencies on a quarterly basis.</p>
+
+        <p>The rules and principles governing the reclassification of positions
+        are outlined in the Appendix I of the&nbsp;
+        <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28700">
+        Directive on Classification</a>.</p>
+
+        <p>Reclassification of positions in the Public Service of Canada is an
+        important and necessary business management option. However, when
+        contemplating changes to a position that may result in
+        reclassification, management must endeavour to ensure the proper,
+        effective and efficient use of public money. The cost implication
+        associated with upward reclassification must be known, transparent and
+        support accountability for classification decisions.</p>
+
+        <p><a href="http://www.tbs-sct.gc.ca/hgw-cgf/finances/rgs-erdg/pd-dp/index-eng.asp">
+        Government-Wide Position Reclassification Departmental Web Sites</a>
+        information on these websites will be updated every three months,
+        starting in October&nbsp;2004.</p>
+
+        <p>Please note that information that would normally be withheld under
+        the&nbsp;<a href="http://laws-lois.justice.gc.ca/eng/acts/A-1/index.html">
+        Access to Information Act</a>&nbsp;or the&nbsp;
+        <a href="http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html">
+        Privacy Act</a>&nbsp;does not appear on this web site.</p>
+
+        <p><a href="http://open.canada.ca/data/en/dataset/f132b8a6-abad-43d6-b6ad-2301e778b1b6">
+        Download datasets of the Proactive Disclosure - Position
+        Reclassification</a>.</p>
+      alias: /search/reclassification
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 5
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-lg'
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:search:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: travela
+      title: 'Search Annual Expenditures on Travel, Hospitality and Conferences'
+      language: en
+      body: |
+        <p>As per the <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855">
+        Directive on the Management of Expenditures on Travel, Hospitality and
+        Conferences</a>, here are the annual reports of expenditures on travel,
+        hospitality and conference:</p>
+
+        <p><a href="http://open.canada.ca/data/en/dataset/4ae27978-0931-49ab-9c17-0b119c0ba92f">
+        Download datasets of the Proactive Disclosure - Annual Expenditures on
+        Travel, Hospitality and Conferences</a>.</p>
+      alias: /search/travela
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 5
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-lg'
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:search:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: hospitalityq
+      title: 'Search Government Hospitality Expenses'
+      language: en
+      body: |
+        <p>On December 12, 2003, the Prime Minister announced a new policy on
+        the mandatory publication of travel and hospitality expenses for
+        selected government officials.</p>
+
+        <p>The rules and principles governing travel are outlined in the
+        <a href="http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-eng.asp">
+        Policies for Ministers' Offices</a> and in Treasury Board's
+        <a href="http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php">
+        Travel Directive</a> and
+        <a href="http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php">
+        Special Travel Authorities</a>. The purpose of these instruments is to
+        provide for the reimbursement of reasonable expenses necessarily
+        incurred during travel on government business.</p>
+
+        <p>The Government of Canada extends hospitality in accordance with the
+        rules and principles outlined in the Guidelines for Ministers' Offices
+        and the Treasury Board
+        <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855">Directive
+        on the Management of Expenditures on Travel, Hospitality and
+        Conferences</a>. The objective of the policy is to ensure that
+        hospitality is extended in an economical and affordable way when it
+        facilitates government business or is considered desirable as a matter
+        of courtesy and protocol.</p>
+
+        <p>The information on this web site will be updated every three months,
+        beginning on March 31, 2004.</p>
+
+        <p>Please note that information that would normally be withheld under
+        the <a href="http://laws-lois.justice.gc.ca/eng/acts/a-1/index.html">
+        <em>Access to Information Act</em></a> or the
+        <a href="http://laws-lois.justice.gc.ca/eng/acts/p-21/index.html">
+        <em>Privacy Act</em></a> does not appear on this web site.</p>
+
+        <p><a href="http://open.canada.ca/data/en/dataset/b9f51ef4-4605-4ef2-8231-62a2edda1b54">
+        Download datasets of the Proactive Disclosure - Hospitality
+        Expenses</a>.</p>
+      alias: /search/hospitalityq
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 5
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-lg'
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:search:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: travelq
+      title: 'Search Government Travel Expenses'
+      language: en
+      body: |
+        <p>On December 12, 2003, the Prime Minister announced a new policy on
+        the mandatory publication of travel and hospitality expenses for
+        selected government officials.</p>
+
+        <p>The rules and principles governing travel are outlined in the
+        <a href="http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-eng.asp">
+        Policies for Ministers' Offices</a> and in Treasury Board's
+        <a href="http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php">
+        Travel Directive</a> and
+        <a href="http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php">
+        Special Travel Authorities</a>. The purpose of these instruments is to
+        provide for the reimbursement of reasonable expenses necessarily
+        incurred during travel on government business.</p>
+
+        <p>Please note that information that would normally be withheld under
+        the <a href="http://laws-lois.justice.gc.ca/eng/acts/a-1/index.html">
+        <em>Access to Information Act</em></a> or the
+        <a href="http://laws-lois.justice.gc.ca/eng/acts/p-21/index.html">
+        <em>Privacy Act</em></a> does not appear on this web site.</p>
+
+        <p><a href="http://open.canada.ca/data/en/dataset/009f9a49-c2d9-4d29-a6d4-1a228da335ce">
+        Download datasets of the Proactive Disclosure - Travel
+        Expenses</a>.</p>
+      alias: /search/travelq
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 5
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-lg'
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:search:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: wrongdoing
+      title: 'Search Government Acts of Founded Wrongdoing'
+      language: en
+      body: |
+        <p>The Public Servants Disclosure Protection Act (PSDPA) offers federal
+        public sector employees and other persons a secure and confidential
+        process for the disclosure of serious wrongdoing in the workplace, as
+        well as protection against reprisal.</p>
+
+        <p>The PSDPA defines wrongdoing as follows:</p>
+        <ul><li>a contravention of any Act of Parliament or of the legislature
+        of a province, or of any regulations made under any such Act;</li>
+        <li>a misuse of public funds or a public asset;</li>
+        <li>a gross mismanagement;</li>
+        <li>a serious breach of a code of conduct;</li>
+        <li>an act or omission that creates a substantial and specific danger
+        to the life, health or safety of persons, or to the environment;</li>
+        <li>knowingly directing or counselling a person to commit a
+        wrongdoing.</li>
+        </ul><p><span style="line-height: 1.4375;">Under paragraph 1(c) of the
+        PSDPA, chief executives shall promptly provide public access to
+        information on founded wrongdoing.</span></p>
+
+        <p>Information to which public access is provided must describe the
+        wrongdoing, including the identity of the person found to have
+        committed it if necessary in order to describe the wrongdoing
+        adequately; the recommendations, if any, set out in any report made to
+        the chief executive; and any corrective action taken by the chief
+        executive or the reasons why no corrective action was taken.</p>
+
+        <p><a href="http://open.canada.ca/data/en/dataset/6e75f19c-d19d-48aa-984e-609c8d9bc403">
+        Download datasets of the Proactive Disclosure - Acts of Founded
+        Wrongdoing</a>.</p>
+      alias: /search/wrongdoing
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 5
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-md'
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: 'class|mrgn-tp-lg'
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:search:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+  ids:
+    name:
+      type: string
+process:
+  title: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: search
+  sticky:
+    plugin: default_value
+    default_value: 0
+  body/value:
+    plugin: wxt_media_tags
+    source: body
+  body/format:
+    plugin: default_value
+    default_value: rich_text
+  langcode: language
+  path/pathauto:
+    plugin: default_value
+    default_value: 0
+  path/alias: alias
+  panelizer:
+    plugin: iterator
+    source: panelizer
+    process:
+      view_mode:
+        plugin: static_map
+        source: view_mode
+        bypass: true
+        map:
+          default: default
+          page_manager: full
+      default: default
+      panels_display/blocks:
+        plugin: wxt_block_plugin_id
+        source: blocks
+      panels_display/layout: layout
+      panels_display/layout_settings: layout_settings
+      panels_display/page_title: page_title
+      panels_display/storage_type: storage_type
+      panels_display/storage_id: storage_id
+      panels_display/pattern: pattern
+      panels_display/builder: builder
+      panels_display/static_context: static_context
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - od_ext_block_basic
+    - od_ext_block_search
+    - od_ext_block_spotlight
+    - od_ext_media_slideshow

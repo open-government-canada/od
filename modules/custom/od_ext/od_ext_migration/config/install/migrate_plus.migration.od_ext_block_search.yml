@@ -5,7 +5,7 @@ dependencies:
   enforced:
     module:
       - od_ext_migration
-label: 'Embedded data import for custom block types (search) from legacy Drupal database'
+label: 'Embedded data import for custom block types (search)'
 source:
   plugin: embedded_data
   # Enforce default language to english

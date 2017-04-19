@@ -4,10 +4,14 @@ dependencies:
   config:
     - system.menu.sidebar
   module:
+    - block_class
     - ctools
     - system
   theme:
     - od_bootstrap
+third_party_settings:
+  block_class:
+    classes: ''
 id: od_sidebar
 theme: od_bootstrap
 region: sidebar_first
@@ -26,6 +30,7 @@ visibility:
     id: 'entity_bundle:node'
     bundles:
       landing_page: landing_page
+      search: search
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'

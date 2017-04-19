@@ -1,0 +1,9 @@
+name: 'Open Data Extend Search'
+description: 'Provides search panelized page functionality.'
+type: module
+core: 8.x
+package: 'Open Data'
+
+# Required modules
+dependencies:
+  - drupal:lightning_layout
