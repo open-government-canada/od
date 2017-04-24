@@ -739,7 +739,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: '0'
+          items_per_page: '50'
           offset: '0'
           id: '0'
           total_pages: ''
@@ -974,15 +974,16 @@ display:
           set_precision: 0
           precision: '0'
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: 0
           format_plural_string: "1\x03@count"
           prefix: ''
           suffix: ''
           plugin_id: numeric
       pager:
-        type: none
+        type: some
         options:
+          items_per_page: '5'
           offset: '0'
       display_description: ''
       title: 'Percentages of Site Visits by Country'
@@ -1243,7 +1244,7 @@ display:
           set_precision: 0
           precision: '0'
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: 0
           format_plural_string: "1\x03@count"
           prefix: ''
@@ -1257,7 +1258,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: 0
+          exclude: 1
           alter:
             alter_text: 0
             text: ''
@@ -1298,10 +1299,156 @@ display:
           empty_zero: 0
           hide_alter_empty: 1
           plugin_id: standard
+        isoYear:
+          id: isoYear
+          table: google_analytics
+          field: isoYear
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        month:
+          id: month
+          table: google_analytics
+          field: month
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Year Month'
+          exclude: 0
+          alter:
+            alter_text: true
+            text: '{{ isoYear }}-{{ month }}'
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 0
+          plugin_id: custom
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: '25'
           offset: '0'
       display_description: ''
       row:
@@ -1318,14 +1465,26 @@ display:
               alias: ''
               raw_output: 0
       sorts:
-        users:
-          id: users
+        isoYear:
+          id: isoYear
           table: google_analytics
-          field: users
+          field: isoYear
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        month:
+          id: month
+          table: google_analytics
+          field: month
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
@@ -1643,7 +1802,7 @@ display:
           set_precision: 0
           precision: '0'
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: 0
           format_plural_string: "1\x03@count"
           prefix: ''
@@ -2445,15 +2604,16 @@ display:
           set_precision: 0
           precision: '0'
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: 0
           format_plural_string: "1\x03@count"
           prefix: ''
           suffix: ''
           plugin_id: numeric
       pager:
-        type: none
+        type: some
         options:
+          items_per_page: '5'
           offset: '0'
       display_description: ''
       title: 'Percentages of Site Visits by Foreign Country'
@@ -2744,7 +2904,7 @@ display:
           set_precision: 0
           precision: '0'
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: 0
           format_plural_string: "1\x03@count"
           prefix: ''
@@ -3230,7 +3390,7 @@ display:
           set_precision: 0
           precision: '0'
           decimal: .
-          separator: ','
+          separator: ''
           format_plural: 0
           format_plural_string: "1\x03@count"
           prefix: ''
@@ -3244,7 +3404,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: 0
+          exclude: 1
           alter:
             alter_text: 0
             text: ''
@@ -3285,6 +3445,153 @@ display:
           empty_zero: 0
           hide_alter_empty: 1
           plugin_id: standard
+        isoYear:
+          id: isoYear
+          table: google_analytics
+          field: isoYear
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        month:
+          id: month
+          table: google_analytics
+          field: month
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Year Month'
+          exclude: 0
+          alter:
+            alter_text: true
+            text: '{{ isoYear }}-{{ month }}'
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 0
+          plugin_id: custom
       pager:
         type: none
         options:
@@ -3304,14 +3611,26 @@ display:
               alias: ''
               raw_output: 0
       sorts:
-        users:
-          id: users
+        isoYear:
+          id: isoYear
           table: google_analytics
-          field: users
+          field: isoYear
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        month:
+          id: month
+          table: google_analytics
+          field: month
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
