@@ -4,8 +4,6 @@ dependencies:
   module:
     - google_analytics_reports
     - user
-    - google_analytics_reports
-    - user
 id: google_analytics_reports_page
 label: 'Open Data Analytics Reports Page'
 module: views

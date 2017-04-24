@@ -1,0 +1,124 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.analytics
+  module:
+    - od_ext_analytics
+    - panels
+id: analytics-panels_variant-0
+label: Analytics
+variant: panels_variant
+variant_settings:
+  blocks:
+    1fc5de6f-7eef-43ad-8cd1-4b904fe5186a:
+      id: local_tasks_block
+      label: Tabs
+      provider: core
+      label_display: '0'
+      primary: true
+      secondary: true
+      region: top
+      weight: -10
+      uuid: 1fc5de6f-7eef-43ad-8cd1-4b904fe5186a
+      context_mapping: {  }
+    bd12193c-f449-4dc9-a982-49eea4b61283:
+      id: d3_provinces
+      label: 'Percentages of Site Visits by Province and Territory'
+      provider: od_ext_analytics
+      label_display: visible
+      region: top
+      weight: -9
+      uuid: bd12193c-f449-4dc9-a982-49eea4b61283
+      context_mapping: {  }
+    8298318f-0cbd-42fa-9092-fc4ca0bc6c49:
+      id: d3_country_foreign
+      label: 'Percentages of Visits by Foreign Country'
+      provider: od_ext_analytics
+      label_display: visible
+      region: top_right
+      weight: 1
+      uuid: 8298318f-0cbd-42fa-9092-fc4ca0bc6c49
+      context_mapping: {  }
+    0877f413-8a4b-4046-a458-fbb50b77f4cd:
+      id: d3_country
+      label: 'Percentages of Visits by Country'
+      provider: od_ext_analytics
+      label_display: visible
+      region: top_left
+      weight: -2
+      uuid: 0877f413-8a4b-4046-a458-fbb50b77f4cd
+      context_mapping: {  }
+    57dad460-6109-4110-b36d-97c17cd80747:
+      id: d3_visits
+      label: 'Number of Visits'
+      provider: od_ext_analytics
+      label_display: visible
+      region: bottom
+      weight: 0
+      uuid: 57dad460-6109-4110-b36d-97c17cd80747
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 1ceac737-b782-4abb-9ff0-2ae4905d682a
+  label: null
+  weight: 0
+  layout: bs_2col_bricked
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      top:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      top_left:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      top_right:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      middle:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      bottom_left:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      bottom_right:
+        wrapper: div
+        classes:
+          col-sm-6: col-sm-6
+        add_region_classes: 1
+        attributes: ''
+      bottom:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: Analytics
+  storage_type: page_manager
+  storage_id: analytics-panels_variant-0
+  builder: ipe
+page: analytics
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,7 @@
+od_ext_analytics.analytics:
+  path: 'analytics'
+  defaults:
+    _controller: '\Drupal\od_ext_analytics\Controller\AnalyticsLandingPage::analytics'
+    _title: 'Analytics'
+  requirements:
+    _permission: 'access content'

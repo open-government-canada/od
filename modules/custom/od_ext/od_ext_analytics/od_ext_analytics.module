@@ -4,3 +4,49 @@
  * @file
  * Contains od_ext_analytics.module.
  */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function od_ext_analytics_theme($existing, $type, $theme, $path) {
+  return [
+    'd3vis_country' => [
+      'variables' => [],
+      'template' => 'd3vis-country',
+    ],
+    'd3vis_country_foreign' => [
+      'variables' => [],
+      'template' => 'd3vis-country-foreign',
+    ],
+    'd3vis_downloads' => [
+      'variables' => [],
+      'template' => 'd3vis-downloads',
+    ],
+    'd3vis_provinces' => [
+      'variables' => [],
+      'template' => 'd3vis-provinces',
+    ],
+    'd3vis_visits' => [
+      'variables' => [],
+      'template' => 'd3vis-visits',
+    ],
+    'menu__analytics' => [
+      'template' => 'menu--analytics',
+      'base hook' => 'menu',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_help().
+ */
+function od_ext_analytics_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.od_ext_analytics':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides Analytics with support for D3.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,8 +1,6 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - system.menu.admin
   module:
     - google_analytics_reports
     - user
@@ -451,9 +449,38 @@ display:
           value:
             type: offset
             value: '-31 day'
+            min: ''
+            max: ''
           group: 1
           expose:
-            operator: ''
+            operator: start_date_op
+            operator_id: start_date_op
+            label: 'Start date of report'
+            description: null
+            use_operator: false
+            identifier: start_date
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          exposed: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
         end_date:
           id: end_date
           table: google_analytics
@@ -483,7 +510,7 @@ display:
     display_plugin: attachment
     id: attachment_top_keywords
     display_title: 'Top Keywords'
-    position: 6
+    position: 7
     display_options:
       display_extenders: {  }
       displays:
@@ -672,253 +699,11 @@ display:
         - 'languages:language_interface'
         - user.permissions
       tags: {  }
-  attachment_top_pages:
-    display_plugin: attachment
-    id: attachment_top_pages
-    display_title: 'Top Pages'
-    position: 4
-    display_options:
-      display_extenders: {  }
-      displays:
-        page_1: page_1
-      fields:
-        pagePath:
-          id: pagePath
-          table: google_analytics
-          field: pagePath
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: true
-          hide_alter_empty: true
-          plugin_id: standard
-        pageTitle:
-          id: pageTitle
-          table: google_analytics
-          field: pageTitle
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '<a href="{{ pagePath }}">{{ pageTitle }}</a>'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: true
-          hide_alter_empty: true
-          plugin_id: standard
-        pageviews:
-          id: pageviews
-          table: google_analytics
-          field: pageviews
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: true
-          hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ' '
-          format_plural: false
-          format_plural_string: "1\x03@count"
-          prefix: ' - '
-          suffix: ' views'
-          plugin_id: numeric
-      defaults:
-        fields: false
-        title: false
-        css_class: false
-        sorts: false
-        style: false
-        row: false
-        empty: false
-        header: false
-      title: ''
-      css_class: 'google-analytics-reports-summary google-analytics-reports-summary-top-pages'
-      sorts:
-        pageviews:
-          id: pageviews
-          table: google_analytics
-          field: pageviews
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-      style:
-        type: html_list
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          type: ol
-          wrapper_class: item-list
-          class: ''
-      row:
-        type: fields
-        options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: true
-      pager:
-        type: some
-        options:
-          items_per_page: 10
-          offset: 0
-      attachment_position: after
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Pages not found.'
-          empty: true
-          tokenize: false
-          content: 'Pages not found.'
-          plugin_id: text_custom
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Top Pages'
-          empty: false
-          tokenize: false
-          content: '<h2>Top Pages</h2>'
-          plugin_id: text_custom
-      display_description: ''
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - user.permissions
-      tags: {  }
   attachment_top_sources:
     display_plugin: attachment
     id: attachment_top_sources
     display_title: 'Top Sources'
-    position: 5
+    position: 6
     display_options:
       display_extenders: {  }
       displays:
@@ -1159,8 +944,8 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
-    position: 7
+    display_title: 'Top Pages (Block)'
+    position: 8
     display_options:
       display_extenders: {  }
       fields:
@@ -1270,6 +1055,399 @@ display:
           group_type: group
           admin_label: ''
           label: ''
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 1
+          empty_zero: 1
+          hide_alter_empty: 1
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ' '
+          format_plural: 0
+          format_plural_string: "1\x03@count"
+          prefix: ''
+          suffix: ' views'
+          plugin_id: numeric
+      defaults:
+        fields: false
+        title: false
+        css_class: false
+        sorts: false
+        style: false
+        row: false
+        empty: false
+        header: false
+        pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
+        filters: false
+        filter_groups: false
+        use_ajax: false
+      title: 'Top pages'
+      css_class: google-analytics-reports-summary-block
+      sorts:
+        pageviews:
+          id: pageviews
+          table: google_analytics
+          field: pageviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            pagePath: pagePath
+            pageTitle: pageTitle
+            pageviews: pageviews
+          info:
+            pagePath:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            pageTitle:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            pageviews:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+          default: '-1'
+          empty_table: 0
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: true
+      pager:
+        type: mini
+        options:
+          items_per_page: '10'
+          offset: '0'
+          id: '0'
+          total_pages: ''
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: 0
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: 0
+            items_per_page_options_all_label: '- All -'
+            offset: 0
+            offset_label: Offset
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Site doesn''t have any statistics.'
+          empty: true
+          tokenize: false
+          content: 'Site doesn''t have any statistics.'
+          plugin_id: text_custom
+      header: {  }
+      display_description: ''
+      use_more: true
+      use_more_always: true
+      use_more_text: 'Full report'
+      link_display: page_1
+      link_url: ''
+      block_description: 'Top pages'
+      block_category: 'Analytics (Views)'
+      filters:
+        start_date:
+          id: start_date
+          table: google_analytics
+          field: start_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '-31 day'
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: start_date_op
+            label: 'Start date of report'
+            description: ''
+            use_operator: 1
+            operator: start_date_op
+            identifier: start_date
+            required: 0
+            remember: 0
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: 0
+              administrator: 0
+              page_creator: 0
+              layout_manager: 0
+              page_reviewer: 0
+              creator: 0
+              landing_page_creator: 0
+              reviewer: 0
+              landing_page_reviewer: 0
+              media_creator: 0
+              media_manager: 0
+              blog_post_creator: 0
+              blog_post_reviewer: 0
+              app_creator: 0
+              app_reviewer: 0
+              deliverable_creator: 0
+              deliverable_reviewer: 0
+              commitment_creator: 0
+              commitment_reviewer: 0
+              community_creator: 0
+              community_reviewer: 0
+              consultation_creator: 0
+              consultation_reviewer: 0
+              dataset_creator: 0
+              dataset_reviewer: 0
+              idea_creator: 0
+              idea_reviewer: 0
+              search_creator: 0
+              search_reviewer: 0
+              suggested_app_creator: 0
+              suggested_app_reviewer: 0
+              suggested_dataset_creator: 0
+              suggested_dataset_reviewer: 0
+              webform_creator: 0
+              webform_reviewer: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        end_date:
+          id: end_date
+          table: google_analytics
+          field: end_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '-1 day'
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: end_date_op
+            label: 'End date of report'
+            description: ''
+            use_operator: 0
+            operator: end_date_op
+            identifier: end_date
+            required: 0
+            remember: 0
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: 0
+              administrator: 0
+              page_creator: 0
+              layout_manager: 0
+              page_reviewer: 0
+              creator: 0
+              landing_page_creator: 0
+              reviewer: 0
+              landing_page_reviewer: 0
+              media_creator: 0
+              media_manager: 0
+              blog_post_creator: 0
+              blog_post_reviewer: 0
+              app_creator: 0
+              app_reviewer: 0
+              deliverable_creator: 0
+              deliverable_reviewer: 0
+              commitment_creator: 0
+              commitment_reviewer: 0
+              community_creator: 0
+              community_reviewer: 0
+              consultation_creator: 0
+              consultation_reviewer: 0
+              dataset_creator: 0
+              dataset_reviewer: 0
+              idea_creator: 0
+              idea_reviewer: 0
+              search_creator: 0
+              search_reviewer: 0
+              suggested_app_creator: 0
+              suggested_app_reviewer: 0
+              suggested_dataset_creator: 0
+              suggested_dataset_reviewer: 0
+              webform_creator: 0
+              webform_reviewer: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      use_ajax: true
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Top Keywords (Block)'
+    position: 10
+    display_options:
+      display_extenders: {  }
+      fields:
+        keyword:
+          id: keyword
+          table: google_analytics
+          field: keyword
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<strong>{{ keyword }}</strong>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: standard
+        sessions:
+          id: sessions
+          table: google_analytics
+          field: sessions
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -1307,8 +1485,8 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
-          empty_zero: true
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
           set_precision: false
           precision: 0
@@ -1317,7 +1495,7 @@ display:
           format_plural: false
           format_plural_string: "1\x03@count"
           prefix: ' - '
-          suffix: ' views'
+          suffix: ' sessions'
           plugin_id: numeric
       defaults:
         fields: false
@@ -1329,18 +1507,15 @@ display:
         empty: false
         header: false
         pager: false
-        use_more: false
-        use_more_always: false
-        use_more_text: false
-        link_display: false
-        link_url: false
-      title: 'Top pages over the last 30 days'
-      css_class: google-analytics-reports-summary-block
+        filters: false
+        filter_groups: false
+      title: 'Top keywords'
+      css_class: 'google-analytics-reports-summary google-analytics-reports-summary-top-keywords'
       sorts:
-        pageviews:
-          id: pageviews
+        sessions:
+          id: sessions
           table: google_analytics
-          field: pageviews
+          field: sessions
           relationship: none
           group_type: group
           admin_label: ''
@@ -1368,8 +1543,8 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 5
-          offset: 0
+          items_per_page: '5'
+          offset: '0'
       empty:
         area_text_custom:
           id: area_text_custom
@@ -1377,18 +1552,300 @@ display:
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: 'Site doesn''t have any statistics.'
+          admin_label: 'Pages not found.'
           empty: true
           tokenize: false
-          content: 'Site doesn''t have any statistics.'
+          content: 'Pages not found.'
           plugin_id: text_custom
       header: {  }
       display_description: ''
-      use_more: true
-      use_more_always: true
-      use_more_text: 'Full report'
-      link_display: page_1
-      link_url: ''
+      block_description: 'Top keywords'
+      block_category: 'Analytics (Views)'
+      filters:
+        start_date:
+          id: start_date
+          table: google_analytics
+          field: start_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '-31 day'
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: start_date_op
+            label: 'Start date of report'
+            description: null
+            use_operator: false
+            operator: start_date_op
+            identifier: start_date
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        end_date:
+          id: end_date
+          table: google_analytics
+          field: end_date
+          value:
+            type: offset
+            value: '-1 day'
+          group: 1
+          expose:
+            operator: ''
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - user.permissions
+      tags: {  }
+  block_3:
+    display_plugin: block
+    id: block_3
+    display_title: 'Top Sources (Block)'
+    position: 9
+    display_options:
+      display_extenders: {  }
+      fields:
+        source:
+          id: source
+          table: google_analytics
+          field: source
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<strong>{{ source }}</strong> - '
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: standard
+        medium:
+          id: medium
+          table: google_analytics
+          field: medium
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: standard
+        sessions:
+          id: sessions
+          table: google_analytics
+          field: sessions
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ' '
+          format_plural: false
+          format_plural_string: "1\x03@count"
+          prefix: '- '
+          suffix: ' sessions'
+          plugin_id: numeric
+      defaults:
+        fields: false
+        title: false
+        css_class: false
+        sorts: false
+        style: false
+        row: false
+        empty: false
+        header: false
+        pager: false
+      title: 'Top sources'
+      css_class: 'google-analytics-reports-summary google-analytics-reports-summary-top-sources'
+      sorts:
+        sessions:
+          id: sessions
+          table: google_analytics
+          field: sessions
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      style:
+        type: html_list
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          type: ol
+          wrapper_class: item-list
+          class: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: true
+      pager:
+        type: some
+        options:
+          items_per_page: '5'
+          offset: '0'
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Pages not found.'
+          empty: true
+          tokenize: false
+          content: 'Pages not found.'
+          plugin_id: text_custom
+      header: {  }
+      display_description: ''
+      block_description: 'Top sources'
+      block_category: 'Analytics (Views)'
     cache_metadata:
       max-age: -1
       contexts:
@@ -1402,16 +1859,16 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: reports/analytics/summary
+      path: analytics/summary
       menu:
-        type: normal
-        title: 'Google Analytics Summary'
-        description: 'View a traffic report for your site.'
-        expanded: false
-        parent: system.admin_reports
-        weight: 0
-        context: '0'
-        menu_name: admin
+        type: none
+        title: Overview
+        description: ''
+        expanded: 0
+        parent: ''
+        weight: '0'
+        context: 0
+        menu_name: main
       filters:
         start_date:
           id: start_date
@@ -1436,12 +1893,14 @@ display:
       defaults:
         filters: false
         filter_groups: false
+        title: false
       filter_groups:
         operator: AND
         groups:
           - AND
           - AND
       display_description: ''
+      title: Overview
     cache_metadata:
       max-age: 0
       contexts:
@@ -1452,19 +1911,19 @@ display:
     display_plugin: page
     id: page_2
     display_title: Downloads
-    position: 2
+    position: 4
     display_options:
       display_extenders: {  }
-      path: reports/analytics/downloads
+      path: analytics/downloads
       menu:
         type: none
-        title: 'Google Analytics Summary'
-        description: 'View a traffic report for your site.'
+        title: Downloads
+        description: ''
         expanded: 0
-        parent: system.admin_reports
+        parent: ''
         weight: '0'
         context: 0
-        menu_name: admin
+        menu_name: main
       filters:
         start_date:
           id: start_date
@@ -1578,6 +2037,7 @@ display:
         fields: false
         pager: false
         css_class: false
+        title: false
       filter_groups:
         operator: AND
         groups:
@@ -1732,36 +2192,347 @@ display:
           hide_alter_empty: 1
           plugin_id: standard
       pager:
-        type: some
+        type: full
         options:
-          items_per_page: '500'
+          items_per_page: '100'
           offset: '0'
+          id: '0'
+          total_pages: ''
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: 0
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: 0
+            items_per_page_options_all_label: '- All -'
+            offset: 0
+            offset_label: Offset
+          quantity: '9'
       display_description: ''
       css_class: google-analytics-reports-downloads
+      tab_options:
+        type: tab
+        title: TT
+        description: ''
+        weight: '0'
+      title: Downloads
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_interface'
         - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: 'Top Pages'
+    position: 5
+    display_options:
+      display_extenders: {  }
+      fields:
+        pagePath:
+          id: pagePath
+          table: google_analytics
+          field: pagePath
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: true
+          plugin_id: standard
+        pageTitle:
+          id: pageTitle
+          table: google_analytics
+          field: pageTitle
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Title
+          exclude: 0
+          alter:
+            alter_text: 1
+            text: '<a href="{{ pagePath }}">{{ pageTitle }}</a>'
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 0
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 1
+          empty_zero: 1
+          hide_alter_empty: 1
+          plugin_id: standard
+        pageviews:
+          id: pageviews
+          table: google_analytics
+          field: pageviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Pageviews
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 0
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 1
+          empty_zero: 1
+          hide_alter_empty: 1
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ' '
+          format_plural: 0
+          format_plural_string: "1\x03@count"
+          prefix: ''
+          suffix: ' views'
+          plugin_id: numeric
+      defaults:
+        fields: false
+        title: false
+        css_class: false
+        sorts: false
+        style: false
+        row: false
+        empty: false
+        header: false
+        pager: false
+      title: 'Top Pages'
+      css_class: 'google-analytics-reports-summary google-analytics-reports-summary-top-pages'
+      sorts:
+        pageviews:
+          id: pageviews
+          table: google_analytics
+          field: pageviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            pagePath: pagePath
+            pageTitle: pageTitle
+            pageviews: pageviews
+          info:
+            pagePath:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            pageTitle:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+            pageviews:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              responsive: ''
+          default: '-1'
+          empty_table: 0
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: true
+      pager:
+        type: mini
+        options:
+          items_per_page: '25'
+          offset: '0'
+          id: '0'
+          total_pages: ''
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+          expose:
+            items_per_page: 0
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: 0
+            items_per_page_options_all_label: '- All -'
+            offset: 0
+            offset_label: Offset
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Pages not found.'
+          empty: true
+          tokenize: false
+          content: 'Pages not found.'
+          plugin_id: text_custom
+      header: {  }
+      display_description: ''
+      path: analytics/visits
+      menu:
+        type: none
+        title: 'Top Pages'
+        description: ''
+        expanded: 0
+        parent: ''
+        weight: '0'
+        context: 0
+        menu_name: main
+      tab_options:
+        type: tab
+        title: 'Media Report'
+        description: ''
+        weight: '0'
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
         - user.permissions
       tags: {  }
   page_4:
     display_plugin: page
     id: page_4
     display_title: '404'
-    position: 3
+    position: 2
     display_options:
       display_extenders: {  }
-      path: reports/analytics/404
+      path: analytics/404
       menu:
         type: none
-        title: 'Google Analytics Summary'
-        description: 'View a traffic report for your site.'
+        title: '404'
+        description: ''
         expanded: 0
-        parent: system.admin_reports
+        parent: ''
         weight: '0'
         context: 0
-        menu_name: admin
+        menu_name: main
       filters:
         start_date:
           id: start_date
@@ -1963,7 +2734,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: '50'
+          items_per_page: '100'
           offset: '0'
           id: '0'
           total_pages: ''
@@ -1983,7 +2754,7 @@ display:
           quantity: '9'
       use_ajax: true
       display_description: ''
-      title: 'Google Analytics 404'
+      title: '404'
       css_class: google-analytics-reports-404
     cache_metadata:
       max-age: 0
