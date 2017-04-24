@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies: {  }
+label: 'Solr Inventory'
+type: solr_inventory
+description: ''
+read_only: true
+field_mappings:
+  id: id
+  title: i18n_ts_en_ati_request_number
+endpoint: 'http://solr:8983/solr/core_ati/select'
+client: solr_client
+format: json
+pager_settings:
+  default_limit: '10'
+  page_parameter: start
+  page_parameter_type: startitem
+  page_size_parameter: rows
+  page_size_parameter_type: pagesize
+api_key_settings:
+  header_name: ''
+  key: ''
+parameters:
+  list:
+    q: '*:*'
+    fq: 'ss_language:en'
+    wt: json
+  single:
+    fq: 'ss_language:en'
+    wt: json

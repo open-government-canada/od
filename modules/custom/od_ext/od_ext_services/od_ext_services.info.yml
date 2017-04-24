@@ -1,0 +1,10 @@
+name: 'Open Data Extend Services'
+type: module
+description: 'RESTful services.'
+core: 8.x
+package: 'Open Data'
+
+# Required modules
+dependencies:
+  - drupal:external_entities
+  - drupal:jsonapi
