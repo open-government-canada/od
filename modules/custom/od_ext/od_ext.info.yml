@@ -11,7 +11,6 @@ dependencies:
   - drupal:od_ext_commitment
   - drupal:od_ext_community
   - drupal:od_ext_consultation
-  - drupal:od_ext_dataset
   - drupal:od_ext_deliverable
   - drupal:od_ext_idea
   - drupal:od_ext_search

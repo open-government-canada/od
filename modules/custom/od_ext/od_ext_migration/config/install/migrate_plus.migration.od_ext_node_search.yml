@@ -788,6 +788,111 @@ source:
           pattern: panelizer
           builder: ipe
           static_context: {  }
+    -
+      name: ati
+      title: 'Completed Access to Requirements Requests'
+      language: en
+      body: |
+        <p>Search the summaries of completed Access to Information (ATI) requests
+        to find information about ATI requests previously made to the Government
+        of Canada. If you find a summary of interest, you can request a copy of
+        the records at no cost. For additional information, please see the
+        “<a href="/en/content/about-access-information-requests">About Access to
+        Information Requests</a>” webpage.</p>
+        <p>Download datasets of the <a href="http://data.gc.ca/data/en/dataset/0797e893-751e-4695-8229-a5066e4fe43c">
+        summaries of completed access to information requests</a>.</p>
+        <p>If you don’t find what you are looking for you can request additional
+        government records under an institution’s control by contacting the
+        institution’s <a href="http://www.tbs-sct.gc.ca/atip-aiprp/apps/coords/index-eng.ASP">
+        Access to Information and Privacy Coordinator</a>.</p>
+        <p><strong>Enter keywords (e.g. institution, topic, field of interest,
+        etc.)</strong><br>*All information provided will incorporate the
+        necessary exemptions and exclusions as per the <em>Access to Information
+        Act</em> and the <em>Privacy Act</em>.</p>
+      alias: /search/ati
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: left
+              weight: 0
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: left
+              weight: 5
+            -
+              id: 'views_block:pd_core_ati-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:ss_ati_organization_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:ss_ati_year_en'
+              label: Year
+              label_display: visible
+              region: right
+              weight: 5
+            -
+              id: 'facet_block:ss_ati_monthname_en'
+              label: Month
+              label_display: visible
+              region: right
+              weight: 10
+          id: panels_variant
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
+          weight: 0
+          layout: bs_2col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              left:
+                wrapper: div
+                classes:
+                  col-sm-8: col-sm-8
+                add_region_classes: 1
+                attributes: ''
+              right:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:page:default:default'
+          builder: ipe
+          static_context: {  }
   ids:
     name:
       type: string
