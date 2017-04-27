@@ -1,9 +1,0 @@
-name: 'Open Data Extend Dataset'
-description: 'Special bundle where CKAN datasets are linked into Drupal.'
-type: module
-core: 8.x
-package: 'Open Data'
-
-# Required modules
-dependencies:
-  - drupal:od_ext_vote
