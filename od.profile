@@ -5,7 +5,6 @@
  * Contains od.profile.
  */
 
-use Drupal\od\Form\ExtensionSelectForm;
 use Symfony\Component\Yaml\Parser;
 
 /**
@@ -13,12 +12,6 @@ use Symfony\Component\Yaml\Parser;
  */
 function od_install_tasks() {
   return [
-    'od_select_extensions' => [
-      'display_name' => t('Choose extensions'),
-      'display' => TRUE,
-      'type' => 'form',
-      'function' => ExtensionSelectForm::class,
-    ],
     'od_install_extensions' => [
       'display_name' => t('Install extensions'),
       'display' => TRUE,
@@ -43,7 +36,7 @@ function od_install_tasks_alter(array &$tasks, array $install_state) {
 }
 
 /**
- * Install task callback; prepares a batch job to install Open Data extensions.
+ * Install task callback; prepares a batch job to install WxT extensions.
  *
  * @param array $install_state
  *   The current install state.
@@ -53,7 +46,11 @@ function od_install_tasks_alter(array &$tasks, array $install_state) {
  */
 function od_install_extensions(array &$install_state) {
   $batch = [];
-  foreach ($install_state['od']['modules'] as $module) {
+  $modules = [
+    'wxt_ext',
+    'od_ext',
+  ];
+  foreach ($modules as $module) {
     $batch['operations'][] = ['od_install_module', (array) $module];
   }
   return $batch;
