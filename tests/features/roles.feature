@@ -1,4 +1,4 @@
-@od @api
+@od @core @api
 Feature: User roles and related config
 
   Scenario: Administrator Role select list should be present in Account Settings

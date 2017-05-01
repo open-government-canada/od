@@ -10,9 +10,11 @@ use Behat\Behat\Context\SnippetAcceptingContext;
 
 /**
  * Defines application features from the specific context.
+ *
+ * OpenDataSubContext is automatically loaded by the Drupal Behat Extension.
+ *
+ * @see od.behat.inc.
+ * @see http://behat-drupal-extension.readthedocs.org/en/3.1/subcontexts.html#for-contributors
  */
 class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext {
-  // OpenDataSubContext is automatically loaded by the Drupal Behat Extension.
-  // @see od_test.behat.inc.
-  // @see http://behat-drupal-extension.readthedocs.org/en/3.1/subcontexts.html#for-contributors
 }

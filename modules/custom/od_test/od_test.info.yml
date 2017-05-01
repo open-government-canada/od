@@ -1,9 +1,0 @@
-name: 'Open Data Test'
-description: 'Tests common / extended functionality for Open Data.'
-type: module
-core: 8.x
-package: 'Open Data'
-
-# Required modules
-dependencies:
-  - drupal:od_core
