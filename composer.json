@@ -47,6 +47,10 @@
           "url": "http://github.com/sylus/search_api_solr_datasource.git"
         },
         {
+          "type": "vcs",
+          "url": "http://github.com/open-data/external_comment.git"
+        },
+        {
             "type"    : "package",
             "package" : {
                 "name"    : "harvesthq/chosen",
@@ -225,7 +229,9 @@
             },
             "drupal/external_entities": {
                 "Enter drupal/external_entities patch #2872506 description here":
-                "https://www.drupal.org/files/issues/loosen_doloadmultiple-2872506-2.patch"
+                "https://www.drupal.org/files/issues/loosen_doloadmultiple-2872506-2.patch",
+                "Enter drupal/external_entities patch #2538682 description here":
+                "https://www.drupal.org/files/issues/allow_core_comments_to-2538682-1.patch"
             },
             "drupal/icon": {
                 "Enter drupal/icon patch #2863343 description here":
@@ -273,6 +279,7 @@
         "drupal/address": "1.0-rc4",
         "drupal/chosen": "2.1",
         "drupal/csv_serialization": "1.0",
+        "drupal/external_comment": "1.x-dev",
         "drupal/external_entities": "1.x-dev",
         "drupal/facets": "1.0-alpha8",
         "drupal/field_default_token": "1.x-dev",
