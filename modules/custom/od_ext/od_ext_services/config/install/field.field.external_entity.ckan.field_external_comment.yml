@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.ckan
+    - field.storage.external_entity.field_external_comment
+  module:
+    - external_comment
+id: external_entity.ckan.field_external_comment
+field_name: field_external_comment
+entity_type: external_entity
+bundle: ckan
+label: 'External Comment'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_external_comment_timestamp: 0
+    last_external_comment_name: null
+    last_external_comment_uid: 0
+    external_comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: external_comment

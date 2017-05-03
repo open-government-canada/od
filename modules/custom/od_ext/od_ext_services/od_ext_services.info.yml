@@ -6,5 +6,6 @@ package: 'Open Data'
 
 # Required modules
 dependencies:
+  - drupal:external_comment
   - drupal:external_entities
   - drupal:jsonapi
