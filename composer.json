@@ -228,10 +228,12 @@
                 "https://www.drupal.org/files/issues/composer_dist_problem-2706433-28.patch"
             },
             "drupal/external_entities": {
+                "Enter drupal/external_entities patch #2538682 description here":
+                "https://www.drupal.org/files/issues/allow_core_comments_to-2538682-1.patch",
                 "Enter drupal/external_entities patch #2872506 description here":
                 "https://www.drupal.org/files/issues/loosen_doloadmultiple-2872506-2.patch",
-                "Enter drupal/external_entities patch #2538682 description here":
-                "https://www.drupal.org/files/issues/allow_core_comments_to-2538682-1.patch"
+                "Enter drupal/external_entities patch #2875436 description here":
+                "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch"
             },
             "drupal/icon": {
                 "Enter drupal/icon patch #2863343 description here":

@@ -16,6 +16,27 @@ use Drupal\external_entities\ExternalEntityStorageClientBase;
 class SolrClient extends ExternalEntityStorageClientBase {
 
   /**
+   * The amount of Solr records.
+   *
+   * @var \Drupal\external_entities\ResponseDecoderFactoryInterface
+   */
+  protected $count;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCount() {
+    return $this->count;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setCount($count) {
+    return $this->count = $count;
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function delete(ExternalEntityInterface $entity) {
@@ -89,6 +110,7 @@ class SolrClient extends ExternalEntityStorageClientBase {
       ]
     );
     $results = $this->decoder->getDecoder($this->configuration['format'])->decode($response->getBody());
+    $this->setCount($results['response']['numFound']);
     $results = $results['response']['docs'];
     foreach ($results as &$result) {
       $result = ((object) $result);
