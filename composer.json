@@ -279,7 +279,7 @@
         "drupal/address": "1.0-rc4",
         "drupal/chosen": "2.1",
         "drupal/csv_serialization": "1.0",
-        "drupal/external_comment": "1.x-dev",
+        "drupal/external_comment": "dev-8.x-1.x",
         "drupal/external_entities": "1.x-dev",
         "drupal/facets": "1.0-alpha8",
         "drupal/field_default_token": "1.x-dev",
