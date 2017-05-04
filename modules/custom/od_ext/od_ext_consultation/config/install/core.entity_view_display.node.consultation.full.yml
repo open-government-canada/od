@@ -1,0 +1,82 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.consultation.body
+    - field.field.node.consultation.field_consultation_date
+    - field.field.node.consultation.field_consultation_status
+    - field.field.node.consultation.field_ideas_paragraph
+    - field.field.node.consultation.field_meta_tags
+    - field.field.node.consultation.field_share_widget
+    - node.type.consultation
+  module:
+    - datetime_range
+    - field_formatter
+    - options
+    - panelizer
+    - taxonomy
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: c0F0JmeGFkiCOota9RYdATkPDZQLwtU4PiBJTB1qyXs
+id: node.consultation.full
+targetEntityType: node
+bundle: consultation
+mode: full
+content:
+  body:
+    type: text_default
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_consultation_date:
+    weight: 3
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_consultation_status:
+    type: entity_reference_rss_category
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ideas_paragraph:
+    type: field_link
+    weight: 2
+    region: content
+    label: above
+    settings:
+      type: entity_reference_revisions_entity_view
+      settings:
+        view_mode: default
+    third_party_settings: {  }
+  field_share_widget:
+    type: list_key
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_meta_tags: true
+  langcode: true

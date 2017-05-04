@@ -1,0 +1,65 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.idea.field_comment
+    - field.field.paragraph.idea.field_details
+    - field.field.paragraph.idea.field_idea_status
+    - field.field.paragraph.idea.field_idea_submitted_name
+    - field.field.paragraph.idea.field_idea_tags
+    - field.field.paragraph.idea.field_title
+    - paragraphs.paragraphs_type.idea
+  module:
+    - comment
+    - text
+    - workbench_moderation
+id: paragraph.idea.default
+targetEntityType: paragraph
+bundle: idea
+mode: default
+content:
+  field_comment:
+    type: comment_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_details:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_idea_submitted_name:
+    type: text_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_idea_tags:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_idea_status: true
+  status: true
+  uid: true

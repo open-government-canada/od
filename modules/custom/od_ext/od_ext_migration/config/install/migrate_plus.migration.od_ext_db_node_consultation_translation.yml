@@ -47,6 +47,36 @@ process:
   content_translation_source:
     plugin: default_value
     default_value: "en"
+  field_ideas_paragraph:
+    -
+      plugin: explode
+      delimiter: ,
+      source: paragraph_idea
+    -
+      plugin: key_wrapper
+    -
+      plugin: iterator
+      process:
+        target_id:
+          -
+            plugin: migration
+            migration: od_ext_node_idea
+            source: key_wrapper
+            no_stub: true
+          -
+            plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          -
+            plugin: migration
+            migration: od_ext_node_idea
+            source: key_wrapper
+            no_stub: true
+          -
+            plugin: extract
+            index:
+              - 1
 destination:
   plugin: 'entity:node'
   translations: true

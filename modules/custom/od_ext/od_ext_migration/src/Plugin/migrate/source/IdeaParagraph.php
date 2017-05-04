@@ -9,10 +9,10 @@ use Drupal\migrate\Row;
  * Source plugin for idea content.
  *
  * @MigrateSource(
- *   id = "idea_node"
+ *   id = "idea_paragraph"
  * )
  */
-class IdeaNode extends SqlBase {
+class IdeaParagraph extends SqlBase {
 
   /**
    * {@inheritdoc}
@@ -123,16 +123,6 @@ class IdeaNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
-    // Tags.
-    $tags = $this->select('field_data_field_consultation', 'df')
-      ->fields('df', ['field_consultation_target_id'])
-      ->condition('entity_id', $row->getSourceProperty('nid'))
-      ->condition('revision_id', $row->getSourceProperty('vid'))
-      ->condition('language', 'und')
-      ->condition('bundle', 'idea')
-      ->execute()
-      ->fetchAssoc();
-
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -143,7 +133,6 @@ class IdeaNode extends SqlBase {
     $row->setSourceProperty('freetags', $freetags);
     $row->setSourceProperty('status', $status['sc_consultation_field_status_tid']);
     $row->setSourceProperty('submission_name', $submission_name[0]);
-    $row->setSourceProperty('tags', $tags['field_consultation_target_id']);
 
     return parent::prepareRow($row);
   }

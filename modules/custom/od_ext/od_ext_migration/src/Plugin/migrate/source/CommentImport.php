@@ -122,6 +122,9 @@ class CommentImport extends SqlBase {
         if ($bundle == 'blog') {
           $row->setSourceProperty('field_name', 'field_blog_comments');
         }
+        if ($bundle == 'idea') {
+          $row->setSourceProperty('field_name', 'field_comment');
+        }
       }
     }
 
