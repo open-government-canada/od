@@ -10,7 +10,6 @@ dependencies:
     - field.field.paragraph.idea.field_title
     - paragraphs.paragraphs_type.idea
   module:
-    - comment
     - text
     - workbench_moderation
 id: paragraph.idea.default
@@ -18,12 +17,6 @@ targetEntityType: paragraph
 bundle: idea
 mode: default
 content:
-  field_comment:
-    type: comment_default
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_details:
     type: text_textarea_with_summary
     weight: 1
@@ -60,6 +53,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_comment: true
   field_idea_status: true
   status: true
   uid: true
