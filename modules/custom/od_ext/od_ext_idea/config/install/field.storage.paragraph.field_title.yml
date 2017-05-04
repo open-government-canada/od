@@ -2,14 +2,15 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
-    - taxonomy
-id: node.field_idea_status
-field_name: field_idea_status
-entity_type: node
-type: entity_reference
+    - paragraphs
+id: paragraph.field_title
+field_name: field_title
+entity_type: paragraph
+type: string
 settings:
-  target_type: taxonomy_term
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

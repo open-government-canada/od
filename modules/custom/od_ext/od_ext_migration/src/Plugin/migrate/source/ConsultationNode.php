@@ -110,6 +110,14 @@ class ConsultationNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // Paragraph Idea.
+    $paragraph_idea = $this->select('field_data_field_consultation', 'df')
+      ->fields('df', ['entity_id'])
+      ->condition('field_consultation_target_id', $row->getSourceProperty('nid'))
+      ->condition('bundle', 'idea')
+      ->execute()
+      ->fetchAllAssoc('entity_id');
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -119,6 +127,7 @@ class ConsultationNode extends SqlBase {
     $row->setSourceProperty('body', $body[0]);
     $row->setSourceProperty('date_start', $date_start[0]);
     $row->setSourceProperty('date_end', $date_end[0]);
+    $row->setSourceProperty('paragraph_idea', $paragraph_idea);
 
     return parent::prepareRow($row);
   }

@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.idea.field_comment
+    - field.field.paragraph.idea.field_details
+    - field.field.paragraph.idea.field_idea_status
+    - field.field.paragraph.idea.field_idea_submitted_name
+    - field.field.paragraph.idea.field_idea_tags
+    - field.field.paragraph.idea.field_title
+    - paragraphs.paragraphs_type.idea
+  module:
+    - text
+id: paragraph.idea.default
+targetEntityType: paragraph
+bundle: idea
+mode: default
+content:
+  field_details:
+    type: text_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_idea_tags:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_title:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_comment: true
+  field_idea_status: true
+  field_idea_submitted_name: true

@@ -7,3 +7,4 @@ package: 'Open Data'
 # Required modules
 dependencies:
   - drupal:datetime_range
+  - drupal:paragraphs

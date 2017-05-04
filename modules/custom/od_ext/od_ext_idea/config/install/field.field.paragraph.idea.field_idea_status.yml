@@ -2,24 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_idea_tags
-    - node.type.idea
-    - taxonomy.vocabulary.idea_freetags
-id: node.idea.field_idea_tags
-field_name: field_idea_tags
-entity_type: node
+    - field.storage.paragraph.field_idea_status
+    - paragraphs.paragraphs_type.idea
+    - taxonomy.vocabulary.idea_status
+id: paragraph.idea.field_idea_status
+field_name: field_idea_status
+entity_type: paragraph
 bundle: idea
-label: Tags
+label: Status
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      idea_freetags: idea_freetags
+      idea_status: idea_status
     sort:
       field: _none
     auto_create: false

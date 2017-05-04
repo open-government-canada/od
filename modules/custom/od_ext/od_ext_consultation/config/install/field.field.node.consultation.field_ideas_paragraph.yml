@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ideas_paragraph
+    - node.type.consultation
+    - paragraphs.paragraphs_type.idea
+  module:
+    - entity_reference_revisions
+id: node.consultation.field_ideas_paragraph
+field_name: field_ideas_paragraph
+entity_type: node
+bundle: consultation
+label: 'Ideas Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      idea: idea
+    target_bundles_drag_drop:
+      idea:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions
