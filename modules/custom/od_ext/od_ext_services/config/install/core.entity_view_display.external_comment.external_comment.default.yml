@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_comment.type.external_comment
+    - field.field.external_comment.external_comment.comment_body
+    - field.field.external_comment.external_comment.commented_external_entity
+  module:
+    - text
+id: external_comment.external_comment.default
+targetEntityType: external_comment
+bundle: external_comment
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  commented_external_entity: true
+  langcode: true

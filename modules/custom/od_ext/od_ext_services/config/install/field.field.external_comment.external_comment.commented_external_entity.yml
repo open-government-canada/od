@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_comment.type.external_comment
+    - field.storage.external_comment.commented_external_entity
+id: external_comment.external_comment.commented_external_entity
+field_name: commented_external_entity
+entity_type: external_comment
+bundle: external_comment
+label: 'Commented External entity'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings: {  }
+  handler: 'default:external_entity'
+field_type: entity_reference

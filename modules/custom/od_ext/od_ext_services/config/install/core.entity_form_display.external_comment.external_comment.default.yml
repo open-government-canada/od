@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_comment.type.external_comment
+    - field.field.external_comment.external_comment.comment_body
+    - field.field.external_comment.external_comment.commented_external_entity
+  module:
+    - text
+id: external_comment.external_comment.default
+targetEntityType: external_comment
+bundle: external_comment
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+  comment_body:
+    type: text_textarea
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  commented_external_entity: true

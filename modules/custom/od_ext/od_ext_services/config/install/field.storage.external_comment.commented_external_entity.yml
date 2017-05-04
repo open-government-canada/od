@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_comment
+    - external_entities
+id: external_comment.commented_external_entity
+field_name: commented_external_entity
+entity_type: external_comment
+type: entity_reference
+settings:
+  target_type: external_entity
+module: core
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false
