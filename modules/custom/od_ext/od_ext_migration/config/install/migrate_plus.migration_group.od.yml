@@ -1,6 +1,10 @@
 id: od
 label: Open Data migrations
 description: Provides default content and related configurations for Open Data
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
 source_type: Embedded data
 shared_configuration:
   source:
