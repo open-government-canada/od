@@ -236,8 +236,8 @@
                 "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch"
             },
             "drupal/icon": {
-                "Enter drupal/icon patch #2863343 description here":
-                "https://www.drupal.org/files/issues/create_plugin_managers-2863343-48.patch"
+                "Enter drupal/icon patch #2864333 description here":
+                "https://www.drupal.org/files/issues/migrate_icon_field_to_d8-2864333-2.patch"
             },
             "drupal/google_analytics_reports": {
                 "Enter drupal/google_analytics_reports patch #2795115 description here":
