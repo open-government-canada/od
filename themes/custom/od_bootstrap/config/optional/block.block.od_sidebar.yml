@@ -5,7 +5,7 @@ dependencies:
     - system.menu.sidebar
   module:
     - block_class
-    - ctools
+    - node
     - system
   theme:
     - od_bootstrap
@@ -26,11 +26,10 @@ settings:
   level: 1
   depth: 0
 visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
+  node_type:
+    id: node_type
     bundles:
-      landing_page: landing_page
-      search: search
-    negate: true
+      page: page
+    negate: false
     context_mapping:
       node: '@node.node_route_context:node'

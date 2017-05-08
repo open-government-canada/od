@@ -1,8 +1,14 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_class
+    - node
   theme:
     - od_bootstrap
+third_party_settings:
+  block_class:
+    classes: ''
 id: od_bootstrap_page_title
 theme: od_bootstrap
 region: header
