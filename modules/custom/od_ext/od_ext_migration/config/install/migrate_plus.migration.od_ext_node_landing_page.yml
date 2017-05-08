@@ -35,6 +35,12 @@ source:
               region: top_left
               weight: 0
             -
+              id: local_tasks_block
+              label: 'Tabs'
+              label_display: '0'
+              region: top_left
+              weight: 1
+            -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
@@ -171,6 +177,12 @@ source:
               region: top_left
               weight: 0
             -
+              id: local_tasks_block
+              label: 'Tabs'
+              label_display: '0'
+              region: top_left
+              weight: 1
+            -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
@@ -269,6 +281,12 @@ source:
               region: top_left
               weight: 0
             -
+              id: local_tasks_block
+              label: 'Tabs'
+              label_display: '0'
+              region: top_left
+              weight: 1
+            -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
@@ -357,6 +375,12 @@ source:
               region: top_left
               weight: 0
             -
+              id: local_tasks_block
+              label: 'Tabs'
+              label_display: '0'
+              region: top_left
+              weight: 1
+            -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
@@ -443,6 +467,12 @@ source:
               label_display: visible
               region: top_left
               weight: 0
+            -
+              id: local_tasks_block
+              label: 'Tabs'
+              label_display: '0'
+              region: top_left
+              weight: 1
             -
               id: 'entity_field:node:body'
               label: Body

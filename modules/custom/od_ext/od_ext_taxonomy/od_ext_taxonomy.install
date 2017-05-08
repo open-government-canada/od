@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains od_ext_taxonomy.install.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function od_ext_taxonomy_install() {
+  // Enable translation for our core entities/bundles.
+  $entities = [
+    'taxonomy_term' => [
+      'app_freetags',
+      'site_structure',
+    ],
+  ];
+  wxt_ext_translation_enable_translation($entities);
+
+  // Download the newest config translations from Drupal.org.
+  wxt_ext_translation_update_config_translation();
+}
