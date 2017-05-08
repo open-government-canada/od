@@ -24,8 +24,6 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-_core:
-  default_config_hash: c0F0JmeGFkiCOota9RYdATkPDZQLwtU4PiBJTB1qyXs
 id: node.consultation.full
 targetEntityType: node
 bundle: consultation
