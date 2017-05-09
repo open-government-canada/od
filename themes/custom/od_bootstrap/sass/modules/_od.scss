@@ -1,46 +1,55 @@
+// Theme Customizations to Open Data
+
 .pillars {
   background-color: #eaebed;
   display: inline-block;
-  padding: 10px 5px; }
-  .pillars h2 {
+  padding: 10px 5px;
+  h2 {
     display: inline;
     font-size: 16px;
     margin-left: 5px;
-    margin-right: 5px; }
-  .pillars .ogov {
-    vertical-align: middle; }
-  .pillars ul {
+    margin-right: 5px;
+  }
+  .ogov {
+    vertical-align: middle;
+  }
+  ul {
     display: inline;
     margin-left: 5px;
     padding-left: 0;
     font-size: 2em;
-    vertical-align: middle; }
-    .pillars ul li {
+    vertical-align: middle;
+    li {
       display: inline-block;
       margin: 0 15px 0 0;
-      padding: 0; }
-      .pillars ul li a {
+      padding: 0;
+      a {
         color: #284162 !important;
-        text-decoration: none; }
+        text-decoration: none;
+      }
+    }
+  }
+}
 
 .box {
-  position: relative;
+  position:relative;
   border: 1px solid #BBB;
-  background: #eee;
-  float: left; }
-  .box > div {
-    margin: 15px; }
+  background:#eee;
+  float:left;
+  & > div {
+    margin: 15px;
+  }
+}
 
 .ribbon {
   position: absolute;
-  right: -5px;
-  top: -5px;
+  right: -5px; top: -5px;
   z-index: 1;
   overflow: hidden;
   width: 75px;
   height: 75px;
-  text-align: right; }
-  .ribbon span {
+  text-align: right;
+  span {
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
@@ -52,11 +61,11 @@
     display: block;
     background: #79A70A;
     background: linear-gradient(#F70505 0%, #8F0808 100%);
-    box-shadow: 0 3px 10px -5px black;
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
     position: absolute;
     top: 19px;
-    right: -21px; }
-    .ribbon span::before {
+    right: -21px;
+    &::before {
       content: '';
       position: absolute;
       left: 0;
@@ -65,8 +74,9 @@
       border-left: 3px solid #8F0808;
       border-right: 3px solid transparent;
       border-bottom: 3px solid transparent;
-      border-top: 3px solid #8F0808; }
-    .ribbon span::after {
+      border-top: 3px solid #8F0808;
+    }
+    &::after {
       content: '';
       position: absolute;
       right: 0;
@@ -75,22 +85,35 @@
       border-right: 3px solid #8F0808;
       border-left: 3px solid transparent;
       border-bottom: 3px solid transparent;
-      border-top: 3px solid #8F0808; }
+      border-top: 3px solid #8F0808;
+    }
+  }
+}
 
-.public span {
-  background: linear-gradient(#9BC90D 0%, #79A70A 100%); }
-  .public span::before {
-    border-left-color: #79A70A;
-    border-top-color: #79A70A; }
-  .public span::after {
-    border-right-color: #79A70A;
-    border-top-color: #79A70A; }
+.public {
+  span {
+    background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+    &::before {
+      border-left-color: #79A70A;
+      border-top-color: #79A70A;
+    }
+    &::after {
+      border-right-color: #79A70A;
+      border-top-color: #79A70A;
+    }
+  }
+}
 
-.code span {
-  background: linear-gradient(#2989d8 0%, #1e5799 100%); }
-  .code span::before {
-    border-left-color: #1e5799;
-    border-top-color: #1e5799; }
-  .code span::after {
-    border-right-color: #1e5799;
-    border-top-color: #1e5799; }
+.code {
+  span {
+    background: linear-gradient(#2989d8 0%, #1e5799 100%);
+    &::before {
+      border-left-color: #1e5799;
+      border-top-color: #1e5799;
+    }
+    &::after {
+      border-right-color: #1e5799;
+      border-top-color: #1e5799;
+    }
+  }
+}

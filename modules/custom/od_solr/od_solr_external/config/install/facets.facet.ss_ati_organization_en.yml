@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 id: ss_ati_organization_en
-name: ss_ati_organization_en
+name: Organization
 url_alias: organization
 weight: 0
 min_count: 1

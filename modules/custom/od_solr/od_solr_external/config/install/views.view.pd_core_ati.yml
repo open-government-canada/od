@@ -74,7 +74,7 @@ display:
       fields:
         ss_ati_organization_en:
           id: ss_ati_organization_en
-          table: search_api_datasource_pd_core_ati_solr_document
+          table: search_api_index_pd_core_ati
           field: ss_ati_organization_en
           relationship: none
           group_type: group
@@ -126,7 +126,7 @@ display:
           plugin_id: search_api
         ss_ati_year_en:
           id: ss_ati_year_en
-          table: search_api_datasource_pd_core_ati_solr_document
+          table: search_api_index_pd_core_ati
           field: ss_ati_year_en
           relationship: none
           group_type: group
@@ -178,7 +178,7 @@ display:
           plugin_id: search_api
         ss_ati_monthname_en:
           id: ss_ati_monthname_en
-          table: search_api_datasource_pd_core_ati_solr_document
+          table: search_api_index_pd_core_ati
           field: ss_ati_monthname_en
           relationship: none
           group_type: group
