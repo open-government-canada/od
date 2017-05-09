@@ -249,7 +249,9 @@
                 "Enter drupal/google_analytics_reports patch #2846360 description here":
                 "https://www.drupal.org/files/issues/google_analytics_reports-view_omits_zero_index-2846360-2.patch",
                 "Enter drupal/google_analytics_reports patch #2850463 description here":
-                "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch"
+                "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch",
+                "Enter drupal/google_analytics_reports patch #2877092 description here":
+                "https://gist.githubusercontent.com/sylus/47915c8e1cc35c3628f0edfcbe8a2a86/raw/9a91ec728966ba3ba7376d193bcb2d18c0f5b43a/proxy_support_for-2877092-2.patch"
             },
             "drupal/rate": {
                 "Enter drupal/rate patch #2834498 description here":
