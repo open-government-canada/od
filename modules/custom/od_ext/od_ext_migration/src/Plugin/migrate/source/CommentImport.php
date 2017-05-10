@@ -108,7 +108,6 @@ class CommentImport extends SqlBase {
       'community',
       'consultation',
       'deliverable',
-      'idea',
       'page',
       'suggested_app',
       'suggested_dataset',

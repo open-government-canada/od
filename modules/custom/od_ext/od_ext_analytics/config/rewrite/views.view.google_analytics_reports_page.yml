@@ -5,7 +5,7 @@ dependencies:
     - google_analytics_reports
     - user
 id: google_analytics_reports_page
-label: 'Open Data Analytics Reports Page'
+label: 'Analytics Reports Page'
 module: views
 description: 'Display statistical information about open.canada.ca pages from Google Analytics.'
 tag: 'Open Data, Google Analytics Reports'
