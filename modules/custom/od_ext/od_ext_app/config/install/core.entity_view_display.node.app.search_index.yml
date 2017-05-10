@@ -314,8 +314,6 @@ third_party_settings:
         builder: ipe
         pattern: panelizer
         static_context: {  }
-_core:
-  default_config_hash: snV2Q5YeQhbuwdZZmq6DSYkGGD0O1D7oJn4qMOzeq1Q
 id: node.app.search_index
 targetEntityType: node
 bundle: app
