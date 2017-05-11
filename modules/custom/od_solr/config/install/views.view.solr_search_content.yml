@@ -11,8 +11,6 @@ dependencies:
     - search_api
     - text
     - views_bootstrap
-_core:
-  default_config_hash: MfUkoZ0JUIEoa_m8vV9JIntiwrf7NHpIofBvtoPb--Y
 id: solr_search_content
 label: 'Solr search content'
 module: views
