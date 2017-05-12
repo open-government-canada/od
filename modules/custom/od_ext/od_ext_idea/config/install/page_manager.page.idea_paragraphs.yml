@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: idea_paragraphs
+label: 'Idea Paragraphs'
+description: ''
+use_admin_theme: false
+path: '/ideas/{paragraph}'
+access_logic: and
+access_conditions: {  }
+parameters:
+  paragraph:
+    machine_name: paragraph
+    type: 'entity:paragraph'
+    label: 'Idea Paragraph'

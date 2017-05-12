@@ -8,3 +8,4 @@ package: 'Open Data'
 dependencies:
   - drupal:od_ext_taxonomy
   - drupal:paragraphs
+  - drupal:panelizer

@@ -44,6 +44,7 @@ class IdeaParagraph extends SqlBase {
       'freetags' => $this->t('Tags'),
       'status' => $this->t('Status'),
       'submission_name' => $this->t('Submission Name'),
+      'idea_permalink' => $this->t('Idea Permalink'),
       'tags' => $this->t('Tags'),
     ];
 
@@ -123,6 +124,12 @@ class IdeaParagraph extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    $idea_permalink = $this->select('url_alias', 'db')
+      ->fields('db', ['alias'])
+      ->condition('source', 'node/' . $row->getSourceProperty('nid'))
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -133,6 +140,7 @@ class IdeaParagraph extends SqlBase {
     $row->setSourceProperty('freetags', $freetags);
     $row->setSourceProperty('status', $status['sc_consultation_field_status_tid']);
     $row->setSourceProperty('submission_name', $submission_name[0]);
+    $row->setSourceProperty('idea_permalink', $idea_permalink[0]);
 
     return parent::prepareRow($row);
   }

@@ -40,6 +40,7 @@ process:
     migration: od_ext_db_taxonomy_term
     source: status
   field_idea_submission_name/value: submission_name
+  field_idea_permalink: idea_permalink
 destination:
   plugin: 'entity_reference_revisions:paragraph'
 migration_dependencies:

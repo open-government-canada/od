@@ -50,6 +50,7 @@ process:
   content_translation_source:
     plugin: default_value
     default_value: "en"
+  field_idea_permalink: idea_permalink
 destination:
   plugin: 'entity_reference_revisions:paragraph'
   translations: true
