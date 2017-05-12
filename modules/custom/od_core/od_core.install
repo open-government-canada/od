@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Open Data Core.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function od_core_install() {
+  module_set_weight('od_core', 1);
+}

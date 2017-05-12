@@ -23,12 +23,12 @@
         color: #284162 !important;
         text-decoration: none; }
 
-.box {
+.apps .box {
   position: relative;
   border: 1px solid #BBB;
   background: #eee;
   float: left; }
-  .box > div {
+  .apps .box > div {
     margin: 15px; }
 
 .ribbon {

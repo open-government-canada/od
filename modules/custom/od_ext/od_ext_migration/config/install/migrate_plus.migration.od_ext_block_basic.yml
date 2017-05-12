@@ -55,6 +55,36 @@ source:
             </li>
           </ul>
         </section>
+    - bid: '404'
+      language: 'en'
+      title: '404'
+      body: |
+        <div class="box">
+          <div class="row">
+            <div class="col-xs-3 col-sm-2 col-md-2 text-center mrgn-tp-md">
+              <span class="glyphicon glyphicon-warning-sign glyphicon-error">
+              </span>
+            </div>
+            <div class="col-xs-9 col-sm-10 col-md-10">
+              <h2 class="mrgn-tp-md">We couldn't find that Web page</h2>
+              <p class="pagetag"><b>Error 404</b></p>
+            </div>
+          </div>
+          <p class="mrgn-tp-md">We're sorry you ended up here. Sometimes a
+          page gets moved or deleted, but hopefully we can help you find what
+          you're looking for. What next?</p>
+          <ul>
+            <li>Return to the <a href="http://www.canada.ca/en/index.html">
+            home page</a>;</li>
+            <li>Consult the <a href="http://www.canada.ca/en/sitemap.html">
+            site map</a>;</li>
+            <li>Check out the <a href="http://www.collectionscanada.gc.ca/012/012-412.01-e.html" rel="external">
+            Government of Canada Web Archive</a> to view an older version;
+            or</li>
+            <li><a href="http://www.canada.ca/en/contact/index.html">Contact
+            us</a> and we'll help you out.</li>
+          </ul>
+        </div>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

@@ -31,13 +31,15 @@
   }
 }
 
-.box {
-  position:relative;
-  border: 1px solid #BBB;
-  background:#eee;
-  float:left;
-  & > div {
-    margin: 15px;
+.apps {
+  .box {
+    position:relative;
+    border: 1px solid #BBB;
+    background:#eee;
+    float:left;
+    & > div {
+      margin: 15px;
+    }
   }
 }
 
