@@ -15,13 +15,9 @@ process:
     migration: od_ext_db_comment
     source: pid
   entity_id: nid
-  entity_type:
-    plugin: default_value
-    default_value: node
+  entity_type: entity_type
   field_name: field_name
-  comment_type:
-    plugin: default_value
-    default_value: comment
+  comment_type: comment_type
   subject: subject
   uid:
     plugin: migration

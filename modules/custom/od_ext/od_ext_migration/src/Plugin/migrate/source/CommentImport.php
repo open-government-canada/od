@@ -85,7 +85,11 @@ class CommentImport extends SqlBase {
    */
   public function prepareRow(Row $row) {
 
-    // Address.
+    $found = FALSE;
+    $entity_type = 'node';
+    $comment_type = 'comment';
+
+    // Body.
     $body = $this->select('field_data_comment_body', 'db')
       ->fields('db',
       [
@@ -97,10 +101,10 @@ class CommentImport extends SqlBase {
       ->execute()
       ->fetchAssoc();
 
-    // Default comment field attached to nodes.
+    // Default comment field.
     $row->setSourceProperty('field_name', 'comment');
 
-    // Lookup the correct nid / bundle / comment field.
+    // Lookup the correct nid / bundle / comment field for node(s).
     $lookup = [
       'app',
       'blog',
@@ -112,7 +116,6 @@ class CommentImport extends SqlBase {
       'suggested_app',
       'suggested_dataset',
     ];
-    $found = FALSE;
     foreach ($lookup as $bundle) {
       $nid = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_node_$bundle} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('nid')])->fetchField();
       if (!empty($nid)) {
@@ -121,9 +124,21 @@ class CommentImport extends SqlBase {
         if ($bundle == 'blog') {
           $row->setSourceProperty('field_name', 'field_blog_comments');
         }
-        if ($bundle == 'idea') {
-          $row->setSourceProperty('field_name', 'field_comment');
-        }
+      }
+    }
+
+    // Lookup the correct nid / type / comment field for paragraph(s).
+    $lookup = [
+      'idea',
+    ];
+    foreach ($lookup as $bundle) {
+      $nid = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_paragraph_$bundle} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('nid')])->fetchField();
+      if (!empty($nid)) {
+        $found = TRUE;
+        $entity_type = 'paragraph';
+        $comment_type = 'paragraphs_comments';
+        $row->setSourceProperty('nid', $nid);
+        $row->setSourceProperty('field_name', 'field_comment');
       }
     }
 
@@ -132,8 +147,10 @@ class CommentImport extends SqlBase {
       return FALSE;
     }
 
-    // Comment Body.
+    // Comment properties.
     $row->setSourceProperty('comment_body', $body['comment_body_value']);
+    $row->setSourceProperty('entity_type', $entity_type);
+    $row->setSourceProperty('comment_type', $comment_type);
 
     return parent::prepareRow($row);
   }
