@@ -13,7 +13,7 @@ bundle: idea
 label: Comment
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     status: 2
