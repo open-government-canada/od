@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains od_ext_suggested_app.module.
+ * Contains od_ext_rate.module.
  */
 
 use Drupal\Core\Url;
