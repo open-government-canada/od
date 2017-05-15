@@ -121,6 +121,41 @@ field_settings:
     datasource_id: solr_document
     property_path: ss_language
     type: text
+  i18n_content_en:
+    label: i18n_content_en
+    datasource_id: solr_document
+    property_path: i18n_content_en
+    type: text
+  i18n_content_fr:
+    label: i18n_content_fr
+    datasource_id: solr_document
+    property_path: i18n_content_fr
+    type: text
+  i18n_ts_en_ati_request_number:
+    label: i18n_ts_en_ati_request_number
+    datasource_id: solr_document
+    property_path: i18n_ts_en_ati_request_number
+    type: string
+  i18n_ts_en_ati_request_summary:
+    label: i18n_ts_en_ati_request_summary
+    datasource_id: solr_document
+    property_path: i18n_ts_en_ati_request_summary
+    type: text
+  i18n_ts_fr_ati_request_number:
+    label: i18n_ts_fr_ati_request_number
+    datasource_id: solr_document
+    property_path: i18n_ts_fr_ati_request_number
+    type: string
+  i18n_ts_fr_ati_request_summary:
+    label: i18n_ts_fr_ati_request_summary
+    datasource_id: solr_document
+    property_path: i18n_ts_fr_ati_request_summary
+    type: text
+  i18n_ts_en_ati_request_number_1:
+    label: i18n_ts_en_ati_request_number
+    datasource_id: solr_document
+    property_path: i18n_ts_en_ati_request_number
+    type: string
 datasource_settings:
   solr_document:
     id_field: id

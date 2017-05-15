@@ -40,7 +40,7 @@ Feature: Webform Management
    @webform
    Scenario: An anonymous user should be able to see the Informal Request for ATI Webform
      Given I am an anonymous user
-     When I go to "search/ati"
+     When I go to "form/ati-records"
      Then I should see "Informal Request for ATI Records Previously Released"
      When I select "1" from "requestor_category"
      And  I select "1" from "delivery_method"
