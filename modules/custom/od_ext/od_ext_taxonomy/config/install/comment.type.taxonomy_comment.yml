@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: taxonomy_comment
+label: 'Taxonomy comments'
+target_entity_type_id: taxonomy_term
+description: 'Allows commenting on taxonomies'

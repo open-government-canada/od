@@ -28,7 +28,6 @@ field_settings:
           app: search_index
           blog_post: search_index
           commitment: ''
-          community: ''
           consultation: ''
           deliverable: ''
           landing_page: ''

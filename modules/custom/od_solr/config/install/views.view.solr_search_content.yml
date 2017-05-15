@@ -75,7 +75,6 @@ display:
               app: search_result
               blog_post: search_result
               commitment: default
-              community: default
               consultation: default
               deliverable: default
               landing_page: default

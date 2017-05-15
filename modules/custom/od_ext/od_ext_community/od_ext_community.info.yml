@@ -1,9 +1,0 @@
-name: 'Open Data Extend Community'
-description: 'Communities often associated with Open Government.'
-type: module
-core: 8.x
-package: 'Open Data'
-
-# Required modules
-dependencies:
-  - drupal:od_ext_vote

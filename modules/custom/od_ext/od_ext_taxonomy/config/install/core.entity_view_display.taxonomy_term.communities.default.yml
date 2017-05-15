@@ -2,34 +2,31 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
-    - field.field.node.community.body
-    - field.field.node.community.comment
-    - node.type.community
+    - field.field.taxonomy_term.communities.field_taxonomy_comments
+    - taxonomy.vocabulary.communities
   module:
     - comment
     - text
-    - user
-id: node.community.default
-targetEntityType: node
-bundle: community
+id: taxonomy_term.communities.default
+targetEntityType: taxonomy_term
+bundle: communities
 mode: default
 content:
-  body:
+  description:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-  comment:
-    weight: 102
+  field_taxonomy_comments:
+    weight: 1
     label: above
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
     type: comment_default
-  links:
-    weight: 100
+    region: content
 hidden:
   langcode: true

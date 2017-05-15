@@ -9,7 +9,6 @@ dependencies:
   - drupal:od_ext_analytics
   - drupal:od_ext_app
   - drupal:od_ext_commitment
-  - drupal:od_ext_community
   - drupal:od_ext_consultation
   - drupal:od_ext_deliverable
   - drupal:od_ext_idea
