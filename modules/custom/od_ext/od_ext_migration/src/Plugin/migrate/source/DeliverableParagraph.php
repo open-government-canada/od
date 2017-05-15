@@ -9,10 +9,10 @@ use Drupal\migrate\Row;
  * Source plugin for deliverable content.
  *
  * @MigrateSource(
- *   id = "deliverable_node"
+ *   id = "deliverable_paragraph"
  * )
  */
-class DeliverableNode extends SqlBase {
+class DeliverableParagraph extends SqlBase {
 
   /**
    * {@inheritdoc}

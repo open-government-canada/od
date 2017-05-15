@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_deliverables_paragraph
+    - node.type.commitment
+    - paragraphs.paragraphs_type.deliverable
+  module:
+    - entity_reference_revisions
+id: node.commitment.field_deliverables_paragraph
+field_name: field_deliverables_paragraph
+entity_type: node
+bundle: commitment
+label: 'Deliverables Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      deliverable: deliverable
+    target_bundles_drag_drop:
+      deliverable:
+        enabled: true
+        weight: 3
+      idea:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

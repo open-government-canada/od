@@ -177,6 +177,16 @@ class CommitmentNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // Paragraph Deliverable.
+    $paragraph_deliverable = $this->select('field_data_field_deliverable', 'df')
+      ->fields('df', ['field_deliverable_target_id'])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('revision_id', $row->getSourceProperty('vid'))
+      ->condition('language', 'und')
+      ->condition('bundle', 'commitment')
+      ->execute()
+      ->fetchAllAssoc('field_deliverable_target_id');
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -192,6 +202,7 @@ class CommitmentNode extends SqlBase {
     $row->setSourceProperty('tags', $tags);
     $row->setSourceProperty('pillars', $pillars['field_pillars_tid']);
     $row->setSourceProperty('status', $status[0]);
+    $row->setSourceProperty('paragraph_deliverable', $paragraph_deliverable);
 
     return parent::prepareRow($row);
   }

@@ -5,17 +5,18 @@ dependencies:
     - field.field.node.commitment.body
     - field.field.node.commitment.comment
     - field.field.node.commitment.field_commitment_ambition
-    - field.field.node.commitment.field_commitment_deliverable
     - field.field.node.commitment.field_commitment_end_date
     - field.field.node.commitment.field_commitment_pillars
     - field.field.node.commitment.field_commitment_relevance
     - field.field.node.commitment.field_commitment_status
     - field.field.node.commitment.field_commitment_tags
+    - field.field.node.commitment.field_deliverables_paragraph
     - field.field.node.commitment.field_department
     - node.type.commitment
   module:
     - comment
     - field_group
+    - inline_entity_form
     - path
     - text
     - workbench_moderation
@@ -26,7 +27,7 @@ third_party_settings:
         - group_basic_info
         - group_adv_info
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: tabs
       format_settings:
         id: ''
@@ -78,16 +79,19 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   comment:
-    weight: 26
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: comment_default
+    region: content
   created:
     type: datetime_timestamp
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_commitment_ambition:
     weight: 12
     settings:
@@ -95,14 +99,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-  field_commitment_deliverable:
-    weight: 18
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
+    region: content
   field_commitment_end_date:
     weight: 13
     settings:
@@ -110,6 +107,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_commitment_pillars:
     weight: 17
     settings:
@@ -118,6 +116,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   field_commitment_relevance:
     weight: 11
     settings:
@@ -125,11 +124,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_commitment_status:
     weight: 14
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_commitment_tags:
     weight: 16
     settings:
@@ -138,6 +139,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_deliverables_paragraph:
+    type: inline_entity_form_complex
+    weight: 9
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      empty_mode: ''
+      match_operator: CONTAINS
+      override_labels: false
+      allow_existing: false
+    third_party_settings: {  }
+    region: content
   field_department:
     weight: 15
     settings:
@@ -146,28 +162,33 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 7
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 5
     third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 6
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -175,8 +196,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   translation:
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
   uid:
@@ -187,4 +210,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

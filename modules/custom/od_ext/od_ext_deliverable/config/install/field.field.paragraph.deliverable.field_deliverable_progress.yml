@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_deliverable_progress
-    - node.type.deliverable
+    - field.storage.paragraph.field_deliverable_progress
+    - paragraphs.paragraphs_type.deliverable
   module:
     - text
-id: node.deliverable.field_deliverable_progress
+id: paragraph.deliverable.field_deliverable_progress
 field_name: field_deliverable_progress
-entity_type: node
+entity_type: paragraph
 bundle: deliverable
 label: Results
 description: ''

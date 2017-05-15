@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.deliverable.field_body
+    - field.field.paragraph.deliverable.field_deliverable_next_steps
+    - field.field.paragraph.deliverable.field_deliverable_progress
+    - field.field.paragraph.deliverable.field_deliverable_status
+    - field.field.paragraph.deliverable.field_title
+    - paragraphs.paragraphs_type.deliverable
+  module:
+    - options
+    - text
+id: paragraph.deliverable.default
+targetEntityType: paragraph
+bundle: deliverable
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_deliverable_next_steps:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_deliverable_progress:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_deliverable_status:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_title:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

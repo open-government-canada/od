@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - node.type.deliverable
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.deliverable
   module:
     - text
-id: node.deliverable.body
-field_name: body
-entity_type: node
+id: paragraph.deliverable.field_body
+field_name: field_body
+entity_type: paragraph
 bundle: deliverable
-label: Description
+label: Body
 description: ''
 required: false
 translatable: true

@@ -110,7 +110,6 @@ class CommentImport extends SqlBase {
       'blog',
       'commitment',
       'consultation',
-      'deliverable',
       'page',
       'suggested_app',
       'suggested_dataset',
@@ -118,7 +117,6 @@ class CommentImport extends SqlBase {
       'blog_translation',
       'commitment_translation',
       'consultation_translation',
-      'deliverable_translation',
       'page_translation',
       'suggested_app_translation',
       'suggested_dataset_translation',
@@ -138,6 +136,8 @@ class CommentImport extends SqlBase {
 
     // Lookup the correct nid / type / comment field for paragraph(s).
     $lookup = [
+      'deliverable',
+      'deliverable_translation',
       'idea',
       'idea_translation',
     ];

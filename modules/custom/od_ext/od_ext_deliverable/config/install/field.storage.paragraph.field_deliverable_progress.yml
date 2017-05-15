@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - paragraphs
     - text
-id: node.field_deliverable_progress
+id: paragraph.field_deliverable_progress
 field_name: field_deliverable_progress
-entity_type: node
+entity_type: paragraph
 type: text_long
 settings: {  }
 module: text

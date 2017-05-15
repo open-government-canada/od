@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.deliverable.field_body
+    - field.field.paragraph.deliverable.field_deliverable_next_steps
+    - field.field.paragraph.deliverable.field_deliverable_progress
+    - field.field.paragraph.deliverable.field_deliverable_status
+    - field.field.paragraph.deliverable.field_title
+    - paragraphs.paragraphs_type.deliverable
+  module:
+    - text
+    - workbench_moderation
+id: paragraph.deliverable.default
+targetEntityType: paragraph
+bundle: deliverable
+mode: default
+content:
+  field_body:
+    weight: 8
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_deliverable_next_steps:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_deliverable_progress:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_deliverable_status:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 10
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

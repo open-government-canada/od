@@ -4,6 +4,15 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.commitment.body
+    - field.field.node.commitment.comment
+    - field.field.node.commitment.field_commitment_ambition
+    - field.field.node.commitment.field_commitment_end_date
+    - field.field.node.commitment.field_commitment_pillars
+    - field.field.node.commitment.field_commitment_relevance
+    - field.field.node.commitment.field_commitment_status
+    - field.field.node.commitment.field_commitment_tags
+    - field.field.node.commitment.field_deliverables_paragraph
+    - field.field.node.commitment.field_department
     - node.type.commitment
   module:
     - text
@@ -20,7 +29,18 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
+  comment: true
+  field_commitment_ambition: true
+  field_commitment_end_date: true
+  field_commitment_pillars: true
+  field_commitment_relevance: true
+  field_commitment_status: true
+  field_commitment_tags: true
+  field_deliverables_paragraph: true
+  field_department: true
   langcode: true

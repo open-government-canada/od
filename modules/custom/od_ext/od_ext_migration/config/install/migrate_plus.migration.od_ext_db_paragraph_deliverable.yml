@@ -1,16 +1,16 @@
-id: od_ext_db_node_deliverable
+id: od_ext_db_paragraph_deliverable
 migration_tags: null
 migration_group: od_external
 dependencies:
   enforced:
     module:
       - od_ext_migration
-label: 'Database import for Deliverable from legacy Drupal database'
+label: 'Database import for Deliverables from legacy Drupal database'
 source:
-  plugin: deliverable_node
+  plugin: deliverable_paragraph
   target: source_migration
 process:
-  title: title
+  field_title: title
   uid:
     plugin: default_value
     default_value: 1
@@ -20,10 +20,10 @@ process:
   sticky:
     plugin: default_value
     default_value: 0
-  body/value:
+  field_body/value:
     plugin: wxt_media_tags
     source: body
-  body/format:
+  field_body/format:
     plugin: default_value
     default_value: rich_text
   langcode: language
@@ -37,7 +37,7 @@ process:
     default_value: rich_text
   field_deliverable_status/value: status
 destination:
-  plugin: 'entity:node'
+  plugin: 'entity_reference_revisions:paragraph'
 migration_dependencies:
   required:
     - od_ext_db_file

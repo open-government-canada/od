@@ -65,4 +65,4 @@ migration_dependencies:
   required:
     - od_ext_db_file
     - od_ext_db_taxonomy_term
-    - od_ext_node_idea
+    - od_ext_paragraph_idea
