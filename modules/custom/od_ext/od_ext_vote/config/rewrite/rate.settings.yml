@@ -2,8 +2,6 @@ use_ajax: true
 enabled_types_bundles:
   node:
     - app
-    - blog_post
-    - dataset
 widget_type: fiveleaf
 bot_minute_threshold: '0'
 bot_hour_threshold: '0'

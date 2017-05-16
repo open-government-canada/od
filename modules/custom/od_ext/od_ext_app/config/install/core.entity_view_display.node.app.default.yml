@@ -233,10 +233,11 @@ third_party_settings:
             label_display: '0'
             formatter:
               label: hidden
-              type: image
+              type: wxt_lightbox
               settings:
-                image_style: medium
-                image_link: ''
+                thumb_image_style: spotlight
+                lbx_image_style: ''
+                lbx_gal: all_items
               third_party_settings: {  }
               weight: 0
               region: content

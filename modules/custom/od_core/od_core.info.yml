@@ -8,3 +8,4 @@ package: 'Open Data'
 dependencies:
   - drupal:datetime_range
   - drupal:paragraphs
+  - drupal:reference_table_formatter

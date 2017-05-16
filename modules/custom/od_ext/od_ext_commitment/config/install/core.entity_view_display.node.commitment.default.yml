@@ -16,17 +16,242 @@ dependencies:
     - node.type.commitment
   module:
     - comment
-    - entity_reference_revisions
     - options
     - panelizer
+    - reference_table_formatter
     - text
     - user
 third_party_settings:
   panelizer:
-    enable: false
+    enable: true
     custom: false
     allow: false
     default: default
+    displays:
+      default:
+        blocks:
+          ed2d1887-02a1-4a83-a68b-031e5dbe1f48:
+            id: 'entity_field:node:body'
+            label: Description
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: top
+            weight: -10
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: ed2d1887-02a1-4a83-a68b-031e5dbe1f48
+          37670e37-6055-4dd3-99a4-3a07a4046cb5:
+            id: 'entity_field:node:comment'
+            label: Comments
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: comment_default
+              settings:
+                view_mode: default
+                pager_id: 0
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: bottom
+            weight: -6
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 37670e37-6055-4dd3-99a4-3a07a4046cb5
+          08fafceb-8d72-4705-9674-358ea4a56c20:
+            id: 'entity_field:node:field_commitment_ambition'
+            label: Ambition
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: bottom
+            weight: -7
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 08fafceb-8d72-4705-9674-358ea4a56c20
+          aa401e84-ab63-4bce-ba30-9a966f195216:
+            id: 'entity_field:node:field_commitment_end_date'
+            label: 'End Date'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left
+            weight: -1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: aa401e84-ab63-4bce-ba30-9a966f195216
+          39256d07-038d-483e-892b-b4272af962bc:
+            id: 'entity_field:node:field_commitment_pillars'
+            label: 'Open Government Stream'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left
+            weight: -2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 39256d07-038d-483e-892b-b4272af962bc
+          c5ba1c45-a5a3-4d2b-8c60-6c69d90847cd:
+            id: 'entity_field:node:field_commitment_relevance'
+            label: Relevance
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: bottom
+            weight: -8
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: c5ba1c45-a5a3-4d2b-8c60-6c69d90847cd
+          97e03bb6-d356-4ba0-8f3b-972acabbeb58:
+            id: 'entity_field:node:field_commitment_status'
+            label: Status
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: list_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: right
+            weight: -4
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 97e03bb6-d356-4ba0-8f3b-972acabbeb58
+          92474ba0-1a3e-48e3-9e8d-aac21f501047:
+            id: 'entity_field:node:field_commitment_tags'
+            label: 'Other Involved Actors'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left
+            weight: -3
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 92474ba0-1a3e-48e3-9e8d-aac21f501047
+          c1eb6b8a-90b3-4da6-aef9-3b04cfa67174:
+            id: 'entity_field:node:field_deliverables_paragraph'
+            label: 'Deliverables Paragraph'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_table
+              settings:
+                view_mode: default
+                show_entity_label: false
+                empty_cell_value: ''
+                hide_header: '0'
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: bottom
+            weight: -9
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: c1eb6b8a-90b3-4da6-aef9-3b04cfa67174
+          accd3456-06c6-47fa-9710-6e1e58785136:
+            id: 'entity_field:node:field_department'
+            label: 'Lead Department(s)'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: left
+            weight: -4
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: accd3456-06c6-47fa-9710-6e1e58785136
+        id: panels_variant
+        label: Default
+        uuid: b5d551b2-b622-404d-ac25-573e207a696e
+        weight: 0
+        layout: bs_2col_stacked
+        layout_settings:
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            top:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: class|mrgn-bttm-lg
+            left:
+              wrapper: div
+              classes:
+                col-sm-6: col-sm-6
+              add_region_classes: 1
+              attributes: ''
+            right:
+              wrapper: div
+              classes:
+                col-sm-6: col-sm-6
+              add_region_classes: 1
+              attributes: class|well
+            bottom:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: class|mrgn-tp-lg
+        page_title: '[node:title]'
+        storage_type: panelizer_default
+        storage_id: 'node:commitment:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
 id: node.commitment.default
 targetEntityType: node
 bundle: commitment
@@ -35,12 +260,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     region: content
   comment:
-    weight: 11
+    weight: 10
     label: above
     settings:
       view_mode: default
@@ -56,15 +281,15 @@ content:
     type: text_default
     region: content
   field_commitment_end_date:
-    weight: 9
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_commitment_pillars:
-    weight: 6
-    label: above
+    weight: 3
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -78,39 +303,41 @@ content:
     type: text_default
     region: content
   field_commitment_status:
-    weight: 1
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_commitment_tags:
-    weight: 5
-    label: above
+    weight: 2
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_deliverables_paragraph:
-    type: entity_reference_revisions_entity_view
-    weight: 4
-    label: above
+    type: entity_reference_table
+    weight: 6
+    label: hidden
     settings:
       view_mode: default
-      link: ''
+      show_entity_label: false
+      empty_cell_value: ''
+      hide_header: '0'
     third_party_settings: {  }
     region: content
   field_department:
-    weight: 0
-    label: above
+    weight: 1
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   links:
-    weight: 10
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
