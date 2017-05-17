@@ -25,6 +25,7 @@ class ConsultationNode extends SqlBase {
         'vid',
         'language',
         'title',
+        'uid',
       ])
       ->condition('n.type', 'consultation');
 
@@ -40,6 +41,7 @@ class ConsultationNode extends SqlBase {
       'vid' => $this->t('Revision ID'),
       'language' => $this->t('Language'),
       'title' => $this->t('Title'),
+      'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
       'date_start' => $this->t('Date Start'),
       'date_end' => $this->t('Date End'),

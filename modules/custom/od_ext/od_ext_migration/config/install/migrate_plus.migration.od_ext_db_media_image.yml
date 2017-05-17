@@ -32,3 +32,4 @@ migration_dependencies:
   required:
     # migrations
     - od_ext_db_file
+    - od_ext_db_user

@@ -17,8 +17,9 @@ process:
     migration: od_ext_db_node_suggested_app
     source: nid
   uid:
-    plugin: default_value
-    default_value: 1
+    plugin: migration
+    migration: od_ext_db_user
+    source: uid
   type:
     plugin: default_value
     default_value: suggested_app

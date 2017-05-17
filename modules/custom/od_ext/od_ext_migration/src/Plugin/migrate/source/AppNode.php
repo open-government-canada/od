@@ -25,6 +25,7 @@ class AppNode extends SqlBase {
         'vid',
         'language',
         'title',
+        'uid',
       ])
       ->condition('n.type', 'apps');
 
@@ -40,6 +41,7 @@ class AppNode extends SqlBase {
       'vid' => $this->t('Revision ID'),
       'language' => $this->t('Language'),
       'title' => $this->t('Title'),
+      'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
       'name' => $this->t('Name'),
       'url' => $this->t('URL'),

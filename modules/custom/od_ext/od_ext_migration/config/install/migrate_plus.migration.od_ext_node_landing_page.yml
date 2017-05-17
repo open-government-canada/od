@@ -1656,8 +1656,9 @@ source:
 process:
   title: title
   uid:
-    plugin: default_value
-    default_value: 1
+    plugin: migration
+    migration: od_ext_db_user
+    source: uid
   type:
     plugin: default_value
     default_value: landing_page
@@ -1706,3 +1707,4 @@ migration_dependencies:
     - od_ext_block_search
     - od_ext_block_spotlight
     - od_ext_media_slideshow
+    - od_ext_db_user

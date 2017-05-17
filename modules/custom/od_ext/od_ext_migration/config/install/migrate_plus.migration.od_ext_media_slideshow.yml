@@ -51,3 +51,4 @@ migration_dependencies:
   required:
     # migrations
     - od_ext_db_media_image
+    - od_ext_db_user

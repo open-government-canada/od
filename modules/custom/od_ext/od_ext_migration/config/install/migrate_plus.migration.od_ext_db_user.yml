@@ -50,5 +50,4 @@ destination:
   plugin: entity:user
 migration_dependencies:
   required:
-    - od_ext_db_file
     - od_ext_db_taxonomy_term

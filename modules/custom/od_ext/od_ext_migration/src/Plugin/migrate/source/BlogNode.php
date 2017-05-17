@@ -25,6 +25,7 @@ class BlogNode extends SqlBase {
         'vid',
         'language',
         'title',
+        'uid',
       ])
       ->condition('n.type', 'blog_post');
 
@@ -40,6 +41,7 @@ class BlogNode extends SqlBase {
       'vid' => $this->t('Revision ID'),
       'language' => $this->t('Language'),
       'title' => $this->t('Title'),
+      'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
       'file_fid' => $this->t('File fid'),
       'file_alt' => $this->t('File alt'),

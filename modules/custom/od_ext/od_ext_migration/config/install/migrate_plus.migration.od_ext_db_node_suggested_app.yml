@@ -12,8 +12,9 @@ source:
 process:
   title: title
   uid:
-    plugin: default_value
-    default_value: 1
+    plugin: migration
+    migration: od_ext_db_user
+    source: uid
   type:
     plugin: default_value
     default_value: suggested_app
@@ -37,3 +38,4 @@ migration_dependencies:
   required:
     - od_ext_db_file
     - od_ext_db_taxonomy_term
+    - od_ext_db_user

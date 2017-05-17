@@ -25,6 +25,7 @@ class IdeaParagraph extends SqlBase {
         'vid',
         'language',
         'title',
+        'uid',
       ])
       ->condition('n.type', 'idea');
 
@@ -40,6 +41,7 @@ class IdeaParagraph extends SqlBase {
       'vid' => $this->t('Revision ID'),
       'language' => $this->t('Language'),
       'title' => $this->t('Title'),
+      'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
       'freetags' => $this->t('Tags'),
       'status' => $this->t('Status'),

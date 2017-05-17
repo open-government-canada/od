@@ -224,5 +224,4 @@ destination:
   plugin: entity:menu_link_content
 migration_dependencies:
   required:
-    # modules
-    - menu
+    - od_ext_db_user
