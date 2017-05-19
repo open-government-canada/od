@@ -3,9 +3,9 @@ status: true
 dependencies:
   module:
     - search_api_solr
-id: pd_core_ati
-name: 'Proactive Disclosure: ATI'
-description: 'Proactive Disclosure: ATI'
+id: pd_core_hospitalityq
+name: 'Proactive Disclosure: Hospitality (Q)'
+description: 'Proactive Disclosure: Hospitality (Q)'
 backend: search_api_solr
 backend_config:
   connector: standard
@@ -14,7 +14,7 @@ backend_config:
     host: solr
     port: '8983'
     path: /solr
-    core: core_ati
+    core: core_hospitalityq
     timeout: 5
     index_timeout: 5
     optimize_timeout: 10

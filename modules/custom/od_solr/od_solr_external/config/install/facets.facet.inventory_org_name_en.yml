@@ -2,20 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.pd_core_ati
-    - views.view.pd_core_ati
+    - search_api.index.pd_core_inventory
+    - views.view.pd_core_inventory
   module:
     - search_api
-id: ss_ati_monthname_en
-name: Month
-url_alias: month
+id: inventory_org_name_en
+name: Inventory
+url_alias: org_name_en
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: ss_ati_monthname_en
-facet_source_id: 'search_api:views_block__pd_core_ati__block_1'
+field_identifier: org_name_en
+facet_source_id: 'search_api:views_block__pd_core_inventory__block_1'
 widget:
-  type: checkbox
+  type: links
   config:
     show_numbers: true
     soft_limit: 10

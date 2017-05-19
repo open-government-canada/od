@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.pd_core_ati
-    - views.view.pd_core_ati
+    - search_api.index.pd_core_contracts
+    - views.view.pd_core_contracts
   module:
     - search_api
-id: ss_ati_monthname_en
-name: Month
-url_alias: month
+id: contracts_year
+name: Year
+url_alias: year
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: ss_ati_monthname_en
-facet_source_id: 'search_api:views_block__pd_core_ati__block_1'
+field_identifier: year
+facet_source_id: 'search_api:views_block__pd_core_contracts__block_1'
 widget:
   type: checkbox
   config:

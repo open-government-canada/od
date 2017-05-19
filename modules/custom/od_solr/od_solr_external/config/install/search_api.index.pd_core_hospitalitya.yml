@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.pd_core_hospitalitya
+  module:
+    - search_api
+    - search_api_solr_datasource
+id: pd_core_hospitalitya
+name: 'Proactive Disclosure: Hospitality (A) Index'
+description: ''
+read_only: true
+field_settings: {  }
+datasource_settings:
+  solr_document:
+    id_field: unique_id
+    advanced:
+      request_handler: pinkPony
+      default_query: '*:*'
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: false
+  cron_limit: 50
+server: pd_core_hospitalitya

@@ -7,7 +7,7 @@ dependencies:
     - search_api
     - search_api_solr_datasource
 id: pd_core_ati
-name: 'Proactive Disclosure: Core ATI Index'
+name: 'Proactive Disclosure: ATI Index'
 description: ''
 read_only: true
 field_settings:
@@ -120,16 +120,6 @@ field_settings:
     label: ss_language
     datasource_id: solr_document
     property_path: ss_language
-    type: text
-  i18n_content_en:
-    label: i18n_content_en
-    datasource_id: solr_document
-    property_path: i18n_content_en
-    type: text
-  i18n_content_fr:
-    label: i18n_content_fr
-    datasource_id: solr_document
-    property_path: i18n_content_fr
     type: text
   i18n_ts_en_ati_request_number:
     label: i18n_ts_en_ati_request_number

@@ -1,0 +1,259 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.pd_core_travela
+  module:
+    - search_api
+    - search_api_solr_datasource
+id: pd_core_travela
+name: 'Proactive Disclosure: Travel (A) Index'
+description: ''
+read_only: true
+field_settings:
+  conference_fees:
+    label: conference_fees
+    datasource_id: solr_document
+    property_path: conference_fees
+    type: string
+  conference_fees_change:
+    label: conference_fees_change
+    datasource_id: solr_document
+    property_path: conference_fees_change
+    type: string
+  conference_fees_compared_fiscal_year_en:
+    label: conference_fees_compared_fiscal_year_en
+    datasource_id: solr_document
+    property_path: conference_fees_compared_fiscal_year_en
+    type: string
+  conference_fees_compared_fiscal_year_fr:
+    label: conference_fees_compared_fiscal_year_fr
+    datasource_id: solr_document
+    property_path: conference_fees_compared_fiscal_year_fr
+    type: string
+  conference_fees_previous_year:
+    label: conference_fees_previous_year
+    datasource_id: solr_document
+    property_path: conference_fees_previous_year
+    type: string
+  hospitality:
+    label: hospitality
+    datasource_id: solr_document
+    property_path: hospitality
+    type: string
+  hospitality_change:
+    label: hospitality_change
+    datasource_id: solr_document
+    property_path: hospitality_change
+    type: string
+  hospitality_compared_fiscal_year_en:
+    label: hospitality_compared_fiscal_year_en
+    datasource_id: solr_document
+    property_path: hospitality_compared_fiscal_year_en
+    type: string
+  hospitality_compared_fiscal_year_fr:
+    label: hospitality_compared_fiscal_year_fr
+    datasource_id: solr_document
+    property_path: hospitality_compared_fiscal_year_fr
+    type: string
+  hospitality_previous_year:
+    label: hospitality_previous_year
+    datasource_id: solr_document
+    property_path: hospitality_previous_year
+    type: string
+  id:
+    label: id
+    datasource_id: solr_document
+    property_path: id
+    type: string
+  minister:
+    label: minister
+    datasource_id: solr_document
+    property_path: minister
+    type: string
+  minister_change:
+    label: minister_change
+    datasource_id: solr_document
+    property_path: minister_change
+    type: string
+  minister_compared_fiscal_year_en:
+    label: minister_compared_fiscal_year_en
+    datasource_id: solr_document
+    property_path: minister_compared_fiscal_year_en
+    type: string
+  minister_compared_fiscal_year_fr:
+    label: minister_compared_fiscal_year_fr
+    datasource_id: solr_document
+    property_path: minister_compared_fiscal_year_fr
+    type: string
+  minister_previous_year:
+    label: minister_previous_year
+    datasource_id: solr_document
+    property_path: minister_previous_year
+    type: string
+  non_public_servant_compared_fiscal_year_en:
+    label: non_public_servant_compared_fiscal_year_en
+    datasource_id: solr_document
+    property_path: non_public_servant_compared_fiscal_year_en
+    type: string
+  non_public_servant_compared_fiscal_year_fr:
+    label: non_public_servant_compared_fiscal_year_fr
+    datasource_id: solr_document
+    property_path: non_public_servant_compared_fiscal_year_fr
+    type: string
+  non_public_servants:
+    label: non_public_servants
+    datasource_id: solr_document
+    property_path: non_public_servants
+    type: string
+  non_public_servants_change:
+    label: non_public_servants_change
+    datasource_id: solr_document
+    property_path: non_public_servants_change
+    type: string
+  non_public_servants_previous_year:
+    label: non_public_servants_previous_year
+    datasource_id: solr_document
+    property_path: non_public_servants_previous_year
+    type: string
+  org_name_code:
+    label: org_name_code
+    datasource_id: solr_document
+    property_path: org_name_code
+    type: string
+  org_name_en:
+    label: org_name_en
+    datasource_id: solr_document
+    property_path: org_name_en
+    type: string
+  org_name_fr:
+    label: org_name_fr
+    datasource_id: solr_document
+    property_path: org_name_fr
+    type: string
+  public_servant_compared_fiscal_year_en:
+    label: public_servant_compared_fiscal_year_en
+    datasource_id: solr_document
+    property_path: public_servant_compared_fiscal_year_en
+    type: string
+  non_public_servant_compared_fiscal_year_fr_1:
+    label: non_public_servant_compared_fiscal_year_fr
+    datasource_id: solr_document
+    property_path: non_public_servant_compared_fiscal_year_fr
+    type: string
+  non_public_servants_1:
+    label: non_public_servants
+    datasource_id: solr_document
+    property_path: non_public_servants
+    type: string
+  non_public_servants_change_1:
+    label: non_public_servants_change
+    datasource_id: solr_document
+    property_path: non_public_servants_change
+    type: string
+  non_public_servants_previous_year_1:
+    label: non_public_servants_previous_year
+    datasource_id: solr_document
+    property_path: non_public_servants_previous_year
+    type: string
+  org_name_code_1:
+    label: org_name_code
+    datasource_id: solr_document
+    property_path: org_name_code
+    type: string
+  org_name_en_1:
+    label: org_name_en
+    datasource_id: solr_document
+    property_path: org_name_en
+    type: string
+  org_name_fr_1:
+    label: org_name_fr
+    datasource_id: solr_document
+    property_path: org_name_fr
+    type: string
+  public_servant_compared_fiscal_year_en_1:
+    label: public_servant_compared_fiscal_year_en
+    datasource_id: solr_document
+    property_path: public_servant_compared_fiscal_year_en
+    type: string
+  public_servant_compared_fiscal_year_fr:
+    label: public_servant_compared_fiscal_year_fr
+    datasource_id: solr_document
+    property_path: public_servant_compared_fiscal_year_fr
+    type: string
+  public_servants:
+    label: public_servants
+    datasource_id: solr_document
+    property_path: public_servants
+    type: string
+  public_servants_change:
+    label: public_servants_change
+    datasource_id: solr_document
+    property_path: public_servants_change
+    type: string
+  public_servants_previous_year:
+    label: public_servants_previous_year
+    datasource_id: solr_document
+    property_path: public_servants_previous_year
+    type: string
+  text:
+    label: text
+    datasource_id: solr_document
+    property_path: text
+    type: text
+  total:
+    label: total
+    datasource_id: solr_document
+    property_path: total
+    type: string
+  total_change:
+    label: total_change
+    datasource_id: solr_document
+    property_path: total_change
+    type: string
+  total_previous_year:
+    label: total_previous_year
+    datasource_id: solr_document
+    property_path: total_previous_year
+    type: string
+  total_travel:
+    label: total_travel
+    datasource_id: solr_document
+    property_path: total_travel
+    type: string
+  total_travel_change:
+    label: total_travel_change
+    datasource_id: solr_document
+    property_path: total_travel_change
+    type: string
+  total_travel_previous_year:
+    label: total_travel_previous_year
+    datasource_id: solr_document
+    property_path: total_travel_previous_year
+    type: string
+  unique_id:
+    label: unique_id
+    datasource_id: solr_document
+    property_path: unique_id
+    type: string
+  year:
+    label: year
+    datasource_id: solr_document
+    property_path: year
+    type: string
+datasource_settings:
+  solr_document:
+    id_field: unique_id
+    advanced:
+      request_handler: pinkPony
+      default_query: '*:*'
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: false
+  cron_limit: 50
+server: pd_core_travela

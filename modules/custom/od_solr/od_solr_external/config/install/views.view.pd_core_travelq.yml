@@ -2,16 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.pd_core_ati
+    - search_api.index.pd_core_travelq
   module:
     - search_api
     - views_bootstrap
-id: pd_core_ati
-label: 'Proactive Disclosure: ATI'
+id: pd_core_travelq
+label: 'Proactive Disclosure: Travel (Q)'
 module: views
-description: 'Proactive Disclosure: ATI'
+description: 'Proactive Disclosure: Travel (Q)'
 tag: ''
-base_table: search_api_index_pd_core_ati
+base_table: search_api_index_pd_core_travelq
 base_field: search_api_id
 core: 8.x
 display:
@@ -66,7 +66,7 @@ display:
       style:
         type: views_bootstrap_panel
         options:
-          panel_title_field: i18n_ts_en_ati_request_number
+          panel_title_field: ref_number
       row:
         type: fields
         options:
@@ -75,15 +75,67 @@ display:
           separator: ''
           hide_empty: true
       fields:
-        i18n_ts_en_ati_request_number:
-          id: i18n_ts_en_ati_request_number
-          table: search_api_index_pd_core_ati
-          field: i18n_ts_en_ati_request_number
+        id:
+          id: id
+          table: search_api_index_pd_core_travelq
+          field: id
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Request Number'
+          label: ''
           exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        ref_number:
+          id: ref_number
+          table: search_api_index_pd_core_travelq
+          field: ref_number
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Reference Number'
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -118,7 +170,7 @@ display:
           element_label_colon: true
           element_wrapper_type: p
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: true
           empty_zero: false
@@ -127,10 +179,114 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        ss_ati_organization_en:
-          id: ss_ati_organization_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_organization_en
+        title_en:
+          id: title_en
+          table: search_api_index_pd_core_travelq
+          field: title_en
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Title
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        name:
+          id: name
+          table: search_api_index_pd_core_travelq
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Name
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        org_name_en:
+          id: org_name_en
+          table: search_api_index_pd_core_travelq
+          field: org_name_en
           relationship: none
           group_type: group
           admin_label: ''
@@ -179,66 +335,14 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        ss_ati_disposition_en:
-          id: ss_ati_disposition_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_disposition_en
+        airfare_en:
+          id: airfare_en
+          table: search_api_index_pd_core_travelq
+          field: airfare_en
           relationship: none
           group_type: group
           admin_label: ''
-          label: Disposition
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: span
-          element_class: ''
-          element_label_type: strong
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: p
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
-          multi_type: separator
-          multi_separator: ', '
-          plugin_id: search_api
-        ss_ati_year_en:
-          id: ss_ati_year_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_year_en
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Year
+          label: Airfare
           exclude: false
           alter:
             alter_text: false
@@ -283,14 +387,14 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        ss_ati_monthname_en:
-          id: ss_ati_monthname_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_monthname_en
+        destination_en:
+          id: destination_en
+          table: search_api_index_pd_core_travelq
+          field: destination_en
           relationship: none
           group_type: group
           admin_label: ''
-          label: Month
+          label: Destination
           exclude: false
           alter:
             alter_text: false
@@ -335,66 +439,14 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        ss_ati_month_en:
-          id: ss_ati_month_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_month_en
+        total_en:
+          id: total_en
+          table: search_api_index_pd_core_travelq
+          field: total_en
           relationship: none
           group_type: group
           admin_label: ''
-          label: Month
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: span
-          element_class: ''
-          element_label_type: strong
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: p
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
-          multi_type: separator
-          multi_separator: ', '
-          plugin_id: search_api
-        ss_ati_number_of_pages_en:
-          id: ss_ati_number_of_pages_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_number_of_pages_en
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Number of Pages'
+          label: Total
           exclude: false
           alter:
             alter_text: false
@@ -430,111 +482,7 @@ display:
           element_label_colon: true
           element_wrapper_type: p
           element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
-          multi_type: separator
-          multi_separator: ', '
-          plugin_id: search_api
-        ss_ati_contact_information_en:
-          id: ss_ati_contact_information_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_contact_information_en
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Contact Information'
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: span
-          element_class: ''
-          element_label_type: strong
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: p
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
-          multi_type: separator
-          multi_separator: ', '
-          plugin_id: search_api
-        ss_ati_nothing_to_report_en:
-          id: ss_ati_nothing_to_report_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_nothing_to_report_en
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: true
           empty_zero: false
@@ -543,15 +491,15 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        ss_ati_org_shortform_en:
-          id: ss_ati_org_shortform_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_org_shortform_en
+        start_date:
+          id: start_date
+          table: search_api_index_pd_core_travelq
+          field: start_date
           relationship: none
           group_type: group
           admin_label: ''
-          label: Shortform
-          exclude: true
+          label: 'Travel Start Date'
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -586,75 +534,23 @@ display:
           element_label_colon: true
           element_wrapper_type: p
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           link_to_item: false
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        ss_ati_contact_email_en:
-          id: ss_ati_contact_email_en
-          table: search_api_index_pd_core_ati
-          field: ss_ati_contact_email_en
+        end_date:
+          id: end_date
+          table: search_api_index_pd_core_travelq
+          field: end_date
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Contact Email'
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: span
-          element_class: ''
-          element_label_type: strong
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: p
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
-          multi_type: separator
-          multi_separator: ', '
-          plugin_id: search_api
-        i18n_ts_en_ati_request_summary:
-          id: i18n_ts_en_ati_request_summary
-          table: search_api_index_pd_core_ati
-          field: i18n_ts_en_ati_request_summary
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Request Summary'
+          label: 'Travel End Date'
           exclude: false
           alter:
             alter_text: false
@@ -710,7 +606,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/form/ati-records?org={{ ss_ati_organization_en }}&req_num={{ i18n_ts_en_ati_request_number }}&disp={{ ss_ati_disposition_en }}&year={{ ss_ati_year_en }}&month={{ ss_ati_monthname_en }}&pages={{ ss_ati_number_of_pages_en }}&req_sum={{ i18n_ts_en_ati_request_summary }}&email={{ ss_ati_contact_email_en }}&req_pages={{ ss_ati_number_of_pages_en }}" title="Contact this organization about this ATI Request.">Make an informal request for: {{ i18n_ts_en_ati_request_number }} ({{ ss_ati_org_shortform_en }})</a>'
+            text: '<a href="/search/travelq/reference/{{ id }}"><strong>View detailed information about this disclosure</strong></a>'
             make_link: false
             path: ''
             absolute: false
@@ -735,59 +631,20 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: strong
+          element_type: ''
           element_class: ''
-          element_label_type: '0'
+          element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: p
+          element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
+          hide_alter_empty: false
           plugin_id: custom
-      filters:
-        ss_language:
-          id: ss_language
-          table: search_api_index_pd_core_ati
-          field: ss_language
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: en
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: search_api_text
+      filters: {  }
       sorts: {  }
       title: 'Search Results'
       header: {  }
@@ -806,11 +663,11 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: ATI
+    display_title: 'Travel (Q)'
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: ATI
+      block_description: 'Travel (Q)'
       display_description: ''
       block_category: 'Proactive Disclosure'
       cache:

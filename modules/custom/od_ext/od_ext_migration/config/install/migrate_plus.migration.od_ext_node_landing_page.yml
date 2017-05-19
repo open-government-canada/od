@@ -36,7 +36,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
               region: top_left
               weight: 1
@@ -90,7 +90,7 @@ source:
               weight: 0
             -
               id: 'views_block:blocks-block_1'
-              label: 'Spotlight'
+              label: Spotlight
               label_display: 0
               region: bottom
               view_mode: full
@@ -119,13 +119,13 @@ source:
                 classes:
                   col-md-6: col-md-6
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
+                attributes: class|mrgn-tp-md
               top_right:
                 wrapper: div
                 classes:
                   col-md-6: col-md-6
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
+                attributes: class|mrgn-tp-md
               middle:
                 wrapper: div
                 classes:
@@ -149,7 +149,7 @@ source:
                 classes:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-lg'
+                attributes: class|mrgn-tp-lg
           page_title: '[node:title]'
           storage_type: panelizer_default
           storage_id: 'node:landing_page:full:two_column'
@@ -178,7 +178,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
               region: top_left
               weight: 1
@@ -282,7 +282,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
               region: top_left
               weight: 1
@@ -376,7 +376,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
               region: top_left
               weight: 1
@@ -469,7 +469,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
               region: top_left
               weight: 1
@@ -648,25 +648,73 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: left
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
-              region: top_left
+              region: left
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
+              region: left
               weight: 5
+            -
+              id: 'views_block:pd_core_contracts-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:ss_ati_organization_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:contracts_agreement_type_en'
+              label: 'Agreement Type'
+              label_display: visible
+              region: right
+              weight: 5
+            -
+              id: 'facet_block:contracts_commodity_type_en'
+              label: 'Commodity Type'
+              label_display: visible
+              region: right
+              weight: 10
+            -
+              id: 'facet_block:contracts_contract_value_en'
+              label: 'Contract Value'
+              label_display: visible
+              region: right
+              weight: 15
+            -
+              id: 'facet_block:contracts_country_of_origin_en'
+              label: 'Country of Origin'
+              label_display: visible
+              region: right
+              weight: 20
+            -
+              id: 'facet_block:contracts_org_name_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 25
+            -
+              id: 'facet_block:contracts_year'
+              label: Year
+              label_display: visible
+              region: right
+              weight: 25
           id: panels_variant
-          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-          label: 'Two Column'
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
           weight: 0
-          layout: bs_2col_bricked
+          layout: bs_2col_stacked
           layout_settings:
             layout:
               wrapper: div
@@ -681,34 +729,16 @@ source:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
                 attributes: ''
-              top_left:
+              left:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              top_right:
-                wrapper: div
-                classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              middle:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
+                  col-sm-8: col-sm-8
                 add_region_classes: 1
                 attributes: ''
-              bottom_left:
+              right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
-                add_region_classes: 1
-                attributes: ''
-              bottom_right:
-                wrapper: div
-                classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -716,11 +746,10 @@ source:
                 classes:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-lg'
+                attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:search:full:two_column'
-          pattern: panelizer
+          storage_id: 'node:page:default:default'
           builder: ipe
           static_context: {  }
     -
@@ -770,25 +799,49 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: left
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
-              region: top_left
+              region: left
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
+              region: left
               weight: 5
+            -
+              id: 'views_block:pd_core_grants-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:grants_org_name_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:grants_type_en'
+              label: Type
+              label_display: visible
+              region: right
+              weight: 5
+            -
+              id: 'facet_block:grants_year'
+              label: Year
+              label_display: visible
+              region: right
+              weight: 10
           id: panels_variant
-          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-          label: 'Two Column'
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
           weight: 0
-          layout: bs_2col_bricked
+          layout: bs_2col_stacked
           layout_settings:
             layout:
               wrapper: div
@@ -803,34 +856,16 @@ source:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
                 attributes: ''
-              top_left:
+              left:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              top_right:
-                wrapper: div
-                classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              middle:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
+                  col-sm-8: col-sm-8
                 add_region_classes: 1
                 attributes: ''
-              bottom_left:
+              right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
-                add_region_classes: 1
-                attributes: ''
-              bottom_right:
-                wrapper: div
-                classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -838,11 +873,10 @@ source:
                 classes:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-lg'
+                attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:search:full:two_column'
-          pattern: panelizer
+          storage_id: 'node:page:default:default'
           builder: ipe
           static_context: {  }
     -
@@ -894,25 +928,43 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: left
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
-              region: top_left
+              region: left
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
+              region: left
+              weight: 5
+            -
+              id: 'views_block:pd_core_reclassification-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:reclassification_org_name_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:reclassification_year'
+              label: Year
+              label_display: visible
+              region: right
               weight: 5
           id: panels_variant
-          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-          label: 'Two Column'
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
           weight: 0
-          layout: bs_2col_bricked
+          layout: bs_2col_stacked
           layout_settings:
             layout:
               wrapper: div
@@ -927,34 +979,16 @@ source:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
                 attributes: ''
-              top_left:
+              left:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              top_right:
-                wrapper: div
-                classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              middle:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
+                  col-sm-8: col-sm-8
                 add_region_classes: 1
                 attributes: ''
-              bottom_left:
+              right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
-                add_region_classes: 1
-                attributes: ''
-              bottom_right:
-                wrapper: div
-                classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -962,11 +996,10 @@ source:
                 classes:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-lg'
+                attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:search:full:two_column'
-          pattern: panelizer
+          storage_id: 'node:page:default:default'
           builder: ipe
           static_context: {  }
     -
@@ -996,7 +1029,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
               region: top_left
               weight: 1
@@ -1006,11 +1039,23 @@ source:
               label_display: 0
               region: top_left
               weight: 5
+            -
+              id: 'views_block:pd_core_travela-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:travel_year'
+              label: Year
+              label_display: visible
+              region: right
+              weight: 0
           id: panels_variant
-          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-          label: 'Two Column'
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
           weight: 0
-          layout: bs_2col_bricked
+          layout: bs_2col_stacked
           layout_settings:
             layout:
               wrapper: div
@@ -1025,34 +1070,16 @@ source:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
                 attributes: ''
-              top_left:
+              left:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              top_right:
-                wrapper: div
-                classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              middle:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
+                  col-sm-8: col-sm-8
                 add_region_classes: 1
                 attributes: ''
-              bottom_left:
+              right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
-                add_region_classes: 1
-                attributes: ''
-              bottom_right:
-                wrapper: div
-                classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -1060,11 +1087,104 @@ source:
                 classes:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-lg'
+                attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:search:full:two_column'
-          pattern: panelizer
+          storage_id: 'node:page:default:default'
+          builder: ipe
+          static_context: {  }
+    -
+      name: inventory
+      title: 'Open Data Inventory'
+      language: en
+      body: |
+        <p>The <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108">
+        Directive on Open Government</a> requires all applicable Government of
+        Canada organizations to conduct an inventory of their open data
+        holdings. All of the inventories we received have been consolidated
+        into the chart below. Use the thumbs up to help prioritize the release
+        of a dataset. To access the open data used to create the table, visit
+        <a href="http://open.canada.ca/data/en/dataset/4ed351cf-95d8-4c10-97ac-6b3511f359b7">
+        Open Data Inventory</a>.</p>
+        <p>To learn more about the Government of Canada's Open Data Inventory,
+        review the <a href="/en/frequently-asked-questions">frequently asked
+        questions</a>.</p>
+      alias: /search/inventory
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: left
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: left
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: left
+              weight: 5
+            -
+              id: 'views_block:pd_core_inventory-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:inventory_org_name_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 0
+          id: panels_variant
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
+          weight: 0
+          layout: bs_2col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              left:
+                wrapper: div
+                classes:
+                  col-sm-8: col-sm-8
+                add_region_classes: 1
+                attributes: ''
+              right:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:page:default:default'
           builder: ipe
           static_context: {  }
     -
@@ -1080,17 +1200,15 @@ source:
         <a href="http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-eng.asp">
         Policies for Ministers' Offices</a> and in Treasury Board's
         <a href="http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php">
-        Travel Directive</a> and
-        <a href="http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php">
+        Travel Directive</a> and <a href="http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php">
         Special Travel Authorities</a>. The purpose of these instruments is to
         provide for the reimbursement of reasonable expenses necessarily
         incurred during travel on government business.</p>
 
         <p>The Government of Canada extends hospitality in accordance with the
         rules and principles outlined in the Guidelines for Ministers' Offices
-        and the Treasury Board
-        <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855">Directive
-        on the Management of Expenditures on Travel, Hospitality and
+        and the Treasury Board <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855">
+        Directive on the Management of Expenditures on Travel, Hospitality and
         Conferences</a>. The objective of the policy is to ensure that
         hospitality is extended in an economical and affordable way when it
         facilitates government business or is considered desirable as a matter
@@ -1100,10 +1218,9 @@ source:
         beginning on March 31, 2004.</p>
 
         <p>Please note that information that would normally be withheld under
-        the <a href="http://laws-lois.justice.gc.ca/eng/acts/a-1/index.html">
-        <em>Access to Information Act</em></a> or the
-        <a href="http://laws-lois.justice.gc.ca/eng/acts/p-21/index.html">
-        <em>Privacy Act</em></a> does not appear on this web site.</p>
+        the <a href="http://laws-lois.justice.gc.ca/eng/acts/a-1/index.html"><em>
+        Access to Information Act</em></a> or the <a href="http://laws-lois.justice.gc.ca/eng/acts/p-21/index.html"><em>
+        Privacy Act</em></a> does not appear on this web site.</p>
 
         <p><a href="http://open.canada.ca/data/en/dataset/b9f51ef4-4605-4ef2-8231-62a2edda1b54">
         Download datasets of the Proactive Disclosure - Hospitality
@@ -1118,25 +1235,43 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: left
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
-              region: top_left
+              region: left
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
+              region: left
+              weight: 5
+            -
+              id: 'views_block:pd_core_hospitalityq-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:hospitalityq_org_name_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:hospitalityq_year'
+              label: Type
+              label_display: visible
+              region: right
               weight: 5
           id: panels_variant
-          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-          label: 'Two Column'
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
           weight: 0
-          layout: bs_2col_bricked
+          layout: bs_2col_stacked
           layout_settings:
             layout:
               wrapper: div
@@ -1151,34 +1286,16 @@ source:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
                 attributes: ''
-              top_left:
+              left:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              top_right:
-                wrapper: div
-                classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              middle:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
+                  col-sm-8: col-sm-8
                 add_region_classes: 1
                 attributes: ''
-              bottom_left:
+              right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
-                add_region_classes: 1
-                attributes: ''
-              bottom_right:
-                wrapper: div
-                classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -1186,11 +1303,10 @@ source:
                 classes:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-lg'
+                attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:search:full:two_column'
-          pattern: panelizer
+          storage_id: 'node:page:default:default'
           builder: ipe
           static_context: {  }
     -
@@ -1231,25 +1347,43 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: left
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
-              region: top_left
+              region: left
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
+              region: left
+              weight: 5
+            -
+              id: 'views_block:pd_core_travelq-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:travelq_org_name_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:travelq_year'
+              label: Year
+              label_display: visible
+              region: right
               weight: 5
           id: panels_variant
-          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-          label: 'Two Column'
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
           weight: 0
-          layout: bs_2col_bricked
+          layout: bs_2col_stacked
           layout_settings:
             layout:
               wrapper: div
@@ -1264,34 +1398,16 @@ source:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
                 attributes: ''
-              top_left:
+              left:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              top_right:
-                wrapper: div
-                classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              middle:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
+                  col-sm-8: col-sm-8
                 add_region_classes: 1
                 attributes: ''
-              bottom_left:
+              right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
-                add_region_classes: 1
-                attributes: ''
-              bottom_right:
-                wrapper: div
-                classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -1299,11 +1415,10 @@ source:
                 classes:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-lg'
+                attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:search:full:two_column'
-          pattern: panelizer
+          storage_id: 'node:page:default:default'
           builder: ipe
           static_context: {  }
     -
@@ -1350,25 +1465,43 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: left
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
-              region: top_left
+              region: left
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
+              region: left
+              weight: 5
+            -
+              id: 'views_block:pd_core_wrongdoing-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facet_block:wrongdoing_org_name_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:wrongdoing_date_year'
+              label: Year
+              label_display: visible
+              region: right
               weight: 5
           id: panels_variant
-          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-          label: 'Two Column'
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
           weight: 0
-          layout: bs_2col_bricked
+          layout: bs_2col_stacked
           layout_settings:
             layout:
               wrapper: div
@@ -1383,34 +1516,16 @@ source:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
                 attributes: ''
-              top_left:
+              left:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              top_right:
-                wrapper: div
-                classes:
-                  col-md-6: col-md-6
-                add_region_classes: 1
-                attributes: 'class|mrgn-tp-md'
-              middle:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
+                  col-sm-8: col-sm-8
                 add_region_classes: 1
                 attributes: ''
-              bottom_left:
+              right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
-                add_region_classes: 1
-                attributes: ''
-              bottom_right:
-                wrapper: div
-                classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -1418,11 +1533,10 @@ source:
                 classes:
                   col-sm-12: col-sm-12
                 add_region_classes: 1
-                attributes: 'class|mrgn-tp-lg'
+                attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:search:full:two_column'
-          pattern: panelizer
+          storage_id: 'node:page:default:default'
           builder: ipe
           static_context: {  }
     -
@@ -1460,7 +1574,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
               region: left
               weight: 1
@@ -1574,7 +1688,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: 'Tabs'
+              label: Tabs
               label_display: '0'
               region: left
               weight: 1
@@ -1604,7 +1718,7 @@ source:
               weight: 5
             -
               id: 'facet_block:app_device_formats'
-              label: Device Formats
+              label: 'Device Formats'
               label_display: visible
               region: right
               weight: 10
