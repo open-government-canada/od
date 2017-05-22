@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies: {  }
+id: pd_query
+label: 'Proactive Disclosure Query'
+description: ''
+use_admin_theme: false
+path: '/search/{core}/reference/{id}'
+access_logic: and
+access_conditions: {  }
+parameters:
+  core:
+    machine_name: core
+    type: string
+    label: Core
+  id:
+    machine_name: id
+    type: string
+    label: Id

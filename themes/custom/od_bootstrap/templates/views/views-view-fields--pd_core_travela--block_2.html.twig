@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * Default view template to display all the fields in a row.
+ *
+ * Available variables:
+ * - view: The view in use.
+ * - fields: A list of fields, each one contains:
+ *   - content: The output of the field.
+ *   - raw: The raw data for the field, if it exists. This is NOT output safe.
+ *   - class: The safe class ID to use.
+ *   - handler: The Views field handler controlling this field.
+ *   - inline: Whether or not the field should be inline.
+ *   - wrapper_element: An HTML element for a wrapper.
+ *   - wrapper_attributes: List of attributes for wrapper element.
+ *   - separator: An optional separator that may appear before a field.
+ *   - label: The field's label text.
+ *   - label_element: An HTML element for a label wrapper.
+ *   - label_attributes: List of attributes for label wrapper.
+ *   - label_suffix: Colon after the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ *   - has_label_colon: A boolean indicating whether to display a colon after
+ *     the label.
+ *   - element_type: An HTML element for the field content.
+ *   - element_attributes: List of attributes for HTML element for field content.
+ * - row: The raw result from the query, with all data it fetched.
+ *
+ * @see template_preprocess_views_view_fields()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set prev_year = fields.year.content|striptags|trim - 1 %}
+<h2>{{ 'Annual Travel, Hospitality and Conference Fees Report:'|t ~ ' ' ~ prev_year ~ ' - ' ~ fields.year.content|striptags|trim }}</h2>
+<h3 class="mrgn-bttm-md">{{ 'Department:'|t }}{{ fields['org_name_en_1'].content }}</h2>
+<table class="table table-striped table-bordered">
+  <thead>
+      <th>{{ 'Expenditure Category'|t }}</th>
+      <th>{{ "Expenditures for the year ending March 31, @date ($)"|t({ '@date': fields.year.content }) }}</th>
+      <th>{{ "Expenditures for the previous year ending March 31, @date ($)"|t({ '@date': prev_year }) }}</th>
+      <th>{{ 'Change ($)'|t }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ 'Travel - Public Servants'|t }}</td>
+      <td>{{ '$' ~ fields.public_servants.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.public_servants_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.public_servants_change.content|striptags|trim|number_format('2', '.', ',') }}</td>
+    </tr>
+    <tr>
+      <td>{{ 'Travel - Non-Public Servants'|t }}</td>
+      <td>{{ '$' ~ fields.non_public_servants.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.non_public_servants_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.non_public_servants_change.content|striptags|trim|number_format('2', '.', ',') }}</td>
+    </tr>
+    <tr>
+      <td>{{ 'Total Travel'|t }}</td>
+      <td>{{ '$' ~ fields.total_travel.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.total_travel_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.total_travel_change.content|striptags|trim|number_format('2', '.', ',') }}</td>
+    </tr>
+    <tr>
+      <td>{{ 'Hospitality'|t }}</td>
+      <td>{{ '$' ~ fields.hospitality.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.hospitality_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.hospitality_change.content|striptags|trim|number_format('2', '.', ',') }}</td>
+    </tr>
+    <tr>
+      <td>{{ 'Conference Fees'|t }}</td>
+      <td>{{ '$' ~ fields.conference_fees.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.conference_fees_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.conference_fees_change.content|striptags|trim|number_format('2', '.', ',') }}</td>
+    </tr>
+    <tr>
+      <td>{{ 'Total'|t }}</td>
+      <td>{{ '$' ~ fields.total.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.total_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.total_change.content|striptags|trim|number_format('2', '.', ',') }}</td>
+    </tr>
+    <tr>
+      <td>{{ 'International Travel by Minister and Minister\'s Staff'|t }}</td>
+      <td>{{ '$' ~ fields.minister.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.minister_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
+      <td>{{ '$' ~ fields.minister_change.content|striptags|trim|number_format('2', '.', ',') }}</td>
+    </tr>
+  </tbody>
+</table>

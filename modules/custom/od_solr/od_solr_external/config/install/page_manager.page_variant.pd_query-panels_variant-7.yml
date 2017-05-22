@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.pd_query
+    - views.view.pd_core_wrongdoing
+  module:
+    - panels
+    - system
+    - views
+id: pd_query-panels_variant-7
+label: Wrongdoing
+variant: panels_variant
+variant_settings:
+  blocks:
+    6f486adf-7e77-4665-92bb-c78585f2dff4:
+      id: 'views_block:pd_core_wrongdoing-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: main
+      weight: 0
+      uuid: 6f486adf-7e77-4665-92bb-c78585f2dff4
+      context_mapping: {  }
+  id: panels_variant
+  uuid: d370b83f-5f88-461c-b143-15547a9930a0
+  label: null
+  weight: 0
+  layout: bs_1col_stacked
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      top:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      bottom:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: 'Acts of Founded Wrongdoings'
+  storage_type: page_manager
+  storage_id: pd_query-panels_variant-7
+  builder: ipe
+page: pd_query
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: '/search/wrongdoing/reference/*'
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

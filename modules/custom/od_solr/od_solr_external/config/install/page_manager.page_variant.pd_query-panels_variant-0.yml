@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.pd_query
+    - views.view.pd_core_grants
+  module:
+    - panels
+    - system
+    - views
+id: pd_query-panels_variant-0
+label: Grants
+variant: panels_variant
+variant_settings:
+  blocks:
+    f71f34fb-824d-415b-88a0-23130cf69ec6:
+      id: 'views_block:pd_core_grants-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: main
+      weight: 0
+      uuid: f71f34fb-824d-415b-88a0-23130cf69ec6
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 78067f7c-8521-4f4c-b110-515f75ca9820
+  label: null
+  weight: 0
+  layout: bs_1col_stacked
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      top:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      bottom:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: 'Government Grants and Contributions'
+  storage_type: page_manager
+  storage_id: pd_query-panels_variant-0
+  builder: ipe
+page: pd_query
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: '/search/grants/reference/*'
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }

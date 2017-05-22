@@ -1,0 +1,71 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.pd_query
+    - views.view.pd_core_inventory
+  module:
+    - panels
+    - system
+    - views
+id: pd_query-panels_variant-3
+label: Inventory
+variant: panels_variant
+variant_settings:
+  blocks:
+    5048698c-bc41-4d72-b037-844569132313:
+      id: 'views_block:pd_core_inventory-block_2'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: main
+      weight: 0
+      uuid: 5048698c-bc41-4d72-b037-844569132313
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 3cc57b49-29cd-403a-87ae-c56348ab1624
+  label: null
+  weight: 0
+  layout: bs_1col_stacked
+  layout_settings:
+    layout:
+      wrapper: div
+      classes:
+        row: row
+      add_layout_class: 1
+      attributes: ''
+    regions:
+      top:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      main:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+      bottom:
+        wrapper: div
+        classes:
+          col-sm-12: col-sm-12
+        add_region_classes: 1
+        attributes: ''
+  page_title: Inventory
+  storage_type: page_manager
+  storage_id: pd_query-panels_variant-3
+  builder: ipe
+page: pd_query
+weight: 0
+selection_criteria:
+  -
+    id: request_path
+    pages: '/search/inventory/reference/*'
+    negate: false
+    context_mapping: {  }
+selection_logic: and
+static_context: {  }
