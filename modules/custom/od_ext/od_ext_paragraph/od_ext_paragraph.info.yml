@@ -1,0 +1,9 @@
+name: 'Open Data Extend Paragraph'
+description: 'Provides paragraph related configuration.'
+type: module
+core: 8.x
+package: 'Open Data'
+
+# Required modules
+dependencies:
+  - drupal:wxt_ext_paragraph

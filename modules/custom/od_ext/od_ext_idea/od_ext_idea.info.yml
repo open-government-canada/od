@@ -6,6 +6,6 @@ package: 'Open Data'
 
 # Required modules
 dependencies:
+  - drupal:od_ext_paragraph
   - drupal:od_ext_vote
   - drupal:panelizer
-  - drupal:paragraphs
