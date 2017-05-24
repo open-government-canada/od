@@ -202,6 +202,9 @@
             "html/libraries/{$name}" : [
                 "type:drupal-library"
             ],
+            "html/libraries/fontawesome": [
+                "fortawesome/font-awesome"
+            ],
             "html/modules/custom/{$name}": [
                 "drupal/wxt_library"
             ],
@@ -237,7 +240,7 @@
             },
             "drupal/icon": {
                 "Enter drupal/icon patch #2864333 description here":
-                "https://www.drupal.org/files/issues/migrate_icon_field_to_d8-2864333-4.patch"
+                "https://www.drupal.org/files/issues/migrate_icon_field_to_d8-2864333-5.patch"
             },
             "drupal/google_analytics_reports": {
                 "Enter drupal/google_analytics_reports patch #2795115 description here":
@@ -287,6 +290,7 @@
         "drupal/external_entities": "1.x-dev",
         "drupal/facets": "1.0-alpha8",
         "drupal/field_default_token": "1.x-dev",
+        "drupal/fontawesome":  "1.x-dev",
         "drupal/google_analytics_reports": "3.0-beta1",
         "drupal/icon": "1.x-dev",
         "drupal/rate": "1.x-dev",
@@ -301,6 +305,7 @@
         "drupal/views_field_view": "1.0-beta2",
         "drupal/views_templates": "1.0-alpha1",
         "drupal/xls_serialization": "1.0-alpha2",
+        "fortawesome/font-awesome": "^4.7",
         "harvesthq/chosen": "1.5.1"
     },
     "autoload": {

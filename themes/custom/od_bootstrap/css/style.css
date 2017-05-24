@@ -17,11 +17,19 @@
     vertical-align: middle; }
     .pillars ul li {
       display: inline-block;
-      margin: 0 15px 0 0;
+      margin: 0 7px 0 0;
       padding: 0; }
       .pillars ul li a {
         color: #284162 !important;
         text-decoration: none; }
+  .pillars .opengov-open-gov {
+    color: #365478 !important; }
+  .pillars .opengov-open-data {
+    color: #3AB19D !important; }
+  .pillars .opengov-open-info {
+    color: #EB8B23 !important; }
+  .pillars .opengov-open-dialog {
+    color: #9D479A !important; }
 
 .apps .box {
   position: relative;
@@ -94,3 +102,6 @@
   .code span::after {
     border-right-color: #1e5799;
     border-top-color: #1e5799; }
+
+.bs-region--top-left h1 {
+  margin-top: 0px; }

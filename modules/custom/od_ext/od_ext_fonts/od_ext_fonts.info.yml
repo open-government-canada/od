@@ -1,0 +1,11 @@
+name: 'Open Data Extend Font'
+description: 'Iconic font designed for use with Open Data.'
+type: module
+core: 8.x
+package: 'OpenData'
+
+# Required modules
+dependencies:
+  - drupal:fontawesome
+  - drupal:icon
+  - drupal:icon_field
