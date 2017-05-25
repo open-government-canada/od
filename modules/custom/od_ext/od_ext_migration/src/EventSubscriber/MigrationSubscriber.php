@@ -35,7 +35,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
   public function onMigrationPostImport(MigrateImportEvent $event) {
     if ($event->getMigration()->id() == 'od_ext_node_landing_page') {
       // Set front page to panelized "homepage".
-      $this->config->get('system.site')
+      $this->config->getEditable('system.site')
         ->set('page.front', '/homepage')
         ->save(TRUE);
     }

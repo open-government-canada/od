@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.suggestion
+    - paragraphs.paragraphs_type.app
+    - paragraphs.paragraphs_type.dataset
+  module:
+    - entity_reference_revisions
+id: node.suggestion.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: suggestion
+label: Paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      app: app
+      dataset: dataset
+    target_bundles_drag_drop:
+      app:
+        enabled: true
+        weight: 5
+      dataset:
+        enabled: true
+        weight: 6
+      deliverable:
+        weight: 7
+        enabled: false
+      idea:
+        weight: 8
+        enabled: false
+      image_text:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

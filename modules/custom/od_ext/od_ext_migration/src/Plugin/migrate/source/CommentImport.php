@@ -111,15 +111,13 @@ class CommentImport extends SqlBase {
       'commitment',
       'consultation',
       'page',
-      'suggested_app',
-      'suggested_dataset',
+      'suggestion',
       'app_translation',
       'blog_translation',
       'commitment_translation',
       'consultation_translation',
       'page_translation',
-      'suggested_app_translation',
-      'suggested_dataset_translation',
+      'suggestion_translation',
     ];
     foreach ($lookup as $bundle) {
       if (\Drupal::database()->schema()->tableExists("migrate_map_od_ext_db_node_$bundle")) {
@@ -136,6 +134,10 @@ class CommentImport extends SqlBase {
 
     // Lookup the correct nid / type / comment field for paragraph(s).
     $lookup = [
+      'app',
+      'app_translation',
+      'dataset',
+      'dataset_translation',
       'deliverable',
       'deliverable_translation',
       'idea',

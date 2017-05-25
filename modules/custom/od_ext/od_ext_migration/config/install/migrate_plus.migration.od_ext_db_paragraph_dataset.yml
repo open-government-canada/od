@@ -1,0 +1,43 @@
+id: od_ext_db_paragraph_dataset
+migration_tags: null
+migration_group: od_external
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Database import for Datasets from legacy Drupal database'
+source:
+  plugin: dataset_paragraph
+  target: source_migration
+process:
+  field_title: title
+  uid:
+    plugin: migration
+    migration: od_ext_db_user
+    source: uid
+  type:
+    plugin: default_value
+    default_value: dataset
+  sticky:
+    plugin: default_value
+    default_value: 0
+  langcode: language
+  field_body/value:
+    plugin: wxt_media_tags
+    source: body
+  field_body/format:
+    plugin: default_value
+    default_value: rich_text
+  field_organization/value: department
+  field_status/value: status
+  field_url/uri: url
+  field_url/title:
+    plugin: default_value
+    default_value: 'Get the Suggested Dataset'
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+migration_dependencies:
+  required:
+    - od_ext_db_file
+    - od_ext_db_taxonomy_term
+    - od_ext_db_user

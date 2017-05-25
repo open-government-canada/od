@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: suggestion
+label: suggestion
+type: 'canonical_entities:node'
+pattern: 'suggestion/[node:title]'
+selection_criteria:
+  2aef7909-a34d-4181-bd7a-97d9ba48c22a:
+    id: node_type
+    bundles:
+      suggestion: suggestion
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2aef7909-a34d-4181-bd7a-97d9ba48c22a
+selection_logic: and
+weight: -5
+relationships: {  }

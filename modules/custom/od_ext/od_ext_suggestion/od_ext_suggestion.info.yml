@@ -1,0 +1,9 @@
+name: 'Open Data Extend Suggestion'
+description: 'Applications and related datasets that have been suggested by users through the web form.'
+type: module
+core: 8.x
+package: 'Open Data'
+
+# Required modules
+dependencies:
+  - drupal:od_ext_paragraph

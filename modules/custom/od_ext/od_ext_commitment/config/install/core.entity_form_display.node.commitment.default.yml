@@ -16,7 +16,7 @@ dependencies:
   module:
     - comment
     - field_group
-    - inline_entity_form
+    - paragraphs
     - path
     - text
     - workbench_moderation
@@ -40,7 +40,6 @@ third_party_settings:
         - field_department
         - field_commitment_tags
         - field_commitment_pillars
-        - field_commitment_deliverable
       parent_name: group_commitment
       weight: 20
       format_type: tab
@@ -141,17 +140,15 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_deliverables_paragraph:
-    type: inline_entity_form_complex
+    type: paragraphs
     weight: 9
     settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      empty_mode: ''
-      match_operator: CONTAINS
-      override_labels: false
-      allow_existing: false
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
     region: content
   field_department:

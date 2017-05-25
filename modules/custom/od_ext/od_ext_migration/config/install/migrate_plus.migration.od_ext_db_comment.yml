@@ -46,8 +46,7 @@ migration_dependencies:
     - od_ext_db_node_community
     - od_ext_db_node_consultation
     - od_ext_db_node_page
-    - od_ext_db_node_suggested_app
-    - od_ext_db_node_suggested_dataset
+    - od_ext_db_node_suggestion
     - od_ext_db_paragraph_deliverable
     - od_ext_db_paragraph_idea
     - od_ext_db_taxonomy_term

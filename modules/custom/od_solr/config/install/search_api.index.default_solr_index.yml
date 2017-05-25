@@ -33,8 +33,7 @@ field_settings:
           landing_page: ''
           page: search_index
           search: ''
-          suggested_app: ''
-          suggested_dataset: ''
+          suggestion: ''
           webform: ''
   node_grants:
     label: 'Node access information'

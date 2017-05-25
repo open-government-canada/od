@@ -1,0 +1,55 @@
+id: od_ext_db_node_suggestion
+migration_tags: null
+migration_group: od_external
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Database import for Suggestion from legacy Drupal database'
+source:
+  plugin: suggestion_node
+  target: source_migration
+process:
+  title: title
+  uid:
+    plugin: migration
+    migration: od_ext_db_user
+    source: uid
+  type:
+    plugin: default_value
+    default_value: suggestion
+  sticky:
+    plugin: default_value
+    default_value: 0
+  langcode: language
+  field_paragraph/target_id:
+    -
+      plugin: migration
+      migration:
+        - od_ext_db_paragraph_app
+        - od_ext_db_paragraph_dataset
+      source: paragraph_suggestion
+    -
+      plugin: extract
+      index:
+        - '0'
+  field_paragraph/target_revision_id:
+    -
+      plugin: migration
+      migration:
+        - od_ext_db_paragraph_app
+        - od_ext_db_paragraph_dataset
+      source: paragraph_suggestion
+    -
+      plugin: extract
+      index:
+        - '1'
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  required:
+    - od_ext_db_file
+    - od_ext_db_taxonomy_term
+    - od_ext_db_user
+    - od_ext_db_paragraph_app
+    - od_ext_db_paragraph_dataset

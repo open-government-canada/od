@@ -12,8 +12,7 @@ dependencies:
   - drupal:migrate_tools
   - drupal:od_ext_analytics
   - drupal:od_ext_paragraph
-  - drupal:od_ext_suggested_app
-  - drupal:od_ext_suggested_dataset
+  - drupal:od_ext_suggestion
   - drupal:od_ext_taxonomy
   - drupal:od_ext_vote
   - drupal:webform_migrate

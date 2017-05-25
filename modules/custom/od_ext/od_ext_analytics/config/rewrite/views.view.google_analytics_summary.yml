@@ -1252,39 +1252,6 @@ display:
               authenticated: authenticated
               anonymous: 0
               administrator: 0
-              page_creator: 0
-              layout_manager: 0
-              page_reviewer: 0
-              creator: 0
-              landing_page_creator: 0
-              reviewer: 0
-              landing_page_reviewer: 0
-              media_creator: 0
-              media_manager: 0
-              blog_post_creator: 0
-              blog_post_reviewer: 0
-              app_creator: 0
-              app_reviewer: 0
-              deliverable_creator: 0
-              deliverable_reviewer: 0
-              commitment_creator: 0
-              commitment_reviewer: 0
-              community_creator: 0
-              community_reviewer: 0
-              consultation_creator: 0
-              consultation_reviewer: 0
-              dataset_creator: 0
-              dataset_reviewer: 0
-              idea_creator: 0
-              idea_reviewer: 0
-              search_creator: 0
-              search_reviewer: 0
-              suggested_app_creator: 0
-              suggested_app_reviewer: 0
-              suggested_dataset_creator: 0
-              suggested_dataset_reviewer: 0
-              webform_creator: 0
-              webform_reviewer: 0
           is_grouped: false
           group_info:
             label: ''
@@ -1326,39 +1293,6 @@ display:
               authenticated: authenticated
               anonymous: 0
               administrator: 0
-              page_creator: 0
-              layout_manager: 0
-              page_reviewer: 0
-              creator: 0
-              landing_page_creator: 0
-              reviewer: 0
-              landing_page_reviewer: 0
-              media_creator: 0
-              media_manager: 0
-              blog_post_creator: 0
-              blog_post_reviewer: 0
-              app_creator: 0
-              app_reviewer: 0
-              deliverable_creator: 0
-              deliverable_reviewer: 0
-              commitment_creator: 0
-              commitment_reviewer: 0
-              community_creator: 0
-              community_reviewer: 0
-              consultation_creator: 0
-              consultation_reviewer: 0
-              dataset_creator: 0
-              dataset_reviewer: 0
-              idea_creator: 0
-              idea_reviewer: 0
-              search_creator: 0
-              search_reviewer: 0
-              suggested_app_creator: 0
-              suggested_app_reviewer: 0
-              suggested_dataset_creator: 0
-              suggested_dataset_reviewer: 0
-              webform_creator: 0
-              webform_reviewer: 0
           is_grouped: false
           group_info:
             label: ''

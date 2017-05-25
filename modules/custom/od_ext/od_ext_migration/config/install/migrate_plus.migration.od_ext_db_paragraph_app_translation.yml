@@ -1,0 +1,66 @@
+id: od_ext_db_paragraph_app_translation
+migration_tags: null
+migration_group: od_external_translation
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Database import for Apps from legacy Drupal database'
+source:
+  plugin: app_paragraph
+  target: source_migration
+  translations: true
+process:
+  field_title: title
+  id:
+    -
+      plugin: migration
+      migration: od_ext_db_paragraph_app
+      source: nid
+    -
+      plugin: extract
+      index:
+        - '0'
+  revision_id:
+    -
+      plugin: migration
+      migration: od_ext_db_paragraph_app
+      source: nid
+    -
+      plugin: extract
+      index:
+        - '1'
+  uid:
+    plugin: migration
+    migration: od_ext_db_user
+    source: uid
+  type:
+    plugin: default_value
+    default_value: app
+  sticky:
+    plugin: default_value
+    default_value: 0
+  langcode:
+    plugin: default_value
+    default_value: "fr"
+  field_body/value:
+    plugin: wxt_media_tags
+    source: body
+  field_body/format:
+    plugin: default_value
+    default_value: rich_text
+  field_dataset/value: dataset
+  field_dataset/format:
+    plugin: default_value
+    default_value: rich_text
+  content_translation_source:
+    plugin: default_value
+    default_value: "en"
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  translations: true
+migration_dependencies:
+  required:
+    - od_ext_db_file
+    - od_ext_db_taxonomy_term
+    - od_ext_db_paragraph_app
