@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.ext_core_ckan
+  module:
+    - search_api
+    - search_api_solr_datasource
+id: ext_core_ckan
+name: 'External: CKAN Index'
+description: ''
+read_only: true
+field_settings:
+  id:
+    label: id
+    datasource_id: solr_document
+    property_path: id
+    type: string
+datasource_settings:
+  solr_document:
+    id_field: id
+    advanced:
+      request_handler: pinkPony
+      default_query: '*:*'
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: false
+  cron_limit: 50
+server: ext_core_ckan
