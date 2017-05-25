@@ -9,7 +9,7 @@ use Drupal\icon\Plugin\Icon\IconProviderBase;
  *
  * @IconProvider(
  *   id = "opengov",
- *   label = @Translation("OpenGov"),
+ *   label = @Translation("Open Government"),
  *   url = "http://open-data.github.io",
  *   settings = {},
  * )
