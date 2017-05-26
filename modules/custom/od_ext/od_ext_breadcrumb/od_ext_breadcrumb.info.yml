@@ -1,0 +1,5 @@
+name: 'Open Data Extend Breadcrumb'
+description: 'Setting bread crumbs for all of Open Government.'
+type: module
+core: 8.x
+package: 'Open Data'

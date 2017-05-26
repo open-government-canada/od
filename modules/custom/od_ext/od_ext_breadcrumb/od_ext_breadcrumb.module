@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains od_ext_breadcrumb.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function od_ext_breadcrumb_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+
+    case 'help.page.od_ext_breadcrumb':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Setting bread crumbs for all of Open Government.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

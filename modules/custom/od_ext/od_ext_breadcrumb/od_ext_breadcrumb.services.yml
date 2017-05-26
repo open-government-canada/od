@@ -1,0 +1,6 @@
+services:
+  od_ext_breadcrumb.main_breadcrumb:
+    class: Drupal\od_ext_breadcrumb\Breadcrumb\MainBreadcrumbBuilder
+    arguments: ['@router.request_context', '@access_manager', '@router', '@path_processor_manager', '@config.factory',  '@title_resolver', '@current_user', '@path.current', '@language_manager']
+    tags:
+     - { name: breadcrumb_builder, priority: 100 }
