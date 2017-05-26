@@ -14,3 +14,4 @@ dependencies:
   - drupal:basic_auth
   - drupal:serialization
   - drupal:xls_serialization
+  - drupal:views_data_export
