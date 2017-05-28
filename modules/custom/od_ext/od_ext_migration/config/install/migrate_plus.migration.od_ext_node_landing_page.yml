@@ -52,7 +52,7 @@ source:
               label: Home
               label_display: 0
               region: top_left
-              view_mode: full
+              view_mode: featured
               weight: 15
             -
               id: 'views_block:landing_page-block_1'
@@ -69,7 +69,7 @@ source:
               view_mode: full
               weight: 5
             -
-              id: 'views_block:datasets-block_1'
+              id: 'views_block:ext_core_ckan-block_1'
               label: 'Latest datasets'
               label_display: visible
               region: top_right
