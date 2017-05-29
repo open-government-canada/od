@@ -276,6 +276,10 @@
                 "Enter drupal/rate patch #2860983 description here":
                 "https://gist.githubusercontent.com/sylus/1b349791ecee50b930145e028bef8d07/raw/434f1a951c2a100565c6f197f1c8c5a7d30c6be9/hardcoded_vote_types.patch"
             },
+            "drupal/search_api_solr": {
+                "Enter drupal/search_api_solr patch #2882009 description here":
+                "https://www.drupal.org/files/issues/notice_undefined-2882009-2.patch"
+            },
             "drupal/votingapi": {
                 "Enter drupal/votingapi patch #2832589 description here":
                 "https://www.drupal.org/files/issues/votingapi-result-function-column-length-2832589-2.patch",

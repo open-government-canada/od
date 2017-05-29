@@ -259,9 +259,11 @@ field_settings:
 datasource_settings:
   solr_document:
     id_field: unique_id
-    advanced:
-      request_handler: pinkPony
-      default_query: '*:*'
+    request_handler: ''
+    default_query: '*:*'
+    label_field: ''
+    language_field: ''
+    url_field: ''
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
