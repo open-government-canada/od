@@ -66,7 +66,7 @@ display:
       style:
         type: views_bootstrap_panel
         options:
-          panel_title_field: id
+          panel_title_field: org_name_en_1
       row:
         type: fields
         options:
@@ -310,6 +310,213 @@ display:
         type: none
       defaults:
         cache: false
+        fields: false
+      fields:
+        id:
+          id: id
+          table: search_api_index_pd_core_travela
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        org_name_en_1:
+          id: org_name_en_1
+          table: search_api_index_pd_core_travela
+          field: org_name_en_1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Organization
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        year:
+          id: year
+          table: search_api_index_pd_core_travela
+          field: year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Year
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/search/travela/reference/{{ id }}"><strong>View detailed information about this disclosure</strong></a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
     cache_metadata:
       max-age: -1
       contexts:
@@ -1860,7 +2067,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: true
-          content: "<p><strong>Travel Public servants - Explanation of Significant Variance:</strong>{{ public_servant_compared_fiscal_year_en }}</p>\n<p><strong>Travel Non-Public Servants - Explanation of Significant Variance:</strong>{{ non_public_servant_compared_fiscal_year_en }}</p>\n<p><strong>Hospitality - Explanation of Significant Variance:</strong>{{ hospitality_compared_fiscal_year_en }}</p>\n<p><strong>Conference Fees - Explanation of Significant Variance:</strong>{{ conference_fees_compared_fiscal_year_en }}</p>\n<p><strong>International Travel by Minister and Minister’s Staff - Explanation of Significant Variance:</strong>{{ minister_compared_fiscal_year_en }}</p>\n<a class=\"btn btn-sm btn-primary\" href=\"/search/travela\">Back to Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
+          content: "<p><strong> Travel Public servants - Explanation of Significant Variance:</strong>{{ public_servant_compared_fiscal_year_en }}</p>\n<p><strong> Travel Non-Public Servants - Explanation of Significant Variance:</strong>{{ non_public_servant_compared_fiscal_year_en ?:  ' N/A' }}</p>\n<p><strong> Hospitality - Explanation of Significant Variance:</strong>{{ hospitality_compared_fiscal_year_en }}</p>\n<p><strong> Conference Fees - Explanation of Significant Variance:</strong>{{ conference_fees_compared_fiscal_year_en }}</p>\n<p><strong> International Travel by Minister and Minister’s Staff - Explanation of Significant Variance:</strong>{{ minister_compared_fiscal_year_env ?: ' N/A' }}</p>\n<a class=\"btn btn-sm btn-primary\" href=\"/search/travela\">Back to Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
           plugin_id: text_custom
       style:
         type: default

@@ -689,8 +689,8 @@ display:
           label: 'Date Released'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ date_released|striptags|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false

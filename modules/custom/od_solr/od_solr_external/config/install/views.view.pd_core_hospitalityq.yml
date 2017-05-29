@@ -894,8 +894,8 @@ display:
           label: 'Total Amount'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ total|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -998,8 +998,8 @@ display:
           label: 'Start Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ start_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1050,8 +1050,8 @@ display:
           label: 'End Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ end_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1560,8 +1560,8 @@ display:
           label: Total
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ total|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1664,8 +1664,8 @@ display:
           label: 'Start Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ start_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1716,8 +1716,8 @@ display:
           label: 'End Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ end_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1768,8 +1768,8 @@ display:
           label: 'Attendees (Government of Canada Employees)'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ employee_attendees|trim|number_format(0,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1820,8 +1820,8 @@ display:
           label: 'Attendees (Guests)'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ guest_attendees|trim|number_format(0,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false

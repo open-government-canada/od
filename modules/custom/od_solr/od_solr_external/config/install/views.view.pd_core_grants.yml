@@ -686,8 +686,8 @@ display:
           label: Value
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ value|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1285,8 +1285,8 @@ display:
           label: Date
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1337,8 +1337,8 @@ display:
           label: Value
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ value|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false

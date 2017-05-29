@@ -936,18 +936,18 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        airfare_en:
-          id: airfare_en
+        airfare:
+          id: airfare
           table: search_api_index_pd_core_travelq
-          field: airfare_en
+          field: airfare
           relationship: none
           group_type: group
           admin_label: ''
           label: Airfare
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ airfare|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1040,18 +1040,18 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        total_en:
-          id: total_en
+        total:
+          id: total
           table: search_api_index_pd_core_travelq
-          field: total_en
+          field: total
           relationship: none
           group_type: group
           admin_label: ''
           label: Total
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ total|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1102,8 +1102,8 @@ display:
           label: 'Travel Start Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ start_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1154,8 +1154,8 @@ display:
           label: 'Travel End Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ end_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1623,18 +1623,18 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        airfare_en:
-          id: airfare_en
+        airfare:
+          id: airfare
           table: search_api_index_pd_core_travelq
-          field: airfare_en
+          field: airfare
           relationship: none
           group_type: group
           admin_label: ''
           label: Airfare
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ airfare|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1666,7 +1666,7 @@ display:
           element_label_colon: true
           element_wrapper_type: p
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: true
           empty_zero: false
@@ -1737,8 +1737,8 @@ display:
           label: 'Other Transportation'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ other_transport|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1789,8 +1789,8 @@ display:
           label: Accomodation
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ accomodation|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1841,8 +1841,8 @@ display:
           label: 'Meals and Incidentals'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ meals|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1893,8 +1893,8 @@ display:
           label: 'Total Amount'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ total|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false

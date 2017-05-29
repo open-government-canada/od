@@ -741,8 +741,8 @@ display:
           label: 'Contract Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ contract_date|trim|date("Y-m-d") }}'
             make_link: false
             path: ''
             absolute: false
@@ -783,18 +783,18 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        contract_value_en:
-          id: contract_value_en
+        contract_value:
+          id: contract_value
           table: search_api_index_pd_core_contracts
-          field: contract_value_en
+          field: contract_value
           relationship: none
           group_type: group
           admin_label: ''
           label: 'Contract Value'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ contract_value|trim|number_format(2, ''.'', '','') }} '
             make_link: false
             path: ''
             absolute: false
@@ -1284,8 +1284,8 @@ display:
           label: 'Contract Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ contract_date|trim|date(''Y-m-d'') }} '
             make_link: false
             path: ''
             absolute: false
@@ -1440,8 +1440,8 @@ display:
           label: 'Contract Period Start Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ contract_period_start|trim|date(''Y-m-d'') }} '
             make_link: false
             path: ''
             absolute: false
@@ -1492,8 +1492,8 @@ display:
           label: 'Contract Period End Date or Delivery Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ delivery_date |trim|date(''Y-m-d'') }} '
             make_link: false
             path: ''
             absolute: false
@@ -1544,8 +1544,8 @@ display:
           label: 'Contract Value'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ contract_value|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false
@@ -1596,8 +1596,8 @@ display:
           label: 'Original Contract Value'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '${{ original_value|trim|number_format(2,''.'','','') }}'
             make_link: false
             path: ''
             absolute: false

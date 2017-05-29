@@ -414,6 +414,317 @@ display:
         type: none
       defaults:
         cache: false
+        fields: false
+      fields:
+        id:
+          id: id
+          table: search_api_index_pd_core_wrongdoing
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        ref_number:
+          id: ref_number
+          table: search_api_index_pd_core_wrongdoing
+          field: ref_number
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Reference Number'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        org_name_en:
+          id: org_name_en
+          table: search_api_index_pd_core_wrongdoing
+          field: org_name_en
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Organization
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        file_id_number:
+          id: file_id_number
+          table: search_api_index_pd_core_wrongdoing
+          field: file_id_number
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'File Identification Number'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        file_id_date:
+          id: file_id_date
+          table: search_api_index_pd_core_wrongdoing
+          field: file_id_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'File Identification Date'
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ file_id_date|trim|date(''Y-m-d'') }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/search/wrongdoing/reference/{{ id }}"><strong>View detailed information about this disclosure</strong></a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
     cache_metadata:
       max-age: -1
       contexts:
@@ -677,8 +988,8 @@ display:
           label: 'File Identification Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ file_id_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
