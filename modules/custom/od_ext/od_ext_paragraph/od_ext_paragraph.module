@@ -4,3 +4,15 @@
  * @file
  * Contains od_ext_paragraph.module.
  */
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function od_ext_paragraph_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  if (!empty($paragraph) && $paragraph->getType() == 'idea') {
+    $variables['comment_count'] = $paragraph->get('field_comment')->get(0)->get('comment_count')->getValue();
+    $variables['cid'] = $paragraph->get('field_comment')->get(0)->get('cid')->getValue();
+  }
+
+}

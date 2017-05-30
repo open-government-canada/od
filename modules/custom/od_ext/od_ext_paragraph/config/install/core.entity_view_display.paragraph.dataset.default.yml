@@ -20,14 +20,14 @@ bundle: dataset
 mode: default
 content:
   field_body:
-    weight: 2
+    weight: 1
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_comment:
-    weight: 5
+    weight: 4
     label: above
     settings:
       view_mode: default
@@ -36,22 +36,6 @@ content:
     type: comment_default
     region: content
   field_organization:
-    weight: 1
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_status:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title:
     weight: 0
     label: above
     settings:
@@ -59,8 +43,16 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_status:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_url:
-    weight: 4
+    weight: 3
     label: above
     settings:
       trim_length: 128
@@ -71,4 +63,5 @@ content:
     third_party_settings: {  }
     type: link
     region: content
-hidden: {  }
+hidden:
+  field_title: true
