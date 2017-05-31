@@ -149,6 +149,7 @@ class MainBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
       }
 
       $breadcrumb = new Breadcrumb();
+      $breadcrumb->addCacheContexts(['url.path.parent']);
       $breadcrumb->setLinks($links);
     }
 

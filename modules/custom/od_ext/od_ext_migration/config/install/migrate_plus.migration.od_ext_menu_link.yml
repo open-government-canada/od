@@ -173,15 +173,6 @@ source:
       external: 0
       weight: 3
       parent: 0
-    - mlid: 'analytics_help'
-      link_title: 'Help'
-      description: ''
-      menu_name: 'analytics'
-      link_path: 'internal:/analytics/404'
-      options: []
-      external: 0
-      weight: 3
-      parent: 0
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
