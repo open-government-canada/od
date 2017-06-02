@@ -1,0 +1,50 @@
+id: od_ext_db_node_webform_translation
+migration_tags: null
+migration_group: od_external_translation
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Database import for Webform from legacy Drupal database'
+source:
+  plugin: webform_node
+  target: source_migration
+  translations: true
+process:
+  title: title
+  nid:
+    plugin: migration
+    migration: od_ext_db_node_webform
+    source: nid
+  uid:
+    plugin: migration
+    migration: od_ext_db_user
+    source: uid
+  type:
+    plugin: default_value
+    default_value: webform
+  sticky:
+    plugin: default_value
+    default_value: 0
+  body/value:
+    plugin: wxt_media_tags
+    source: body
+  body/format:
+    plugin: default_value
+    default_value: rich_text
+  langcode:
+    plugin: default_value
+    default_value: "fr"
+  content_translation_source:
+    plugin: default_value
+    default_value: "en"
+  webform/target_id: webform
+  webform/status: webform_status
+destination:
+  plugin: 'entity:node'
+  translations: true
+migration_dependencies:
+  required:
+    - od_ext_db_file
+    - od_ext_db_taxonomy_term
+    - od_ext_db_node_webform

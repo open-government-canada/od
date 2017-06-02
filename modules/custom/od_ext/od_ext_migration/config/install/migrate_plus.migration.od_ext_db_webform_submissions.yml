@@ -5,7 +5,7 @@ dependencies:
   enforced:
     module:
       - od_ext_migration
-label: 'Database import for Users from legacy Drupal database'
+label: 'Database import for Webforms from legacy Drupal database'
 source:
   plugin: webform_submissions
   target: source_migration
@@ -19,14 +19,20 @@ process:
   in_draft: is_draft
   current_page: {}
   remote_addr: remote_addr
-  uid: uid
+  uid:
+    plugin: migration
+    migration: od_ext_db_user
+    source: uid
   langcode:
     plugin: default_value
     default_value: 'en'
   entity_type:
     plugin: default_value
     default_value: 'node'
-  entity_id: nid
+  entity_id:
+    plugin: migration
+    migration: od_ext_db_node_webform
+    source: nid
   sticky: {}
   notes: {}
   serial: {}
