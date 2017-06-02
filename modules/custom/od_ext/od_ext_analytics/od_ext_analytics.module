@@ -7,6 +7,9 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 
+/**
+ * Implements hook_theme().
+ */
 function od_ext_analytics_theme($existing, $type, $theme, $path) {
   return [
     'd3vis_country' => [

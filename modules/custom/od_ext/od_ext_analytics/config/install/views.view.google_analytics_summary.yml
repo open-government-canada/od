@@ -4,6 +4,7 @@ dependencies:
   config:
     - system.menu.analytics
   module:
+    - csv_serialization
     - google_analytics_reports
     - od_ext_analytics
     - rest
@@ -31,8 +32,12 @@ display:
         options:
           perm: 'access google analytics reports'
       cache:
-        type: tag
-        options: {  }
+        type: time
+        options:
+          results_lifespan: '21600'
+          results_lifespan_custom: '0'
+          output_lifespan: '21600'
+          output_lifespan_custom: '0'
       query:
         type: views_query
       exposed_form:
@@ -1910,6 +1915,276 @@ display:
         - request_format
         - user.permissions
       tags: {  }
+  data_export_10:
+    display_plugin: data_export
+    id: data_export_10
+    display_title: 'Top Pages csv'
+    position: 5
+    display_options:
+      display_extenders: {  }
+      fields:
+        pagePath:
+          id: pagePath
+          table: google_analytics
+          field: pagePath
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: true
+          plugin_id: standard
+        pageTitle:
+          id: pageTitle
+          table: google_analytics
+          field: pageTitle
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Title
+          exclude: 0
+          alter:
+            alter_text: 1
+            text: '<a href="{{ pagePath }}">{{ pageTitle }}</a>'
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 0
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 1
+          empty_zero: 1
+          hide_alter_empty: 1
+          plugin_id: standard
+        pageviews:
+          id: pageviews
+          table: google_analytics
+          field: pageviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Pageviews
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 0
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 1
+          empty_zero: 1
+          hide_alter_empty: 1
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ' '
+          format_plural: 0
+          format_plural_string: "1\x03@count"
+          prefix: ''
+          suffix: ' views'
+          plugin_id: numeric
+      defaults:
+        fields: false
+        title: false
+        css_class: false
+        sorts: false
+        style: false
+        row: false
+        empty: false
+        header: false
+        pager: false
+      title: 'Top Pages'
+      sorts:
+        pageviews:
+          id: pageviews
+          table: google_analytics
+          field: pageviews
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: 1
+            trim: 1
+            encoding: utf8
+          xls_settings:
+            xls_format: Excel2007
+            metadata:
+              creator: ''
+              last_modified_by: ''
+              title: ''
+              description: ''
+              subject: ''
+              keywords: ''
+              category: ''
+              manager: ''
+              company: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: true
+      pager:
+        type: mini
+        options:
+          items_per_page: '25'
+          offset: '0'
+          id: '0'
+          total_pages: ''
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+          expose:
+            items_per_page: 0
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: 0
+            items_per_page_options_all_label: '- All -'
+            offset: 0
+            offset_label: Offset
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Pages not found.'
+          empty: true
+          tokenize: false
+          content: 'Pages not found.'
+          plugin_id: text_custom
+      header: {  }
+      display_description: ''
+      path: analytics/visits/csv
+      filename: top_pages.csv
+      displays:
+        page_3: page_3
+        default: 0
+        block_1: 0
+        block_2: 0
+        block_3: 0
+        page_1: 0
+        page_2: 0
+        page_4: 0
+        page_5: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - request_format
+        - url.query_args
+        - user.permissions
+      tags: {  }
   data_export_2:
     display_plugin: data_export
     id: data_export_2
@@ -2649,12 +2924,111 @@ display:
         title: false
         style: false
         row: false
+        cache: true
       filter_groups:
         operator: AND
         groups:
           - AND
           - AND
       fields:
+        ga_record_name:
+          id: ga_record_name
+          table: google_analytics
+          field: ga_record_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Record Name'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: od_ext_analytics_field_rec_name
+        ga_org_name:
+          id: ga_org_name
+          table: google_analytics
+          field: ga_org_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Department Name'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: od_ext_analytics_field_org_name
         eventAction:
           id: eventAction
           table: google_analytics
@@ -2802,10 +3176,231 @@ display:
           empty_zero: 0
           hide_alter_empty: 1
           plugin_id: standard
+        totalEvents:
+          id: totalEvents
+          table: google_analytics
+          field: totalEvents
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Record Download'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_string: "1\x03@count"
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
+        dimension1:
+          id: dimension1
+          table: google_analytics
+          field: dimension1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        dimension2:
+          id: dimension2
+          table: google_analytics
+          field: dimension2
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        dimension3:
+          id: dimension3
+          table: google_analytics
+          field: dimension3
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
       pager:
-        type: none
+        type: full
         options:
+          items_per_page: '10'
           offset: '0'
+          id: '0'
+          total_pages: ''
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: 0
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: 0
+            items_per_page_options_all_label: '- All -'
+            offset: 0
+            offset_label: Offset
+          quantity: '5'
       display_description: ''
       title: Departments
       style:
@@ -2851,6 +3446,7 @@ display:
       contexts:
         - 'languages:language_interface'
         - request_format
+        - url.query_args
         - user.permissions
       tags: {  }
   data_export_5:
@@ -3106,6 +3702,1453 @@ display:
       contexts:
         - 'languages:language_interface'
         - request_format
+        - user.permissions
+      tags: {  }
+  data_export_6:
+    display_plugin: data_export
+    id: data_export_6
+    display_title: 'Overview csv'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: analytics/summary/csv
+      filters:
+        start_date:
+          id: start_date
+          table: google_analytics
+          field: start_date
+          value:
+            type: offset
+            value: '-31 day'
+          group: 1
+          expose:
+            operator: ''
+        end_date:
+          id: end_date
+          table: google_analytics
+          field: end_date
+          value:
+            type: offset
+            value: '-1 day'
+          group: 1
+          expose:
+            operator: ''
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          - AND
+          - AND
+      display_description: ''
+      title: Overview
+      filename: summary.csv
+      displays:
+        page_1: page_1
+        default: 0
+        block_1: 0
+        block_2: 0
+        block_3: 0
+        page_2: 0
+        page_3: 0
+        page_4: 0
+        page_5: 0
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: 1
+            trim: 1
+            encoding: utf8
+          xls_settings:
+            xls_format: Excel2007
+            metadata:
+              creator: ''
+              last_modified_by: ''
+              title: ''
+              description: ''
+              subject: ''
+              keywords: ''
+              category: ''
+              manager: ''
+              company: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - request_format
+        - user.permissions
+      tags: {  }
+  data_export_7:
+    display_plugin: data_export
+    id: data_export_7
+    display_title: '404 csv'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: analytics/404/csv
+      filters:
+        start_date:
+          id: start_date
+          table: google_analytics
+          field: start_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '- 1 year'
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        end_date:
+          id: end_date
+          table: google_analytics
+          field: end_date
+          value:
+            type: offset
+            value: '-1 day'
+          group: 1
+          expose:
+            operator: ''
+        pageTitle:
+          id: pageTitle
+          table: google_analytics
+          field: pageTitle
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: regular_expression
+          value: 'Error 404 - open.canada.ca|We couldn\''t find that Web page'
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: google_analytics_string
+      defaults:
+        filters: false
+        filter_groups: false
+        fields: false
+        pager: false
+        use_ajax: false
+        title: false
+        css_class: false
+      filter_groups:
+        operator: AND
+        groups:
+          - AND
+          - AND
+      fields:
+        fullReferrer:
+          id: fullReferrer
+          table: google_analytics
+          field: fullReferrer
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Full Referrer'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        pagePath:
+          id: pagePath
+          table: google_analytics
+          field: pagePath
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Page
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+      pager:
+        type: full
+        options:
+          items_per_page: '100'
+          offset: '0'
+          id: '0'
+          total_pages: ''
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: 0
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: 0
+            items_per_page_options_all_label: '- All -'
+            offset: 0
+            offset_label: Offset
+          quantity: '9'
+      use_ajax: true
+      display_description: ''
+      title: '404'
+      filename: 404.csv
+      displays:
+        page_4: page_4
+        default: 0
+        block_1: 0
+        block_2: 0
+        block_3: 0
+        page_1: 0
+        page_2: 0
+        page_3: 0
+        page_5: 0
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: 1
+            trim: 1
+            encoding: utf8
+          xls_settings:
+            xls_format: Excel2007
+            metadata:
+              creator: ''
+              last_modified_by: ''
+              title: ''
+              description: ''
+              subject: ''
+              keywords: ''
+              category: ''
+              manager: ''
+              company: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - request_format
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  data_export_8:
+    display_plugin: data_export
+    id: data_export_8
+    display_title: 'Downloads csv'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      path: analytics/downloads/csv
+      filters:
+        start_date:
+          id: start_date
+          table: google_analytics
+          field: start_date
+          value:
+            type: offset
+            value: '-31 day'
+          group: 1
+          expose:
+            operator: ''
+        end_date:
+          id: end_date
+          table: google_analytics
+          field: end_date
+          value:
+            type: offset
+            value: '-1 day'
+          group: 1
+          expose:
+            operator: ''
+        eventCategory:
+          id: eventCategory
+          table: google_analytics
+          field: eventCategory
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: '1'
+          exposed: true
+          expose:
+            operator_id: eventCategory_op
+            label: 'Event Category'
+            description: ''
+            use_operator: 0
+            operator: eventCategory_op
+            identifier: eventCategory
+            required: 0
+            remember: 0
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: 0
+              administrator: 0
+              layout_manager: 0
+              creator: 0
+              reviewer: 0
+              media_creator: 0
+              media_manager: 0
+          is_grouped: true
+          group_info:
+            label: 'Event Category'
+            description: ''
+            identifier: eventCategory
+            optional: 1
+            widget: select
+            multiple: 0
+            remember: 0
+            default_group: 3
+            default_group_multiple:
+              All: All
+              0: '1'
+              1: '1'
+            group_items:
+              -
+                title: Downloads
+                operator: '='
+                value: Downloads
+              -
+                title: Mails
+                operator: '='
+                value: Mails
+              -
+                title: Resource
+                operator: '='
+                value: Resource
+              -
+                title: 'Outbound links'
+                operator: '='
+                value: 'Outbound links'
+              -
+                title: Resource
+                operator: '='
+                value: resource
+              -
+                title: Downloads
+                operator: '='
+                value: Downloads
+              -
+                title: Mails
+                operator: '='
+                value: Mails
+              -
+                title: Resource
+                operator: '='
+                value: Resource
+              -
+                title: 'Outbound links'
+                operator: '='
+                value: 'Outbound links'
+              -
+                title: Resource
+                operator: '='
+                value: resource
+          plugin_id: google_analytics_string
+      defaults:
+        filters: false
+        filter_groups: false
+        fields: false
+        pager: false
+        css_class: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          - AND
+          - AND
+      fields:
+        eventAction:
+          id: eventAction
+          table: google_analytics
+          field: eventAction
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Event Action'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        eventCategory:
+          id: eventCategory
+          table: google_analytics
+          field: eventCategory
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Event Category'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        eventLabel:
+          id: eventLabel
+          table: google_analytics
+          field: eventLabel
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Event Label'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 1
+            external: 0
+            replace_spaces: 1
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+      pager:
+        type: full
+        options:
+          items_per_page: '100'
+          offset: '0'
+          id: '0'
+          total_pages: ''
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: 0
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: 0
+            items_per_page_options_all_label: '- All -'
+            offset: 0
+            offset_label: Offset
+          quantity: '9'
+      display_description: ''
+      title: Downloads
+      filename: downloads.csv
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: 1
+            trim: 1
+            encoding: utf8
+          xls_settings:
+            xls_format: Excel2007
+            metadata:
+              creator: ''
+              last_modified_by: ''
+              title: ''
+              description: ''
+              subject: ''
+              keywords: ''
+              category: ''
+              manager: ''
+              company: ''
+      displays:
+        page_2: page_2
+        default: 0
+        block_1: 0
+        block_2: 0
+        block_3: 0
+        page_1: 0
+        page_3: 0
+        page_4: 0
+        page_5: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - request_format
+        - url
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  data_export_9:
+    display_plugin: data_export
+    id: data_export_9
+    display_title: 'Departments csv'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      path: analytics/departments/csv
+      filters:
+        start_date:
+          id: start_date
+          table: google_analytics
+          field: start_date
+          value:
+            type: offset
+            value: '-31 day'
+          group: 1
+          expose:
+            operator: ''
+        end_date:
+          id: end_date
+          table: google_analytics
+          field: end_date
+          value:
+            type: offset
+            value: '-1 day'
+          group: 1
+          expose:
+            operator: ''
+        eventCategory:
+          id: eventCategory
+          table: google_analytics
+          field: eventCategory
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: resource
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: eventCategory_op
+            label: 'Event Category'
+            description: ''
+            use_operator: 0
+            operator: eventCategory_op
+            identifier: eventCategory
+            required: 0
+            remember: 0
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: 0
+              administrator: 0
+              layout_manager: 0
+              creator: 0
+              reviewer: 0
+              media_creator: 0
+              media_manager: 0
+          is_grouped: true
+          group_info:
+            label: 'Event Category'
+            description: ''
+            identifier: eventCategory
+            optional: 1
+            widget: select
+            multiple: 0
+            remember: 0
+            default_group: 3
+            default_group_multiple:
+              All: All
+              0: '1'
+              1: '1'
+            group_items:
+              -
+                title: Downloads
+                operator: '='
+                value: Downloads
+              -
+                title: Mails
+                operator: '='
+                value: Mails
+              -
+                title: Resource
+                operator: '='
+                value: Resource
+              -
+                title: 'Outbound links'
+                operator: '='
+                value: 'Outbound links'
+              -
+                title: Resource
+                operator: '='
+                value: resource
+              -
+                title: Downloads
+                operator: '='
+                value: Downloads
+              -
+                title: Mails
+                operator: '='
+                value: Mails
+              -
+                title: Resource
+                operator: '='
+                value: Resource
+              -
+                title: 'Outbound links'
+                operator: '='
+                value: 'Outbound links'
+              -
+                title: Resource
+                operator: '='
+                value: resource
+          plugin_id: google_analytics_string
+        eventAction:
+          id: eventAction
+          table: google_analytics
+          field: eventAction
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: download
+          group: '1'
+          exposed: false
+          expose:
+            operator_id: false
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: google_analytics_string
+        dimension3:
+          id: dimension3
+          table: google_analytics
+          field: dimension3
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: '1'
+          exposed: true
+          expose:
+            operator_id: dimension3_op
+            label: Organizations
+            description: ''
+            use_operator: 0
+            operator: dimension3_op
+            identifier: dimension3
+            required: 0
+            remember: 0
+            multiple: 0
+            remember_roles:
+              authenticated: authenticated
+              anonymous: 0
+              administrator: 0
+              page_creator: 0
+              layout_manager: 0
+              page_reviewer: 0
+              creator: 0
+              landing_page_creator: 0
+              reviewer: 0
+              landing_page_reviewer: 0
+              media_creator: 0
+              media_manager: 0
+              blog_post_creator: 0
+              blog_post_reviewer: 0
+              app_creator: 0
+              app_reviewer: 0
+              commitment_creator: 0
+              commitment_reviewer: 0
+              consultation_creator: 0
+              consultation_reviewer: 0
+              search_creator: 0
+              search_reviewer: 0
+              suggested_app_creator: 0
+              suggested_app_reviewer: 0
+              suggested_dataset_creator: 0
+              suggested_dataset_reviewer: 0
+              webform_creator: 0
+              webform_reviewer: 0
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: 0
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: od_ext_analytics_organization_name
+      defaults:
+        filters: false
+        filter_groups: false
+        fields: false
+        pager: false
+        css_class: false
+        title: false
+        style: false
+        row: false
+        cache: true
+      filter_groups:
+        operator: AND
+        groups:
+          - AND
+          - AND
+      fields:
+        ga_record_name:
+          id: ga_record_name
+          table: google_analytics
+          field: ga_record_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Record Name'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: od_ext_analytics_field_rec_name
+        ga_org_name:
+          id: ga_org_name
+          table: google_analytics
+          field: ga_org_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Department Name'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: od_ext_analytics_field_org_name
+        eventAction:
+          id: eventAction
+          table: google_analytics
+          field: eventAction
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Event Action'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        eventCategory:
+          id: eventCategory
+          table: google_analytics
+          field: eventCategory
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Event Category'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        eventLabel:
+          id: eventLabel
+          table: google_analytics
+          field: eventLabel
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Event Label'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 1
+            external: 0
+            replace_spaces: 1
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        totalEvents:
+          id: totalEvents
+          table: google_analytics
+          field: totalEvents
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Record Download'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_string: "1\x03@count"
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
+        dimension1:
+          id: dimension1
+          table: google_analytics
+          field: dimension1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        dimension2:
+          id: dimension2
+          table: google_analytics
+          field: dimension2
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        dimension3:
+          id: dimension3
+          table: google_analytics
+          field: dimension3
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+      pager:
+        type: full
+        options:
+          items_per_page: '10'
+          offset: '0'
+          id: '0'
+          total_pages: ''
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: 0
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: 0
+            items_per_page_options_all_label: '- All -'
+            offset: 0
+            offset_label: Offset
+          quantity: '5'
+      display_description: ''
+      title: Departments
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: 1
+            trim: 1
+            encoding: utf8
+          xls_settings:
+            xls_format: Excel2007
+            metadata:
+              creator: ''
+              last_modified_by: ''
+              title: ''
+              description: ''
+              subject: ''
+              keywords: ''
+              category: ''
+              manager: ''
+              company: ''
+      row:
+        type: fields
+        options: {  }
+      filename: departments.csv
+      displays:
+        page_5: page_5
+        default: 0
+        block_1: 0
+        block_2: 0
+        block_3: 0
+        page_1: 0
+        page_2: 0
+        page_3: 0
+        page_4: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - request_format
+        - url
+        - url.query_args
         - user.permissions
       tags: {  }
   page_1:
@@ -4252,12 +6295,111 @@ display:
         title: false
         style: false
         row: false
+        cache: true
       filter_groups:
         operator: AND
         groups:
           - AND
           - AND
       fields:
+        ga_record_name:
+          id: ga_record_name
+          table: google_analytics
+          field: ga_record_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Record Name'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: od_ext_analytics_field_rec_name
+        ga_org_name:
+          id: ga_org_name
+          table: google_analytics
+          field: ga_org_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Department Name'
+          exclude: 0
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: od_ext_analytics_field_org_name
         eventAction:
           id: eventAction
           table: google_analytics
@@ -4356,23 +6498,23 @@ display:
           empty_zero: 0
           hide_alter_empty: 1
           plugin_id: standard
-        eventLabel:
-          id: eventLabel
+        totalEvents:
+          id: totalEvents
           table: google_analytics
-          field: eventLabel
+          field: totalEvents
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Event Label'
+          label: 'Record Download'
           exclude: 0
           alter:
             alter_text: 0
             text: ''
             make_link: 0
             path: ''
-            absolute: 1
+            absolute: 0
             external: 0
-            replace_spaces: 1
+            replace_spaces: 0
             path_case: none
             trim_whitespace: 0
             alt: ''
@@ -4397,6 +6539,161 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: 1
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_string: "1\x03@count"
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
+        dimension1:
+          id: dimension1
+          table: google_analytics
+          field: dimension1
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        dimension2:
+          id: dimension2
+          table: google_analytics
+          field: dimension2
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: 1
+          empty: ''
+          hide_empty: 0
+          empty_zero: 0
+          hide_alter_empty: 1
+          plugin_id: standard
+        dimension3:
+          id: dimension3
+          table: google_analytics
+          field: dimension3
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: 1
+          alter:
+            alter_text: 0
+            text: ''
+            make_link: 0
+            path: ''
+            absolute: 0
+            external: 0
+            replace_spaces: 0
+            path_case: none
+            trim_whitespace: 0
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: 0
+            max_length: '0'
+            word_boundary: 1
+            ellipsis: 1
+            more_link: 0
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: 0
+            trim: 0
+            preserve_tags: ''
+            html: 0
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: 1
