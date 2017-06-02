@@ -1503,6 +1503,72 @@ source:
           storage_id: 'node:page:default:default'
           builder: ipe
           static_context: {  }
+    -
+      name: pd
+      title: 'Proactive Disclosure'
+      language: en
+      body: "<p>Find information related to travel and hospitality expenses, contracting, grants and contributions, position reclassifications and founded wrongdoing. By making this information readily available, Canadians and Parliament are better able to hold the Government and public sector officials to account.</p>"
+      alias: /proactive-disclosure
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: main
+              weight: 5
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
   ids:
     name:
       type: string

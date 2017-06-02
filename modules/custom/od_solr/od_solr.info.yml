@@ -8,6 +8,7 @@ package: 'Open Data'
 dependencies:
   - drupal:block
   - drupal:facets
+  - drupal:facets_summary
   - drupal:node
   - drupal:search
   - drupal:search_api

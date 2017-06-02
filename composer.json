@@ -240,6 +240,10 @@
                 "Enter drupal/external_entities patch #2882887 description here":
                 "https://www.drupal.org/files/issues/allow_for_uuid_to_be-2882887-2.patch"
             },
+            "drupal/facets": {
+                "Enter drupal/fontawesome patch #2878851 description here":
+                "https://www.drupal.org/files/issues/facet_summary_show_a-2878851-7.patch"
+            },
             "drupal/fontawesome": {
                 "Enter drupal/fontawesome patch #2881431 description here":
                 "https://www.drupal.org/files/issues/unable_to_find_the-2881431-2.patch"
@@ -300,7 +304,7 @@
         "drupal/csv_serialization": "1.0",
         "drupal/external_comment": "dev-8.x-1.x",
         "drupal/external_entities": "1.x-dev",
-        "drupal/facets": "1.0-alpha8",
+        "drupal/facets": "1.0-alpha9",
         "drupal/field_default_token": "1.x-dev",
         "drupal/fontawesome":  "1.x-dev",
         "drupal/google_analytics_reports": "3.0-beta1",
