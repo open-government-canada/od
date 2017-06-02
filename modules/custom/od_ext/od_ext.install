@@ -11,6 +11,9 @@
 function od_ext_install() {
   // Enable translation for our core entities/bundles.
   $entities = [
+    'group' => [
+      'department',
+    ],
     'paragraph' => [
       'deliverable',
       'idea',

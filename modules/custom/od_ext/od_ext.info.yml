@@ -13,6 +13,7 @@ dependencies:
   - drupal:od_ext_consultation
   - drupal:od_ext_deliverable
   - drupal:od_ext_fonts
+  - drupal:od_ext_group
   - drupal:od_ext_idea
   - drupal:od_ext_paragraph
   - drupal:od_ext_services

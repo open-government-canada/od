@@ -11,6 +11,7 @@ dependencies:
   - drupal:migrate_plus
   - drupal:migrate_tools
   - drupal:od_ext_analytics
+  - drupal:od_ext_group
   - drupal:od_ext_paragraph
   - drupal:od_ext_suggestion
   - drupal:od_ext_taxonomy

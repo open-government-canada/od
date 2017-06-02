@@ -1,0 +1,10 @@
+name: 'Open Data Extend Group'
+description: 'Group functionality related to CKAN organizations.'
+type: module
+core: 8.x
+package: 'Open Data'
+
+# Required modules
+dependencies:
+  - drupal:gnode
+  - drupal:group
