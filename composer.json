@@ -241,8 +241,16 @@
                 "https://www.drupal.org/files/issues/allow_for_uuid_to_be-2882887-2.patch"
             },
             "drupal/facets": {
-                "Enter drupal/fontawesome patch #2878851 description here":
-                "https://www.drupal.org/files/issues/facet_summary_show_a-2878851-7.patch"
+                "Enter drupal/facets patch #2840173 description here":
+                "https://www.drupal.org/files/issues/fix_configuration-2840173-7.patch",
+                "Enter drupal/facets patch #2868380 description here":
+                "https://www.drupal.org/files/issues/be_more_defensive_when-2868380-2.patch",
+                "Enter drupal/facets patch #2878851 description here":
+                "https://www.drupal.org/files/issues/facet_summary_show_a-2878851-7.patch",
+                "Enter drupal/facets patch #2880411 description here":
+                "https://www.drupal.org/files/issues/2880411-13-move_block_cache_to_entity.patch",
+                "Enter drupal/facets patch #2881177 description here":
+                "https://www.drupal.org/files/issues/2881177-2.patch"
             },
             "drupal/fontawesome": {
                 "Enter drupal/fontawesome patch #2881431 description here":

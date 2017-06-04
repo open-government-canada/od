@@ -3,8 +3,10 @@
 namespace Drupal\od_ext_migration\EventSubscriber;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigrateImportEvent;
+use Drupal\migrate\Event\MigratePostRowSaveEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
@@ -20,12 +22,22 @@ class MigrationSubscriber implements EventSubscriberInterface {
   protected $config;
 
   /**
+   * The entity type manager service.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
    * Constructs a new MigrationSubscriber.
    *
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
+   *   The entity type manager.
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The config factory.
    */
-  public function __construct(ConfigFactoryInterface $config_factory) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory) {
+    $this->entityTypeManager = $entity_type_manager;
     $this->config = $config_factory;
   }
 
@@ -42,9 +54,23 @@ class MigrationSubscriber implements EventSubscriberInterface {
   }
 
   /**
+   * Code to run after a migration row has been saved.
+   */
+  public function onMigrationPostRowSave(MigratePostRowSaveEvent $event) {
+    if ($event->getMigration()->id() == 'od_ext_db_node_blog') {
+      $entities = $this->entityTypeManager->getStorage('group')->loadByProperties(['field_shortcode' => 'tbs-sct']);
+      $entity = reset($entities);
+      $destinationIds = $event->getDestinationIdValues();
+      $node = $this->entityTypeManager->getStorage('node')->load($destinationIds[0]);
+      $entity->addContent($node, 'group_node:blog_post');
+    }
+  }
+
+  /**
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
+    $events[MigrateEvents::POST_ROW_SAVE] = 'onMigrationPostRowSave';
     $events[MigrateEvents::POST_IMPORT] = 'onMigrationPostImport';
     return $events;
   }

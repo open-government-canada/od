@@ -15,7 +15,7 @@ show_only_one_result: false
 field_identifier: org_name_en
 facet_source_id: 'search_api:views_block__pd_core_inventory__block_1'
 widget:
-  type: links
+  type: checkbox
   config:
     show_numbers: true
     soft_limit: 10

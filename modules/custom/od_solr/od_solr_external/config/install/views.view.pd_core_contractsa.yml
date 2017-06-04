@@ -130,7 +130,17 @@ display:
       filters: {  }
       sorts: {  }
       title: 'Search Results'
-      header: {  }
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<div class="mrgn-bttm-md"><strong>Displaying @start - @end of @total</strong></div>'
+          plugin_id: result
       footer: {  }
       empty: {  }
       relationships: {  }

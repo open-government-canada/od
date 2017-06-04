@@ -613,6 +613,12 @@ source:
               region: left
               weight: 10
             -
+              id: 'facets_summary_block:contracts'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
+            -
               id: 'facet_block:ss_ati_organization_en'
               label: Organization
               label_display: visible
@@ -693,7 +699,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -731,6 +737,12 @@ source:
               label_display: visible
               region: left
               weight: 10
+            -
+              id: 'facets_summary_block:grants'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
             -
               id: 'facet_block:grants_org_name_en'
               label: Organization
@@ -788,7 +800,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -826,6 +838,12 @@ source:
               label_display: visible
               region: left
               weight: 10
+            -
+              id: 'facets_summary_block:reclassification'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
             -
               id: 'facet_block:reclassification_org_name_en'
               label: Organization
@@ -877,7 +895,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -895,19 +913,19 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: left
               weight: 0
             -
               id: local_tasks_block
               label: Tabs
               label_display: '0'
-              region: top_left
+              region: left
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
+              region: left
               weight: 5
             -
               id: 'views_block:pd_core_travela-block_1'
@@ -915,6 +933,12 @@ source:
               label_display: visible
               region: left
               weight: 10
+            -
+              id: 'facets_summary_block:travela'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
             -
               id: 'facet_block:travel_year'
               label: Year
@@ -960,7 +984,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -998,6 +1022,12 @@ source:
               label_display: visible
               region: left
               weight: 10
+            -
+              id: 'facets_summary_block:inventory'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
             -
               id: 'facet_block:inventory_org_name_en'
               label: Organization
@@ -1043,7 +1073,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -1081,6 +1111,12 @@ source:
               label_display: visible
               region: left
               weight: 10
+            -
+              id: 'facets_summary_block:hospitalityq'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
             -
               id: 'facet_block:hospitalityq_org_name_en'
               label: Organization
@@ -1132,7 +1168,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -1170,6 +1206,12 @@ source:
               label_display: visible
               region: left
               weight: 10
+            -
+              id: 'facets_summary_block:travelq'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
             -
               id: 'facet_block:travelq_org_name_en'
               label: Organization
@@ -1221,7 +1263,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -1259,6 +1301,12 @@ source:
               label_display: visible
               region: left
               weight: 10
+            -
+              id: 'facets_summary_block:wrongdoing'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
             -
               id: 'facet_block:wrongdoing_org_name_en'
               label: Organization
@@ -1310,7 +1358,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -1348,6 +1396,12 @@ source:
               label_display: visible
               region: left
               weight: 10
+            -
+              id: 'facets_summary_block:ati'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
             -
               id: 'facet_block:ss_ati_organization_en'
               label: Organization
@@ -1405,7 +1459,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
@@ -1500,14 +1554,86 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:page:default:default'
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
     -
       name: pd
       title: 'Proactive Disclosure'
       language: en
-      body: "<p>Find information related to travel and hospitality expenses, contracting, grants and contributions, position reclassifications and founded wrongdoing. By making this information readily available, Canadians and Parliament are better able to hold the Government and public sector officials to account.</p>"
+      body: |
+        <p>Find information related to travel and hospitality expenses,
+        contracting, grants and contributions, position reclassifications and
+        founded wrongdoing. By making this information readily available,
+        Canadians and Parliament are better able to hold the Government and
+        public sector officials to account.</p>
+
+        <div class="row">
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/contracts">Search
+        Quarterly Government Contracts</a></h2>
+
+        <p>Browse information on contracts over $10,000 by department and
+        amount, as well as standing offer agreements and supply arrangements
+        used by government departments.</p>
+        </div>
+
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/hospitalityq">Search
+        Government Hospitality Expenses</a></h2>
+
+        <p>Find out what your government is spending to facilitate the business
+        of the day, or to extend courtesy to honoured guests.</p>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/grants">Search Government
+        Grants and Contributions</a></h2>
+
+        <p>Search transfers of money, goods, services or assets to individuals,
+        organizations or other levels of government.</p>
+        </div>
+
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/travelq">Search
+        Government Travel Expenses</a></h2>
+
+        <p>Search by function and department to see where the government’s
+        travel dollars are being spent.</p>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/reclassification">Search
+        Government Position Reclassifications</a></h2>
+
+        <p>Search by position and department to see what government positions
+        have been reclassified.</p>
+        </div>
+
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/wrongdoing">Search
+        Government Acts of Founded Wrongdoing</a></h2>
+
+        <p>Search information on wrongdoing found to have been committed by an
+        investigation under the <a href="http://www.psic-ispc.gc.ca/eng/wrongdoing/protection">Public Servants Disclosure Protection Act</a> (PSDPA).</p>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/travela">Search Annual
+        Expenditures on Travel, Hospitality and Conferences </a></h2>
+
+        <p>In accordance with Section 6.4 of the Treasury Board Directive on
+        Management of Expenditures on Travel, Hospitality and Conferences,
+        effective January 1, 2011, departments are required to disclose the
+        total annual expenditures for travel, hospitality and conferences.</p>
+        </div>
+        </div>
       alias: /proactive-disclosure
       panelizer:
         -

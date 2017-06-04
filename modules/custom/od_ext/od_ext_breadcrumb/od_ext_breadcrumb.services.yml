@@ -4,3 +4,8 @@ services:
     arguments: ['@router.request_context', '@access_manager', '@router', '@path_processor_manager', '@config.factory',  '@title_resolver', '@current_user', '@path.current', '@language_manager']
     tags:
      - { name: breadcrumb_builder, priority: 100 }
+  od_ext_breadcrumb.pd_breadcrumb:
+    class: Drupal\od_ext_breadcrumb\Breadcrumb\ProactiveDisclosureBreadcrumbBuilder
+    arguments: ['@router.request_context', '@access_manager', '@router', '@path_processor_manager', '@config.factory',  '@title_resolver', '@current_user', '@path.current', '@language_manager', '@path.validator']
+    tags:
+     - { name: breadcrumb_builder, priority: 105 }

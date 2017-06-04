@@ -4,3 +4,26 @@
  * @file
  * Contains od_solr_external.module.
  */
+
+use Drupal\search_api\Query\QueryInterface;
+use Solarium\QueryType\Select\Query\Query as SolariumQuery;
+
+/**
+ * Implements hook_search_api_solr_query_alter().
+ */
+function od_solr_external_search_api_solr_query_alter(SolariumQuery $solarium_query, QueryInterface $query) {
+  // Do not alter the query if the index does not use the solr_document
+  // datasource.
+  $index = $query->getIndex();
+  if (!$index->isValidDatasource('solr_document')) {
+    return;
+  }
+
+  // Language handling.
+  $language = Drupal::languageManager()->getCurrentLanguage();
+
+  if ($index->id() == 'pd_core_ati') {
+    $solarium_query->createFilterQuery('od_solr_external_language')->setQuery('ss_language:' . $language->getId());
+  }
+
+}

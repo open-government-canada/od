@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Open Data Solr External.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function od_solr_external_install() {
+  module_set_weight('od_solr_external', 1);
+}

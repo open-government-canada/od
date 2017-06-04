@@ -1,6 +1,6 @@
 services:
   od_ext_migration.migration_subscriber:
     class: Drupal\od_ext_migration\EventSubscriber\MigrationSubscriber
-    arguments: ['@config.factory']
+    arguments: ['@entity_type.manager', '@config.factory']
     tags:
       - { name: event_subscriber }
