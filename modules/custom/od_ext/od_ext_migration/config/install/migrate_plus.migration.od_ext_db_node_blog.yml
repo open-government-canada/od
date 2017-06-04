@@ -41,3 +41,4 @@ migration_dependencies:
     - od_ext_db_file
     - od_ext_db_taxonomy_term
     - od_ext_db_user
+    - od_ext_group

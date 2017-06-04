@@ -33,7 +33,6 @@ source:
     machine_name:
       type: string
 process:
-  id:
   label:
     -
       plugin: explode

@@ -10,4 +10,6 @@ internal: true
 audience: anonymous
 group_type: department
 permissions_ui: true
-permissions: {  }
+permissions:
+  - 'view group'
+  - 'view group_node:blog_post entity'
