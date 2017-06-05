@@ -1,0 +1,9 @@
+name: 'Open Data Solr External Facets'
+description: 'Facet related configuration for Drupal.'
+type: module
+core: 8.x
+package: 'Open Data'
+
+# Required modules
+dependencies:
+  - drupal:od_solr_external

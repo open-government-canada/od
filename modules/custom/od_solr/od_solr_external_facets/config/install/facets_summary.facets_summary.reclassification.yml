@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.pd_core_reclassification
+    - views.view.pd_core_reclassification
+  module:
+    - search_api
+id: reclassification
+name: 'Current Search'
+facets:
+  reclassification_org_name_en:
+    checked: true
+    label: 'Organization Name'
+    separator: ', '
+    show_count: true
+    weight: 0
+  reclassification_year:
+    checked: true
+    label: Year
+    separator: ', '
+    show_count: true
+    weight: 0
+facet_source_id: 'search_api:views_block__pd_core_reclassification__block_1'
+processor_configs:
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '-10'
+    settings:
+      link_text: 'Clear all'
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '-10'
+    settings: {  }
+  show_summary:
+    processor_id: show_summary
+    weights:
+      build: '-10'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '-10'
+    settings:
+      text:
+        value: 'There is no current search in progress.'
+        format: plain_text

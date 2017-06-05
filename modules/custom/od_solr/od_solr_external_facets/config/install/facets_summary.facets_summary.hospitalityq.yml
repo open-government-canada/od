@@ -2,33 +2,33 @@ langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.pd_core_ati
-    - views.view.pd_core_ati
+    - search_api.index.pd_core_hospitalityq
+    - views.view.pd_core_hospitalityq
   module:
     - search_api
-id: ati
+id: hospitalityq
 name: 'Current Search'
 facets:
-  ss_ati_monthname_en:
+  hospitalityq_org_name_en:
     checked: true
-    label: Month
+    label: 'Organization Name'
     separator: ', '
     show_count: true
     weight: 0
-  ss_ati_organization_en:
-    checked: true
-    label: Organization
-    separator: ', '
-    show_count: true
-    weight: 0
-  ss_ati_year_en:
+  hospitalityq_year:
     checked: true
     label: Year
     separator: ', '
     show_count: true
     weight: 0
-facet_source_id: 'search_api:views_block__pd_core_ati__block_1'
+facet_source_id: 'search_api:views_block__pd_core_hospitalityq__block_1'
 processor_configs:
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '-10'
+    settings:
+      link_text: 'Clear all'
   show_count:
     processor_id: show_count
     weights:
@@ -47,4 +47,3 @@ processor_configs:
       text:
         value: 'There is no current search in progress.'
         format: plain_text
-empty_behavior: null

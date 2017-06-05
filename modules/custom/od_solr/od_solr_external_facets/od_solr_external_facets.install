@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Open Data Solr External Facets.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function od_solr_external_facets_install() {
+  module_set_weight('od_solr_external_facets', 1);
+}

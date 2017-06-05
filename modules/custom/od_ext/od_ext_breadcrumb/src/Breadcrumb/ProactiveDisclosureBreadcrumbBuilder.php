@@ -140,7 +140,7 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $path_elements = explode('/', $path);
     if (!empty($path_elements[0]) && $path_elements[0] == 'search') {
       if (!empty($path_elements[1])) {
-        $core = [
+        $cores = [
           'ati',
           'contracts',
           'contractsa',
@@ -153,7 +153,7 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
           'travelq',
           'wrongdoing',
         ];
-        if (in_array($path_elements[1], $core)) {
+        if (in_array($path_elements[1], $cores)) {
           return TRUE;
         }
       }

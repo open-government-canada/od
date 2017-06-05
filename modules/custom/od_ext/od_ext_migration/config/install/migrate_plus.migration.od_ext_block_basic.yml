@@ -24,32 +24,32 @@ source:
               <span class="wb-inv">Twitter</span></a>
             </li>
             <li>
-              <a href="http://open.canada.ca/en/rss-feeds" title="RSS">
+              <a href="[site:url]/rss-feeds" title="RSS">
               <i class="fa fa-rss"></i>
               <span class="wb-inv">RSS</span></a>
             </li>
             <li>
-              <a href="http://open.canada.ca/en/blog" title="Blog">
+              <a href="[site:url]/blog" title="Blog">
               <i class="ogov opengov-blog"></i>
               <span class="wb-inv">Blog</span></a>
             </li>
             <li>
-              <a href="http://open.canada.ca/en/about-open-government" title="About Open Government">
+              <a href="[site:url]/about-open-government" title="About Open Government">
               <i class="ogov opengov-open-gov"></i>
               <span class="wb-inv">About Open Government</span></a>
             </li>
             <li>
-              <a href="http://open.canada.ca/en/open-data" title="Open Data">
+              <a href="[site:url]/open-data" title="Open Data">
               <i class="ogov opengov-open-data"></i>
               <span class="wb-inv">Open Data</span></a>
             </li>
             <li>
-              <a href="http://open.canada.ca/en/open-information" title="Open Information">
+              <a href="[site:url]/open-information" title="Open Information">
               <i class="ogov opengov-open-info"></i>
               <span class="wb-inv">Open Information</span></a>
             </li>
             <li>
-              <a href="http://open.canada.ca/en/open-dialogue" title="Open Dialogue">
+              <a href="[site:url]/open-dialogue" title="Open Dialogue">
               <i class="ogov opengov-open-dialog"></i>
               <span class="wb-inv">Open Dialogue</span></a>
             </li>
@@ -100,7 +100,7 @@ process:
   'body/value': body
   'body/format':
     plugin: default_value
-    default_value: full_html
+    default_value: rich_text
   langcode: language
 destination:
   plugin: 'entity:block_content'

@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.pd_core_ati
+    - views.view.pd_core_ati
+  module:
+    - search_api
+id: ati
+name: 'Current Search'
+facets:
+  ss_ati_monthname_en:
+    checked: true
+    label: Month
+    separator: ', '
+    show_count: true
+    weight: 0
+  ss_ati_organization_en:
+    checked: true
+    label: Organization
+    separator: ', '
+    show_count: true
+    weight: 0
+  ss_ati_year_en:
+    checked: true
+    label: Year
+    separator: ', '
+    show_count: true
+    weight: 0
+facet_source_id: 'search_api:views_block__pd_core_ati__block_1'
+processor_configs:
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '-10'
+    settings:
+      link_text: 'Clear all'
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '-10'
+    settings: {  }
+  show_summary:
+    processor_id: show_summary
+    weights:
+      build: '-10'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '-10'
+    settings:
+      text:
+        value: 'There is no current search in progress.'
+        format: plain_text
