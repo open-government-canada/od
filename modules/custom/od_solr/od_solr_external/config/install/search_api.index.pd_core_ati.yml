@@ -146,6 +146,11 @@ field_settings:
     datasource_id: solr_document
     property_path: i18n_ts_en_ati_request_number
     type: string
+  text:
+    label: Text
+    datasource_id: solr_document
+    property_path: text
+    type: text
 datasource_settings:
   solr_document:
     id_field: id

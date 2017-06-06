@@ -35,7 +35,8 @@ class ViewsBootstrapPanel extends PreprocessBase {
       'views-bootstrap-pd-core-travelq-block-1',
       'views-bootstrap-pd-core-wrongdoing-block-1',
     ];
-    if (in_array($variables['id'], $cores)) {
+    $id = explode('--', $variables['id']);
+    if (in_array($id[0], $cores)) {
       $panel_title_field = $view->style_plugin->options['panel_title_field'];
       foreach ($variables['rows'] as $id => $row) {
         if (empty($row['title'])) {

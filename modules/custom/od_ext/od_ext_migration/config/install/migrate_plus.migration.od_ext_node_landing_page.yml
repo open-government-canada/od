@@ -619,7 +619,7 @@ source:
               region: right
               weight: 0
             -
-              id: 'facet_block:ss_ati_organization_en'
+              id: 'facet_block:contracts_org_name_en'
               label: Organization
               label_display: visible
               region: right
@@ -648,12 +648,6 @@ source:
               label_display: visible
               region: right
               weight: 20
-            -
-              id: 'facet_block:contracts_org_name_en'
-              label: Organization
-              label_display: visible
-              region: right
-              weight: 25
             -
               id: 'facet_block:contracts_year'
               label: Year
@@ -756,7 +750,7 @@ source:
               region: right
               weight: 5
             -
-              id: 'facet_block:grants_year'
+              id: 'facet_block:grant_year'
               label: Year
               label_display: visible
               region: right

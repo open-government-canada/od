@@ -1088,7 +1088,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ date|trim|date(''Y-m-d'') }}'
+            text: '{{ date }}'
             make_link: false
             path: ''
             absolute: false

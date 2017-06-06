@@ -7,6 +7,7 @@ description: ''
 read_only: true
 field_mappings:
   id: id
+  uuid: id
   title: title
 endpoint: 'http://open.canada.ca/data/api/3/action/package_search'
 client: ckan_client
