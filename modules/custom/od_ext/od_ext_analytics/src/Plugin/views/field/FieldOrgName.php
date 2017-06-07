@@ -34,7 +34,7 @@ class FieldOrgName extends GoogleAnalyticsStandard {
     $title = '';
     $uri = 'http://open.canada.ca/data/api/3/action/organization_show?id=' . $uuid;
     try {
-      $response = \Drupal::httpClient()->get($uri, ['headers' => ['Accept' => 'text/plain']]);
+      $response = \Drupal::httpClient()->get($uri, ['headers' => ['Accept' => 'text/plain'], 'timeout' => 600]);
       $data = (string) $response->getBody();
       if (empty($data)) {
         return FALSE;
