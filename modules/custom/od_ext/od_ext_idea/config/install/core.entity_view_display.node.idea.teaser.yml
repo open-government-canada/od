@@ -21,8 +21,6 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-_core:
-  default_config_hash: IIrN9MT5pdQnsgi5OHcNlU-Qi6LEc6K9XQgE9ocqgm8
 id: node.idea.teaser
 targetEntityType: node
 bundle: idea

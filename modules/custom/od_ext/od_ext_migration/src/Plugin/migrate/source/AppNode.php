@@ -104,6 +104,16 @@ class AppNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // Datasets Used.
+    $datasets = $this->select('field_data_field_datasets_used_in_app', 'db')
+      ->fields('db', ['field_datasets_used_in_app_value'])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('revision_id', $row->getSourceProperty('vid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('bundle', 'apps')
+      ->execute()
+      ->fetchCol();
+
     // Application Name.
     $name = $this->select('field_data_field_application_name', 'df')
       ->fields('df', ['field_application_name_value'])
@@ -237,6 +247,7 @@ class AppNode extends SqlBase {
       return FALSE;
     }
     $row->setSourceProperty('body', $body[0]);
+    $row->setSourceProperty('datasets', $datasets[0]);
     $row->setSourceProperty('name', $name[0]);
     $row->setSourceProperty('url', $url[0]);
     $row->setSourceProperty('dev', $dev[0]);

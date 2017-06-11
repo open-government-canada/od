@@ -32,6 +32,12 @@ process:
   body/format:
     plugin: default_value
     default_value: rich_text
+  field_datasets_used/value:
+    plugin: wxt_media_tags
+    source: datasets
+  field_datasets_used/format:
+    plugin: default_value
+    default_value: rich_text
   langcode:
     plugin: default_value
     default_value: "fr"
