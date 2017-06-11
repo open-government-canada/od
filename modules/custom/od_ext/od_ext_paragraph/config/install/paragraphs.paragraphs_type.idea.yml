@@ -1,6 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: idea
-label: Idea
-behavior_plugins: {  }

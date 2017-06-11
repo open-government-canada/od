@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.consultation.body
     - field.field.node.consultation.field_consultation_date
     - field.field.node.consultation.field_consultation_status
-    - field.field.node.consultation.field_ideas_paragraph
+    - field.field.node.consultation.field_idea_reference
     - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_share_widget
     - field.field.node.consultation.panelizer
@@ -54,9 +54,9 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_ideas_paragraph:
+  field_idea_reference:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings:
@@ -65,7 +65,7 @@ content:
     third_party_settings: {  }
   field_share_widget:
     type: list_key
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }

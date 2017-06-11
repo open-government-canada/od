@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.teaser
+    - field.field.node.idea.body
+    - field.field.node.idea.comment
+    - field.field.node.idea.field_idea_status
+    - field.field.node.idea.field_idea_submission_name
+    - field.field.node.idea.field_idea_tags
+    - node.type.idea
+  module:
+    - comment
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: IIrN9MT5pdQnsgi5OHcNlU-Qi6LEc6K9XQgE9ocqgm8
+id: node.idea.teaser
+targetEntityType: node
+bundle: idea
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  comment:
+    type: comment_default
+    weight: 2
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+  field_idea_tags:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_idea_status: true
+  field_idea_submission_name: true
+  langcode: true

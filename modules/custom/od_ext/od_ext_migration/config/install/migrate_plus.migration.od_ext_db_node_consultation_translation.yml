@@ -45,31 +45,23 @@ process:
     from_format: 'Y-m-d H:i:s'
     to_format: 'Y-m-d H:i:s'
     source: date_end
-  content_translation_source:
-    plugin: default_value
-    default_value: "en"
-  field_ideas_paragraph:
+  field_idea_reference:
     plugin: iterator
-    source: paragraph_idea
+    source: node_idea
     process:
       target_id:
         -
           plugin: migration
-          migration: od_ext_db_paragraph_idea
+          migration: od_ext_db_node_idea
           source: entity_id
-        -
-          plugin: extract
-          index:
-            - '0'
       target_revision_id:
         -
           plugin: migration
-          migration: od_ext_db_paragraph_idea
+          migration: od_ext_db_node_idea
           source: entity_id
-        -
-          plugin: extract
-          index:
-            - '1'
+  content_translation_source:
+    plugin: default_value
+    default_value: "en"
 destination:
   plugin: 'entity:node'
   translations: true

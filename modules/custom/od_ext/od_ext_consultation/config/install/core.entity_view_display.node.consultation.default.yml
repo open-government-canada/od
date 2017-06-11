@@ -5,13 +5,14 @@ dependencies:
     - field.field.node.consultation.body
     - field.field.node.consultation.field_consultation_date
     - field.field.node.consultation.field_consultation_status
-    - field.field.node.consultation.field_ideas_paragraph
+    - field.field.node.consultation.field_idea_reference
     - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_share_widget
     - field.field.node.consultation.panelizer
     - node.type.consultation
   module:
     - datetime_range
+    - entity_reference_revisions
     - options
     - panelizer
     - text
@@ -37,10 +38,10 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
             region: content
             weight: 0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
             uuid: b828e7fb-bf48-4123-8b60-f0c401577975
           0f64e4e5-c95b-441f-914a-99523c8dc229:
             id: 'entity_field:node:created'
@@ -57,10 +58,10 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
             region: content
             weight: 0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
             uuid: 0f64e4e5-c95b-441f-914a-99523c8dc229
           cae94fbd-4dcf-4a12-b41d-1ef71fab34f9:
             id: 'entity_field:node:body'
@@ -74,10 +75,10 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
             region: content
             weight: 0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
             uuid: cae94fbd-4dcf-4a12-b41d-1ef71fab34f9
           2160fee8-4e99-44a7-a866-64a70589f6ac:
             id: 'entity_field:node:field_consultation_date'
@@ -94,10 +95,10 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
             region: content
             weight: 2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
             uuid: 2160fee8-4e99-44a7-a866-64a70589f6ac
           6a99c29c-5b59-4a5d-9e98-32d744573a5b:
             id: 'entity_field:node:field_consultation_status'
@@ -111,30 +112,11 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
             region: content
             weight: 3
-            uuid: 6a99c29c-5b59-4a5d-9e98-32d744573a5b
-          29f66ea2-1c54-47fe-8ac2-6e91a6113560:
-            id: 'entity_field:node:field_ideas_paragraph'
-            label: 'Ideas Paragraph'
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: above
-              type: entity_reference_revisions_entity_view
-              settings:
-                view_mode: default
-                link: ''
-              third_party_settings: {  }
-              weight: 0
-              region: content
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: content
-            weight: 5
-            uuid: 29f66ea2-1c54-47fe-8ac2-6e91a6113560
+            uuid: 6a99c29c-5b59-4a5d-9e98-32d744573a5b
           48d15630-593b-4228-a0bc-6a0c3b8e1774:
             id: 'entity_field:node:field_share_widget'
             label: 'Share Widget'
@@ -147,11 +129,28 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
             region: content
             weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
             uuid: 48d15630-593b-4228-a0bc-6a0c3b8e1774
+          704c076c-fdf9-448f-85da-23c8e088d052:
+            id: 'entity_field:node:field_idea_reference'
+            label: 'Idea Reference'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_revisions_entity_view
+              settings:
+                view_mode: full
+              third_party_settings: {  }
+              weight: 0
+            region: content
+            weight: 0
+            uuid: 704c076c-fdf9-448f-85da-23c8e088d052
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
         id: panels_variant
         label: Default
         uuid: f083fcc9-d339-4348-a4d3-1ad4ad1a7898
@@ -159,10 +158,11 @@ third_party_settings:
         layout: layout_onecol
         layout_settings: {  }
         page_title: '[node:title]'
-        storage_type: ''
-        storage_id: ''
+        storage_type: panelizer_default
+        storage_id: 'node:consultation:default:default'
         builder: ipe
         pattern: panelizer
+        static_context: {  }
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation
@@ -185,6 +185,15 @@ content:
     third_party_settings: {  }
     type: daterange_default
     region: content
+  field_idea_reference:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_share_widget:
     type: list_key
     weight: 1
@@ -194,7 +203,6 @@ content:
     region: content
 hidden:
   field_consultation_status: true
-  field_ideas_paragraph: true
   field_meta_tags: true
   langcode: true
   links: true

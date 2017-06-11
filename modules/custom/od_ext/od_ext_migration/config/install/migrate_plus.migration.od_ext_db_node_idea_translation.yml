@@ -1,4 +1,4 @@
-id: od_ext_db_paragraph_idea_translation
+id: od_ext_db_node_idea_translation
 migration_tags: null
 migration_group: od_external_translation
 dependencies:
@@ -7,29 +7,15 @@ dependencies:
       - od_ext_migration
 label: 'Database import for Ideas from legacy Drupal database'
 source:
-  plugin: idea_paragraph
+  plugin: idea_node
   target: source_migration
   translations: true
 process:
-  field_title: title
-  id:
-    -
-      plugin: migration
-      migration: od_ext_db_paragraph_idea
-      source: nid
-    -
-      plugin: extract
-      index:
-        - '0'
-  revision_id:
-    -
-      plugin: migration
-      migration: od_ext_db_paragraph_idea
-      source: nid
-    -
-      plugin: extract
-      index:
-        - '1'
+  title: title
+  nid:
+    plugin: migration
+    migration: od_ext_db_node_idea
+    source: nid
   uid:
     plugin: migration
     migration: od_ext_db_user
@@ -40,10 +26,10 @@ process:
   sticky:
     plugin: default_value
     default_value: 0
-  field_details/value:
+  body/value:
     plugin: wxt_media_tags
     source: body
-  field_details/format:
+  body/format:
     plugin: default_value
     default_value: rich_text
   langcode:
@@ -62,15 +48,15 @@ process:
     migration: od_ext_db_taxonomy_term
     source: status
   field_idea_submission_name/value: submission_name
+  field_idea_permalink: idea_permalink
   content_translation_source:
     plugin: default_value
     default_value: "en"
-  field_idea_permalink: idea_permalink
 destination:
-  plugin: 'entity_reference_revisions:paragraph'
+  plugin: 'entity:node'
   translations: true
 migration_dependencies:
   required:
     - od_ext_db_file
     - od_ext_db_taxonomy_term
-    - od_ext_db_paragraph_idea
+    - od_ext_db_node_idea

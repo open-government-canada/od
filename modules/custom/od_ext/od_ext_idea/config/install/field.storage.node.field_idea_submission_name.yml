@@ -2,15 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-    - text
-id: paragraph.field_idea_submitted_name
-field_name: field_idea_submitted_name
-entity_type: paragraph
-type: text
+    - node
+id: node.field_idea_submission_name
+field_name: field_idea_submission_name
+entity_type: node
+type: string
 settings:
   max_length: 255
-module: text
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

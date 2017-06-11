@@ -9,10 +9,10 @@ use Drupal\migrate\Row;
  * Source plugin for idea content.
  *
  * @MigrateSource(
- *   id = "idea_paragraph"
+ *   id = "idea_node"
  * )
  */
-class IdeaParagraph extends SqlBase {
+class IdeaNode extends SqlBase {
 
   /**
    * {@inheritdoc}

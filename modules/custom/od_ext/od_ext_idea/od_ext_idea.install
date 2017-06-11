@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Open Data Extend Idea.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function calendar_media_interview_install() {
+
+  // Toggle the home menu link state.
+  wxt_core_menu_state_toggle('nodea.add.idea', FALSE);
+}

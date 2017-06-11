@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_details
-    - paragraphs.paragraphs_type.idea
+    - field.storage.node.body
+    - node.type.idea
   module:
     - text
-id: paragraph.idea.field_details
-field_name: field_details
-entity_type: paragraph
+id: node.idea.body
+field_name: body
+entity_type: node
 bundle: idea
 label: Details
 description: ''
@@ -17,5 +17,5 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  display_summary: false
+  display_summary: true
 field_type: text_with_summary

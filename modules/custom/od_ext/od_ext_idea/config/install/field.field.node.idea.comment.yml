@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_comment
-    - paragraphs.paragraphs_type.idea
+    - field.storage.node.comment
+    - node.type.idea
   module:
     - comment
-id: paragraph.idea.field_comment
-field_name: field_comment
-entity_type: paragraph
+id: node.idea.comment
+field_name: comment
+entity_type: node
 bundle: idea
-label: Comment
+label: Comments
 description: ''
 required: false
 translatable: true

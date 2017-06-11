@@ -137,3 +137,11 @@
     margin-top: 0px;
   }
 }
+
+.idea.full, .idea.default {
+  & > .panel-heading {
+    a {
+      color: #fff;
+    }
+  }
+}

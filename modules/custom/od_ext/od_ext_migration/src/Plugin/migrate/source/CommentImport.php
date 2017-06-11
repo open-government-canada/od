@@ -116,6 +116,8 @@ class CommentImport extends SqlBase {
       'blog_translation',
       'commitment_translation',
       'consultation_translation',
+      'idea',
+      'idea_translation',
       'page_translation',
       'suggestion_translation',
     ];
@@ -140,8 +142,6 @@ class CommentImport extends SqlBase {
       'dataset_translation',
       'deliverable',
       'deliverable_translation',
-      'idea',
-      'idea_translation',
     ];
     foreach ($lookup as $bundle) {
       if (\Drupal::database()->schema()->tableExists("migrate_map_od_ext_db_paragraph_$bundle")) {

@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_departments
     - node.type.app
-    - taxonomy.vocabulary.device_formats
+    - taxonomy.vocabulary.departments
 id: node.app.field_departments
 field_name: field_departments
 entity_type: node
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      device_formats: device_formats
+      departments: departments
     sort:
       field: _none
     auto_create: false

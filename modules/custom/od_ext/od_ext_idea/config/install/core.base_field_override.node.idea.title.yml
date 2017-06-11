@@ -2,13 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_title
-    - paragraphs.paragraphs_type.idea
-id: paragraph.idea.field_title
-field_name: field_title
-entity_type: paragraph
+    - node.type.idea
+id: node.idea.title
+field_name: title
+entity_type: node
 bundle: idea
-label: Title
+label: Idea
 description: ''
 required: true
 translatable: true

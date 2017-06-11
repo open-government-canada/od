@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_idea_tags
-    - paragraphs.paragraphs_type.idea
+    - field.storage.node.field_idea_tags
+    - node.type.idea
     - taxonomy.vocabulary.idea_freetags
-id: paragraph.idea.field_idea_tags
+id: node.idea.field_idea_tags
 field_name: field_idea_tags
-entity_type: paragraph
+entity_type: node
 bundle: idea
 label: Tags
 description: ''

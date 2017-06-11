@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_app_submitter
-    - node.type.app
-id: node.app.field_app_submitter
-field_name: field_app_submitter
+    - field.storage.node.field_idea_submission_name
+    - node.type.idea
+id: node.idea.field_idea_submission_name
+field_name: field_idea_submission_name
 entity_type: node
-bundle: app
-label: 'Submitter Name'
+bundle: idea
+label: 'Submitted By'
 description: ''
 required: false
 translatable: true

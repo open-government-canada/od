@@ -5,17 +5,46 @@ dependencies:
     - field.field.node.consultation.body
     - field.field.node.consultation.field_consultation_date
     - field.field.node.consultation.field_consultation_status
-    - field.field.node.consultation.field_ideas_paragraph
+    - field.field.node.consultation.field_idea_reference
     - field.field.node.consultation.field_meta_tags
     - field.field.node.consultation.field_share_widget
     - field.field.node.consultation.panelizer
     - node.type.consultation
   module:
     - datetime_range
+    - field_group
     - inline_entity_form
     - metatag
     - text
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_consult:
+      children:
+        - group_consult_basic_info
+      parent_name: ''
+      weight: 4
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Consult
+    group_consult_basic_info:
+      children:
+        - field_consultation_date
+        - field_consultation_status
+      parent_name: group_consult
+      weight: 9
+      format_type: tab
+      format_settings:
+        label: 'Basic Information'
+        formatter: open
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Basic Information'
 id: node.consultation.default
 targetEntityType: node
 bundle: consultation
@@ -44,26 +73,26 @@ content:
     region: content
   field_consultation_status:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 2
     region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_ideas_paragraph:
-    type: inline_entity_form_complex
-    weight: 4
+  field_idea_reference:
+    weight: 3
     settings:
       form_mode: default
       label_singular: ''
       label_plural: ''
       allow_new: true
       allow_existing: true
-      empty_mode: ''
+      empty_mode: new
       match_operator: CONTAINS
       override_labels: false
     third_party_settings: {  }
+    type: inline_entity_form_complex
     region: content
   field_meta_tags:
     type: metatag_firehose
@@ -80,7 +109,7 @@ content:
     third_party_settings: {  }
     region: content
   translation:
-    weight: 10
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

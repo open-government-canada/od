@@ -14,10 +14,6 @@ function od_ext_install() {
     'group' => [
       'department',
     ],
-    'paragraph' => [
-      'deliverable',
-      'idea',
-    ],
   ];
   wxt_ext_translation_enable_translation($entities);
 }

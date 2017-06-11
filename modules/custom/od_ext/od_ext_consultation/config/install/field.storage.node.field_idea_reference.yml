@@ -1,16 +1,16 @@
+uuid: ce92b8a6-5d10-4710-93f2-f41d718f08bf
 langcode: en
 status: true
 dependencies:
   module:
     - entity_reference_revisions
     - node
-    - paragraphs
-id: node.field_ideas_paragraph
-field_name: field_ideas_paragraph
+id: node.field_idea_reference
+field_name: field_idea_reference
 entity_type: node
 type: entity_reference_revisions
 settings:
-  target_type: paragraph
+  target_type: node
 module: entity_reference_revisions
 locked: false
 cardinality: -1
