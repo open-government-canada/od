@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'Moderate all comments on the site'
+id: comment_moderator
+label: 'Comment Moderator'
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access comments'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'administer comments'
+  - 'create content translations'
+  - 'edit own comments'
+  - 'post comments'
+  - 'update content translations'
+  - 'view any unpublished content'

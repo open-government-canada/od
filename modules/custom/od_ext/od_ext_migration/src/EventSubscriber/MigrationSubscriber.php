@@ -64,6 +64,20 @@ class MigrationSubscriber implements EventSubscriberInterface {
       $node = $this->entityTypeManager->getStorage('node')->load($destinationIds[0]);
       $entity->addContent($node, 'group_node:blog_post');
     }
+    if ($event->getMigration()->id() == 'od_ext_db_user') {
+      $entities = $this->entityTypeManager->getStorage('group')->loadByProperties(['field_shortcode' => 'tbs-sct']);
+      $entity = reset($entities);
+      $destinationIds = $event->getDestinationIdValues();
+      $user = $this->entityTypeManager->getStorage('user')->load($destinationIds[0]);
+      $entity->addContent($user, 'group_user:user');
+    }
+    if ($event->getMigration()->id() == 'od_ext_db_node_consultation') {
+      $entities = $this->entityTypeManager->getStorage('group')->loadByProperties(['field_shortcode' => 'tbs-sct']);
+      $entity = reset($entities);
+      $destinationIds = $event->getDestinationIdValues();
+      $node = $this->entityTypeManager->getStorage('node')->load($destinationIds[0]);
+      $entity->addContent($node, 'group_node:consultation');
+    }
   }
 
   /**
