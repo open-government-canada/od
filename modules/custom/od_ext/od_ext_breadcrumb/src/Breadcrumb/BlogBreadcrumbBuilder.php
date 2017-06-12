@@ -20,7 +20,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
 
-class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
+class BlogBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
 
   use StringTranslationTrait;
 
@@ -136,29 +136,15 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
    * {@inheritdoc}
    */
   public function applies(RouteMatchInterface $route_match) {
+    $parameters = $route_match->getParameters()->all();
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
-    if (!empty($path_elements[0]) && $path_elements[0] == 'search') {
-      if (!empty($path_elements[1])) {
-        $cores = [
-          'ati',
-          'contracts',
-          'contractsa',
-          'grants',
-          'hospitalitya',
-          'hospitalityq',
-          'inventory',
-          'reclassification',
-          'travela',
-          'travelq',
-          'wrongdoing',
-        ];
-        if (in_array($path_elements[1], $cores)) {
-          return TRUE;
-        }
-      }
+
+    // Content type determination.
+    if (!empty($parameters['node']) && $parameters['node']->getType() == 'blog_post') {
+      return TRUE;
     }
-    elseif (!empty($path_elements[0]) && $path_elements[0] == 'proactive-disclosure') {
+    elseif (!empty($path_elements[0]) && $path_elements[0] == 'blog') {
       return TRUE;
     }
   }
@@ -183,11 +169,6 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
 
     while (count($path_elements) > 1) {
       array_pop($path_elements);
-
-      if (!empty($path_elements[0]) && empty($path_elements[1])) {
-        $path_elements[0] = 'proactive-disclosure';
-      }
-
       $route_request = $this->getRequestForPath('/' . implode('/', $path_elements), $exclude);
       if ($route_request) {
         $route_match = RouteMatch::createFromRequest($route_request);
@@ -222,11 +203,18 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
         $link = array_shift($links);
         $link->setUrl(Url::fromUri($url));
-        $open_info = $this->pathValidator->getUrlIfValid('open-information');
-        if (!empty($open_info)) {
+        $open_dialogue = $this->pathValidator->getUrlIfValid('open-dialogue');
+        $blog = $this->pathValidator->getUrlIfValid('blog');
+        if (!empty($open_dialogue) && !empty($blog)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
-          $linkOpenInfo = Link::createFromRoute($this->t('Open Information'), $open_info->getRouteName(), $open_info->getRouteParameters());
-          array_unshift($links, $link, $linkOpenGov, $linkOpenInfo);
+          $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
+          $linkBlog = Link::createFromRoute($this->t('Blog'), $blog->getRouteName(), $blog->getRouteParameters());
+          if (!empty($path_elements[0]) && $path_elements[0] != 'blog') {
+            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkBlog);
+          }
+          else {
+            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue);
+          }
         }
       }
 

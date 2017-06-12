@@ -1689,6 +1689,186 @@ source:
           pattern: panelizer
           builder: ipe
           static_context: {  }
+    -
+      name: consultations
+      title: 'Consultations'
+      language: en
+      body: "<p>This page is currently under construction.</p>\n"
+      alias: /consultations
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top_left
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 1
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: commitments
+      title: 'Commitments'
+      language: en
+      body: "<p>This page is currently under construction.</p>\n"
+      alias: /commitments
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top_left
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 1
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
   ids:
     name:
       type: string
