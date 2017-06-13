@@ -68,6 +68,7 @@ class UserImport extends SqlBase {
       'given_name' => $this->t('Given name'),
       'additional_name' => $this->t('Additional name'),
       'family_name' => $this->t('Family name'),
+      'user_roles' => $this->t('User Roles'),
     ];
 
     return $fields;
@@ -114,6 +115,12 @@ class UserImport extends SqlBase {
       ->execute()
       ->fetchAssoc();
 
+    $user_roles = $this->select('users_roles', 'db')
+      ->fields('db', ['rid'])
+      ->condition('uid', $row->getSourceProperty('uid'))
+      ->execute()
+      ->fetchAllAssoc('rid');
+
     $row->setSourceProperty('country_code', $address['field_address1_country']);
     $row->setSourceProperty('administrative_area', $address['field_address1_administrative_area']);
     $row->setSourceProperty('locality', $address['field_address1_locality']);
@@ -126,6 +133,7 @@ class UserImport extends SqlBase {
     $row->setSourceProperty('given_name', $address['field_address1_first_name']);
     $row->setSourceProperty('additional_name', '');
     $row->setSourceProperty('family_name', $address['field_address1_last_name']);
+    $row->setSourceProperty('user_roles', $user_roles);
 
     return parent::prepareRow($row);
   }

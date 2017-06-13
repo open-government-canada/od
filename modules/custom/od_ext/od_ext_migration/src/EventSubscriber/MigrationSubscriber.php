@@ -69,7 +69,26 @@ class MigrationSubscriber implements EventSubscriberInterface {
       $entity = reset($entities);
       $destinationIds = $event->getDestinationIdValues();
       $user = $this->entityTypeManager->getStorage('user')->load($destinationIds[0]);
-      $entity->addContent($user, 'group_user:user');
+
+      $group_roles[4] = 'department-tbs_editor';
+      $group_roles[5] = 'department-web_content_manager';
+      $group_roles[9] = 'department-content_reviewer';
+
+      $row = $event->getRow();
+      $options_list = [];
+      if (count($row->getSourceProperty('user_roles')) > 0) {
+        $source_roles = array_keys($row->getSourceProperty('user_roles'));
+        foreach ($source_roles as $key) {
+          if (isset($group_roles[$key])) {
+            $options[] = $group_roles[$key];
+          }
+        }
+      }
+      $entity->removeMember($user);
+      if (count($options) > 0) {
+        $options_list['group_roles'] = $options;
+        $entity->addMember($user, $options_list);
+      }
     }
     if ($event->getMigration()->id() == 'od_ext_db_node_consultation') {
       $entities = $this->entityTypeManager->getStorage('group')->loadByProperties(['field_shortcode' => 'tbs-sct']);
