@@ -51,3 +51,4 @@ destination:
 migration_dependencies:
   required:
     - od_ext_db_taxonomy_term
+    - od_ext_group

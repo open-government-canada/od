@@ -14,6 +14,11 @@ function od_ext_install() {
     'group' => [
       'department',
     ],
+    'paragraph' => [
+      'app',
+      'dataset',
+      'deliverable',
+    ],
   ];
   wxt_ext_translation_enable_translation($entities);
 }
