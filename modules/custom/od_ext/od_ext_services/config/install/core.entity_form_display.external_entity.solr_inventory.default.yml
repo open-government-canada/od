@@ -4,8 +4,10 @@ dependencies:
   config:
     - external_entities.type.solr_inventory
     - field.field.external_entity.solr_inventory.field_external_comment
+    - field.field.external_entity.solr_inventory.field_vote
   module:
     - external_comment
+    - votingapi_widgets
 id: external_entity.solr_inventory.default
 targetEntityType: external_entity
 bundle: solr_inventory
@@ -16,6 +18,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: external_comment_default
+    region: content
+  field_vote:
+    weight: -3
+    settings: {  }
+    third_party_settings: {  }
+    type: voting_api_widget
     region: content
   title:
     type: string_textfield

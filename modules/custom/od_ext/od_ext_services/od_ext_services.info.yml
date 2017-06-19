@@ -9,3 +9,4 @@ dependencies:
   - drupal:external_comment
   - drupal:external_entities
   - drupal:jsonapi
+  - drupal:od_ext_vote

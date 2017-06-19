@@ -231,14 +231,14 @@
                 "https://www.drupal.org/files/issues/composer_dist_problem-2706433-28.patch"
             },
             "drupal/external_entities": {
-                "Enter drupal/external_entities patch #2538682 description here":
-                "https://www.drupal.org/files/issues/allow_core_comments_to-2538682-1.patch",
                 "Enter drupal/external_entities patch #2872506 description here":
                 "https://www.drupal.org/files/issues/loosen_doloadmultiple-2872506-2.patch",
                 "Enter drupal/external_entities patch #2875436 description here":
                 "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch",
                 "Enter drupal/external_entities patch #2882887 description here":
-                "https://www.drupal.org/files/issues/allow_for_uuid_to_be-2882887-2.patch"
+                "https://www.drupal.org/files/issues/allow_for_uuid_to_be-2882887-2.patch",
+                "Enter drupal/external_entities patch #2887193 description here":
+                "https://www.drupal.org/files/issues/allow_for-2887193-2.patch"
             },
             "drupal/facets": {
                 "Enter drupal/facets patch #2840173 description here":
@@ -282,29 +282,21 @@
                 "Enter drupal/google_analytics_reports patch #2878932 description here":
                 "https://www.drupal.org/files/issues/custom_variables_or-2878932-6.patch"
             },
-            "drupal/rate": {
-                "Enter drupal/rate patch #2834498 description here":
-                "https://www.drupal.org/files/issues/5_star_rating_does_not-2834498-4.patch",
-                "Enter drupal/rate patch #2832174 description here":
-                "https://www.drupal.org/files/issues/rate-2832174-d8-fix-display-weight.patch",
-                "Enter drupal/rate patch #2834501 description here":
-                "https://www.drupal.org/files/issues/warnings_at_thumb_up_down_rating-2834501-2.patch",
-                "Enter drupal/rate patch #2856447 description here":
-                "https://www.drupal.org/files/issues/rate_2856447_dont-display-messages-with-ajax.patch",
-                "Enter drupal/rate patch #2860982 description here":
-                "https://www.drupal.org/files/issues/hardcoded_vote_types_in-2860982-2.patch",
-                "Enter drupal/rate patch #2860983 description here":
-                "https://gist.githubusercontent.com/sylus/1b349791ecee50b930145e028bef8d07/raw/434f1a951c2a100565c6f197f1c8c5a7d30c6be9/hardcoded_vote_types.patch"
-            },
             "drupal/search_api_solr": {
                 "Enter drupal/search_api_solr patch #2882009 description here":
                 "https://www.drupal.org/files/issues/notice_undefined-2882009-2.patch"
             },
             "drupal/votingapi": {
-                "Enter drupal/votingapi patch #2832589 description here":
-                "https://www.drupal.org/files/issues/votingapi-result-function-column-length-2832589-2.patch",
                 "Enter drupal/votingapi patch #2846341 description here":
-                "https://www.drupal.org/files/issues/2846341-anonymous-votes-5.patch"
+                "https://www.drupal.org/files/issues/2846341-anonymous-votes-5.patch",
+                "Enter drupal/votingapi patch #2872435 description here":
+                "https://www.drupal.org/files/issues/voting_api_getting_an-2872435-7.patch"
+            },
+            "drupal/votingapi_widgets": {
+                "Enter drupal/votingapi_widgets patch #2855514 description here":
+                "https://www.drupal.org/files/issues/barrating_not_found-2855514-4.patch",
+                "Enter drupal/votingapi_widgets patch #2860009 description here":
+                "https://www.drupal.org/files/issues/display_cancel_save-2860009-4.patch"
             }
         }
     },
@@ -324,13 +316,13 @@
         "drupal/google_analytics_reports": "3.0-beta1",
         "drupal/group": "1.0-beta5",
         "drupal/icon": "1.x-dev",
-        "drupal/rate": "1.x-dev",
         "drupal/reference_table_formatter": "1.0-rc4",
         "drupal/search_api": "1.1",
         "drupal/search_api_solr": "1.0-rc3",
         "drupal/search_api_solr_datasource": "dev-8.x-1.x",
         "drupal/webform_migrate": "dev-8.x-1.x",
         "drupal/votingapi": "3.0-alpha2",
+        "drupal/votingapi_widgets": "1.0-alpha3",
         "drupal/views_autocomplete_filters": "1.1",
         "drupal/views_data_export": "1.0-alpha4",
         "drupal/views_field_view": "1.0-beta2",

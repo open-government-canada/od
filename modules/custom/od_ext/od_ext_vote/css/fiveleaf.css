@@ -1,0 +1,64 @@
+.br-theme-opengov-fiveleaf .br-widget {
+  height: 28px;
+  white-space: nowrap;
+}
+.br-theme-opengov-fiveleaf .br-widget a {
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  margin-right: 2px;
+}
+.br-theme-opengov-fiveleaf .br-widget a:after {
+    content: " ";
+    background-image: url('../images/fiveleaf.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+.br-theme-opengov-fiveleaf .br-widget a.br-active:after {
+    content: " ";
+    background-image: url('../images/fiveleaf_red.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+.br-theme-opengov-fiveleaf .br-widget a.br-selected:after {
+    content: " ";
+    background-image: url('../images/fiveleaf_red.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+.br-theme-opengov-fiveleaf .br-widget .br-current-rating {
+  display: none;
+}
+.br-theme-opengov-fiveleaf .br-readonly a {
+  cursor: default;
+}
+@media print {
+  .br-theme-opengov-fiveleaf .br-widget a:after {
+    content: " ";
+    background-image: url('../images/fiveleaf.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+  }
+  .br-theme-opengov-fiveleaf .br-widget a.br-active:after,
+  .br-theme-opengov-fiveleaf .br-widget a.br-selected:after {
+    content: " ";
+    background-image: url('../images/fiveleaf_red.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - external_entities
+    - votingapi_widgets
+id: external_entity.field_vote
+field_name: field_vote
+entity_type: external_entity
+type: voting_api_field
+settings:
+  vote_type: vote
+  vote_plugin: fiveleaf
+  status: ''
+module: votingapi_widgets
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

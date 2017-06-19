@@ -6,5 +6,5 @@ package: 'Open Data'
 
 # Required modules
 dependencies:
-  - drupal:rate
   - drupal:votingapi
+  - drupal:votingapi_widgets

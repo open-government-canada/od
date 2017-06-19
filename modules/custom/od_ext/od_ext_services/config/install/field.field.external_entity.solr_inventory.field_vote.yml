@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.solr_inventory
+    - field.storage.external_entity.field_vote
+  module:
+    - votingapi_widgets
+id: external_entity.solr_inventory.field_vote
+field_name: field_vote
+entity_type: external_entity
+bundle: solr_inventory
+label: Vote
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    status: '1'
+default_value_callback: ''
+settings:
+  anonymous_window: '-1'
+  user_window: '-1'
+  result_function: vote_average
+  widget_format: fivestar
+field_type: voting_api_field

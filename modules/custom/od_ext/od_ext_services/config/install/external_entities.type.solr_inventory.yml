@@ -7,6 +7,7 @@ description: ''
 read_only: true
 field_mappings:
   id: id
+  uuid: id
   title: i18n_ts_en_ati_request_number
 endpoint: 'http://solr:8983/solr/core_ati/select'
 client: solr_client
@@ -26,5 +27,6 @@ parameters:
     fq: 'ss_language:en'
     wt: json
   single:
+    q: '*:*'
     fq: 'ss_language:en'
     wt: json

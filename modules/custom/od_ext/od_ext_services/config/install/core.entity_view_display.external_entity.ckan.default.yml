@@ -4,8 +4,10 @@ dependencies:
   config:
     - external_entities.type.ckan
     - field.field.external_entity.ckan.field_external_comment
+    - field.field.external_entity.ckan.field_vote
   module:
     - external_comment
+    - votingapi_widgets
 id: external_entity.ckan.default
 targetEntityType: external_entity
 bundle: ckan
@@ -19,5 +21,16 @@ content:
       pager_id: 0
     third_party_settings: {  }
     type: external_comment_default
+    region: content
+  field_vote:
+    weight: -3
+    label: above
+    settings:
+      style: opengov-fiveleaf
+      show_results: '1'
+      readonly: 0
+      values: {  }
+    third_party_settings: {  }
+    type: voting_api_formatter
     region: content
 hidden: {  }
