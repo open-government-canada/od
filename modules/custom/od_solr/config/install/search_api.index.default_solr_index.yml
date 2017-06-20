@@ -218,6 +218,6 @@ processor_settings:
 tracker_settings:
   default: {  }
 options:
-  index_directly: true
+  index_directly: false
   cron_limit: 50
 server: default_solr_server
