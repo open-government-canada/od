@@ -258,10 +258,6 @@
                 "Enter drupal/fontawesome patch #2881431 description here":
                 "https://www.drupal.org/files/issues/unable_to_find_the-2881431-2.patch"
             },
-            "drupal/group": {
-                "Enter drupal/fontawesome patch #2762145 description here":
-                "https://www.drupal.org/files/issues/group-2762145-4.patch"
-            },
             "drupal/icon": {
                 "Enter drupal/icon patch #2864333 description here":
                 "https://www.drupal.org/files/issues/migrate_icon_field_to_d8-2864333-5.patch"
@@ -305,7 +301,7 @@
         "cweagans/composer-patches": "^1.5.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
         "drupalwxt/wxt": "dev-8.x-2.x",
-        "drupal/address": "1.0-rc4",
+        "drupal/address": "1.0",
         "drupal/chosen": "2.1",
         "drupal/csv_serialization": "1.0",
         "drupal/external_comment": "dev-8.x-1.x",
@@ -314,11 +310,11 @@
         "drupal/field_default_token": "1.x-dev",
         "drupal/fontawesome":  "1.x-dev",
         "drupal/google_analytics_reports": "3.0-beta1",
-        "drupal/group": "1.0-beta5",
+        "drupal/group": "1.0-rc1",
         "drupal/icon": "1.x-dev",
         "drupal/reference_table_formatter": "1.0-rc4",
         "drupal/search_api": "1.1",
-        "drupal/search_api_solr": "1.0-rc3",
+        "drupal/search_api_solr": "1.0-rc4",
         "drupal/search_api_solr_datasource": "dev-8.x-1.x",
         "drupal/webform_migrate": "dev-8.x-1.x",
         "drupal/votingapi": "3.0-alpha2",
