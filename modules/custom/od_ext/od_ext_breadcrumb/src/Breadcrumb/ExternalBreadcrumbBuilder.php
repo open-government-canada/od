@@ -10,17 +10,17 @@ use Drupal\Core\Controller\TitleResolverInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Path\CurrentPathStack;
-use Drupal\Core\Path\PathMatcherInterface;
 use Drupal\Core\PathProcessor\InboundPathProcessorInterface;
 use Drupal\Core\Path\PathValidator;
 use Drupal\Core\Routing\RequestContext;
+use Drupal\Core\Routing\RouteMatch;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
 
-class MainBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
+class ExternalBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
   use StringTranslationTrait;
 
@@ -86,13 +86,6 @@ class MainBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $pathValidator;
 
   /**
-   * The path matcher.
-   *
-   * @var \Drupal\Core\Path\PathMatcherInterface
-   */
-  protected $pathMatcher;
-
-  /**
    * Constructs the MainBreadCrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
@@ -115,8 +108,6 @@ class MainBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
    *   The language manager.
    * @param \Drupal\Core\Path\PathValidator $pathValidator
    *   The path validator.
-   * @param \Drupal\Core\Path\PathMatcherInterface $path_matcher
-   *   The path matcher.
    */
   public function __construct(
     RequestContext $context,
@@ -128,8 +119,7 @@ class MainBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     AccountInterface $current_user,
     CurrentPathStack $current_path,
     LanguageManagerInterface $language_manager,
-    PathValidator $pathValidator,
-    PathMatcherInterface $path_matcher) {
+    PathValidator $pathValidator) {
     $this->context = $context;
     $this->accessManager = $access_manager;
     $this->router = $router;
@@ -140,21 +130,62 @@ class MainBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $this->currentPath = $current_path;
     $this->languageManager = $language_manager;
     $this->pathValidator = $pathValidator;
-    $this->pathMatcher = $path_matcher;
   }
 
   /**
    * {@inheritdoc}
    */
   public function applies(RouteMatchInterface $route_match) {
-    return TRUE;
+    $parameters = $route_match->getParameters()->all();
+
+    // Content type determination.
+    if (!empty($parameters['external_entity']) && $parameters['external_entity']->getType() == 'ckan') {
+      return TRUE;
+    }
   }
 
   /**
    * {@inheritdoc}
    */
   public function build(RouteMatchInterface $route_match) {
-    $breadcrumb = parent::build($route_match);
+    $breadcrumb = new Breadcrumb();
+    $links = [];
+
+    // General path-based breadcrumbs. Use the actual request path, prior to
+    // resolving path aliases, so the breadcrumb can be defined by simply
+    // creating a hierarchy of path aliases.
+    $path = trim($this->context->getPathInfo(), '/');
+    $path_elements = explode('/', $path);
+    $exclude = [];
+
+    // Add the url.path.parent cache context. This code ignores the last path
+    // part so the result only depends on the path parents.
+    $breadcrumb->addCacheContexts(['url.path.parent']);
+
+    while (count($path_elements) > 1) {
+      array_pop($path_elements);
+      $route_request = $this->getRequestForPath('/' . implode('/', $path_elements), $exclude);
+      if ($route_request) {
+        $route_match = RouteMatch::createFromRequest($route_request);
+        $access = $this->accessManager->check($route_match, $this->currentUser, NULL, TRUE);
+        // The set of breadcrumb links depends on the access result, so merge
+        // the access result's cacheability metadata.
+        $breadcrumb = $breadcrumb->addCacheableDependency($access);
+        if ($access->isAllowed()) {
+          $title = $this->titleResolver->getTitle($route_request, $route_match->getRouteObject());
+          if (!isset($title)) {
+            // Fallback to using the raw path component as the title if the
+            // route is missing a _title or _title_callback attribute.
+            $title = str_replace(['-', '_'], ' ', Unicode::ucfirst(end($path_elements)));
+          }
+          $url = Url::fromRouteMatch($route_match);
+          $links[] = new Link($title, $url);
+        }
+      }
+    }
+
+    $links[] = Link::createFromRoute($this->t('Home'), '<front>');
+    $breadcrumb->setLinks(array_reverse($links));
 
     $route = $route_match->getRouteObject();
     if ($route && !$route->getOption('_admin_route')) {
@@ -167,7 +198,23 @@ class MainBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
         $link = array_shift($links);
         $link->setUrl(Url::fromUri($url));
-        array_unshift($links, $link, Link::createFromRoute($this->t('Open Government'), '<front>'));
+        $open_dialogue = $this->pathValidator->getUrlIfValid('open-dialogue');
+
+        preg_match("/[^\/]+$/", $path, $packageId);
+        $id = explode("-", $packageId[0], 2);
+        if (isset($id[1]) && !empty($id[1])) {
+          $ckan = Url::fromUri($this->context->getCompleteBaseUrl() . '/ckan/en/dataset/' . $id[1]);
+        }
+        else {
+          $ckan = Url::fromUri($this->context->getCompleteBaseUrl() . '/ckan/en/dataset');
+        }
+
+        if (!empty($open_dialogue) && !empty($ckan)) {
+          $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
+          $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
+          $linkCkan = Link::fromTextAndUrl($this->t('Dataset'), $ckan);
+          array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkCkan);
+        }
       }
 
       $breadcrumb = new Breadcrumb();
