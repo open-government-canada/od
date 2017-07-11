@@ -309,6 +309,7 @@
         "drupal/facets": "1.0-alpha9",
         "drupal/field_default_token": "1.x-dev",
         "drupal/fontawesome":  "1.x-dev",
+        "drupal/google_analytics": "2.1",
         "drupal/google_analytics_reports": "3.0-beta1",
         "drupal/group": "1.0-rc1",
         "drupal/icon": "1.x-dev",

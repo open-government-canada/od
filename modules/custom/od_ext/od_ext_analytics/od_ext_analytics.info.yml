@@ -6,6 +6,7 @@ package: 'Open Data'
 
 # Required modules
 dependencies:
+  - drupal:google_analytics
   - drupal:google_analytics_reports
   - drupal:google_analytics_reports_api
   - drupal:csv_serialization
