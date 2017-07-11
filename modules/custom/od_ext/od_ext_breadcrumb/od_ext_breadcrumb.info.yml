@@ -3,3 +3,7 @@ description: 'Setting bread crumbs for all of Open Government.'
 type: module
 core: 8.x
 package: 'Open Data'
+
+# Required modules
+dependencies:
+  - drupal:menu_breadcrumb
