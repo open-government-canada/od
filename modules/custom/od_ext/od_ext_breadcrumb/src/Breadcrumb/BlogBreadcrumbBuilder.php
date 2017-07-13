@@ -9,11 +9,11 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\TitleResolverInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Path\AliasManagerInterface;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\PathProcessor\InboundPathProcessorInterface;
 use Drupal\Core\Path\PathValidator;
 use Drupal\Core\Routing\RequestContext;
-use Drupal\Core\Routing\RouteMatch;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
@@ -86,6 +86,13 @@ class BlogBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $pathValidator;
 
   /**
+   * The alias manager.
+   *
+   * @var \Drupal\Core\Path\AliasManagerInterface
+   */
+  protected $aliasManager;
+
+  /**
    * Constructs the MainBreadCrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
@@ -108,6 +115,8 @@ class BlogBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
    *   The language manager.
    * @param \Drupal\Core\Path\PathValidator $pathValidator
    *   The path validator.
+   * @param \Drupal\Core\Path\AliasManager $alias_manager
+   *   The alias manager.
    */
   public function __construct(
     RequestContext $context,
@@ -119,7 +128,8 @@ class BlogBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     AccountInterface $current_user,
     CurrentPathStack $current_path,
     LanguageManagerInterface $language_manager,
-    PathValidator $pathValidator) {
+    PathValidator $pathValidator,
+    AliasManagerInterface $alias_manager) {
     $this->context = $context;
     $this->accessManager = $access_manager;
     $this->router = $router;
@@ -130,6 +140,7 @@ class BlogBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $this->currentPath = $current_path;
     $this->languageManager = $language_manager;
     $this->pathValidator = $pathValidator;
+    $this->aliasManager = $alias_manager;
   }
 
   /**
@@ -139,12 +150,13 @@ class BlogBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $parameters = $route_match->getParameters()->all();
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
+    $pathEnd = end($path_elements);
 
     // Content type determination.
     if (!empty($parameters['node']) && $parameters['node']->getType() == 'blog_post') {
       return TRUE;
     }
-    elseif (!empty($path_elements[0]) && $path_elements[0] == 'blog') {
+    elseif (!empty($pathEnd) && $pathEnd == 'blog') {
       return TRUE;
     }
   }
@@ -161,33 +173,10 @@ class BlogBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     // creating a hierarchy of path aliases.
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
-    $exclude = [];
 
     // Add the url.path.parent cache context. This code ignores the last path
     // part so the result only depends on the path parents.
     $breadcrumb->addCacheContexts(['url.path.parent']);
-
-    while (count($path_elements) > 1) {
-      array_pop($path_elements);
-      $route_request = $this->getRequestForPath('/' . implode('/', $path_elements), $exclude);
-      if ($route_request) {
-        $route_match = RouteMatch::createFromRequest($route_request);
-        $access = $this->accessManager->check($route_match, $this->currentUser, NULL, TRUE);
-        // The set of breadcrumb links depends on the access result, so merge
-        // the access result's cacheability metadata.
-        $breadcrumb = $breadcrumb->addCacheableDependency($access);
-        if ($access->isAllowed()) {
-          $title = $this->titleResolver->getTitle($route_request, $route_match->getRouteObject());
-          if (!isset($title)) {
-            // Fallback to using the raw path component as the title if the
-            // route is missing a _title or _title_callback attribute.
-            $title = str_replace(['-', '_'], ' ', Unicode::ucfirst(end($path_elements)));
-          }
-          $url = Url::fromRouteMatch($route_match);
-          $links[] = new Link($title, $url);
-        }
-      }
-    }
 
     $links[] = Link::createFromRoute($this->t('Home'), '<front>');
     $breadcrumb->setLinks(array_reverse($links));
@@ -203,13 +192,17 @@ class BlogBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
         $link = array_shift($links);
         $link->setUrl(Url::fromUri($url));
-        $open_dialogue = $this->pathValidator->getUrlIfValid('open-dialogue');
-        $blog = $this->pathValidator->getUrlIfValid('blog');
+
+        $nid = $this->aliasManager->getPathByAlias('/open-dialogue', 'en');
+        $open_dialogue = $this->pathValidator->getUrlIfValid($nid);
+        $nid = $this->aliasManager->getPathByAlias('/blog', 'en');
+        $blog = $this->pathValidator->getUrlIfValid($nid);
         if (!empty($open_dialogue) && !empty($blog)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
           $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
           $linkBlog = Link::createFromRoute($this->t('Blog'), $blog->getRouteName(), $blog->getRouteParameters());
-          if (!empty($path_elements[0]) && $path_elements[0] != 'blog') {
+          $pathEnd = end($path_elements);
+          if (!empty($pathEnd) && $pathEnd != 'blog') {
             array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkBlog);
           }
           else {

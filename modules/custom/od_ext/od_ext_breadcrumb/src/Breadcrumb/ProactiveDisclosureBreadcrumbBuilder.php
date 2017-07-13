@@ -9,11 +9,11 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\TitleResolverInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Path\AliasManagerInterface;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\PathProcessor\InboundPathProcessorInterface;
 use Drupal\Core\Path\PathValidator;
 use Drupal\Core\Routing\RequestContext;
-use Drupal\Core\Routing\RouteMatch;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
@@ -86,6 +86,13 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $pathValidator;
 
   /**
+   * The path matcher.
+   *
+   * @var \Drupal\Core\Path\PathMatcherInterface
+   */
+  protected $pathMatcher;
+
+  /**
    * Constructs the MainBreadCrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
@@ -108,6 +115,8 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
    *   The language manager.
    * @param \Drupal\Core\Path\PathValidator $pathValidator
    *   The path validator.
+   * @param \Drupal\Core\Path\AliasManager $alias_manager
+   *   The alias manager.
    */
   public function __construct(
     RequestContext $context,
@@ -119,7 +128,8 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     AccountInterface $current_user,
     CurrentPathStack $current_path,
     LanguageManagerInterface $language_manager,
-    PathValidator $pathValidator) {
+    PathValidator $pathValidator,
+    AliasManagerInterface $alias_manager) {
     $this->context = $context;
     $this->accessManager = $access_manager;
     $this->router = $router;
@@ -130,6 +140,7 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $this->currentPath = $current_path;
     $this->languageManager = $language_manager;
     $this->pathValidator = $pathValidator;
+    $this->aliasManager = $alias_manager;
   }
 
   /**
@@ -138,6 +149,7 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
   public function applies(RouteMatchInterface $route_match) {
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
+    $pathEnd = end($path_elements);
     if (!empty($path_elements[0]) && $path_elements[0] == 'search') {
       if (!empty($path_elements[1])) {
         $cores = [
@@ -158,7 +170,7 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
       }
     }
-    elseif (!empty($path_elements[0]) && $path_elements[0] == 'proactive-disclosure') {
+    elseif (!empty($pathEnd) && $pathEnd == 'proactive-disclosure') {
       return TRUE;
     }
   }
@@ -175,38 +187,6 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     // creating a hierarchy of path aliases.
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
-    $exclude = [];
-
-    // Add the url.path.parent cache context. This code ignores the last path
-    // part so the result only depends on the path parents.
-    $breadcrumb->addCacheContexts(['url.path.parent']);
-
-    while (count($path_elements) > 1) {
-      array_pop($path_elements);
-
-      if (!empty($path_elements[0]) && empty($path_elements[1])) {
-        $path_elements[0] = 'proactive-disclosure';
-      }
-
-      $route_request = $this->getRequestForPath('/' . implode('/', $path_elements), $exclude);
-      if ($route_request) {
-        $route_match = RouteMatch::createFromRequest($route_request);
-        $access = $this->accessManager->check($route_match, $this->currentUser, NULL, TRUE);
-        // The set of breadcrumb links depends on the access result, so merge
-        // the access result's cacheability metadata.
-        $breadcrumb = $breadcrumb->addCacheableDependency($access);
-        if ($access->isAllowed()) {
-          $title = $this->titleResolver->getTitle($route_request, $route_match->getRouteObject());
-          if (!isset($title)) {
-            // Fallback to using the raw path component as the title if the
-            // route is missing a _title or _title_callback attribute.
-            $title = str_replace(['-', '_'], ' ', Unicode::ucfirst(end($path_elements)));
-          }
-          $url = Url::fromRouteMatch($route_match);
-          $links[] = new Link($title, $url);
-        }
-      }
-    }
 
     $links[] = Link::createFromRoute($this->t('Home'), '<front>');
     $breadcrumb->setLinks(array_reverse($links));
@@ -214,7 +194,6 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $route = $route_match->getRouteObject();
     if ($route && !$route->getOption('_admin_route')) {
       $links = $breadcrumb->getLinks();
-
       if (!empty($links) && $links[0]->getText() == $this->t('Home')) {
         $url = 'https://www.canada.ca';
         if ($this->languageManager->getCurrentLanguage()->getId() == 'fr') {
@@ -222,11 +201,22 @@ class ProactiveDisclosureBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
         $link = array_shift($links);
         $link->setUrl(Url::fromUri($url));
-        $open_info = $this->pathValidator->getUrlIfValid('open-information');
-        if (!empty($open_info)) {
+
+        $nid = $this->aliasManager->getPathByAlias('/open-information', 'en');
+        $open_info = $this->pathValidator->getUrlIfValid($nid);
+        $nid = $this->aliasManager->getPathByAlias('/proactive-disclosure', 'en');
+        $pd = $this->pathValidator->getUrlIfValid($nid);
+        if (!empty($open_info) && !empty($pd)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
           $linkOpenInfo = Link::createFromRoute($this->t('Open Information'), $open_info->getRouteName(), $open_info->getRouteParameters());
-          array_unshift($links, $link, $linkOpenGov, $linkOpenInfo);
+          $linkPD = Link::createFromRoute($this->t('Proactive Disclosure'), $pd->getRouteName(), $pd->getRouteParameters());
+          $pathEnd = end($path_elements);
+          if (!empty($pathEnd) && $pathEnd != 'proactive-disclosure') {
+            array_unshift($links, $link, $linkOpenGov, $linkOpenInfo, $linkPD);
+          }
+          else {
+            array_unshift($links, $link, $linkOpenGov, $linkOpenInfo);
+          }
         }
       }
 

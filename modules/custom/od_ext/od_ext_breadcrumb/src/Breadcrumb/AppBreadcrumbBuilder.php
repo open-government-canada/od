@@ -9,11 +9,11 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\TitleResolverInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Path\AliasManagerInterface;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\PathProcessor\InboundPathProcessorInterface;
 use Drupal\Core\Path\PathValidator;
 use Drupal\Core\Routing\RequestContext;
-use Drupal\Core\Routing\RouteMatch;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
@@ -86,6 +86,13 @@ class AppBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $pathValidator;
 
   /**
+   * The alias manager.
+   *
+   * @var \Drupal\Core\Path\AliasManagerInterface
+   */
+  protected $aliasManager;
+
+  /**
    * Constructs the MainBreadCrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
@@ -108,6 +115,8 @@ class AppBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
    *   The language manager.
    * @param \Drupal\Core\Path\PathValidator $pathValidator
    *   The path validator.
+   * @param \Drupal\Core\Path\AliasManager $alias_manager
+   *   The alias manager.
    */
   public function __construct(
     RequestContext $context,
@@ -119,7 +128,8 @@ class AppBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     AccountInterface $current_user,
     CurrentPathStack $current_path,
     LanguageManagerInterface $language_manager,
-    PathValidator $pathValidator) {
+    PathValidator $pathValidator,
+    AliasManagerInterface $alias_manager) {
     $this->context = $context;
     $this->accessManager = $access_manager;
     $this->router = $router;
@@ -130,6 +140,7 @@ class AppBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $this->currentPath = $current_path;
     $this->languageManager = $language_manager;
     $this->pathValidator = $pathValidator;
+    $this->aliasManager = $alias_manager;
   }
 
   /**
@@ -139,12 +150,13 @@ class AppBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $parameters = $route_match->getParameters()->all();
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
+    $pathEnd = end($path_elements);
 
     // Content type determination.
     if (!empty($parameters['node']) && $parameters['node']->getType() == 'app') {
       return TRUE;
     }
-    elseif (!empty($path_elements[0]) && $path_elements[0] == 'apps') {
+    elseif (!empty($pathEnd) && $pathEnd == 'apps') {
       return TRUE;
     }
   }
@@ -161,33 +173,6 @@ class AppBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     // creating a hierarchy of path aliases.
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
-    $exclude = [];
-
-    // Add the url.path.parent cache context. This code ignores the last path
-    // part so the result only depends on the path parents.
-    $breadcrumb->addCacheContexts(['url.path.parent']);
-
-    while (count($path_elements) > 1) {
-      array_pop($path_elements);
-      $route_request = $this->getRequestForPath('/' . implode('/', $path_elements), $exclude);
-      if ($route_request) {
-        $route_match = RouteMatch::createFromRequest($route_request);
-        $access = $this->accessManager->check($route_match, $this->currentUser, NULL, TRUE);
-        // The set of breadcrumb links depends on the access result, so merge
-        // the access result's cacheability metadata.
-        $breadcrumb = $breadcrumb->addCacheableDependency($access);
-        if ($access->isAllowed()) {
-          $title = $this->titleResolver->getTitle($route_request, $route_match->getRouteObject());
-          if (!isset($title)) {
-            // Fallback to using the raw path component as the title if the
-            // route is missing a _title or _title_callback attribute.
-            $title = str_replace(['-', '_'], ' ', Unicode::ucfirst(end($path_elements)));
-          }
-          $url = Url::fromRouteMatch($route_match);
-          $links[] = new Link($title, $url);
-        }
-      }
-    }
 
     $links[] = Link::createFromRoute($this->t('Home'), '<front>');
     $breadcrumb->setLinks(array_reverse($links));
@@ -195,7 +180,6 @@ class AppBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
     $route = $route_match->getRouteObject();
     if ($route && !$route->getOption('_admin_route')) {
       $links = $breadcrumb->getLinks();
-
       if (!empty($links) && $links[0]->getText() == $this->t('Home')) {
         $url = 'https://www.canada.ca';
         if ($this->languageManager->getCurrentLanguage()->getId() == 'fr') {
@@ -203,13 +187,16 @@ class AppBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
         $link = array_shift($links);
         $link->setUrl(Url::fromUri($url));
-        $open_data = $this->pathValidator->getUrlIfValid('open-data');
-        $apps = $this->pathValidator->getUrlIfValid('apps');
+        $nid = $this->aliasManager->getPathByAlias('/open-data', 'en');
+        $open_data = $this->pathValidator->getUrlIfValid($nid);
+        $nid = $this->aliasManager->getPathByAlias('/apps', 'en');
+        $apps = $this->pathValidator->getUrlIfValid($nid);
         if (!empty($open_data) && !empty($apps)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
           $linkOpenData = Link::createFromRoute($this->t('Open Data'), $open_data->getRouteName(), $open_data->getRouteParameters());
           $linkApps = Link::createFromRoute($this->t('Apps'), $apps->getRouteName(), $apps->getRouteParameters());
-          if (!empty($path_elements[0]) && $path_elements[0] != 'apps') {
+          $pathEnd = end($path_elements);
+          if (!empty($pathEnd) && $pathEnd != 'apps') {
             array_unshift($links, $link, $linkOpenGov, $linkOpenData, $linkApps);
           }
           else {
