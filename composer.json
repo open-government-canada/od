@@ -53,17 +53,12 @@
         {
             "type"    : "package",
             "package" : {
-                "name"    : "harvesthq/chosen",
-                "version" : "v1.5.1",
-                "type"    : "drupal-library",
-                "dist"    : {
-                    "url"  : "https://github.com/harvesthq/chosen-package/archive/v1.5.1.tar.gz",
-                    "type" : "tar"
-                },
-                "source"  : {
-                    "url"       : "https://github.com/harvesthq/chosen-package.git",
-                    "type"      : "git",
-                    "reference" : "v1.5.1"
+                "name"     : "harvesthq/chosen",
+                "version"  : "v1.6.1",
+                "type"     : "drupal-library",
+                "dist"     : {
+                    "url"  : "https://github.com/harvesthq/chosen/releases/download/v1.6.1/chosen_v1.6.1.zip",
+                    "type" : "zip"
                 }
             }
         },
@@ -226,10 +221,6 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/chosen": {
-                "Enter drupal/chosen patch #2706433 description here":
-                "https://www.drupal.org/files/issues/composer_dist_problem-2706433-28.patch"
-            },
             "drupal/external_entities": {
                 "Enter drupal/external_entities patch #2872506 description here":
                 "https://www.drupal.org/files/issues/loosen_doloadmultiple-2872506-2.patch",
@@ -241,18 +232,10 @@
                 "https://www.drupal.org/files/issues/allow_for-2887193-2.patch"
             },
             "drupal/facets": {
-                "Enter drupal/facets patch #2840173 description here":
-                "https://www.drupal.org/files/issues/fix_configuration-2840173-7.patch",
-                "Enter drupal/facets patch #2868380 description here":
-                "https://www.drupal.org/files/issues/be_more_defensive_when-2868380-2.patch",
                 "Enter drupal/facets patch #2877004 description here":
                 "https://www.drupal.org/files/issues/facets_empty_facet_2877004_3.patch",
                 "Enter drupal/facets patch #2878851 description here":
-                "https://www.drupal.org/files/issues/facet_summary_show_a-2878851-7.patch",
-                "Enter drupal/facets patch #2880411 description here":
-                "https://www.drupal.org/files/issues/2880411-13-move_block_cache_to_entity.patch",
-                "Enter drupal/facets patch #2881177 description here":
-                "https://www.drupal.org/files/issues/2881177-2.patch"
+                "https://www.drupal.org/files/issues/facet_summary_show_a-2878851-7.patch"
             },
             "drupal/fontawesome": {
                 "Enter drupal/fontawesome patch #2881431 description here":
@@ -278,10 +261,6 @@
                 "Enter drupal/google_analytics_reports patch #2878932 description here":
                 "https://www.drupal.org/files/issues/custom_variables_or-2878932-6.patch"
             },
-            "drupal/search_api_solr": {
-                "Enter drupal/search_api_solr patch #2882009 description here":
-                "https://www.drupal.org/files/issues/notice_undefined-2882009-2.patch"
-            },
             "drupal/votingapi": {
                 "Enter drupal/votingapi patch #2846341 description here":
                 "https://www.drupal.org/files/issues/2846341-anonymous-votes-5.patch",
@@ -297,37 +276,33 @@
         }
     },
     "require": {
-        "composer/installers": "^1.0",
-        "cweagans/composer-patches": "^1.5.0",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
         "drupalwxt/wxt": "dev-8.x-2.x",
-        "drupal/address": "1.0",
-        "drupal/chosen": "2.1",
+        "drupal/address": "1.1",
+        "drupal/chosen": "2.3",
         "drupal/csv_serialization": "1.0",
         "drupal/external_comment": "dev-8.x-1.x",
         "drupal/external_entities": "1.x-dev",
-        "drupal/facets": "1.0-alpha9",
+        "drupal/facets": "1.0-alpha10",
         "drupal/field_default_token": "1.x-dev",
         "drupal/fontawesome":  "1.x-dev",
         "drupal/google_analytics": "2.1",
         "drupal/google_analytics_reports": "3.0-beta1",
-        "drupal/group": "1.0-rc1",
         "drupal/icon": "1.x-dev",
-        "drupal/menu_breadcrumb": "1.3",
         "drupal/reference_table_formatter": "1.0-rc4",
-        "drupal/search_api": "1.1",
-        "drupal/search_api_solr": "1.0-rc4",
+        "drupal/search_api": "1.2",
+        "drupal/search_api_solr": "1.0",
         "drupal/search_api_solr_datasource": "dev-8.x-1.x",
-        "drupal/webform_migrate": "dev-8.x-1.x",
         "drupal/votingapi": "3.0-alpha2",
         "drupal/votingapi_widgets": "1.0-alpha3",
-        "drupal/views_autocomplete_filters": "1.1",
         "drupal/views_data_export": "1.0-alpha4",
         "drupal/views_field_view": "1.0-beta2",
         "drupal/views_templates": "1.0-alpha1",
         "drupal/xls_serialization": "1.0-alpha2",
         "fortawesome/font-awesome": "^4.7",
-        "harvesthq/chosen": "1.5.1"
+        "harvesthq/chosen": "1.6.1"
     },
     "autoload": {
         "psr-4": {
