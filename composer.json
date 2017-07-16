@@ -261,6 +261,10 @@
                 "Enter drupal/google_analytics_reports patch #2878932 description here":
                 "https://www.drupal.org/files/issues/custom_variables_or-2878932-6.patch"
             },
+            "drupal/search_api_solr": {
+                "Enter drupal/search_api_solr patch #2882009 description here":
+                "https://www.drupal.org/files/issues/notice_undefined-2882009-2.patch"
+            },
             "drupal/votingapi": {
                 "Enter drupal/votingapi patch #2846341 description here":
                 "https://www.drupal.org/files/issues/2846341-anonymous-votes-5.patch",
