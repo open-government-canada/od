@@ -53,12 +53,17 @@
         {
             "type"    : "package",
             "package" : {
-                "name"     : "harvesthq/chosen",
-                "version"  : "v1.6.1",
-                "type"     : "drupal-library",
-                "dist"     : {
-                    "url"  : "https://github.com/harvesthq/chosen/releases/download/v1.6.1/chosen_v1.6.1.zip",
-                    "type" : "zip"
+                "name"    : "harvesthq/chosen",
+                "version" : "v1.6.1",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/harvesthq/chosen-package/archive/v1.6.1.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/harvesthq/chosen-package.git",
+                    "type"      : "git",
+                    "reference" : "v1.6.1"
                 }
             }
         },
