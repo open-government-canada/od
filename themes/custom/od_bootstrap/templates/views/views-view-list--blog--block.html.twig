@@ -31,10 +31,10 @@
       <li{{ row.attributes }}>{{ row.content }}</li>
     {% endfor %}
       <li>
-        {% if (language.getId() == 'en') %}
-        <a href="http://open.canada.ca/fr/blogue">
+        {% if (language == 'fr') %}
+        <a href="{{ base_url ~ '/blogue' }}">
         {% else %}
-        <a href="http://open.canada.ca/en/blog">
+        <a href="{{ base_url ~ '/blog' }}">
         {% endif %}
           <span class="glyphicon glyphicon-info-sign">&nbsp;</span>{{ 'View all blogs'|t }}
         </a>
