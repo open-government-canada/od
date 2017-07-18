@@ -226,6 +226,14 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/entityqueue": {
+                "Enter drupal/entityqueue patch #2836404 description here":
+                "https://www.drupal.org/files/issues/2836404.patch",
+                "Enter drupal/entityqueue patch #2839334 description here":
+                "https://www.drupal.org/files/issues/fix_configure_link-2839334-7.patch",
+                "Enter drupal/entityqueue patch #2842862 description here":
+                "https://www.drupal.org/files/issues/machine-name-length-2842862-2.patch"
+            },
             "drupal/external_entities": {
                 "Enter drupal/external_entities patch #2872506 description here":
                 "https://www.drupal.org/files/issues/loosen_doloadmultiple-2872506-2.patch",
@@ -292,6 +300,7 @@
         "drupal/address": "1.1",
         "drupal/chosen": "2.3",
         "drupal/csv_serialization": "1.0",
+        "drupal/entityqueue": "1.0-alpha6",
         "drupal/external_comment": "dev-8.x-1.x",
         "drupal/external_entities": "1.x-dev",
         "drupal/facets": "1.0-alpha10",

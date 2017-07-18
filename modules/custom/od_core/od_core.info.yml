@@ -7,5 +7,8 @@ package: 'Open Data'
 # Required modules
 dependencies:
   - drupal:datetime_range
+  - drupal:entityqueue
   - drupal:paragraphs
   - drupal:reference_table_formatter
+  - drupal:views_bootstrap
+  - drupal:wxt_admin
