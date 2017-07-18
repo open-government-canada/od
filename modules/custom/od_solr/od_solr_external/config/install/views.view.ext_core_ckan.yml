@@ -54,7 +54,7 @@ display:
           default_row_class: true
           type: ul
           wrapper_class: ''
-          class: list-unstyled
+          class: ''
       row:
         type: fields
         options:
@@ -178,7 +178,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="http://open.canada.ca/data/en/dataset/{{ name }}"><span class="glyphicon glyphicon-stats">&nbsp;</span>{{ title }}</a>'
+            text: '<a href="http://open.canada.ca/data/en/dataset/{{ name }}">{{ title }}</a>'
             make_link: false
             path: ''
             absolute: false

@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - block_class
-    - node
+    - wxt_library
   theme:
     - od_bootstrap
 third_party_settings:
@@ -20,4 +20,10 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  panels_title:
+    id: panels_title
+    enabled: 1
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

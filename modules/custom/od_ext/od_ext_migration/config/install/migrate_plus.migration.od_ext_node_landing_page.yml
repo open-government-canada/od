@@ -15,13 +15,24 @@ source:
       name: homepage
       title: 'Open Government'
       language: en
-      body: "<p>Welcome to Canada’s new Open Government portal. Here you can explore\nhow the Government of Canada is working with the national and\ninternational open government community to create greater transparency\nand accountability, increase citizen engagement, and drive innovation\nand economic opportunities through open data, open information, and\nopen dialogue.</p>\n"
+      body: |
+        <p>Explore how the Government of Canada creates greater transparency,
+        accountability, increases citizen engagement, and drives innovation and
+        economic opportunities through open data, open information, and open
+        dialogue.</p>
       alias: /homepage
       panelizer:
         -
           view_mode: page_manager
           default: two_column
           blocks:
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
             -
               id: page_title_block
               label: '[node:title]'
@@ -41,13 +52,6 @@ source:
               region: top_left
               weight: 5
             -
-              id: 'block_content:pillars'
-              label: Pillars
-              label_display: 0
-              region: top_left
-              view_mode: full
-              weight: 10
-            -
               id: 'block_content:block_home'
               label: Home
               label_display: 0
@@ -55,22 +59,22 @@ source:
               view_mode: featured
               weight: 15
             -
-              id: 'views_block:landing_page-block_1'
+              id: 'views_block:landing_page_block-block_1'
               label: 'Landing page'
               label_display: 0
               region: top_left
               view_mode: full
               weight: 20
             -
-              id: 'views_block:blog-block_1'
-              label: 'Latest blogs'
+              id: 'views_block:ext_core_ckan-block_1'
+              label: 'Latest datasets'
               label_display: visible
               region: top_right
               view_mode: full
               weight: 5
             -
-              id: 'views_block:ext_core_ckan-block_1'
-              label: 'Latest datasets'
+              id: 'views_block:blog-block_1'
+              label: 'Latest blogs'
               label_display: visible
               region: top_right
               view_mode: full

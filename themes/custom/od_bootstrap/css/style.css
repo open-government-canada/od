@@ -108,3 +108,6 @@
 
 .idea.full > .panel-heading a, .idea.default > .panel-heading a {
   color: #fff; }
+
+.block-region-top .pillars {
+  float: right; }
