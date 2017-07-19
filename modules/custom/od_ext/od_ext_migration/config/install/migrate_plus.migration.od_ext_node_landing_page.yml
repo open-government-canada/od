@@ -184,12 +184,75 @@ source:
               region: top_left
               weight: 1
             -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: middle
+              view_mode: full
+              weight: 2
+            -
               id: 'block_content:block_open_data'
               label: 'Open Data'
+              label_display: 0
+              region: top_right
+              view_mode: featured
+              weight: 0
+            -
+              id: 'block_content:open_data_search'
+              label: 'Search through our Open data portal'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 0
+            -
+              id: 'block_content:open_data_maps'
+              label: 'Open maps'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_data_inventory'
+              label: Open Data Inventory'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_data_101'
+              label: 'Open data 101'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_data_api'
+              label: 'Working with data and application programming interfaces'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:open_data_suggest'
+              label: 'Open data 101'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:open_data_apps'
+              label: 'Apps gallery'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 15
+            -
+              id: 'block_content:open_data_submit_app'
+              label: 'Submit your app'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 15
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'

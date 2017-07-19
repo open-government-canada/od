@@ -11,66 +11,6 @@ source:
   # Enforce default language to english
   default_lang: true
   data_rows:
-    - bid: 'pillars'
-      language: 'en'
-      title: 'Pillars'
-      body: |
-        <section class="pillars mrgn-tp-md mrgn-bttm-md">
-          <h2>Follow:</h2>
-          <ul>
-            <li>
-              <a href="https://twitter.com/OpenGovCan" title="Twitter">
-              <i class="fa fa-twitter"></i>
-              <span class="wb-inv">Twitter</span></a>
-            </li>
-            <li>
-              <a href="[site:url]/rss-feeds" title="RSS">
-              <i class="fa fa-rss"></i>
-              <span class="wb-inv">RSS</span></a>
-            </li>
-          </ul>
-        </section>
-    - bid: 'open_data'
-      language: 'en'
-      title: 'Open Data'
-      body: |
-        <h2 class="h4">
-          <span class="pull-left"></span>
-          <a href="[site:url]/open-data">Open data</a>
-        </h2>
-        <p>Search Government of Canada data, learn how to work with datasets,
-        see what people have done with our data.</p>
-    - bid: 'open_info'
-      language: 'en'
-      title: 'Open Information'
-      body: |
-        <h2 class="h4">
-          <span class="pull-left"></span>
-          <a href="[site:url]/open-information">Open information</a>
-        </h2>
-        <p>Search Government of Canada digital records, completed access to
-        information request summaries, and contracts over $10,000.</p>
-    - bid: 'open_dialogue'
-      language: 'en'
-      title: 'Open Dialogue'
-      body: |
-        <h2 class="h4">
-          <span class="pull-left"></span>
-          <a href="[site:url]/open-dialogue">Open dialogue</a>
-        </h2>
-        <p>Interact with open government experts and enthusiasts and share your
-        ideas for new innovative approaches to open government.</p>
-    - bid: 'about_open_gov'
-      language: 'en'
-      title: 'About Open Government'
-      body: |
-        <h2 class="h4">
-          <span class="pull-left"></span>
-          <a href="[site:url]/about-open-government">About Open Government</a>
-        </h2>
-        <p>Explore Canada’s open government commitments, discover open
-        government programs across Canada, and learn more about the Open
-        Government Licence.</p>
     - bid: '404'
       language: 'en'
       title: '404'
@@ -101,6 +41,133 @@ source:
             us</a> and we'll help you out.</li>
           </ul>
         </div>
+    - bid: 'pillars'
+      language: 'en'
+      title: 'Pillars'
+      body: |
+        <section class="pillars mrgn-tp-md mrgn-bttm-md">
+          <h2>Follow:</h2>
+          <ul>
+            <li>
+              <a href="https://twitter.com/OpenGovCan" title="Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="wb-inv">Twitter</span></a>
+            </li>
+            <li>
+              <a href="[site:url]rss-feeds" title="RSS">
+              <i class="fa fa-rss"></i>
+              <span class="wb-inv">RSS</span></a>
+            </li>
+          </ul>
+        </section>
+    - bid: 'open_data'
+      language: 'en'
+      title: 'Open Data'
+      body: |
+        <h2 class="h4">
+          <span class="pull-left"></span>
+          <a href="[site:url]open-data">Open data</a>
+        </h2>
+        <p>Search Government of Canada data, learn how to work with datasets,
+        see what people have done with our data.</p>
+    - bid: 'open_info'
+      language: 'en'
+      title: 'Open Information'
+      body: |
+        <h2 class="h4">
+          <span class="pull-left"></span>
+          <a href="[site:url]open-information">Open information</a>
+        </h2>
+        <p>Search Government of Canada digital records, completed access to
+        information request summaries, and contracts over $10,000.</p>
+    - bid: 'open_dialogue'
+      language: 'en'
+      title: 'Open Dialogue'
+      body: |
+        <h2 class="h4">
+          <span class="pull-left"></span>
+          <a href="[site:url]open-dialogue">Open dialogue</a>
+        </h2>
+        <p>Interact with open government experts and enthusiasts and share your
+        ideas for new innovative approaches to open government.</p>
+    - bid: 'about_open_gov'
+      language: 'en'
+      title: 'About Open Government'
+      body: |
+        <h2 class="h4">
+          <span class="pull-left"></span>
+          <a href="[site:url]about-open-government">About Open Government</a>
+        </h2>
+        <p>Explore Canada’s open government commitments, discover open
+        government programs across Canada, and learn more about the Open
+        Government Licence.</p>
+    - bid: 'open_data_search'
+      language: 'en'
+      title: 'Search through our Open data portal'
+      body: |
+        <h2 class="h4"><a href="[site:url]data/en/dataset">Search through our
+        Open data portal</a></h2>
+        <p>Looking for data about Government of Canada services, financials,
+        national demographic information or high resolution maps? Discover that
+        and more through our open data portal, your one-stop shop for
+        Government of Canada open datasets.</p>
+    - bid: 'open_data_maps'
+      language: 'en'
+      title: 'Open maps'
+      body: |
+        <h2 class="h4"><a href="[site:url]open-maps">Open
+        maps</a></h2>
+        <p>Explore the Government of Canada’s geospatial data, services, and
+        applications and create customized maps.</p>
+    - bid: 'open_data_inventory'
+      language: 'en'
+      title: 'Open Data Inventory'
+      body: |
+        <h2 class="h4"><a href="[site:url]search/inventory">Open
+        Data Inventory</a></h2>
+        <p>Review the open data inventories submitted by Government of Canada
+        departments and agencies.</p>
+    - bid: 'open_data_101'
+      language: 'en'
+      title: 'Open data 101'
+      body: |
+        <h2 class="h4"><a href="[site:url]open-data-principles">Open data 101</a></h2>
+        <p>Learn what open data is, how to get the most out of it, and explore
+        the principles that are guiding the Government of Canada’s open data
+        initiatives.</p>
+    - bid: 'open_data_api'
+      language: 'en'
+      title: 'Working with data and application programming interfaces'
+      body: |
+        <h2 class="h4"><a href="[site:url]working-data">Working with data and application
+        programming interfaces</a></h2>
+        <p>Learn more about how to use a variety of data formats, including
+        application programming interfaces (APIs).</p>
+    - bid: 'open_data_suggest'
+      language: 'en'
+      title: 'Suggest a dataset'
+      body: |
+        <h2 class="h4"><a href="[site:url]suggested-datasets">Suggest a
+        dataset</a></h2>
+        <p>Can’t find the dataset that you are looking for? Let us know!</p>
+    - bid: 'open_data_apps'
+      language: 'en'
+      title: 'Apps gallery'
+      body: |
+        <h2 class="h4"><a href="[site:url]apps">Apps
+        Gallery</a></h2>
+        <p>Browse and download apps that were built both by the Canadian public
+        and the Government of Canada that use open data.</p>
+    - bid: 'open_data_submit_app'
+      language: 'en'
+      title: 'Submit your app'
+      body: |
+        <h2 class="h4"><a href="[site:url]forms/submit-your-app">Submit your
+        app</a></h2>
+        <p>Have you made an application using Government of Canada open data or
+        open information? If so, let us know and we will share it with
+        Canadians in our <a href="[site:url]apps">apps
+        gallery</a>.</p>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
