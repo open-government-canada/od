@@ -318,7 +318,14 @@ source:
       name: open_dialogue
       title: 'Open Dialogue'
       language: en
-      body: "<p>Open dialogue is the opportunity for all Canadians to weigh in and\nhelp guide the Government of Canada’s efforts towards increased\ntransparency, public engagement, and improved access.</p>\n<p>Join Canada’s open government community by interacting with those\nwho have a similar interest, participating in consultations, or\nshowcasing how you use Government of Canada datasets an\ninformation.</p>\n"
+      body: |
+        <p>Open dialogue is the opportunity for all Canadians to weigh in
+        and help guide the Government of Canada’s efforts towards increased
+        transparency, public engagement, and improved access.</p>
+        <p>Join Canada’s open government community by interacting with those
+        who have a similar interest, participating in consultations, or
+        showcasing how you use Government of Canada datasets an
+        information.</p>
       alias: /open-dialogue
       panelizer:
         -
@@ -343,11 +350,80 @@ source:
               label_display: 0
               region: top_left
               weight: 1
+            -
+              id: 'entity_block:homepage'
+              label: Media
+              label_display: 0
+              region: top_right
+              view_mode: default
+              weight: 0
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: middle
+              view_mode: full
+              weight: 2
+            -
+              id: 'block_content:open_dialog_partnership'
+              label: 'Canada’s Plans to the Open Government Partnership'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_dialog_communities'
+              label: 'Communities'
+              label_display: 0
+              region: bottom_middle
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_dialog_subscribe'
+              label: 'Subscribe to receive Open Government updates'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_dialog_blog'
+              label: 'Open Government Blog'
+              label_display: 0
+              region: bottom_middle
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_dialog_consult'
+              label: 'Consulting with Canadians'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:open_dialog_account_login'
+              label: 'Account login'
+              label_display: 0
+              region: bottom_middle
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:open_dialog_gazette'
+              label: 'Canada Gazette'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 15
+            -
+              id: 'views_block:consultation-block_1'
+              label: ''
+              label_display: visible
+              region: bottom_right
+              weight: 0
           id: panels_variant
-          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-          label: 'Two Column'
+          label: Default
+          uuid: 5f833455-c610-41c5-ae17-149ada3d74a5
           weight: 0
-          layout: bs_2col_bricked
+          layout: wxt_topic
           layout_settings:
             layout:
               wrapper: div
@@ -365,13 +441,13 @@ source:
               top_left:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
+                  col-sm-6: col-sm-6
                 add_region_classes: 1
                 attributes: ''
               top_right:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
+                  col-sm-6: col-sm-6
                 add_region_classes: 1
                 attributes: ''
               middle:
@@ -383,13 +459,19 @@ source:
               bottom_left:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom_middle:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom_right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
+                  col-sm-4: col-sm-4
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -400,7 +482,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:landing_page:full:two_column'
+          storage_id: 'node:landing_page:full:wxt'
           pattern: panelizer
           builder: ipe
           static_context: {  }
@@ -433,6 +515,83 @@ source:
               label_display: 0
               region: top_left
               weight: 1
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: middle
+              view_mode: full
+              weight: 2
+            -
+              id: 'block_content:block_open_info'
+              label: 'Open Information'
+              label_display: 0
+              region: top_right
+              view_mode: featured
+              weight: 0
+            -
+              id: 'block_content:open_info_search'
+              label: 'Search through our open information portal'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_info_access'
+              label: 'Access to information'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_info_reporting'
+              label: 'Government-wide reporting'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_info_obd'
+              label: 'Open by Default Pilot'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_info_pd'
+              label: 'Proactive Disclosure'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:open_info_plan'
+              label: 'Open Government Implementation Plans'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:open_info_expend'
+              label: 'Government expenditure management'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 15
+            -
+              id: 'block_content:open_info_lib'
+              label: 'Federal Science Library'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 15
+            -
+              id: 'block_content:open_info_reg'
+              label: 'Forward Regulatory Plans'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 20
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -509,20 +668,83 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: middle
               weight: 0
             -
               id: local_tasks_block
               label: Tabs
               label_display: '0'
-              region: top_left
+              region: middle
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
-              weight: 1
+              region: middle
+              weight: 2
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: middle
+              view_mode: full
+              weight: 3
+            -
+              id: 'block_content:open_info_biennial_plan'
+              label: 'Third Biennial Plan to the Open Government Partnership'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_info_biennial_progress'
+              label: 'Progress tracker for the Third Biennial Plan'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_info_directive'
+              label: 'Directive on Open Government'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:open_info_license'
+              label: 'Open Government Licence'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:open_info_partnership'
+              label: 'Canada Plans to the Open Government Partnership'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 15
+            -
+              id: 'block_content:open_info_canada'
+              label: 'Open government across Canada'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 15
+            -
+              id: 'block_content:open_info_faq'
+              label: 'Frequently asked questions'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 20
+            -
+              id: 'block_content:open_info_analytics'
+              label: 'Open Government analytics'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 20
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -588,7 +810,7 @@ source:
       name: suggested_datasets
       title: 'Suggest a Dataset'
       language: en
-      body: "<p>Is there Government of Canada data that you would like to see? Let\nus know your ideas by using our\n<a href=\"[site:url]/form/suggest-dataset\">Suggest a\nDataset form</a>, but first search below to see if someone else has\nalready requested the same dataset. If you find it, you can check on\nits status and add your request by clicking on thumbs up.</p>\n"
+      body: "<p>Is there Government of Canada data that you would like to see? Let\nus know your ideas by using our\n<a href=\"[site:url]form/suggest-dataset\">Suggest a\nDataset form</a>, but first search below to see if someone else has\nalready requested the same dataset. If you find it, you can check on\nits status and add your request by clicking on thumbs up.</p>\n"
       alias: /suggested-datasets
       panelizer:
         -
@@ -1631,7 +1853,7 @@ source:
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]/search/contracts">Search
+        <h2 class="h5"><a href="[site:url]search/contracts">Search
         Quarterly Government Contracts</a></h2>
 
         <p>Browse information on contracts over $10,000 by department and
@@ -1640,7 +1862,7 @@ source:
         </div>
 
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]/search/hospitalityq">Search
+        <h2 class="h5"><a href="[site:url]search/hospitalityq">Search
         Government Hospitality Expenses</a></h2>
 
         <p>Find out what your government is spending to facilitate the business
@@ -1650,7 +1872,7 @@ source:
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]/search/grants">Search Government
+        <h2 class="h5"><a href="[site:url]search/grants">Search Government
         Grants and Contributions</a></h2>
 
         <p>Search transfers of money, goods, services or assets to individuals,
@@ -1658,7 +1880,7 @@ source:
         </div>
 
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]/search/travelq">Search
+        <h2 class="h5"><a href="[site:url]search/travelq">Search
         Government Travel Expenses</a></h2>
 
         <p>Search by function and department to see where the government’s
@@ -1668,7 +1890,7 @@ source:
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]/search/reclassification">Search
+        <h2 class="h5"><a href="[site:url]search/reclassification">Search
         Government Position Reclassifications</a></h2>
 
         <p>Search by position and department to see what government positions
@@ -1676,7 +1898,7 @@ source:
         </div>
 
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]/search/wrongdoing">Search
+        <h2 class="h5"><a href="[site:url]search/wrongdoing">Search
         Government Acts of Founded Wrongdoing</a></h2>
 
         <p>Search information on wrongdoing found to have been committed by an
@@ -1686,7 +1908,7 @@ source:
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]/search/travela">Search Annual
+        <h2 class="h5"><a href="[site:url]search/travela">Search Annual
         Expenditures on Travel, Hospitality and Conferences </a></h2>
 
         <p>In accordance with Section 6.4 of the Treasury Board Directive on

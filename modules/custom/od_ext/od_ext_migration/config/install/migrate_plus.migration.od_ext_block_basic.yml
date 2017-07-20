@@ -168,6 +168,242 @@ source:
         open information? If so, let us know and we will share it with
         Canadians in our <a href="[site:url]apps">apps
         gallery</a>.</p>
+    - bid: 'open_info_search'
+      language: 'en'
+      title: 'Search through our open information portal'
+      body: |
+        <h2 class="h4"><a href="[site:url]data/en/dataset?portal_type=info&q=">
+        Search through our open information portal</a></h2>
+        <p>Explore our open information portal which provides access to digital
+        information resources. Let us know what you think by
+        <a href="[site:url]forms/contact-us">contacting us</a>.</p>
+    - bid: 'open_info_access'
+      language: 'en'
+      title: 'Access to information'
+      body: |
+        <h2 class="h4"><a href="[site:url]access-to-information">
+        Access to information</a></h2>
+        <p>Learn more about the Canada’s Access to Information (ATI)
+        legislation, search through completed ATI summaries, and make an
+        informal ATI request.</p>
+    - bid: 'open_info_reporting'
+      language: 'en'
+      title: 'Government-wide reporting'
+      body: |
+        <h2 class="h4">
+          <a href="http://www.canada.ca/en/transparency/reporting.html">
+          Government-wide reporting</a>
+        </h2>
+        <p>Search through the expenditure database, Quarterly Financial Reports
+        and other information the Government of Canada proactively discloses to
+        ensure that Canadians and Parliament are better able to hold the
+        Government to account.</p>
+    - bid: 'open_info_obd'
+      language: 'en'
+      title: 'Open by Default Pilot'
+      body: |
+        <h2 class="h4"><a href="[site:url]open-by-default-pilot">
+        Open by Default Pilot</a></h2>
+        <p>Explore working documents provided by four Government of Canada
+        departments as part of our commitment to making government more open
+        and transparent.</p>
+    - bid: 'open_info_pd'
+      language: 'en'
+      title: 'Proactive Disclosure'
+      body: |
+        <h2 class="h4"><a href="[site:url]proactive-disclosure">
+          Proactive Disclosure
+        </a></h2>
+        <p>Browse reports that have been proactively disclosed by departments
+        and agencies, including financial, human resources and government
+        operations information.</p>
+    - bid: 'open_info_plan'
+      language: 'en'
+      title: 'Open Government Implementation Plans'
+      body: |
+        <h2 class="h4"><a href="[site:url]content/open-government-implementation-plans">
+        Open Government Implementation Plans</a></h2>
+        <p>Review departmental plans which outline the approaches Government of
+        Canada organizations will take to meet the requirements of the
+        Directive on Open Government.</p>
+    - bid: 'open_info_expend'
+      language: 'en'
+      title: 'Government expenditure management'
+      body: |
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/ems-sgd/edb-bdd/index-eng.html">
+          Government expenditure management
+        </a></h2>
+        <p>Information about how the government spends and manages money,
+        includes links to the federal budget, estimates publications and
+        appropriation acts.</p>
+    - bid: 'open_info_lib'
+      language: 'en'
+      title: 'Federal Science Library'
+      body: |
+        <h2 class="h4"><a href="http://science-libraries.canada.ca/eng/home/">
+        Federal Science Library</a></h2>
+        <p>The Federal Science Library (FSL) is a one-stop, self-serve portal
+        where you can access library services and search the print collections
+        and repositories of seven science-based departments and agencies from
+        a single place.</p>
+    - bid: 'open_info_reg'
+      language: 'en'
+      title: 'Forward Regulatory Plans'
+      body: |
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/tbs-sct/ar-lr/gwfrp-ppreg-eng.asp">
+          Forward Regulatory Plans
+        </a></h2>
+        <p>Includes a listing of links, by organization, to information about
+        anticipated regulatory changes or proposals that departments or
+        agencies intend to bring forward within a given timeframe.</p>
+    - bid: 'open_info_biennial_plan'
+      language: 'en'
+      title: 'Third Biennial Plan to the Open Government Partnership (2016-18)'
+      body: |
+        <h2 class="h4"><a href="http://open.canada.ca/en/content/third-biennial-plan-open-government-partnership">
+        Third Biennial Plan to the Open Government Partnership (2016-18)</a>
+        </h2>
+        <p>Learn more about Canada’s commitments to becoming a more open,
+        inclusive, and accessible government.</p>
+    - bid: 'open_info_biennial_progress'
+      language: 'en'
+      title: 'Progress tracker for the Third Biennial Plan to the Open Government Partnership'
+      body: |
+        <h2 class="h4"><a href="http://open.canada.ca/en/content/progress-tracker-third-biennial-plan-open-government-partnership">
+          Progress tracker for the Third Biennial Plan to the Open Government
+          Partnership
+        </a></h2>
+        <p>Find out how the Government of Canada is doing on each of its
+        commitments in the Open Government Plan.</p>
+    - bid: 'open_info_directive'
+      language: 'en'
+      title: 'Directive on Open Government'
+      body: |
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108">
+        Directive on Open Government</a>
+        </h2>
+        <p>The Directive on Open Government is Canada’s “open by default”
+        policy, providing clear and mandatory requirements to departments
+        which will ensure that Canadians get access the most government
+        information and data possible.</p>
+    - bid: 'open_info_license'
+      language: 'en'
+      title: 'Open Government Licence'
+      body: |
+        <h2 class="h4"><a href="http://open.canada.ca/en/open-government-licence-canada">
+          Open Government Licence
+        </a></h2>
+        <p>This easy to understand licence promotes the reuse of published
+        Government of Canada content as widely as possible.</p>
+    - bid: 'open_info_partnership'
+      language: 'en'
+      title: 'Canada’s Plans to the Open Government Partnership'
+      body: |
+        <h2 class="h4"><a href="[site:url]content/canadas-plans-open-government-partnership">
+        Canada’s Plans to the Open Government Partnershipt</a>
+        </h2>
+        <p>Search through the history of open government in Canada.</p>
+    - bid: 'open_info_canada'
+      language: 'en'
+      title: 'Open government across Canada'
+      body: |
+        <h2 class="h4"><a href="[site:url]maps/open-data-canada">
+          Open government across Canada
+        </a></h2>
+        <p>Explore open government programs and events from coast to coast to
+        coast, get information and tools to help build your own portal,
+        including implementing the Open Government Licence in your
+        jurisdiction.</p>
+    - bid: 'open_info_faq'
+      language: 'en'
+      title: 'Frequently asked questions'
+      body: |
+        <h2 class="h4"><a href="[site:url]frequently-asked-questions">
+        Frequently asked questions</a>
+        </h2>
+        <p>Answers to common questions about Canada’s Open Government
+        activities.</p>
+    - bid: 'open_info_analytics'
+      language: 'en'
+      title: 'Open Government analytics'
+      body: |
+        <h2 class="h4"><a href="[site:url]content/open-government-analytics">
+          Open Government analytics
+        </a></h2>
+        <p>Learn more about our top downloads, latest datasets by department,
+        visits by province, and more.</p>
+    - bid: 'open_dialog_partnership'
+      language: 'en'
+      title: 'Canada’s Plans to the Open Government Partnership'
+      body: |
+        <h2 class="h4"><a href="[site:url]open-dialogue">
+          Canada’s Plans to the Open Government Partnership
+        </a></h2>
+        <p>Learn about Canada’s commitment to the international Open Government
+        Partnership (OGP) and read the past and current plans to formalize an
+        open, accountable, and transparent government.</p>
+    - bid: 'open_dialog_communities'
+      language: 'en'
+      title: 'Communities'
+      body: |
+        <h2 class="h4"><a href="[site:url]communities">Communities</a></h2>
+        <p>Explore data, information, and discussions based on your area of
+        interest.</p>
+    - bid: 'open_dialog_subscribe'
+      language: 'en'
+      title: 'Subscribe to receive Open Government updates'
+      body: |
+        <h2 class="h4"><a href="[site:url]forms/receive-open-government-email-form">
+        Subscribe to receive Open Government updates</a></h2>
+        <p>Sign up to receive the Open Government email and be among the first
+        to hear about new datasets, new information resources, upcoming
+        consultations, and current blogs.</p>
+    - bid: 'open_dialog_blog'
+      language: 'en'
+      title: 'Open Government Blog'
+      body: |
+        <h2 class="h4"><a href="[site:url]blog">
+        Open Government Blog</a></h2>
+        <p>Read and comment on what the Open Government team and community have
+        to say about current Open Government activities, projects, news and
+        events.</p>
+    - bid: 'open_dialog_consult'
+      language: 'en'
+      title: 'Consulting with Canadians'
+      body: |
+        <h2 class="h4"><a href="http://www1.canada.ca/consultingcanadians/">
+        Consulting with Canadians</a></h2>
+        <p>Here you will find information on how to locate and participate in
+        Government of Canada consultation activities.</p>
+    - bid: 'open_dialog_account_login'
+      language: 'en'
+      title: 'Account login'
+      body: |
+        <h2 class="h4"><a href="[site:url]login">
+        Account login</a></h2>
+        <p>Log in to your Open Government account, or register for a new
+        account.</p>
+    - bid: 'open_dialog_gazette'
+      language: 'en'
+      title: 'Canada Gazette'
+      body: |
+        <h2 class="h4"><a href="http://www.gazette.gc.ca/gazette/home-accueil-eng.php">
+        Canada Gazette</a></h2>
+        <p>Here you will find information on how to locate and participate in
+        regulatory consultations which includes current and past issues of the
+        Canada Gazette.</p>
+    - bid: 'open_dialog_interact'
+      language: 'en'
+      title: 'Interact'
+      body: |
+        <section><h3>Interact</h3>
+        <ul class="lst-spcd"><li><a href="suggested-datasets">Suggest a
+        dataset</a></li>
+          <li><a href="/en/forms/suggest-open-information">Suggest an
+          information resource</a></li>
+          <li><a href="apps">Apps gallery</a></li>
+        </ul>
+        </section>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
