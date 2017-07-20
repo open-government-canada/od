@@ -30,7 +30,7 @@ source:
               id: 'block_content:pillars'
               label: Pillars
               label_display: 0
-              region: top
+              region: top_right
               view_mode: full
               weight: 0
             -
@@ -68,14 +68,14 @@ source:
             -
               id: 'views_block:ext_core_ckan-block_1'
               label: 'Latest datasets'
-              label_display: visible
+              label_display: 0
               region: top_right
               view_mode: full
               weight: 5
             -
               id: 'views_block:blog-block_1'
               label: 'Latest blogs'
-              label_display: visible
+              label_display: 0
               region: top_right
               view_mode: full
               weight: 5
@@ -85,7 +85,7 @@ source:
               label_display: 0
               region: top_right
               view_mode: default
-              weight: 0
+              weight: 1
             -
               id: 'views_block:blocks-block_1'
               label: Spotlight

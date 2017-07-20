@@ -105,7 +105,7 @@ source:
       language: 'en'
       title: 'Search through our Open data portal'
       body: |
-        <h2 class="h4"><a href="[site:url]data/en/dataset">Search through our
+        <h2 class="h4"><a href="[site:url]ckan/en/dataset">Search through our
         Open data portal</a></h2>
         <p>Looking for data about Government of Canada services, financials,
         national demographic information or high resolution maps? Discover that
@@ -162,7 +162,7 @@ source:
       language: 'en'
       title: 'Submit your app'
       body: |
-        <h2 class="h4"><a href="[site:url]forms/submit-your-app">Submit your
+        <h2 class="h4"><a href="[site:url]form/submit-app">Submit your
         app</a></h2>
         <p>Have you made an application using Government of Canada open data or
         open information? If so, let us know and we will share it with
@@ -172,11 +172,11 @@ source:
       language: 'en'
       title: 'Search through our open information portal'
       body: |
-        <h2 class="h4"><a href="[site:url]data/en/dataset?portal_type=info&q=">
+        <h2 class="h4"><a href="[site:url]ckan/en/dataset?portal_type=info&q=">
         Search through our open information portal</a></h2>
         <p>Explore our open information portal which provides access to digital
         information resources. Let us know what you think by
-        <a href="[site:url]forms/contact-us">contacting us</a>.</p>
+        <a href="[site:url]form/contact-us">contacting us</a>.</p>
     - bid: 'open_info_access'
       language: 'en'
       title: 'Access to information'
@@ -353,7 +353,7 @@ source:
       language: 'en'
       title: 'Subscribe to receive Open Government updates'
       body: |
-        <h2 class="h4"><a href="[site:url]forms/receive-open-government-email-form">
+        <h2 class="h4"><a href="[site:url]form/receive-open-government-email-form">
         Subscribe to receive Open Government updates</a></h2>
         <p>Sign up to receive the Open Government email and be among the first
         to hear about new datasets, new information resources, upcoming
@@ -399,7 +399,7 @@ source:
         <section><h3>Interact</h3>
         <ul class="lst-spcd"><li><a href="suggested-datasets">Suggest a
         dataset</a></li>
-          <li><a href="/en/forms/suggest-open-information">Suggest an
+          <li><a href="[site:url]form/suggest-open-information">Suggest an
           information resource</a></li>
           <li><a href="apps">Apps gallery</a></li>
         </ul>

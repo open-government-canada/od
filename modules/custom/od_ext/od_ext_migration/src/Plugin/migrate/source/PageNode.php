@@ -90,6 +90,14 @@ class PageNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // URL alias.
+    $alias = $this->select('url_alias', 'db')
+      ->fields('db', ['alias'])
+      ->condition('source', 'node/' . $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -97,6 +105,10 @@ class PageNode extends SqlBase {
       return FALSE;
     }
     $row->setSourceProperty('body', $body[0]);
+
+    if (!empty($alias)) {
+      $row->setSourceProperty('alias', '/' . end($alias));
+    }
 
     return parent::prepareRow($row);
   }
