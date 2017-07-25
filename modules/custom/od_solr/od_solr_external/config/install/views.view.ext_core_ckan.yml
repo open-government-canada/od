@@ -265,3 +265,17 @@ display:
         - 'languages:language_interface'
         - url.query_args
       tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'CKAN Maps'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+      tags: {  }

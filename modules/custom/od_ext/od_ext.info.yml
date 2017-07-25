@@ -15,6 +15,7 @@ dependencies:
   - drupal:od_ext_fonts
   - drupal:od_ext_group
   - drupal:od_ext_idea
+  - drupal:od_ext_layout
   - drupal:od_ext_paragraph
   - drupal:od_ext_services
   - drupal:od_ext_suggestion

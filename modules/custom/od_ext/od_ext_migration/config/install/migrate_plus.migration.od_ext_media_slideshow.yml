@@ -12,14 +12,25 @@ source:
   data_rows:
     - mid: 'homepage'
       fid:
-        - id: '1900'
         - id: '1924'
+        - id: '2087'
+        - id: '1969'
+        - id: '1900'
       title: 'Homepage'
     - mid: 'open_dialog'
       fid:
+        - id: '1970'
         - id: '1900'
         - id: '1558'
       title: 'Open Dialog'
+    - mid: 'open_maps_access'
+      fid:
+        - id: '1881'
+        - id: '1631'
+        - id: '1633'
+        - id: '1635'
+        - id: '1637'
+      title: 'Open Maps'
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

@@ -404,6 +404,78 @@ source:
           <li><a href="apps">Apps gallery</a></li>
         </ul>
         </section>
+    - bid: 'ati_search'
+      language: 'en'
+      title: 'Search Access to Information Requests'
+      body: |
+        <h2 class="h4"><a href="[site:url]search/ati">Search Access to
+        Information Requests</a></h2>
+        <p>Search summaries of proactively disclosed Access to Information
+        requests provided by Government of Canada departments and agencies.</p>
+    - bid: 'ati_request'
+      language: 'en'
+      title: 'Request Access to Information'
+      body: |
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/tbsf-fsct/350-57-eng.asp">
+        Request Access to Information</a></h2>
+        <p>Submit Access to Information requests online for federal departments
+        and agencies.</p>
+    - bid: 'ati_info_act'
+      language: 'en'
+      title: 'Access to Information Act'
+      body: |
+        <h2 class="h4"><a href="http://laws-lois.justice.gc.ca/eng/acts/A-1/">
+        Access to Information Act</a></h2>
+        <p>Review Canada’s legislation to increase transparency by providing
+        Canadians access to federal documents, and information about service
+        delivery.</p>
+    - bid: 'ati_privacy_act'
+      language: 'en'
+      title: 'Privacy Act'
+      body: |
+        <h2 class="h4"><a href="http://laws-lois.justice.gc.ca/eng/acts/P-21/">
+        Privacy Act</a></h2>
+        <p>Review Canada’s legislation that protects the privacy of individuals
+        with a right of access to personal information about themselves.</p>
+    - bid: 'ati_info_act_priv'
+      language: 'en'
+      title: 'Access to Information Act and Privacy Act Bulletins'
+      body: |
+        <h2 class="h4"><a href="http://infosource.gc.ca/bulletin/bulletin-eng.asp">
+        Access to Information Act and Privacy Act Bulletins</a></h2>
+        <p>Review Canada’s legislation to increase transparency by providing
+        Canadians access to federal documents, and information about service
+        delivery.</p>
+    - bid: 'maps_find'
+      language: 'en'
+      title: 'Find Open Maps'
+      body: |
+        <h2 class="h4"><a href="[site:url]data/en/dataset?collection=fgp&q=">
+        Find Open Maps</a></h2>
+        <p>Start exploring our inventory of geospatial data.</p>
+    - bid: 'maps_about'
+      language: 'en'
+      title: 'About Open Maps'
+      body: |
+        <h2 class="h4"><a href="[site:url]about-open-maps">
+        About Open Maps</a></h2>
+        <p>Learn more about Open Maps and how it works.</p>
+    - bid: 'maps_working'
+      language: 'en'
+      title: 'Working with data and application programming interfaces'
+      body: |
+        <h2 class="h4"><a href="[site:url]working-data">
+        Working with data and application programming interfaces</a></h2>
+        <p>Learn more about how to use a variety of data formats, including
+        application programming interfaces (APIs).</p>
+    - bid: 'maps_faq'
+      language: 'en'
+      title: 'Frequently asked questions'
+      body: |
+        <h2 class="h4"><a href="[site:url]frequently-asked-questions">
+        Frequently asked questions</a></h2>
+        <p>Answers to common questions about Canada’s Open Government
+        activities.</p>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

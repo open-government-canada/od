@@ -1,30 +1,23 @@
-# Three columns (bricked).
-od_3col_banner:
-  label: '3 Columns (Custom)'
-  category: 'Open Data Bootstrap'
-  icon: images/3col-banner.png
-  template: templates/layouts/od-3col-banner
+od_open_maps:
+  label: 'Open Maps landing page'
+  category: 'WxT'
+  class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
+  type: partial
+  icon: images/open-maps.png
+  template: templates/open-maps
   regions:
-    banner_left:
-      label: 'Banner Left'
-      classes:
-        - col-sm-12
-    banner_right:
-      label: 'Banner Right'
+    top:
+      label: 'Top'
       classes:
         - col-sm-12
     top_left:
       label: 'Top Left'
       classes:
-        - col-sm-4
-    top_middle:
-      label: 'Top Middle'
-      classes:
-        - col-sm-4
+        - col-sm-6
     top_right:
       label: 'Top Right'
       classes:
-        - col-sm-4
+        - col-sm-6
     middle:
       label: 'Middle'
       classes:

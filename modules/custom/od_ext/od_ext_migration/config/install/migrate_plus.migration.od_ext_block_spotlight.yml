@@ -19,27 +19,24 @@ source:
         coast, get information and tools to help build your own portal,
         including implementing the Open Government Licence in your
         jurisdiction.</p>
-      fid: 1723
-      file_alt: 'A map of Canada'
-      file_title: ''
+      fid:
+        - id: '1723'
     - bid: 'open_maps'
       language: 'en'
       title: 'Open maps'
       body: |
         <p>Explore the Government of Canada’s geospatial data, services, and
         applications and create customized maps.</p>
-      fid: 1639
-      file_alt: 'Open Maps'
-      file_title: ''
+      fid:
+        - id: '1639'
     - bid: 'open_gov_partnership'
       language: 'en'
       title: 'Third Biennial Plan to the Open Government Partnership (2016-18)'
       body: |
         <p>Read our Third Biennial Plan to the Open Government Partnership to
         see where Open Government is going.</p>
-      fid: 1693
-      file_alt: 'Final action plan'
-      file_title: ''
+      fid:
+        - id: '1693'
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
@@ -57,12 +54,15 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: language
-  field_spotlight_image/target_id:
-    plugin: migration
-    migration: od_ext_db_file
+  # Add image to media entity.
+  field_spotlight_media:
+    plugin: iterator
     source: fid
-  field_spotlight_image/alt: file_alt
-  field_spotlight_image/title: file_title
+    process:
+      target_id:
+        plugin: migration
+        migration: od_ext_db_media_image
+        source: id
 destination:
   plugin: entity:block_content
   default_bundle: spotlight
@@ -70,4 +70,5 @@ destination:
 migration_dependencies:
   required:
     - od_ext_db_file
+    - od_ext_db_media_image
     - od_ext_db_taxonomy_term

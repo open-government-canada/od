@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - block_content.type.basic
-    - entityqueue.entity_queue.front_page
+    - entityqueue.entity_queue.pillars
   module:
     - block_content
     - entityqueue
@@ -170,7 +170,7 @@ display:
           group_type: group
           admin_label: 'Custom block queue'
           required: true
-          limit_queue: front_page
+          limit_queue: pillars
           entity_type: block_content
           plugin_id: entity_queue
       arguments: {  }
@@ -182,7 +182,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
-        - 'config:entityqueue.entity_queue.front_page'
+        - 'config:entityqueue.entity_queue.pillars'
         - entity_field_info
         - views_data
   block_1:
@@ -198,6 +198,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
-        - 'config:entityqueue.entity_queue.front_page'
+        - 'config:entityqueue.entity_queue.pillars'
         - entity_field_info
         - views_data

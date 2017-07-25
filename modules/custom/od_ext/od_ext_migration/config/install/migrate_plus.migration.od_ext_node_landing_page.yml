@@ -351,7 +351,7 @@ source:
               region: top_left
               weight: 1
             -
-              id: 'entity_block:homepage'
+              id: 'entity_block:open_dialog'
               label: Media
               label_display: 0
               region: top_right
@@ -745,6 +745,118 @@ source:
               region: bottom_right
               view_mode: full
               weight: 20
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: about_open_maps
+      title: 'About Open Maps'
+      language: en
+      body: |
+        <p>Open Maps brings together the Government of Canada’s geospatial
+        data, services, and applications for use by Canadians.</p>
+        <p>Geospatial data are those that can be linked to a location on a map,
+        such as a street address, town, province or any other geographic
+        feature such as a coastline, mountain, or river.</p>
+        <p>Through this site, Canadians can explore the wealth of geospatial
+        data that has been collected by many sources including scientists,
+        surveyors, satellites, and marine-based and land-based sensors. It has
+        been processed, interpreted, and structured for use in a variety of
+        applications.</p>
+        <p>Open Maps is the result of the <a href="http://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/geospatial-communities/federal">
+        Federal Geospatial Platform</a> initiative, a multi-year collaborative
+        effort of 21 departments and agencies that participate on the
+        Government of Canada’s Federal Committee on Geomatics and Earth
+        Observations. The Federal Geospatial Platform seeks to fundamentally
+        change the way geospatial data are managed, shared, and used by the
+        Government of Canada.</p>
+        <p>The geospatial data and services found in Open Maps are made
+        available under the <a href="[site:url]open-government-licence-canada">
+        Open Government Licence</a>, and can be used to support your research,
+        application development, or other purposes as allowed under the
+        licence.</p>
+      alias: /about-open-maps
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: middle
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: middle
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: middle
+              weight: 2
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -1645,7 +1757,7 @@ source:
           builder: ipe
           static_context: {  }
     -
-      name: ati
+      name: ati_request
       title: 'Completed Access to Requirements Requests'
       language: en
       body: "<p>Search the summaries of completed Access to Information (ATI) requests\nto find information about ATI requests previously made to the Government\nof Canada. If you find a summary of interest, you can request a copy of\nthe records at no cost. For additional information, please see the\n“<a href=\"/en/content/about-access-information-requests\">About Access to\nInformation Requests</a>” webpage.</p>\n<p>Download datasets of the <a href=\"http://data.gc.ca/data/en/dataset/0797e893-751e-4695-8229-a5066e4fe43c\">\nsummaries of completed access to information requests</a>.</p>\n<p>If you don’t find what you are looking for you can request additional\ngovernment records under an institution’s control by contacting the\ninstitution’s <a href=\"http://www.tbs-sct.gc.ca/atip-aiprp/apps/coords/index-eng.ASP\">\nAccess to Information and Privacy Coordinator</a>.</p>\n<p><strong>Enter keywords (e.g. institution, topic, field of interest,\netc.)</strong><br>*All information provided will incorporate the\nnecessary exemptions and exclusions as per the <em>Access to Information\nAct</em> and the <em>Privacy Act</em>.</p>\n"
@@ -2155,6 +2267,314 @@ source:
           page_title: '[node:title]'
           storage_type: panelizer_default
           storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: ati
+      title: 'Access to Information'
+      language: en
+      body: |
+        <p>One of the cornerstones of Canada’s transparency agenda is its
+        continued compliance and promotion of the Access to Information Act and
+        related activities.</p>
+      alias: /access-to-information
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top_left
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 1
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: middle
+              view_mode: full
+              weight: 2
+            -
+              id: 'block_content:block_ati'
+              label: 'Open Information'
+              label_display: 0
+              region: top_right
+              view_mode: featured
+              weight: 0
+            -
+              id: 'block_content:ati_search'
+              label: 'Search Access to Information Requests'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:ati_request'
+              label: 'Request Access to Information'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:ati_info_act'
+              label: 'Access to Information Act'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:ati_privacy_act'
+              label: 'Privacy Act'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:ati_info_act_priv'
+              label: 'Access to Information Act and Privacy Act Bulletins'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 10
+          id: panels_variant
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
+          weight: 0
+          layout: bs_2col_bricked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-md-6: col-md-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: open_maps
+      title: 'Open Maps'
+      language: en
+      body: |
+        <p>Open Maps provides access to the Government of Canada’s geospatial
+        information. You can combine, visualize, and analyze geospatial data
+        and collaborate with other Canadians.</p>
+        <p>Open Maps is a work in progress and will expand and improve over the
+        coming months. Check back for updates, and please
+        <a href="[site:url]form/contact-us">let us know what
+        you think</a>.</p>
+      alias: /open-maps
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top_left
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top_left
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top_left
+              weight: 1
+            -
+              id: 'entity_block:open_maps_access'
+              label: Media
+              label_display: 0
+              region: top_right
+              view_mode: default
+              weight: 0
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: middle
+              view_mode: full
+              weight: 2
+            -
+              id: 'block_content:block_open_maps'
+              label: 'Find data and view it on a map'
+              label_display: 0
+              region: middle
+              view_mode: featured
+              weight: 3
+            -
+              id: 'views_block:ext_core_ckan-block_2'
+              label: 'Latest datasets'
+              label_display: visible
+              region: bottom_right
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:maps_find'
+              label: 'Find Open Maps'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:maps_about'
+              label: 'About Open Maps'
+              label_display: 0
+              region: bottom_middle
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:maps_working'
+              label: 'Working with data and api'
+              label_display: 0
+              region: bottom_left
+              view_mode: full
+              weight: 10
+            -
+              id: 'block_content:maps_faq'
+              label: 'Frequently Asked Questions'
+              label_display: 0
+              region: bottom_middle
+              view_mode: full
+              weight: 10
+            -
+              id: 'views_block:blocks-block_1'
+              label: Spotlight
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
+          id: panels_variant
+          label: Default
+          uuid: 5f833455-c610-41c5-ae17-149ada3d74a5
+          weight: 0
+          layout: od_open_maps
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_middle:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:wxt'
           pattern: panelizer
           builder: ipe
           static_context: {  }

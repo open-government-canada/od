@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - block_content
-id: front_page
-label: 'Front Page'
+id: pillars
+label: Pillars
 handler: simple
 handler_configuration: {  }
 entity_settings:
@@ -12,12 +12,11 @@ entity_settings:
   handler: 'default:block_content'
   handler_settings:
     target_bundles:
-      spotlight: spotlight
+      basic: basic
     sort:
-      field: changed
-      direction: DESC
+      field: _none
     auto_create: false
-    auto_create_bundle: basic
+    auto_create_bundle: ''
 queue_settings:
   min_size: 0
   max_size: 4
