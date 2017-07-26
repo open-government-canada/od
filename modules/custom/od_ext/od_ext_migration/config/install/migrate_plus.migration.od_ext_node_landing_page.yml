@@ -923,7 +923,7 @@ source:
       name: suggested_datasets
       title: 'Suggest a Dataset'
       language: en
-      body: "<p>Is there Government of Canada data that you would like to see? Let\nus know your ideas by using our\n<a href=\"[site:url]form/suggest-dataset\">Suggest a\nDataset form</a>, but first search below to see if someone else has\nalready requested the same dataset. If you find it, you can check on\nits status and add your request by clicking on thumbs up.</p>\n"
+      body: "<p>Is there Government of Canada data that you would like to see? Let\nus know your ideas by using our\n<a href=\"[site:url]forms/suggest-dataset\">Suggest a\nDataset form</a>, but first search below to see if someone else has\nalready requested the same dataset. If you find it, you can check on\nits status and add your request by clicking on thumbs up.</p>\n"
       alias: /suggested-datasets
       panelizer:
         -
@@ -2435,7 +2435,7 @@ source:
         and collaborate with other Canadians.</p>
         <p>Open Maps is a work in progress and will expand and improve over the
         coming months. Check back for updates, and please
-        <a href="[site:url]form/contact-us">let us know what
+        <a href="[site:url]forms/contact-us">let us know what
         you think</a>.</p>
       alias: /open-maps
       queue: open_maps
@@ -2773,7 +2773,7 @@ source:
         can include in their own research.</p>
         <p>The most important part of this pilot is you. Have a look backstage,
         discover a new way to connect with your government and
-        <a href="[site:url]form/contact-us">contact us</a> to let us know what
+        <a href="[site:url]forms/contact-us">contact us</a> to let us know what
         you think.</p>
         <p>For more information on re-using information released by the Open by
         Default pilot, please refer to Canada’s

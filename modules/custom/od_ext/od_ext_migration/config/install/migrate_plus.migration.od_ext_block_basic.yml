@@ -162,7 +162,7 @@ source:
       language: 'en'
       title: 'Submit your app'
       body: |
-        <h2 class="h4"><a href="[site:url]form/submit-app">Submit your
+        <h2 class="h4"><a href="[site:url]forms/submit-your-app">Submit your
         app</a></h2>
         <p>Have you made an application using Government of Canada open data or
         open information? If so, let us know and we will share it with
@@ -176,7 +176,7 @@ source:
         Search through our open information portal</a></h2>
         <p>Explore our open information portal which provides access to digital
         information resources. Let us know what you think by
-        <a href="[site:url]form/contact-us">contacting us</a>.</p>
+        <a href="[site:url]forms/contact-us">contacting us</a>.</p>
     - bid: 'open_info_access'
       language: 'en'
       title: 'Access to information'
@@ -353,7 +353,7 @@ source:
       language: 'en'
       title: 'Subscribe to receive Open Government updates'
       body: |
-        <h2 class="h4"><a href="[site:url]form/receive-open-government-email-form">
+        <h2 class="h4"><a href="[site:url]forms/receive-open-government-email-form">
         Subscribe to receive Open Government updates</a></h2>
         <p>Sign up to receive the Open Government email and be among the first
         to hear about new datasets, new information resources, upcoming
@@ -399,7 +399,7 @@ source:
         <section><h3>Interact</h3>
         <ul class="lst-spcd"><li><a href="suggested-datasets">Suggest a
         dataset</a></li>
-          <li><a href="[site:url]form/suggest-open-information">Suggest an
+          <li><a href="[site:url]forms/suggest-open-information">Suggest an
           information resource</a></li>
           <li><a href="apps">Apps gallery</a></li>
         </ul>
@@ -495,7 +495,7 @@ source:
       language: 'en'
       title: 'Contact Us'
       body: |
-        <h2 class="h4"><a href="[site:url]form/contact-us">
+        <h2 class="h4"><a href="[site:url]forms/contact-us">
         Contact Us</a></h2>
         <p>Your feedback is critical to creating a more open Canada. We want to
         know how we can serve you better. Please contact us and share your
@@ -522,9 +522,9 @@ source:
         <p id="toc2">Would you like to participate in an Open Government event
         close to you? Below is a list of the latest Open Government events
         taking place across the country. If you know about an event that is not
-        listed below, please <a href="[site:url]form/submit-open-government-event">
+        listed below, please <a href="[site:url]forms/submit-open-government-event">
         send it to us</a> and we will add it to the calendar.</p>
-        <p><a class="btn btn-success" href="[site:url]/form/submit-open-government-event" role="button">
+        <p><a class="btn btn-success" href="[site:url]forms/submit-open-government-event" role="button">
         Submit Event</a></p>
         <div class="cal-cnt-fluid" id="calendar1"><!-- Insert Calendar --></div>
         <div class="wb-inv wb-calevt" data-calevt-src="calendar1">
@@ -686,7 +686,7 @@ source:
               us know!</p>
             </li>
             <li class="list-group-item">
-              <p><a href="[site:url]form/submit-your-app">Submit your App</a></p>
+              <p><a href="[site:url]forms/submit-your-app">Submit your App</a></p>
               <p>Show us what you’ve done! Send us your app and it may be
               featured on the Open Government portal.</p>
             </li>

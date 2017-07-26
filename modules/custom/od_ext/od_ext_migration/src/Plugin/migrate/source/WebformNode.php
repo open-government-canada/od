@@ -128,6 +128,14 @@ class WebformNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // URL alias.
+    $alias = $this->select('url_alias', 'db')
+      ->fields('db', ['alias'])
+      ->condition('source', 'node/' . $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -135,6 +143,11 @@ class WebformNode extends SqlBase {
       return FALSE;
     }
     $row->setSourceProperty('body', $body[0]);
+
+    if (!empty($alias)) {
+      $row->setSourceProperty('alias', '/' . end($alias));
+    }
+
     $row->setSourceProperty('webform', $this->getWebformId($webform[0]));
     if (isset($webform_status[0])) {
       $row->setSourceProperty('webform_status', ($webform_status[0] == 1) ? 'open' : 'closed');
