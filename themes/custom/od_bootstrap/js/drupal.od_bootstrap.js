@@ -77,4 +77,22 @@
     },
   };
 
+  Drupal.behaviors.WxTGeomap = {
+    attach: function (context, settings) {
+      $('.wb-geomap').on('wb-ready.wb-geomap', function (event, map) {
+        $('.wb-geomap-layers > div').each(function (index, element) {
+          var h3 = $(this).find('h3').text();
+          $(this).find('h3').hide();
+          $(this)
+             .children('div')
+             .wrap('<details></details>')
+             .before('<summary><h2 class="h3">' + h3 + '</h2></summary>')
+             .parent()
+             .children('summary')
+             .trigger('wb-init.wb-details');
+        });
+      });
+    },
+  };
+
 })(window.jQuery, window.Drupal, window.drupalSettings);

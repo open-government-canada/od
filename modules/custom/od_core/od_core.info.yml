@@ -12,3 +12,4 @@ dependencies:
   - drupal:reference_table_formatter
   - drupal:views_bootstrap
   - drupal:wxt_admin
+  - drupal:wxt_ext_blocks

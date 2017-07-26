@@ -21,6 +21,7 @@ source:
         economic opportunities through open data, open information, and open
         dialogue.</p>
       alias: /homepage
+      queue: front_page
       panelizer:
         -
           view_mode: page_manager
@@ -929,6 +930,18 @@ source:
           view_mode: page_manager
           default: one_column
           blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top
+              weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
@@ -2425,6 +2438,7 @@ source:
         <a href="[site:url]form/contact-us">let us know what
         you think</a>.</p>
       alias: /open-maps
+      queue: open_maps
       panelizer:
         -
           view_mode: page_manager
@@ -2578,6 +2592,424 @@ source:
           pattern: panelizer
           builder: ipe
           static_context: {  }
+    -
+      name: open_by_default_pilot
+      title: 'Open by Default Pilot'
+      language: en
+      body: |
+        <p>The Open by Default pilot is your backstage pass to the work of four
+        government departments: Canadian Heritage, Environment and Climate
+        Change Canada, Natural Resources Canada and Treasury Board of Canada
+        Secretariat. The goal is to give you a snapshot of Government of Canada
+        documents as they’re being created. The Government of Canada works for
+        Canadians, so we believe you should know what we’re doing
+        behind-the-scenes.</p>
+      alias: /open-by-default-pilot
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top
+              weight: 2
+            -
+              id: 'block_content:open_default_pilot_explore'
+              label: 'Explore Open by Default documents'
+              label_display: 0
+              region: top_left
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_default_pilot_about'
+              label: 'About the Open by Default pilot project'
+              label_display: 0
+              region: top_right
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_default_pilot_contact'
+              label: 'Contact Us'
+              label_display: 0
+              region: top_left
+              view_mode: full
+              weight: 1
+            -
+              id: 'block_content:open_default_pilot_dev'
+              label: 'In Development'
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
+          id: panels_variant
+          label: Default
+          uuid: 5f833455-c610-41c5-ae17-149ada3d74a5
+          weight: 0
+          layout: wxt_topic
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom_middle:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:wxt'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: open_by_default_about
+      title: 'About the Open by Default Pilot'
+      language: en
+      body: |
+        <blockquote>
+        <p>It is time to shine more light on government to ensure it remains
+        focused on the people it serves. Government and its information should
+        be open by default.</p>
+        <footer>Prime Minister Justin Trudeau</footer></blockquote>
+        <h2>Why was the Open by Default pilot created?</h2>
+        <p>The Open by Default pilot demonstrates proactive release of working
+        information which supports government transparency and accountability.
+        This pilot will help us clear the path as we maximize the ongoing
+        release of information across government.</p>
+        <h2>What kind of documents can be found using the Open by Default
+        pilot?</h2>
+        <p>Documents available through the Open by Default Pilot are snapshots
+        of works-in-progress from Government of Canada public servants, shared
+        for your exploration. These can include field notes, research
+        documents, reporting documents and organizational charts from any of
+        the four participating government departments.</p>
+        <h2>Who is participating in the Open by Default pilot, and why?</h2>
+        <p>Four government departments are offering documents for the pilot:
+          Canadian Heritage, Environment and Climate Change Canada, Natural
+           Resources Canada, and Treasury Board of Canada Secretariat. These
+           departments are participating in order to provide a sample of the
+           government’s scientific and cultural research to public researchers,
+           businesses and curious citizens. We are expanding our efforts at
+           opening data and information to pursue goals with Canadians
+           cooperatively, whether you’re a professor, a student, public
+           servant, or engaged citizen. The Government of Canada would like to
+           thank the Canada Science and Technology Museums Corporation (CSTMC)
+           for its help in developing the Open by Default pilot. In February
+           2016, the CSTMC launched its own open by default portal, called
+           <a href="https://documents.techno-science.ca/en/index.htm">Open
+           Heritage</a>.</p>
+        <h2>How can you use the Open by Default pilot?</h2>
+        <p>This pilot provides direct access to working documents that we hope
+        will provide insight into the work your government is doing and lead to
+        greater collaboration. For example, let’s say you’re a university
+        professor researching climate change. You’re browsing Open by Default
+        and discover an interesting document owned by Environment and Climate
+        Change Canada (ECCC). You connect with a Government of Canada
+        researcher and share information with one another. From this
+        interaction, you receive an expanded research package that you can
+        share with other academics and ECCC has received more information they
+        can include in their own research.</p>
+        <p>The most important part of this pilot is you. Have a look backstage,
+        discover a new way to connect with your government and
+        <a href="[site:url]form/contact-us">contact us</a> to let us know what
+        you think.</p>
+        <p>For more information on re-using information released by the Open by
+        Default pilot, please refer to Canada’s
+        <a href="[site:url]open-government-licence-canada">Open Government
+        Licence</a>.</p>
+      alias: /about-open-by-default
+      panelizer:
+        -
+          view_mode: page_manager
+          default: one_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: main
+              weight: 1
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: open_gov_across_canada
+      title: 'Open Government Across Canada'
+      language: en
+      body: |
+        <p>From coast to coast to coast Canadian provinces, territories and municipalities are joining the conversation on open government. Here you will find information about open government activities across the country, and tools to help get your jurisdiction engaged in open government.</p>
+        <ul>
+          <li><a href="#toc1">Open Government Programs in Canada</a>
+          <ul>
+            <li><a href="#overlay_0">Open Provinces</a></li>
+            <li><a href="#overlay_1">Open Municipalities</a></li>
+            <li><a href="#overlay_2">Open Initiatives</a></li>
+          </ul>
+          </li>
+          <li><a href="#toc2">Events Calendar</a></li>
+          <li><a href="#toc3">Interact</a></li>
+          <li><a href="#toc4">Open Government Toolkit</a></li>
+          <li><a href="#toc5">Open Government Licence</a></li>
+          <li><a href="#toc6">Developers' Toolkit: Code for Canada</a></li>
+        </ul>
+        <h2 id="toc1">Open Government Programs in Canada</h2>
+        <p>Click on the map below to learn more about Open Government programs.</p>
+        <p>If you know of a Canadian jurisdiction with an Open Government program that is not listed below, please&nbsp;<a href="[uuid-link:node:9a03a23d-e6c1-4e54-bd9a-11ceb4f62abb]">contact us</a>&nbsp;to have it added so we can help to promote it.</p>
+        <div class="wb-geomap" data-wb-geomap="{ &quot;layersFile&quot;: &quot;[site:url]sites/default/files/kml/open-config-en.js&quot; }" id="location_map">
+        <div class="row">
+        <div class="col-md-9">
+        <div class="wb-geomap-map">
+        <!-- Add map -->
+        </div>
+        </div>
+        <!-- Add optional map legend -->
+        <div class="wb-geomap-legend col-md-3">
+        <h2>Legend</h2>
+        <!-- Geomap will insert legend here -->
+        </div>
+        <div class="row">
+        <!-- Add placeholder for overlays -->
+        <div class="wb-geomap-layers col-md-12">
+        &nbsp;
+        </div>
+        </div>
+        </div>
+        </div>
+      alias: /maps/open-data-canada
+      queue: front_page
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: 0
+              region: top
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: top
+              weight: 2
+            -
+              id: 'block_content:open_gov_across_canada_events'
+              label: 'Events Calendar'
+              label_display: visible
+              region: top_left
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_gov_across_canada_interact'
+              label: 'Interact'
+              label_display: visible
+              region: top_right
+              view_mode: full
+              weight: 0
+            -
+              id: 'block_content:open_gov_across_canada_toolkit'
+              label: 'Open Government Toolkit'
+              label_display: visible
+              region: top_left
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_gov_across_canada_license'
+              label: 'License'
+              label_display: visible
+              region: top_right
+              view_mode: full
+              weight: 5
+            -
+              id: 'block_content:open_gov_across_canada_dev_toolkit'
+              label: 'Developers Toolkit: Code for Canada'
+              label_display: visible
+              region: top_left
+              view_mode: full
+              weight: 10
+          id: panels_variant
+          label: Default
+          uuid: 5f833455-c610-41c5-ae17-149ada3d74a5
+          weight: 0
+          layout: wxt_topic
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              top_left:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              top_right:
+                wrapper: div
+                classes:
+                  col-sm-6: col-sm-6
+                add_region_classes: 1
+                attributes: ''
+              middle:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom_left:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom_middle:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom_right:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:wxt'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
   ids:
     name:
       type: string
@@ -2599,6 +3031,7 @@ process:
   body/format:
     plugin: default_value
     default_value: rich_text
+  field_queue: queue
   langcode: language
   path/pathauto:
     plugin: default_value

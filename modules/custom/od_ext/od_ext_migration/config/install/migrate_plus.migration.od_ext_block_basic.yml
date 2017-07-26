@@ -476,6 +476,247 @@ source:
         Frequently asked questions</a></h2>
         <p>Answers to common questions about Canada’s Open Government
         activities.</p>
+    - bid: 'open_default_pilot_explore'
+      language: 'en'
+      title: 'Explore Open by Default documents'
+      body: |
+        <h2 class="h4"><a href="[site:url]ckan/en/dataset">
+        Explore Open by Default documents</a></h2>
+        <p>Search and browse working documents provided by the Government of
+        Canada.</p>
+    - bid: 'open_default_pilot_about'
+      language: 'en'
+      title: 'About the Open by Default pilot project'
+      body: |
+        <h2 class="h4"><a href="[site:url]about-open-by-default">
+        About the Open by Default pilot project</a></h2>
+        <p>Learn more about the Open by Default pilot.</p>
+    - bid: 'open_default_pilot_contact'
+      language: 'en'
+      title: 'Contact Us'
+      body: |
+        <h2 class="h4"><a href="[site:url]form/contact-us">
+        Contact Us</a></h2>
+        <p>Your feedback is critical to creating a more open Canada. We want to
+        know how we can serve you better. Please contact us and share your
+        thoughts on how we can improve Open by Default.</p>
+    - bid: 'open_default_pilot_dev'
+      language: 'en'
+      title: 'In Development'
+      body: |
+        <section class="alert alert-info mrgn-tp-lg"><h2>Please note:</h2>
+        <p>The Open by Default Pilot provides access to working documents used
+        by the Government of Canada. Most of this information is unpublished
+        and may include errors or omissions. Many documents will be in draft
+        form, are generally available in the language in which they were
+        created, and may not be fully accessible. Unless otherwise indicated,
+        information is made available under the
+        <a href="[site:url]open-government-licence-canada">Open Government
+        Licence</a>. To obtain documents in the official language of your
+        choice, or in an accessible format, please
+        <a href="[site:url]forms/contact-us">contact us</a>.</p></section>
+    - bid: 'open_gov_across_canada_events'
+      language: 'en'
+      title: 'Events Calendar'
+      body: |
+        <p id="toc2">Would you like to participate in an Open Government event
+        close to you? Below is a list of the latest Open Government events
+        taking place across the country. If you know about an event that is not
+        listed below, please <a href="[site:url]form/submit-open-government-event">
+        send it to us</a> and we will add it to the calendar.</p>
+        <p><a class="btn btn-success" href="[site:url]/form/submit-open-government-event" role="button">
+        Submit Event</a></p>
+        <div class="cal-cnt-fluid" id="calendar1"><!-- Insert Calendar --></div>
+        <div class="wb-inv wb-calevt" data-calevt-src="calendar1">
+          <ol>
+          <section><h4><a href="https://www.meetup.com/YOW_CT/">Ottawa Civic Tech</a></h4>
+          <p>Every Tuesday</p>
+          <p>Ottawa, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://civictech.ca/codeacross-toronto-2017/">
+          CODE Across Toronto</a></h4>
+          <p><time datetime="2017-03-04">March 4, 2017</time></p>
+          <p>Toronto, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://opendataday.org/">Open Data Day</a></h4>
+          <p><time datetime="2017-03-04">March 4, 2017</time></p>
+          <p>Multiple locations</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://www.cha-shc.ca/english/news/transparency-for-the-21st-century.htm#sthash.9UuIbZSi.dpbs">
+          Transparency for the 21<sup>st</sup> century</a></h4>
+          <p><time datetime="2017-03-21">March 21</time>-<time datetime="2017-03-23">23, 2017</time></p>
+          <p>Ottawa, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://carleton.ca/cuids/4-0/" rel="external">Data Day 4.0</a></h4>
+          <p><time datetime="2017-03-29">March 29, 2017</time></p>
+          <p>Carleton University, Ottawa ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://www.eventbrite.ca/e/discover-data-with-thomson-reuters-thinkdata-works-and-odx-webinar-tickets-33437505479" rel="external">
+          WEBINAR: Discover Data with Thomson Reuters and ThinkData Works</a></h4>
+          <p><time datetime="2017-04-18">April 18, 2017</time></p>
+          <p>Online</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://codx.ca/odx-begins-cross-canada-tour-open-data-blueprint/">ODX Cross-Canada Tour: Western Canada</a></h4>
+          <p><time datetime="2017-04-24">April 24</time>-<time datetime="2017-04-26">26, 2017</time></p>
+          <p>Canada-wide</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://summit.creativecommons.org/">Creative Commons Summit </a></h4>
+          <p><time datetime="2017-04-28">April 28</time>-<time datetime="2017-04-30">30, 2017</time></p>
+          <p>Toronto, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://2017.spaceappschallenge.org/locations/?q=Canada">Space Apps Challenge 2017 </a></h4>
+          <p><time datetime="2017-04-28">April 28</time>-<time datetime="2017-04-30">30, 2017</time></p>
+          <p>Toronto, Waterloo and Ottawa, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://go-opendata.ca/">Go Open Data Conference</a></h4>
+          <p><time datetime="2017-05-05">May 5</time>-<time datetime="2017-05-06">6, 2017</time></p>
+          <p>London Public Library, Citi Plaza, 251 Dundas St, London, ON N6A 6H9</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://techleadership.ca/">Tech Leadership Conference </a></h4>
+          <p><time datetime="2017-05-10">May 10</time>-<time datetime="2017-05-11">11, 2017</time></p>
+          <p>Waterloo, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://od-business-data-curation.eventbrite.com/?aff=opengovcanada" rel="external">
+          Open data for business webinar: Tackling machine-learning complexity
+          for data curation</a></h4>
+          <p><time datetime="2017-05-23">May 23, 2017</time></p>
+          <p>Communitech Data Hub, Waterloo, ON or online</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://iog.ca/third-annual-digital-governance-forum/">3<sup>rd</sup>
+          Annual Digital Governance Forum </a></h4>
+          <p><time datetime="2017-05-30">May 30</time>-<time datetime="2017-05-31">31, 2017</time></p>
+          <p>Ottawa, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://opendatasummit.ca/" rel="external">Canadian Open Data Summit</a></h4>
+          <p><time datetime="2017-06-12">June 12</time>-<time datetime="2017-06-14">14, 2017</time></p>
+          <p>Edmonton, Alberta</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://www.bigdata-toronto.com/">Big Data Conference </a></h4>
+          <p><time datetime="2017-06-20">June 20</time>-<time datetime="2017-06-21">21, 2017</time></p>
+          <p>Toronto, ON</p>
+          </section></li>
+          </ol>
+        </div>
+    - bid: 'open_gov_across_canada_toolkit'
+      language: 'en'
+      title: 'Open Government Toolkit'
+      body: |
+        <div class="field-item even"><p id="toc4">Why re-invent the wheel? Here
+        are some key resources created by the Government of Canada to help you
+        establish and maintain an Open Government program in your
+        organization.</p>
+        <div class="panel panel-default">
+          <ul class="list-group"><li class="list-group-item">
+          <p><a href="[site:url]canadas-action-plan-open-government">Third
+          Biennial Plan to the Open Government Partnership (2016-18)</a></p>
+          <p>Follow this link to find out more about Canada’s progress to date
+          on open government, as well as information about commitments Canada
+          has made to improving open government both at home and with its
+          international partners.</p>
+          </li>
+          <li class="list-group-item">
+          <p><a href="[site:url]open-data-principles">Open Data 101 </a></p>
+          <p>What is open data? Why does it matter? Learn the basics here.</p>
+          </li>
+          <li class="list-group-item">
+          <p>
+            <a href="[site:url]frequently-asked-questions">Open Government
+            FAQ</a>
+          </p>
+          <p>Frequently asked questions (and answers!) about open government.</p>
+          </li>
+          <li class="list-group-item">
+          <p><a href="https://github.com/ckan/ckan">CKAN on Github </a></p>
+          <p>CKAN is an open-source data management system, is free to download
+          and use, and is what the Government of Canada uses to power its own
+          open data portal.</p>
+          </li>
+          <li class="list-group-item">
+          <p><a href="https://github.com/wet-boew/wet-boew-wpss/releases">Data
+          Validation Tool on GitHub</a></p>
+          </li>
+          </ul></div>
+        </div>
+    - bid: 'open_gov_across_canada_dev_toolkit'
+      language: 'en'
+      title: 'Developers Toolkit: Code for Canada'
+      body: |
+        <p id="toc6">Access tools and resources to help you develop innovative
+        and creative applications using open data.</p>
+        <div class="panel panel-default">
+          <ul class="list-group"><li class="list-group-item">
+          <p><a href="[site:url]data/en/dataset">Search Through Our
+          Open Data Portal</a></p>
+          <p>Discover the data you need from hundreds of thousands of datasets
+          available across the Government of Canada.</p>
+          </li>
+          <li class="list-group-item">
+          <p><a href="[site:url]working-data">Working with Data and Application
+          Programming Interfaces</a></p>
+          <p>Learn more about how to use a variety of data formats, including
+          Application Programming Interfaces (APIs).</p>
+          </li>
+          </ul>
+        </div>
+    - bid: 'open_gov_across_canada_interact'
+      language: 'en'
+      title: 'Interact'
+      body: |
+        <p id="toc3">Check out the following ways that you can participate in
+        Canada’s Open Government Community.</p>
+        <div class="panel panel-default">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p><a href="[site:url]suggested-datasets">Suggest a dataset</a></p>
+              <p>Is there Government of Canada data you would like to see? Let
+              us know!</p>
+            </li>
+            <li class="list-group-item">
+              <p><a href="[site:url]form/submit-your-app">Submit your App</a></p>
+              <p>Show us what you’ve done! Send us your app and it may be
+              featured on the Open Government portal.</p>
+            </li>
+            <li class="list-group-item">
+              <p><a href="[site:url]blog">Comment on our
+              latest blog </a></p>
+              <p>Comments are always welcome.</p>
+            </li>
+          </ul>
+        </div>
+    - bid: 'open_gov_across_canada_license'
+      language: 'en'
+      title: 'Open Government Licence'
+      body: |
+        <p id="toc5">Learn more about Canada's Open Government Licence. If you
+        would like to implement the licence within your organization, see our
+        implementation guidelines.</p>
+        <div class="panel panel-default">
+          <ul class="list-group"><li class="list-group-item">View the
+          <a href="[site:url]open-government-licence-canada">Open Government
+          Licence</a></li>
+            <li class="list-group-item">
+              <p><a href="[site:url]open-government-licence-implementation-guidelines">
+              Open Government Licence Implementation Guidelines</a></p>
+              <p>Want to join Canada’s open government community and implement
+              the Open Government Licence in your jurisdiction? You’ll find
+              details here on how to do it.</p>
+            </li>
+          </ul>
+        </div>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
