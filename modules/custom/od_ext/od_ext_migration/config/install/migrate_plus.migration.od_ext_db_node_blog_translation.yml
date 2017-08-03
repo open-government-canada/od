@@ -11,7 +11,10 @@ source:
   target: source_migration
   translations: true
 process:
-  title: title
+  title:
+    plugin: skip_on_empty
+    method: row
+    source: title
   nid:
     plugin: migration
     migration: od_ext_db_node_blog

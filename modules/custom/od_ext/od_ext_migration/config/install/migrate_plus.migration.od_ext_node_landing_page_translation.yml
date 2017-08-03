@@ -1,6 +1,6 @@
-id: od_ext_node_landing_page
+id: od_ext_node_landing_page_translation
 migration_tags: null
-migration_group: od
+migration_group: od_translation
 label: 'Embedded data feed of node landing page content'
 source:
   plugin: embedded_data
@@ -8,13 +8,14 @@ source:
   data_rows:
     -
       name: homepage
-      title: 'Open Government'
-      language: en
+      title: 'Gouvernement ouvert'
+      language: fr
       body: |
-        <p>Explore how the Government of Canada creates greater transparency,
-        accountability, increases citizen engagement, and drives innovation and
-        economic opportunities through open data, open information, and open
-        dialogue.</p>
+        <p>Découvrez comment le gouvernement du Canada crée davantage de
+        transparence et de responsabilisation, augmente la mobilisation
+        citoyenne et favorise l’innovation et les possibilités économiques au
+        moyen de données ouvertes, d’information ouverte et de dialogue
+        ouvert.</p>
       alias: /homepage
       queue: front_page
       panelizer:
@@ -37,40 +38,40 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top_left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top_left
               weight: 5
             -
               id: 'block_content:block_home'
-              label: Home
+              label: Accueil
               label_display: 0
               region: top_left
               view_mode: featured
               weight: 15
             -
               id: 'views_block:landing_page_block-block_1'
-              label: 'Landing page'
+              label: 'Page d''atterrissage'
               label_display: 0
               region: top_left
               view_mode: full
               weight: 20
             -
               id: 'views_block:ext_core_ckan-block_1'
-              label: 'Latest datasets'
+              label: 'Derniers ensembles de données'
               label_display: 0
               region: top_right
               view_mode: full
               weight: 5
             -
               id: 'views_block:blog-block_1'
-              label: 'Latest blogs'
+              label: 'Derniers blogs'
               label_display: 0
               region: top_right
               view_mode: full
@@ -84,7 +85,7 @@ source:
               weight: 1
             -
               id: 'views_block:blocks-block_1'
-              label: Spotlight
+              label: Projecteur
               label_display: 0
               region: bottom
               view_mode: full
@@ -152,10 +153,14 @@ source:
           static_context: {  }
     -
       name: open_data
-      title: 'Open Data'
-      language: en
-      body: "<p>Search open data that is relevant to Canadians, learn how to work\nwith datasets, and see what people have done with open data across\nthe country.</p>\n"
-      alias: /open-data
+      title: 'Données ouvertes'
+      language: fr
+      body: |
+        <p>Chercher des données ouvertes qui sont pertinentes aux Canadiens et
+        Canadiennes, apprendre comment travailler avec les jeux de données,
+        voir ce que les citoyens ont fait avec les données ouvertes dans
+        l’ensemble du pays</p>
+      alias: /donnees-ouvertes
       panelizer:
         -
           view_mode: page_manager
@@ -169,13 +174,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top_left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top_left
               weight: 1
@@ -188,63 +193,63 @@ source:
               weight: 2
             -
               id: 'block_content:block_open_data'
-              label: 'Open Data'
+              label: 'Onglets'
               label_display: 0
               region: top_right
               view_mode: featured
               weight: 0
             -
               id: 'block_content:open_data_search'
-              label: 'Search through our Open data portal'
+              label: 'Effectuez une recherche dans le portail du gouvernement ouvert.'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_data_maps'
-              label: 'Open maps'
+              label: 'Cartes ouvertes'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_data_inventory'
-              label: 'Open Data Inventory'
+              label: 'Répertoire des données ouvertes'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_data_101'
-              label: 'Open data 101'
+              label: 'L''abc des données ouvertes'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_data_api'
-              label: 'Working with data and application programming interfaces'
+              label: 'Utilisation des jeux de données et les API'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 10
             -
               id: 'block_content:open_data_suggest'
-              label: 'Open data 101'
+              label: 'Proposer un jeu de données'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 10
             -
               id: 'block_content:open_data_apps'
-              label: 'Apps gallery'
+              label: 'Galerie d''applications'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 15
             -
               id: 'block_content:open_data_submit_app'
-              label: 'Submit your app'
+              label: 'Présentez votre application'
               label_display: 0
               region: bottom_right
               view_mode: full
@@ -312,17 +317,20 @@ source:
           static_context: {  }
     -
       name: open_dialogue
-      title: 'Open Dialogue'
-      language: en
+      title: 'Dialogue ouvert'
+      language: fr
       body: |
-        <p>Open dialogue is the opportunity for all Canadians to weigh in
-        and help guide the Government of Canada’s efforts towards increased
-        transparency, public engagement, and improved access.</p>
-        <p>Join Canada’s open government community by interacting with those
-        who have a similar interest, participating in consultations, or
-        showcasing how you use Government of Canada datasets an
-        information.</p>
-      alias: /open-dialogue
+        <p>Le dialogue ouvert est l’occasion pour tous les Canadiens de
+        contribuer à orienter les efforts déployés par le gouvernement du
+        Canada pour accroître la transparence et la participation du public,
+        ainsi qu’améliorer l’accès.
+
+        Joignez-vous à la collectivité sur le gouvernement ouvert du Canada en
+        interagissant avec des personnes qui ont des champs d’intérêt
+        similaires, en participant à des consultations ou en montrant de
+        quelle manière vous utilisez les jeux de données et l’information du
+        gouvernement du Canada.</p>
+      alias: /dialogue-ouvert
       panelizer:
         -
           view_mode: page_manager
@@ -336,13 +344,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top_left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top_left
               weight: 1
@@ -362,49 +370,49 @@ source:
               weight: 2
             -
               id: 'block_content:open_dialog_partnership'
-              label: 'Canada’s Plans to the Open Government Partnership'
+              label: 'Les Plans du Canada dans le cadre du Partenariat pour un Gouvernement Ouvert'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_dialog_communities'
-              label: 'Communities'
+              label: 'Collectivités'
               label_display: 0
               region: bottom_middle
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_dialog_subscribe'
-              label: 'Subscribe to receive Open Government updates'
+              label: 'Inscrivez-vous aux mises à jour sur le Gouvernement Ouvert'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_dialog_blog'
-              label: 'Open Government Blog'
+              label: 'Blogue sur le Gouvernement ouvert'
               label_display: 0
               region: bottom_middle
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_dialog_consult'
-              label: 'Consulting with Canadians'
+              label: 'Consultations auprès des Canadiens'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 10
             -
               id: 'block_content:open_dialog_account_login'
-              label: 'Account login'
+              label: 'Se connecter'
               label_display: 0
               region: bottom_middle
               view_mode: full
               weight: 10
             -
               id: 'block_content:open_dialog_gazette'
-              label: 'Canada Gazette'
+              label: 'Gazette du Canada'
               label_display: 0
               region: bottom_left
               view_mode: full
@@ -484,10 +492,15 @@ source:
           static_context: {  }
     -
       name: open_info
-      title: 'Open Information'
-      language: en
-      body: "<p>The goal of Open information is to provide easy access to all of the\nGovernment of Canada’s information. This provides Canadians with\ngreater transparency of government programs, activities, publications\nand spending.</p>\n"
-      alias: /open-information
+      title: 'Information ouverte'
+      language: fr
+      body: |
+        <p>L’objectif du volet Information ouverte consiste à offrir un accès
+        facile à tous les renseignements du gouvernement du Canada. La
+        population canadienne peut ainsi profiter d’une plus grande
+        transparence quant aux programmes, activités, publications et dépenses
+        du gouvernement.</p>
+      alias: /information-ouverte
       panelizer:
         -
           view_mode: page_manager
@@ -501,13 +514,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top_left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top_left
               weight: 1
@@ -520,70 +533,70 @@ source:
               weight: 2
             -
               id: 'block_content:block_open_info'
-              label: 'Open Information'
+              label: 'Information ouverte'
               label_display: 0
               region: top_right
               view_mode: featured
               weight: 0
             -
               id: 'block_content:open_info_search'
-              label: 'Search through our open information portal'
+              label: 'Effectuez une recherche dans le portail d’information ouverte.'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_info_access'
-              label: 'Access to information'
+              label: 'Accès à l''information'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_info_reporting'
-              label: 'Government-wide reporting'
+              label: 'Établissement de rapports à l’échelle du gouvernement'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_info_obd'
-              label: 'Open by Default Pilot'
+              label: 'Projet pilote « Ouvert par défaut »'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_info_pd'
-              label: 'Proactive Disclosure'
+              label: 'Divulgation proactive'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 10
             -
               id: 'block_content:open_info_plan'
-              label: 'Open Government Implementation Plans'
+              label: 'Plans de mise en œuvre sur le gouvernement ouvert'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 10
             -
               id: 'block_content:open_info_expend'
-              label: 'Government expenditure management'
+              label: 'Gestion des dépenses du gouvernement'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 15
             -
               id: 'block_content:open_info_lib'
-              label: 'Federal Science Library'
+              label: 'Bibliothèque scientifique fédérale'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 15
             -
               id: 'block_content:open_info_reg'
-              label: 'Forward Regulatory Plans'
+              label: 'Plans prospectifs de la réglementation'
               label_display: 0
               region: bottom_left
               view_mode: full
@@ -651,10 +664,13 @@ source:
           static_context: {  }
     -
       name: about_open_gov
-      title: 'About Open Government'
-      language: en
-      body: "<p>Open Government is about making government more accessible to\neveryone. This means giving greater access to government data and\ninformation to the Canadian public and the businesses community.</p>\n"
-      alias: /about-open-government
+      title: 'Au sujet du gouvernement ouvert'
+      language: fr
+      body: |
+        <p>Open Government is about making government more accessible to
+        everyone. This means giving greater access to government data and
+        information to the Canadian public and the businesses community.</p>
+      alias: /apropos-gouvernement-ouvert
       panelizer:
         -
           view_mode: page_manager
@@ -668,13 +684,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: middle
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: middle
               weight: 2
@@ -687,56 +703,56 @@ source:
               weight: 3
             -
               id: 'block_content:open_info_biennial_plan'
-              label: 'Third Biennial Plan to the Open Government Partnership'
+              label: 'Le troisième plan biannuel dans le cadre du Partenariat pour un Gouvernement Ouvert (2016-2018)'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_info_biennial_progress'
-              label: 'Progress tracker for the Third Biennial Plan'
+              label: 'Système de suivi du troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_info_directive'
-              label: 'Directive on Open Government'
+              label: 'Directive sur le gouvernement ouvert'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 10
             -
               id: 'block_content:open_info_license'
-              label: 'Open Government Licence'
+              label: 'Licence du gouvernement ouvert'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 10
             -
               id: 'block_content:open_info_partnership'
-              label: 'Canada Plans to the Open Government Partnership'
+              label: 'Les Plans du Canada dans le cadre du Partenariat pour un Gouvernement Ouvert'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 15
             -
               id: 'block_content:open_info_canada'
-              label: 'Open government across Canada'
+              label: 'Gouvernement ouvert partout au Canada'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 15
             -
               id: 'block_content:open_info_faq'
-              label: 'Frequently asked questions'
+              label: 'Foire aux questions'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 20
             -
               id: 'block_content:open_info_analytics'
-              label: 'Open Government analytics'
+              label: 'Analyses concernant le gouvernement ouvert'
               label_display: 0
               region: bottom_right
               view_mode: full
@@ -804,32 +820,38 @@ source:
           static_context: {  }
     -
       name: about_open_maps
-      title: 'About Open Maps'
-      language: en
+      title: 'Cartes ouvertes'
+      language: fr
       body: |
-        <p>Open Maps brings together the Government of Canada’s geospatial
-        data, services, and applications for use by Canadians.</p>
-        <p>Geospatial data are those that can be linked to a location on a map,
-        such as a street address, town, province or any other geographic
-        feature such as a coastline, mountain, or river.</p>
-        <p>Through this site, Canadians can explore the wealth of geospatial
-        data that has been collected by many sources including scientists,
-        surveyors, satellites, and marine-based and land-based sensors. It has
-        been processed, interpreted, and structured for use in a variety of
-        applications.</p>
-        <p>Open Maps is the result of the <a href="http://www.nrcan.gc.ca/earth-sciences/geomatics/canadas-spatial-data-infrastructure/geospatial-communities/federal">
-        Federal Geospatial Platform</a> initiative, a multi-year collaborative
-        effort of 21 departments and agencies that participate on the
-        Government of Canada’s Federal Committee on Geomatics and Earth
-        Observations. The Federal Geospatial Platform seeks to fundamentally
-        change the way geospatial data are managed, shared, and used by the
-        Government of Canada.</p>
-        <p>The geospatial data and services found in Open Maps are made
-        available under the <a href="[site:url]open-government-licence-canada">
-        Open Government Licence</a>, and can be used to support your research,
-        application development, or other purposes as allowed under the
-        licence.</p>
-      alias: /about-open-maps
+        <p>Les Cartes ouvertes regroupent les données, les applications et les
+        services géospatiaux du gouvernement du Canada pour les mettre à la
+        disposition des Canadiens.</p>
+
+        <p>Les données géospatiales sont celles qui peuvent être reliées à
+        l’emplacement géographique, comme une adresse, une ville, une province
+        ou tout autre élément géographique comme une ligne de côte, une
+        montagne ou une rivière.</p>
+
+        <p>Sur ce site, les Canadiens peuvent examiner de nombreuses données
+        géospatiales ouvertes tirées de multiples sources, tels des travaux
+        scientifiques et d’arpentage, des satellites et des capteurs marins et
+        terrestres. Ces données ont été traitées, interprétées et organisées
+        pour être utilisées dans diverses applications.</p>
+
+        <p>Les Cartes ouvertes résultent de la
+        <a href="http://www.rncan.gc.ca/sciences-terre/geomatique/infrastructure-canadienne-donnees-spatiales/communautes-geospatiales/plateforme">
+        Plateforme géospatiale fédérale</a>, soit une initiative de
+        collaboration pluriannuelle que 21 ministères et organismes membres du
+        Comité fédéral de géomatique et d’observation de la Terre (CFGOT) ont
+        mis en œuvre pour changer radicalement la façon dont les données
+        géospatiales sont gérées, communiquées et utilisées par le gouvernement
+        du Canada.</p>
+
+        <p>Vous pouvez accéder aux données et aux services géospatiaux de
+        Cartes ouvertes, ainsi que vous en servir pour réaliser vos travaux de
+        recherche et de développement d’applications, ou d’autres activités
+        autorisées, en vertu de la <a href="http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada">licence du gouvernement ouvert</a>.</p>
+      alias: /cartes-ouvertes
       panelizer:
         -
           view_mode: page_manager
@@ -843,13 +865,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: middle
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: middle
               weight: 2
@@ -917,9 +939,15 @@ source:
     -
       name: suggested_datasets
       title: 'Suggest a Dataset'
-      language: en
-      body: "<p>Is there Government of Canada data that you would like to see? Let\nus know your ideas by using our\n<a href=\"[site:url]forms/suggest-dataset\">Suggest a\nDataset form</a>, but first search below to see if someone else has\nalready requested the same dataset. If you find it, you can check on\nits status and add your request by clicking on thumbs up.</p>\n"
-      alias: /suggested-datasets
+      language: fr
+      body: |
+        <p>Y a-t-il des données du gouvernement du Canada que vous aimeriez
+        consulter? Dites-le nous au moyen du Formulaire de proposition d’un jeu
+        de données, mais cherchez d’abord ci-dessous pour voir si quelqu’un a
+        déjà proposé le même jeu de données. Si vous le trouvez, vous pouvez
+        vérifier son état et ajouter votre proposition en cliquant sur « en
+        accord ».</p>
+      alias: /jeux-de-donnees-suggeres
       panelizer:
         -
           view_mode: page_manager
@@ -933,13 +961,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: main
               weight: 1
@@ -988,10 +1016,43 @@ source:
           static_context: {  }
     -
       name: contracts
-      title: 'Search Government Contracts'
-      language: en
-      body: "<p>A policy on the mandatory publication of contracts over $10,000 was\nannounced by the Government of Canada in 2004 and updated in 2008 to\ninclude disclosure of contract amendments valued over $10,000. For\nfurther information on the disclosure of contracts please see the\n<a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?section=text&amp;id=14676\">\n<em>Guidelines on the Proactive Disclosure of Contracts</em></a>.</p>\n\n<p>Information on contracts issued/amended by or on behalf of federal\ninstitutions can be searched here using keyword, institution, quarter,\nand year. Effective November 2014, contracts awarded by the federal\ngovernment in will be available for review and updated every three\nmonths.</p>\n\n<p>The Treasury Board\n<a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?section=text&amp;id=14494\">\nContracting Policy</a> outlines the rules and principles governing\ngovernment contracting. The objective is to procure contracting of\ngoods and services in a manner that enhances access, competition and\nfairness and results in best value to Canada. For further information\non federal government procurement, please visit\n<a href=\"https://buyandsell.gc.ca/\">Buyandsell.gc.ca</a>.</p>\n\n<p>This site adheres to <em>Access to Information Act</em> and\n<em>Privacy Act</em> requirements.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b\">\nDownload datasets of the Proactive Disclosure - Contracts</a>.</p>\n"
-      alias: /search/contracts
+      title: 'Rechercher des contrats gouvernementaux'
+      language: fr
+      body: |
+        <p>Une politique sur la publication obligatoire des contrats d’une
+        valeur supérieure à 10&nbsp;000&nbsp;$ a été annoncée par le
+        gouvernement du Canada en 2004 et a été mise à jour en 2008 pour
+        qu’elle comprenne la divulgation des modifications aux contrats d’une
+        valeur supérieure à 10&nbsp;000&nbsp;$. De plus amples renseignements
+        sur la divulgation des contrats se trouvent dans les
+        <a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?section=text&amp;id=14676"><em>
+        Lignes directrices sur la divulgation proactive des marchés</em></a>.</p>
+
+        <p>Il est possible de chercher des renseignements sur les contrats
+        attribués ou modifiés par des institutions fédérales ou au nom de
+        celles‑ci ici au moyen des mots clés «&nbsp;institution&nbsp;»,
+        «&nbsp;trimestre&nbsp;» et «&nbsp;exercice&nbsp;». À compter
+        de&nbsp;novembre&nbsp;2014, les contrats attribués par le gouvernement
+        fédéral pourront être examinés et seront mis à jour tous les
+        trois&nbsp;mois.</p>
+
+        <p>La <a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?section=text&amp;id=14494">
+        Politique sur les marchés</a> du Conseil du Trésor énonce les règles et
+        les principes qui régissent le processus de passation de contrats du
+        gouvernement. L’objectif consiste à acquérir des biens et des services
+        d’une manière qui contribue à accroître l’accès, la concurrence et
+        l’équité, et qui permet d’obtenir le meilleur rapport qualité‑prix pour
+        le Canada. De plus amples renseignements sur le processus
+        d’approvisionnement du gouvernement fédéral se trouvent dans le site
+        <a href="https://achatsetventes.gc.ca/">achatsetventes.gc.ca</a>.</p>
+
+        <p>Le présent site respecte les exigences de la <em>Loi sur l’accès à
+        l’information</em> et de la <em>Loi sur la protection des
+        renseignements personnels</em>.</p>
+
+        <p><a href="http://open.canada.ca/data/fr/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b">
+        Téléchargez les jeux de données de la divulgation des contrats</a>.</p>
+      alias: /search/contrats
       panelizer:
         -
           view_mode: page_manager
@@ -1005,13 +1066,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1023,43 +1084,43 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:contracts'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:contracts_org_name_en'
-              label: Organization
+              label: Organisation
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:contracts_agreement_type_en'
-              label: 'Agreement Type'
+              label: 'Type de contrats'
               label_display: visible
               region: right
               weight: 5
             -
               id: 'facet_block:contracts_commodity_type_en'
-              label: 'Commodity Type'
+              label: 'Type de marchandises'
               label_display: visible
               region: right
               weight: 10
             -
               id: 'facet_block:contracts_contract_value_en'
-              label: 'Contract Value'
+              label: 'Valeur du contrat'
               label_display: visible
               region: right
               weight: 15
             -
               id: 'facet_block:contracts_country_of_origin_en'
-              label: 'Country of Origin'
+              label: 'Pays d''origine'
               label_display: visible
               region: right
               weight: 20
             -
               id: 'facet_block:contracts_year'
-              label: Year
+              label: Année
               label_display: visible
               region: right
               weight: 25
@@ -1107,9 +1168,47 @@ source:
           static_context: {  }
     -
       name: grants
-      title: 'Search Government Grants and Contributions'
-      language: en
-      body: "<p>On October 21, 2005, the Government announced its commitment to\nproactively disclose the awarding of grants and contributions over\n$25,000 as part of its Management Improvement Agenda.</p>\n\n<p>The rules and principles governing government grants and\ncontributions are outlined in the Treasury Board\n<a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=13525\">\nPolicy on Transfer Payments</a>. Transfer payments are transfers of\nmoney, goods, services or assets made from an appropriation to\nindividuals, organizations or other levels of government, without the\nfederal government directly receiving goods or services in return,\nbut which may require the recipient to provide a report or other\ninformation subsequent to receiving payment. These expenditures are\nreported in the\n<a href=\"http://www.tpsgc-pwgsc.gc.ca/recgen/txt/72-eng.html\">\nPublic Accounts of Canada</a>. The major types of transfer payments are\ngrants, contributions and 'other transfer payments'.</p>\n\n<p>Included in this category, but not to be reported under proactive\ndisclosure of awards, are (1) transfers to other levels of government\nsuch as Equalization payments as well as Canada Health and Social\nTransfer payments. (2) Grants and contributions reallocated or\notherwise redistributed by the recipient to third parties; and (3)\ninformation that would normally be withheld under the\n<a href=\"http://laws-lois.justice.gc.ca/eng/acts/A-1/index.html\">\n<em>Access to Information Act</em></a> and the\n<a href=\"http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html\">\n<em>Privacy Act</em></a>.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/432527ab-7aac-45b5-81d6-7597107a7013\">\nDownload datasets of the Proactive Disclosure - Grants and\nContributions</a>.</p>\n"
+      title: 'Rechercher des octrois de subventions gouvernementaux'
+      language: fr
+      body: |
+        <p>Le 21 octobre 2005 et dans le cadre de son plan d'amélioration de la
+        gestion, le gouvernement a annoncé qu'il s'engageait à divulguer
+        proactivement les octrois de subventions et de contributions
+        supérieures à 25 000 $.</p>
+
+        <p>Les règles et principes qui régissent les subventions et les
+        contributions gouvernementales sont décrits dans
+        <a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=13525">la
+        Politique du Conseil du Trésor sur les paiements de transfert</a>. Les
+        paiements de transfert sont des transferts, imputables sur un crédit,
+        d'argent, de biens, de services ou d'actifs à des personnes ou à des
+        organisations ou à d'autres ordres de gouvernement, sans que le
+        gouvernement fédéral reçoive directement des biens ou des services en
+        échange, mais qui peuvent obliger les bénéficiaires à produire un
+        rapport ou d'autres renseignements après avoir reçu le paiement de
+        transfert. Ces dépenses sont signalées dans les
+        <a href="http://www.tpsgc-pwgsc.gc.ca/recgen/txt/72-fra.html">
+        Comptes publics du Canada</a>. Les principaux types de paiements de
+        transfert sont les subventions, les contributions et « autres paiements
+        de transfert ».</p>
+
+        <p>Sont inclus dans cette catégorie, mais non assujettis à la
+        divulgation proactive (1), les transferts à d'autres ordres de
+        gouvernement, par exemple les paiements de péréquation ainsi que les
+        paiements effectués dans le cadre du Transfert canadien en matière de
+        santé et du Transfert canadien en matière de programmes sociaux; (2)
+        les subventions ou les contributions réaffectées ou par ailleurs
+        redistribuées par un bénéficiaire à des tiers; et (3) l'information qui
+        ne serait normalement pas divulguée en vertu de
+        <a href="http://laws-lois.justice.gc.ca/fra/lois/A-1/index.html"><em>la
+        Loi sur l'accès à l'information</em></a> de
+        <a href="http://laws-lois.justice.gc.ca/fra/lois/P-21/index.html"><em>
+        la Loi sur la protection des renseignements personnels</em></a> ne
+        figure pas sur le site Web.</p>
+
+        <p><a href="http://open.canada.ca/data/fr/dataset/432527ab-7aac-45b5-81d6-7597107a7013">
+        Téléchargez les jeux de données de la divulgation des octrois de
+        subventions et de contributions</a>.</p>
       alias: /search/grants
       panelizer:
         -
@@ -1124,13 +1223,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1142,13 +1241,13 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:grants'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:grants_org_name_en'
-              label: Organization
+              label: Organisation
               label_display: visible
               region: right
               weight: 0
@@ -1160,7 +1259,7 @@ source:
               weight: 5
             -
               id: 'facet_block:grant_year'
-              label: Year
+              label: Année
               label_display: visible
               region: right
               weight: 10
@@ -1209,8 +1308,42 @@ source:
     -
       name: reclassifications
       title: 'Search Government Position Reclassifications'
-      language: en
-      body: "<p>On February 25,&nbsp;2004, the government announced the mandatory\npublication of information concerning the reclassification of positions\nin the Public Service of Canada.</p>\n\n<p>This web site provides information on the reclassification of\npositions by department and agencies on a quarterly basis.</p>\n\n<p>The rules and principles governing the reclassification of positions\nare outlined in the Appendix I of the&nbsp;\n<a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28700\">\nDirective on Classification</a>.</p>\n\n<p>Reclassification of positions in the Public Service of Canada is an\nimportant and necessary business management option. However, when\ncontemplating changes to a position that may result in\nreclassification, management must endeavour to ensure the proper,\neffective and efficient use of public money. The cost implication\nassociated with upward reclassification must be known, transparent and\nsupport accountability for classification decisions.</p>\n\n<p><a href=\"http://www.tbs-sct.gc.ca/hgw-cgf/finances/rgs-erdg/pd-dp/index-eng.asp\">\nGovernment-Wide Position Reclassification Departmental Web Sites</a>\ninformation on these websites will be updated every three months,\nstarting in October&nbsp;2004.</p>\n\n<p>Please note that information that would normally be withheld under\nthe&nbsp;<a href=\"http://laws-lois.justice.gc.ca/eng/acts/A-1/index.html\">\nAccess to Information Act</a>&nbsp;or the&nbsp;\n<a href=\"http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html\">\nPrivacy Act</a>&nbsp;does not appear on this web site.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/f132b8a6-abad-43d6-b6ad-2301e778b1b6\">\nDownload datasets of the Proactive Disclosure - Position\nReclassification</a>.</p>\n"
+      language: fr
+      body: |
+        <p>Le 25&nbsp;février&nbsp;2004, le gouvernement a annoncé qu'il serait
+        désormais obligatoire de divulguer des renseignements concernant la
+        reclassification des postes à la fonction publique du Canada.</p>
+
+        <p>Ce site Web renseigne sur la reclassification des postes, par
+        ministère et organisme, sur une base trimestrielle.</p>
+
+        <p>Les règles et les principes qui régissent la reclassification des
+        postes sont énoncés dans l'annexe I de la <a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=28700"><em>
+        Directive sur la classification</em></a>.</p>
+
+        <p>La reclassification des postes dans la fonction publique du Canada
+        demeure une option importante et nécessaire de la gestion
+        opérationnelle. Cependant, en envisageant des changements de fonctions
+        susceptibles de conduire à une reclassification, la gestion doit
+        s'efforcer de veiller à ce que les fonds publics soient utilisés de
+        façon appropriée, efficace et efficiente. Les coûts liés à une
+        reclassification à la hausse doivent être connus et transparents et
+        correspondre à la responsabilité des décisions de classification.</p>
+
+        <p>À compter d'octobre&nbsp;2004, les renseignements contenus dans le
+        <a href="http://www.tbs-sct.gc.ca/hgw-cgf/finances/rgs-erdg/pd-dp/index-fra.asp">
+        Site web à l'échelle gouvernementale sur les reclassifications de
+        postes</a> : ces sites seront mis à jour à tous les trois mois.</p>
+
+        <p>Veuillez prendre note que les renseignements qui sont habituellement
+        retenus en vertu de la <a href="http://laws-lois.justice.gc.ca/fra/lois/A-1/index.html"><em>
+        Loi sur l'accès à l'information</em></a> et de la <a href="http://laws-lois.justice.gc.ca/fra/lois/P-21/index.html"><em>
+        Loi sur la protection des renseignements personnels</em></a>
+        n'apparaissent pas dans le site.</p>
+
+        <p><a href="http://ouvert.canada.ca/data/fr/dataset/f132b8a6-abad-43d6-b6ad-2301e778b1b6">
+        Téléchargez les jeux de données de la divulgation des reclassifications
+        des postes</a>.</p>
       alias: /search/reclassification
       panelizer:
         -
@@ -1225,13 +1358,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1243,19 +1376,19 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:reclassification'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:reclassification_org_name_en'
-              label: Organization
+              label: Organisation
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:reclassification_year'
-              label: Year
+              label: Année
               label_display: visible
               region: right
               weight: 5
@@ -1303,9 +1436,16 @@ source:
           static_context: {  }
     -
       name: travela
-      title: 'Search Annual Expenditures on Travel, Hospitality and Conferences'
-      language: en
-      body: "<p>As per the <a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855\">\nDirective on the Management of Expenditures on Travel, Hospitality and\nConferences</a>, here are the annual reports of expenditures on travel,\nhospitality and conference:</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/4ae27978-0931-49ab-9c17-0b119c0ba92f\">\nDownload datasets of the Proactive Disclosure - Annual Expenditures on\nTravel, Hospitality and Conferences</a>.</p>\n"
+      title: 'Rechercher les divulgation des dépenses anuelles de voyages, d''accueil et de conférences'
+      language: fr
+      body: |
+        <p>As per the <a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855\">
+        Directive on the Management of Expenditures on Travel, Hospitality and
+        Conferences</a>, here are the annual reports of expenditures on travel,
+        hospitality and conference:</p>
+        <p><a href=\"http://open.canada.ca/data/en/dataset/4ae27978-0931-49ab-9c17-0b119c0ba92f\">
+        Download datasets of the Proactive Disclosure - Annual Expenditures on
+        Travel, Hospitality and Conferences</a>.</p>
       alias: /search/travela
       panelizer:
         -
@@ -1320,13 +1460,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1338,13 +1478,13 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:travela'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:travel_year'
-              label: Year
+              label: Année
               label_display: visible
               region: right
               weight: 0
@@ -1392,9 +1532,24 @@ source:
           static_context: {  }
     -
       name: inventory
-      title: 'Open Data Inventory'
-      language: en
-      body: "<p>The <a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108\">\nDirective on Open Government</a> requires all applicable Government of\nCanada organizations to conduct an inventory of their open data\nholdings. All of the inventories we received have been consolidated\ninto the chart below. Use the thumbs up to help prioritize the release\nof a dataset. To access the open data used to create the table, visit\n<a href=\"http://open.canada.ca/data/en/dataset/4ed351cf-95d8-4c10-97ac-6b3511f359b7\">\nOpen Data Inventory</a>.</p>\n<p>To learn more about the Government of Canada's Open Data Inventory,\nreview the <a href=\"/en/frequently-asked-questions\">frequently asked\nquestions</a>.</p>\n"
+      title: 'Répertoire de données ouvertes'
+      language: fr
+      body: |
+        <p>La <a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=28108">
+        Directive sur le gouvernement ouvert</a> exige que toutes les
+        organisations du gouvernement du Canada concernées établissent un
+        répertoire de leurs fonds de données ouvertes. Tous les répertoires que
+        nous avons reçus ont été regroupés dans l’organigramme ci-dessous.
+        Veuillez utiliser la méthode « pouce vers le haut » (« thumbs up »)
+        pour accorder la priorité à la publication d’un jeu de données. Afin
+        d’avoir accès aux données ouvertes qui ont été utilisées pour créer le
+        tableau, veuillez visiter le
+        <a href="http://ouvert.canada.ca/data/fr/dataset/4ed351cf-95d8-4c10-97ac-6b3511f359b7">
+        Répertoire de données ouvertes</a>.</p>
+
+        <p>Pour en savoir plus sur le répertoire des données ouvertes du
+        gouvernement du Canada, consultez la
+        <a href="/fr/contenu/foire-aux-questions">foire aux questions</a>.</p>
       alias: /search/inventory
       panelizer:
         -
@@ -1409,13 +1564,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1427,13 +1582,13 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:inventory'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:inventory_org_name_en'
-              label: Organization
+              label: Organisation
               label_display: visible
               region: right
               weight: 0
@@ -1481,9 +1636,43 @@ source:
           static_context: {  }
     -
       name: hospitalityq
-      title: 'Search Government Hospitality Expenses'
-      language: en
-      body: "<p>On December 12, 2003, the Prime Minister announced a new policy on\nthe mandatory publication of travel and hospitality expenses for\nselected government officials.</p>\n\n<p>The rules and principles governing travel are outlined in the\n<a href=\"http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-eng.asp\">\nPolicies for Ministers' Offices</a> and in Treasury Board's\n<a href=\"http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php\">\nTravel Directive</a> and <a href=\"http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php\">\nSpecial Travel Authorities</a>. The purpose of these instruments is to\nprovide for the reimbursement of reasonable expenses necessarily\nincurred during travel on government business.</p>\n\n<p>The Government of Canada extends hospitality in accordance with the\nrules and principles outlined in the Guidelines for Ministers' Offices\nand the Treasury Board <a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855\">\nDirective on the Management of Expenditures on Travel, Hospitality and\nConferences</a>. The objective of the policy is to ensure that\nhospitality is extended in an economical and affordable way when it\nfacilitates government business or is considered desirable as a matter\nof courtesy and protocol.</p>\n\n<p>The information on this web site will be updated every three months,\nbeginning on March 31, 2004.</p>\n\n<p>Please note that information that would normally be withheld under\nthe <a href=\"http://laws-lois.justice.gc.ca/eng/acts/a-1/index.html\"><em>\nAccess to Information Act</em></a> or the <a href=\"http://laws-lois.justice.gc.ca/eng/acts/p-21/index.html\"><em>\nPrivacy Act</em></a> does not appear on this web site.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/b9f51ef4-4605-4ef2-8231-62a2edda1b54\">\nDownload datasets of the Proactive Disclosure - Hospitality\nExpenses</a>.</p>\n"
+      title: 'Rechercher des frais d''accueil gouvernementaux'
+      language: fr
+      body: |
+        <p>Le 12 décembre 2003, le Premier ministre a annoncé une nouvelle
+        politique sur la divulgation obligatoire des frais de voyage et
+        d'accueil de cadres supérieurs désignés.</p>
+
+        <p>Les règles et principes régissant les voyages gouvernementaux sont
+        énoncés dans les
+        <a href="http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-fra.asp">
+        Politiques à l'intention des cabinets des ministres</a> ainsi que dans
+        la <a href="http://www.njc-cnm.gc.ca/directive/index.php?did=10&amp;dlabel=travel-voyage&amp;lang=fra&amp;merge=2&amp;slabel=index">
+        Directive sur les voyages</a> et dans les
+        <a href="http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/tbm_113/statb-fra.asp">
+        Autorisations spéciales</a> de voyager du Conseil du Trésor. Ces
+        instruments prévoient le remboursement des frais raisonnables qui ont
+        dû être engagés lors des voyages d'affaires du gouvernement.</p>
+
+        <p>Le gouvernement du Canada permet la tenue d'activités d'accueil
+        conformes aux règles et aux principes établis dans les Lignes
+        directrices à l'intention des cabinets des ministres et dans la
+        <a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=19855">Directive
+        sur la gestion des dépenses de voyages, d'accueil et de conférences</a>
+        du Conseil du Trésor. Cette politique vise à assurer la tenue
+        d'activités d'accueil économiques et abordables lorsqu'elles facilitent
+        les affaires du gouvernement et sont considérées comme souhaitables sur
+        les plans de la courtoisie et du protocole.</p>
+
+        <p>Veuillez prendre note que ce site Web ne contient pas de
+        renseignements qui seraient habituellement protégés en vertu de la
+        <a href="http://laws-lois.justice.gc.ca/fra/lois/a-1/index.html"><em>
+        Loi sur l'accès à l'information</em></a> ou de la
+        <a href="http://laws-lois.justice.gc.ca/fra/lois/p-21/index.html"><em>
+        Loi sur la protection des renseignements personnels</em></a>.</p>
+
+        <p><a href="http://ouvert.canada.ca/data/fr/dataset/b9f51ef4-4605-4ef2-8231-62a2edda1b54">
+        Téléchargez les jeux de données de la divulgation des frais d'accueil</a>.</p>
       alias: /search/hospitalityq
       panelizer:
         -
@@ -1498,13 +1687,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1516,13 +1705,13 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:hospitalityq'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:hospitalityq_org_name_en'
-              label: Organization
+              label: Organisation
               label_display: visible
               region: right
               weight: 0
@@ -1576,9 +1765,34 @@ source:
           static_context: {  }
     -
       name: travelq
-      title: 'Search Government Travel Expenses'
-      language: en
-      body: "<p>On December 12, 2003, the Prime Minister announced a new policy on\nthe mandatory publication of travel and hospitality expenses for\nselected government officials.</p>\n\n<p>The rules and principles governing travel are outlined in the\n<a href=\"http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-eng.asp\">\nPolicies for Ministers' Offices</a> and in Treasury Board's\n<a href=\"http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php\">\nTravel Directive</a> and\n<a href=\"http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php\">\nSpecial Travel Authorities</a>. The purpose of these instruments is to\nprovide for the reimbursement of reasonable expenses necessarily\nincurred during travel on government business.</p>\n\n<p>Please note that information that would normally be withheld under\nthe <a href=\"http://laws-lois.justice.gc.ca/eng/acts/a-1/index.html\">\n<em>Access to Information Act</em></a> or the\n<a href=\"http://laws-lois.justice.gc.ca/eng/acts/p-21/index.html\">\n<em>Privacy Act</em></a> does not appear on this web site.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/009f9a49-c2d9-4d29-a6d4-1a228da335ce\">\nDownload datasets of the Proactive Disclosure - Travel\nExpenses</a>.</p>\n"
+      title: 'Rechercher des dépenses de voyage gouvernementaux'
+      language: fr
+      body: |
+        <div class="field-item even"><p>Le 12 décembre 2003, le Premier
+        ministre a annoncé une nouvelle politique sur la divulgation
+        obligatoire des frais de voyage et d'accueil de cadres supérieurs
+        désignés.</p>
+
+        <p>Les règles et principes régissant les voyages gouvernementaux sont
+        énoncés dans les <a href="http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-fra.asp">
+        Politiques à l'intention des cabinets des ministres</a> ainsi que dans
+        la <a href="http://www.njc-cnm.gc.ca/directive/index.php?did=10&amp;dlabel=travel-voyage&amp;lang=fra&amp;merge=2&amp;slabel=index">
+        Directive sur les voyages</a> et dans les
+        <a href="http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/tbm_113/statb-fra.asp">
+        Autorisations spéciales</a> de voyager du Conseil du Trésor. Ces
+        instruments prévoient le remboursement des frais raisonnables qui ont
+        dû être engagés lors des voyages d'affaires du gouvernement.</p>
+
+        <p>Veuillez prendre note que ce site Web ne contient pas de
+        renseignements qui seraient habituellement protégés en vertu de la
+        <a href="http://laws-lois.justice.gc.ca/fra/lois/a-1/index.html"><em>
+        Loi sur l'accès à l'information</em></a> ou de la
+        <a href="http://laws-lois.justice.gc.ca/fra/lois/p-21/index.html"><em>
+        Loi sur la protection des renseignements personnels</em></a>.</p>
+
+        <p><a href="http://ouvert.canada.ca/data/fr/dataset/009f9a49-c2d9-4d29-a6d4-1a228da335ce">
+        Téléchargez les jeux de données de la divulgation des frais de
+        voyage</a>.</p>
       alias: /search/travelq
       panelizer:
         -
@@ -1593,13 +1807,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1611,19 +1825,19 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:travelq'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:travelq_org_name_en'
-              label: Organization
+              label: Organisation
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:travelq_year'
-              label: Year
+              label: Année
               label_display: visible
               region: right
               weight: 5
@@ -1671,9 +1885,39 @@ source:
           static_context: {  }
     -
       name: wrongdoing
-      title: 'Search Government Acts of Founded Wrongdoing'
-      language: en
-      body: "<p>The Public Servants Disclosure Protection Act (PSDPA) offers federal\npublic sector employees and other persons a secure and confidential\nprocess for the disclosure of serious wrongdoing in the workplace, as\nwell as protection against reprisal.</p>\n\n<p>The PSDPA defines wrongdoing as follows:</p>\n<ul><li>a contravention of any Act of Parliament or of the legislature\nof a province, or of any regulations made under any such Act;</li>\n<li>a misuse of public funds or a public asset;</li>\n<li>a gross mismanagement;</li>\n<li>a serious breach of a code of conduct;</li>\n<li>an act or omission that creates a substantial and specific danger\nto the life, health or safety of persons, or to the environment;</li>\n<li>knowingly directing or counselling a person to commit a\nwrongdoing.</li>\n</ul><p><span style=\"line-height: 1.4375;\">Under paragraph 1(c) of the\nPSDPA, chief executives shall promptly provide public access to\ninformation on founded wrongdoing.</span></p>\n\n<p>Information to which public access is provided must describe the\nwrongdoing, including the identity of the person found to have\ncommitted it if necessary in order to describe the wrongdoing\nadequately; the recommendations, if any, set out in any report made to\nthe chief executive; and any corrective action taken by the chief\nexecutive or the reasons why no corrective action was taken.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/6e75f19c-d19d-48aa-984e-609c8d9bc403\">\nDownload datasets of the Proactive Disclosure - Acts of Founded\nWrongdoing</a>.</p>\n"
+      title: 'Recherche d’actes répréhensibles fondés au sein du gouvernement'
+      language: fr
+      body: |
+        <div class="field-item even"><p>La <em>Loi sur la protection des
+        fonctionnaires divulgateurs d'actes répréhensibles (LPFDAR)</em> offre
+        aux employés du secteur public fédéral et aux autres personnes un
+        processus sûr et confidentiel pour la divulgation d'actes
+        répréhensibles graves en milieu de travail, ainsi qu'une protection
+        contre les représailles.</p>
+        <p>La LPFDAR définit ainsi un acte répréhensible&nbsp;:</p>
+        <ul><li>la contravention d'une loi fédérale ou provinciale ou d'un
+        règlement pris sous leur régime;</li>
+        	<li>l'usage abusif des fonds ou des biens publics;</li>
+        	<li>les cas graves de mauvaise gestion;</li>
+        	<li>la contravention grave d'un code de conduite;</li>
+        	<li>le fait de causer, par action ou omission, un risque grave et
+          précis pour la vie, la santé ou la sécurité humaines ou pour
+          l'environnement;</li>
+        	<li>le fait de sciemment ordonner ou conseiller à une personne de
+          commettre un acte répréhensible.</li>
+        </ul><p>En vertu de l'article 11 c de la <em>LPFDAR,</em> les
+        administrateurs généraux doivent promptement rendre publique
+        l'information concernant les constatations d'actes répréhensibles.</p>
+        <p>L'information mise à la disposition du public doit faire état de
+        l'acte répréhensible, y compris l'identité de son auteur si la
+        divulgation de celle-ci est nécessaire pour en faire état
+        adéquatement; des recommandations contenues, le cas échéant, dans
+        tout rapport qui a été remis à l'administrateur général; et des
+        mesures correctives prises par ce dernier ou des motifs invoqués pour
+        ne pas prendre de mesures correctives.</p>
+        <p><a href="http://ouvert.canada.ca/data/fr/dataset/6e75f19c-d19d-48aa-984e-609c8d9bc403">
+        Téléchargez les jeux de données de la divulgation des constatations
+        d'actes répréhensibles</a>.</p>
       alias: /search/wrongdoing
       panelizer:
         -
@@ -1688,13 +1932,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1706,19 +1950,19 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:wrongdoing'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:wrongdoing_org_name_en'
-              label: Organization
+              label: Organisation
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:wrongdoing_date_year'
-              label: Year
+              label: Année
               label_display: visible
               region: right
               weight: 5
@@ -1766,9 +2010,29 @@ source:
           static_context: {  }
     -
       name: ati_request
-      title: 'Completed Access to Requirements Requests'
-      language: en
-      body: "<p>Search the summaries of completed Access to Information (ATI) requests\nto find information about ATI requests previously made to the Government\nof Canada. If you find a summary of interest, you can request a copy of\nthe records at no cost. For additional information, please see the\n“<a href=\"/en/content/about-access-information-requests\">About Access to\nInformation Requests</a>” webpage.</p>\n<p>Download datasets of the <a href=\"http://data.gc.ca/data/en/dataset/0797e893-751e-4695-8229-a5066e4fe43c\">\nsummaries of completed access to information requests</a>.</p>\n<p>If you don’t find what you are looking for you can request additional\ngovernment records under an institution’s control by contacting the\ninstitution’s <a href=\"http://www.tbs-sct.gc.ca/atip-aiprp/apps/coords/index-eng.ASP\">\nAccess to Information and Privacy Coordinator</a>.</p>\n<p><strong>Enter keywords (e.g. institution, topic, field of interest,\netc.)</strong><br>*All information provided will incorporate the\nnecessary exemptions and exclusions as per the <em>Access to Information\nAct</em> and the <em>Privacy Act</em>.</p>\n"
+      title: 'Demandes d’accès à l’information complétées'
+      language: fr
+      body: |
+        <p>Effectuez des recherches dans les sommaires des demandes d’accès à
+        l’information (AI) complétées pour obtenir de l’information au sujet
+        des demandes d’AI soumises au gouvernement du Canada. Si un sommaire
+        vous intéresse, vous pouvez demander sans frais une copie des
+        documents. Pour obtenir de plus amples renseignements, veuillez
+        consulter la page Web «&nbsp;<a href="[site:url]/au-sujet-demandes-dacces-a-linformation">
+        Au sujet des demandes d’accès à l’information</a>&nbsp;».</p>
+        <p>Téléchargez les jeux de données des
+        <a href="http://donnees.gc.ca/data/fr/dataset/0797e893-751e-4695-8229-a5066e4fe43c">
+        sommaires des demandes d’accès à l’information complétées</a>.</p>
+        <p>Si vous n’arrivez pas à obtenir l’information souhaitée, vous pouvez
+        demander de consulter d’autres documents du gouvernement en contactant
+        le <a href="http://www.tbs-sct.gc.ca/atip-aiprp/apps/coords/index-fra.asp">
+        coordonnateur de l’accès à l’information et de la protection des
+        renseignements personnels</a> de l’institution concernée.</p>
+        <p><strong>Entrez des mots-clés (p. ex. institution, sujet, champ
+        d’intérêt, etc.)&nbsp;:</strong><br>
+        L’information fournie comportera les exemptions et les exclusions
+        obligatoires en vertu de la <em>Loi sur l’accès à l’information</em> et
+        de la <em>Loi sur la protection des renseignements personnels</em>.</p>
       alias: /search/ati
       panelizer:
         -
@@ -1783,13 +2047,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1801,25 +2065,25 @@ source:
               weight: 10
             -
               id: 'facets_summary_block:ati'
-              label: 'Current Search'
+              label: 'Recherche actuelle'
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:ss_ati_organization_en'
-              label: Organization
+              label: Organisation
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:ss_ati_year_en'
-              label: Year
+              label: Année
               label_display: visible
               region: right
               weight: 5
             -
               id: 'facet_block:ss_ati_monthname_en'
-              label: Month
+              label: Mois
               label_display: visible
               region: right
               weight: 10
@@ -1867,9 +2131,29 @@ source:
           static_context: {  }
     -
       name: apps
-      title: 'Apps Gallery'
-      language: en
-      body: "<p class=\"margin-top-large\">One of the benefits of Open Data is the\nability to create applications. On this page you will find mobile and\nweb-based applications, created within the Government of Canada, the\npublic, and Canadian Open Data Experience (CODE) winners and\nparticipants. Applications submitted by the public have incorporated\ndata licensed by the Government of Canada under the\n<a href=\"/en/open-government-licence-canada\"><em>Open Government\nLicence</em></a>. Click on the app, log in, and let us know what you\nthink of it by providing a rating.</p>\n\n<p>The applications created by the public have been developed, and are\noperated and owned by third parties. The Government of Canada does not\nendorse, approve, or certify the applications or the developers, nor\ndoes it make any representation or warranty that the information based\non which the applications have been developed, including information\nlicensed under the <em>Open Government Licence</em>, is accurate,\ncomplete, or correct. Your use of the applications and the information\ncontained therein, including information licensed under the\n<em>Open Government Licence</em>, is at your sole risk.</p>\n"
+      title: 'Galerie d''applis'
+      language: fr
+      body: |
+        <p class="margin-top-large">L'avantage des données ouvertes a trait à
+        leur capacité de créer des applications. Vous trouverez sur la présente
+        page des applications mobiles de même que des applications axées sur le
+        Web, créées au sein du gouvernement du Canada, par le public, de même
+        que par les lauréats et les participants à l'Expérience des données
+        ouvertes canadienne (ECDO). Les applications soumises par le public ont
+        intégré des données autorisées par le gouvernement du Canada en vertu
+        de la <em><a href="/fr/licence-du-gouvernement-ouvert-canada">Licence
+        du gouvernement ouvert</a></em>.</p>
+
+        <p>Les applications créées par le public ont été développées et sont
+        exploitées par des tiers, qui en sont les propriétaires. Le
+        gouvernement du Canada n’appuie pas, n’approuve pas et ne certifie pas
+        les applications ou les développeurs, et ne fait aucune assertion ni ne
+        donne aucune garantie que l’information utilisée lors du développement
+        de l’application, y compris l’information sous licence en vertu de la
+        <em>Licence du gouvernement ouvert</em>, est exacte, complète ou
+        correcte. Vous utilisez donc les applications et l’information
+        qu’elles comportent, y compris l’information sous licence en vertu de
+        la <em>Licence du gouvernement ouvert</em>, à vos propres risques.</p>
       alias: /apps
       panelizer:
         -
@@ -1884,13 +2168,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -1902,19 +2186,19 @@ source:
               weight: 10
             -
               id: 'facet_block:app_publishers'
-              label: Publishers
+              label:  Éditeur
               label_display: visible
               region: right
               weight: 0
             -
               id: 'facet_block:app_subject'
-              label: Subject
+              label: Sujet
               label_display: visible
               region: right
               weight: 5
             -
               id: 'facet_block:app_device_formats'
-              label: 'Device Formats'
+              label: 'Disponibilité'
               label_display: visible
               region: right
               weight: 10
@@ -1962,82 +2246,97 @@ source:
           static_context: {  }
     -
       name: pd
-      title: 'Proactive Disclosure'
-      language: en
+      title: 'Divulgation proactive'
+      language: fr
       body: |
-        <p>Find information related to travel and hospitality expenses,
-        contracting, grants and contributions, position reclassifications and
-        founded wrongdoing. By making this information readily available,
-        Canadians and Parliament are better able to hold the Government and
-        public sector officials to account.</p>
+        <p>Explorez les renseignements qui ont été divulgués de façon proactive
+        par les ministères et les organismes du gouvernement sur les finances
+        et les ressources humaines. En rendant ces renseignements plus
+        accessibles, les Canadiens et le Parlement seront mieux placés pour
+        tenir les fonctionnaires du secteur public et le gouvernement
+        responsables. Pour obtenir de plus amples renseignements sur les frais
+        de voyage et d'accueil, l'octroi de contrats, les subventions et les
+        contributions, la reclassification des postes et les actes
+        répréhensibles fondés. En rendant cette information plus accessible,
+        les Canadiens et le Parlement sont davantage en mesure de tenir le
+        gouvernement et les fonctionnaires du secteur public responsables.</p>
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/contracts">Search
-        Quarterly Government Contracts</a></h2>
+        <h2 class="h5"><a href="[site:url]/search/contrats">Rechercher des
+        contrats gouvernementaux trimestriel</a></h2>
 
-        <p>Browse information on contracts over $10,000 by department and
-        amount, as well as standing offer agreements and supply arrangements
-        used by government departments.</p>
+        <p>Cherchez de l'information sur les contrats de plus de 10 000 $ par
+        ministère, de même que les montants, ainsi que les offres à commandes
+        et les arrangements en matière d'approvisionnement ayant été utilisés
+        par les ministères du gouvernement.</p>
         </div>
 
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/hospitalityq">Search
-        Government Hospitality Expenses</a></h2>
+        <h2 class="h5"><a href="[site:url]/search/hospitalityq">Rechercher des
+        frais d'accueil gouvernementaux</a></h2>
 
-        <p>Find out what your government is spending to facilitate the business
-        of the day, or to extend courtesy to honoured guests.</p>
-        </div>
-        </div>
-
-        <div class="row">
-        <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/grants">Search Government
-        Grants and Contributions</a></h2>
-
-        <p>Search transfers of money, goods, services or assets to individuals,
-        organizations or other levels of government.</p>
-        </div>
-
-        <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/travelq">Search
-        Government Travel Expenses</a></h2>
-
-        <p>Search by function and department to see where the government’s
-        travel dollars are being spent.</p>
+        <p>Découvrez combine votre gouvernement dépense afin de faciliter les
+        activités du jour ou pour faire preuve de courtoisie envers des invités
+        d’honneur.</p>
         </div>
         </div>
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/reclassification">Search
-        Government Position Reclassifications</a></h2>
+        <h2 class="h5"><a href="[site:url]/search/grants">Rechercher des octrois
+        de subventions gouvernementaux</a></h2>
 
-        <p>Search by position and department to see what government positions
-        have been reclassified.</p>
+        <p>Cherchez les transferts de fonds, de biens, de services ou de biens
+        à des personnes, des organisations ou d’autres ordres de
+        gouvernements.</p>
         </div>
 
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/wrongdoing">Search
-        Government Acts of Founded Wrongdoing</a></h2>
+        <h2 class="h5"><a href="[site:url]/search/travelq">Rechercher des frais
+        de voyage gouvernementaux</a></h2>
 
-        <p>Search information on wrongdoing found to have been committed by an
-        investigation under the <a href="http://www.psic-ispc.gc.ca/eng/wrongdoing/protection">Public Servants Disclosure Protection Act</a> (PSDPA).</p>
+        <p>Cherchez par ordre de fonction et de ministères pour consulter les
+        sommes de dollars dépensées par le gouvernement en matière de
+        voyage.</p>
         </div>
         </div>
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/travela">Search Annual
-        Expenditures on Travel, Hospitality and Conferences </a></h2>
+        <h2 class="h5"><a href="[site:url]/search/reclassification">Rechercher
+        la reclassification des postes du gouvernment</a></h2>
 
-        <p>In accordance with Section 6.4 of the Treasury Board Directive on
-        Management of Expenditures on Travel, Hospitality and Conferences,
-        effective January 1, 2011, departments are required to disclose the
-        total annual expenditures for travel, hospitality and conferences.</p>
+        <p>Rechercher par ordre de poste et de ministère, pour connaître les
+        postes du gouvernement qui ont été reclassifiés.</p>
+        </div>
+
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/wrongdoing">Recherche sur les
+        actes répréhensibles fondés au sein du gouvernement</a></h2>
+
+        <p>Les recherches ayant été effectuées sur les actes répréhensibles ont
+        révélé que celles-ci ont été effectuées dans le cadre d’une enquête en
+        vertu de la <a href="http://www.psic.gc.ca/fra/actesreprehensibles/protection">
+        Loi sur la protection des fonctionnaires divulgateurs d’actes
+        répréhensibles</a> (LPFDAR).</p>
         </div>
         </div>
-      alias: /proactive-disclosure
+
+        <div class="row">
+        <div class="col-md-6">
+        <h2 class="h5"><a href="[site:url]/search/travela">Rechercher les
+        divulgation des dépenses annuelles de voyages, d'accueil et de
+        conférences</a></h2>
+
+        <p>Conformément à la section 6.4 de la Directive sur la gestion des
+        dépenses de voyages, d'accueil et de conférences, qui est entrée en
+        vigueur le 1er janvier 2011, les ministères doivent divulguer le
+        montant total des dépenses annuelles engagées au titre des frais de
+        voyage, d'accueil et de conférences.</p>
+        </div>
+        </div>
+      alias: /divulgation-proactive
       panelizer:
         -
           view_mode: page_manager
@@ -2051,13 +2350,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: main
               weight: 5
@@ -2101,8 +2400,9 @@ source:
     -
       name: consultations
       title: 'Consultations'
-      language: en
-      body: "<p>This page is currently under construction.</p>\n"
+      language: fr
+      body: |
+        <p>Cette page est actuellement en construction.</p>
       alias: /consultations
       panelizer:
         -
@@ -2190,10 +2490,11 @@ source:
           static_context: {  }
     -
       name: commitments
-      title: 'Commitments'
-      language: en
-      body: "<p>This page is currently under construction.</p>\n"
-      alias: /commitments
+      title: 'Engagements'
+      language: fr
+      body: |
+        <p>Cette page est actuellement en construction.</p>
+      alias: /engagements
       panelizer:
         -
           view_mode: page_manager
@@ -2207,13 +2508,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top_left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top_left
               weight: 1
@@ -2280,13 +2581,13 @@ source:
           static_context: {  }
     -
       name: ati
-      title: 'Access to Information'
-      language: en
+      title: 'Accès à l''information'
+      language: fr
       body: |
-        <p>One of the cornerstones of Canada’s transparency agenda is its
-        continued compliance and promotion of the Access to Information Act and
-        related activities.</p>
-      alias: /access-to-information
+        <p>L’une des pierres angulaires du programme de transparence du Canada
+        est sa conformité constante avec la Loi sur l’accès à l’information, la
+        promotion de celle-ci et les activités connexes.</p>
+      alias: /acces-linformation
       panelizer:
         -
           view_mode: page_manager
@@ -2300,13 +2601,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top_left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top_left
               weight: 1
@@ -2319,42 +2620,42 @@ source:
               weight: 2
             -
               id: 'block_content:block_ati'
-              label: 'Open Information'
+              label: 'Recherche de sommaires d’accès à l’information'
               label_display: 0
               region: top_right
               view_mode: featured
               weight: 0
             -
               id: 'block_content:ati_search'
-              label: 'Search Access to Information Requests'
+              label: 'Recherche de sommaires d’accès à l’information'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 0
             -
               id: 'block_content:ati_request'
-              label: 'Request Access to Information'
+              label: 'Demande d’accès à l’information'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 0
             -
               id: 'block_content:ati_info_act'
-              label: 'Access to Information Act'
+              label: 'Loi sur l''accès à l''information'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 5
             -
               id: 'block_content:ati_privacy_act'
-              label: 'Privacy Act'
+              label: 'Loi sur la protection des renseignements personnels'
               label_display: 0
               region: bottom_right
               view_mode: full
               weight: 5
             -
               id: 'block_content:ati_info_act_priv'
-              label: 'Access to Information Act and Privacy Act Bulletins'
+              label: 'Bulletins sur la Loi sur l’accès à l’information et la Loi sur la protection des renseignements personnels'
               label_display: 0
               region: bottom_left
               view_mode: full
@@ -2422,17 +2723,19 @@ source:
           static_context: {  }
     -
       name: open_maps
-      title: 'Open Maps'
-      language: en
+      title: 'Cartes ouvertes'
+      language: fr
       body: |
-        <p>Open Maps provides access to the Government of Canada’s geospatial
-        information. You can combine, visualize, and analyze geospatial data
-        and collaborate with other Canadians.</p>
-        <p>Open Maps is a work in progress and will expand and improve over the
-        coming months. Check back for updates, and please
-        <a href="[site:url]forms/contact-us">let us know what
-        you think</a>.</p>
-      alias: /open-maps
+        <p>Les Cartes ouvertes donnent accès à l’information géospatiale du
+        gouvernement du Canada. Vous pouvez regrouper, visualiser et analyser
+        les données géospatiales, et collaborer avec les autres Canadiens et
+        Canadiennes.</p>
+        <p>L’initiative Cartes ouvertes est un projet en constante evolution
+        qui prendra de l’ampleur et sera amélioré au cours des prochains mois.
+        Surveillez les mises à jour et
+        <a href="[site:url]/formulaire/faites-nous-part-de-vos-commentaires">
+        faites-nous part de vos commentaires.</a></p>
+      alias: /cartes-ouvertes
       queue: open_maps
       panelizer:
         -
@@ -2447,13 +2750,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top_left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top_left
               weight: 1
@@ -2473,49 +2776,49 @@ source:
               weight: 2
             -
               id: 'block_content:block_open_maps'
-              label: 'Find data and view it on a map'
+              label: 'Trouvez des données et visualisez-les sur une carte'
               label_display: 0
               region: middle
               view_mode: featured
               weight: 3
             -
               id: 'views_block:ext_core_ckan-block_2'
-              label: 'Latest datasets'
+              label: 'Données nouvelles et mises à jour'
               label_display: visible
               region: bottom_right
               view_mode: full
               weight: 5
             -
               id: 'block_content:maps_find'
-              label: 'Find Open Maps'
+              label: 'Trouver des Cartes ouvertes'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 5
             -
               id: 'block_content:maps_about'
-              label: 'About Open Maps'
+              label: 'Au sujet des Cartes ouvertes'
               label_display: 0
               region: bottom_middle
               view_mode: full
               weight: 5
             -
               id: 'block_content:maps_working'
-              label: 'Working with data and api'
+              label: 'Utilisation des jeux de données et les API'
               label_display: 0
               region: bottom_left
               view_mode: full
               weight: 10
             -
               id: 'block_content:maps_faq'
-              label: 'Frequently Asked Questions'
+              label: 'Foire aux questions'
               label_display: 0
               region: bottom_middle
               view_mode: full
               weight: 10
             -
               id: 'views_block:blocks-block_1'
-              label: Spotlight
+              label: Projecteur
               label_display: 0
               region: bottom
               view_mode: full
@@ -2589,17 +2892,18 @@ source:
           static_context: {  }
     -
       name: open_by_default_pilot
-      title: 'Open by Default Pilot'
-      language: en
+      title: 'Projet pilote de l’« Ouverture par défaut »'
+      language: fr
       body: |
-        <p>The Open by Default pilot is your backstage pass to the work of four
-        government departments: Canadian Heritage, Environment and Climate
-        Change Canada, Natural Resources Canada and Treasury Board of Canada
-        Secretariat. The goal is to give you a snapshot of Government of Canada
-        documents as they’re being created. The Government of Canada works for
-        Canadians, so we believe you should know what we’re doing
-        behind-the-scenes.</p>
-      alias: /open-by-default-pilot
+        <p>Le projet pilote « Ouvert par défaut » est votre laissez-passer pour
+        visiter les coulisses du travail de quatre ministères : Patrimoine
+        canadien, Environnement et Changement climatique Canada, Ressources
+        naturelles Canada et le Secrétariat du Conseil du Trésor du Canada.
+        L’objectif est de vous offrir un aperçu des documents du gouvernement
+        du Canada alors même qu’ils sont créés. Le gouvernement du Canada
+        travaille pour les Canadiens et donc nous croyons que vous devriez
+        savoir ce que nous faisons en arrière-scène.</p>
+      alias: /pilote-ouverture-par-defaut
       panelizer:
         -
           view_mode: page_manager
@@ -2613,40 +2917,40 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top
               weight: 2
             -
               id: 'block_content:open_default_pilot_explore'
-              label: 'Explore Open by Default documents'
+              label: 'Explorer les documents ouverts par défaut'
               label_display: 0
               region: top_left
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_default_pilot_about'
-              label: 'About the Open by Default pilot project'
+              label: 'Au sujet du projet pilote « Ouvert par défaut »'
               label_display: 0
               region: top_right
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_default_pilot_contact'
-              label: 'Contact Us'
+              label: 'Contactez-nous'
               label_display: 0
               region: top_left
               view_mode: full
               weight: 1
             -
               id: 'block_content:open_default_pilot_dev'
-              label: 'In Development'
+              label: 'En développement'
               label_display: 0
               region: bottom
               view_mode: full
@@ -2720,61 +3024,80 @@ source:
           static_context: {  }
     -
       name: open_by_default_about
-      title: 'About the Open by Default Pilot'
-      language: en
+      title: 'Au sujet du projet pilote « Ouvert par défaut »'
+      language: fr
       body: |
         <blockquote>
-        <p>It is time to shine more light on government to ensure it remains
-        focused on the people it serves. Government and its information should
-        be open by default.</p>
-        <footer>Prime Minister Justin Trudeau</footer></blockquote>
-        <h2>Why was the Open by Default pilot created?</h2>
-        <p>The Open by Default pilot demonstrates proactive release of working
-        information which supports government transparency and accountability.
-        This pilot will help us clear the path as we maximize the ongoing
-        release of information across government.</p>
-        <h2>What kind of documents can be found using the Open by Default
-        pilot?</h2>
-        <p>Documents available through the Open by Default Pilot are snapshots
-        of works-in-progress from Government of Canada public servants, shared
-        for your exploration. These can include field notes, research
-        documents, reporting documents and organizational charts from any of
-        the four participating government departments.</p>
-        <h2>Who is participating in the Open by Default pilot, and why?</h2>
-        <p>Four government departments are offering documents for the pilot:
-          Canadian Heritage, Environment and Climate Change Canada, Natural
-           Resources Canada, and Treasury Board of Canada Secretariat. These
-           departments are participating in order to provide a sample of the
-           government’s scientific and cultural research to public researchers,
-           businesses and curious citizens. We are expanding our efforts at
-           opening data and information to pursue goals with Canadians
-           cooperatively, whether you’re a professor, a student, public
-           servant, or engaged citizen. The Government of Canada would like to
-           thank the Canada Science and Technology Museums Corporation (CSTMC)
-           for its help in developing the Open by Default pilot. In February
-           2016, the CSTMC launched its own open by default portal, called
-           <a href="https://documents.techno-science.ca/en/index.htm">Open
-           Heritage</a>.</p>
-        <h2>How can you use the Open by Default pilot?</h2>
-        <p>This pilot provides direct access to working documents that we hope
-        will provide insight into the work your government is doing and lead to
-        greater collaboration. For example, let’s say you’re a university
-        professor researching climate change. You’re browsing Open by Default
-        and discover an interesting document owned by Environment and Climate
-        Change Canada (ECCC). You connect with a Government of Canada
-        researcher and share information with one another. From this
-        interaction, you receive an expanded research package that you can
-        share with other academics and ECCC has received more information they
-        can include in their own research.</p>
-        <p>The most important part of this pilot is you. Have a look backstage,
-        discover a new way to connect with your government and
-        <a href="[site:url]forms/contact-us">contact us</a> to let us know what
-        you think.</p>
-        <p>For more information on re-using information released by the Open by
-        Default pilot, please refer to Canada’s
-        <a href="[site:url]open-government-licence-canada">Open Government
-        Licence</a>.</p>
-      alias: /about-open-by-default
+        <p>Il est temps de sortir le gouvernement de l’ombre pour que celui-ci
+        soit réellement au service de la population. Le gouvernement et les
+        renseignements du gouvernement devraient être ouverts par défaut.</p>
+        <footer>Justin Trudeau, premier ministre</footer></blockquote>
+
+        <h2>Pourquoi le projet pilote « Ouvert par défaut » a-t-il été
+        créé?</h2>
+
+        <p>Le projet pilote « Ouvert par défaut » montre comment s’effectue la
+        publication proactive des renseignements de travail qui appuient la
+        transparence et l’imputabilité du gouvernement. Ce projet pilote nous
+        aidera à ouvrir la voie à mesure que nous maximisons la communication
+        continue des renseignements dans l’ensemble du gouvernement.</p>
+
+        <h2>Quelle sorte de document peut-on trouver au moyen du projet pilote
+        «&nbsp;Ouvert par défaut&nbsp;»?</h2>
+
+        <p>Les documents disponibles au moyen du projet pilote «&nbsp;Ouvert
+        par défaut&nbsp;» sont des instantanés du travail en cours mené par les
+        fonctionnaires du gouvernement du Canada divulgués pour que vous les
+        exploreriez. Ils peuvent comprendre des notes sur le terrain, des
+        documents de recherche, des rapports et des organigrammes de l’un des
+        quatre ministères participants.</p>
+
+        <h2>Qui participe au projet pilote «&nbsp;Ouvert par défaut&nbsp;» et
+        pourquoi?</h2>
+
+        <p>Quatre ministères offrent des documents pour le projet pilote&nbsp;:
+          Patrimoine canadien, Environnement et Changement climatique Canada,
+          Ressources naturelles Canada et le Secrétariat du Conseil du Trésor
+          du Canada. Ces ministères participent afin de fournir un échantillon
+          de la recherche scientifique et culturelle du gouvernement aux
+          chercheurs publics, aux entreprises et aux citoyens curieux. Nous
+          approfondissons nos efforts dans l’ouverture des données et de
+          l’information afin d’atteindre nos objectifs de manière coopérative
+          avec les Canadiens, que vous soyez un professeur, un étudiant, un
+          fonctionnaire ou un citoyen engagé. Le gouvernement du Canada tient
+          à remercier la Société des musées de sciences et technologies du
+          Canada (SMSTC) pour son aide dans l’élaboration du projet pilote
+          «&nbsp;Ouvert par défaut&nbsp;». En février&nbsp;2016, la SMSTC a
+          lancé son propre portail ouvert par défaut nommé&nbsp;
+          <a href="https://documents.techno-science.ca/fr/index.htm">Patrimoine
+          ouvert</a>.</p>
+
+        <h2>Comment pouvez-vous utiliser le projet pilote « Ouvert par
+        défaut »?</h2>
+
+        <p>Ce projet pilote offre un accès direct aux documents de travail qui,
+        nous l’espérons, fournira des renseignements dans le travail que votre
+        gouvernement effectue et donnera lieu à une meilleure collaboration.
+        Par exemple, disons que vous êtes un professeur universitaire étudiant
+        les changements climatiques. Vous parcourez le portail « Ouvert par
+        défaut » et découvrez un document intéressant appartenant à
+        Environnement et Changement climatique Canada (ECCC). Vous
+        communiquez avec un chercheur du gouvernement du Canada et échangez
+        des renseignements avec un autre. Grâce à cette interaction, vous avez
+        reçu une trousse de recherche approfondie que vous pouvez distribuer à
+        d’autres universitaires et ECCC a reçu de renseignements qu’il peut
+        inclure dans ses propres recherches.</p>
+
+        <p>La partie la plus importante de ce projet pilote est vous. Visitez
+        les coulisses, découvrez une nouvelle façon d’interagir avec votre
+        gouvernement et <a href="http://ouvert.canada.ca/fr/formulaire/faites-nous-part-de-vos-commentaires">
+        communiquez avec nous</a> pour nous faire part de vos commentaires.</p>
+
+        <p>Pour en savoir plus au sujet de la réutilisation des renseignements
+        diffusés dans le cadre du projet pilote « Ouvert par défaut »,
+        veuillez consulter la <a href="http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada">
+        licence du gouvernement ouvert</a> du Canada.</p>
+      alias: /au-sujet-pilote-ouvert-par-defaut
       panelizer:
         -
           view_mode: page_manager
@@ -2837,28 +3160,39 @@ source:
           static_context: {  }
     -
       name: open_gov_across_canada
-      title: 'Open Government Across Canada'
-      language: en
+      title: 'Gouvernement ouvert à travers le Canada'
+      language: fr
       body: |
-        <p>From coast to coast to coast Canadian provinces, territories and municipalities are joining the conversation on open government. Here you will find information about open government activities across the country, and tools to help get your jurisdiction engaged in open government.</p>
+        <p>D’un océan à l’autre, les provinces, territoires et municipalités
+        canadiens se joignent à la conversation au sujet du gouvernement
+        ouvert. Vous trouverez ici de l’information au sujet des activités
+        liées au gouvernement ouvert partout au pays, et des outils qui
+        aideront votre administration à s’engager dans un gouvernement
+        ouvert.</p>
         <ul>
-          <li><a href="#toc1">Open Government Programs in Canada</a>
+          <li><a href="#toc1">Programmes liés au gouvernement ouvert au Canada</a>
           <ul>
-            <li><a href="#overlay_0">Open Provinces</a></li>
-            <li><a href="#overlay_1">Open Municipalities</a></li>
-            <li><a href="#overlay_2">Open Initiatives</a></li>
+            <li><a href="#overlay_0">Provinces ouvertes</a></li>
+            <li><a href="#overlay_1">Municipalités ouvertes</a></li>
+            <li><a href="#overlay_2">Initiatives ouvertes</a></li>
           </ul>
           </li>
-          <li><a href="#toc2">Events Calendar</a></li>
-          <li><a href="#toc3">Interact</a></li>
-          <li><a href="#toc4">Open Government Toolkit</a></li>
-          <li><a href="#toc5">Open Government Licence</a></li>
-          <li><a href="#toc6">Developers' Toolkit: Code for Canada</a></li>
+          <li><a href="#toc2">Calendrier des événements</a></li>
+          <li><a href="#toc3">Interagissez</a></li>
+          <li><a href="#toc4">Boîte à outils du gouvernement ouvert</a></li>
+          <li><a href="#toc5">Licence gouvernement ouvert</a></li>
+          <li><a href="#toc6">Trousse du développeur : codez pour le Canada</a>
+          </li>
         </ul>
-        <h2 id="toc1">Open Government Programs in Canada</h2>
-        <p>Click on the map below to learn more about Open Government programs.</p>
-        <p>If you know of a Canadian jurisdiction with an Open Government program that is not listed below, please&nbsp;<a href="[uuid-link:node:9a03a23d-e6c1-4e54-bd9a-11ceb4f62abb]">contact us</a>&nbsp;to have it added so we can help to promote it.</p>
-        <div class="wb-geomap" data-wb-geomap="{ &quot;layersFile&quot;: &quot;[site:url]sites/default/files/kml/open-config-en.js&quot; }" id="location_map">
+        <h2 id="toc1">Programmes liés au gouvernement ouvert au Canada</h2>
+        <p>Cliquez sur la carte ci-dessous pour en apprendre davantage sur les
+        programmes liés au gouvernement ouvert.</p>
+        <p>Si vous connaissez une administration canadienne ayant un programme
+        du gouvernement ouvert au Canada qui n’est pas mentionné ci-dessous,
+        veuillez <a href="/fr/formulaire/faites-nous-part-de-vos-commentaires">
+        communiquer avec nous</a> pour le faire ajouter afin que nous puissions
+        en faire la promotion.</p>
+        <div class="wb-geomap" data-wb-geomap="{ &quot;layersFile&quot;: &quot;[site:url]/sites/default/files/kml/open-config-fr.js&quot; }" id="location_map">
         <div class="row">
         <div class="col-md-9">
         <div class="wb-geomap-map">
@@ -2878,7 +3212,7 @@ source:
         </div>
         </div>
         </div>
-      alias: /maps/open-data-canada
+      alias: /cartes/donnees-ouvertes-au-canada
       queue: front_page
       panelizer:
         -
@@ -2893,47 +3227,47 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: 0
               region: top
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: top
               weight: 2
             -
               id: 'block_content:open_gov_across_canada_events'
-              label: 'Events Calendar'
+              label: 'Calendrier des événements'
               label_display: visible
               region: top_left
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_gov_across_canada_interact'
-              label: 'Interact'
+              label: 'Interagissez'
               label_display: visible
               region: top_right
               view_mode: full
               weight: 0
             -
               id: 'block_content:open_gov_across_canada_toolkit'
-              label: 'Open Government Toolkit'
+              label: 'Boîte à outils du gouvernement ouvert'
               label_display: visible
               region: top_left
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_gov_across_canada_license'
-              label: 'License'
+              label: 'Licence gouvernement ouvert'
               label_display: visible
               region: top_right
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_gov_across_canada_dev_toolkit'
-              label: 'Developers Toolkit: Code for Canada'
+              label: 'Trousse du développeur : codez pour le Canada'
               label_display: visible
               region: top_left
               view_mode: full
@@ -3013,6 +3347,10 @@ process:
     plugin: skip_on_empty
     method: row
     source: title
+  nid:
+    plugin: migration
+    migration: od_ext_node_landing_page
+    source: name
   uid:
     plugin: migration
     migration: od_ext_db_user
@@ -3030,7 +3368,12 @@ process:
     plugin: default_value
     default_value: rich_text
   field_queue: queue
-  langcode: language
+  langcode:
+    plugin: default_value
+    default_value: "fr"
+  content_translation_source:
+    plugin: default_value
+    default_value: "en"
   path/pathauto:
     plugin: default_value
     default_value: 0
@@ -3060,10 +3403,12 @@ process:
       panels_display/static_context: static_context
 destination:
   plugin: 'entity:node'
+  translations: true
 migration_dependencies:
   required:
-    - od_ext_block_basic
-    - od_ext_block_search
-    - od_ext_block_spotlight
+    - od_ext_node_landing_page
+    - od_ext_block_basic_translation
+    - od_ext_block_search_translation
+    - od_ext_block_spotlight_translation
     - od_ext_media_slideshow
     - od_ext_db_user

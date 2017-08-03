@@ -31,6 +31,7 @@ process:
   changed: changed
   status: status
   thread: thread
+  langcode: language
   'comment_body/value': comment_body
   'comment_body/format':
     plugin: default_value

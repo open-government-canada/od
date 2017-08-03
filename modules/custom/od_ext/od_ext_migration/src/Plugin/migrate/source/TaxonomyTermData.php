@@ -65,6 +65,11 @@ class TaxonomyTermData extends SqlBase {
    */
   public function prepareRow(Row $row) {
 
+    // Translation support.
+    if (!empty($row->getSourceProperty('translations'))) {
+      $row->setSourceProperty('language', 'fr');
+    }
+
     // Taxonomy vocabularies brought in statically for dependency reasons with
     // field configs yet we still need some internal mappings for subsequent
     // db migration to work based on old vid key.
@@ -88,6 +93,7 @@ class TaxonomyTermData extends SqlBase {
 
       case 7:
         $vid = 'app_freetags';
+        $row->setSourceProperty('language', 'en');
         break;
 
       case 8:
@@ -120,6 +126,7 @@ class TaxonomyTermData extends SqlBase {
 
       case 18:
         $vid = 'commitment_freetags';
+        $row->setSourceProperty('language', 'en');
         break;
 
       case 19:

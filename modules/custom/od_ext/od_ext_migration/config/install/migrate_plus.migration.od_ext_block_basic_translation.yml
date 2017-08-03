@@ -1,0 +1,795 @@
+id: od_ext_block_basic_translation
+migration_tags: null
+migration_group: od_translation
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Embedded data import for custom block types (basic)'
+source:
+  plugin: embedded_data
+  translations: true
+  # Enforce default language to french
+  default_lang: false
+  data_rows:
+    - bid: '404'
+      language: 'fr'
+      title: '404'
+      body: |
+        <div class="box">
+          <div class="row">
+            <div class="col-xs-3 col-sm-2 col-md-2 text-center mrgn-tp-md">
+              <span class="glyphicon glyphicon-warning-sign glyphicon-error">
+              </span>
+            </div>
+            <div class="col-xs-9 col-sm-10 col-md-10">
+              <h2 class="mrgn-tp-md">Nous ne pouvons trouver cette page Web</h2>
+              <p class="pagetag"><b>Erreur 404</b></p>
+            </div>
+          </div>
+          <p class="mrgn-tp-md">Nous sommes désolés que vous ayez abouti ici.
+          Il arrive parfois qu'une page ait été déplacée ou supprimée.
+          Heureusement, nous pouvons vous aider à trouver ce que vous cherchez.
+          Que faire?</p>
+          <ul>
+            <li>Retournez à la <a href="http://www.canada.ca/fr/index.html">
+            page d;accueil</a>;</li>
+            <li>Vérifiez dans les <a href="http://www.collectionscanada.gc.ca/012/012-412.01-f.html">
+            Archives Web du gouvernement du Canada</a> s'il existe une version
+            antérieure;</li>
+            <li><a href="https://www.canada.ca/fr/contact.html">
+            Contactez-nous</a> pour de l'assistance.</li>
+          </ul>
+        </div>
+    - bid: 'pillars'
+      language: 'fr'
+      title: 'Pillars'
+      body: |
+        <section class="pillars mrgn-tp-md mrgn-bttm-md">
+          <h2>Suivre:</h2>
+          <ul>
+            <li>
+              <a href="https://twitter.com/GouvOuvertCan" title="Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="wb-inv">Twitter</span></a>
+            </li>
+            <li>
+              <a href="http://ouvert.canada.ca/fr/fils-rss" title="RSS">
+              <i class="fa fa-rss"></i>
+              <span class="wb-inv">RSS</span></a>
+            </li>
+          </ul>
+        </section>
+    - bid: 'open_data'
+      language: 'fr'
+      title: 'Données ouvertes'
+      body: |
+        <h2 class="h4">
+          <span class="pull-left"></span>
+          <a href="[site:url]/donnees-ouvertes">Données ouvertes</a>
+        </h2>
+        <p>Effectuez des recherches dans les données du gouvernement du Canada,
+        apprenez comment travailler avec les jeux de données, et voyez comment
+        nos données ont été utilisées.</p>
+    - bid: 'open_info'
+      language: 'fr'
+      title: 'Information ouverte'
+      body: |
+        <h2 class="h4">
+          <span class="pull-left"></span>
+          <a href="[site:url]/information-ouverte">Information ouverte</a>
+        </h2>
+        <p>Faites des recherches dans les dossiers numériques du gouvernement
+        du Canada, les sommaires de demandes d’accès à l’information et les
+        contrats de plus de 10 000 $.</p>
+    - bid: 'open_dialogue'
+      language: 'fr'
+      title: 'Dialogue ouvert'
+      body: |
+        <h2 class="h4">
+          <span class="pull-left"></span>
+          <a href="[site:url]/dialogue-ouvert">Dialogue ouvert</a>
+        </h2>
+        <p>Interagissez avec les experts et les partisans du gouvernement
+        ouvert, et partagez vos idées sur les approches novatrices nouvelles du
+        gouvernement ouvert.</p>
+    - bid: 'about_open_gov'
+      language: 'fr'
+      title: 'Au sujet du gouvernement ouvert'
+      body: |
+        <h2 class="h4">
+          <span class="pull-left"></span>
+          <a href="[site:url]/apropos-gouvernement-ouvert">Au sujet du
+          gouvernement ouvert</a>
+        </h2>
+        <p>Explorez les engagements du gouvernement ouvert du Canada, découvrez
+        les programmes du gouvernement ouvert dans tout le Canada et
+        apprenez-en davantage sur la licence de gouvernement ouvert.</p>
+    - bid: 'open_data_search'
+      language: 'fr'
+      title: 'Effectuez une recherche dans le portail des données ouvertes'
+      body: |
+        <h2 class="h4"><a href="[site:url]/ckan/fr/dataset">Effectuez une
+        recherche dans le portail des données ouvertes</a></h2>
+        <p>Vous souhaitez obtenir des renseignements sur les services du
+        gouvernement du Canada ou consulter des données financières, des
+        données démographiques nationales ou des cartes à haute résolution?
+        Vous trouverez tout ce dont vous avez besoin et plus encore dans notre
+        Portail de données ouvertes, votre guichet unique pour les jeux de
+        données ouvertes du gouvernement du Canada.</p>
+    - bid: 'open_data_maps'
+      language: 'fr'
+      title: 'Cartes ouvertes'
+      body: |
+        <h2 class="h4"><a href="[site:url]/cartes-ouvertes">Cartes ouvertes</a></h2>
+        <p>Analysez les données, les applications et les services géospatiaux
+        du gouvernement du Canada et créez des cartes personnalisées.</p>
+    - bid: 'open_data_inventory'
+      language: 'fr'
+      title: 'Répertoire des données ouvertes'
+      body: |
+        <h2 class="h4"><a href="[site:url]/search/inventory">Répertoire des
+        données ouvertes</a></h2>
+        <p>Examiner les répertoire des données ouvertes présentés par les
+        ministères et organismes du gouvernement du Canada.</p>
+    - bid: 'open_data_101'
+      language: 'fr'
+      title: 'L''abc des données ouvertes'
+      body: |
+        <h2 class="h4"><a href="[site:url]/jeux-de-donnees-suggeres">L'abc des
+        données ouvertes</a></h2>
+        <p>Découvrez ce que sont les données ouvertes, apprenez comment en
+        tirer le maximum et explorez les principes qui orientent les
+        initiatives de Données ouvertes du gouvernement du Canada.</p>
+    - bid: 'open_data_api'
+      language: 'fr'
+      title: 'Utilisation des jeux de données et les API'
+      body: |
+        <h2 class="h4"><a href="[site:url]/utilisation-donnees">Utilisation des
+        jeux de données et les API</a></h2>
+        <p>Apprenez-en davantage sur l’utilisation des divers formats de
+        données, notamment les interfaces de programmation d’applications
+        (API).</p>
+    - bid: 'open_data_suggest'
+      language: 'fr'
+      title: 'Proposer un jeu de données'
+      body: |
+        <h2 class="h4"><a href="[site:url]/jeux-de-donnees-suggeres">Proposer un
+        jeu de données</a></h2>
+        <p>Vous ne trouvez pas le jeu de données que vous cherchez?
+        Dites-le-nous!</p>
+    - bid: 'open_data_apps'
+      language: 'fr'
+      title: 'Galerie d''applications'
+      body: |
+        <h2 class="h4"><a href="[site:url]/apps">Galerie d'applications</a></h2>
+        <p>Consultez la galerie et téléchargez des applications qui vous ont
+        été conçues par le public canadien ou le gouvernement du Canada, et qui
+        utilisent des données ouvertes.</p>
+    - bid: 'open_data_submit_app'
+      language: 'fr'
+      title: 'Présentez votre application'
+      body: |
+        <h2 class="h4"><a href="[site:url]/formulaire/informez-nous-de-votre-application">
+        Présentez votre application</a></h2>
+        <p>Avez-vous créé une application à partir de données ouvertes ou de
+        l’information ouverte du GC? Si oui, faites-nous-en part et nous la
+        partagerons avec les Canadiens et les Canadiennes dans notre
+        <a href="[site:url]/apps">galerie d’applications</a>.</p>
+    - bid: 'open_info_search'
+      language: 'fr'
+      title: 'Effectuez une recherche dans le Portail d’information ouverte'
+      body: |
+        <h2 class="h4"><a href="[site:url]/ckan/fr/dataset?portal_type=info&q=">
+        Effectuez une recherche dans le Portail d’information ouverte</a></h2>
+        <p>Explorez notre Portail d’information ouverte afin d’accéder aux
+        publications électroniques. N’hésitez pas à nous faire part de vos
+        <a href="[site:url]/formulaire/faites-nous-part-de-vos-commentaires">
+        commentaires</a>.</p>
+    - bid: 'open_info_access'
+      language: 'fr'
+      title: 'Accès à l''information'
+      body: |
+        <h2 class="h4"><a href="[site:url]/acces-linformation">
+        Accès à l'information</a></h2>
+        <p>Apprenez-en davantage sur la législation canadienne en matière
+        d’accès à l’information, faites des recherches dans des sommaires des
+        demandes d’accès à l’information et présentez une demande informelle
+        d’accès à l’information.</p>
+    - bid: 'open_info_reporting'
+      language: 'fr'
+      title: 'Établissement de rapports à l’échelle du gouvernement'
+      body: |
+        <h2 class="h4">
+          <a href="http://www.canada.ca/fr/transparence/rapports.html">
+          Établissement de rapports à l’échelle du gouvernement</a>
+        </h2>
+        <p>Faites des recherches dans la base de données des dépenses, dans les
+        rapports financiers trimestriels ainsi que dans d'autres sources de
+        renseignements que le gouvernement du Canada divulgue de façon
+        proactive afin qu'il soit plus facile pour les Canadiens et le
+        Parlement de demander des comptes au gouvernement.</p>
+    - bid: 'open_info_obd'
+      language: 'fr'
+      title: 'Projet pilote « Ouvert par défaut »'
+      body: |
+        <h2 class="h4"><a href="[site:url]/pilote-ouverture-par-defaut">
+        Projet pilote « Ouvert par défaut »</a></h2>
+        <p>Explorez les documents de travail fournis par quatre ministères du
+        gouvernement du Canada dans le cadre de notre engagement à rendre le
+        gouvernement plus ouvert et transparent.</p>
+    - bid: 'open_info_pd'
+      language: 'fr'
+      title: 'Divulgation proactive'
+      body: |
+        <h2 class="h4"><a href="[site:url]/divulgation-proactive">
+          Divulgation proactive
+        </a></h2>
+        <p>Consultez les rapports qui ont été divulgués de façon proactive par
+        les ministères et les organismes, y compris des renseignements sur les
+        finances, les ressources humaines et les opérations du gouvernement.</p>
+    - bid: 'open_info_plan'
+      language: 'fr'
+      title: 'Plans de mise en œuvre sur le gouvernement ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/contenu/plans-mise-oeuvre-gouvernement-ouvert">
+        Plans de mise en œuvre sur le gouvernement ouvert</a></h2>
+        <p>Examiner les plans qui décrivent les approches que préconiseront les
+        organisations du gouvernement du Canada afin de satisfaire aux exigences
+        de la Directive sur le gouvernement ouvert.</p>
+    - bid: 'open_info_expend'
+      language: 'fr'
+      title: 'Gestion des dépenses du gouvernement'
+      body: |
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/ems-sgd/edb-bdd/index-fra.html">
+          Gestion des dépenses du gouvernement
+        </a></h2>
+        <p>Renseignements sur la façon dont le gouvernement dépense et gère
+        l’argent, y compris des liens vers le budget fédéral, les publications
+        du Budget des dépenses et les lois de crédit.</p>
+    - bid: 'open_info_lib'
+      language: 'fr'
+      title: 'Bibliothèque scientifique fédérale'
+      body: |
+        <h2 class="h4"><a href="http://science-libraries.canada.ca/fra/accueil/">
+        Bibliothèque scientifique fédérale</a></h2>
+        <p>La Bibliothèque scientifique fédérale (BSF) est un portail
+        libre-service qui vous permet d'accéder aux services de bibliothèque et
+        d'interroger les collections de documents imprimés et les dépôts de
+        publications en ligne de sept ministères et organismes à vocation
+        scientifique à partir d'une seule interface.</p>
+    - bid: 'open_info_reg'
+      language: 'fr'
+      title: 'Plans prospectifs de la réglementation'
+      body: |
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/tbs-sct/ar-lr/gwfrp-ppreg-fra.asp">
+          Plans prospectifs de la réglementation
+        </a></h2>
+        <p>Liste de liens, par organisme, à des renseignements sur les
+        modifications ou les propositions réglementaires prévues que les
+        ministères ou les organismes ont l'intention de présenter au cours
+        d'une période donnée.</p>
+    - bid: 'open_info_biennial_plan'
+      language: 'fr'
+      title: 'Le troisième plan biannuel dans le cadre du Partenariat pour un Gouvernement Ouvert (2016-2018)'
+      body: |
+        <h2 class="h4"><a href="[site:url]/contenu/troisieme-plan-biannuel-partenariat-gouvernement-ouvert">
+        Le troisième plan biannuel dans le cadre du Partenariat pour un
+        Gouvernement Ouvert (2016-2018)</a>
+        </h2>
+        <p>Apprenez-en davantage sur les engagements du Canada envers un
+        gouvernement plus ouvert, inclusif et accessible.</p>
+    - bid: 'open_info_biennial_progress'
+      language: 'fr'
+      title: 'Système de suivi du troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/contenu/systeme-du-suivi-du-troisieme-plan-biannuel-cadre-du-partenariat-gouvernement-ouvert">
+          Système de suivi du troisième Plan biannuel dans le cadre du
+          Partenariat pour un gouvernement ouvert
+        </a></h2>
+        <p>Découvrez comment le gouvernement du Canada progresse par rapport à
+        chacun des engagements qu’il a pris dans le Plan gouvernemental ouvert.
+        </p>
+    - bid: 'open_info_directive'
+      language: 'fr'
+      title: 'Directive sur le gouvernement ouvert'
+      body: |
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=28108">
+        Directive sur le gouvernement ouvert</a>
+        </h2>
+        <p>La Directive sur le gouvernement ouvert est la politique « ouverte
+        par défaut » du Canada. Elle prévoit des exigences claires et
+        obligatoires qui devront être respectées par les ministères qui feront
+        en sorte que les Canadiens auront accès au plus grand nombre possible
+        de renseignements et de données du gouvernement.</p>
+    - bid: 'open_info_license'
+      language: 'fr'
+      title: 'Licence du gouvernement ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/licence-du-gouvernement-ouvert-canada">
+          Licence du gouvernement ouvert
+        </a></h2>
+        <p>Cette licence facile à comprendre encourage la réutilisation
+        maximale du contenu publié par le gouvernement du Canada.</p>
+    - bid: 'open_info_partnership'
+      language: 'fr'
+      title: 'Les Plans du Canada dans le cadre du Partenariat pour un Gouvernement Ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/contenu/plans-du-canada-cadre-du-partenariat-gouvernement-ouvert">
+        Les Plans du Canada dans le cadre du Partenariat pour un Gouvernement
+        Ouvert</a>
+        </h2>
+        <p>Consultez l’historique du gouvernement ouvert au Canada.</p>
+    - bid: 'open_info_canada'
+      language: 'fr'
+      title: 'Gouvernement ouvert partout au Canada'
+      body: |
+        <h2 class="h4"><a href="[site:url]/cartes/donnees-ouvertes-au-canada">
+          Gouvernement ouvert partout au Canada
+        </a></h2>
+        <p>Explorez les programmes et les activités sur le gouvernement ouvert
+        d’un océan à l’autre, et obtenez des renseignements et des outils qui
+        vous aideront à créer votre propre portail, y compris la mise en œuvre
+        de la licence du gouvernement ouvert dans votre organisation.</p>
+    - bid: 'open_info_faq'
+      language: 'fr'
+      title: 'Foire aux questions'
+      body: |
+        <h2 class="h4"><a href="[site:url]/contenu/foire-aux-questionss">
+        Foire aux questions</a>
+        </h2>
+        <p>Réponses aux questions courantes concernant les activités sur le
+        gouvernement ouvert du Canada.</p>
+    - bid: 'open_info_analytics'
+      language: 'fr'
+      title: 'Analyses concernant le gouvernement ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/contenu/analyses-concernant-gouvernement-ouvert">
+        Analyses concernant le gouvernement ouvert
+        </a></h2>
+        <p>Apprenez-en davantage sur les principaux jeux de données
+        téléchargés, les jeux de données les plus récents classés par
+        ministère, les visites par province, etc.</p>
+    - bid: 'open_dialog_partnership'
+      language: 'fr'
+      title: 'Les Plans du Canada dans le cadre du Partenariat pour un Gouvernement Ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/contenu/plans-du-canada-cadre-du-partenariat-gouvernement-ouvert">
+        Les Plans du Canada dans le cadre du Partenariat pour un Gouvernement Ouvert
+        </a></h2>
+        <p>Apprenez-en davantage sur l’engagement du Canada envers le
+        Partenariat pour un gouvernement ouvert (PGO), et lisez les anciens
+        plans de même que les plans actuels qui ont servi à formaliser la
+        création d’un gouvernement ouvert, imputable et transparent.</p>
+    - bid: 'open_dialog_communities'
+      language: 'fr'
+      title: 'Collectivités'
+      body: |
+        <h2 class="h4"><a href="[site:url]/collectivites">Collectivités</a></h2>
+        <p>Explorez les données et l’information, et participez à des
+        discussions en fonction de vos champs d’intérêt.</p>
+    - bid: 'open_dialog_subscribe'
+      language: 'fr'
+      title: 'Inscrivez-vous aux mises à jour sur le Gouvernement Ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/formulaire/courriels-gouvernement-ouvert">
+        Inscrivez-vous aux mises à jour sur le Gouvernement Ouvert</a></h2>
+        <p>Inscrivez-vous afin de recevoir des courriels sur le Gouvernement
+        ouvert et soyez parmi les premiers à être informés des nouveaux jeux de
+        données, des nouvelles sources d’information, des consultations à
+        venir et des blogues actuels.</p>
+    - bid: 'open_dialog_blog'
+      language: 'fr'
+      title: 'Blogue sur le Gouvernement ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/blogue">
+        Blogue sur le Gouvernement ouvert</a></h2>
+        <p>Découvrez ce que l’équipe et la collectivité du Gouvernement ouvert
+        ont à dire à propos des activités, des projets, des nouvelles et des
+        événements en lien avec le gouvernement ouvert, et formulez des
+        commentaires à ce sujet.</p>
+    - bid: 'open_dialog_consult'
+      language: 'fr'
+      title: 'Consultations auprès des Canadiens'
+      body: |
+        <h2 class="h4"><a href="http://www1.canada.ca/consultationdescanadiens/">
+        Consultations auprès des Canadiens</a></h2>
+        <p>Vous trouverez ici les informations sur la façon de trouver et de
+        participer dans le gouvernement des activités de consultation Canada.
+        </p>
+    - bid: 'open_dialog_account_login'
+      language: 'fr'
+      title: 'Se connecter'
+      body: |
+        <h2 class="h4"><a href="[site:url]/login">
+        Se connecter</a></h2>
+        <p>Connectez-vous à votre compte sur le Gouvernement ouvert ou créez un
+        nouveau compte.</p>
+    - bid: 'open_dialog_gazette'
+      language: 'fr'
+      title: 'Gazette du Canada'
+      body: |
+        <h2 class="h4"><a href="http://www.gazette.gc.ca/gazette/home-accueil-fra.php">
+        Gazette du Canada</a></h2>
+        <p>Vous trouverez ici les informations sur la façon de trouver et de
+        participer à des consultations réglementaires qui inclut les questions
+        actuelles et passées de la Gazette du Canada.</p>
+    - bid: 'open_dialog_interact'
+      language: 'fr'
+      title: 'Interagir'
+      body: |
+        <section><h3>Interagir</h3>
+        <ul class="lst-spcd"><li><a href="suggested-datasets">Suggest a
+        dataset</a></li>
+          <li><a href="[site:url]/forms/suggest-open-information">Proposez un
+          jeu de données</a></li>
+          <li><a href="[site:url]/apps">Galerie d'applications</a></li>
+        </ul>
+        </section>
+    - bid: 'ati_search'
+      language: 'fr'
+      title: 'Recherche de sommaires d’accès à l’information'
+      body: |
+        <h2 class="h4"><a href="[site:url]/search/ati">Recherche de sommaires
+        d’accès à l’information</a></h2>
+        <p>Effectuez des recherches parmi les sommaires de demandes d’accès à
+        l’information ayant été publiées de façon proactive par les ministères
+        et organismes du gouvernement du Canada.</p>
+    - bid: 'ati_request'
+      language: 'fr'
+      title: 'Demande d’accès à l’information'
+      body: |
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/tbsf-fsct/350-57-fra.aspp">
+        Demande d’accès à l’information</a></h2>
+        <p>Présenter une demande d’accès à l’information en ligne pour les
+        ministères et organismes fédéraux.</p>
+    - bid: 'ati_info_act'
+      language: 'fr'
+      title: 'Loi sur l''accès à l''information'
+      body: |
+        <h2 class="h4"><a href="http://laws-lois.justice.gc.ca/fra/lois/A-1/">
+        Loi sur l'accès à l'information</a></h2>
+        <p>Passez en revue les lois du Canada visant à accroître la
+        transparence en permettant aux Canadiens d’avoir accès aux documents
+        fédéraux et à l’information sur la prestation de services.</p>
+    - bid: 'ati_privacy_act'
+      language: 'fr'
+      title: 'Loi sur la protection des renseignements personnels'
+      body: |
+        <h2 class="h4"><a href="http://laws-lois.justice.gc.ca/fra/lois/P-21/">
+        Loi sur la protection des renseignements personnels</a></h2>
+        <p>Passez en revue les lois du Canada qui protègent les renseignements
+        personnels des gens et leur donnent un droit d’accès aux renseignements
+        personnels les concernant.</p>
+    - bid: 'ati_info_act_priv'
+      language: 'fr'
+      title: 'Bulletins sur la Loi sur l’accès à l’information et la Loi sur la protection des renseignements personnels'
+      body: |
+        <h2 class="h4"><a href="http://infosource.gc.ca/bulletin/bulletin-fra.asp">
+        Bulletins sur la Loi sur l’accès à l’information et la Loi sur la
+        protection des renseignements personnels</a></h2>
+        <p>Passez en revue les lois du Canada visant à accroître la
+        transparence en permettant aux Canadiens d’avoir accès aux documents
+        fédéraux et à l’information sur la prestation de services.</p>
+    - bid: 'maps_find'
+      language: 'fr'
+      title: 'Trouver des Cartes ouvertes'
+      body: |
+        <h2 class="h4"><a href="[site:url]/data/fr/dataset?collection=fgp&q=">
+        Trouver des Cartes ouvertes</a></h2>
+        <p>Commencez à explorer notre répertoire de données géospatiales.</p>
+    - bid: 'maps_about'
+      language: 'fr'
+      title: 'Au sujet des Cartes ouvertes'
+      body: |
+        <h2 class="h4"><a href="[site:url]/au-sujet-cartes-ouvertes">
+        Au sujet des Cartes ouvertes</a></h2>
+        <p>Apprenez-en davantage sur les Cartes ouvertes et leur
+        fonctionnement.</p>
+    - bid: 'maps_working'
+      language: 'fr'
+      title: 'Utilisation des jeux de données et les API'
+      body: |
+        <h2 class="h4"><a href="[site:url]/utilisation-donnees">
+        Utilisation des jeux de données et les API</a></h2>
+        <p>Apprenez-en davantage sur l’utilisation des divers formats de
+        données, notamment les interfaces de programmation d’applications
+        (API).</p>
+    - bid: 'maps_faq'
+      language: 'fr'
+      title: 'Foire aux questions'
+      body: |
+        <h2 class="h4"><a href="[site:url]/contenu/foire-aux-questions">
+        Foire aux questions</a></h2>
+        <p>Réponses aux questions courantes concernant les activités sur le
+        gouvernement ouvert du Canada.</p>
+    - bid: 'open_default_pilot_explore'
+      language: 'fr'
+      title: 'Explorer les documents ouverts par défaut'
+      body: |
+        <h2 class="h4"><a href="[site:url]/ckan/fr/dataset">
+        Explorer les documents ouverts par défaut</a></h2>
+        <p>Recherchez et parcourez les documents de travail fournis par le
+        gouvernement du Canada.</p>
+    - bid: 'open_default_pilot_about'
+      language: 'fr'
+      title: 'Au sujet du projet pilote « Ouvert par défaut »'
+      body: |
+        <h2 class="h4"><a href="[site:url]/au-sujet-pilote-ouvert-par-defaut">
+        Au sujet du projet pilote « Ouvert par défaut »</a></h2>
+        <p>Apprenez-en davantage au sujet du projet pilote « Ouvert par
+        défaut ».</p>
+    - bid: 'open_default_pilot_contact'
+      language: 'fr'
+      title: 'Contactez-nous'
+      body: |
+        <h2 class="h4"><a href="[site:url]/formulaire/faites-nous-part-de-vos-commentaires">
+        Contactez-nous</a></h2>
+        <p>Vos commentaires sont essentiels à la création d’un Canada plus
+        ouvert. Nous voulons savoir comment nous pouvons mieux vous servir.
+        Veuillez nous contacter et nous faire part de vos réflexions quant à la
+        façon dont nous pouvons améliorer l’initiative. « Ouvert par défaut ».
+        </p>
+    - bid: 'open_default_pilot_dev'
+      language: 'fr'
+      title: 'Veuillez noter'
+      body: |
+        <section class="alert alert-info mrgn-tp-lg"><h2>Please note:</h2>
+        <p>Le projet pilote « Ouvert par défaut » donne accès aux documents de
+        travail utilisés par le gouvernement du Canada. La plupart de ces
+        renseignements ne sont pas publiés et peuvent inclure des erreurs ou
+        des omissions. Un grand nombre de documents seront sous la forme
+        d’ébauches, sont habituellement disponibles dans la langue dans
+        laquelle ils ont été créés et pourraient ne pas être complètement
+        accessibles. À moins d’indication contraire, les renseignements sont
+        disponibles en vertu de <a href="[site:url]/licence-du-gouvernement-ouvert-canada">
+        la licence du gouvernement ouvert</a>. Afin d’obtenir les documents
+        dans la langue officielle de votre choix ou dans un format accessible,
+        veuillez <a href="[site:url]/formulaire/faites-nous-part-de-vos-commentaires">
+        communiquer avec nous</a>.</p></section>
+    - bid: 'open_gov_across_canada_events'
+      language: 'fr'
+      title: 'Calendrier des événements'
+      body: |
+        <p id="toc2">Aimeriez-vous participer à une activité du gouvernement
+        ouvert non loin de chez vous? Vous trouverez ci-dessous une liste des
+        plus récents événements liés au gouvernement ouvert qui auront lieu
+        partout au pays. Si vous êtes au courant d’un événement qui n’est pas
+        mentionné dans la liste ci-dessous, veuillez <a href="[site:url]/formulaire/soumettre-evenement-lie-au-gouvernement-ouvert">
+        nous en faire part</a>, et nous l’ajouterons au calendrier.</p>
+        <p><a class="btn btn-success" href="[site:url]/formulaire/soumettre-evenement-lie-au-gouvernement-ouvert" role="button">
+        Soumettre un événement</a></p>
+        <div class="cal-cnt-fluid" id="calendar1"><!-- Insert Calendar --></div>
+        <div class="wb-inv wb-calevt" data-calevt-src="calendar1">
+        <ol>
+          <li>
+          <section><h4><a href="https://www.meetup.com/YOW_CT/">Ottawa Civic Tech</a></h4>
+          <p>Tous les mardis</p>
+          <p>Ottawa (Ontario)</p>
+          </section>
+          </li>
+          <li>
+          <section><h4><a href="http://civictech.ca/codeacross-toronto-2017/">CODE Across Toronto</a></h4>
+          <p><time datetime="2017-03-04">4 mars 2017</time></p>
+          <p>Toronto (Ontario)</p>
+          </section>
+          </li>
+          <li>
+          <section><h4><a href="http://opendataday.org/">Open Data Day</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-03-04">4 mars 2017</time></p>
+          <p>Multiples endroits</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://www.ci-oic.gc.ca/transparenceconference/index.html">Transparence pour le 21<sup>e</sup> siècle </a></h4>
+          <p><time datetime="2017-03-21">21</time>-<time datetime="2017-03-23">23 mars 2017</time></p>
+          <p>Ottawa (Ontario)</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://carleton.ca/cuids/4-0/">Data Day 4.0</a></h4>
+          <p><time datetime="2017-03-29">29 mars 2017</time></p>
+          <p>Université Carleton, Ottawa (Ontario)</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://www.eventbrite.ca/e/discover-data-with-thomson-reuters-thinkdata-works-and-odx-webinar-tickets-33437505479">WEBINAR: Discover Data with Thomson Reuters and ThinkData Works</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-04-18">18 avril 2017</time></p>
+          <p>En ligne</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://codx.ca/odx-begins-cross-canada-tour-open-data-blueprint/">ODX Cross-Canada Tour: Western Canada</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-04-24">24</time>-<time datetime="2017-04-26">26 avril, 2017</time></p>
+          <p>À travers le Canada</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://summit.creativecommons.org/">Creative Commons Summit</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-04-28">28</time>-<time datetime="2017-04-30">30 avril, 2017</time></p>
+          <p>Toronto, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://2017.spaceappschallenge.org/locations/?q=Canada">Space Apps Challenge 2017</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-04-28">28</time>-<time datetime="2017-04-30">30 avril, 2017</time></p>
+          <p>Toronto, Waterloo et Ottawa, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://go-opendata.ca/">Go Open Data Conference</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-05-05">5</time>-<time datetime="2017-05-06">6 mai 2017</time></p>
+          <p>Bibliothèque publique de London, Citi Plaza, 251 Dundas St, London, ON N6A 6H9</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://techleadership.ca/">Tech Leadership Conference</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-05-10">10</time>-<time datetime="2017-05-11">11 mai, 2017</time></p>
+          <p>Waterloo, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="https://od-business-data-curation.eventbrite.com/?aff=opengovcanada" rel="external">Open data for business webinar: Tackling machine-learning complexity for data curation</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-05-23">23 mai, 2017</time></p>
+          <p>Communitech Data Hub, Waterloo, ON ou en ligne</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://iog.ca/third-annual-digital-governance-forum/">3<sup>rd</sup> Annual Digital Governance Forum</a> (disponible en anglais seulement)</h4>
+          <p><time datetime="2017-05-30">30</time>-<time datetime="2017-05-31">31 mai, 2017</time></p>
+          <p>Ottawa, ON</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://opendatasummit.ca/" rel="external">Sommet canadien sur les données ouvertes</a> (disponible en anglais seulement)</h4>
+          <p>Le <time datetime="2017-06-12">12</time> et <time datetime="2017-06-14">14 juin 2017</time></p>
+          <p>Edmonton, Alberta</p>
+          </section></li>
+          <li>
+          <section><h4><a href="http://www.bigdata-toronto.com/">Big Data Conference </a>(disponible en anglais seulement)</h4>
+          <p><time datetime="2017-06-20">20</time>-<time datetime="2017-06-21">21 juin, 2017</time></p>
+          <p>Toronto, ON</p>
+          </section></li>
+          </ol>
+        </div>
+    - bid: 'open_gov_across_canada_toolkit'
+      language: 'fr'
+      title: 'Boîte à outils du gouvernement ouvert'
+      body: |
+        <div class="field-item even"><p id="toc4">Pourquoi réinventer la roue?
+        Voici quelques ressources clés créées par le gouvernement du Canada
+        pour vous aider à mettre en place et à maintenir un programme de
+        gouvernement ouvert au sein de votre organisation.</p>
+        <div class="panel panel-default">
+          <ul class="list-group"><li class="list-group-item">
+          <p><a href="[site:url]/plan-daction-du-canada-pour-un-gouvernement-ouvert">Le
+          troisième Plan biannuel dans le cadre du Partenariat pour un
+          Gouvernement Ouvert</a></p>
+          <p>Apprenez-en davantage sur les progrès que le Canada a réalisés
+          jusqu’à maintenant quant au gouvernement ouvert et pour trouver de
+          l’information sur les engagements que le Canada a pris en vue
+          d’améliorer le gouvernement ouvert au pays et auprès de ses
+          partenaires internationaux.</p>
+          </li>
+          <li class="list-group-item">
+          <p><a href="[site:url]/open-data-principles">L’abc des données
+          ouvertes</a></p>
+          <p>Qu’entend-on par données ouvertes? Pourquoi est-ce important?
+          Apprenez les bases ici.</p>
+          </li>
+          <li class="list-group-item">
+          <p>
+            <a href="[site:url]/contenu/foire-aux-questions">Foire aux questions
+            sur le gouvernement ouvert</a>
+          </p>
+          <p>Foires aux questions (avec réponses!) au sujet du gouvernement ouvert.</p>
+          </li>
+          <li class="list-group-item">
+          <p><a href="https://github.com/ckan/ckan">Plateforme de données
+          ouvertes partagées (CKAN) sur GitHub (en anglais seulement)</a></p>
+          <p>CKAN est un système de gestion des données de source ouverte que
+          vous pouvez télécharger et utiliser gratuitement et que le
+          gouvernement du Canada utilise pour exploiter son propre Portail de
+          données ouvertes.</p>
+          </li>
+          <li class="list-group-item">
+          <p><a href="https://github.com/wet-boew/wet-boew-wpss/releases">Outil
+          de validation des données sur GitHub</a></p>
+          </li>
+          </ul></div>
+        </div>
+    - bid: 'open_gov_across_canada_dev_toolkit'
+      language: 'fr'
+      title: 'Trousse du développeur : codez pour le Canada'
+      body: |
+        <p id="toc6">Accédez aux outils et aux ressources qui vous aideront à
+        mettre au point des applications novatrices et créatives à l'aide de
+        données ouvertes.</p>
+        <div class="panel panel-default">
+          <ul class="list-group"><li class="list-group-item">
+          <p><a href="[site:url]/data/fr/dataset">Effectuez une recherche dans
+          le portail des données ouvertes</a></p>
+          <p>Découvrez les données dont vous avez besoin parmi des centaines de
+          milliers de jeux de données à l'échelle du gouvernement du Canada.</p>
+          </li>
+          <li class="list-group-item">
+          <p><a href="[site:url]/utilisation-donnees">Utilisation des jeux de
+          données et les API</a></p>
+          <p>Apprenez-en davantage sur l'utilisation des divers formats de
+          données, notamment les interfaces de programmation d'applications
+          (API).</p>
+          </li>
+          </ul>
+        </div>
+    - bid: 'open_gov_across_canada_interact'
+      language: 'fr'
+      title: 'Interagissez'
+      body: |
+        <p id="toc3">Examinez les façons suivantes de participer à la
+        collectivité du gouvernement ouvert du Canada.</p>
+        <div class="panel panel-default">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p><a href="[site:url]/jeux-de-donnees-suggeres">Proposez un jeu de
+              données</a></p>
+              <p>Y a-t-il des données du gouvernement du Canada que vous
+              aimeriez consulter? N’hésitez pas à nous en faire part!</p>
+            </li>
+            <li class="list-group-item">
+              <p><a href="[site:url]/formulaire/informez-nous-de-votre-application">
+              Présentez votre application</a></p>
+              <p>Montrez-nous ce que vous avez fait! Envoyez-nous votre
+              application, et elle pourrait se retrouver dans le Portail du
+              gouvernement ouvert.</p>
+            </li>
+            <li class="list-group-item">
+              <p><a href="[site:url]/blogue">Formulez des commentaires sur notre
+              plus récent blogue</a></p>
+              <p>Vos commentaires sont toujours les bienvenus.</p>
+            </li>
+          </ul>
+        </div>
+    - bid: 'open_gov_across_canada_license'
+      language: 'fr'
+      title: 'Licence gouvernement ouvert'
+      body: |
+        <p id="toc5">Apprenez-en davantage sur la Licence du gouvernement
+        ouvert du Canada. Si vous souhaitez mettre en œuvre la licence au sein
+        de votre organisation, consultez notre ligne directrice sur la mise en
+        œuvre.</p>
+        <div class="panel panel-default">
+          <ul class="list-group"><li class="list-group-item">Consultez la
+          <a href="[site:url]/licence-du-gouvernement-ouvert-canada">Licence du
+          gouvernement ouvert</a></li>
+            <li class="list-group-item"><a href="[site:url]/ligne-directrice-mise-oeuvre-licence-du-gouvernement-ouvert">
+            Ligne directrice sur la mise en œuvre de la Licence du gouvernement
+            ouvert </a>
+            <p>Vous voulez vous joindre à la collectivité du gouvernement
+            ouvert du Canada et mettre en œuvre la Licence du gouvernement
+            ouvert dans votre administration? Vous trouverez ici des détails
+            sur la marche à suivre.</p>
+            </li>
+          </ul>
+        </div>
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    bid:
+      type: string
+process:
+  id:
+    plugin: migration
+    migration: od_ext_block_basic
+    source: bid
+  info: title
+  uid:
+    plugin: default_value
+    default_value: 1
+  'body/value': body
+  'body/format':
+    plugin: default_value
+    default_value: rich_text
+  langcode: language
+  content_translation_source:
+    plugin: default_value
+    default_value: "en"
+destination:
+  plugin: entity:block_content
+  default_bundle: basic
+  no_stub: true
+  translations: true
+migration_dependencies:
+  required:
+    - od_ext_db_file
+    - od_ext_db_taxonomy_term
+    - od_ext_block_basic

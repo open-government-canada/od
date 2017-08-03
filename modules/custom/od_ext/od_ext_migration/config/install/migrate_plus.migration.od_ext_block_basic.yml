@@ -260,7 +260,7 @@ source:
       language: 'en'
       title: 'Third Biennial Plan to the Open Government Partnership (2016-18)'
       body: |
-        <h2 class="h4"><a href="http://open.canada.ca/en/content/third-biennial-plan-open-government-partnership">
+        <h2 class="h4"><a href="[site:url]content/third-biennial-plan-open-government-partnership">
         Third Biennial Plan to the Open Government Partnership (2016-18)</a>
         </h2>
         <p>Learn more about Canada’s commitments to becoming a more open,
@@ -269,7 +269,7 @@ source:
       language: 'en'
       title: 'Progress tracker for the Third Biennial Plan to the Open Government Partnership'
       body: |
-        <h2 class="h4"><a href="http://open.canada.ca/en/content/progress-tracker-third-biennial-plan-open-government-partnership">
+        <h2 class="h4"><a href="[site:url]content/progress-tracker-third-biennial-plan-open-government-partnership">
           Progress tracker for the Third Biennial Plan to the Open Government
           Partnership
         </a></h2>
@@ -290,7 +290,7 @@ source:
       language: 'en'
       title: 'Open Government Licence'
       body: |
-        <h2 class="h4"><a href="http://open.canada.ca/en/open-government-licence-canada">
+        <h2 class="h4"><a href="[site:url]open-government-licence-canada">
           Open Government Licence
         </a></h2>
         <p>This easy to understand licence promotes the reuse of published

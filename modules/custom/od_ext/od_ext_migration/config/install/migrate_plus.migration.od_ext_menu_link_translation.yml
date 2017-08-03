@@ -1,6 +1,6 @@
 id: od_ext_menu_link_translation
 label: Embedded data feed of menu link content
-migration_group: od
+migration_group: od_translation
 dependencies:
   enforced:
     module:

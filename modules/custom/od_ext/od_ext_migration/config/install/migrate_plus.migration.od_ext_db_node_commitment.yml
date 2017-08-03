@@ -10,7 +10,10 @@ source:
   plugin: commitment_node
   target: source_migration
 process:
-  title: title
+  title:
+    plugin: skip_on_empty
+    method: row
+    source: title
   uid:
     plugin: migration
     migration: od_ext_db_user

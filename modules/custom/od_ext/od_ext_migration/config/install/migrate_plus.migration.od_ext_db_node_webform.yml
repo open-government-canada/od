@@ -10,7 +10,10 @@ source:
   plugin: webform_node
   target: source_migration
 process:
-  title: title
+  title:
+    plugin: skip_on_empty
+    method: row
+    source: title
   uid:
     plugin: migration
     migration: od_ext_db_user
@@ -38,4 +41,3 @@ migration_dependencies:
     - od_ext_db_file
     - od_ext_db_taxonomy_term
     - od_ext_db_user
-    - od_ext_db_webform_submissions

@@ -89,6 +89,11 @@ class CommentImport extends SqlBase {
     $entity_type = 'node';
     $comment_type = 'comment';
 
+    // Translation support.
+    if (!empty($row->getSourceProperty('translations'))) {
+      $row->setSourceProperty('language', 'fr');
+    }
+
     // Body.
     $body = $this->select('field_data_comment_body', 'db')
       ->fields('db',
