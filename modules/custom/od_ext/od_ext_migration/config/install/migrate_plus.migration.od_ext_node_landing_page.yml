@@ -2857,7 +2857,7 @@ source:
         </ul>
         <h2 id="toc1">Open Government Programs in Canada</h2>
         <p>Click on the map below to learn more about Open Government programs.</p>
-        <p>If you know of a Canadian jurisdiction with an Open Government program that is not listed below, please&nbsp;<a href="[uuid-link:node:9a03a23d-e6c1-4e54-bd9a-11ceb4f62abb]">contact us</a>&nbsp;to have it added so we can help to promote it.</p>
+        <p>If you know of a Canadian jurisdiction with an Open Government program that is not listed below, please&nbsp;<a href="[site:url]forms/contact-us">contact us</a>&nbsp;to have it added so we can help to promote it.</p>
         <div class="wb-geomap" data-wb-geomap="{ &quot;layersFile&quot;: &quot;[site:url]sites/default/files/kml/open-config-en.js&quot; }" id="location_map">
         <div class="row">
         <div class="col-md-9">

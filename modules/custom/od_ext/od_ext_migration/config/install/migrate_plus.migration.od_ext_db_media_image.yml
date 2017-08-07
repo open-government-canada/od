@@ -10,12 +10,14 @@ source:
   plugin: media_image
   target: source_migration
 process:
+  mid: fid
+  vid: fid
   # Media bundle.
   bundle:
     plugin: default_value
     default_value: image
   # Use image title as media name.
-  name: title
+  name: filename
   status:
     plugin: default_value
     default_value: 1
@@ -26,6 +28,10 @@ process:
     source: fid
   'image/title': title
   'image/alt': alt
+  langcode: language
+  content_translation_source:
+    plugin: default_value
+    default_value: "en"
 destination:
   plugin: entity:media
 migration_dependencies:

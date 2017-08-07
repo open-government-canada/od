@@ -20,7 +20,8 @@ class MediaImage extends SqlBase {
   public function query() {
     $query = $this->select('file_managed', 'f')
       ->fields('f')
-      ->orderBy('f.fid');
+      ->orderBy('f.fid')
+      ->condition('f.type', 'image');
 
     return $query;
   }
@@ -75,7 +76,17 @@ class MediaImage extends SqlBase {
       ->condition('bundle', 'image')
       ->condition('entity_id', $row->getSourceProperty('fid'))
       ->condition('revision_id', $row->getSourceProperty('fid'))
-      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('language', 'en')
+      ->execute()
+      ->fetchCol();
+
+    $altFr = $this->select('field_data_field_file_image_alt_text', 'db')
+      ->fields('db', ['field_file_image_alt_text_value'])
+      ->condition('entity_type', 'file')
+      ->condition('bundle', 'image')
+      ->condition('entity_id', $row->getSourceProperty('fid'))
+      ->condition('revision_id', $row->getSourceProperty('fid'))
+      ->condition('language', 'fr')
       ->execute()
       ->fetchCol();
 
@@ -86,12 +97,25 @@ class MediaImage extends SqlBase {
       ->condition('bundle', 'image')
       ->condition('entity_id', $row->getSourceProperty('fid'))
       ->condition('revision_id', $row->getSourceProperty('fid'))
-      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('language', 'en')
+      ->execute()
+      ->fetchCol();
+
+    $titleFr = $this->select('field_data_field_file_image_title_text', 'db')
+      ->fields('db', ['field_file_image_title_text_value'])
+      ->condition('entity_type', 'file')
+      ->condition('bundle', 'image')
+      ->condition('entity_id', $row->getSourceProperty('fid'))
+      ->condition('revision_id', $row->getSourceProperty('fid'))
+      ->condition('language', 'fr')
       ->execute()
       ->fetchCol();
 
     $row->setSourceProperty('alt', $alt[0]);
     $row->setSourceProperty('title', $title[0]);
+
+    $row->setSourceProperty('alt_fr', $altFr[0]);
+    $row->setSourceProperty('title_fr', $titleFr[0]);
 
     return parent::prepareRow($row);
   }
