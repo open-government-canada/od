@@ -4,3 +4,67 @@
  * @file
  * Contains od_ext_webform.module.
  */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function od_ext_webform_form_webform_submission_map_update_js_archive_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'od_ext_webform_form_submit';
+    }
+  }
+}
+
+/**
+ * Implments custom webform submit callback.
+ */
+function od_ext_webform_form_submit(array $form, FormStateInterface $form_state) {
+  // Add extraction and directory creation/backups here.
+  $form_values = $form_state->getValues();
+  if (isset($form_values['result_map_js_archive'][0])) {
+    $file = file_load($form_values['result_map_js_archive'][0]);
+
+    $file_path = $file->getFileUri();
+    $file_path = drupal_realpath($file_path);
+
+    $file_name = $file->getFilename();
+
+    $file_directory = dirname($file_path);
+    if (substr($file_name, -3) == '.gz') {
+      // Decompress from gz.
+      $p = new PharData($file_path);
+      $p->decompress();
+
+      $files = array_diff(scandir($file_directory), ['..', '.']);
+
+      $tar_file = FALSE;
+      foreach ($files as $extracted_file) {
+        if (substr($extracted_file, -4) == '.tar') {
+          $tar_file = $extracted_file;
+        }
+      }
+
+      if ($tar_file) {
+        // Unarchive from the tar.
+        $phar = new PharData($file_directory . '/' . $tar_file);
+        $extraction_path = drupal_realpath('public://ksm/latest');
+        $phar->extractTo($extraction_path, NULL, TRUE);
+      }
+    }
+    elseif (substr($file_name, -4) == '.zip') {
+      // Decompress from zip.
+      $zip = new ZipArchive();
+      if ($zip->open($file_path) === TRUE) {
+        $extraction_path = drupal_realpath('public://kml/latest');
+        $zip->extractTo($extraction_path);
+        $zip->close();
+      }
+    }
+    // Clear CSS and JS Cache to update the map.
+    _drupal_flush_css_js();
+
+  }
+}
