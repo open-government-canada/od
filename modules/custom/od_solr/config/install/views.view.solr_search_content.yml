@@ -6,11 +6,13 @@ dependencies:
     - field.storage.node.field_app_developer
     - field.storage.node.field_device_formats
     - field.storage.node.field_ribbon
+    - field.storage.node.field_vote
     - search_api.index.default_solr_index
   module:
     - search_api
     - text
     - views_bootstrap
+    - votingapi_widgets
 id: solr_search_content
 label: 'Solr search content'
 module: views
@@ -442,7 +444,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -470,14 +472,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: span
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
+          element_wrapper_type: div
+          element_wrapper_class: 'ribbon {{ field_ribbon|clean_class }}'
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -514,6 +516,7 @@ display:
                 display_method: label
               communities:
                 display_method: label
+                view_mode: default
               consultation_status:
                 display_method: label
               departments:
@@ -538,7 +541,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -571,7 +574,7 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
+          element_wrapper_type: p
           element_wrapper_class: h4
           element_default_classes: false
           empty: ''
@@ -599,15 +602,15 @@ display:
             multi_separator: ', '
           entity_type: node
           plugin_id: search_api_field
-        field_app_developer:
-          id: field_app_developer
+        field_vote:
+          id: field_vote
           table: search_api_datasource_default_solr_index_entity_node
-          field: field_app_developer
+          field: field_vote
           relationship: none
           group_type: group
           admin_label: ''
-          label: Publisher
-          exclude: true
+          label: ''
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -635,12 +638,83 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: span
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: status
+          type: voting_api_formatter
+          settings:
+            style: opengov-fiveleaf
+            readonly: 1
+            show_results: 0
+          group_column: status
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_app_developer:
+          id: field_app_developer
+          table: search_api_datasource_default_solr_index_entity_node
+          field: field_app_developer
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Publisher
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
           element_class: ''
           element_label_type: strong
           element_label_class: ''
           element_label_colon: true
-          element_wrapper_type: div
+          element_wrapper_type: p
           element_wrapper_class: ''
           element_default_classes: false
           empty: ''
@@ -676,7 +750,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -709,7 +783,7 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
+          element_wrapper_type: p
           element_wrapper_class: ''
           element_default_classes: false
           empty: ''
@@ -744,7 +818,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -810,12 +884,13 @@ display:
                 display_method: label
               app_ribbon:
                 display_method: label
-              commitment_freetags:
-                display_method: label
               commitments:
+                display_method: label
+              commitment_freetags:
                 display_method: label
               communities:
                 display_method: label
+                view_mode: default
               consultation_status:
                 display_method: label
               departments:
@@ -832,55 +907,6 @@ display:
                 display_method: label
           entity_type: node
           plugin_id: search_api_field
-        nothing:
-          id: nothing
-          table: views
-          field: nothing
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: "<div>\n<div class=\"ribbon {{ field_ribbon|clean_class }}\"><span>{{ field_ribbon }}</span></div>\n<p class=\"h4\">{{ title }}</p>\n<p><strong>Publisher: </strong>{{ field_app_developer }}</p>\n<p>{{ body }}</p>\n{{ field_device_formats }}\n</div>"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: 'app box mrgn-bttm-lg'
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: false
-          plugin_id: custom
       block_category: 'Solr (App)'
       arguments:
         field_device_formats:
@@ -989,3 +1015,4 @@ display:
         - 'config:field.storage.node.field_app_developer'
         - 'config:field.storage.node.field_device_formats'
         - 'config:field.storage.node.field_ribbon'
+        - 'config:field.storage.node.field_vote'

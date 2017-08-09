@@ -10,6 +10,7 @@ dependencies:
   - drupal:facets
   - drupal:facets_summary
   - drupal:node
+  - drupal:od_ext_app
   - drupal:search
   - drupal:search_api
   - drupal:search_api_solr
