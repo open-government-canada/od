@@ -69,6 +69,26 @@ class MigrationSubscriber implements EventSubscriberInterface {
    * Code to run after a migration row has been saved.
    */
   public function onMigrationPostRowSave(MigratePostRowSaveEvent $event) {
+
+    if ($event->getMigration()->id() == 'od_ext_db_node_app') {
+      $votes = $event->getRow()->getSourceProperty('votes');
+      $destinationIds = $event->getDestinationIdValues();
+      foreach ($votes as $vote) {
+        $storage = $this->entityManager->getStorage('vote');
+        $data = $vote * 0.05;
+        $voteData = [
+          'entity_type' => 'node',
+          'entity_id'   => $destinationIds[0],
+          'type'      => 'vote',
+          'field_name'  => 'field_vote',
+          'user_id' => 0,
+        ];
+        $vote = $storage->create($voteData);
+        $vote->setValue($data);
+        $vote->save();
+      }
+    }
+
     if ($event->getMigration()->id() == 'od_ext_db_node_blog') {
       $entities = $this->entityTypeManager->getStorage('group')->loadByProperties(['field_shortcode' => 'tbs-sct']);
       $entity = reset($entities);

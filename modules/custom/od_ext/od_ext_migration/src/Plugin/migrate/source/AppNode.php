@@ -2,8 +2,14 @@
 
 namespace Drupal\od_ext_migration\Plugin\migrate\source;
 
+use Drupal\Core\Session\AccountInterface;
 use Drupal\migrate\Plugin\migrate\source\SqlBase;
+use Drupal\migrate\Plugin\MigrationInterface;
 use Drupal\migrate\Row;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Entity\EntityManagerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\State\StateInterface;
 
 /**
  * Source plugin for app content.
@@ -12,7 +18,46 @@ use Drupal\migrate\Row;
  *   id = "app_node"
  * )
  */
-class AppNode extends SqlBase {
+class AppNode extends SqlBase implements ContainerFactoryPluginInterface {
+
+  /**
+   * The current logged in user.
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $currentUser;
+
+  /**
+   * The entity manager service.
+   *
+   * @var \Drupal\Core\Entity\EntityManagerInterface
+   */
+  protected $entityManager;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration, StateInterface $state, AccountInterface $current_user, EntityManagerInterface $entity_manager) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition, $migration, $state);
+    $this->state = $state;
+    $this->currentUser = $current_user;
+    $this->entityManager = $entity_manager;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition, MigrationInterface $migration = NULL) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $migration,
+      $container->get('state'),
+      $container->get('current_user'),
+      $container->get('entity.manager')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -240,6 +285,14 @@ class AppNode extends SqlBase {
       ->execute()
       ->fetchAssoc();
 
+    // Votes.
+    $votes = $this->select('votingapi_vote', 'vv')
+      ->fields('vv', ['value'])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('entity_type', 'node')
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -260,6 +313,7 @@ class AppNode extends SqlBase {
     $row->setSourceProperty('device_formats', $device_formats);
     $row->setSourceProperty('ribbon', $ribbon['field_ribbon_tid']);
     $row->setSourceProperty('file', $file);
+    $row->setSourceProperty('votes', $votes);
 
     return parent::prepareRow($row);
   }

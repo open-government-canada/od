@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.app.field_device_formats
     - field.field.node.app.field_image
     - field.field.node.app.field_ribbon
+    - field.field.node.app.field_vote
     - field.field.node.app.panelizer
     - node.type.app
   module:
@@ -29,6 +30,7 @@ dependencies:
     - link
     - path
     - text
+    - votingapi_widgets
     - workbench_moderation
 third_party_settings:
   field_group:
@@ -68,6 +70,7 @@ third_party_settings:
         - field_ribbon
         - field_app_developer
         - field_app_url
+        - field_vote
       parent_name: group_app
       weight: 20
       format_type: tab
@@ -137,7 +140,7 @@ content:
     type: options_select
     region: content
   field_app_developer:
-    weight: 17
+    weight: 16
     settings:
       size: 60
       placeholder: ''
@@ -170,7 +173,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_app_url:
-    weight: 18
+    weight: 17
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -239,6 +242,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_vote:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: voting_api_widget
     region: content
   langcode:
     type: language_select

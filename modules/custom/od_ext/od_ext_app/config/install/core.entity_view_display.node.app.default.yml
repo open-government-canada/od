@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.app.field_device_formats
     - field.field.node.app.field_image
     - field.field.node.app.field_ribbon
+    - field.field.node.app.field_vote
     - field.field.node.app.panelizer
     - image.style.medium
     - node.type.app
@@ -30,6 +31,7 @@ dependencies:
     - panelizer
     - text
     - user
+    - votingapi_widgets
 third_party_settings:
   panelizer:
     enable: true
@@ -52,7 +54,7 @@ third_party_settings:
               weight: 0
               region: content
             region: right
-            weight: -2
+            weight: -1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: a83f9b55-4de8-4aef-8ed3-111d6a17052d
@@ -71,7 +73,7 @@ third_party_settings:
               weight: 0
               region: content
             region: right
-            weight: 6
+            weight: 7
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: e7f35324-083a-4976-aac7-faa6e9d79440
@@ -89,7 +91,7 @@ third_party_settings:
               weight: 0
               region: content
             region: right
-            weight: 0
+            weight: 1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 3a21c5fe-191a-4225-8d50-d1fecfdd12d2
@@ -125,7 +127,7 @@ third_party_settings:
               weight: 0
               region: content
             region: right
-            weight: 1
+            weight: 2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 98881037-f5b7-4287-a85a-9ae07c53c81d
@@ -168,7 +170,7 @@ third_party_settings:
               weight: 0
               region: content
             region: right
-            weight: 5
+            weight: 6
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 59b82361-c0a9-4253-a217-f64c1b8120fc
@@ -187,7 +189,7 @@ third_party_settings:
               weight: 0
               region: content
             region: right
-            weight: 3
+            weight: 4
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: bc426925-0e98-4303-8cc4-f9f1a79b94cd
@@ -205,7 +207,7 @@ third_party_settings:
               weight: 0
               region: content
             region: right
-            weight: 2
+            weight: 3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: bbcc4e5a-4ee7-4c46-83cd-b026a97f4712
@@ -223,7 +225,7 @@ third_party_settings:
               weight: 0
               region: content
             region: right
-            weight: 4
+            weight: 5
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: d99940d8-a405-4785-be4c-d99ad6ba6607
@@ -290,8 +292,27 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
             region: right
-            weight: -1
+            weight: 0
             uuid: 3a87939b-51af-4747-91a3-7c2538b9a391
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          392a8bf5-cc4a-4445-9213-5d50de4e4427:
+            id: 'entity_field:node:field_vote'
+            label: Vote
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: voting_api_formatter
+              settings:
+                style: opengov-fiveleaf
+                readonly: 0
+                show_results: 1
+              third_party_settings: {  }
+              weight: 0
+            region: right
+            weight: -2
+            uuid: 392a8bf5-cc4a-4445-9213-5d50de4e4427
             context_mapping:
               entity: '@panelizer.entity_context:entity'
         id: panels_variant
@@ -445,6 +466,17 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_vote:
+    weight: 13
+    label: above
+    settings:
+      readonly: false
+      style: default
+      show_results: false
+      values: {  }
+    third_party_settings: {  }
+    type: voting_api_formatter
     region: content
   links:
     weight: 10
