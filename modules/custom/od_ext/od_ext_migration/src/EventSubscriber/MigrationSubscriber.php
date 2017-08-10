@@ -5,11 +5,15 @@ namespace Drupal\od_ext_migration\EventSubscriber;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Session\SessionManagerInterface;
+use Drupal\flag\FlagServiceInterface;
 use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigrateImportEvent;
 use Drupal\migrate\Event\MigratePostRowSaveEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\media_entity\Entity\Media;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * WxT mode subscriber for controller requests.
@@ -22,6 +26,13 @@ class MigrationSubscriber implements EventSubscriberInterface {
    * @var \Drupal\Core\Config\ConfigFactoryInterface
    */
   protected $config;
+
+  /**
+   * The current user.
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $currentUser;
 
   /**
    * The entity manager.
@@ -38,6 +49,27 @@ class MigrationSubscriber implements EventSubscriberInterface {
   protected $entityTypeManager;
 
   /**
+   * The flag service.
+   *
+   * @var \Drupal\flag\FlagServiceInterface
+   */
+  protected $flagService;
+
+  /**
+   * The session manager service.
+   *
+   * @var \Drupal\Core\Session\SessionManagerInterface
+   */
+  protected $sessionManager;
+
+  /**
+   * The session.
+   *
+   * @var \Symfony\Component\HttpFoundation\Session\Session
+   */
+  protected $session;
+
+  /**
    * Constructs a new MigrationSubscriber.
    *
    * @param \Drupal\Core\Entity\EntityManagerInterface $entity_manager
@@ -46,11 +78,23 @@ class MigrationSubscriber implements EventSubscriberInterface {
    *   The entity type manager.
    * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
    *   The config factory.
+   * @param \Drupal\Core\Session\SessionManagerInterface $session_manager
+   *   The session manager service.
+   * @param \Symfony\Component\HttpFoundation\Session\Session $session
+   *   The session.
+   * @param \Drupal\Core\Session\AccountInterface $current_user
+   *   The current user.
+   * @param \Drupal\flag\FlagServiceInterface $flag_service
+   *   The flag service.
    */
-  public function __construct(EntityManagerInterface $entity_manager, EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory) {
+  public function __construct(EntityManagerInterface $entity_manager, EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory, SessionManagerInterface $session_manager, Session $session, AccountInterface $current_user, FlagServiceInterface $flag_service) {
     $this->entityManager = $entity_manager;
     $this->entityTypeManager = $entity_type_manager;
     $this->config = $config_factory;
+    $this->sessionManager = $session_manager;
+    $this->session = $session;
+    $this->currentUser = $current_user;
+    $this->flagService = $flag_service;
   }
 
   /**
@@ -315,6 +359,29 @@ class MigrationSubscriber implements EventSubscriberInterface {
         );
 
         $media_image->save();
+      }
+    }
+
+    if ($event->getMigration()->id() == 'od_ext_db_paragraph_app' ||
+      $event->getMigration()->id() == 'od_ext_db_paragraph_dataset') {
+      $likes = $event->getRow()->getSourceProperty('likes');
+
+      if (!empty($likes)) {
+        $destinationIds = $event->getDestinationIdValues();
+        $paragraph_storage = $this->entityManager->getStorage('paragraph');
+        $paragraph = $paragraph_storage->load($destinationIds['id']);
+        $account = $this->currentUser;
+        $sessId = $this->session->getId();
+
+        foreach ($likes as $like) {
+          $flag = $this->flagService->getFlagById('od_like');
+          $is_flagged = $flag->isFlagged($paragraph, $account, $sessId);
+          if (!$is_flagged && !empty($like)) {
+            $this->flagService->flag($flag, $paragraph, $account, $sessId);
+          }
+          $this->session->invalidate();
+        }
+
       }
     }
 

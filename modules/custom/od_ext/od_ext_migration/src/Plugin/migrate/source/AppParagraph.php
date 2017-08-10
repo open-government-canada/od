@@ -104,6 +104,15 @@ class AppParagraph extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // Likes.
+    $likes = $this->select('votingapi_vote', 'vv')
+      ->fields('vv', ['value'])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('entity_type', 'node')
+      ->condition('tag', 'thumbs_rate')
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -112,6 +121,7 @@ class AppParagraph extends SqlBase {
     }
     $row->setSourceProperty('body', $body[0]);
     $row->setSourceProperty('dataset', $dataset[0]);
+    $row->setSourceProperty('likes', $likes);
 
     return parent::prepareRow($row);
   }
