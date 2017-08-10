@@ -40,10 +40,6 @@
         },
         {
           "type": "vcs",
-          "url": "http://github.com/heshanlk/webform_migrate.git"
-        },
-        {
-          "type": "vcs",
           "url": "http://github.com/sylus/search_api_solr_datasource.git"
         },
         {
@@ -64,6 +60,23 @@
                     "url"       : "https://github.com/harvesthq/chosen-package.git",
                     "type"      : "git",
                     "reference" : "v1.6.1"
+                }
+            }
+        },
+        {
+            "type"    : "package",
+            "package" : {
+                "name"    : "w8tcha/ckeditor-codemirror",
+                "version" : "v1.16",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin/archive/1.16.tar.gz",
+                    "type" : "tar"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/w8tcha/CKEditor-CodeMirror-Plugin.git",
+                    "type"      : "git",
+                    "reference" : "1.16"
                 }
             }
         },
