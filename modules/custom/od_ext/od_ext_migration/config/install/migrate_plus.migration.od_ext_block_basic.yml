@@ -717,6 +717,26 @@ source:
             </li>
           </ul>
         </div>
+    - bid: 'stay_connected'
+      language: 'en'
+      title: 'Stay Connected'
+      body: |
+        <div>
+          <ul class="list-unstyled">
+            <li>
+              <a href="https://twitter.com/search?q=%40TBS_Canada%20%23opengov%20OR%20%23opendata%20OR%20%23datagc%20%2Bexclude%3Aretweets%20&amp;src=typd">
+              <span class="fa fa-twitter-square mrgn-rght-md"></span>Twitter</a>
+            </li>
+            <li>
+              <a href="[site:url]blog/rss-feed.xml">
+              <span class="fa fa-rss-square mrgn-rght-md"></span>Feeds</a>
+            </li>
+            <li>
+              <a href="[site:url]forms/receive-open-government-email-form">
+              <span class="fa fa-envelope mrgn-rght-md"></span>E-mail</a>
+            </li>
+          </ul>
+        </div>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
