@@ -34,7 +34,8 @@ field_settings:
           landing_page: ''
           page: search_index
           search: ''
-          suggestion: ''
+          suggested_app: ''
+          suggested_dataset: ''
           webform: ''
   node_grants:
     label: 'Node access information'

@@ -15,8 +15,6 @@ function od_ext_install() {
       'department',
     ],
     'paragraph' => [
-      'app',
-      'dataset',
       'deliverable',
     ],
   ];

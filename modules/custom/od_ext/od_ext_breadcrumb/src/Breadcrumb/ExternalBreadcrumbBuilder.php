@@ -93,7 +93,7 @@ class ExternalBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $aliasManager;
 
   /**
-   * Constructs the MainBreadCrumbBuilder.
+   * Constructs the ExternalBreadcrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
    *   The router request context.

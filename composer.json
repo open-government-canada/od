@@ -263,6 +263,12 @@
                 "Enter drupal/facets patch #2878851 description here":
                 "https://www.drupal.org/files/issues/facet_summary_show_a-2878851-7.patch"
             },
+            "drupal/flag": {
+                "Enter drupal/flag patch #2846111 description here":
+                "https://www.drupal.org/files/issues/viewsAjaxLink_2846111_11.patch",
+                "Enter drupal/flag patch #2888664 description here":
+                "https://www.drupal.org/files/issues/new_index_for_flagging-2888664-12.patch"
+            },
             "drupal/fontawesome": {
                 "Enter drupal/fontawesome patch #2881431 description here":
                 "https://www.drupal.org/files/issues/unable_to_find_the-2881431-2.patch"

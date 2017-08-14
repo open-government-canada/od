@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies: {  }
+id: like
+label: Like
+bundles:
+  - suggested_app
+  - suggested_dataset
+entity_type: node
+global: false
+weight: 0
+flag_short: '[flagcount:count]'
+flag_long: ''
+flag_message: ''
+unflag_short: '[flagcount:count]'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  access_author: ''
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

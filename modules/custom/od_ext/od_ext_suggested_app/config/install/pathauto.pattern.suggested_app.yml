@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: suggested_app
+label: 'Suggested App'
+type: 'canonical_entities:node'
+pattern: 'suggestion/app/[node:title]'
+selection_criteria:
+  82f0e4ec-43df-4889-84e5-669209a1a95b:
+    id: node_type
+    bundles:
+      suggested_app: suggested_app
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 82f0e4ec-43df-4889-84e5-669209a1a95b
+selection_logic: and
+weight: -5
+relationships: {  }

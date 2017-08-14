@@ -362,22 +362,22 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
-    if ($event->getMigration()->id() == 'od_ext_db_paragraph_app' ||
-      $event->getMigration()->id() == 'od_ext_db_paragraph_dataset') {
+    if ($event->getMigration()->id() == 'od_ext_db_node_suggested_app' ||
+      $event->getMigration()->id() == 'od_ext_db_node_suggested_dataset') {
       $likes = $event->getRow()->getSourceProperty('likes');
 
       if (!empty($likes)) {
         $destinationIds = $event->getDestinationIdValues();
-        $paragraph_storage = $this->entityManager->getStorage('paragraph');
-        $paragraph = $paragraph_storage->load($destinationIds['id']);
+        $node_storage = $this->entityManager->getStorage('node');
+        $node = $node_storage->load($destinationIds[0]);
         $account = $this->currentUser;
         $sessId = $this->session->getId();
 
         foreach ($likes as $like) {
-          $flag = $this->flagService->getFlagById('od_like');
-          $is_flagged = $flag->isFlagged($paragraph, $account, $sessId);
+          $flag = $this->flagService->getFlagById('like');
+          $is_flagged = $flag->isFlagged($node, $account, $sessId);
           if (!$is_flagged && !empty($like)) {
-            $this->flagService->flag($flag, $paragraph, $account, $sessId);
+            $this->flagService->flag($flag, $node, $account, $sessId);
           }
           $this->session->invalidate();
         }

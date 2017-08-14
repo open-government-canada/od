@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.suggested_dataset.body
+    - field.field.node.suggested_dataset.field_status
+    - field.field.node.suggested_dataset.field_status_link
+    - field.field.node.suggested_dataset.field_suggested_dataset_dept
+    - node.type.suggested_dataset
+  module:
+    - text
+    - user
+id: node.suggested_dataset.teaser
+targetEntityType: node
+bundle: suggested_dataset
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_status: true
+  field_status_link: true
+  field_suggested_dataset_dept: true
+  langcode: true

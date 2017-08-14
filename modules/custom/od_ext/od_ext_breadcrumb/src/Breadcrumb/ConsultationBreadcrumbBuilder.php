@@ -20,7 +20,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
 
-class ConsultationBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
+class ConsultationBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
   use StringTranslationTrait;
 
@@ -93,7 +93,7 @@ class ConsultationBreadCrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $aliasManager;
 
   /**
-   * Constructs the MainBreadCrumbBuilder.
+   * Constructs the ConsultationBreadcrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
    *   The router request context.

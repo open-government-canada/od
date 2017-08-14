@@ -1,6 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: app
-label: App
-behavior_plugins: {  }

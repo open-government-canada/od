@@ -20,7 +20,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
 
-class BlogBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
+class SuggestedDatasetBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
   use StringTranslationTrait;
 
@@ -93,7 +93,7 @@ class BlogBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $aliasManager;
 
   /**
-   * Constructs the BlogBreadcrumbBuilder.
+   * Constructs the SuggestedDatasetBreadcrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
    *   The router request context.
@@ -153,10 +153,10 @@ class BlogBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $pathEnd = end($path_elements);
 
     // Content type determination.
-    if (!empty($parameters['node']) && $parameters['node']->getType() == 'blog_post') {
+    if (!empty($parameters['node']) && $parameters['node']->getType() == 'suggested_dataset') {
       return TRUE;
     }
-    elseif (!empty($pathEnd) && $pathEnd == 'blog') {
+    elseif (!empty($pathEnd) && $pathEnd == 'suggested-datasets') {
       return TRUE;
     }
   }
@@ -174,17 +174,12 @@ class BlogBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
 
-    // Add the url.path.parent cache context. This code ignores the last path
-    // part so the result only depends on the path parents.
-    $breadcrumb->addCacheContexts(['url.path.parent']);
-
     $links[] = Link::createFromRoute($this->t('Home'), '<front>');
     $breadcrumb->setLinks(array_reverse($links));
 
     $route = $route_match->getRouteObject();
     if ($route && !$route->getOption('_admin_route')) {
       $links = $breadcrumb->getLinks();
-
       if (!empty($links) && $links[0]->getText() == $this->t('Home')) {
         $url = 'https://www.canada.ca';
         if ($this->languageManager->getCurrentLanguage()->getId() == 'fr') {
@@ -192,21 +187,20 @@ class BlogBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
         $link = array_shift($links);
         $link->setUrl(Url::fromUri($url));
-
-        $nid = $this->aliasManager->getPathByAlias('/open-dialogue', 'en');
-        $open_dialogue = $this->pathValidator->getUrlIfValid($nid);
-        $nid = $this->aliasManager->getPathByAlias('/blog', 'en');
-        $blog = $this->pathValidator->getUrlIfValid($nid);
-        if (!empty($open_dialogue) && !empty($blog)) {
+        $nid = $this->aliasManager->getPathByAlias('/open-data', 'en');
+        $open_data = $this->pathValidator->getUrlIfValid($nid);
+        $nid = $this->aliasManager->getPathByAlias('/suggested-datasets', 'en');
+        $datasets = $this->pathValidator->getUrlIfValid($nid);
+        if (!empty($open_data) && !empty($datasets)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
-          $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
-          $linkBlog = Link::createFromRoute($this->t('Blog'), $blog->getRouteName(), $blog->getRouteParameters());
+          $linkOpenData = Link::createFromRoute($this->t('Open Data'), $open_data->getRouteName(), $open_data->getRouteParameters());
+          $linkApps = Link::createFromRoute($this->t('Suggested Datasets'), $datasets->getRouteName(), $datasets->getRouteParameters());
           $pathEnd = end($path_elements);
-          if (!empty($pathEnd) && $pathEnd != 'blog') {
-            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkBlog);
+          if (!empty($pathEnd) && $pathEnd != 'suggested-datasets') {
+            array_unshift($links, $link, $linkOpenGov, $linkOpenData, $linkApps);
           }
           else {
-            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue);
+            array_unshift($links, $link, $linkOpenGov, $linkOpenData);
           }
         }
       }

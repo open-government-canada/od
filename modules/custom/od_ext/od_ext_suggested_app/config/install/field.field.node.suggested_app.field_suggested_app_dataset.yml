@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_suggested_app_dataset
+    - node.type.suggested_app
+  module:
+    - text
+id: node.suggested_app.field_suggested_app_dataset
+field_name: field_suggested_app_dataset
+entity_type: node
+bundle: suggested_app
+label: 'Possible Dataset(s)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -82,7 +82,8 @@ display:
               landing_page: default
               page: search_result
               search: default
-              suggestion: default
+              suggested_app: default
+              suggested_dataset: default
               webform: default
       filters:
         search_api_fulltext:
