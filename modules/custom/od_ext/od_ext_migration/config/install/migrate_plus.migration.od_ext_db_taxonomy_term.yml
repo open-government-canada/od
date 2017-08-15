@@ -31,6 +31,18 @@ process:
     default_value: 0
     source: '@parent_id'
   langcode: language
+  field_links:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: iterator
+      source: links
+      process:
+        uri: url
+        title: title
+        options: attributes
 destination:
   plugin: entity:taxonomy_term
 migration_dependencies: {}

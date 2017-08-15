@@ -1,0 +1,113 @@
+{#
+/**
+ * @file
+ * WxT Layouts: "Topic" template.
+ *
+ * Available layout variables:
+ * - wrapper: Wrapper element for the layout container.
+ * - attributes: Wrapper attributes for the layout container.
+ *
+ * Available region variables:
+ * - top
+ * - top_left
+ * - top_right
+ * - middle_left
+ * - middle_middle
+ * - middle_right
+ * - middle
+ * - bottom_left
+ * - bottom_middle
+ * - bottom_right
+ * - bottom
+ *
+ * Each region variable contains the following properties:
+ * - wrapper: The HTML element to use to wrap this region.
+ * - attributes: The HTML attributes to use on the wrapper for this region.
+ * - content: The content to go inside the wrapper for this region.
+ */
+#}
+<{{ wrapper }}{{ attributes }}>
+  {{ title_suffix.contextual_links }}
+
+  {% if top.content %}
+  <{{ top.wrapper }}{{ top.attributes }}>
+    <h1>{{ top.content }}</h1>
+  </{{ top.wrapper }}>
+  {% endif %}
+
+  <div class="col-md-4">
+    {% if top_left.content %}
+    <{{ top_left.wrapper }}{{ top_left.attributes }}>
+      {{ top_left.content }}
+    </{{ top_left.wrapper }}>
+    {% endif %}
+  </div>
+
+  <div class="col-md-8">
+    {% if top_right.content %}
+    <{{ top_right.wrapper }}{{ top_right.attributes }}>
+      {{ top_right.content }}
+    </{{ top_right.wrapper }}>
+    {% endif %}
+  </div>
+
+  <div class="col-md-4">
+    <h4>{{ 'Open Data'|t }}</h4>
+    {% if middle_left.content %}
+    <{{ middle_left.wrapper }}{{ middle_left.attributes }}>
+      {{ middle_left.content }}
+    </{{ middle_left.wrapper }}>
+    {% endif %}
+  </div>
+  <div class="col-md-4">
+    <h4>{{ 'Open Information'|t }}</h4>
+    {% if middle_center.content %}
+    <{{ middle_center.wrapper }}{{ middle_center.attributes }}>
+      {{ middle_center.content }}
+    </{{ middle_center.wrapper }}>
+    {% endif %}
+  </div>
+  <div class="col-md-4">
+    {% if middle_right.content %}
+    <{{ middle_right.wrapper }}{{ middle_right.attributes }}>
+      {{ middle_right.content }}
+    </{{ middle_right.wrapper }}>
+    {% endif %}
+  </div>
+
+  {% if middle.content %}
+  <{{ middle.wrapper }}{{ middle.attributes }}>
+    {{ middle.content }}
+  </{{ middle.wrapper }}>
+  {% endif %}
+
+  <div class="col-md-4">
+    {% if bottom_left.content %}
+    <{{ bottom_left.wrapper }}{{ bottom_left.attributes }}>
+      {{ bottom_left.content }}
+    </{{ bottom_left.wrapper }}>
+    {% endif %}
+  </div>
+  <div class="col-md-4">
+    {% if bottom_center.content %}
+    <{{ bottom_center.wrapper }}{{ bottom_center.attributes }}>
+      {{ bottom_center.content }}
+    </{{ bottom_center.wrapper }}>
+    {% endif %}
+  </div>
+  <div class="col-md-4">
+    {% if bottom_right.content %}
+    <{{ bottom_right.wrapper }}{{ bottom_right.attributes }}>
+      {{ bottom_right.content }}
+    </{{ bottom_right.wrapper }}>
+    {% endif %}
+  </div>
+
+  {% if bottom.content %}
+  <h4>{{ 'Applications'|t }}</h4>
+  <{{ bottom.wrapper }}{{ bottom.attributes }}>
+    {{ bottom.content }}
+  </{{ bottom.wrapper }}>
+  {% endif %}
+
+</{{ wrapper }}>

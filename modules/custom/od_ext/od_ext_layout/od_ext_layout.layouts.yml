@@ -38,3 +38,55 @@ od_open_maps:
       label: 'Bottom'
       classes:
         - col-sm-12
+od_open_communities:
+  label: 'Open Communities landing page'
+  category: 'WxT'
+  class: '\Drupal\bootstrap_layouts\Plugin\Layout\BootstrapLayoutsBase'
+  type: partial
+  icon: images/open-maps.png
+  template: templates/open-communities
+  regions:
+    top:
+      label: 'Top'
+      classes:
+        - col-sm-12
+    top_left:
+      label: 'Top Left'
+      classes:
+        - col-sm-4
+    top_right:
+      label: 'Top Right'
+      classes:
+        - col-sm-8
+    middle_left:
+      label: 'Middle Left'
+      classes:
+        - col-sm-4
+    middle_middle:
+      label: 'Middle Middle'
+      classes:
+        - col-sm-4
+    middle_right:
+      label: 'Middle Right'
+      classes:
+        - col-sm-4
+    middle:
+      label: 'Middle'
+      classes:
+        - col-sm-12
+    bottom_left:
+      label: 'Bottom Left'
+      classes:
+        - col-sm-4
+    bottom_middle:
+      label: 'Bottom Middle'
+      classes:
+        - col-sm-4
+    bottom_right:
+      label: 'Bottom Right'
+      classes:
+        - col-sm-4
+    bottom:
+      label: 'Bottom'
+      classes:
+        - col-sm-12
