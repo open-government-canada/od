@@ -129,6 +129,60 @@ source:
       external: 1
       weight: 4
       parent: 0
+    - mlid: 'analytics_overview'
+      link_title: 'Aperçu'
+      description: ''
+      menu_name: 'analytics'
+      link_path: 'internal:/analytics/summary'
+      options: []
+      external: 0
+      weight: 1
+      parent: 0
+    - mlid: 'analytics_visualizations'
+      link_title: 'Visualisations'
+      description: ''
+      menu_name: 'analytics'
+      link_path: 'internal:/analytics/visualizations'
+      options: []
+      external: 0
+      weight: 2
+      parent: 0
+    - mlid: 'analytics_pages'
+      link_title: 'Pages'
+      description: ''
+      menu_name: 'analytics'
+      link_path: 'internal:/analytics/visits'
+      options: []
+      external: 0
+      weight: 2
+      parent: 0
+    - mlid: 'analytics_download'
+      link_title: 'Téléchargements'
+      description: ''
+      menu_name: 'analytics'
+      link_path: 'internal:/analytics/downloads'
+      options: []
+      external: 0
+      weight: 2
+      parent: 0
+    - mlid: 'analytics_404'
+      link_title: '404'
+      description: ''
+      menu_name: 'analytics'
+      link_path: 'internal:/analytics/404'
+      options: []
+      external: 0
+      weight: 3
+      parent: 0
+    - mlid: 'main_home'
+      link_title: 'Accueil'
+      description: ''
+      menu_name: 'main'
+      link_path: 'https://www.canada.ca/fr.html'
+      options: []
+      external: 1
+      weight: 1
+      parent: 0
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
