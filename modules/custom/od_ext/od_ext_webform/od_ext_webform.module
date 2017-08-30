@@ -23,6 +23,18 @@ function od_ext_webform_form_webform_submission_map_update_js_archive_form_alter
  */
 function od_ext_webform_form_submit(array $form, FormStateInterface $form_state) {
   // Add extraction and directory creation/backups here.
+  $extraction_path = drupal_realpath('public://kml');
+
+  if (!file_exists($extraction_path)) {
+    mkdir($extraction_path, 0777, TRUE);
+  }
+
+  $extraction_path = drupal_realpath('public://kml/latest');
+
+  if (!file_exists($extraction_path)) {
+    mkdir($extraction_path, 0777, TRUE);
+  }
+
   $form_values = $form_state->getValues();
   if (isset($form_values['result_map_js_archive'][0])) {
     $file = file_load($form_values['result_map_js_archive'][0]);
@@ -50,7 +62,6 @@ function od_ext_webform_form_submit(array $form, FormStateInterface $form_state)
       if ($tar_file) {
         // Unarchive from the tar.
         $phar = new PharData($file_directory . '/' . $tar_file);
-        $extraction_path = drupal_realpath('public://ksm/latest');
         $phar->extractTo($extraction_path, NULL, TRUE);
       }
     }
@@ -58,7 +69,6 @@ function od_ext_webform_form_submit(array $form, FormStateInterface $form_state)
       // Decompress from zip.
       $zip = new ZipArchive();
       if ($zip->open($file_path) === TRUE) {
-        $extraction_path = drupal_realpath('public://kml/latest');
         $zip->extractTo($extraction_path);
         $zip->close();
       }
