@@ -71,6 +71,7 @@ class PostProcessNode extends SqlBase {
     // Translation support.
     if (!empty($row->getSourceProperty('translations'))) {
       $row->setSourceProperty('language', 'fr');
+      $row->setSourceProperty('langcode', 'fr');
     }
 
     // Title Field.

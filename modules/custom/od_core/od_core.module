@@ -16,8 +16,12 @@ function od_core_views_query_alter(ViewExecutable $view, QueryPluginBase $query)
 
   $db = Database::getConnection()->driver();
   if ($db == 'pgsql') {
-    if (isset($view->relationship['entityqueue_relationship'])) {
+    // TODO: Drupal core should be handling this.
+    if (!empty($view->relationship['entityqueue_relationship'])) {
       $query->getTableInfo('entity_subqueue__items')['join']->field .= '::bigint';
+    }
+    if (!empty($view->relationship['flag_relationship'])) {
+      $query->getTableInfo('flagging_node_field_data')['join']->field .= '::bigint';
     }
   }
 }
