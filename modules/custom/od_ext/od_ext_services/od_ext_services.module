@@ -4,3 +4,36 @@
  * @file
  * Contains od_ext_services.module.
  */
+
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ */
+function od_ext_services_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  if ($entity_type->id() == 'vote' && !empty($fields['entity_id'])) {
+    $fields['entity_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setName('entity_id')
+      ->setLabel(t('Voted entity'))
+      ->setDescription(t('The ID from the voted entity'))
+      ->setDefaultValue(0)
+      ->setProvider('votingapi')
+      ->setSetting('target_type', 'external_entity')
+      ->setRequired(TRUE)
+      ->setTargetBundle(NULL)
+      ->setTargetEntityTypeId('vote');
+  }
+  if ($entity_type->id() == 'vote_result' && !empty($fields['entity_id'])) {
+    $fields['entity_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setName('entity_id')
+      ->setLabel(t('Voted entity'))
+      ->setDescription(t('The ID from the voted entity'))
+      ->setProvider('votingapi')
+      ->setSetting('target_type', 'external_entity')
+      ->setRequired(TRUE)
+      ->setTargetBundle(NULL)
+      ->setTargetEntityTypeId('vote_result');
+  }
+
+}

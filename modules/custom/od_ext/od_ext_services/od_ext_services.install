@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Installation file for VotingAPI module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function od_ext_services_install() {
+  od_ext_services_update_8001();
+}
+
+/**
+ * Convert entity_id to varchar from int.
+ */
+function od_ext_services_update_8001() {
+  $tables = [
+    "votingapi_result",
+    "votingapi_vote",
+  ];
+  foreach ($tables as $table) {
+    db_change_field(
+      $table,
+      'entity_id',
+      'entity_id',
+      [
+        'type' => 'varchar_ascii',
+        'not null' => TRUE,
+        'default' => '0',
+        'length' => 255,
+        'description' => 'The entity_id of an entity for which the votes are compiled.',
+      ]
+    );
+  }
+
+}
