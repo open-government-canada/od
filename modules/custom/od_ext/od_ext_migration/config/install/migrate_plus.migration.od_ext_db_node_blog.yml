@@ -31,6 +31,10 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: language
+  status: status
+  moderation_state:
+    plugin: default_value
+    default_value: "published"
   field_image/target_id:
     plugin: migration
     migration: od_ext_db_file

@@ -26,6 +26,7 @@ class PageNode extends SqlBase {
         'language',
         'title',
         'uid',
+        'status',
       ])
       ->condition('n.type', 'wetkit_page');
 
@@ -43,6 +44,7 @@ class PageNode extends SqlBase {
       'title' => $this->t('Title'),
       'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
+      'status' => $this->t('Status'),
     ];
 
     return $fields;

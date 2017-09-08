@@ -23,6 +23,10 @@ before_install:
   - sudo apt-get update
   - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
   - docker --version
+  # Let's stop postgresql
+  - sudo service postgresql stop
+  # wait for postgresql to shutdown
+  - while sudo lsof -Pi :5432 -sTCP:LISTEN -t; do sleep 1; done
   # Disable xdebug.
   - phpenv config-rm xdebug.ini
   # Lets set-up our helper repository with all the docker config and use correct version in composer.json.

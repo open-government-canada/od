@@ -39,6 +39,10 @@ process:
     plugin: default_value
     default_value: "fr"
   path: alias
+  status: status
+  moderation_state:
+    plugin: default_value
+    default_value: "published"
   content_translation_source:
     plugin: default_value
     default_value: "en"

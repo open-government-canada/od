@@ -26,6 +26,7 @@ class WebformNode extends SqlBase {
         'language',
         'title',
         'uid',
+        'status',
       ])
       ->condition('n.type', 'webform');
 
@@ -43,6 +44,7 @@ class WebformNode extends SqlBase {
       'title' => $this->t('Title'),
       'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
+      'status' => $this->t('Status'),
     ];
 
     return $fields;

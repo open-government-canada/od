@@ -37,6 +37,10 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: language
+  status: status
+  moderation_state:
+    plugin: default_value
+    default_value: "published"
   field_app_url/uri: url
   field_app_url/title:
     plugin: default_value

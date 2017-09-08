@@ -39,7 +39,7 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 0
+            weight: -2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: b828e7fb-bf48-4123-8b60-f0c401577975
@@ -59,7 +59,7 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 0
+            weight: -1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 0f64e4e5-c95b-441f-914a-99523c8dc229
@@ -96,7 +96,7 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 2
+            weight: 3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2160fee8-4e99-44a7-a866-64a70589f6ac
@@ -113,7 +113,7 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 3
+            weight: 4
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 6a99c29c-5b59-4a5d-9e98-32d744573a5b
@@ -130,7 +130,7 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 1
+            weight: 2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 48d15630-593b-4228-a0bc-6a0c3b8e1774
@@ -147,10 +147,30 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
             region: content
-            weight: 0
+            weight: 1
             uuid: 704c076c-fdf9-448f-85da-23c8e088d052
             context_mapping:
               entity: '@panelizer.entity_context:entity'
+          398870d8-256a-413e-b0fa-008069ceeb20:
+            id: page_title_block
+            label: 'Page title'
+            provider: core
+            label_display: '0'
+            region: content
+            weight: -4
+            uuid: 398870d8-256a-413e-b0fa-008069ceeb20
+            context_mapping: {  }
+          c294d543-4dfa-42c1-853a-8aca98e1bbff:
+            id: local_tasks_block
+            label: Tabs
+            provider: core
+            label_display: '0'
+            primary: true
+            secondary: true
+            region: content
+            weight: -3
+            uuid: c294d543-4dfa-42c1-853a-8aca98e1bbff
+            context_mapping: {  }
         id: panels_variant
         label: Default
         uuid: f083fcc9-d339-4348-a4d3-1ad4ad1a7898
@@ -200,6 +220,9 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    region: content
+  workbench_moderation_control:
+    weight: -20
     region: content
 hidden:
   field_consultation_status: true

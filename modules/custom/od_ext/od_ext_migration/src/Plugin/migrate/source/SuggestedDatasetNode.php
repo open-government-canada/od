@@ -26,6 +26,7 @@ class SuggestedDatasetNode extends SqlBase {
         'language',
         'title',
         'uid',
+        'status',
       ])
       ->condition('n.type', 'suggested_datasets');
 
@@ -43,6 +44,7 @@ class SuggestedDatasetNode extends SqlBase {
       'title' => $this->t('Title'),
       'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
+      'status' => $this->t('Status'),
     ];
 
     return $fields;

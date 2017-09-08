@@ -26,6 +26,10 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: langcode
+  status: status
+  moderation_state:
+    plugin: default_value
+    default_value: "published"
 destination:
   plugin: 'entity:node'
 migration_dependencies:

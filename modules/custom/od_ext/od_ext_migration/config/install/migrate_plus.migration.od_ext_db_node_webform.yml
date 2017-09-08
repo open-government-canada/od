@@ -32,6 +32,10 @@ process:
     default_value: rich_text
   langcode: language
   path: alias
+  status: status
+  moderation_state:
+    plugin: default_value
+    default_value: "published"
   webform/target_id: webform
   webform/status: webform_status
 destination:

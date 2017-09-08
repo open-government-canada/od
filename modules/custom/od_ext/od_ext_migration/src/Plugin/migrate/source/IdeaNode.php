@@ -26,6 +26,7 @@ class IdeaNode extends SqlBase {
         'language',
         'title',
         'uid',
+        'status',
       ])
       ->condition('n.type', 'idea');
 
@@ -43,6 +44,7 @@ class IdeaNode extends SqlBase {
       'title' => $this->t('Title'),
       'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
+      'status' => $this->t('Status'),
       'freetags' => $this->t('Tags'),
       'status' => $this->t('Status'),
       'submission_name' => $this->t('Submission Name'),

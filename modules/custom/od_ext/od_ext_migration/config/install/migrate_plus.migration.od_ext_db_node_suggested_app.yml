@@ -28,6 +28,10 @@ process:
   body/format:
     plugin: default_value
     default_value: rich_text
+  status: status
+  moderation_state:
+    plugin: default_value
+    default_value: "published"
   field_suggested_app_dataset/value: dataset
   field_suggested_app_dataset/format:
     plugin: default_value

@@ -3035,6 +3035,10 @@ process:
     plugin: default_value
     default_value: 0
   path/alias: alias
+  status: status
+  moderation_state:
+    plugin: default_value
+    default_value: "published"
   panelizer:
     plugin: iterator
     source: panelizer

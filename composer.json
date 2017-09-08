@@ -323,7 +323,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
-        "drupalwxt/wxt": "2.0.0-alpha3",
+        "drupalwxt/wxt": "dev-8.x-2.x",
         "drupal/address": "1.1",
         "drupal/chosen": "2.4",
         "drupal/csv_serialization": "1.0",
