@@ -38,6 +38,7 @@ process:
   langcode:
     plugin: default_value
     default_value: "fr"
+  path: alias
   status: status
   moderation_state:
     plugin: default_value

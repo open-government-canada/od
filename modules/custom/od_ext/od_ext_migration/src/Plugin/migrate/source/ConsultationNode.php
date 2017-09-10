@@ -122,6 +122,14 @@ class ConsultationNode extends SqlBase {
       ->execute()
       ->fetchAllAssoc('entity_id');
 
+    // URL alias.
+    $alias = $this->select('url_alias', 'db')
+      ->fields('db', ['alias'])
+      ->condition('source', 'node/' . $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -132,6 +140,11 @@ class ConsultationNode extends SqlBase {
     $row->setSourceProperty('date_start', $date_start[0]);
     $row->setSourceProperty('date_end', $date_end[0]);
     $row->setSourceProperty('node_idea', $node_idea);
+
+    if (!empty($alias)) {
+      print_r($alias);
+      $row->setSourceProperty('alias', '/' . end($alias));
+    }
 
     return parent::prepareRow($row);
   }

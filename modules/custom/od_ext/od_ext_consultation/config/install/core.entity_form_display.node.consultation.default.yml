@@ -15,6 +15,7 @@ dependencies:
     - field_group
     - inline_entity_form
     - metatag
+    - path
     - text
     - workbench_moderation
 third_party_settings:
@@ -23,7 +24,7 @@ third_party_settings:
       children:
         - group_consult_basic_info
       parent_name: ''
-      weight: 4
+      weight: 3
       format_type: tabs
       format_settings:
         id: ''
@@ -52,7 +53,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 1
     settings:
       rows: 9
       summary_rows: 3
@@ -81,7 +82,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_idea_reference:
-    weight: 3
+    weight: 2
     settings:
       form_mode: default
       label_singular: ''
@@ -97,6 +98,12 @@ content:
   field_meta_tags:
     type: metatag_firehose
     weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -117,7 +124,6 @@ hidden:
   field_share_widget: true
   langcode: true
   panelizer: true
-  path: true
   promote: true
   sticky: true
   uid: true

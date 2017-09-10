@@ -31,6 +31,7 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: language
+  path: alias
   status: status
   moderation_state:
     plugin: default_value

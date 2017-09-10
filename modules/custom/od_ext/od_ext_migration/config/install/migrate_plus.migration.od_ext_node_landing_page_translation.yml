@@ -2402,7 +2402,11 @@ source:
       title: 'Consultations'
       language: fr
       body: |
-        <p>Cette page est actuellement en construction.</p>
+        <p>Partagez vos idées avec les organisations qui veulent savoir ce
+        que les citoyens canadiens et des parties prenantes pensent. Trouvez une
+        consultation spécifique ou consultez la liste complète en commençant par
+        celles qui ont débuté récemment. Voyez ce que les Canadiens ont dit lors
+        des consultations.</p>
       alias: /consultations
       panelizer:
         -
@@ -2413,20 +2417,26 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: top
               weight: 0
             -
               id: local_tasks_block
               label: Tabs
               label_display: '0'
-              region: top_left
+              region: top
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
-              weight: 1
+              region: top
+              weight: 2
+            -
+              id: 'views_block:solr_search_content-solr_consultation'
+              label: ''
+              label_display: visible
+              region: middle
+              weight: 10
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -3336,6 +3346,131 @@ source:
           page_title: '[node:title]'
           storage_type: panelizer_default
           storage_id: 'node:landing_page:full:wxt'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: consultation_action_plan_2_disc
+      title: 'Discussion relative au plan de consultation – Discussions sur le Plan d’action du Canada pour un gouvernement ouvert 2.0'
+      language: fr
+      body: |
+        <div class="text-center">
+          <a class="btn btn-primary" href="[site:url]/consultations/discussion-activites-discussions-plan-daction-du-canada-gouvernement-ouvert-20" role="button">Discussion sur les activités</a>
+          <a class="btn btn-primary" href="[site:url]/consultations/idees-nouvelles-discussions-plan-daction-du-canada-gouvernement-ouvert-20" role="button">Idées nouvelles</a>
+          <a class="btn btn-primary" href="[site:url]/consultations/idea-dialogue-action-plan-20-discussions" role="button">Dialogue sur les idées</a>
+          <a class="btn btn-primary active" href="[site:url]/consultations/plan-daction-du-canada-pour-un-gouvernement-ouvert" role="button">Discussion relative au plan</a></div>
+        <p>&nbsp;</p>
+        <div class="alert alert-warning" role="alert">
+          <p>Découvrez <a href="http://ouvert.canada.ca/fr/contenu/plan-daction-du-canada-gouvernement-ouvert-2014-2016">
+          le Plan d’action du Canada pour un gouvernement ouvert 2014-2016</a>.</p>
+          <p>Phase sur le dialogue sur les idées complétée. Nous vous
+          remercions pour vos commentaires et de vos suggestions, lesquels nous
+          ont aidés à établir une liste d’activités proposées dans le contexte
+          du Plan d’action du Canada pour un gouvernement ouvert&nbsp;2.0. Cette
+          liste est actuellement présentée dans le cadre de la phase&nbsp;3 des
+          consultations, <a href="/fr/consultations/discussion-activites-discussions-plan-daction-du-canada-gouvernement-ouvert-20">
+          Discussion sur les activités</a>.</p>
+          <p>Si vous souhaitez obtenir un résumé des propos formulés jusqu’ici,
+          visitez la section <a href="http://ouvert.canada.ca/fr/consultations/bilan-consultations">
+          Bilan des consultations</a>.</p>
+        </div>
+        <p>&nbsp;</p>
+        <div class="clear"><span>À propos de la consultation</span></div>
+        <p>Le gouvernement du Canada se fait le champion des principes en matière
+        d'ouverture et de transparence. En augmentant la disponibilité de
+        l'information du gouvernement et en mobilisant le public, nous pouvons
+        bâtir un pays plus solide et novateur, mieux informé et plus engagé,
+        créant une multitude de débouchés économiques.</p>
+        <p>En 2012, le Canada s'est joint au Partenariat pour un gouvernement
+        transparent (OGP), afin d'améliorer la qualité des programmes et
+        services offerts aux citoyens. Comme nous approchons de la fin de nos
+        deux premières années à titre de membre de l'OGP, le moment est venu de
+        mobiliser les Canadiens en vue d'élaborer le Plan d'action du Canada
+        pour un gouvernement ouvert (PACGO) 2.0.</p>
+        <p>Notre objectif est de créer un dialogue riche et productif portant
+        sur la façon de veiller à ce que le Plan d'action 2.0 tire parti des
+        réussites et des leçons apprises au cours des deux dernières années.</p>
+        <p>Nous vous demandons de fournir des commentaires sur la meilleure
+        façon de réaliser ces objectifs en matière de consultation et
+        d'augmenter la participation.</p>
+        <p>Veuillez examiner le <a href="http://ouvert.canada.ca/fr/consultations/consultation-plan-daction-gouvernement-ouvert-20">
+        Plan de consultation</a> et <a href="#toc4">nous faire part de vos
+        réflexions</a> sur les questions suivantes :</p>
+        <ol><li><strong>De quelle façon pouvons-nous améliorer le plan de
+        consultation?</strong></li>
+          <li><strong>Allez-vous participer aux consultations dans le cadre du
+          Plan d'action du Canada pour un gouvernement ouvert? Pourquoi?</strong></li>
+          <li><strong>Connaissez-vous des organisations ou groupes d'intérêt
+          public qui aimeraient participer? Si c'est le cas, veuillez nous en
+          informer.</strong></li>
+        </ol><h2 class="margin-top-xlarge" id="toc3">Comment puis-je garder
+        contact?</h2>
+        <ul>
+          <li><strong>Courriel</strong> – Inscrivez-vous à <a href="/fr/formulaire/courriels-gouvernement-ouvert">
+          la liste de distribution</a> en envoyant votre nom, adresse électronique, et champ d'intérêt.</li>
+          <li><strong>Twitter</strong> – Suivez <a href="https://twitter.com/SCT_Canada">@SCT_Canada</a>;
+          nous utiliserons #opengovcan pour les nouvelles générales et #OGAP2
+          pour les nouvelles portant sur le Plan d'action pour un gouvernement
+          ouvert 2.0.</li>
+        </ul>
+      alias: /consultations/plan-daction-du-canada-pour-un-gouvernement-ouvert
+      panelizer:
+        -
+          view_mode: page_manager
+          default: one_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: main
+              weight: 1
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
           pattern: panelizer
           builder: ipe
           static_context: {  }

@@ -2102,7 +2102,11 @@ source:
       name: consultations
       title: 'Consultations'
       language: en
-      body: "<p>This page is currently under construction.</p>\n"
+      body: |
+        <p>Share your ideas with organizations seeking input from Canadian
+        citizens and stakeholders. Find a specific consultation or see all
+        consultations, starting with those that opened most recently and see
+        what consultations have been hearing from Canadians.</p>
       alias: /consultations
       panelizer:
         -
@@ -2113,20 +2117,26 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: top_left
+              region: top
               weight: 0
             -
               id: local_tasks_block
               label: Tabs
               label_display: '0'
-              region: top_left
+              region: top
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: top_left
-              weight: 1
+              region: top
+              weight: 2
+            -
+              id: 'views_block:solr_search_content-solr_consultation'
+              label: ''
+              label_display: visible
+              region: middle
+              weight: 10
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -3002,6 +3012,123 @@ source:
           page_title: '[node:title]'
           storage_type: panelizer_default
           storage_id: 'node:landing_page:full:wxt'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: consultation_action_plan_2_disc
+      title: 'Consultation Plan Discussion - Action Plan 2.0 Discussions'
+      language: en
+      body: |
+        <div class="text-center"><a class="btn btn-primary" href="[site:url]consultations/activities-discussion-action-plan-20-discussions" role="button">Activities Discussion</a>
+        <a class="btn btn-primary" href="[site:url]consultations/new-ideas-action-plan-20-discussions" role="button">New Ideas</a>
+        <a class="btn btn-primary" href="[site:url]consultations/idea-dialogue-action-plan-20-discussions" role="button">Idea Dialogue</a>
+        <a class="btn btn-primary active" href="[site:url]consultations/consultation-plan-discussion-action-plan-20-discussions" role="button">Consultation Plan Discussion</a></div>
+        <p>&nbsp;</p>
+        <div class="alert alert-warning" role="alert">
+          <p>Check out <a href="/en/content/canadas-action-plan-open-government-2014-16">
+          Canada’s Action Plan on Open Government 2014-16</a>.</p>
+          <p>Idea Dialogue Phase completed – Thank you very much for all your
+          comments and suggestions. They have helped us develop a list of
+          proposed activities for Canada’s Action Plan on Open Government 2.0,
+          which has been posted in Phase 3 of this consultation – the
+          <a href="/node/292">Activities Discussion</a>.</p>
+          <p>To get a summary of what was said, you can refer to the
+          <a href="http://wxt.dev//consultations/consultation-summaries">
+          Consultation Summaries</a> section.</p>
+        </div>
+        <p>&nbsp;</p>
+        <h2>About the Consultation</h2>
+        <p>The Government of Canada champions the principles of openness and
+        transparency. By increasing the availability of government information
+        and engaging the public, we can build a stronger country – one that is
+        more innovative, more informed, more participatory, and full of
+        economic opportunity.</p>
+        <p>In 2012, Canada joined the Open Government Partnership (OGP) to
+        improve the quality of the programs and services that citizens receive.
+        As we near the end of our first two years as a member of the
+        Open Government Partnership, it is time to engage with Canadians on the
+        development of Canada's Action Plan on Open Government Consultation
+        (CAPOG) 2.0.</p>
+        <p>Our goal is a rich and productive dialogue on how to ensure Action
+        Plan 2.0 builds on the successes and lessons of the last two years.</p>
+        <p>We are asking for your input on how to best meet these consultation
+        goals and increase participation.</p>
+        <p>Please have a look at the <a href="/en/consultations/open-government-action-plan-20-consultation">
+        Consultation Plan</a> and <a href="#toc4">share your thoughts</a> on
+        these key questions:</p>
+        <ol><li><strong>How can we make the consultation plan better?</strong></li>
+          <li><strong>Will you participate in Open Government consultations?
+          Why or why not?</strong></li>
+          <li><strong>Can you name any public interest groups or organizations
+          that would be interested in participating? If so, please share with
+          us.</strong></li>
+        </ol><h2 class="margin-top-xlarge" id="toc3">How do I stay connected?</h2>
+        <ul>
+          <li><strong>Email</strong> – subscribe to the <a href="/node/782">mailing list</a>
+          by sending your name, email address, and interest area.</li>
+          <li><strong>Twitter</strong> – follow <a href="https://twitter.com/TBS_Canada">@TBS_Canada</a>
+          we will be using #opengovcan for general news and #OGAP2 for news
+          specific to the Open Government Action Plan 2.0.</li>
+        </ul>
+      alias: /consultations/consultation-plan-discussion-action-plan-20-discussions
+      panelizer:
+        -
+          view_mode: page_manager
+          default: one_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: top
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: top
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: main
+              weight: 1
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
           pattern: panelizer
           builder: ipe
           static_context: {  }

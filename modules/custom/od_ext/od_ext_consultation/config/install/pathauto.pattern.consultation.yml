@@ -6,16 +6,16 @@ dependencies:
 id: consultation
 label: consultation
 type: 'canonical_entities:node'
-pattern: 'consultation/[node:title]'
+pattern: 'consultations/[node:title]'
 selection_criteria:
-  0f8da168-d724-4ee9-8d43-bec52b4c66d4:
+  01293bce-7704-45a3-a0fe-723f0d8f3916:
     id: node_type
     bundles:
       consultation: consultation
     negate: false
     context_mapping:
       node: node
-    uuid: 0f8da168-d724-4ee9-8d43-bec52b4c66d4
+    uuid: 01293bce-7704-45a3-a0fe-723f0d8f3916
 selection_logic: and
 weight: -5
 relationships: {  }
