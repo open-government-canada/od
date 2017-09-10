@@ -134,6 +134,15 @@ class IdeaNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // Likes.
+    $likes = $this->select('votingapi_vote', 'vv')
+      ->fields('vv', ['value'])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('entity_type', 'node')
+      ->condition('tag', 'thumbs_rate')
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -145,6 +154,7 @@ class IdeaNode extends SqlBase {
     $row->setSourceProperty('status', $status['sc_consultation_field_status_tid']);
     $row->setSourceProperty('submission_name', $submission_name[0]);
     $row->setSourceProperty('idea_permalink', $idea_permalink[0]);
+    $row->setSourceProperty('likes', $likes);
 
     return parent::prepareRow($row);
   }

@@ -96,6 +96,7 @@
         {% endfor %}
       </div>
       {{ text|length > 420 ? text|slice(0, 420) ~ '...' : text }}
+      <p class="mrgn-tp-lg">{{ content.flag_like }}</p>
       <div class="btn-toolbar mrgn-tp-lg mrgn-bttm-md">
         <button type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-book" aria-hidden="true"></span>

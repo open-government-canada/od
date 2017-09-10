@@ -21,10 +21,135 @@ dependencies:
     - user
 third_party_settings:
   panelizer:
-    enable: false
-    custom: false
+    enable: true
+    custom: true
     allow: false
     default: default
+    displays:
+      default:
+        blocks:
+          5af47936-b1a4-4fe0-9252-cf1e4a15334d:
+            id: 'entity_field:node:body'
+            label: Body
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 5af47936-b1a4-4fe0-9252-cf1e4a15334d
+          2d895eea-c264-493a-8f0b-4e51e0f7ade6:
+            id: 'entity_field:node:field_consultation_date'
+            label: Date
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: daterange_default
+              settings:
+                separator: '-'
+                format_type: medium
+                timezone_override: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 3
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 2d895eea-c264-493a-8f0b-4e51e0f7ade6
+          0cb86f71-ffff-44e9-b122-28802b85d59e:
+            id: 'entity_field:node:field_consultation_status'
+            label: Status
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_rss_category
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 4
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 0cb86f71-ffff-44e9-b122-28802b85d59e
+          671f2c92-2e1d-4f4e-9a59-4e6c075c6dac:
+            id: 'entity_field:node:field_idea_reference'
+            label: 'Idea Reference'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_revisions_entity_view
+              settings:
+                view_mode: default
+                link: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 671f2c92-2e1d-4f4e-9a59-4e6c075c6dac
+          8fb362b4-b375-464b-95e9-82604f290b84:
+            id: 'entity_field:node:field_share_widget'
+            label: 'Share Widget'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: list_key
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 8fb362b4-b375-464b-95e9-82604f290b84
+          7502a36b-699a-4ecf-98cb-c72e663cc1a4:
+            id: page_title_block
+            label: 'Page title'
+            provider: core
+            label_display: '0'
+            region: main
+            weight: -4
+            uuid: 7502a36b-699a-4ecf-98cb-c72e663cc1a4
+            context_mapping: {  }
+          bb4f3762-bdf0-4a46-a56c-90770b7473d4:
+            id: local_tasks_block
+            label: Tabs
+            provider: core
+            label_display: '0'
+            primary: true
+            secondary: true
+            region: main
+            weight: -3
+            uuid: bb4f3762-bdf0-4a46-a56c-90770b7473d4
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 7fb824fd-1918-4cb7-93ca-65e6716f6664
+        weight: 0
+        layout: bs_1col
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: panelizer_default
+        storage_id: 'node:consultation:full:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
 id: node.consultation.full
 targetEntityType: node
 bundle: consultation
@@ -72,6 +197,11 @@ content:
     region: content
   links:
     weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  workbench_moderation_control:
+    weight: -20
     region: content
     settings: {  }
     third_party_settings: {  }

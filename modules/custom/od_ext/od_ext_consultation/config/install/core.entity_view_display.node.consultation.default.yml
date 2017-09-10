@@ -224,6 +224,8 @@ content:
   workbench_moderation_control:
     weight: -20
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_consultation_status: true
   field_meta_tags: true

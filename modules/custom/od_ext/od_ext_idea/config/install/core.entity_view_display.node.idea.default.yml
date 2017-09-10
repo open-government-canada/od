@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.idea.body
     - field.field.node.idea.comment
+    - field.field.node.idea.field_idea_permalink
     - field.field.node.idea.field_idea_status
     - field.field.node.idea.field_idea_submission_name
     - field.field.node.idea.field_idea_tags
@@ -28,12 +29,12 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   comment:
-    weight: 3
+    weight: 5
     label: above
     settings:
       view_mode: default
@@ -43,25 +44,36 @@ content:
     region: content
   field_idea_submission_name:
     type: string
-    weight: 1
+    weight: 2
     region: content
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_idea_tags:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
+  flag_like:
     weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  workbench_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_idea_permalink: true
   field_idea_status: true
   langcode: true

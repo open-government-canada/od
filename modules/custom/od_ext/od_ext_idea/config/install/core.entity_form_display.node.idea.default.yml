@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.idea.body
     - field.field.node.idea.comment
+    - field.field.node.idea.field_idea_permalink
     - field.field.node.idea.field_idea_status
     - field.field.node.idea.field_idea_submission_name
     - field.field.node.idea.field_idea_tags
@@ -29,10 +30,10 @@ third_party_settings:
       label: Idea
     group_basic_info:
       children:
-        - field_idea_consultation
         - field_idea_submission_name
         - field_idea_tags
         - field_idea_status
+        - field_vote
       parent_name: group_idea
       weight: 20
       format_type: tab
@@ -131,9 +132,9 @@ content:
     region: content
   translation:
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 2
@@ -143,4 +144,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_idea_permalink: true

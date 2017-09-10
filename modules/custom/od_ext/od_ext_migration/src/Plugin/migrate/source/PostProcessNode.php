@@ -25,7 +25,6 @@ class PostProcessNode extends SqlBase {
         'vid',
         'langcode',
         'type',
-        'status',
       ])
       ->condition('n.type',
       [
@@ -47,7 +46,6 @@ class PostProcessNode extends SqlBase {
       'vid' => $this->t('Revision ID'),
       'langcode' => $this->t('Language'),
       'type' => $this->t('Type'),
-      'status' => $this->t('Status'),
     ];
 
     return $fields;

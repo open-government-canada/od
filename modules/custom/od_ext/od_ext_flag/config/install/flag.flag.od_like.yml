@@ -4,8 +4,7 @@ dependencies: {  }
 id: od_like
 label: Like
 bundles:
-  - app
-  - dataset
+  - deliverable
 entity_type: paragraph
 global: false
 weight: 0

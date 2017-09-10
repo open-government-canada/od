@@ -4,6 +4,7 @@ dependencies: {  }
 id: like
 label: Like
 bundles:
+  - idea
   - suggested_app
   - suggested_dataset
 entity_type: node

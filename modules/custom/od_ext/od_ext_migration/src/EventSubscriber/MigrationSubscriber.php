@@ -362,8 +362,9 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
-    if ($event->getMigration()->id() == 'od_ext_db_node_suggested_app' ||
-      $event->getMigration()->id() == 'od_ext_db_node_suggested_dataset') {
+    if ($event->getMigration()->id() == 'od_ext_db_node_idea' ||
+        $event->getMigration()->id() == 'od_ext_db_node_suggested_app' ||
+        $event->getMigration()->id() == 'od_ext_db_node_suggested_dataset') {
       $likes = $event->getRow()->getSourceProperty('likes');
 
       if (!empty($likes)) {
