@@ -404,6 +404,36 @@ class MigrationSubscriber implements EventSubscriberInterface {
         }
       }
     }
+
+    if ($event->getMigration()->id() == 'od_ext_block_spotlight') {
+      $sourceBid = $event->getRow()->getSourceProperty('bid');
+      $destBid = $event->getDestinationIdValues();
+      if (!empty($sourceBid)) {
+        switch ($sourceBid) {
+          case 'open_gov_across_canada':
+          case 'open_maps':
+          case 'open_gov_partnership':
+            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('front_page');
+            $items = $entity_subqueue->get('items')->getValue();
+            $items[] = ['target_id' => $destBid[0]];
+            $entity_subqueue->set('items', $items);
+            $entity_subqueue->save();
+            break;
+        }
+
+        switch ($sourceBid) {
+          case 'open_gov_across_canada':
+          case 'open_gov_receive_updates':
+          case 'open_gov_partnership':
+            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('open_maps');
+            $items = $entity_subqueue->get('items')->getValue();
+            $items[] = ['target_id' => $destBid[0]];
+            $entity_subqueue->set('items', $items);
+            $entity_subqueue->save();
+            break;
+        }
+      }
+    }
   }
 
   /**

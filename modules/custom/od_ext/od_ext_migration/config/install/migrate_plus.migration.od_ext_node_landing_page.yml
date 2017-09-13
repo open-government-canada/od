@@ -74,7 +74,7 @@ source:
               label_display: 0
               region: top_right
               view_mode: full
-              weight: 5
+              weight: 10
             -
               id: 'entity_block:homepage'
               label: Media
@@ -825,7 +825,7 @@ source:
         change the way geospatial data are managed, shared, and used by the
         Government of Canada.</p>
         <p>The geospatial data and services found in Open Maps are made
-        available under the <a href="[site:url]open-government-licence-canada">
+        available under the <a href="[site:url]/open-government-licence-canada">
         Open Government Licence</a>, and can be used to support your research,
         application development, or other purposes as allowed under the
         licence.</p>
@@ -918,7 +918,7 @@ source:
       name: suggested_datasets
       title: 'Suggest a Dataset'
       language: en
-      body: "<p>Is there Government of Canada data that you would like to see? Let\nus know your ideas by using our\n<a href=\"[site:url]forms/suggest-dataset\">Suggest a\nDataset form</a>, but first search below to see if someone else has\nalready requested the same dataset. If you find it, you can check on\nits status and add your request by clicking on thumbs up.</p>\n"
+      body: "<p>Is there Government of Canada data that you would like to see? Let\nus know your ideas by using our\n<a href=\"[site:url]/forms/suggest-dataset\">Suggest a\nDataset form</a>, but first search below to see if someone else has\nalready requested the same dataset. If you find it, you can check on\nits status and add your request by clicking on thumbs up.</p>\n"
       alias: /suggested-datasets
       panelizer:
         -
@@ -1973,7 +1973,7 @@ source:
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/contracts">Search
+        <h2 class="h5"><a href="[site:url]/search/contracts">Search
         Quarterly Government Contracts</a></h2>
 
         <p>Browse information on contracts over $10,000 by department and
@@ -1982,7 +1982,7 @@ source:
         </div>
 
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/hospitalityq">Search
+        <h2 class="h5"><a href="[site:url]/search/hospitalityq">Search
         Government Hospitality Expenses</a></h2>
 
         <p>Find out what your government is spending to facilitate the business
@@ -1992,7 +1992,7 @@ source:
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/grants">Search Government
+        <h2 class="h5"><a href="[site:url]/search/grants">Search Government
         Grants and Contributions</a></h2>
 
         <p>Search transfers of money, goods, services or assets to individuals,
@@ -2000,7 +2000,7 @@ source:
         </div>
 
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/travelq">Search
+        <h2 class="h5"><a href="[site:url]/search/travelq">Search
         Government Travel Expenses</a></h2>
 
         <p>Search by function and department to see where the government’s
@@ -2010,7 +2010,7 @@ source:
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/reclassification">Search
+        <h2 class="h5"><a href="[site:url]/search/reclassification">Search
         Government Position Reclassifications</a></h2>
 
         <p>Search by position and department to see what government positions
@@ -2018,7 +2018,7 @@ source:
         </div>
 
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/wrongdoing">Search
+        <h2 class="h5"><a href="[site:url]/search/wrongdoing">Search
         Government Acts of Founded Wrongdoing</a></h2>
 
         <p>Search information on wrongdoing found to have been committed by an
@@ -2028,7 +2028,7 @@ source:
 
         <div class="row">
         <div class="col-md-6">
-        <h2 class="h5"><a href="[site:url]search/travela">Search Annual
+        <h2 class="h5"><a href="[site:url]/search/travela">Search Annual
         Expenditures on Travel, Hospitality and Conferences </a></h2>
 
         <p>In accordance with Section 6.4 of the Treasury Board Directive on
@@ -2440,7 +2440,7 @@ source:
         and collaborate with other Canadians.</p>
         <p>Open Maps is a work in progress and will expand and improve over the
         coming months. Check back for updates, and please
-        <a href="[site:url]forms/contact-us">let us know what
+        <a href="[site:url]/forms/contact-us">let us know what
         you think</a>.</p>
       alias: /open-maps
       queue: open_maps
@@ -2778,11 +2778,11 @@ source:
         can include in their own research.</p>
         <p>The most important part of this pilot is you. Have a look backstage,
         discover a new way to connect with your government and
-        <a href="[site:url]forms/contact-us">contact us</a> to let us know what
+        <a href="[site:url]/forms/contact-us">contact us</a> to let us know what
         you think.</p>
         <p>For more information on re-using information released by the Open by
         Default pilot, please refer to Canada’s
-        <a href="[site:url]open-government-licence-canada">Open Government
+        <a href="[site:url]/open-government-licence-canada">Open Government
         Licence</a>.</p>
       alias: /about-open-by-default
       panelizer:
@@ -2867,8 +2867,8 @@ source:
         </ul>
         <h2 id="toc1">Open Government Programs in Canada</h2>
         <p>Click on the map below to learn more about Open Government programs.</p>
-        <p>If you know of a Canadian jurisdiction with an Open Government program that is not listed below, please&nbsp;<a href="[site:url]forms/contact-us">contact us</a>&nbsp;to have it added so we can help to promote it.</p>
-        <div class="wb-geomap" data-wb-geomap="{ &quot;layersFile&quot;: &quot;[site:url]sites/default/files/kml/open-config-en.js&quot; }" id="location_map">
+        <p>If you know of a Canadian jurisdiction with an Open Government program that is not listed below, please&nbsp;<a href="[site:url]/forms/contact-us">contact us</a>&nbsp;to have it added so we can help to promote it.</p>
+        <div class="wb-geomap" data-wb-geomap="{ &quot;layersFile&quot;: &quot;[site:url]/sites/default/files/kml/open-config-en.js&quot; }" id="location_map">
         <div class="row">
         <div class="col-md-9">
         <div class="wb-geomap-map">
@@ -3020,10 +3020,10 @@ source:
       title: 'Consultation Plan Discussion - Action Plan 2.0 Discussions'
       language: en
       body: |
-        <div class="text-center"><a class="btn btn-primary" href="[site:url]consultations/activities-discussion-action-plan-20-discussions" role="button">Activities Discussion</a>
-        <a class="btn btn-primary" href="[site:url]consultations/new-ideas-action-plan-20-discussions" role="button">New Ideas</a>
-        <a class="btn btn-primary" href="[site:url]consultations/idea-dialogue-action-plan-20-discussions" role="button">Idea Dialogue</a>
-        <a class="btn btn-primary active" href="[site:url]consultations/consultation-plan-discussion-action-plan-20-discussions" role="button">Consultation Plan Discussion</a></div>
+        <div class="text-center"><a class="btn btn-primary" href="[site:url]/consultations/activities-discussion-action-plan-20-discussions" role="button">Activities Discussion</a>
+        <a class="btn btn-primary" href="[site:url]/consultations/new-ideas-action-plan-20-discussions" role="button">New Ideas</a>
+        <a class="btn btn-primary" href="[site:url]/consultations/idea-dialogue-action-plan-20-discussions" role="button">Idea Dialogue</a>
+        <a class="btn btn-primary active" href="[site:url]/consultations/consultation-plan-discussion-action-plan-20-discussions" role="button">Consultation Plan Discussion</a></div>
         <p>&nbsp;</p>
         <div class="alert alert-warning" role="alert">
           <p>Check out <a href="/en/content/canadas-action-plan-open-government-2014-16">

@@ -75,7 +75,7 @@ source:
               label_display: 0
               region: top_right
               view_mode: full
-              weight: 5
+              weight: 10
             -
               id: 'entity_block:homepage'
               label: Media

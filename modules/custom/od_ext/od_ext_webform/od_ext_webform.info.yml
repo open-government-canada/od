@@ -7,3 +7,4 @@ package: 'Open Data'
 # Required modules
 dependencies:
   - drupal:wxt_ext_webform
+  - drupal:webform_bootstrap

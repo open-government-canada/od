@@ -54,7 +54,7 @@ source:
               <span class="wb-inv">Twitter</span></a>
             </li>
             <li>
-              <a href="[site:url]rss-feeds" title="RSS">
+              <a href="[site:url]/rss-feeds" title="RSS">
               <i class="fa fa-rss"></i>
               <span class="wb-inv">RSS</span></a>
             </li>
@@ -66,7 +66,7 @@ source:
       body: |
         <h2 class="h4">
           <span class="pull-left"></span>
-          <a href="[site:url]open-data">Open data</a>
+          <a href="[site:url]/open-data">Open data</a>
         </h2>
         <p>Search Government of Canada data, learn how to work with datasets,
         see what people have done with our data.</p>
@@ -76,7 +76,7 @@ source:
       body: |
         <h2 class="h4">
           <span class="pull-left"></span>
-          <a href="[site:url]open-information">Open information</a>
+          <a href="[site:url]/open-information">Open information</a>
         </h2>
         <p>Search Government of Canada digital records, completed access to
         information request summaries, and contracts over $10,000.</p>
@@ -86,7 +86,7 @@ source:
       body: |
         <h2 class="h4">
           <span class="pull-left"></span>
-          <a href="[site:url]open-dialogue">Open dialogue</a>
+          <a href="[site:url]/open-dialogue">Open dialogue</a>
         </h2>
         <p>Interact with open government experts and enthusiasts and share your
         ideas for new innovative approaches to open government.</p>
@@ -96,7 +96,7 @@ source:
       body: |
         <h2 class="h4">
           <span class="pull-left"></span>
-          <a href="[site:url]about-open-government">About Open Government</a>
+          <a href="[site:url]/about-open-government">About Open Government</a>
         </h2>
         <p>Explore Canada’s open government commitments, discover open
         government programs across Canada, and learn more about the Open
@@ -105,7 +105,7 @@ source:
       language: 'en'
       title: 'Search through our Open data portal'
       body: |
-        <h2 class="h4"><a href="[site:url]ckan/en/dataset">Search through our
+        <h2 class="h4"><a href="[site:url]/ckan/en/dataset">Search through our
         Open data portal</a></h2>
         <p>Looking for data about Government of Canada services, financials,
         national demographic information or high resolution maps? Discover that
@@ -115,7 +115,7 @@ source:
       language: 'en'
       title: 'Open maps'
       body: |
-        <h2 class="h4"><a href="[site:url]open-maps">Open
+        <h2 class="h4"><a href="[site:url]/open-maps">Open
         maps</a></h2>
         <p>Explore the Government of Canada’s geospatial data, services, and
         applications and create customized maps.</p>
@@ -123,7 +123,7 @@ source:
       language: 'en'
       title: 'Open Data Inventory'
       body: |
-        <h2 class="h4"><a href="[site:url]search/inventory">Open
+        <h2 class="h4"><a href="[site:url]/search/inventory">Open
         Data Inventory</a></h2>
         <p>Review the open data inventories submitted by Government of Canada
         departments and agencies.</p>
@@ -131,7 +131,7 @@ source:
       language: 'en'
       title: 'Open data 101'
       body: |
-        <h2 class="h4"><a href="[site:url]open-data-principles">Open data 101</a></h2>
+        <h2 class="h4"><a href="[site:url]/open-data-principles">Open data 101</a></h2>
         <p>Learn what open data is, how to get the most out of it, and explore
         the principles that are guiding the Government of Canada’s open data
         initiatives.</p>
@@ -139,7 +139,7 @@ source:
       language: 'en'
       title: 'Working with data and application programming interfaces'
       body: |
-        <h2 class="h4"><a href="[site:url]working-data">Working with data and application
+        <h2 class="h4"><a href="[site:url]/working-data">Working with data and application
         programming interfaces</a></h2>
         <p>Learn more about how to use a variety of data formats, including
         application programming interfaces (APIs).</p>
@@ -147,14 +147,14 @@ source:
       language: 'en'
       title: 'Suggest a dataset'
       body: |
-        <h2 class="h4"><a href="[site:url]suggested-datasets">Suggest a
+        <h2 class="h4"><a href="[site:url]/suggested-datasets">Suggest a
         dataset</a></h2>
         <p>Can’t find the dataset that you are looking for? Let us know!</p>
     - bid: 'open_data_apps'
       language: 'en'
       title: 'Apps gallery'
       body: |
-        <h2 class="h4"><a href="[site:url]apps">Apps
+        <h2 class="h4"><a href="[site:url]/apps">Apps
         Gallery</a></h2>
         <p>Browse and download apps that were built both by the Canadian public
         and the Government of Canada that use open data.</p>
@@ -162,26 +162,26 @@ source:
       language: 'en'
       title: 'Submit your app'
       body: |
-        <h2 class="h4"><a href="[site:url]forms/submit-your-app">Submit your
+        <h2 class="h4"><a href="[site:url]/forms/submit-your-app">Submit your
         app</a></h2>
         <p>Have you made an application using Government of Canada open data or
         open information? If so, let us know and we will share it with
-        Canadians in our <a href="[site:url]apps">apps
+        Canadians in our <a href="[site:url]/apps">apps
         gallery</a>.</p>
     - bid: 'open_info_search'
       language: 'en'
       title: 'Search through our open information portal'
       body: |
-        <h2 class="h4"><a href="[site:url]ckan/en/dataset?portal_type=info&q=">
+        <h2 class="h4"><a href="[site:url]/ckan/en/dataset?portal_type=info&q=">
         Search through our open information portal</a></h2>
         <p>Explore our open information portal which provides access to digital
         information resources. Let us know what you think by
-        <a href="[site:url]forms/contact-us">contacting us</a>.</p>
+        <a href="[site:url]/forms/contact-us">contacting us</a>.</p>
     - bid: 'open_info_access'
       language: 'en'
       title: 'Access to information'
       body: |
-        <h2 class="h4"><a href="[site:url]access-to-information">
+        <h2 class="h4"><a href="[site:url]/access-to-information">
         Access to information</a></h2>
         <p>Learn more about the Canada’s Access to Information (ATI)
         legislation, search through completed ATI summaries, and make an
@@ -202,7 +202,7 @@ source:
       language: 'en'
       title: 'Open by Default Pilot'
       body: |
-        <h2 class="h4"><a href="[site:url]open-by-default-pilot">
+        <h2 class="h4"><a href="[site:url]/open-by-default-pilot">
         Open by Default Pilot</a></h2>
         <p>Explore working documents provided by four Government of Canada
         departments as part of our commitment to making government more open
@@ -211,7 +211,7 @@ source:
       language: 'en'
       title: 'Proactive Disclosure'
       body: |
-        <h2 class="h4"><a href="[site:url]proactive-disclosure">
+        <h2 class="h4"><a href="[site:url]/proactive-disclosure">
           Proactive Disclosure
         </a></h2>
         <p>Browse reports that have been proactively disclosed by departments
@@ -221,7 +221,7 @@ source:
       language: 'en'
       title: 'Open Government Implementation Plans'
       body: |
-        <h2 class="h4"><a href="[site:url]content/open-government-implementation-plans">
+        <h2 class="h4"><a href="[site:url]/content/open-government-implementation-plans">
         Open Government Implementation Plans</a></h2>
         <p>Review departmental plans which outline the approaches Government of
         Canada organizations will take to meet the requirements of the
@@ -260,7 +260,7 @@ source:
       language: 'en'
       title: 'Third Biennial Plan to the Open Government Partnership (2016-18)'
       body: |
-        <h2 class="h4"><a href="[site:url]content/third-biennial-plan-open-government-partnership">
+        <h2 class="h4"><a href="[site:url]/content/third-biennial-plan-open-government-partnership">
         Third Biennial Plan to the Open Government Partnership (2016-18)</a>
         </h2>
         <p>Learn more about Canada’s commitments to becoming a more open,
@@ -269,7 +269,7 @@ source:
       language: 'en'
       title: 'Progress tracker for the Third Biennial Plan to the Open Government Partnership'
       body: |
-        <h2 class="h4"><a href="[site:url]content/progress-tracker-third-biennial-plan-open-government-partnership">
+        <h2 class="h4"><a href="[site:url]/content/progress-tracker-third-biennial-plan-open-government-partnership">
           Progress tracker for the Third Biennial Plan to the Open Government
           Partnership
         </a></h2>
@@ -290,7 +290,7 @@ source:
       language: 'en'
       title: 'Open Government Licence'
       body: |
-        <h2 class="h4"><a href="[site:url]open-government-licence-canada">
+        <h2 class="h4"><a href="[site:url]/open-government-licence-canada">
           Open Government Licence
         </a></h2>
         <p>This easy to understand licence promotes the reuse of published
@@ -299,7 +299,7 @@ source:
       language: 'en'
       title: 'Canada’s Plans to the Open Government Partnership'
       body: |
-        <h2 class="h4"><a href="[site:url]content/canadas-plans-open-government-partnership">
+        <h2 class="h4"><a href="[site:url]/content/canadas-plans-open-government-partnership">
         Canada’s Plans to the Open Government Partnershipt</a>
         </h2>
         <p>Search through the history of open government in Canada.</p>
@@ -307,7 +307,7 @@ source:
       language: 'en'
       title: 'Open government across Canada'
       body: |
-        <h2 class="h4"><a href="[site:url]maps/open-data-canada">
+        <h2 class="h4"><a href="[site:url]/maps/open-data-canada">
           Open government across Canada
         </a></h2>
         <p>Explore open government programs and events from coast to coast to
@@ -318,7 +318,7 @@ source:
       language: 'en'
       title: 'Frequently asked questions'
       body: |
-        <h2 class="h4"><a href="[site:url]frequently-asked-questions">
+        <h2 class="h4"><a href="[site:url]/frequently-asked-questions">
         Frequently asked questions</a>
         </h2>
         <p>Answers to common questions about Canada’s Open Government
@@ -327,7 +327,7 @@ source:
       language: 'en'
       title: 'Open Government analytics'
       body: |
-        <h2 class="h4"><a href="[site:url]content/open-government-analytics">
+        <h2 class="h4"><a href="[site:url]/content/open-government-analytics">
           Open Government analytics
         </a></h2>
         <p>Learn more about our top downloads, latest datasets by department,
@@ -336,7 +336,7 @@ source:
       language: 'en'
       title: 'Canada’s Plans to the Open Government Partnership'
       body: |
-        <h2 class="h4"><a href="[site:url]open-dialogue">
+        <h2 class="h4"><a href="[site:url]/open-dialogue">
           Canada’s Plans to the Open Government Partnership
         </a></h2>
         <p>Learn about Canada’s commitment to the international Open Government
@@ -346,14 +346,14 @@ source:
       language: 'en'
       title: 'Communities'
       body: |
-        <h2 class="h4"><a href="[site:url]communities">Communities</a></h2>
+        <h2 class="h4"><a href="[site:url]/communities">Communities</a></h2>
         <p>Explore data, information, and discussions based on your area of
         interest.</p>
     - bid: 'open_dialog_subscribe'
       language: 'en'
       title: 'Subscribe to receive Open Government updates'
       body: |
-        <h2 class="h4"><a href="[site:url]forms/receive-open-government-email-form">
+        <h2 class="h4"><a href="[site:url]/forms/receive-open-government-email-form">
         Subscribe to receive Open Government updates</a></h2>
         <p>Sign up to receive the Open Government email and be among the first
         to hear about new datasets, new information resources, upcoming
@@ -362,7 +362,7 @@ source:
       language: 'en'
       title: 'Open Government Blog'
       body: |
-        <h2 class="h4"><a href="[site:url]blog">
+        <h2 class="h4"><a href="[site:url]/blog">
         Open Government Blog</a></h2>
         <p>Read and comment on what the Open Government team and community have
         to say about current Open Government activities, projects, news and
@@ -379,7 +379,7 @@ source:
       language: 'en'
       title: 'Account login'
       body: |
-        <h2 class="h4"><a href="[site:url]login">
+        <h2 class="h4"><a href="[site:url]/login">
         Account login</a></h2>
         <p>Log in to your Open Government account, or register for a new
         account.</p>
@@ -399,7 +399,7 @@ source:
         <section><h3>Interact</h3>
         <ul class="lst-spcd"><li><a href="suggested-datasets">Suggest a
         dataset</a></li>
-          <li><a href="[site:url]forms/suggest-open-information">Suggest an
+          <li><a href="[site:url]/forms/suggest-open-information">Suggest an
           information resource</a></li>
           <li><a href="apps">Apps gallery</a></li>
         </ul>
@@ -408,7 +408,7 @@ source:
       language: 'en'
       title: 'Search Access to Information Requests'
       body: |
-        <h2 class="h4"><a href="[site:url]search/ati">Search Access to
+        <h2 class="h4"><a href="[site:url]/search/ati">Search Access to
         Information Requests</a></h2>
         <p>Search summaries of proactively disclosed Access to Information
         requests provided by Government of Canada departments and agencies.</p>
@@ -450,21 +450,21 @@ source:
       language: 'en'
       title: 'Find Open Maps'
       body: |
-        <h2 class="h4"><a href="[site:url]data/en/dataset?collection=fgp&q=">
+        <h2 class="h4"><a href="[site:url]/data/en/dataset?collection=fgp&q=">
         Find Open Maps</a></h2>
         <p>Start exploring our inventory of geospatial data.</p>
     - bid: 'maps_about'
       language: 'en'
       title: 'About Open Maps'
       body: |
-        <h2 class="h4"><a href="[site:url]about-open-maps">
+        <h2 class="h4"><a href="[site:url]/about-open-maps">
         About Open Maps</a></h2>
         <p>Learn more about Open Maps and how it works.</p>
     - bid: 'maps_working'
       language: 'en'
       title: 'Working with data and application programming interfaces'
       body: |
-        <h2 class="h4"><a href="[site:url]working-data">
+        <h2 class="h4"><a href="[site:url]/working-data">
         Working with data and application programming interfaces</a></h2>
         <p>Learn more about how to use a variety of data formats, including
         application programming interfaces (APIs).</p>
@@ -472,7 +472,7 @@ source:
       language: 'en'
       title: 'Frequently asked questions'
       body: |
-        <h2 class="h4"><a href="[site:url]frequently-asked-questions">
+        <h2 class="h4"><a href="[site:url]/frequently-asked-questions">
         Frequently asked questions</a></h2>
         <p>Answers to common questions about Canada’s Open Government
         activities.</p>
@@ -480,7 +480,7 @@ source:
       language: 'en'
       title: 'Explore Open by Default documents'
       body: |
-        <h2 class="h4"><a href="[site:url]ckan/en/dataset">
+        <h2 class="h4"><a href="[site:url]/ckan/en/dataset">
         Explore Open by Default documents</a></h2>
         <p>Search and browse working documents provided by the Government of
         Canada.</p>
@@ -488,14 +488,14 @@ source:
       language: 'en'
       title: 'About the Open by Default pilot project'
       body: |
-        <h2 class="h4"><a href="[site:url]about-open-by-default">
+        <h2 class="h4"><a href="[site:url]/about-open-by-default">
         About the Open by Default pilot project</a></h2>
         <p>Learn more about the Open by Default pilot.</p>
     - bid: 'open_default_pilot_contact'
       language: 'en'
       title: 'Contact Us'
       body: |
-        <h2 class="h4"><a href="[site:url]forms/contact-us">
+        <h2 class="h4"><a href="[site:url]/forms/contact-us">
         Contact Us</a></h2>
         <p>Your feedback is critical to creating a more open Canada. We want to
         know how we can serve you better. Please contact us and share your
@@ -511,10 +511,10 @@ source:
         form, are generally available in the language in which they were
         created, and may not be fully accessible. Unless otherwise indicated,
         information is made available under the
-        <a href="[site:url]open-government-licence-canada">Open Government
+        <a href="[site:url]/open-government-licence-canada">Open Government
         Licence</a>. To obtain documents in the official language of your
         choice, or in an accessible format, please
-        <a href="[site:url]forms/contact-us">contact us</a>.</p></section>
+        <a href="[site:url]/forms/contact-us">contact us</a>.</p></section>
     - bid: 'open_gov_across_canada_events'
       language: 'en'
       title: 'Events Calendar'
@@ -522,9 +522,9 @@ source:
         <p id="toc2">Would you like to participate in an Open Government event
         close to you? Below is a list of the latest Open Government events
         taking place across the country. If you know about an event that is not
-        listed below, please <a href="[site:url]forms/submit-open-government-event">
+        listed below, please <a href="[site:url]/forms/submit-open-government-event">
         send it to us</a> and we will add it to the calendar.</p>
-        <p><a class="btn btn-success" href="[site:url]forms/submit-open-government-event" role="button">
+        <p><a class="btn btn-success" href="[site:url]/forms/submit-open-government-event" role="button">
         Submit Event</a></p>
         <div class="cal-cnt-fluid" id="calendar1"><!-- Insert Calendar --></div>
         <div class="wb-inv wb-calevt" data-calevt-src="calendar1">
@@ -621,7 +621,7 @@ source:
         organization.</p>
         <div class="panel panel-default">
           <ul class="list-group"><li class="list-group-item">
-          <p><a href="[site:url]canadas-action-plan-open-government">Third
+          <p><a href="[site:url]/canadas-action-plan-open-government">Third
           Biennial Plan to the Open Government Partnership (2016-18)</a></p>
           <p>Follow this link to find out more about Canada’s progress to date
           on open government, as well as information about commitments Canada
@@ -629,12 +629,12 @@ source:
           international partners.</p>
           </li>
           <li class="list-group-item">
-          <p><a href="[site:url]open-data-principles">Open Data 101 </a></p>
+          <p><a href="[site:url]/open-data-principles">Open Data 101 </a></p>
           <p>What is open data? Why does it matter? Learn the basics here.</p>
           </li>
           <li class="list-group-item">
           <p>
-            <a href="[site:url]frequently-asked-questions">Open Government
+            <a href="[site:url]/frequently-asked-questions">Open Government
             FAQ</a>
           </p>
           <p>Frequently asked questions (and answers!) about open government.</p>
@@ -659,13 +659,13 @@ source:
         and creative applications using open data.</p>
         <div class="panel panel-default">
           <ul class="list-group"><li class="list-group-item">
-          <p><a href="[site:url]data/en/dataset">Search Through Our
+          <p><a href="[site:url]/data/en/dataset">Search Through Our
           Open Data Portal</a></p>
           <p>Discover the data you need from hundreds of thousands of datasets
           available across the Government of Canada.</p>
           </li>
           <li class="list-group-item">
-          <p><a href="[site:url]working-data">Working with Data and Application
+          <p><a href="[site:url]/working-data">Working with Data and Application
           Programming Interfaces</a></p>
           <p>Learn more about how to use a variety of data formats, including
           Application Programming Interfaces (APIs).</p>
@@ -681,17 +681,17 @@ source:
         <div class="panel panel-default">
           <ul class="list-group">
             <li class="list-group-item">
-              <p><a href="[site:url]suggested-datasets">Suggest a dataset</a></p>
+              <p><a href="[site:url]/suggested-datasets">Suggest a dataset</a></p>
               <p>Is there Government of Canada data you would like to see? Let
               us know!</p>
             </li>
             <li class="list-group-item">
-              <p><a href="[site:url]forms/submit-your-app">Submit your App</a></p>
+              <p><a href="[site:url]/forms/submit-your-app">Submit your App</a></p>
               <p>Show us what you’ve done! Send us your app and it may be
               featured on the Open Government portal.</p>
             </li>
             <li class="list-group-item">
-              <p><a href="[site:url]blog">Comment on our
+              <p><a href="[site:url]/blog">Comment on our
               latest blog </a></p>
               <p>Comments are always welcome.</p>
             </li>
@@ -706,10 +706,10 @@ source:
         implementation guidelines.</p>
         <div class="panel panel-default">
           <ul class="list-group"><li class="list-group-item">View the
-          <a href="[site:url]open-government-licence-canada">Open Government
+          <a href="[site:url]/open-government-licence-canada">Open Government
           Licence</a></li>
             <li class="list-group-item">
-              <p><a href="[site:url]open-government-licence-implementation-guidelines">
+              <p><a href="[site:url]/open-government-licence-implementation-guidelines">
               Open Government Licence Implementation Guidelines</a></p>
               <p>Want to join Canada’s open government community and implement
               the Open Government Licence in your jurisdiction? You’ll find
@@ -728,11 +728,11 @@ source:
               <span class="fa fa-twitter-square mrgn-rght-md"></span>Twitter</a>
             </li>
             <li>
-              <a href="[site:url]blog/rss-feed.xml">
+              <a href="[site:url]/blog/rss-feed.xml">
               <span class="fa fa-rss-square mrgn-rght-md"></span>Feeds</a>
             </li>
             <li>
-              <a href="[site:url]forms/receive-open-government-email-form">
+              <a href="[site:url]/forms/receive-open-government-email-form">
               <span class="fa fa-envelope mrgn-rght-md"></span>E-mail</a>
             </li>
           </ul>
