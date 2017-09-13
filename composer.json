@@ -281,6 +281,12 @@
                 "Enter drupal/fontawesome patch #2881431 description here":
                 "https://www.drupal.org/files/issues/unable_to_find_the-2881431-2.patch"
             },
+            "drupal/group": {
+                "Enter drupal/group patch #2888588 description here":
+                "https://www.drupal.org/files/issues/node-access-refactor-2888588-18.patch",
+                "Enter drupal/group patch #2895988 description here":
+                "https://www.drupal.org/files/issues/2895988-4.patch"
+            },
             "drupal/icon": {
                 "Enter drupal/icon patch #2864333 description here":
                 "https://www.drupal.org/files/issues/migrate_icon_field_to_d8-2864333-5.patch"
