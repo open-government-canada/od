@@ -32,9 +32,9 @@
     {% endfor %}
       <li>
         {% if (language == 'fr') %}
-        <a href="{{ base_url ~ '/blogue' }}">
+        <a href="{{ base_url ~ '/' ~ language ~ '/fr/blogue' }}">
         {% else %}
-        <a href="{{ base_url ~ '/blog' }}">
+        <a href="{{ base_url ~ '/' ~ language ~ '/blog' }}">
         {% endif %}
           {{ 'View all blogs'|t }}
         </a>

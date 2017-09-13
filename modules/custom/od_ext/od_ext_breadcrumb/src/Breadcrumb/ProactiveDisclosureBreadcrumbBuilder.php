@@ -150,6 +150,11 @@ class ProactiveDisclosureBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
     $pathEnd = end($path_elements);
+    foreach ($this->languageManager->getLanguages() as $language) {
+      if (!empty($path_elements[0]) && $path_elements[0] == $language->getId()) {
+        array_shift($path_elements);
+      }
+    }
     if (!empty($path_elements[0]) && $path_elements[0] == 'search') {
       if (!empty($path_elements[1])) {
         $cores = [

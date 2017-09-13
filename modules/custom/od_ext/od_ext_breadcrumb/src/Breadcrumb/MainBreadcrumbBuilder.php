@@ -8,7 +8,6 @@ use Drupal\Core\Access\AccessManagerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\TitleResolverInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
-use Drupal\Core\Link;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\Path\PathMatcherInterface;
 use Drupal\Core\PathProcessor\InboundPathProcessorInterface;
@@ -167,7 +166,7 @@ class MainBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
         $link = array_shift($links);
         $link->setUrl(Url::fromUri($url));
-        array_unshift($links, $link, Link::createFromRoute($this->t('Open Government'), '<front>'));
+        array_unshift($links, $link);
       }
 
       $breadcrumb = new Breadcrumb();
