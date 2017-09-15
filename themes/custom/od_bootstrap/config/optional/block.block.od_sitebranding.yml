@@ -4,7 +4,7 @@ dependencies:
   module:
     - system
   theme:
-    - wxt_bootstrap
+    - od_bootstrap
 id: od_sitebranding
 theme: od_bootstrap
 region: banner

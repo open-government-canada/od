@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - wxt_library
   theme:
     - od_bootstrap

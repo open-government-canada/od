@@ -7,15 +7,13 @@ dependencies:
       - od_ext_migration
 source:
   plugin: embedded_data
-  translations: true
-  # Enforce default language to french
-  default_lang: false
+  default_lang: true
   data_rows:
     # Footer.
     - mlid: 'ml_footer_1'
       link_title: 'Contactez-nous du gouvernement ouvert'
       description: 'Contactez-nous du gouvernement ouvert section.'
-      menu_name: 'footer'
+      menu_name: 'footer-fr'
       link_path: 'http://ouvert.canada.ca/fr/formulaire/faites-nous-part-de-vos-commentaires'
       options: []
       external: 1
@@ -24,7 +22,7 @@ source:
     - mlid: 'ml_footer_2'
       link_title: 'Ministères et organismes'
       description: 'Ministères et organismes section.'
-      menu_name: 'footer'
+      menu_name: 'footer-fr'
       link_path: 'https://www.canada.ca/fr/gouvernement/min.html'
       options: []
       external: 1
@@ -33,7 +31,7 @@ source:
     - mlid: 'ml_footer_3'
       link_title: 'Fonction publique et force militaire'
       description: 'Fonction publique et force militaire section.'
-      menu_name: 'footer'
+      menu_name: 'footer-fr'
       link_path: 'https://www.canada.ca/fr/gouvernement/fonctionpublique.html'
       options: []
       external: 1
@@ -42,7 +40,7 @@ source:
     - mlid: 'ml_footer_4'
       link_title: 'Nouvelles'
       description: 'Nouvelles section.'
-      menu_name: 'footer'
+      menu_name: 'footer-fr'
       link_path: 'http://nouvelles.gc.ca'
       options: []
       external: 1
@@ -51,7 +49,7 @@ source:
     - mlid: 'ml_footer_5'
       link_title: 'Traités, lois et règlements'
       description: 'Traités, lois et règlements section.'
-      menu_name: 'footer'
+      menu_name: 'footer-fr'
       link_path: 'https://www.canada.ca/fr/gouvernement/systeme/lois.html'
       options: []
       external: 1
@@ -60,7 +58,7 @@ source:
     - mlid: 'ml_footer_6'
       link_title: 'Rapports à l''échelle du gouvernement'
       description: 'Rapports à l''échelle du gouvernement section.'
-      menu_name: 'footer'
+      menu_name: 'footer-fr'
       link_path: 'https://www.canada.ca/fr/transparence/rapports.html'
       options: []
       external: 1
@@ -69,7 +67,7 @@ source:
     - mlid: 'ml_footer_7'
       link_title: 'Ouverture de session Gouvernement ouvert'
       description: 'Ouverture de session Gouvernement ouvert section.'
-      menu_name: 'footer'
+      menu_name: 'footer-fr'
       link_path: 'http://ouvert.canada.ca/fr/user'
       options: []
       external: 1
@@ -78,7 +76,7 @@ source:
     - mlid: 'ml_footer_8'
       link_title: 'Comment le gouvernement fonctionne'
       description: 'Comment le gouvernement fonctionne section.'
-      menu_name: 'footer'
+      menu_name: 'footer-fr'
       link_path: 'https://www.canada.ca/fr/gouvernement/systeme.html'
       options: []
       external: 1
@@ -87,7 +85,7 @@ source:
     - mlid: 'ml_brand_1'
       link_title: 'Médias sociaux'
       description: 'Médias sociaux section.'
-      menu_name: 'brand'
+      menu_name: 'brand-fr'
       link_path: 'https://www.canada.ca/fr/sociaux.html'
       options: []
       external: 1
@@ -96,7 +94,7 @@ source:
     - mlid: 'ml_brand_2'
       link_title: 'Applications mobiles'
       description: 'Applications mobiles section.'
-      menu_name: 'brand'
+      menu_name: 'brand-fr'
       link_path: 'https://www.canada.ca/fr/mobile.html'
       options: []
       external: 1
@@ -105,7 +103,7 @@ source:
     - mlid: 'ml_brand_3'
       link_title: 'À propos de Canada.ca'
       description: 'À propos de Canada.ca section.'
-      menu_name: 'brand'
+      menu_name: 'brand-fr'
       link_path: 'https://www1.canada.ca/fr/nouveausite.html'
       options: []
       external: 1
@@ -114,7 +112,7 @@ source:
     - mlid: 'ml_brand_4'
       link_title: 'Avis'
       description: 'Avis section.'
-      menu_name: 'brand'
+      menu_name: 'brand-fr'
       link_path: 'https://www.canada.ca/fr/transparence/avis.html'
       options: []
       external: 1
@@ -123,7 +121,7 @@ source:
     - mlid: 'ml_brand_5'
       link_title: 'Confidentialité'
       description: 'Confidentialité section.'
-      menu_name: 'brand'
+      menu_name: 'brand-fr'
       link_path: 'https://www.canada.ca/fr/transparence/confidentialite.html'
       options: []
       external: 1
@@ -132,7 +130,7 @@ source:
     - mlid: 'analytics_overview'
       link_title: 'Aperçu'
       description: ''
-      menu_name: 'analytics'
+      menu_name: 'analytics-fr'
       link_path: 'internal:/analytics/summary'
       options: []
       external: 0
@@ -141,7 +139,7 @@ source:
     - mlid: 'analytics_visualizations'
       link_title: 'Visualisations'
       description: ''
-      menu_name: 'analytics'
+      menu_name: 'analytics-fr'
       link_path: 'internal:/analytics/visualizations'
       options: []
       external: 0
@@ -150,7 +148,7 @@ source:
     - mlid: 'analytics_pages'
       link_title: 'Pages'
       description: ''
-      menu_name: 'analytics'
+      menu_name: 'analytics-fr'
       link_path: 'internal:/analytics/visits'
       options: []
       external: 0
@@ -159,7 +157,7 @@ source:
     - mlid: 'analytics_download'
       link_title: 'Téléchargements'
       description: ''
-      menu_name: 'analytics'
+      menu_name: 'analytics-fr'
       link_path: 'internal:/analytics/downloads'
       options: []
       external: 0
@@ -168,7 +166,7 @@ source:
     - mlid: 'analytics_404'
       link_title: '404'
       description: ''
-      menu_name: 'analytics'
+      menu_name: 'analytics-fr'
       link_path: 'internal:/analytics/404'
       options: []
       external: 0
@@ -177,10 +175,147 @@ source:
     - mlid: 'main_home'
       link_title: 'Accueil'
       description: ''
-      menu_name: 'main'
+      menu_name: 'main-fr'
       link_path: 'https://www.canada.ca/fr.html'
       options: []
       external: 1
+      weight: 1
+      parent: 0
+    mlid: nrcan_manadtory_fr
+      link_title: 'Normes de déclaration obligatoire pour le secteur extractif'
+      description: ''
+      menu_name: 'nrcan-fr'
+      link_path: 'internal:/consultations/normes-declaration-obligatoire-secteur-extractif'
+      options: []
+      external: 0
+      weight: 1
+      parent: 0
+    - mlid: nrcan_updates_fr
+      link_title: 'Mises à jour'
+      description: ''
+      menu_name: 'nrcan-fr'
+      link_path: 'internal:/contenu/normes-declaration-obligatoire-secteur-extractif'
+      options: []
+      external: 0
+      weight: 1
+      parent: nrcan_manadtory_fr
+    - mlid: nrcan_heard_fr
+      link_title: 'Vous nous avez dit'
+      description: ''
+      menu_name: 'nrcan-fr'
+      link_path: 'internal:/consultations/vous-nous-avez-dit-normes-de-declaration-obligatoire-pour-le-secteur-extractif'
+      options: []
+      external: 0
+      weight: 2
+      parent: nrcan_manadtory_fr
+    - mlid: nrcan_estma_fr
+      link_title: 'Éléments principaux (LMTSE)'
+      description: ''
+      menu_name: 'nrcan-fr'
+      link_path: 'internal:/consultations/elements-principaux-loi-mesures-transparence-secteur-extractif'
+      options: []
+      external: 0
+      weight: 3
+      parent: nrcan_manadtory_fr
+    - mlid: nrcan_engagement_fr
+      link_title: 'Mobilisation'
+      description: ''
+      menu_name: 'nrcan-fr'
+      link_path: 'internal:/consultations/mobilisation-declaration-obligatoire-dans-le-secteur-canadien-de-lextraction-mars-mai-2014'
+      options: []
+      external: 0
+      weight: 4
+      parent: nrcan_manadtory_fr
+    - mlid: ati_revitalizing_fr
+      link_title: 'Revitaliser l’accès à l’information'
+      description: ''
+      menu_name: 'ati-consultation-fr'
+      link_path: 'internal:/consultation/revitalizing-ati'
+      options: []
+      external: 0
+      weight: 1
+      parent: 0
+    - mlid: ati_proposals_fr
+      link_title: 'Propositions du gouvernement en vue de revitaliser l’accès à l’information'
+      description: ''
+      menu_name: 'ati-consultation-fr'
+      link_path: 'internal:/consultation/government-proposals-to-revitalize-access-to-information'
+      options: []
+      external: 0
+      weight: 1
+      parent: ati_revitalizing_fr
+    - mlid: ati_more_info_fr
+      link_title: 'Pour en apprendre davantage sur l’accès à l’information'
+      description: ''
+      menu_name: 'ati-consultation-fr'
+      link_path: 'internal:/consultation/more-information-on-access-to-information'
+      options: []
+      external: 0
+      weight: 2
+      parent: ati_revitalizing_fr
+    - mlid: ati_submit_proposal_fr
+      link_title: 'Présenter une proposition détailée'
+      description: ''
+      menu_name: 'ati-consultation-fr'
+      link_path: 'internal:/consultation/submit-detailed-proposal'
+      options: []
+      external: 0
+      weight: 3
+      parent: ati_revitalizing_fr
+    - mlid: commitments_consulting
+      link_title: 'Consultation on the development of Canada's Action Plan on Open Government 2014-16'
+      menu_name: 'commitments'
+      link_path: 'internal:/http://data.statcan.gc.ca/en/consultations/open-government-action-plan-20-consultation'
+      options: []
+      external: 0
+      weight: 1
+      parent: commitments_midterm
+    - mlid: commitments_self_assessment
+      link_title: 'Mid-Term Self-Assessment Report on Canada's Action Plan on Open Government 2014-16'
+      menu_name: 'commitments'
+      link_path: 'internal:/mid-term-self-assessment-report-canadas-action-plan-open-government-2014-16'
+      options: []
+      external: 0
+      weight: 2
+      parent: commitments_midterm
+    - mlid: commitments_heard
+      link_title: 'What we Heard - Summary Report for Action Plan 2014-16'
+      menu_name: 'commitments'
+      link_path: 'internal:/consultations/what-we-heard-summary-report'
+      options: []
+      external: 0
+      weight: 3
+      parent: commitments_midterm
+    - mlid: commitments_draft
+      link_title: 'Draft for Consultation: Mid-Term Self-Assessment Report on Canada's Action Plan on Open Government 2014-2016'
+      menu_name: 'commitments'
+      link_path: 'internal:tent/draft-consultation-end-term-self-assessment-action-plan-open-government-2014-2016'
+      options: []
+      external: 0
+      weight: 4
+      parent: commitments_midterm
+    - mlid: commitments_emails
+      link_title: 'Receive Open Government Emails'
+      menu_name: 'commitments'
+      link_path: 'internal:/forms/receive-open-government-email-form'
+      options: []
+      external: 0
+      weight: 5
+      parent: commitments_midterm
+    - mlid:
+      link_title: ''
+      menu_name: ''
+      link_path: ''
+      options: []
+      external: 0
+      weight: 1
+      parent: 0
+    - mlid:
+      link_title: ''
+      menu_name: ''
+      link_path: ''
+      options: []
+      external: 0
       weight: 1
       parent: 0
   # Under 'ids', we identify source fields populated above which will uniquely
@@ -190,10 +325,7 @@ source:
     mlid:
       type: string
 process:
-  id:
-    plugin: migration
-    migration: od_ext_menu_link
-    source: mlid
+  id: mlid
   bundle: 'constants/bundle'
   title: link_title
   description: description
@@ -227,12 +359,8 @@ process:
   langcode:
     plugin: default_value
     default_value: "fr"
-  content_translation_source:
-    plugin: default_value
-    default_value: "en"
 destination:
   plugin: entity:menu_link_content
-  translations: true
 migration_dependencies:
   required:
     # modules

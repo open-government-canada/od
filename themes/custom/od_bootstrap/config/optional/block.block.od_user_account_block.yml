@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - system
     - user
-    - od_core
     - wxt_library
   theme:
     - od_bootstrap

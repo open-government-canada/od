@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - system
     - wxt_library
   theme:
@@ -20,6 +21,8 @@ settings:
   label: 'Share widget block'
   provider: wxt_library
   label_display: '0'
+  share_settings:
+    share_widget: ''
   share_widget:
     facebook: facebook
     gmail: gmail

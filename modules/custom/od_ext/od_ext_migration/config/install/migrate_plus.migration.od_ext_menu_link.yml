@@ -182,6 +182,136 @@ source:
       external: 1
       weight: 1
       parent: 0
+    - mlid: nrcan_manadtory
+      link_title: 'Mandatory Reporting Standards for the Extractive Sector'
+      description: ''
+      menu_name: 'nrcan'
+      link_path: 'internal:/consultations/mandatory-reporting-standards-extractive-sector'
+      options: []
+      external: 0
+      weight: 1
+      parent: 0
+    - mlid: nrcan_updates
+      link_title: 'Updates'
+      description: ''
+      menu_name: 'nrcan'
+      link_path: 'internal:/content/mandatory-reporting-standards-extractive-sector'
+      options: []
+      external: 0
+      weight: 1
+      parent: nrcan_manadtory
+    - mlid: nrcan_heard
+      link_title: 'What We Heard'
+      description: ''
+      menu_name: 'nrcan'
+      link_path: 'internal:/consultations/mandatory-reporting-standards-for-extractive-sector-what-we-heard'
+      options: []
+      external: 0
+      weight: 2
+      parent: nrcan_manadtory
+    - mlid: nrcan_estma
+      link_title: 'ESTMA Key Elements'
+      description: ''
+      menu_name: 'nrcan'
+      link_path: 'internal:/consultations/key-elements-extractive-sector-transparency-measures-act'
+      options: []
+      external: 0
+      weight: 3
+      parent: nrcan_manadtory
+    - mlid: nrcan_engagement
+      link_title: 'Engagement'
+      description: ''
+      menu_name: 'nrcan'
+      link_path: 'internal:/consultations/mandatory-reporting-standards-for-the-extractive-sector-engagement-march-may-2014'
+      options: []
+      external: 0
+      weight: 4
+      parent: nrcan_manadtory
+    - mlid: ati_info
+      link_title: ''
+      description: ''
+      menu_name: 'ati-consultation'
+      link_path: 'internal:/'
+      options: []
+      external: 0
+      weight: 1
+      parent: 0
+    - mlid: ati_revitalizing
+      link_title: 'Revitalizing access to information'
+      description: ''
+      menu_name: 'ati-consultation'
+      link_path: 'internal:/consultation/revitalizing-ati'
+      options: []
+      external: 0
+      weight: 1
+      parent: 0
+    - mlid: ati_proposals
+      link_title: 'Government proposals to revitalize access to information'
+      description: ''
+      menu_name: 'ati-consultation'
+      link_path: 'internal:/consultation/government-proposals-to-revitalize-access-to-information'
+      options: []
+      external: 0
+      weight: 1
+      parent: ati_revitalizing
+    - mlid: ati_more_info
+      link_title: 'More information on access to information'
+      description: ''
+      menu_name: 'ati-consultation'
+      link_path: 'internal:/consultation/more-information-on-access-to-information'
+      options: []
+      external: 0
+      weight: 2
+      parent: ati_revitalizing
+    - mlid: ati_submit_proposal
+      link_title: 'Submit a detailed proposal'
+      description: ''
+      menu_name: 'ati-consultation'
+      link_path: 'internal:/consultation/submit-detailed-proposal'
+      options: []
+      external: 0
+      weight: 3
+      parent: ati_revitalizing
+    - mlid: commitments_consulting
+      link_title: 'Consultation on the development of Canada's Action Plan on Open Government 2014-16'
+      menu_name: 'commitments'
+      link_path: 'internal:/http://data.statcan.gc.ca/en/consultations/open-government-action-plan-20-consultation'
+      options: []
+      external: 0
+      weight: 1
+      parent: commitments_midterm
+    - mlid: commitments_self_assessment
+      link_title: 'Mid-Term Self-Assessment Report on Canada's Action Plan on Open Government 2014-16'
+      menu_name: 'commitments'
+      link_path: 'internal:/mid-term-self-assessment-report-canadas-action-plan-open-government-2014-16'
+      options: []
+      external: 0
+      weight: 2
+      parent: commitments_midterm
+    - mlid: commitments_heard
+      link_title: 'What we Heard - Summary Report for Action Plan 2014-16'
+      menu_name: 'commitments'
+      link_path: 'internal:/consultations/what-we-heard-summary-report'
+      options: []
+      external: 0
+      weight: 3
+      parent: commitments_midterm
+    - mlid: commitments_draft
+      link_title: 'Draft for Consultation: Mid-Term Self-Assessment Report on Canada's Action Plan on Open Government 2014-2016'
+      menu_name: 'commitments'
+      link_path: 'internal:tent/draft-consultation-end-term-self-assessment-action-plan-open-government-2014-2016'
+      options: []
+      external: 0
+      weight: 4
+      parent: commitments_midterm
+    - mlid: commitments_emails
+      link_title: 'Receive Open Government Emails'
+      menu_name: 'commitments'
+      link_path: 'internal:/forms/receive-open-government-email-form'
+      options: []
+      external: 0
+      weight: 5
+      parent: commitments_midterm
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
