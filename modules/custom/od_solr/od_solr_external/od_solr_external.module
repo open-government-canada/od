@@ -6,6 +6,7 @@
  */
 
 use Drupal\search_api\Query\QueryInterface;
+use Drupal\views\ViewExecutable;
 use Solarium\QueryType\Select\Query\Query as SolariumQuery;
 
 /**
@@ -24,6 +25,22 @@ function od_solr_external_search_api_solr_query_alter(SolariumQuery $solarium_qu
 
   if ($index->id() == 'pd_core_ati') {
     $solarium_query->createFilterQuery('od_solr_external_language')->setQuery('ss_language:' . $language->getId());
+  }
+
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function od_solr_external_views_pre_render(ViewExecutable $view) {
+  if ($view->id() == "pd_core_ati" && $view->current_display == 'block_1') {
+    /** @var \Drupal\Core\Language\LanguageManagerInterface $language_manager */
+    $language_manager = \Drupal::service('language_manager');
+    $currentLang = $language_manager->getCurrentLanguage()->getId();
+    $defaultLang = $language_manager->getDefaultLanguage()->getId();
+    if ($defaultLang != $currentLang) {
+      $view->style_plugin->options['panel_title_field'] = str_replace('_' . $defaultLang, '_' . $currentLang, $view->style_plugin->options['panel_title_field']);
+    }
   }
 
 }
