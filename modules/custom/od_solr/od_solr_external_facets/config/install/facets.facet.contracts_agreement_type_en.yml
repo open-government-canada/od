@@ -9,7 +9,7 @@ dependencies:
 id: contracts_agreement_type_en
 name: 'Agreement Type'
 url_alias: agreement_type_en
-weight: 0
+weight: -2
 min_count: 1
 show_only_one_result: false
 field_identifier: agreement_type_en

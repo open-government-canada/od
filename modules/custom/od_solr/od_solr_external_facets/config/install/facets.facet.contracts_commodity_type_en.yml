@@ -9,7 +9,7 @@ dependencies:
 id: contracts_commodity_type_en
 name: 'Commodity Type'
 url_alias: commodity_type_en
-weight: 0
+weight: -2
 min_count: 1
 show_only_one_result: false
 field_identifier: commodity_type_en

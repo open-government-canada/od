@@ -1660,7 +1660,7 @@ msgstr ""
 ""
 
 msgid ": "
-msgstr " :"
+msgstr " : "
 
 msgid "very good"
 msgstr "très bon"
@@ -1900,4 +1900,3 @@ msgstr ""
 "minister_compared_fiscal_year_fr ?: ' N/A' }}</p> <a class=\"btn "
 "btn-sm btn-primary\" href=\"/fr/search/travela\">Retour à la "
 "recherche&nbsp;<span class=\"fa fa-undo\"></span></a>"
-

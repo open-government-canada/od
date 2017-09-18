@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - search_api.index.pd_core_contracts
-    - views.view.pd_core_contracts
+    - search_api.index.pd_core_travelq
+    - views.view.pd_core_travelq
   module:
     - search_api
-id: contracts_country_of_origin_en
-name: 'Country of Origin'
-url_alias: country_of_origin_en
-weight: -2
+id: travelq_org_name_fr
+name: 'Nom de l''organisation'
+url_alias: org_name_fr
+weight: -1
 min_count: 1
 show_only_one_result: false
-field_identifier: country_of_origin_en
-facet_source_id: 'search_api:views_block__pd_core_contracts__block_1'
+field_identifier: org_name_fr
+facet_source_id: 'search_api:views_block__pd_core_travelq__block_1'
 widget:
   type: checkbox
   config:

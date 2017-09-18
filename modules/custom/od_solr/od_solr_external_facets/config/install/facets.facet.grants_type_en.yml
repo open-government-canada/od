@@ -9,7 +9,7 @@ dependencies:
 id: grants_type_en
 name: Type
 url_alias: type_en
-weight: 0
+weight: -2
 min_count: 1
 show_only_one_result: false
 field_identifier: type_en

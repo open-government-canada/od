@@ -9,7 +9,7 @@ dependencies:
 id: contracts_contract_value_en
 name: 'Contract Value'
 url_alias: contract_value_en
-weight: 0
+weight: -2
 min_count: 1
 show_only_one_result: false
 field_identifier: contract_value_en

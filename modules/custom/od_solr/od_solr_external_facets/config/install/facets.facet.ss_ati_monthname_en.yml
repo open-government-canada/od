@@ -9,7 +9,7 @@ dependencies:
 id: ss_ati_monthname_en
 name: Month
 url_alias: month
-weight: 0
+weight: -2
 min_count: 1
 show_only_one_result: false
 field_identifier: ss_ati_monthname_en

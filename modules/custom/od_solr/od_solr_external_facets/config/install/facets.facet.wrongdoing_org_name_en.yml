@@ -9,7 +9,7 @@ dependencies:
 id: wrongdoing_org_name_en
 name: 'Organization Name'
 url_alias: org_name_en
-weight: 0
+weight: -2
 min_count: 1
 show_only_one_result: false
 field_identifier: org_name_en
