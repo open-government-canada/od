@@ -479,7 +479,7 @@ display:
           group_type: group
           admin_label: ''
           label: 'Reference Number'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -531,6 +531,58 @@ display:
           group_type: group
           admin_label: ''
           label: Organization
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        org_name_fr:
+          id: org_name_fr
+          table: search_api_index_pd_core_wrongdoing
+          field: org_name_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Organisation
           exclude: false
           alter:
             alter_text: false
@@ -989,6 +1041,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        org_name_fr:
+          id: org_name_fr
+          table: search_api_index_pd_core_wrongdoing
+          field: org_name_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Organisation
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         file_id_number:
           id: file_id_number
           table: search_api_index_pd_core_wrongdoing
@@ -1145,6 +1249,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        case_description_fr:
+          id: case_description_fr
+          table: search_api_index_pd_core_wrongdoing
+          field: case_description_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Description
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         findings_conclusions_en:
           id: findings_conclusions_en
           table: search_api_index_pd_core_wrongdoing
@@ -1197,6 +1353,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        findings_conclusions_fr:
+          id: findings_conclusions_fr
+          table: search_api_index_pd_core_wrongdoing
+          field: findings_conclusions_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Constatations et Conclusions'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         recommendations_corrective_measures_en:
           id: recommendations_corrective_measures_en
           table: search_api_index_pd_core_wrongdoing
@@ -1205,6 +1413,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'English Recommendations and Corrective Measures'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        recommendations_corrective_measures_fr:
+          id: recommendations_corrective_measures_fr
+          table: search_api_index_pd_core_wrongdoing
+          field: recommendations_corrective_measures_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Recommendations et mesures correctives'
           exclude: false
           alter:
             alter_text: false

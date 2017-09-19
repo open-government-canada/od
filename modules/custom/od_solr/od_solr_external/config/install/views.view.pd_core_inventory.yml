@@ -526,10 +526,114 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        title_fr:
+          id: title_fr
+          table: search_api_index_pd_core_inventory
+          field: title_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Titre
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         description_en:
           id: description_en
           table: search_api_index_pd_core_inventory
           field: description_en
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Description
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        description_fr:
+          id: description_fr
+          table: search_api_index_pd_core_inventory
+          field: description_fr
           relationship: none
           group_type: group
           admin_label: ''
@@ -586,6 +690,58 @@ display:
           group_type: group
           admin_label: ''
           label: Organization
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        org_name_fr:
+          id: org_name_fr
+          table: search_api_index_pd_core_inventory
+          field: org_name_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Organisation
           exclude: false
           alter:
             alter_text: false
@@ -1009,10 +1165,114 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        title_fr:
+          id: title_fr
+          table: search_api_index_pd_core_inventory
+          field: title_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Titre
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         description_en:
           id: description_en
           table: search_api_index_pd_core_inventory
           field: description_en
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Description
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        description_fr:
+          id: description_fr
+          table: search_api_index_pd_core_inventory
+          field: description_fr
           relationship: none
           group_type: group
           admin_label: ''
@@ -1113,6 +1373,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        org_name_fr:
+          id: org_name_fr
+          table: search_api_index_pd_core_inventory
+          field: org_name_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Organisation
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         program_alignment_architecture_en:
           id: program_alignment_architecture_en
           table: search_api_index_pd_core_inventory
@@ -1121,6 +1433,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'Program Activity Architecture'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        program_alignment_architecture_fr:
+          id: program_alignment_architecture_fr
+          table: search_api_index_pd_core_inventory
+          field: program_alignment_architecture_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Programme d''architecture d''alignement'
           exclude: false
           alter:
             alter_text: false
@@ -1217,6 +1581,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        portal_url_fr:
+          id: portal_url_fr
+          table: search_api_index_pd_core_inventory
+          field: portal_url_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'URL du portail gouvernemental ouvert'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         eligible_for_release_en:
           id: eligible_for_release_en
           table: search_api_index_pd_core_inventory
@@ -1263,6 +1679,58 @@ display:
           element_default_classes: true
           empty: ''
           hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        eligible_for_release_fr:
+          id: eligible_for_release_fr
+          table: search_api_index_pd_core_inventory
+          field: eligible_for_release_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Admissible à la libération'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           link_to_item: false

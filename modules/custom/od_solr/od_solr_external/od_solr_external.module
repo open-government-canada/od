@@ -33,14 +33,41 @@ function od_solr_external_search_api_solr_query_alter(SolariumQuery $solarium_qu
  * Implements hook_views_pre_render().
  */
 function od_solr_external_views_pre_render(ViewExecutable $view) {
-  if ($view->id() == "pd_core_ati" && $view->current_display == 'block_1') {
-    /** @var \Drupal\Core\Language\LanguageManagerInterface $language_manager */
-    $language_manager = \Drupal::service('language_manager');
-    $currentLang = $language_manager->getCurrentLanguage()->getId();
-    $defaultLang = $language_manager->getDefaultLanguage()->getId();
-    if ($defaultLang != $currentLang) {
-      $view->style_plugin->options['panel_title_field'] = str_replace('_' . $defaultLang, '_' . $currentLang, $view->style_plugin->options['panel_title_field']);
+  $cores = [
+    'pd_core_ati' => ['block_1', 'block_2'],
+    'pd_core_contracts' => ['block_1', 'block_2'],
+    'pd_core_hospitalityq' => ['block_1', 'block_2'],
+    'pd_core_inventory' => ['block_1', 'block_2'],
+    'pd_core_reclassification' => ['block_1', 'block_2'],
+    'pd_core_travela' => ['block_1', 'block_2'],
+    'pd_core_travelq' => ['block_1', 'block_2'],
+    'pd_core_wrongdoing' => ['block_1', 'block_2'],
+  ];
+
+  foreach ($cores as $core => $coreDisplay) {
+
+    if ($view->id() == $core &&  in_array($view->current_display, $coreDisplay)) {
+      /** @var \Drupal\Core\Language\LanguageManagerInterface $language_manager */
+      $language_manager = \Drupal::service('language_manager');
+      $currentLang = $language_manager->getCurrentLanguage()->getId();
+      $defaultLang = $language_manager->getDefaultLanguage()->getId();
+      if ($defaultLang != $currentLang) {
+        if (!empty($view->style_plugin->options['panel_title_field'])) {
+          $view->style_plugin->options['panel_title_field'] = str_replace('_' . $defaultLang, '_' . $currentLang, $view->style_plugin->options['panel_title_field']);
+        }
+      }
+      foreach ($view->field as $field) {
+        if ($defaultLang != $currentLang) {
+          if (strpos($field->field, '_' . $defaultLang) !== FALSE) {
+            unset($view->field[$field->field]);
+          }
+        }
+        else {
+          if (strpos($field->field, '_fr') !== FALSE) {
+            unset($view->field[$field->field]);
+          }
+        }
+      }
     }
   }
-
 }

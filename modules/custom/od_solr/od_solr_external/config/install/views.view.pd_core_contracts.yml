@@ -630,6 +630,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        description_fr:
+          id: description_fr
+          table: search_api_index_pd_core_contracts
+          field: description_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Description du travail'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         org_name_en:
           id: org_name_en
           table: search_api_index_pd_core_contracts
@@ -673,7 +725,7 @@ display:
           element_label_colon: true
           element_wrapper_type: p
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: true
           empty_zero: false
@@ -682,14 +734,14 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        commodity_type_en:
-          id: commodity_type_en
+        org_name_fr:
+          id: org_name_fr
           table: search_api_index_pd_core_contracts
-          field: commodity_type_en
+          field: org_name_fr
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Commodity Type'
+          label: Organisation
           exclude: false
           alter:
             alter_text: false
@@ -838,6 +890,214 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        agreement_type_en:
+          id: agreement_type_en
+          table: search_api_index_pd_core_contracts
+          field: agreement_type_en
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Agreement Type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        agreement_type_fr:
+          id: agreement_type_fr
+          table: search_api_index_pd_core_contracts
+          field: agreement_type_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Type de contrat'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        commodity_type_en:
+          id: commodity_type_en
+          table: search_api_index_pd_core_contracts
+          field: commodity_type_en
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Commodity Type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        commodity_type_fr:
+          id: commodity_type_fr
+          table: search_api_index_pd_core_contracts
+          field: commodity_type_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Type de marchandises'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         country_of_origin_en:
           id: country_of_origin_en
           table: search_api_index_pd_core_contracts
@@ -846,6 +1106,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'Country of Origin'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        country_of_origin_fr:
+          id: country_of_origin_fr
+          table: search_api_index_pd_core_contracts
+          field: country_of_origin_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Pays d''origine'
           exclude: false
           alter:
             alter_text: false
@@ -1494,6 +1806,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        description_fr:
+          id: description_fr
+          table: search_api_index_pd_core_contracts
+          field: description_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Description du travail'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         contract_period_start:
           id: contract_period_start
           table: search_api_index_pd_core_contracts
@@ -1754,6 +2118,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        comments_fr:
+          id: comments_fr
+          table: search_api_index_pd_core_contracts
+          field: comments_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Commentaires
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         commodity_type_en:
           id: commodity_type_en
           table: search_api_index_pd_core_contracts
@@ -1762,6 +2178,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'Commodity Type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        commodity_type_fr:
+          id: commodity_type_fr
+          table: search_api_index_pd_core_contracts
+          field: commodity_type_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Type de marchandises'
           exclude: false
           alter:
             alter_text: false
@@ -1962,6 +2430,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        solicitation_procedure_fr:
+          id: solicitation_procedure_fr
+          table: search_api_index_pd_core_contracts
+          field: solicitation_procedure_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Méthode d''invitation à soumissionner'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         limited_tendering_reason_en:
           id: limited_tendering_reason_en
           table: search_api_index_pd_core_contracts
@@ -1970,6 +2490,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'Limited Tendering Reason'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        limited_tendering_reason_fr:
+          id: limited_tendering_reason_fr
+          table: search_api_index_pd_core_contracts
+          field: limited_tendering_reason_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Raisons justifiant le recours à l''appel d''offres limité'
           exclude: false
           alter:
             alter_text: false
@@ -2066,6 +2638,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        derogation_fr:
+          id: derogation_fr
+          table: search_api_index_pd_core_contracts
+          field: derogation_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Dérogation
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         aboriginal_business_en:
           id: aboriginal_business_en
           table: search_api_index_pd_core_contracts
@@ -2074,6 +2698,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'Procurement Strategy for Aboriginal Business Incidental Indicator'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        aboriginal_business_fr:
+          id: aboriginal_business_fr
+          table: search_api_index_pd_core_contracts
+          field: aboriginal_business_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Stratégie d''approvisionnement auprès des entreprises autochtones'
           exclude: false
           alter:
             alter_text: false
@@ -2170,6 +2846,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        intellectual_property_fr:
+          id: intellectual_property_fr
+          table: search_api_index_pd_core_contracts
+          field: intellectual_property_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Indicateur de propriété intellectuelle'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         potential_commercial_exploitation_en:
           id: potential_commercial_exploitation_en
           table: search_api_index_pd_core_contracts
@@ -2178,6 +2906,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'Potential for Commercial Exploitation'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        potential_commercial_exploitation_fr:
+          id: potential_commercial_exploitation_fr
+          table: search_api_index_pd_core_contracts
+          field: potential_commercial_exploitation_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Possibilité d''exploitation commerciale'
           exclude: false
           alter:
             alter_text: false
@@ -2274,6 +3054,58 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        former_public_servant_fr:
+          id: former_public_servant_fr
+          table: search_api_index_pd_core_contracts
+          field: former_public_servant_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Ancien fonctionnaire recevant une pension en vertu de la LPFP'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
         document_type_en:
           id: document_type_en
           table: search_api_index_pd_core_contracts
@@ -2282,6 +3114,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'Instrument Type'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        document_type_fr:
+          id: document_type_fr
+          table: search_api_index_pd_core_contracts
+          field: document_type_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Type de document'
           exclude: false
           alter:
             alter_text: false
@@ -2422,6 +3306,58 @@ display:
           element_wrapper_type: p
           element_wrapper_class: ''
           element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
+        org_name_fr:
+          id: org_name_fr
+          table: search_api_index_pd_core_contracts
+          field: org_name_fr
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Organisation
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: span
+          element_class: ''
+          element_label_type: strong
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: p
+          element_wrapper_class: ''
+          element_default_classes: false
           empty: ''
           hide_empty: true
           empty_zero: false
