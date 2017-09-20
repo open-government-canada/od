@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: commitments
+label: Commitments
+description: 'Appears on the Midterm self assessment consultation English pages'
+locked: false

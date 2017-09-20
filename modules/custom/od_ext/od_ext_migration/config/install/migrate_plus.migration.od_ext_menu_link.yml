@@ -227,15 +227,6 @@ source:
       external: 0
       weight: 4
       parent: nrcan_manadtory
-    - mlid: ati_info
-      link_title: ''
-      description: ''
-      menu_name: 'ati-consultation'
-      link_path: 'internal:/'
-      options: []
-      external: 0
-      weight: 1
-      parent: 0
     - mlid: ati_revitalizing
       link_title: 'Revitalizing access to information'
       description: ''
@@ -272,10 +263,18 @@ source:
       external: 0
       weight: 3
       parent: ati_revitalizing
+    - mlid: commitments_midterm
+      link_title: 'Mid-term Self-Assessment 2014-2016'
+      menu_name: 'commitments'
+      link_path: 'internal:/commitments'
+      options: []
+      external: 0
+      weight: 1
+      parent: 0
     - mlid: commitments_consulting
       link_title: 'Consultation on the development of Canada''s Action Plan on Open Government 2014-16'
       menu_name: 'commitments'
-      link_path: 'internal:/http://data.statcan.gc.ca/en/consultations/open-government-action-plan-20-consultation'
+      link_path: 'internal:/consultations/open-government-action-plan-20-consultation'
       options: []
       external: 0
       weight: 1
@@ -299,7 +298,7 @@ source:
     - mlid: commitments_draft
       link_title: 'Draft for Consultation: Mid-Term Self-Assessment Report on Canada''s Action Plan on Open Government 2014-2016'
       menu_name: 'commitments'
-      link_path: 'internal:tent/draft-consultation-end-term-self-assessment-action-plan-open-government-2014-2016'
+      link_path: 'internal:/content/draft-consultation-end-term-self-assessment-action-plan-open-government-2014-2016'
       options: []
       external: 0
       weight: 4
@@ -312,6 +311,60 @@ source:
       external: 0
       weight: 5
       parent: commitments_midterm
+    - mlid: capog_creating_action_plan
+      link_title: 'Creating the Open Government Action Plan 2016-18'
+      description: ''
+      menu_name: capog
+      link_path: 'internal:/consultations/creating-canadas-action-plan-open-government-2016-18'
+      options: []
+      external:  0
+      weight: 1
+      parent: 0
+    - mlid: capog_events
+      link_title: 'Events'
+      description: ''
+      menu_name: capog
+      link_path: 'internal:/consultations/person-events'
+      options: []
+      external: 0
+      weight: 1
+      parent: capog_creating_action_plan
+    - mlid: capog_shape_plan
+      link_title: 'Shape the plan'
+      description: ''
+      menu_name: capog
+      link_path: 'internal:/consultations/help-shape-canadas-action-plan-open-government-2016-18'
+      options: []
+      external: 0
+      weight: 2
+      parent: capog_creating_action_plan
+    - mlid: capog_background
+      link_title: 'Background'
+      description: ''
+      menu_name: capog
+      link_path: 'internal:/consultations/background-materials-action-plan-open-government-2016-18'
+      options: []
+      external: 0
+      weight: 3
+      parent: capog_creating_action_plan
+    - mlid: 'capog_recieve_email'
+      link_title: 'Receive Email'
+      description: ''
+      menu_name: capog
+      link_path: 'internal:/forms/receive-open-government-email-form'
+      options: []
+      external: 0
+      weight: 4
+      parent: capog_creating_action_plan
+    - mlid: capog_what_we_heard
+      link_title: 'What We Heard: Summary Report'
+      description: ''
+      menu_name: capog
+      link_path: 'internal:/content/what-we-heard-summary-report-open-government-consultations-march-31-july-15-2016'
+      options: []
+      external: 0
+      weight: 5
+      parent: capog_creating_action_plan
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
