@@ -181,7 +181,7 @@ source:
       external: 1
       weight: 1
       parent: 0
-    mlid: nrcan_manadtory_fr
+    - mlid: nrcan_manadtory_fr
       link_title: 'Normes de déclaration obligatoire pour le secteur extractif'
       description: ''
       menu_name: 'nrcan-fr'
