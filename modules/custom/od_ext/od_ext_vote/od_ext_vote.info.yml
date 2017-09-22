@@ -8,3 +8,4 @@ package: 'Open Data'
 dependencies:
   - drupal:votingapi
   - drupal:votingapi_widgets
+  - drupal:vud

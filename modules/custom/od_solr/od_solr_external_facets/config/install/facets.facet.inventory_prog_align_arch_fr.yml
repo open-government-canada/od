@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.inventory
+    - views.view.solr_inventory
+  module:
+    - search_api
+id: inventory_prog_align_arch_fr
+name: 'Architecture d''alignement de programme'
+url_alias: inventory_prog_align_arch_fr
+weight: 0
+min_count: 1
+show_only_one_result: false
+field_identifier: field_prog_align_arch_fr
+facet_source_id: 'search_api:views_block__solr_inventory__block_1'
+widget:
+  type: checkbox
+  config:
+    show_numbers: false
+    soft_limit: 20
+query_operator: or
+use_hierarchy: false
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 0
+exclude: false
+only_visible_when_facet_source_is_visible: false
+processor_configs:
+  active_widget_order:
+    processor_id: active_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: ASC
+  count_widget_order:
+    processor_id: count_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: DESC
+  display_value_widget_order:
+    processor_id: display_value_widget_order
+    weights:
+      sort: -10
+    settings:
+      sort: ASC
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: -10
+      build: -10
+    settings: {  }
+empty_behavior:
+  behavior: none

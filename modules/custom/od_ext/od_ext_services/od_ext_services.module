@@ -37,3 +37,59 @@ function od_ext_services_entity_base_field_info_alter(&$fields, EntityTypeInterf
   }
 
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function od_ext_services_preprocess_external_entity(&$variables) {
+  /** @var \Drupal\Core\Language\LanguageManagerInterface $language_manager */
+  $language_manager = \Drupal::service('language_manager');
+  $currentLang = $language_manager->getCurrentLanguage()->getId();
+  $defaultLang = $language_manager->getDefaultLanguage()->getId();
+
+  if (isset($variables['content']['title']['#bundle'])) {
+    $bundle = $variables['content']['title']['#bundle'];
+
+    if ($bundle !== 'solr_inventory') {
+      return;
+    }
+
+    foreach ($variables['content'] as $fieldName => $field) {
+      if ($defaultLang != $currentLang) {
+        if (strpos($fieldName, '_' . $defaultLang) !== FALSE) {
+          unset($variables['content'][$fieldName]);
+        }
+      }
+      else {
+        if (strpos($fieldName, '_fr') !== FALSE) {
+          unset($variables['content'][$fieldName]);
+        }
+      }
+    }
+  }
+
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function od_ext_services_preprocess_page_title(&$variables) {
+  /** @var \Drupal\Core\Language\LanguageManagerInterface $language_manager */
+  $language_manager = \Drupal::service('language_manager');
+  $currentLang = $language_manager->getCurrentLanguage()->getId();
+  $defaultLang = $language_manager->getDefaultLanguage()->getId();
+  $route_parameters = \Drupal::routeMatch()->getParameters()->all();
+
+  if (!empty($route_parameters['external_entity'])) {
+    $title = $route_parameters['external_entity']->get('title')->view();
+    if (isset($title['#bundle']) & $title['#bundle'] !== 'solr_inventory') {
+      return;
+    }
+    if ($defaultLang != $currentLang && $currentLang == 'fr') {
+      $frTitle = $route_parameters['external_entity']->get('field_title_fr')->getValue();
+      $frTitle = reset($frTitle);
+      $variables['title'] = $variables['title']->create($frTitle['value']);
+    }
+  }
+
+}

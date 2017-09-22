@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.solr_inventory
+    - field.storage.external_entity.field_date_published
+id: external_entity.solr_inventory.field_date_published
+field_name: field_date_published
+entity_type: external_entity
+bundle: solr_inventory
+label: 'Date Published'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

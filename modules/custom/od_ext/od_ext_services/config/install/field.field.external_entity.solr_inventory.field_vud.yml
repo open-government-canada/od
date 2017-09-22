@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.solr_inventory
+    - field.storage.external_entity.field_vud
+  module:
+    - vud
+id: external_entity.solr_inventory.field_vud
+field_name: field_vud
+entity_type: external_entity
+bundle: solr_inventory
+label: VUD
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: null
+default_value_callback: ''
+settings: {  }
+field_type: vote_up_down_field

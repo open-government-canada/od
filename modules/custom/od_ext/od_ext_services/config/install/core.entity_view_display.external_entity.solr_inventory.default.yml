@@ -3,18 +3,64 @@ status: true
 dependencies:
   config:
     - external_entities.type.solr_inventory
+    - field.field.external_entity.solr_inventory.field_date_published
+    - field.field.external_entity.solr_inventory.field_date_released
+    - field.field.external_entity.solr_inventory.field_description_en
+    - field.field.external_entity.solr_inventory.field_description_fr
     - field.field.external_entity.solr_inventory.field_external_comment
-    - field.field.external_entity.solr_inventory.field_vote
+    - field.field.external_entity.solr_inventory.field_org_name_en
+    - field.field.external_entity.solr_inventory.field_org_name_fr
+    - field.field.external_entity.solr_inventory.field_organization_code
+    - field.field.external_entity.solr_inventory.field_prog_align_arch_en
+    - field.field.external_entity.solr_inventory.field_prog_align_arch_fr
+    - field.field.external_entity.solr_inventory.field_publisher_en
+    - field.field.external_entity.solr_inventory.field_publisher_fr
+    - field.field.external_entity.solr_inventory.field_title_fr
+    - field.field.external_entity.solr_inventory.field_vud
   module:
     - external_comment
-    - votingapi_widgets
+    - vud
+_core:
+  default_config_hash: rIisdEzeaOka1U-wlM5xqAYQ5EEo9gFov09aJLft1PM
 id: external_entity.solr_inventory.default
 targetEntityType: external_entity
 bundle: solr_inventory
 mode: default
 content:
+  field_date_published:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_date_released:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_description_en:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_description_fr:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_external_comment:
-    weight: -4
+    weight: 8
     label: above
     settings:
       view_mode: default
@@ -22,15 +68,45 @@ content:
     third_party_settings: {  }
     type: external_comment_default
     region: content
-  field_vote:
-    weight: -3
+  field_org_name_en:
+    weight: 4
     label: above
     settings:
-      style: opengov-fiveleaf
-      show_results: '1'
-      readonly: 0
-      values: {  }
+      link_to_entity: false
     third_party_settings: {  }
-    type: voting_api_formatter
+    type: string
     region: content
-hidden: {  }
+  field_org_name_fr:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title_fr:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_vud:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: vote_up_down_formatter_type
+    region: content
+  flag_inventory_like:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_organization_code: true
+  field_prog_align_arch_en: true
+  field_prog_align_arch_fr: true
+  field_publisher_en: true
+  field_publisher_fr: true

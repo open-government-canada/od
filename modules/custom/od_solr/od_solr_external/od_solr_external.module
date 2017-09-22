@@ -42,6 +42,7 @@ function od_solr_external_views_pre_render(ViewExecutable $view) {
     'pd_core_travela' => ['block_1', 'block_2'],
     'pd_core_travelq' => ['block_1', 'block_2'],
     'pd_core_wrongdoing' => ['block_1', 'block_2'],
+    'solr_inventory' => ['block_1'],
   ];
 
   foreach ($cores as $core => $coreDisplay) {
@@ -53,7 +54,12 @@ function od_solr_external_views_pre_render(ViewExecutable $view) {
       $defaultLang = $language_manager->getDefaultLanguage()->getId();
       if ($defaultLang != $currentLang) {
         if (!empty($view->style_plugin->options['panel_title_field'])) {
-          $view->style_plugin->options['panel_title_field'] = str_replace('_' . $defaultLang, '_' . $currentLang, $view->style_plugin->options['panel_title_field']);
+          if ($core == 'solr_inventory' && $currentLang == 'fr') {
+            $view->style_plugin->options['panel_title_field'] = str_replace('title', 'field_title_fr', $view->style_plugin->options['panel_title_field']);
+          }
+          else {
+            $view->style_plugin->options['panel_title_field'] = str_replace('_' . $defaultLang, '_' . $currentLang, $view->style_plugin->options['panel_title_field']);
+          }
         }
       }
       foreach ($view->field as $field) {

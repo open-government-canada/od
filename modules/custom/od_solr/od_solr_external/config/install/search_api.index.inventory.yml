@@ -1,0 +1,166 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.external_entity.field_vud
+    - field.storage.external_entity.field_organization_code
+    - field.storage.external_entity.field_description_en
+    - field.storage.external_entity.field_description_fr
+    - field.storage.external_entity.field_org_name_en
+    - field.storage.external_entity.field_org_name_fr
+    - field.storage.external_entity.field_prog_align_arch_en
+    - field.storage.external_entity.field_prog_align_arch_fr
+    - field.storage.external_entity.field_publisher_en
+    - field.storage.external_entity.field_publisher_fr
+    - field.storage.external_entity.field_title_fr
+    - field.storage.external_entity.field_date_published
+    - field.storage.external_entity.field_date_released
+    - search_api.server.default_solr_server
+  module:
+    - search_api
+    - external_entities
+id: inventory
+name: Inventory
+description: "Inventory content index created by the Solr Search Defaults module\r\n"
+read_only: false
+field_settings:
+  id:
+    label: 'External Entity ID'
+    datasource_id: 'entity:external_entity'
+    property_path: id
+    type: string
+  title:
+    label: Title
+    datasource_id: 'entity:external_entity'
+    property_path: title
+    type: text
+  type:
+    label: Type
+    datasource_id: 'entity:external_entity'
+    property_path: type
+    type: string
+  uuid:
+    label: UUID
+    datasource_id: 'entity:external_entity'
+    property_path: uuid
+    type: string
+  field_vud:
+    label: VUD
+    datasource_id: 'entity:external_entity'
+    property_path: field_vud
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_vud
+  field_organization_code:
+    label: 'Organization Code'
+    datasource_id: 'entity:external_entity'
+    property_path: field_organization_code
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_organization_code
+  field_description_en:
+    label: Description
+    datasource_id: 'entity:external_entity'
+    property_path: field_description_en
+    type: text
+    dependencies:
+      config:
+        - field.storage.external_entity.field_description_en
+  field_description_fr:
+    label: Description
+    datasource_id: 'entity:external_entity'
+    property_path: field_description_fr
+    type: text
+    dependencies:
+      config:
+        - field.storage.external_entity.field_description_fr
+  field_org_name_en:
+    label: 'Organization Name'
+    datasource_id: 'entity:external_entity'
+    property_path: field_org_name_en
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_org_name_en
+  field_org_name_fr:
+    label: 'Organization Name'
+    datasource_id: 'entity:external_entity'
+    property_path: field_org_name_fr
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_org_name_fr
+  field_prog_align_arch_en:
+    label: 'Program Alignment Architecture'
+    datasource_id: 'entity:external_entity'
+    property_path: field_prog_align_arch_en
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_prog_align_arch_en
+  field_prog_align_arch_fr:
+    label: 'Program Alignment Architecture'
+    datasource_id: 'entity:external_entity'
+    property_path: field_prog_align_arch_fr
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_prog_align_arch_fr
+  field_publisher_en:
+    label: Publisher
+    datasource_id: 'entity:external_entity'
+    property_path: field_publisher_en
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_publisher_en
+  field_publisher_fr:
+    label: Publisher
+    datasource_id: 'entity:external_entity'
+    property_path: field_publisher_fr
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_publisher_fr
+  field_title_fr:
+    label: Title
+    datasource_id: 'entity:external_entity'
+    property_path: field_title_fr
+    type: text
+    dependencies:
+      config:
+        - field.storage.external_entity.field_title_fr
+  field_date_published:
+    label: 'Date Published'
+    datasource_id: 'entity:external_entity'
+    property_path: field_date_published
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_date_published
+  field_date_released:
+    label: 'Date Released'
+    datasource_id: 'entity:external_entity'
+    property_path: field_date_released
+    type: string
+    dependencies:
+      config:
+        - field.storage.external_entity.field_date_released
+datasource_settings:
+  'entity:external_entity':
+    bundles:
+      default: false
+      selected:
+        - solr_inventory
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  rendered_item: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: default_solr_server

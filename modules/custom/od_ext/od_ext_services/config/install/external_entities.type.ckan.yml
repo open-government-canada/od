@@ -22,6 +22,5 @@ api_key_settings:
   header_name: ''
   key: ''
 parameters:
-  list:
-    q: dataset
+  list: {  }
   single: {  }

@@ -1531,110 +1531,6 @@ source:
           builder: ipe
           static_context: {  }
     -
-      name: inventory
-      title: 'Répertoire de données ouvertes'
-      language: fr
-      body: |
-        <p>La <a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=28108">
-        Directive sur le gouvernement ouvert</a> exige que toutes les
-        organisations du gouvernement du Canada concernées établissent un
-        répertoire de leurs fonds de données ouvertes. Tous les répertoires que
-        nous avons reçus ont été regroupés dans l’organigramme ci-dessous.
-        Veuillez utiliser la méthode « pouce vers le haut » (« thumbs up »)
-        pour accorder la priorité à la publication d’un jeu de données. Afin
-        d’avoir accès aux données ouvertes qui ont été utilisées pour créer le
-        tableau, veuillez visiter le
-        <a href="http://ouvert.canada.ca/data/fr/dataset/4ed351cf-95d8-4c10-97ac-6b3511f359b7">
-        Répertoire de données ouvertes</a>.</p>
-
-        <p>Pour en savoir plus sur le répertoire des données ouvertes du
-        gouvernement du Canada, consultez la
-        <a href="/fr/contenu/foire-aux-questions">foire aux questions</a>.</p>
-      alias: /search/inventory
-      panelizer:
-        -
-          view_mode: page_manager
-          default: two_column
-          blocks:
-            -
-              id: page_title_block
-              label: '[node:title]'
-              label_display: visible
-              region: left
-              weight: 0
-            -
-              id: local_tasks_block
-              label: Onglets
-              label_display: '0'
-              region: left
-              weight: 1
-            -
-              id: 'entity_field:node:body'
-              label: Corps
-              label_display: 0
-              region: left
-              weight: 5
-            -
-              id: 'views_block:pd_core_inventory-block_1'
-              label: ''
-              label_display: visible
-              region: left
-              weight: 10
-            -
-              id: 'facets_summary_block:inventory'
-              label: 'Recherche actuelle'
-              label_display: visible
-              region: right
-              weight: 0
-            -
-              id: 'facet_block:inventory_org_name_fr'
-              label: Organisation
-              label_display: visible
-              region: right
-              weight: 5
-          id: panels_variant
-          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
-          label: default
-          weight: 0
-          layout: bs_2col_stacked
-          layout_settings:
-            layout:
-              wrapper: div
-              classes:
-                row: row
-              add_layout_class: 1
-              attributes: ''
-            regions:
-              top:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
-                add_region_classes: 1
-                attributes: ''
-              left:
-                wrapper: div
-                classes:
-                  col-sm-8: col-sm-8
-                add_region_classes: 1
-                attributes: ''
-              right:
-                wrapper: div
-                classes:
-                  col-sm-4: col-sm-4
-                add_region_classes: 1
-                attributes: ''
-              bottom:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
-                add_region_classes: 1
-                attributes: ''
-          page_title: '[node:title]'
-          storage_type: panelizer_default
-          storage_id: 'node:landing_page:full:two_column'
-          builder: ipe
-          static_context: {  }
-    -
       name: hospitalityq
       title: 'Rechercher des frais d''accueil gouvernementaux'
       language: fr
@@ -3472,6 +3368,121 @@ source:
           storage_type: panelizer_default
           storage_id: 'node:landing_page:full:one_column'
           pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: solr_inventory
+      title: 'Répertoire de données ouvertes'
+      language: fr
+      body: |
+        <p>La <a href="http://www.tbs-sct.gc.ca/pol/doc-fra.aspx?id=28108">
+        Directive sur le gouvernement ouvert</a> exige que toutes les
+        organisations du gouvernement du Canada concernées établissent un
+        répertoire de leurs fonds de données ouvertes. Tous les répertoires que
+        nous avons reçus ont été regroupés dans l’organigramme ci-dessous.
+        Veuillez utiliser la méthode « pouce vers le haut » (« thumbs up »)
+        pour accorder la priorité à la publication d’un jeu de données. Afin
+        d’avoir accès aux données ouvertes qui ont été utilisées pour créer le
+        tableau, veuillez visiter le <a href="http://ouvert.canada.ca/data/fr/dataset/4ed351cf-95d8-4c10-97ac-6b3511f359b7">
+        Répertoire de données ouvertes</a>.</p>
+
+        <p>Pour en savoir plus sur le répertoire des données ouvertes du
+        gouvernement du Canada, consultez la <a href="/fr/contenu/foire-aux-questions">
+        foire aux questions</a>.</p>
+      alias: /search/inventory
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: left
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: left
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: left
+              weight: 5
+            -
+              id: 'views_block:solr_inventory-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facets_summary_block:solr_inventory'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:inventory_organization_name_fr'
+              label: Organisation
+              label_display: visible
+              region: right
+              weight: 5
+            -
+              id: 'facet_block:inventory_prog_align_arch_fr'
+              label: 'Architecture d''alignement de programme'
+              label_display: visible
+              region: right
+              weight: 10
+            -
+              id: 'facet_block:inventory_publisher_en'
+              label: Éditeur
+              label_display: visible
+              region: right
+              weight: 15
+          id: panels_variant
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
+          weight: 0
+          layout: bs_2col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              left:
+                wrapper: div
+                classes:
+                  col-sm-8: col-sm-8
+                add_region_classes: 1
+                attributes: ''
+              right:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
   ids:

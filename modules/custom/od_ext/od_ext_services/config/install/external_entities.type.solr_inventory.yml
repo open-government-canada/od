@@ -8,8 +8,20 @@ read_only: true
 field_mappings:
   id: id
   uuid: id
-  title: i18n_ts_en_ati_request_number
-endpoint: 'http://solr:8983/solr/core_ati/select'
+  title: title_en
+  field_date_published: date_published
+  field_date_released: date_released
+  field_description_en: description_en
+  field_description_fr: description_fr
+  field_org_name_en: org_name_en
+  field_org_name_fr: org_name_fr
+  field_organization_code: org_name_code
+  field_prog_align_arch_en: program_alignment_architecture_en
+  field_prog_align_arch_fr: program_alignment_architecture_fr
+  field_publisher_en: publisher_en
+  field_publisher_fr: publisher_fr
+  field_title_fr: title_fr
+endpoint: 'http://solr:8983/solr/core_inventory/select'
 client: solr_client
 format: json
 pager_settings:
@@ -24,9 +36,9 @@ api_key_settings:
 parameters:
   list:
     q: '*:*'
-    fq: 'ss_language:en'
+    fq: 'language:en'
     wt: json
   single:
     q: '*:*'
-    fq: 'ss_language:en'
+    fq: 'language:en'
     wt: json

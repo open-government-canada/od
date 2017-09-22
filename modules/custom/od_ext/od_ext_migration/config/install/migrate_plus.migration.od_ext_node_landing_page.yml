@@ -1391,95 +1391,6 @@ source:
           builder: ipe
           static_context: {  }
     -
-      name: inventory
-      title: 'Open Data Inventory'
-      language: en
-      body: "<p>The <a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108\">\nDirective on Open Government</a> requires all applicable Government of\nCanada organizations to conduct an inventory of their open data\nholdings. All of the inventories we received have been consolidated\ninto the chart below. Use the thumbs up to help prioritize the release\nof a dataset. To access the open data used to create the table, visit\n<a href=\"http://open.canada.ca/data/en/dataset/4ed351cf-95d8-4c10-97ac-6b3511f359b7\">\nOpen Data Inventory</a>.</p>\n<p>To learn more about the Government of Canada's Open Data Inventory,\nreview the <a href=\"/en/frequently-asked-questions\">frequently asked\nquestions</a>.</p>\n"
-      alias: /search/inventory
-      panelizer:
-        -
-          view_mode: page_manager
-          default: two_column
-          blocks:
-            -
-              id: page_title_block
-              label: '[node:title]'
-              label_display: visible
-              region: left
-              weight: 0
-            -
-              id: local_tasks_block
-              label: Tabs
-              label_display: '0'
-              region: left
-              weight: 1
-            -
-              id: 'entity_field:node:body'
-              label: Body
-              label_display: 0
-              region: left
-              weight: 5
-            -
-              id: 'views_block:pd_core_inventory-block_1'
-              label: ''
-              label_display: visible
-              region: left
-              weight: 10
-            -
-              id: 'facets_summary_block:inventory'
-              label: 'Current Search'
-              label_display: visible
-              region: right
-              weight: 0
-            -
-              id: 'facet_block:inventory_org_name_en'
-              label: Organization
-              label_display: visible
-              region: right
-              weight: 0
-          id: panels_variant
-          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
-          label: default
-          weight: 0
-          layout: bs_2col_stacked
-          layout_settings:
-            layout:
-              wrapper: div
-              classes:
-                row: row
-              add_layout_class: 1
-              attributes: ''
-            regions:
-              top:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
-                add_region_classes: 1
-                attributes: ''
-              left:
-                wrapper: div
-                classes:
-                  col-sm-8: col-sm-8
-                add_region_classes: 1
-                attributes: ''
-              right:
-                wrapper: div
-                classes:
-                  col-sm-4: col-sm-4
-                add_region_classes: 1
-                attributes: ''
-              bottom:
-                wrapper: div
-                classes:
-                  col-sm-12: col-sm-12
-                add_region_classes: 1
-                attributes: ''
-          page_title: '[node:title]'
-          storage_type: panelizer_default
-          storage_id: 'node:landing_page:full:two_column'
-          builder: ipe
-          static_context: {  }
-    -
       name: hospitalityq
       title: 'Search Government Hospitality Expenses'
       language: en
@@ -3130,6 +3041,118 @@ source:
           storage_type: panelizer_default
           storage_id: 'node:landing_page:full:one_column'
           pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: solr_inventory
+      title: 'Open Data Inventory'
+      language: en
+      body: |
+        <p>The <a href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28108">
+        Directive on Open Government</a> requires all applicable Government of
+        Canada organizations to conduct an inventory of their open data
+        holdings. All of the inventories we received have been consolidated
+        into the chart below. Use the thumbs up to help prioritize the release
+        of a dataset. To access the open data used to create the table, visit
+        <a href="http://open.canada.ca/data/en/dataset/4ed351cf-95d8-4c10-97ac-6b3511f359b7">
+        Open Data Inventory</a>.</p>
+        <p>To learn more about the Government of Canada's Open Data Inventory,
+        review the <a href="/en/frequently-asked-questions">frequently asked
+        questions</a>.</p>
+      alias: /search/inventory
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: left
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: left
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: left
+              weight: 5
+            -
+              id: 'views_block:solr_inventory-block_1'
+              label: ''
+              label_display: visible
+              region: left
+              weight: 10
+            -
+              id: 'facets_summary_block:solr_inventory'
+              label: 'Current Search'
+              label_display: visible
+              region: right
+              weight: 0
+            -
+              id: 'facet_block:inventory_organization_name_en'
+              label: Organization
+              label_display: visible
+              region: right
+              weight: 5
+            -
+              id: 'facet_block:inventory_prog_align_arch_en'
+              label: 'Program Alignment Architecture'
+              label_display: visible
+              region: right
+              weight: 10
+            -
+              id: 'facet_block:inventory_publisher_en'
+              label: Publisher
+              label_display: visible
+              region: right
+              weight: 15
+          id: panels_variant
+          uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
+          label: default
+          weight: 0
+          layout: bs_2col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              left:
+                wrapper: div
+                classes:
+                  col-sm-8: col-sm-8
+                add_region_classes: 1
+                attributes: ''
+              right:
+                wrapper: div
+                classes:
+                  col-sm-4: col-sm-4
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:two_column'
           builder: ipe
           static_context: {  }
   ids:

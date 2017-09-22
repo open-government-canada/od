@@ -322,6 +322,14 @@
                 "https://www.drupal.org/files/issues/barrating_not_found-2855514-4.patch",
                 "Enter drupal/votingapi_widgets patch #2860009 description here":
                 "https://www.drupal.org/files/issues/display_cancel_save-2860009-4.patch"
+            },
+            "drupal/vote_up_down": {
+                "Enter drupal/vote_up_down patch #2906689 description here":
+                "https://www.drupal.org/files/issues/2906689-voting-widget-not-visible-to-anonymous-users.patch",
+                "Enter drupal/vote_up_down patch #2910780 description here":
+                "https://www.drupal.org/files/issues/vote_up_down-js-prototype-bug-2910780-2-D8.patch",
+                "Enter drupal/vote_up_down patch #2910893 description here":
+                "https://www.drupal.org/files/issues/vud_disable_regex-2910893-4.patch"
             }
         }
     },
@@ -353,6 +361,7 @@
         "drupal/views_data_export": "1.0-alpha4",
         "drupal/views_field_view": "1.0-beta2",
         "drupal/views_templates": "1.0-alpha1",
+        "drupal/vud": "1.0-alpha1",
         "drupal/xls_serialization": "1.0-alpha2",
         "fortawesome/font-awesome": "^4.7",
         "harvesthq/chosen": "1.6.1"
