@@ -142,7 +142,6 @@ class ConsultationNode extends SqlBase {
     $row->setSourceProperty('node_idea', $node_idea);
 
     if (!empty($alias)) {
-      print_r($alias);
       $row->setSourceProperty('alias', '/' . end($alias));
     }
 
