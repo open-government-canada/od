@@ -3,10 +3,11 @@ status: true
 dependencies:
   config:
     - external_entities.type.solr_inventory
+    - field.field.external_entity.solr_inventory.field_ckan_link
     - field.field.external_entity.solr_inventory.field_date_published
     - field.field.external_entity.solr_inventory.field_date_released
-    - field.field.external_entity.solr_inventory.field_description_en
-    - field.field.external_entity.solr_inventory.field_description_fr
+    - field.field.external_entity.solr_inventory.field_desc_en
+    - field.field.external_entity.solr_inventory.field_desc_fr
     - field.field.external_entity.solr_inventory.field_external_comment
     - field.field.external_entity.solr_inventory.field_org_name_en
     - field.field.external_entity.solr_inventory.field_org_name_fr
@@ -19,16 +20,23 @@ dependencies:
     - field.field.external_entity.solr_inventory.field_vud
   module:
     - external_comment
+    - text
     - vud
-_core:
-  default_config_hash: rIisdEzeaOka1U-wlM5xqAYQ5EEo9gFov09aJLft1PM
 id: external_entity.solr_inventory.default
 targetEntityType: external_entity
 bundle: solr_inventory
 mode: default
 content:
+  field_ckan_link:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_date_published:
-    weight: 6
+    weight: 5
     label: above
     settings:
       link_to_entity: false
@@ -36,28 +44,26 @@ content:
     type: string
     region: content
   field_date_released:
-    weight: 7
+    weight: 6
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_description_en:
+  field_desc_en:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_desc_fr:
     weight: 2
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
-    type: string
-    region: content
-  field_description_fr:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    type: text_default
     region: content
   field_external_comment:
     weight: 8
@@ -69,7 +75,7 @@ content:
     type: external_comment_default
     region: content
   field_org_name_en:
-    weight: 4
+    weight: 3
     label: above
     settings:
       link_to_entity: false
@@ -77,15 +83,7 @@ content:
     type: string
     region: content
   field_org_name_fr:
-    weight: 5
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title_fr:
-    weight: 1
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -110,3 +108,4 @@ hidden:
   field_prog_align_arch_fr: true
   field_publisher_en: true
   field_publisher_fr: true
+  field_title_fr: true

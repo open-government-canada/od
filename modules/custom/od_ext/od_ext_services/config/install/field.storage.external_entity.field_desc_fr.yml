@@ -3,15 +3,14 @@ status: true
 dependencies:
   module:
     - external_entities
-id: external_entity.field_description_fr
-field_name: field_description_fr
+    - text
+id: external_entity.field_desc_fr
+field_name: field_desc_fr
 entity_type: external_entity
-type: string
+type: text
 settings:
   max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+module: text
 locked: false
 cardinality: 1
 translatable: true

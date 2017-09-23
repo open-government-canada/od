@@ -150,7 +150,9 @@ class ExternalBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $parameters = $route_match->getParameters()->all();
 
     // Content type determination.
-    if (!empty($parameters['external_entity']) && $parameters['external_entity']->getType() == 'ckan') {
+    if (!empty($parameters['external_entity']) &&
+        ($parameters['external_entity']->getType() == 'ckan' ||
+        $parameters['external_entity']->getType() == 'solr_inventory')) {
       return TRUE;
     }
   }
@@ -186,10 +188,10 @@ class ExternalBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
         preg_match("/[^\/]+$/", $path, $packageId);
         $id = explode("-", $packageId[0], 2);
         if (isset($id[1]) && !empty($id[1])) {
-          $ckan = Url::fromUri($this->context->getCompleteBaseUrl() . '/ckan/' . $this->languageManager->getCurrentLanguage()->getId() . '/dataset/' . $id[1]);
+          $ckan = Url::fromUri($this->context->getCompleteBaseUrl() . '/data/' . $this->languageManager->getCurrentLanguage()->getId() . '/dataset/' . $id[1]);
         }
         else {
-          $ckan = Url::fromUri($this->context->getCompleteBaseUrl() . '/ckan/' . $this->languageManager->getCurrentLanguage()->getId() . '/dataset');
+          $ckan = Url::fromUri($this->context->getCompleteBaseUrl() . '/data/' . $this->languageManager->getCurrentLanguage()->getId() . '/dataset');
         }
         if (!empty($open_info) && !empty($ckan)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');

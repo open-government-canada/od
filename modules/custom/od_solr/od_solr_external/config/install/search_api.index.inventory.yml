@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.external_entity.field_vud
     - field.storage.external_entity.field_organization_code
-    - field.storage.external_entity.field_description_en
-    - field.storage.external_entity.field_description_fr
     - field.storage.external_entity.field_org_name_en
     - field.storage.external_entity.field_org_name_fr
     - field.storage.external_entity.field_prog_align_arch_en
@@ -15,6 +13,8 @@ dependencies:
     - field.storage.external_entity.field_title_fr
     - field.storage.external_entity.field_date_published
     - field.storage.external_entity.field_date_released
+    - field.storage.external_entity.field_desc_en
+    - field.storage.external_entity.field_desc_fr
     - search_api.server.default_solr_server
   module:
     - search_api
@@ -60,22 +60,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.external_entity.field_organization_code
-  field_description_en:
-    label: Description
-    datasource_id: 'entity:external_entity'
-    property_path: field_description_en
-    type: text
-    dependencies:
-      config:
-        - field.storage.external_entity.field_description_en
-  field_description_fr:
-    label: Description
-    datasource_id: 'entity:external_entity'
-    property_path: field_description_fr
-    type: text
-    dependencies:
-      config:
-        - field.storage.external_entity.field_description_fr
   field_org_name_en:
     label: 'Organization Name'
     datasource_id: 'entity:external_entity'
@@ -148,6 +132,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.external_entity.field_date_released
+  field_desc_en:
+    label: Description
+    datasource_id: 'entity:external_entity'
+    property_path: field_desc_en
+    type: text
+    dependencies:
+      config:
+        - field.storage.external_entity.field_desc_en
+  field_desc_fr:
+    label: Description
+    datasource_id: 'entity:external_entity'
+    property_path: field_desc_fr
+    type: text
+    dependencies:
+      config:
+        - field.storage.external_entity.field_desc_fr
 datasource_settings:
   'entity:external_entity':
     bundles:

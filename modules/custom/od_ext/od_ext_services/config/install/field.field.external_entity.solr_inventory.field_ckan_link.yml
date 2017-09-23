@@ -3,12 +3,12 @@ status: true
 dependencies:
   config:
     - external_entities.type.solr_inventory
-    - field.storage.external_entity.field_description_en
-id: external_entity.solr_inventory.field_description_en
-field_name: field_description_en
+    - field.storage.external_entity.field_ckan_link
+id: external_entity.solr_inventory.field_ckan_link
+field_name: field_ckan_link
 entity_type: external_entity
 bundle: solr_inventory
-label: Description
+label: 'CKAN Link'
 description: ''
 required: false
 translatable: false

@@ -9,7 +9,7 @@ field_mappings:
   id: id
   uuid: id
   title: title
-endpoint: 'http://open.canada.ca/data/api/3/action/package_search'
+endpoint: 'http://open.canada.ca/data/api/3/action/package_search?fq=type:dataset'
 client: ckan_client
 format: json
 pager_settings:

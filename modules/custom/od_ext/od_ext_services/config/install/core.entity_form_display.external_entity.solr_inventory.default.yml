@@ -3,10 +3,11 @@ status: true
 dependencies:
   config:
     - external_entities.type.solr_inventory
+    - field.field.external_entity.solr_inventory.field_ckan_link
     - field.field.external_entity.solr_inventory.field_date_published
     - field.field.external_entity.solr_inventory.field_date_released
-    - field.field.external_entity.solr_inventory.field_description_en
-    - field.field.external_entity.solr_inventory.field_description_fr
+    - field.field.external_entity.solr_inventory.field_desc_en
+    - field.field.external_entity.solr_inventory.field_desc_fr
     - field.field.external_entity.solr_inventory.field_external_comment
     - field.field.external_entity.solr_inventory.field_org_name_en
     - field.field.external_entity.solr_inventory.field_org_name_fr
@@ -19,12 +20,21 @@ dependencies:
     - field.field.external_entity.solr_inventory.field_vud
   module:
     - external_comment
+    - text
     - vud
 id: external_entity.solr_inventory.default
 targetEntityType: external_entity
 bundle: solr_inventory
 mode: default
 content:
+  field_ckan_link:
+    weight: 20
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_date_published:
     weight: 5
     settings:
@@ -41,21 +51,21 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_description_en:
-    weight: 11
+  field_desc_en:
+    weight: 21
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textfield
     region: content
-  field_description_fr:
-    weight: 12
+  field_desc_fr:
+    weight: 22
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
+    type: text_textfield
     region: content
   field_external_comment:
     weight: 2

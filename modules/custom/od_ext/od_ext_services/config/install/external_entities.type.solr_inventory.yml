@@ -9,10 +9,11 @@ field_mappings:
   id: id
   uuid: id
   title: title_en
+  field_ckan_link: id
   field_date_published: date_published
   field_date_released: date_released
-  field_description_en: description_en
-  field_description_fr: description_fr
+  field_desc_en: description_en
+  field_desc_fr: description_fr
   field_org_name_en: org_name_en
   field_org_name_fr: org_name_fr
   field_organization_code: org_name_code

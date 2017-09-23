@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.storage.external_entity.field_date_published
     - field.storage.external_entity.field_date_released
-    - field.storage.external_entity.field_description_en
-    - field.storage.external_entity.field_description_fr
+    - field.storage.external_entity.field_desc_en
+    - field.storage.external_entity.field_desc_fr
     - field.storage.external_entity.field_org_name_en
     - field.storage.external_entity.field_org_name_fr
     - field.storage.external_entity.field_title_fr
@@ -13,6 +13,7 @@ dependencies:
     - search_api.index.inventory
   module:
     - search_api
+    - text
     - views_bootstrap
     - vud
 id: solr_inventory
@@ -292,10 +293,10 @@ display:
             multi_separator: ', '
           entity_type: external_entity
           plugin_id: search_api_field
-        field_description_fr:
-          id: field_description_fr
+        field_desc_en:
+          id: field_desc_en
           table: search_api_datasource_inventory_entity_external_entity
-          field: field_description_fr
+          field: field_desc_en
           relationship: none
           group_type: group
           admin_label: ''
@@ -341,9 +342,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -361,10 +361,10 @@ display:
             multi_separator: ', '
           entity_type: external_entity
           plugin_id: search_api_field
-        field_description_en:
-          id: field_description_en
+        field_desc_fr:
+          id: field_desc_fr
           table: search_api_datasource_inventory_entity_external_entity
-          field: field_description_en
+          field: field_desc_fr
           relationship: none
           group_type: group
           admin_label: ''
@@ -404,15 +404,14 @@ display:
           element_label_colon: true
           element_wrapper_type: p
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -578,8 +577,8 @@ display:
           label: 'Date Published'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_date_published|trim|date(''Y-m-d'') }} '
             make_link: false
             path: ''
             absolute: false
@@ -614,7 +613,7 @@ display:
           element_default_classes: false
           empty: ''
           hide_empty: true
-          empty_zero: false
+          empty_zero: true
           hide_alter_empty: true
           click_sort_column: value
           type: string
@@ -647,8 +646,8 @@ display:
           label: 'Date Released'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_date_released|trim|date(''Y-m-d'') }} '
             make_link: false
             path: ''
             absolute: false
@@ -682,7 +681,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: false
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -848,8 +847,8 @@ display:
       tags:
         - 'config:field.storage.external_entity.field_date_published'
         - 'config:field.storage.external_entity.field_date_released'
-        - 'config:field.storage.external_entity.field_description_en'
-        - 'config:field.storage.external_entity.field_description_fr'
+        - 'config:field.storage.external_entity.field_desc_en'
+        - 'config:field.storage.external_entity.field_desc_fr'
         - 'config:field.storage.external_entity.field_org_name_en'
         - 'config:field.storage.external_entity.field_org_name_fr'
         - 'config:field.storage.external_entity.field_title_fr'
@@ -875,8 +874,8 @@ display:
       tags:
         - 'config:field.storage.external_entity.field_date_published'
         - 'config:field.storage.external_entity.field_date_released'
-        - 'config:field.storage.external_entity.field_description_en'
-        - 'config:field.storage.external_entity.field_description_fr'
+        - 'config:field.storage.external_entity.field_desc_en'
+        - 'config:field.storage.external_entity.field_desc_fr'
         - 'config:field.storage.external_entity.field_org_name_en'
         - 'config:field.storage.external_entity.field_org_name_fr'
         - 'config:field.storage.external_entity.field_title_fr'
