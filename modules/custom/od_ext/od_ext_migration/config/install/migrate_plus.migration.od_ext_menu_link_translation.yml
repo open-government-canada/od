@@ -298,7 +298,7 @@ source:
       external: 0
       weight: 3
       parent: capog_creating_action_plan_fr
-    - mlid: 'capog_recieve_email'_fr
+    - mlid: capog_recieve_email_fr
       link_title: 'Abonnez-vous aux courriels'
       description: ''
       menu_name: capog-fr
