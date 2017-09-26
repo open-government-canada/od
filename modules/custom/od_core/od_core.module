@@ -25,3 +25,35 @@ function od_core_views_query_alter(ViewExecutable $view, QueryPluginBase $query)
     }
   }
 }
+
+/**
+ * Implements hook_token_info().
+ */
+function od_core_token_info() {
+  $info['tokens']['site']['url-abs'] = [
+    'name' => t('Absolute URL'),
+    'description' => t('Url of the site, no language prefix garanted'),
+  ];
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function od_core_tokens($type, $tokens, array $data = [], array $options = []) {
+  $replacements = [];
+  global $base_root;
+
+  if ($type == 'site') {
+
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'url-abs':
+          $replacements[$original] = $base_root;
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}

@@ -29,12 +29,6 @@ function od_ext_webform_form_submit(array $form, FormStateInterface $form_state)
     mkdir($extraction_path, 0777, TRUE);
   }
 
-  $extraction_path = drupal_realpath('public://kml/latest');
-
-  if (!file_exists($extraction_path)) {
-    mkdir($extraction_path, 0777, TRUE);
-  }
-
   $form_values = $form_state->getValues();
   if (isset($form_values['result_map_js_archive'][0])) {
     $file = file_load($form_values['result_map_js_archive'][0]);
