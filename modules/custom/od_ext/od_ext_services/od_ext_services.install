@@ -9,6 +9,22 @@
  * Implements hook_install().
  */
 function od_ext_services_install() {
+  // Enable default permissions for external entities.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, [
+    'access external comments',
+    'post external comments',
+    'view ckan external entity',
+    'view solr_inventory external entity',
+    'view external entity list page',
+  ]);
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, [
+    'access external comments',
+    'edit own external comments',
+    'post external comments',
+    'skip external comment approval',
+  ]);
+
+  // Convert entity_id to varchar.
   od_ext_services_update_8001();
 }
 

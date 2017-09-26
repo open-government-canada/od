@@ -9,5 +9,13 @@
  * Implements hook_install().
  */
 function od_core_install() {
+  // Enable default permissions for core.
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, [
+    'access administration pages',
+    'access toolbar',
+    'access tour',
+    'view the administration theme',
+  ]);
+
   module_set_weight('od_core', 1);
 }
