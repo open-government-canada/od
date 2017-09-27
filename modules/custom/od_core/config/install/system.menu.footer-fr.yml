@@ -1,7 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: footer-fr
-label: Footer
-description: 'Footer Menu French'
-locked: false

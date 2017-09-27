@@ -1,7 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: main-fr
-label: 'Main navigation'
-description: 'Menu Navigation French'
-locked: false

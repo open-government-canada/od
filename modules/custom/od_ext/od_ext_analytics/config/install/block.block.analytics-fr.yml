@@ -1,9 +1,8 @@
-uuid: 1eb12063-73af-42e1-80f3-5daf4515dc52
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.brand-fr
+    - system.menu.analytics-fr
   module:
     - block_class
     - language
@@ -14,17 +13,17 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: brandmenu
+id: analytics-fr
 theme: od_bootstrap
-region: branding
-weight: 0
+region: content
+weight: -10
 provider: null
-plugin: 'system_menu_block:brand-fr'
+plugin: 'system_menu_block:analytics-fr'
 settings:
-  id: 'system_menu_block:brand-fr'
-  label: Brand
+  id: 'system_menu_block:analytics-fr'
+  label: 'Analytics Menu'
   provider: system
-  label_display: visible
+  label_display: '0'
   level: 1
   depth: 0
 visibility:
@@ -38,5 +37,10 @@ visibility:
   panels_title:
     id: panels_title
     enabled: 0
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/analytics\r\n/analytics/*"
     negate: false
     context_mapping: {  }

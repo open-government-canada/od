@@ -1,9 +1,8 @@
-uuid: 365bbf6e-bc0d-4481-aba2-eeb2ed9d9092
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer-fr
+    - system.menu.brand-fr
   module:
     - block_class
     - language
@@ -14,15 +13,15 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: footer
+id: od_bootstrap_brand-fr
 theme: od_bootstrap
-region: footer
+region: branding
 weight: 0
 provider: null
-plugin: 'system_menu_block:footer-fr'
+plugin: 'system_menu_block:brand-fr'
 settings:
-  id: 'system_menu_block:footer-fr'
-  label: Footer
+  id: 'system_menu_block:brand-fr'
+  label: Brand
   provider: system
   label_display: visible
   level: 1

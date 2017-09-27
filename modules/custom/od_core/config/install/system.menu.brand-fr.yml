@@ -1,7 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: brand-fr
-label: 'Brand Menu'
-description: 'Brand Menu French.'
-locked: false

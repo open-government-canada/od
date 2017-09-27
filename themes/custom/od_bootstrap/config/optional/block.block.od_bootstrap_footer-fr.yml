@@ -1,9 +1,8 @@
-uuid: cdf44f5d-51a0-493b-81fc-bf076541ba63
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.analytics-fr
+    - system.menu.footer-fr
   module:
     - block_class
     - language
@@ -14,17 +13,17 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: analyticsmenu_2
+id: od_bootstrap_footer-fr
 theme: od_bootstrap
-region: content
-weight: -10
+region: footer
+weight: 0
 provider: null
-plugin: 'system_menu_block:analytics-fr'
+plugin: 'system_menu_block:footer-fr'
 settings:
-  id: 'system_menu_block:analytics-fr'
-  label: 'Analytics Menu'
+  id: 'system_menu_block:footer-fr'
+  label: Footer
   provider: system
-  label_display: '0'
+  label_display: visible
   level: 1
   depth: 0
 visibility:
@@ -38,10 +37,5 @@ visibility:
   panels_title:
     id: panels_title
     enabled: 0
-    negate: false
-    context_mapping: {  }
-  request_path:
-    id: request_path
-    pages: "/analytics\r\n/analytics/*"
     negate: false
     context_mapping: {  }
