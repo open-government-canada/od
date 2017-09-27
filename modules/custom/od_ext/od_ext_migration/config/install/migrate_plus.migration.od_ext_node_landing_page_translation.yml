@@ -3098,7 +3098,7 @@ source:
         veuillez <a href="/fr/formulaire/faites-nous-part-de-vos-commentaires">
         communiquer avec nous</a> pour le faire ajouter afin que nous puissions
         en faire la promotion.</p>
-        <div class="wb-geomap" data-wb-geomap="{ &quot;layersFile&quot;: &quot;[site:url]/sites/default/files/kml/open-config-fr.js&quot; }" id="location_map">
+        <div class="wb-geomap" data-wb-geomap="{ &quot;layersFile&quot;: &quot;[site:url-abs]/sites/default/files/kml/open-config-fr.js&quot; }" id="location_map">
         <div class="row">
         <div class="col-md-9">
         <div class="wb-geomap-map">
