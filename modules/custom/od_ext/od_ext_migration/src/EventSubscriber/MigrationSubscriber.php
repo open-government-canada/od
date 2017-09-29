@@ -401,6 +401,28 @@ class MigrationSubscriber implements EventSubscriberInterface {
             $entity_subqueue->set('items', $items);
             $entity_subqueue->save();
             break;
+
+          case 'feedback_form':
+            $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);
+            $block = $this->entityManager->getStorage('block')->create([
+              'id' => 'feedback',
+              'plugin' => 'block_content:' . $block_content->uuid(),
+              'region' => 'content_footer',
+              'provider' => 'block_content',
+              'weight' => -11,
+              'theme' => $this->config->get('system.theme')->get('default'),
+              'visibility' => [],
+              'settings' => [
+                'label' => 'Feedback',
+                'label_display' => FALSE,
+              ],
+              'third_party_settings' => [
+                'block_class' => [
+                  'classes' => 'col-sm-4 col-xs-6 mrgn-tp-lg',
+                ],
+              ],
+            ]);
+            $block->save();
         }
       }
     }

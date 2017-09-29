@@ -737,6 +737,17 @@ source:
             </li>
           </ul>
         </div>
+    - bid: 'feedback_form'
+      language: 'en'
+      title: 'Feedback'
+      body: |
+        <p>
+          <a class="btn btn-default" href="[site:url]/forms/contact-us">
+          <span class="glyphicon glyphicon-comment mrgn-rght-sm">&nbsp;</span>
+          Feedback
+          <span class="wb-inv"> about the Open Government web site</span>
+          </a>
+        </p>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

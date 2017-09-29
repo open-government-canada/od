@@ -9,11 +9,11 @@ dependencies:
     - od_bootstrap
 third_party_settings:
   block_class:
-    classes: 'col-md-6 mrgn-tp-lg'
+    classes: 'col-sm-3 col-xs-6 text-right mrgn-tp-lg'
 id: od_sharewidgetblock
 theme: od_bootstrap
 region: content_footer
-weight: -7
+weight: -10
 provider: null
 plugin: share_widget_block
 settings:
@@ -31,5 +31,10 @@ visibility:
   request_path:
     id: request_path
     pages: '/node/*'
+    negate: false
+    context_mapping: {  }
+  panels_title:
+    id: panels_title
+    enabled: 0
     negate: false
     context_mapping: {  }
