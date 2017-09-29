@@ -156,6 +156,9 @@ class CommentDatasetImport extends SqlBase {
         $ckan_uuid = 'ckan-' . end($ckan_uuid);
         $row->setSourceProperty('ckan_uuid', $ckan_uuid);
       }
+      else {
+        return FALSE;
+      }
     }
     else {
       return FALSE;
