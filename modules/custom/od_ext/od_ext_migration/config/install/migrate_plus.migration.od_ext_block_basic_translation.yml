@@ -791,6 +791,21 @@ source:
           <span class="wb-inv"> sur le site Web Gouvernment ouvert</span>
           </a>
         </p>
+    - bid: 'communities_related_info'
+      language: 'fr'
+      title: 'Communities - Related Information and Services'
+      body: |
+        <h2 class="mrgn-tp-0">Information et services connexes</h2>
+        <ul>
+         <li><a href="/data/fr/dataset?portal_type=dataset&amp;q=">Rechercher données ouvertes</a></li>
+         <li><a href="/data/fr/dataset?portal_type=info&amp;q=">Rechercher dans le site</a></li>
+        </ul>
+         <h2 class="mrgn-tp-0">Interagir</h2>
+         <ul>
+          <li><a href="[site:url]/jeux-de-donnees-suggeres">Proposez un jeu de données</a></li>
+          <li><a href="[site:url]/proposer-de-linformation-ouverte">Proposer de l'information ouverte</a></li>
+          <li><a href="[site:url]/jeux-de-donnees-suggeres">Proposez un jeu de données</a></li>
+        </ul>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

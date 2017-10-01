@@ -1,0 +1,11 @@
+name: 'Open Data Extend Community'
+description: 'Communities for Open Government.'
+type: module
+core: 8.x
+package: 'Open Data'
+
+# Required modules
+dependencies:
+  - drupal:od_ext_app
+  - drupal:od_ext_layout
+  - drupal:od_ext_taxonomy
