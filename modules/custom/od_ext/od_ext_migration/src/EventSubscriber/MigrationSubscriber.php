@@ -423,6 +423,40 @@ class MigrationSubscriber implements EventSubscriberInterface {
               ],
             ]);
             $block->save();
+            break;
+
+          case 'form_privacy_statement':
+            $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);
+            $block = $this->entityManager->getStorage('block')->create([
+              'id' => 'form_privacy_statement',
+              'plugin' => 'block_content:' . $block_content->uuid(),
+              'region' => 'content_footer',
+              'provider' => 'block_content',
+              'weight' => -99,
+              'theme' => $this->config->get('system.theme')->get('default'),
+              'visibility' => [
+                'node_type' => [
+                  'id' => 'node_type',
+                  'bundles' => [
+                    'webform' => 'webform',
+                  ],
+                  'context_mapping' => [
+                    'node' => '@node.node_route_context:node',
+                  ],
+                ],
+              ],
+              'settings' => [
+                'label' => 'Privacy Statement',
+                'label_display' => FALSE,
+              ],
+              'third_party_settings' => [
+                'block_class' => [
+                  'classes' => 'col-md-12 mrgn-tp-lg',
+                ],
+              ],
+            ]);
+            $block->save();
+            break;
         }
       }
     }
