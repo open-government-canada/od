@@ -346,7 +346,7 @@
         "drupal/icon": "1.x-dev",
         "drupal/reference_table_formatter": "1.0-rc4",
         "drupal/search_api": "1.4",
-        "drupal/search_api_solr": "1.1",
+        "drupal/search_api_solr": "1.0",
         "drupal/search_api_solr_datasource": "dev-8.x-1.x",
         "drupal/votingapi": "3.0-alpha2",
         "drupal/votingapi_widgets": "1.0-alpha3",
