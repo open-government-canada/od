@@ -8,7 +8,8 @@ template: false
 id: suggest_idea_action_plan
 title: 'Suggest a Idea for Action Plan'
 description: '&quot;Suggest a new idea&quot; webform.'
-elements: "add_your_idea:\n  '#type': fieldset\n  '#title': 'Add your idea'\n  '#description': 'To add your idea, insert your name, indicate the theme, and outline your idea below.'\n  your_name_optional:\n    '#type': textfield\n    '#title': 'Your name (optional)'\n  theme:\n    '#type': select\n    '#title': Theme\n    '#description': 'Choose the theme that most closely relates to your idea.'\n    '#title_display': before\n    '#options':\n      1: 'Open Information'\n      2: 'Social and economic development'\n      3: 'Innovation and Prosperity'\n      4: 'Fiscal Transparency'\n      5: 'Enabling Citizens'\n    '#required': true\n  your_idea_label:\n    '#type': webform_markup\n    '#markup': '<p>Describe your idea. Be sure to include any milestones or key deliverables that could be accomplished within two years. You might also want to mention potential partners that could help implement the idea.</p>'\n  title:\n    '#type': textfield\n    '#title': Title\n    '#required': true\n  your_idea:\n    '#type': textarea\n    '#title': 'Your Idea'\n    '#required': true\n"
+category: null
+elements: "add_your_idea:\n  '#type': fieldset\n  '#title': 'Add your idea'\n  '#description': 'To add your idea, insert your name, indicate the theme, and outline your idea below.'\n  '#smart_description': false\n  your_name_optional:\n    '#type': textfield\n    '#title': 'Your name (optional)'\n  theme:\n    '#type': select\n    '#title': Theme\n    '#smart_description': false\n    '#description': 'Choose the theme that most closely relates to your idea.'\n    '#title_display': before\n    '#options':\n      1: 'Open Information'\n      2: 'Social and economic development'\n      3: 'Innovation and Prosperity'\n      4: 'Fiscal Transparency'\n      5: 'Enabling Citizens'\n    '#required': true\n  your_idea_label:\n    '#type': webform_markup\n    '#markup': '<p>Describe your idea. Be sure to include any milestones or key deliverables that could be accomplished within two years. You might also want to mention potential partners that could help implement the idea.</p>'\n  title:\n    '#type': textfield\n    '#title': Title\n    '#required': true\n  your_idea:\n    '#type': textarea\n    '#title': 'Your Idea'\n    '#required': true"
 css: ''
 javascript: ''
 settings:
@@ -47,7 +48,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }
@@ -105,6 +106,7 @@ handlers:
     label: Email
     handler_id: email
     status: true
+    conditions: {  }
     weight: 0
     settings:
       to_mail: open-ouvert@tbs-sct.gc.ca
@@ -118,11 +120,24 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      ignore_access: false
+      exclude_empty: true
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
   email_1:
     id: email
     label: Email
     handler_id: email_1
     status: true
+    conditions: {  }
     weight: 1
     settings:
       to_mail: francois.faucher@tbs-sct.gc.ca
@@ -136,11 +151,24 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      ignore_access: false
+      exclude_empty: true
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
   email_2:
     id: email
     label: Email
     handler_id: email_2
     status: true
+    conditions: {  }
     weight: 2
     settings:
       to_mail: william.hearn@canada.ca
@@ -154,3 +182,15 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      ignore_access: false
+      exclude_empty: true
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

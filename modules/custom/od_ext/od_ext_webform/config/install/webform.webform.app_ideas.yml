@@ -8,7 +8,8 @@ template: false
 id: app_ideas
 title: 'App Ideas'
 description: '&quot;App Ideas&quot; webform.'
-elements: "name_of_application:\n  '#title': 'Name of suggested app'\n  '#type': textfield\npossible_supporting_datasets_if_applicable:\n  '#type': textfield\n  '#title': 'Possible supporting datasets, if applicable'\ndescription_of_app:\n  '#type': textarea\n  '#title': 'Description of app'\nconsent:\n  '#type': select\n  '#title': Consent\n  '#description': 'I consent to the sharing of my personal information between Government of Canada departments for the purpose of responding to my inquiry.'\n  '#title_display': invisible\n  '#description_display': before\n  '#options': yes_no\n  '#required': true\n"
+category: null
+elements: "name_of_application:\n  '#title': 'Name of suggested app'\n  '#type': textfield\npossible_supporting_datasets_if_applicable:\n  '#type': textfield\n  '#title': 'Possible supporting datasets, if applicable'\ndescription_of_app:\n  '#type': textarea\n  '#title': 'Description of app'\nconsent:\n  '#type': select\n  '#title': Consent\n  '#description': 'I consent to the sharing of my personal information between Government of Canada departments for the purpose of responding to my inquiry.'\n  '#smart_description': false\n  '#title_display': invisible\n  '#description_display': before\n  '#options': yes_no\n  '#required': true"
 css: ''
 javascript: ''
 settings:
@@ -47,7 +48,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }
@@ -105,6 +106,7 @@ handlers:
     label: Email
     handler_id: email
     status: true
+    conditions: {  }
     weight: 0
     settings:
       to_mail: open-ouvert@tbs-sct.gc.ca
@@ -118,3 +120,15 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      ignore_access: false
+      exclude_empty: true
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

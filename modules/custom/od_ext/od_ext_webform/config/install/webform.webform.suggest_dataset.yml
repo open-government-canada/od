@@ -8,7 +8,8 @@ template: false
 id: suggest_dataset
 title: 'Suggest a Dataset'
 description: '&quot;Suggest a Dataset&quot; webform.'
-elements: "name_of_dataset:\n  '#type': textfield\n  '#title': 'Name of Dataset'\n  '#required': true\nfederal_government_institution:\n  '#type': textfield\n  '#title': 'Federal government institution that publishes the dataset'\n  '#required': true\ndescription_dataset:\n  '#type': textarea\n  '#title': 'Description of the dataset you would like to make available'\n  '#required': true\nadditional_comments:\n  '#type': textarea\n  '#title': 'Additional Comments and Feedback'\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\ntitle:\n  '#type': textfield\n  '#title': Title\norganization:\n  '#type': textfield\n  '#title': Organization\nemail_address:\n  '#type': email\n  '#title': 'E-mail Address'\ntelephone:\n  '#type': tel\n  '#title': Telephone\nconsent:\n  '#type': select\n  '#title': Consent\n  '#description': 'I consent to the sharing of my personal information between Government of Canada departments for the purpose of responding to my inquiry.'\n  '#title_display': invisible\n  '#description_display': before\n  '#options': yes_no\n  '#required': true\n"
+category: null
+elements: "name_of_dataset:\n  '#type': textfield\n  '#title': 'Name of Dataset'\n  '#required': true\nfederal_government_institution:\n  '#type': textfield\n  '#title': 'Federal government institution that publishes the dataset'\n  '#required': true\ndescription_dataset:\n  '#type': textarea\n  '#title': 'Description of the dataset you would like to make available'\n  '#required': true\nadditional_comments:\n  '#type': textarea\n  '#title': 'Additional Comments and Feedback'\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\ntitle:\n  '#type': textfield\n  '#title': Title\norganization:\n  '#type': textfield\n  '#title': Organization\nemail_address:\n  '#type': email\n  '#title': 'E-mail Address'\ntelephone:\n  '#type': tel\n  '#title': Telephone\nconsent:\n  '#type': select\n  '#title': Consent\n  '#description': 'I consent to the sharing of my personal information between Government of Canada departments for the purpose of responding to my inquiry.'\n  '#title_display': invisible\n  '#smart_description': false\n  '#options': yes_no\n  '#required': true"
 css: ''
 javascript: ''
 settings:
@@ -47,7 +48,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }
@@ -105,6 +106,7 @@ handlers:
     label: Email
     handler_id: email
     status: true
+    conditions: {  }
     weight: 0
     settings:
       to_mail: open-ouvert@tbs-sct.gc.ca
@@ -118,3 +120,15 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      ignore_access: false
+      exclude_empty: true
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

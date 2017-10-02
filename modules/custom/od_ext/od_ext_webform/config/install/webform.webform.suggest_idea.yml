@@ -8,7 +8,8 @@ template: false
 id: suggest_idea
 title: 'Suggest a Idea'
 description: '&quot;Suggest a Idea&quot; webform.'
-elements: "submitted_by:\n  '#type': textfield\n  '#title': 'Submitted By'\n  '#description': 'Please enter your name or alias if you want to be credited for your idea.'\n  '#default_value': '[current-user:account-name]'\norganization:\n  '#type': textfield\n  '#title': Organization\nidea_title:\n  '#type': textfield\n  '#title': 'Idea Title'\n  '#required': true\nidea_description:\n  '#type': textarea\n  '#title': 'Idea Description'\n  '#required': true\nsuggested_keywords:\n  '#type': textfield\n  '#title': 'Please enter commonly used keyword(s), formal word(s) or phases that can be used to describe your idea.'\nreference_consultation:\n  '#type': hidden\n  '#value': '[current-page:query:consultation]'\nreference_consultation_id:\n  '#type': hidden\n  '#value': '[current-page:query:consultation-id]'\n"
+category: null
+elements: "submitted_by:\n  '#type': textfield\n  '#title': 'Submitted By'\n  '#smart_description': false\n  '#description': 'Please enter your name or alias if you want to be credited for your idea.'\n  '#default_value': '[current-user:account-name]'\norganization:\n  '#type': textfield\n  '#title': Organization\nidea_title:\n  '#type': textfield\n  '#title': 'Idea Title'\n  '#required': true\nidea_description:\n  '#type': textarea\n  '#title': 'Idea Description'\n  '#required': true\nsuggested_keywords:\n  '#type': textfield\n  '#title': 'Please enter commonly used keyword(s), formal word(s) or phases that can be used to describe your idea.'\nreference_consultation:\n  '#type': hidden\n  '#value': '[current-page:query:consultation]'\nreference_consultation_id:\n  '#type': hidden\n  '#value': '[current-page:query:consultation-id]'"
 css: ''
 javascript: ''
 settings:
@@ -47,7 +48,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }
@@ -105,6 +106,7 @@ handlers:
     label: Email
     handler_id: email
     status: true
+    conditions: {  }
     weight: 0
     settings:
       to_mail: michel.gendron@statcan.gc.ca
@@ -118,11 +120,24 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      ignore_access: false
+      exclude_empty: true
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
   email_1:
     id: email
     label: Email
     handler_id: email_1
     status: true
+    conditions: {  }
     weight: 1
     settings:
       to_mail: open-ouvert@tbs-sct.gc.ca
@@ -136,3 +151,15 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      ignore_access: false
+      exclude_empty: true
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
