@@ -35,6 +35,7 @@ function od_solr_external_search_api_solr_query_alter(SolariumQuery $solarium_qu
 function od_solr_external_views_pre_render(ViewExecutable $view) {
   $cores = [
     'pd_core_ati' => ['block_1', 'block_2'],
+    'pd_core_grants' => ['block_1', 'block_2'],
     'pd_core_contracts' => ['block_1', 'block_2'],
     'pd_core_hospitalityq' => ['block_1', 'block_2'],
     'pd_core_inventory' => ['block_1', 'block_2'],
