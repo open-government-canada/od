@@ -17,5 +17,11 @@ function od_core_install() {
     'view the administration theme',
   ]);
 
+  // Enable default permissions for external entities.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, [
+    'access comments',
+    'post comments',
+  ]);
+
   module_set_weight('od_core', 1);
 }
