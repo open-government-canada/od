@@ -8,7 +8,8 @@ template: false
 id: submit_event
 title: 'Submit an Open Government Event'
 description: '&quot;Submit an Open Government Event&quot; webform.'
-elements: "event_name_in_full:\n  '#type': textfield\n  '#title': 'Event Name in Full'\n  '#required': true\ndate:\n  '#type': date\n  '#title': Date\n  '#required': true\nlocation:\n  '#type': textfield\n  '#title': Location\nevent_website:\n  '#type': textfield\n  '#title': 'Event Website'\n  '#required': true\nconsent:\n  '#type': select\n  '#title': consent\n  '#description': 'I consent to the sharing of my personal information between Government of Canada departments for the purpose of responding to my inquiry.'\n  '#title_display': invisible\n  '#description_display': before\n  '#options': yes_no\n  '#required': true\n"
+category: null
+elements: "event_name_in_full:\n  '#type': textfield\n  '#title': 'Event Name in Full'\n  '#required': true\ndate:\n  '#type': date\n  '#title': Date\n  '#required': true\nlocation:\n  '#type': textfield\n  '#title': Location\nevent_website:\n  '#type': textfield\n  '#title': 'Event Website'\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#title_display': before\nconsent:\n  '#type': select\n  '#title': consent\n  '#description': 'I consent to the sharing of my personal information between Government of Canada departments for the purpose of responding to my inquiry.'\n  '#smart_description': false\n  '#title_display': invisible\n  '#description_display': before\n  '#options': yes_no\n  '#required': true"
 css: ''
 javascript: ''
 settings:
@@ -47,7 +48,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }
@@ -105,6 +106,7 @@ handlers:
     label: Email
     handler_id: email
     status: true
+    conditions: {  }
     weight: 0
     settings:
       to_mail: open-ouvert@tbs-sct.gc.ca
@@ -118,3 +120,15 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      to_options: {  }
+      cc_options: {  }
+      bcc_options: {  }
+      from_options: {  }
+      ignore_access: false
+      exclude_empty: true
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''

@@ -8,6 +8,7 @@ template: false
 id: frequently_asked_questions
 title: 'Frequently Asked Questions'
 description: '&quot;Frequently Asked Questions&quot; webform.'
+category: null
 elements: "name:\n  '#title': Name\n  '#type': textfield\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#default_value': '[webform-authenticated-user:mail]'"
 css: ''
 javascript: ''
