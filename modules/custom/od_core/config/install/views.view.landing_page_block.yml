@@ -216,6 +216,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       title: ''
+      css_class: mrgn-tp-lg
     cache_metadata:
       max-age: -1
       contexts:
