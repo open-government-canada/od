@@ -39,9 +39,6 @@ class ViewsBootstrapPanel extends PreprocessBase {
     if (in_array($id[0], $cores)) {
       $panel_title_field = $view->style_plugin->options['panel_title_field'];
       foreach ($variables['rows'] as $id => $row) {
-        if (empty($row['title'])) {
-          unset($row['content']['#view']->field['nothing']);
-        }
         if ($title = $view->style_plugin->getField($id, $panel_title_field)) {
           $label = $view->field[$panel_title_field]->label();
           $variables['rows'][$id]['title'] = $label . $this->t(': ') . $title;
