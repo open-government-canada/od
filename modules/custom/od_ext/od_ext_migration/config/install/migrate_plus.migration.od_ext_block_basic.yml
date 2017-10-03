@@ -831,6 +831,24 @@ source:
             </div>
           </div>
         </div>
+    - bid: 'pd_transitional_period'
+      language: 'en'
+      title: 'Transitional Period'
+      body: |
+        <section class="alert alert-info">
+          <h2 class="h4">Transitional Period</h2>
+          <p class="small">Federal departments are moving their web content to
+          <a href="http://www.canada.ca">Canada.ca</a>. As a part of that
+          process, proactive disclosure reports will become available through
+          the <a href="http://open.canada.ca">Open Government portal</a>.&nbsp;
+          During this transition, if a proactive disclosure report from a
+          specific department is not yet available on the Open Government
+          portal please refer to <a href="http://www.tbs-sct.gc.ca/hgw-cgf/finances/rgs-erdg/pd-dp/index-eng.asp">
+          Proactive disclosure by department or agency</a> where a copy can be found.&nbsp;
+          For any questions on this issue, please contact us at
+          <a href="mailto:open-ouvert@tbs-sct.gc.ca">open-ouvert@tbs-sct.gc.ca</a>
+          .</p>
+        </section>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

@@ -1059,6 +1059,13 @@ source:
           default: two_column
           blocks:
             -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
+            -
               id: page_title_block
               label: '[node:title]'
               label_display: visible
@@ -1216,6 +1223,13 @@ source:
           default: two_column
           blocks:
             -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
+            -
               id: page_title_block
               label: '[node:title]'
               label_display: visible
@@ -1351,6 +1365,13 @@ source:
           default: two_column
           blocks:
             -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
+            -
               id: page_title_block
               label: '[node:title]'
               label_display: visible
@@ -1452,6 +1473,13 @@ source:
           view_mode: page_manager
           default: two_column
           blocks:
+            -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
             -
               id: page_title_block
               label: '[node:title]'
@@ -1576,6 +1604,13 @@ source:
           default: two_column
           blocks:
             -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
+            -
               id: page_title_block
               label: '[node:title]'
               label_display: visible
@@ -1695,6 +1730,13 @@ source:
           view_mode: page_manager
           default: two_column
           blocks:
+            -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
             -
               id: page_title_block
               label: '[node:title]'
@@ -1821,6 +1863,13 @@ source:
           default: two_column
           blocks:
             -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
+            -
               id: page_title_block
               label: '[node:title]'
               label_display: visible
@@ -1935,6 +1984,13 @@ source:
           view_mode: page_manager
           default: two_column
           blocks:
+            -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
             -
               id: page_title_block
               label: '[node:title]'
@@ -2238,6 +2294,13 @@ source:
           view_mode: page_manager
           default: two_column
           blocks:
+            -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
             -
               id: page_title_block
               label: '[node:title]'
@@ -3395,6 +3458,13 @@ source:
           view_mode: page_manager
           default: two_column
           blocks:
+            -
+              id: 'block_content:pd_transitional_period'
+              label: 'Période de transition'
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 0
             -
               id: page_title_block
               label: '[node:title]'

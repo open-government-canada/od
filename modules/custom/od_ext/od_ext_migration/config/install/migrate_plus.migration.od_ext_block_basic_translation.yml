@@ -882,6 +882,25 @@ source:
             </div>
           </div>
         </div>
+    - bid: 'pd_transitional_period'
+      language: 'fr'
+      title: 'Période de transition'
+      body: |
+        <section class="alert alert-info"><h2 class="h4">Période de transition</h2>
+        <p class="small">Les ministères fédéraux déplacent leur contenu Web vers
+        le site <a href="http://www.canada.ca">canada.ca</a>. Dans le cadre de
+        ce processus, des rapports sur la divulgation proactive seront
+        accessibles par l’entremise du <a href="http://ouvert.canada.ca">
+        Portail du gouvernement ouvert</a>. Dans le cadre de cette transition,
+        advenant qu’un rapport sur la divulgation proactive d’un ministère en
+        particulier ne soit pas encore accessible par l’entremise du Portail du
+        gouvernement ouvert, veuillez consulter la
+        <a href="http://www.tbs-sct.gc.ca/hgw-cgf/finances/rgs-erdg/pd-dp/index-fra.asp">
+        Divulgation proactive par ordre de ministères ou d’organismes</a>,
+        où vous pourrez en trouver copie. Pour toute question à ce sujet,
+        veuillez nous joindre à l’adresse suivante :
+        <a href="mailto:open-ouvert@tbs-sct.gc.ca">open-ouvert@tbs-sct.gc.ca</a>.</p>
+        </section>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.
