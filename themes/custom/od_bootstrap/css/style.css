@@ -108,3 +108,9 @@
 
 .block-region-top .pillars {
   float: right; }
+
+.webform-submission-ati_records-form {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1em; }
