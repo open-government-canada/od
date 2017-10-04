@@ -325,7 +325,11 @@
                 "Enter drupal/vote_up_down patch #2910780 description here":
                 "https://www.drupal.org/files/issues/vote_up_down-js-prototype-bug-2910780-2-D8.patch",
                 "Enter drupal/vote_up_down patch #2910893 description here":
-                "https://www.drupal.org/files/issues/vud_disable_regex-2910893-4.patch"
+                "https://www.drupal.org/files/issues/vud_disable_regex-2910893-4.patch",
+                "Enter drupal/vote_up_down patch #2912243 description here":
+                "https://www.drupal.org/files/issues/vote_up_down_6.patch",
+                "Enter drupal/vote_up_down patch #2913874 description here":
+                "https://www.drupal.org/files/issues/ajax_counter_issues-2913874-3.patch"
             }
         }
     },

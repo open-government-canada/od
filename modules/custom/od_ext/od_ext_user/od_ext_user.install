@@ -91,27 +91,4 @@ function od_ext_user_install() {
     ->setThirdPartySetting('field_group', 'group_notifications', $group_notifications)
     ->save();
 
-  $block = \Drupal::entityManager()->getStorage('block')->create([
-    'id' => 'od_bootstrap_account_menu_sidebar',
-    'plugin' => 'system_menu_block:account',
-    'region' => 'sidebar_first',
-    'provider' => NULL,
-    'theme' => 'od_bootstrap',
-    'weight' => -10,
-    'settings' => [
-      'id' => 'system_menu_block:account',
-      'label' => 'User account menu',
-      'provider' => 'system',
-    ],
-    'visibility' => [
-      'request_path' => [
-        'id' => 'request_path',
-        'pages' => '/user/register',
-        'negate' => FALSE,
-        'context_mapping' => [],
-      ],
-    ],
-  ]);
-  $block->save();
-
 }
