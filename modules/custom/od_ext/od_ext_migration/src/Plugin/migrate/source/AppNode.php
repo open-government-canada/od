@@ -71,6 +71,8 @@ class AppNode extends SqlBase implements ContainerFactoryPluginInterface {
         'language',
         'title',
         'uid',
+        'created',
+        'changed',
         'status',
       ])
       ->condition('n.type', 'apps');
@@ -89,6 +91,8 @@ class AppNode extends SqlBase implements ContainerFactoryPluginInterface {
       'title' => $this->t('Title'),
       'uid' => $this->t('User ID'),
       'body' => $this->t('Body'),
+      'created' => $this->t('Created'),
+      'changed' => $this->t('Changed'),
       'status' => $this->t('Status'),
       'name' => $this->t('Name'),
       'url' => $this->t('URL'),

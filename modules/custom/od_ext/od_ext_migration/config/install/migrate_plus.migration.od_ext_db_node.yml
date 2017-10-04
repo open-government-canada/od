@@ -26,6 +26,8 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: langcode
+  created: created
+  changed: changed
   status: status
   moderation_state:
     plugin: default_value

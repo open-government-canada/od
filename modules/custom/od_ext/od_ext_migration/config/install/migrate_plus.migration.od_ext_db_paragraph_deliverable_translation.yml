@@ -43,6 +43,8 @@ process:
   langcode:
     plugin: default_value
     default_value: "fr"
+  created: created
+  changed: changed
   status: status
   moderation_state:
     plugin: default_value

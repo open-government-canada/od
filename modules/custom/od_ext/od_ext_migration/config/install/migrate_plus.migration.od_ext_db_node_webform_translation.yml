@@ -39,6 +39,8 @@ process:
     plugin: default_value
     default_value: "fr"
   path: alias
+  created: created
+  changed: changed
   status: status
   moderation_state:
     plugin: default_value
