@@ -4,3 +4,12 @@
  * @file
  * Contains od_ext_user.module.
  */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function od_ext_user_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['field_subscriptions']['widget']['#title'] = 'The section/group that I identify most with is';
+}

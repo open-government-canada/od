@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_subscribe_updates
+  module:
+    - user
+id: user.user.field_subscribe_updates
+field_name: field_subscribe_updates
+entity_type: user
+bundle: user
+label: 'Subscribe Updates'
+description: 'Would you like occasional updates from us on Canada’s Open Government activities?'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Receive occasional updates'
+  off_label: 'Don''t receive occasional updates'
+field_type: boolean

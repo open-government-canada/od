@@ -31,6 +31,8 @@ process:
     source: language
     fallback_to_site_default: true
   init: init
+  field_message_subscribe: subscribe_message
+  field_subscribe_updates: subcscribe_updates
   'field_address/langcode':
     plugin: default_value
     default_value: en

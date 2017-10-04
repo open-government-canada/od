@@ -121,6 +121,24 @@ class UserImport extends SqlBase {
       ->execute()
       ->fetchAllAssoc('rid');
 
+    $subscribe_message = $this->select('field_data_opendata_message_subscribe', 'df')
+      ->fields('df', ['opendata_message_subscribe_value'])
+      ->condition('entity_id', $row->getSourceProperty('uid'))
+      ->condition('revision_id', $row->getSourceProperty('uid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('bundle', 'user')
+      ->execute()
+      ->fetchCol();
+
+    $subscribe_updates = $this->select('field_data_field_subscribe_updates', 'df')
+      ->fields('df', ['field_subscribe_updates_value'])
+      ->condition('entity_id', $row->getSourceProperty('uid'))
+      ->condition('revision_id', $row->getSourceProperty('uid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('bundle', 'user')
+      ->execute()
+      ->fetchCol();
+
     $row->setSourceProperty('country_code', $address['field_address1_country']);
     $row->setSourceProperty('administrative_area', $address['field_address1_administrative_area']);
     $row->setSourceProperty('locality', $address['field_address1_locality']);
@@ -134,6 +152,8 @@ class UserImport extends SqlBase {
     $row->setSourceProperty('additional_name', '');
     $row->setSourceProperty('family_name', $address['field_address1_last_name']);
     $row->setSourceProperty('user_roles', $user_roles);
+    $row->setSourceProperty('subscribe_message', $subscribe_message[0]);
+    $row->setSourceProperty('subscribe_updates', $subscribe_updates[0]);
 
     return parent::prepareRow($row);
   }

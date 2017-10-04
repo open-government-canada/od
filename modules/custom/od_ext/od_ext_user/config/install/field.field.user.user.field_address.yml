@@ -18,17 +18,28 @@ default_value: {  }
 default_value_callback: ''
 settings:
   available_countries: {  }
-  fields:
-    administrativeArea: administrativeArea
-    locality: locality
-    dependentLocality: dependentLocality
-    postalCode: postalCode
-    sortingCode: sortingCode
-    addressLine1: addressLine1
-    addressLine2: addressLine2
-    organization: organization
-    givenName: givenName
-    additionalName: additionalName
-    familyName: familyName
+  field_settings:
+    administrativeArea:
+      behavior: optional
+    locality:
+      behavior: optional
+    dependentLocality:
+      behavior: optional
+    postalCode:
+      behavior: optional
+    sortingCode:
+      behavior: optional
+    addressLine1:
+      behavior: optional
+    addressLine2:
+      behavior: optional
+    organization:
+      behavior: optional
+    givenName:
+      behavior: optional
+    additionalName:
+      behavior: optional
+    familyName:
+      behavior: optional
   langcode_override: en
 field_type: address

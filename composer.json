@@ -247,6 +247,10 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/address": {
+                "Enter drupal/address patch #2514126 description here":
+                "https://www.drupal.org/files/issues/2514126-102.field-behavior-settings.patch  "
+            },
             "drupal/external_entities": {
                 "Enter drupal/external_entities patch #2872506 description here":
                 "https://www.drupal.org/files/issues/loosen_doloadmultiple-2872506-2.patch",
