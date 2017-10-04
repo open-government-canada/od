@@ -901,6 +901,18 @@ source:
         veuillez nous joindre à l’adresse suivante :
         <a href="mailto:open-ouvert@tbs-sct.gc.ca">open-ouvert@tbs-sct.gc.ca</a>.</p>
         </section>
+    - bid: 'share_your_app'
+      language: 'fr'
+      title: 'Exposez votre application'
+      body: |
+        <div class="well mrgn-bttm-0">
+          <div>
+            <div class="alert">
+              <a class="btn btn-info pull-left" href="[site:url]/formulaire/informez-nous-de-votre-application" role="button">
+              Exposez votre application</a>
+            </div>
+          </div>
+        </div>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

@@ -2137,6 +2137,13 @@ source:
               region: left
               weight: 10
             -
+              id: 'block_content:share_your_app'
+              label: 'Exposez votre application'
+              label_display: 0
+              region: right
+              view_mode: full
+              weight: -1
+            -
               id: 'facet_block:app_publishers'
               label:  Éditeur
               label_display: visible
