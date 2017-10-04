@@ -645,7 +645,31 @@ display:
           hide_alter_empty: false
           plugin_id: custom
       filters: {  }
-      sorts: {  }
+      sorts:
+        date_year:
+          id: date_year
+          table: search_api_index_pd_core_travelq
+          field: date_year
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        date_month:
+          id: date_month
+          table: search_api_index_pd_core_travelq
+          field: date_month
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
       title: 'Search Results'
       header: {  }
       footer: {  }
