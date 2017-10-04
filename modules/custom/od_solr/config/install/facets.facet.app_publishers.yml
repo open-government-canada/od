@@ -36,19 +36,24 @@ processor_configs:
   count_widget_order:
     processor_id: count_widget_order
     weights:
-      sort: -10
+      sort: -8
     settings:
       sort: DESC
   display_value_widget_order:
     processor_id: display_value_widget_order
     weights:
-      sort: -10
+      sort: -9
     settings:
-      sort: DESC
+      sort: ASC
+  items_rewrite_label:
+    processor_id: items_rewrite_label
+    weights:
+      build: -8
+    settings: {  }
   translate_entity:
     processor_id: translate_entity
     weights:
-      build: 5
+      build: -9
     settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
