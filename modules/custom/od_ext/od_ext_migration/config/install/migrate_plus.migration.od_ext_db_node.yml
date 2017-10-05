@@ -19,9 +19,12 @@ process:
   sticky:
     plugin: default_value
     default_value: 0
-  body/value:
+  body_value:
     plugin: wxt_uuid_link
     source: body
+  body/value:
+    plugin: od_legacy_images
+    source: '@body_value'
   body/format:
     plugin: default_value
     default_value: rich_text

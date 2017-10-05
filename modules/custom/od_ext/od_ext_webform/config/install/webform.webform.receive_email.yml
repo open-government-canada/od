@@ -9,7 +9,7 @@ id: receive_email
 title: 'Receive Open Government Email Form'
 description: '&quot;Receive Open Government Email&quot; webform.'
 category: null
-elements: "e_mail:\n  '#type': email\n  '#title': E-mail\n  '#default_value': '[current-user:mail]'\nname:\n  '#type': textfield\n  '#title': Name\nsectors:\n  '#type': webform_entity_checkboxes\n  '#title': 'The sector/group that I identify most with is:'\n  '#target_type': taxonomy_term\n  '#selection_handler': 'default:taxonomy_term'\n  '#selection_settings':\n    target_bundles:\n      subscriptions: subscriptions\n    sort:\n      field: name\n"
+elements: "e_mail:\n  '#type': email\n  '#title': E-mail\n  '#default_value': '[current-user:mail]'\nname:\n  '#type': textfield\n  '#title': Name\nsectors:\n  '#type': webform_entity_radios\n  '#title': 'The sector/group that I identify most with is:'\n  '#target_type': taxonomy_term\n  '#selection_handler': 'default:taxonomy_term'\n  '#selection_settings':\n    target_bundles:\n      subscriptions: subscriptions\n    sort:\n      field: name\n"
 css: ''
 javascript: ''
 settings:
@@ -48,7 +48,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }

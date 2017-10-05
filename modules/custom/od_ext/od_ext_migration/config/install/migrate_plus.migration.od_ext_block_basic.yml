@@ -155,7 +155,7 @@ source:
       title: 'Apps gallery'
       body: |
         <h2 class="h4"><a href="[site:url]/apps">Apps
-        Gallery</a></h2>
+        gallery</a></h2>
         <p>Browse and download apps that were built both by the Canadian public
         and the Government of Canada that use open data.</p>
     - bid: 'open_data_submit_app'
@@ -212,7 +212,7 @@ source:
       title: 'Proactive Disclosure'
       body: |
         <h2 class="h4"><a href="[site:url]/proactive-disclosure">
-          Proactive Disclosure
+          Proactive disclosure
         </a></h2>
         <p>Browse reports that have been proactively disclosed by departments
         and agencies, including financial, human resources and government
