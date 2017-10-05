@@ -138,7 +138,7 @@ class DeliverableParagraph extends SqlBase {
     $row->setSourceProperty('body', $body[0]);
     $row->setSourceProperty('next_steps', $next_steps[0]);
     $row->setSourceProperty('progress', $progress[0]);
-    $row->setSourceProperty('status', $status[0]);
+    $row->setSourceProperty('deliverable_status', $status[0]);
 
     return parent::prepareRow($row);
   }

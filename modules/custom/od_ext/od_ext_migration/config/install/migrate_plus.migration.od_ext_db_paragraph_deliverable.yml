@@ -42,7 +42,7 @@ process:
   field_deliverable_progress/format:
     plugin: default_value
     default_value: rich_text
-  field_deliverable_status/value: status
+  field_deliverable_status/value: deliverable_status
 destination:
   plugin: 'entity_reference_revisions:paragraph'
 migration_dependencies:
