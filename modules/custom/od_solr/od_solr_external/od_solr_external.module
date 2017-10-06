@@ -95,11 +95,11 @@ function od_solr_external_preprocess_views_view_fields(&$variables) {
     $id = $str['id'];
     $org = $str['organization']['title'];
     $org = explode('|', $org);
-    if ($language == 'fr') {
-      $str = Markup::Create('<a href="http://ouvert.canada.ca/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $org[1] . '</a>');
+    if ($language->getId() == 'fr') {
+      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $org[1] . '</a>');
     }
     else {
-      $str = Markup::Create('<a href="http://open.canada.ca/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $org[0] . '</a>');
+      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $org[0] . '</a>');
     }
     $variables['fields']['nothing']->content = $str;
   }
