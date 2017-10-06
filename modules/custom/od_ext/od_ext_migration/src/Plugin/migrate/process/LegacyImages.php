@@ -112,7 +112,12 @@ class LegacyImages extends ProcessPluginBase implements ContainerFactoryPluginIn
         return $match[0];
       }
       else {
-        return 'src="' . str_replace('/sites/default/files/', '/sites/default/files/legacy/', $match[1]);
+        if ($dir === '/sites/default/files/') {
+          return 'src="' . str_replace($dir, '/sites/default/files/legacy/', $match[1]);
+        }
+        else {
+          return $match[0];
+        }
       }
     }
     catch (Exception $e) {
