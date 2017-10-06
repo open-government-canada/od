@@ -17,8 +17,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @MigrateProcessPlugin(
  *   id = "od_legacy_images",
  * )
- *
- * @link https://blog.kalamuna.com/news/converting-drupal-7-media-tags-during-a-drupal-8-migration
  */
 class LegacyImages extends ProcessPluginBase implements ContainerFactoryPluginInterface {
 
@@ -74,9 +72,56 @@ class LegacyImages extends ProcessPluginBase implements ContainerFactoryPluginIn
       throw new MigrateSkipProcessException();
     }
 
-    $value = str_replace('/sites/default/files/', '/sites/default/files/legacy', $value);
+    $value = ' ' . $value . ' ';
+    $value = preg_replace_callback(
+      "/src *= *[\"']?(\/sites\/default\/files\/[^\"']*)/s",
+      function ($match) use ($migrate_executable, $row, $destination_property) {
+        return $this->replaceToken($match, $migrate_executable, $row, $destination_property);
+      },
+      $value
+    );
 
     return $value;
+  }
+
+  /**
+   * Replace callback to convert a media file tag into HTML markup.
+   *
+   * Partially copied from 7.x media module media.filter.inc (media_filter).
+   *
+   * @param string $match
+   *   Takes a match of tag code
+   * @param \Drupal\migrate\MigrateExecutableInterface $migrate_executable
+   *   The migrate executable helper class.
+   * @param \Drupal\migrate\Row $row
+   *   The current row after processing.
+   * @param string $destination_property
+   *   The destination propery.
+   */
+  private function replaceToken($match, $migrate_executable, $row, $destination_property) {
+    $imgSrc = $match[1];
+
+    try {
+      if (!is_string($imgSrc)) {
+        throw new MigrateException('Unable to find matching tag');
+      }
+
+      $file = substr(strrchr($imgSrc, "/"), 1);
+      $dir = str_replace($file, '', $imgSrc);
+      if (strpos($dir, '/sites/default/files/legacy/') !== FALSE) {
+        return $match[0];
+      }
+      else {
+        return 'src="' . str_replace('/sites/default/files/', '/sites/default/files/legacy/', $match[1]);
+      }
+    }
+    catch (Exception $e) {
+      $msg = t('Unable to render img from %tag. Error: %error', ['%tag' => $imgSrc, '%error' => $e->getMessage()]);
+      \Drupal::logger('Migration')->error($msg);
+      return '';
+    }
+
+    return $match[0];
   }
 
 }

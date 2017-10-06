@@ -20,18 +20,19 @@ process:
   sticky:
     plugin: default_value
     default_value: 0
-  body/value:
-    plugin: wxt_uuid_link
-    source: body
+  body_value:
+    -
+      plugin: wxt_uuid_link
+      source: body
+    -
+      plugin: od_legacy_images
+      source: body
   body/format:
     plugin: default_value
     default_value: rich_text
   langcode:
     plugin: default_value
     default_value: "fr"
-  created: created
-  changed: changed
-  status: status
   moderation_state:
     plugin: default_value
     default_value: "published"
