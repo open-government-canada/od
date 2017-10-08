@@ -11,10 +11,9 @@ source:
   target: source_migration
 process:
   title:
-    -
-      plugin: skip_on_empty
-      method: process
-      source: title
+    plugin: skip_on_empty
+    method: process
+    source: title
   uid:
     plugin: migration
     migration: od_ext_db_user

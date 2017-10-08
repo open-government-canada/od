@@ -12,10 +12,9 @@ source:
   translations: true
 process:
   title:
-    -
-      plugin: skip_on_empty
-      method: process
-      source: title
+    plugin: skip_on_empty
+    method: process
+    source: title
   nid:
     plugin: migration
     migration: od_ext_db_node_suggested_dataset
