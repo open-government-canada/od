@@ -6,12 +6,14 @@ dependencies:
     - field.field.node.suggested_app.body
     - field.field.node.suggested_app.comment
     - field.field.node.suggested_app.field_suggested_app_dataset
+    - field.field.node.suggested_app.field_vud
     - node.type.suggested_app
   module:
     - comment
     - panelizer
     - text
     - user
+    - vud
 third_party_settings:
   panelizer:
     enable: false
@@ -26,12 +28,12 @@ content:
   body:
     label: above
     type: text_default
-    weight: 2
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     region: content
   comment:
-    weight: 4
+    weight: 6
     label: above
     settings:
       view_mode: default
@@ -40,19 +42,26 @@ content:
     type: comment_default
     region: content
   field_suggested_app_dataset:
-    weight: 1
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  flag_like:
-    weight: 0
+  field_vud:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: vote_up_down_formatter_type
+    region: content
+  links:
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 3
+  workbench_moderation_control:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

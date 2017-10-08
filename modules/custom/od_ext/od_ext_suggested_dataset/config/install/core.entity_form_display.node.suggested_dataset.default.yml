@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.suggested_dataset.field_status
     - field.field.node.suggested_dataset.field_status_link
     - field.field.node.suggested_dataset.field_suggested_dataset_dept
+    - field.field.node.suggested_dataset.field_vud
     - node.type.suggested_dataset
   module:
     - comment
@@ -14,6 +15,7 @@ dependencies:
     - link
     - path
     - text
+    - vud
     - workbench_moderation
 third_party_settings:
   field_group:
@@ -69,16 +71,19 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   comment:
     weight: 26
     settings: {  }
     third_party_settings: {  }
     type: comment_default
+    region: content
   created:
     type: datetime_timestamp
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_status:
     weight: 11
     settings:
@@ -86,6 +91,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
   field_status_link:
     weight: 12
     settings:
@@ -93,6 +99,7 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   field_suggested_dataset_dept:
     weight: 12
     settings:
@@ -100,28 +107,40 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_vud:
+    weight: 27
+    settings:
+      vote_tag: vote
+    third_party_settings: {  }
+    type: vote_up_down_widget_type
+    region: content
   langcode:
     type: language_select
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 7
     settings: {  }
     third_party_settings: {  }
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 5
     third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
     weight: 6
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -129,10 +148,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   translation:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 2
@@ -141,4 +162,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden: {  }

@@ -365,24 +365,21 @@ class MigrationSubscriber implements EventSubscriberInterface {
     if ($event->getMigration()->id() == 'od_ext_db_node_idea' ||
         $event->getMigration()->id() == 'od_ext_db_node_suggested_app' ||
         $event->getMigration()->id() == 'od_ext_db_node_suggested_dataset') {
-      $likes = $event->getRow()->getSourceProperty('likes');
-
-      if (!empty($likes)) {
-        $destinationIds = $event->getDestinationIdValues();
-        $node_storage = $this->entityManager->getStorage('node');
-        $node = $node_storage->load($destinationIds[0]);
-        $account = $this->currentUser;
-        $sessId = $this->session->getId();
-
-        foreach ($likes as $like) {
-          $flag = $this->flagService->getFlagById('like');
-          $is_flagged = $flag->isFlagged($node, $account, $sessId);
-          if (!$is_flagged && !empty($like)) {
-            $this->flagService->flag($flag, $node, $account, $sessId);
-          }
-          $this->session->invalidate();
-        }
-
+      $votes = $event->getRow()->getSourceProperty('likes');
+      $destinationIds = $event->getDestinationIdValues();
+      foreach ($votes as $vote) {
+        $storage = $this->entityManager->getStorage('vote');
+        $data = $vote;
+        $voteData = [
+          'entity_type' => 'node',
+          'entity_id'   => $destinationIds[0],
+          'type'      => 'vote',
+          'field_name'  => 'field_vud',
+          'user_id' => 0,
+        ];
+        $vote = $storage->create($voteData);
+        $vote->setValue($data);
+        $vote->save();
       }
     }
 

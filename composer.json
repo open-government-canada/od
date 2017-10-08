@@ -329,7 +329,9 @@
                 "Enter drupal/vote_up_down patch #2912243 description here":
                 "https://www.drupal.org/files/issues/vote_up_down_6.patch",
                 "Enter drupal/vote_up_down patch #2913874 description here":
-                "https://www.drupal.org/files/issues/ajax_counter_issues-2913874-3.patch"
+                "https://www.drupal.org/files/issues/ajax_counter_issues-2913874-3.patch",
+                "Enter drupal/vote_up_down patch #2914766 description here":
+                "https://www.drupal.org/files/issues/evaluating_vote_up_down-2914766-2.patch"
             }
         }
     },
@@ -337,7 +339,7 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
-        "drupalwxt/wxt": "2.0.0-beta3",
+        "drupalwxt/wxt": "dev-8.x-2.x",
         "drupal/address": "1.1",
         "drupal/chosen": "2.4",
         "drupal/csv_serialization": "1.0",

@@ -9,12 +9,14 @@ dependencies:
     - field.field.node.idea.field_idea_status
     - field.field.node.idea.field_idea_submission_name
     - field.field.node.idea.field_idea_tags
+    - field.field.node.idea.field_vud
     - node.type.idea
   module:
     - comment
     - panelizer
     - text
     - user
+    - vud
 third_party_settings:
   panelizer:
     enable: false
@@ -34,7 +36,7 @@ content:
     third_party_settings: {  }
     region: content
   comment:
-    weight: 5
+    weight: 6
     label: above
     settings:
       view_mode: default
@@ -58,13 +60,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  flag_like:
-    weight: 4
-    region: content
+  field_vud:
+    weight: 5
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: vote_up_down_formatter_type
+    region: content
   links:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

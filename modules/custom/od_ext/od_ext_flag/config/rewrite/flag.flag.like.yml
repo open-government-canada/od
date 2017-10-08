@@ -4,9 +4,7 @@ dependencies: {  }
 id: like
 label: Like
 bundles:
-  - idea
-  - suggested_app
-  - suggested_dataset
+  - consultation
 entity_type: node
 global: false
 weight: 0
