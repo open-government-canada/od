@@ -34,6 +34,10 @@ function od_solr_external_search_api_solr_query_alter(SolariumQuery $solarium_qu
  * Implements hook_views_pre_render().
  */
 function od_solr_external_views_pre_render(ViewExecutable $view) {
+  $language_manager = \Drupal::service('language_manager');
+  $currentLang = $language_manager->getCurrentLanguage()->getId();
+  $defaultLang = $language_manager->getDefaultLanguage()->getId();
+
   $cores = [
     'pd_core_ati' => ['block_1', 'block_2'],
     'pd_core_grants' => ['block_1', 'block_2'],
@@ -51,9 +55,6 @@ function od_solr_external_views_pre_render(ViewExecutable $view) {
 
     if ($view->id() == $core &&  in_array($view->current_display, $coreDisplay)) {
       /** @var \Drupal\Core\Language\LanguageManagerInterface $language_manager */
-      $language_manager = \Drupal::service('language_manager');
-      $currentLang = $language_manager->getCurrentLanguage()->getId();
-      $defaultLang = $language_manager->getDefaultLanguage()->getId();
       if ($defaultLang != $currentLang) {
         if (!empty($view->style_plugin->options['panel_title_field'])) {
           if ($core == 'solr_inventory' && $currentLang == 'fr') {
@@ -78,6 +79,16 @@ function od_solr_external_views_pre_render(ViewExecutable $view) {
       }
     }
   }
+
+  if ($view->id() == 'solr_search_content') {
+    if (!empty($view->exposed_widgets['#action']) && $view->current_display === 'solr_app') {
+      $view->exposed_widgets['#action'] = '/' . $currentLang . '/apps/';
+      $view->exposed_widgets['search_api_fulltext']['#attributes'] = [
+        'placeholder' => t('Search...'),
+      ];
+    }
+  }
+
 }
 
 /**

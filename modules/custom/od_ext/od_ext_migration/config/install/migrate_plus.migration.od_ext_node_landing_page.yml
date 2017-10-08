@@ -1862,6 +1862,13 @@ source:
               region: left
               weight: 5
             -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: left
+              view_mode: full
+              weight: 7
+            -
               id: 'views_block:solr_search_content-solr_app'
               label: ''
               label_display: visible
