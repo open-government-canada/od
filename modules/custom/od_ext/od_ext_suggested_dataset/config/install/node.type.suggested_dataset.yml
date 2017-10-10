@@ -20,6 +20,6 @@ name: 'Suggested Dataset'
 type: suggested_dataset
 description: 'Datasets that have been suggested by users through the web form.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 0
 display_submitted: false

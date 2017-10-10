@@ -149,6 +149,38 @@ class MigrationSubscriber implements EventSubscriberInterface {
         ->set('page.front', '/homepage')
         ->save(TRUE);
     }
+
+    if ($event->getMigration()->id() == 'od_ext_block_basic') {
+      $content_types = [
+        'suggested_dataset' => [
+          'region' => 'top_left',
+          'weight' => 0,
+        ],
+      ];
+      foreach ($content_types as $type => $value) {
+        $uuid = $this->uuidService;
+        $uuid = $uuid->generate();
+        $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, 'default');
+        $display = $displays['default'];
+        $display->addBlock([
+          'id' => 'system_menu_block:account',
+          'label' => 'User account menu',
+          'provider' => 'system',
+          'label_display' => '0',
+          'level' => 1,
+          'depth' => 0,
+          'region' => 'top_left',
+          'weight' => 0,
+          'uuid' => $uuid,
+          'context_mapping' => [],
+        ]);
+        $this->panelizer->setDefaultPanelsDisplay('default', 'node', $type, 'default', $display);
+        $this->panelizer->setDisplayStaticContexts('default', 'node', $type, 'default', []);
+        $this->invalidator->invalidateTags(["panelizer_default:node:{$type}:default:default"]);
+        $this->tempstore->get('panelizer.wizard')->delete("node__{$type}__default__default");
+        $this->tempstore->get('panels_ipe')->delete("node__{$type}__default__default");
+      }
+    }
   }
 
   /**

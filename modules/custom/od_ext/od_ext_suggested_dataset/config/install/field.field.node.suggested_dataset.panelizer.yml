@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.suggested_dataset
+  module:
+    - panelizer
+id: node.suggested_dataset.panelizer
+field_name: panelizer
+entity_type: node
+bundle: suggested_dataset
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer
