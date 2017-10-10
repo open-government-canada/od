@@ -18,6 +18,9 @@ source:
         ouvert.</p>
       alias: /homepage
       queue: front_page
+      metatags:
+        -
+          title: 'Gouvernement ouvert'
       panelizer:
         -
           view_mode: page_manager
@@ -971,6 +974,13 @@ source:
               label_display: 0
               region: main
               weight: 1
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: main
+              view_mode: full
+              weight: 5
             -
               id: 'views_block:suggestion-block_1'
               label: ''
@@ -2009,6 +2019,13 @@ source:
               label_display: 0
               region: left
               weight: 5
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: left
+              view_mode: full
+              weight: 7
             -
               id: 'views_block:pd_core_ati-block_1'
               label: ''
@@ -3612,6 +3629,14 @@ process:
   moderation_state:
     plugin: default_value
     default_value: "published"
+  field_meta_tags:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: metatags
+    -
+      plugin: callback
+      callable: serialize
   panelizer:
     plugin: iterator
     source: panelizer

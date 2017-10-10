@@ -2,17 +2,21 @@
 
 namespace Drupal\od_ext_migration\EventSubscriber;
 
+use Drupal\Core\Cache\CacheTagsInvalidatorInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Session\SessionManagerInterface;
 use Drupal\flag\FlagServiceInterface;
+use Drupal\media_entity\Entity\Media;
 use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigrateImportEvent;
 use Drupal\migrate\Event\MigratePostRowSaveEvent;
+use Drupal\panelizer\PanelizerInterface;
+use Drupal\Component\Uuid\UuidInterface;
+use Drupal\user\SharedTempStoreFactory;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Drupal\media_entity\Entity\Media;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
@@ -70,6 +74,32 @@ class MigrationSubscriber implements EventSubscriberInterface {
   protected $session;
 
   /**
+   * The UUID service.
+   *
+   * @var \Drupal\Component\Uuid\UuidInterface
+   */
+  protected $uuidService;
+
+  /**
+   * The cache tag invalidator.
+   *
+   * @var \Drupal\Core\Cache\CacheTagsInvalidatorInterface
+   */
+  protected $invalidator;
+
+  /**
+   * The Panelizer service.
+   *
+   * @var \Drupal\panelizer\PanelizerInterface
+   */
+  protected $panelizer;
+
+  /**
+   * @var \Drupal\user\SharedTempStoreFactory
+   */
+  protected $tempstore;
+
+  /**
    * Constructs a new MigrationSubscriber.
    *
    * @param \Drupal\Core\Entity\EntityManagerInterface $entity_manager
@@ -86,8 +116,16 @@ class MigrationSubscriber implements EventSubscriberInterface {
    *   The current user.
    * @param \Drupal\flag\FlagServiceInterface $flag_service
    *   The flag service.
+   * @param \Drupal\Component\Uuid\UuidInterface $uuid_service
+   *   UUID service.
+   * @param \Drupal\Core\Cache\CacheTagsInvalidatorInterface $invalidator
+   *   The cache tag invalidator.
+   * @param \Drupal\panelizer\PanelizerInterface $panelizer
+   *   The Panelizer service.
+   * @param \Drupal\user\SharedTempStoreFactory $tempstore
+   *   The tempstore factory.
    */
-  public function __construct(EntityManagerInterface $entity_manager, EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory, SessionManagerInterface $session_manager, Session $session, AccountInterface $current_user, FlagServiceInterface $flag_service) {
+  public function __construct(EntityManagerInterface $entity_manager, EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory, SessionManagerInterface $session_manager, Session $session, AccountInterface $current_user, FlagServiceInterface $flag_service, UuidInterface $uuid_service, CacheTagsInvalidatorInterface $invalidator, PanelizerInterface $panelizer, SharedTempStoreFactory $tempstore) {
     $this->entityManager = $entity_manager;
     $this->entityTypeManager = $entity_type_manager;
     $this->config = $config_factory;
@@ -95,6 +133,10 @@ class MigrationSubscriber implements EventSubscriberInterface {
     $this->session = $session;
     $this->currentUser = $current_user;
     $this->flagService = $flag_service;
+    $this->uuidService = $uuid_service;
+    $this->invalidator = $invalidator;
+    $this->panelizer = $panelizer;
+    $this->tempstore = $tempstore;
   }
 
   /**
@@ -453,6 +495,44 @@ class MigrationSubscriber implements EventSubscriberInterface {
               ],
             ]);
             $block->save();
+            break;
+
+          case 'pillars':
+            $content_types = [
+              'blog_post' => [
+                'region' => 'left',
+                'weight' => -5,
+              ],
+              'page' => [
+                'region' => 'content',
+                'weight' => 1,
+              ],
+            ];
+            foreach ($content_types as $type => $value) {
+              $uuid = $this->uuidService;
+              $uuid = $uuid->generate();
+              $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);
+              $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, 'default');
+              $display = $displays['default'];
+              $display->addBlock([
+                'id' => 'block_content:' . $block_content->uuid(),
+                'label' => 'Pillars',
+                'provider' => 'block_content',
+                'label_display' => 0,
+                'status' => 1,
+                'info' => '',
+                'view_mode' => 'full',
+                'region' => $value['region'],
+                'weight' => $value['weight'],
+                'uuid' => $uuid,
+                'context_mapping' => [],
+              ]);
+              $this->panelizer->setDefaultPanelsDisplay('default', 'node', $type, 'default', $display);
+              $this->panelizer->setDisplayStaticContexts('default', 'node', $type, 'default', []);
+              $this->invalidator->invalidateTags(["panelizer_default:node:{$type}:default:default"]);
+              $this->tempstore->get('panelizer.wizard')->delete("node__{$type}__default__default");
+              $this->tempstore->get('panels_ipe')->delete("node__{$type}__default__default");
+            }
             break;
         }
       }
