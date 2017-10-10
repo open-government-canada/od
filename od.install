@@ -24,6 +24,25 @@ function od_install() {
 function _od_setup_base_configurations() {
   // Ensure the translation fields are created in the database.
   \Drupal::service('entity.definition_update_manager')->applyUpdates();
+
+  $config = \Drupal::service('config.factory')->getEditable('system.site');
+  $config->set('name', 'Open Government')
+    ->set('mail', 'od-do@canada.ca')
+    ->save();
+
+  $config = \Drupal::languageManager()->getLanguageConfigOverride('en', 'system.site');
+  $config->set('name', 'Gouvernement ouvert')
+    ->save();
+
+  // Set regional settings to be Country: Canada, TZ: America/Toronto, etc.
+  \Drupal::service('config.factory')
+    ->getEditable('system.date')
+    ->set('country.default', 'CA')
+    ->set('timezone.default', 'America/Toronto')
+    ->set('timezone.user.configurable', TRUE)
+    ->set('timezone.user.warn', FALSE)
+    ->set('timezone.user.default', 0)
+    ->save(TRUE);
 }
 
 /**
