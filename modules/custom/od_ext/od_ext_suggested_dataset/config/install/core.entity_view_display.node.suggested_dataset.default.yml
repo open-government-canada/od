@@ -219,8 +219,6 @@ third_party_settings:
         builder: ipe
         pattern: panelizer
         static_context: {  }
-_core:
-  default_config_hash: GwSQbZ1LO4zl4lVtV-6dJEOw4ftxVWaBi1Pv7FpcpU8
 id: node.suggested_dataset.default
 targetEntityType: node
 bundle: suggested_dataset
