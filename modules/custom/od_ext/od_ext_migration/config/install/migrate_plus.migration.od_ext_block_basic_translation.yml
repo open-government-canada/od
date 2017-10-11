@@ -913,6 +913,84 @@ source:
             </div>
           </div>
         </div>
+    - bid: 'user_registration'
+      language: 'fr'
+      title: 'Inscription'
+      body: |
+        <p>Créez un compte en remplissant le formulaire ci-dessous.</p>
+        <p>Un message de confirmation vous sera envoyé par courriel. Vous
+        devez confirmer la création de votre compte pour ouvrir une session.
+        Après l'inscription, vous pourrez commenter, recommander et
+        partager!</p>
+        <p><strong>Nota :</strong> Toute information personnelle recueillie à
+        l'aide du présent formulaire est protégée en vertu de la
+        <a href="http://laws-lois.justice.gc.ca/fra/lois/P-21/index.html">Loi
+        sur la protection des renseignements personnels.</a></p>
+        <div class="module-info module-simplify">
+          <div class="alert alert-info">
+            <p><span class="h1">*&nbsp;</span>La communication de l'information
+            demandée sur ce formulaire n'est pas obligatoire. L'information
+            est recueillie dans le but de répondre à votre demande de
+            renseignements ou à vos commentaires et d'améliorer notre ensemble
+            de produits et de services en ligne. Si vous transmettez une
+            demande à l'aide de ce formulaire sans fournir d'adresse
+            électronique de retour, il nous sera impossible d'y répondre. Les
+            renseignements personnels que vous fournissez sont protégés en
+            vertu de la
+            <a href="http://laws-lois.justice.gc.ca/fra/lois/P-21/index.html">
+            <em>Loi sur la protection des renseignements personnels</em></a> ,
+            une loi fédérale. Veuillez <strong>ne pas inclure de renseignements
+            personnels à caractère délicat</strong> dans le message, comme
+            votre numéro d'assurance sociale, des renseignements financiers
+            personnels, vos antécédents médicaux ou professionnels ou des
+            renseignements personnels d'autres personnes.</p>
+            <div class="clearfix">&nbsp;</div>
+            <div class="mrgn-rght-lg mrgn-lft-0">
+              <details><summary class="bg-primary mrgn-bttm-md">Lisez la
+              Déclaration sur la protection des renseignements personnels de
+              la présente page.</summary><p>La collecte et l'utilisation de
+              vos renseignements personnels sont autorisées par la <em>Loi sur
+              la gestion des finances publiques</em>. La collecte et
+              l'utilisation de vos renseignements personnels pour ce site se
+              feront conformément à la <a href="http://laws-lois.justice.gc.ca/fra/lois/P-21/index.html">
+              <em>Loi sur la protection des renseignements personnels</em></a>,
+              une loi fédérale. Vos renseignements personnels sont utilisés
+              pour répondre à vos demandes de renseignements, s'il y a lieu, et
+              peuvent être utilisés pour évaluer l'efficacité du programme
+              quand vient le temps de répondre aux besoins des clients. Dans
+              des circonstances exceptionnelles (p. ex., enquête sur les
+              intrusions dans les réseaux ou sur les personnes qui font des
+              menaces ou des remarques inopportunes, etc.), des renseignements
+              personnels  peuvent être communiqués sans votre consentement aux
+              termes du paragraphe 8(2) de la <em>Loi sur la protection des
+              renseignements personnels</em>.</p>
+              <p>Tous les renseignements personnels qui peuvent être recueillis
+              sont décrits dans les fichiers de renseignements personnels
+              ordinaires intitulés <a href="http://www.infosource.gc.ca/emp/emp03-fra.asp#pou914">
+              Communications publiques (POU&nbsp;914)</a> et
+              <a href="http://www.infosource.gc.ca/emp/emp03-fra.asp#pou938">
+              Activités de sensibilisation (POU&nbsp;938)</a> qui se trouve
+              dans la publication <a href="http://www.infosource.gc.ca/index-fra.asp">
+              <em>Info Source</em></a> du Secrétariat du Conseil du Trésor du
+              Canada (SCT).</p>
+              <p>En vertu de la <em>Loi sur la protection des renseignements
+              personnels</em>, vous avez le droit de demander l'accès à vos
+              renseignements personnels et de les modifier si vous en avez
+              fourni. Veuillez toutefois prendre note que, pour exercer l'un
+              ou l'autre de ces droits, vous devez présenter une demande
+              d'accès à vos renseignements personnels. Pour obtenir de plus
+              amples renseignements sur votre droit d'accès, veuillez lire
+              <a href="http://www.infosource.gc.ca/emp/emp01-fra.asp">À propos
+              du programme d'accès à l'information</a>.</p>
+              </details></div>
+            </div>
+          </div>
+          <p>Veuillez consulter nos <a href="http://ouvert.canada.ca/fr/regles-de-participation">
+          règles de participation</a> avant de poster des messages sur le
+          blogue. Les commentaires non conformes ne seront pas affichés, et
+          l'auteur en sera avisé par courriel.</p>
+          <p>Les champs obligatoires sont accompagnés d'un astérisque
+          (<span class="asterisk-red">*</span>).</p>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

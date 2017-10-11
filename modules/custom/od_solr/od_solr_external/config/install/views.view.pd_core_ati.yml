@@ -1334,7 +1334,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/form/ati-records?org={{ ss_ati_organization_en }}&req_num={{ i18n_ts_en_ati_request_number }}&disp={{ ss_ati_disposition_en }}&year={{ ss_ati_year_en }}&month={{ ss_ati_monthname_en }}&pages={{ ss_ati_number_of_pages_en }}&req_sum={{ i18n_ts_en_ati_request_summary }}&email={{ ss_ati_contact_email_en }}&req_pages={{ ss_ati_number_of_pages_en }}" title="Contact this organization about this ATI Request.">Make an informal request for: {{ i18n_ts_en_ati_request_number }} ({{ ss_ati_org_shortform_en }})</a>'
+            text: '<a href="/forms/contact-ati-org?org={{ ss_ati_organization_en }}&req_num={{ i18n_ts_en_ati_request_number }}&disp={{ ss_ati_disposition_en }}&year={{ ss_ati_year_en }}&month={{ ss_ati_monthname_en }}&pages={{ ss_ati_number_of_pages_en }}&req_sum={{ i18n_ts_en_ati_request_summary }}&email={{ ss_ati_contact_email_en }}&req_pages={{ ss_ati_number_of_pages_en }}" title="Contact this organization about this ATI Request.">Make an informal request for: {{ i18n_ts_en_ati_request_number }} ({{ ss_ati_org_shortform_en }})</a>'
             make_link: false
             path: ''
             absolute: false

@@ -861,6 +861,69 @@ source:
             </div>
           </div>
         </div>
+    - bid: 'user_registration'
+      language: 'en'
+      title: 'Registration Page'
+      body: |
+        <p><strong>Create an account</strong> by filling out the form below.</p>
+        <p>A confirmation message will be sent to your email address. You
+        <strong>must confirm</strong> the creation of your account in order to
+        log in. Once registered, you can comment, recommend and share!</p>
+        <p><strong>Note:</strong> All personal information collected on this
+        form is protected under the federal
+        <a href="http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html">
+        <em>Privacy Act</em></a>.</p>
+        <div class="module-info module-simplify">
+          <div class="alert alert-info">
+            <p><span class="h1">*&nbsp;</span>Provision of the information
+            requested on this form is voluntary. The information is being
+            collected for the purpose of responding to your inquiry or
+            comments, and to improve our suite of online products and services.
+            If you make an inquiry via this form and do not provide a return
+            email address, we will not be able to respond to your inquiry.
+            Personal information that you provide is protected under the
+            federal <a href="http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html">
+            <em>Privacy Act</em></a> <em>.</em> Please do not include sensitive
+            personal information in the message, such as your Social Insurance
+            Number, personal finance data, medical or work history, or the
+            personal information of other individuals.</p>
+            <div class="clearfix">&nbsp;</div>
+            <div class="mrgn-rght-lg mrgn-lft-0">
+            <details><summary class="bg-primary mrgn-bttm-md">Read the Privacy
+            Statement for this page.</summary><p>The collection and use of your
+            personal information is authorized by the <em>Financial
+            Administration Act</em>. Collection and use of your personal
+            information for this site is in accordance with the federal
+            <em>Privacy Act</em>. Your personal information is used to
+            respond to your inquiries, if applicable, and may be used to
+            evaluate the effectiveness of the program in responding to client
+            needs. In exceptional circumstances (e.g., network intrusion, or
+            individuals who make inappropriate remarks or threats, etc.),
+            personal information may be disclosed without your consent
+            pursuant to subsection 8(2) of the <em>Privacy Act</em>.</p>
+            <p>Any personal information that may be collected is described
+            in the Standard Personal Information Banks entitled
+            <a href="http://www.infosource.gc.ca/emp/emp03-eng.asp#psu914">
+            Public Communications, PSU 914</a>, and <a href="http://www.infosource.gc.ca/emp/emp03-eng.asp#psu938">
+            Outreach Activities, PSU 938</a>, which can be found in the
+            Treasury Board of Canada Secretariat (TBS) publication: <a href="http://www.infosource.gc.ca/index-eng.asp">
+            <em>InfoSource</em></a>.</p>
+            <p>Under the <em>Privacy Act</em>, you have the right of access to,
+            and correction of, your personal information, if you have provided
+            any. Note however, that to exercise either of these rights; you
+            must make a request for access to your personal information. For
+            more information about your right of access, please read
+            <a href="http://www.infosource.gc.ca/emp/emp01-eng.asp">About the
+            Access to Information Program</a>.</p>
+            </details></div>
+          </div>
+        </div>
+        <p>Before posting, please read our <a href="http://open.canada.ca/en/rules-engagement">
+        rules of engagement</a>. Comments that do not comply will
+        <strong>not</strong> be posted, and the author will be advised via
+        email.</p>
+        <p>Required fields are marked with an
+        asterisk(<span class="asterisk-red">*</span>).</p>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-10-09 19:39+0000\n"
-"PO-Revision-Date: 2017-10-09 19:39+0000\n"
+"POT-Creation-Date: 2017-10-11 00:29+0000\n"
+"PO-Revision-Date: 2017-10-11 00:29+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +14,12 @@ msgstr ""
 
 msgid "403 access denied"
 msgstr "403 accès refusé"
+
+msgid "User Account"
+msgstr "Compte de l'utilisateur"
+
+msgid "WxT Search form"
+msgstr "Formulaire de recherche WxT"
 
 msgid "First Name"
 msgstr "Prénom"
@@ -44,12 +50,6 @@ msgstr "Switcher de langue WxT"
 
 msgid "Sidebar"
 msgstr "Barre latérale"
-
-msgid "User Account"
-msgstr "Compte de l'utilisateur"
-
-msgid "WxT Search form"
-msgstr "Formulaire de recherche WxT"
 
 msgid "Landing page (Home)"
 msgstr "Page d'atterrissage (Accueil)"
@@ -216,6 +216,29 @@ msgstr "Jeu de données"
 msgid "User Details"
 msgstr "Détails de l'utilisateur"
 
+msgid ""
+"You will receive a daily digest of your <a "
+"href=\"[current-user:url:unaliased]/notifications\">notifications</a> "
+"related to the various pages you are subscribed to @ <a "
+"href=\"[current-user:mail]\">[current-user:mail]</a>. You can change "
+"your email address and subscription settings on your <a "
+"href=\"[current-user:edit-url]\">user account page</a>."
+msgstr ""
+"Vous recevrez un « sommaire quotidien » des <a "
+"href=\"[current-user:url:unaliased]/notifications\">avis</a> liés aux "
+"diverses pages auxquelles vous êtes inscrit(e), à <a "
+"href=\"[current-user:mail]\">[current-user:mail]</a>. Vous pouvez "
+"modifier votre adresse courriel et vos préférences d’inscription "
+"à partir de la page de votre <a "
+"href=\"[current-user:edit-url]\">compte d’utilisateur</a>."
+
+msgid ""
+"Would you like occasional updates from us on Canada’s Open "
+"Government activities?"
+msgstr ""
+"Est-ce que vous souhaitez obtenir des mises à jour occasionnelles "
+"concernant les activités sur le gouvernement ouvert du Canada?"
+
 msgid "Don't receive occasional updates"
 msgstr "Ne recevez pas de mises à jour occasionnelles"
 
@@ -230,6 +253,9 @@ msgid ""
 msgstr ""
 "&quot;Demande d'accès à l'information informelle dossiers "
 "précédemment publiés&quot; webform."
+
+msgid "Suggest a Idea for Action Plan"
+msgstr "Proposez une idée pour le Consultation Plan d'action"
 
 msgid ""
 "Your informal request for ATI records previously released has been "
@@ -338,9 +364,6 @@ msgstr ""
 "/>\r\n"
 "[webform_submission:url]\r\n"
 ""
-
-msgid "Suggest a Idea for Action Plan"
-msgstr "Proposez une idée pour le Consultation Plan d'action"
 
 msgid "Suggest a new idea for the Action Plan on Open Government"
 msgstr ""
@@ -693,6 +716,12 @@ msgstr ""
 msgid "Total Amount"
 msgstr "Montant total"
 
+msgid "very good"
+msgstr "très bon"
+
+msgid "Not so poor"
+msgstr "Pas si pauvre"
+
 msgid ""
 "<p><strong> Travel Public servants - Explanation of Significant "
 "Variance:</strong>{{ public_servant_compared_fiscal_year_en "
@@ -802,9 +831,6 @@ msgstr "Recherche en cours"
 msgid "Clear all"
 msgstr "Effacer tous"
 
-msgid "Expand all"
-msgstr "Déplier tous"
-
 msgid "Read more"
 msgstr "Lire la suite"
 
@@ -854,6 +880,21 @@ msgstr ""
 "les ministères du gouvernement du Canada dans le but de répondre à "
 "ma demande de renseignements.'\n"
 ""
+
+msgid "Open CKAN Record"
+msgstr "Ouvrir le dossier CKAN"
+
+msgid "View external entity"
+msgstr "Afficher une entité externe"
+
+msgid "Expand all"
+msgstr "Déplier tous"
+
+msgid "We couldn't find that Web page"
+msgstr "Nous n'avons pas pu trouver cette page Web"
+
+msgid "Error 404"
+msgstr "Erreur 404"
 
 msgid ""
 "title:\n"
@@ -1632,34 +1673,17 @@ msgstr ""
 "  '#title': 'Votre idée'\r\n"
 ""
 
-msgid "very good"
-msgstr "très bon"
-
-msgid "Not so poor"
-msgstr "Pas si pauvre"
-
-msgid "We're sorry you ended up here. Sometimes a page gets moved or deleted."
-msgstr ""
-"Nous sommes désolés que vous ayez abouti ici. Il arrive parfois "
-"qu'une page ait été déplacée ou supprimée."
-
-msgid "We couldn't find that Web page"
-msgstr "Nous n'avons pas pu trouver cette page Web"
-
-msgid "Error 404"
-msgstr "Erreur 404"
-
-msgid "Open CKAN Record"
-msgstr "Ouvrir le dossier CKAN"
-
-msgid "View external entity"
-msgstr "Afficher une entité externe"
-
 msgid ": "
 msgstr " : "
 
 msgid "Edit facet"
 msgstr "Modifier la facette"
+
+msgid "View all blogs"
+msgstr "Voir tous les blogs"
+
+msgid "Skip to \"About this site\""
+msgstr "Passer &agrave; &laquo;&nbsp;&Agrave; propos de ce site&nbsp;&raquo;"
 
 msgid "Search Data"
 msgstr "Recherche de données"
@@ -1669,9 +1693,6 @@ msgstr "Trouvez"
 
 msgid "<span class=\"glyphicon glyphicon-chevron-right small\">"
 msgstr "<span class=\"glyphicon glyphicon-chevron-right small\">"
-
-msgid "View all blogs"
-msgstr "Voir tous les blogs"
 
 msgid "Search and menus"
 msgstr "Recherche et menus"
@@ -1693,4 +1714,51 @@ msgstr "suivant"
 
 msgid "last"
 msgstr "dernier"
+
+msgid "User Profile"
+msgstr "Profil de l'utilisateur"
+
+msgid ""
+"Create a username for your <a href=\"@opengov\">Open Government</a> "
+"interactive account. Spaces are allowed; punctuation is not allowed "
+"except for periods, hyphens, apostrophes, and underscores. This "
+"account will allow you to post comments on <a href=\"@opengov\">Open "
+"Government</a>. <strong>Please note</strong> that your username will "
+"appear online when you post comments."
+msgstr ""
+"Créer un nom d'utilisateur pour votre compte interactif <a "
+"href=\"@opengov\">Gouvernement ouvert</a>. Les espaces sont "
+"autorisés; la ponctuation n'est pas autorisée à l'exception des "
+"points, traits d'union, apostrophes et tirets bas. Ce compte "
+"utilisateur vous permettra de soumettre des commentaires sur <a "
+"href=\"@opengov\">Gouvernement ouvert</a>. <strong>Notez</strong> que "
+"votre nom d'utilisateur apparaîtra sur le site lorsque vous "
+"soumetterez des commentaires."
+
+msgid ""
+"Provide a valid e-mail address. The e-mail address will not be made "
+"public and will only be used to provide further details on the rules "
+"of engagement or if you request a new password."
+msgstr ""
+"Une adresse électronique valide. Le système enverra tous les "
+"courriels à cette adresse. L'adresse électronique ne sera pas rendue "
+"publique et ne sera utilisée que pour la réception d'un nouveau mot "
+"de passe ou pour la réception de certaines notifications désirées."
+
+msgid "Registration Page"
+msgstr "Inscription"
+
+msgid "The section/group that I identify most with is"
+msgstr "Le secteur d’activité me représentant le mieux est"
+
+msgid "We're sorry you ended up here. Sometimes a page gets moved or deleted."
+msgstr ""
+"Nous sommes désolés que vous ayez abouti ici. Il arrive parfois "
+"qu'une page ait été déplacée ou supprimée."
+
+msgid "The section/group that I identify most with is:"
+msgstr "Le secteur d’activité me représentant le mieux est :"
+
+msgid "The section/group that I identify most with is:"
+msgstr "Le secteur d’activité me représentant le mieux est :"
 

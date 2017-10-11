@@ -1,0 +1,5 @@
+services:
+  od_ext_user.route_subscriber:
+    class: Drupal\od_ext_user\Routing\UserRouteSubscriber
+    tags:
+      - { name: event_subscriber }

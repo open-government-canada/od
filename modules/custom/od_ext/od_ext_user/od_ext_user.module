@@ -11,5 +11,23 @@ use Drupal\Core\Form\FormStateInterface;
  * Implements hook_form_BASE_FORM_ID_alter().
  */
 function od_ext_user_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $form['field_subscriptions']['widget']['#title'] = 'The section/group that I identify most with is';
+  $language = \Drupal::languageManager()->getCurrentLanguage();
+  $url = \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId();
+
+  // Disable tooltips.
+  $form['account']['mail']['#smart_description'] = FALSE;
+  $form['account']['name']['#smart_description'] = FALSE;
+  $form['field_message_subscribe']['widget']['value']['#smart_description'] = FALSE;
+  $form['field_subscribe_updates']['widget']['value']['#smart_description'] = FALSE;
+
+  // OD Description.
+  $form['account']['name']['#description'] = t('Create a username for your <a href="@opengov">Open Government</a> interactive account. Spaces are allowed; punctuation is not allowed except for periods, hyphens, apostrophes, and underscores. This account will allow you to post comments on <a href="@opengov">Open Government</a>. <strong>Please note</strong> that your username will appear online when you post comments.', ['@opengov' => $url]);
+  $form['account']['mail']['#description'] = t('Provide a valid e-mail address. The e-mail address will not be made public and will only be used to provide further details on the rules of engagement or if you request a new password.');
+
+  // OD Weight.
+  $form['account']['name']['#weight'] = -10;
+  $form['account']['mail']['#weight'] = -5;
+
+  // Legend.
+  $form['field_subscriptions']['widget']['#title'] = t('The section/group that I identify most with is:');
 }

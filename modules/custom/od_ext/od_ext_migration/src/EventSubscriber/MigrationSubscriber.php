@@ -566,6 +566,36 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $this->tempstore->get('panels_ipe')->delete("node__{$type}__default__default");
             }
             break;
+
+          case 'user_registration':
+            $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);
+            $block = $this->entityManager->getStorage('block')->create([
+              'id' => 'user_registration',
+              'plugin' => 'block_content:' . $block_content->uuid(),
+              'region' => 'header',
+              'provider' => 'block_content',
+              'weight' => -9,
+              'theme' => $this->config->get('system.theme')->get('default'),
+              'visibility' => [
+                'request_path' => [
+                  'id' => 'request_path',
+                  'pages' => '/user/register',
+                  'negate' => FALSE,
+                  'context_mapping' => [],
+                ],
+              ],
+              'settings' => [
+                'label' => 'Registration Page',
+                'label_display' => FALSE,
+              ],
+              'third_party_settings' => [
+                'block_class' => [
+                  'classes' => '',
+                ],
+              ],
+            ]);
+            $block->save();
+            break;
         }
       }
     }
