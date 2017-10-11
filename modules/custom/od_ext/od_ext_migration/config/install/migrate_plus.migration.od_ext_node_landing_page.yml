@@ -1484,7 +1484,7 @@ source:
               weight: 5
             -
               id: 'facet_block:hospitalityq_year'
-              label: Type
+              label: Year
               label_display: visible
               region: right
               weight: 10

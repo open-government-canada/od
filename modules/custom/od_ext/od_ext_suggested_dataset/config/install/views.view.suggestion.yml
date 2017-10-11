@@ -516,6 +516,7 @@ display:
         operator: AND
         groups: {  }
       group_by: false
+      title: 'Datasets suggested by users'
     cache_metadata:
       max-age: 0
       contexts:

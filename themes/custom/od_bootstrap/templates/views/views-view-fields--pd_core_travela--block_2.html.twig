@@ -33,7 +33,7 @@
 #}
 {% set prev_year = fields.year.content|striptags|trim - 1 %}
 <h2>{{ 'Annual Travel, Hospitality and Conference Fees Report:'|t ~ ' ' ~ prev_year ~ ' - ' ~ fields.year.content|striptags|trim }}</h2>
-<h3 class="mrgn-bttm-md">{{ 'Department:'|t }}{{ fields['org_name_en_1'].content }}</h2>
+<h3 class="mrgn-bttm-md">{{ 'Department:'|t }} {{ fields['org_name_en_1'].content }}</h2>
 <table class="table table-striped table-bordered">
   <thead>
       <th>{{ 'Expenditure Category'|t }}</th>

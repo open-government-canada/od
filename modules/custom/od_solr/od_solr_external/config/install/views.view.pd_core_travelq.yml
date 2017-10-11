@@ -2396,8 +2396,8 @@ display:
           label: 'Travel Start Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ start_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -2448,8 +2448,8 @@ display:
           label: 'Travel End Date'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ end_date|trim|date(''Y-m-d'') }}'
             make_link: false
             path: ''
             absolute: false
