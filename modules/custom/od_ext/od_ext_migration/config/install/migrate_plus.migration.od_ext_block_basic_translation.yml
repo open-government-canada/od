@@ -361,13 +361,16 @@ source:
         Partenariat pour un gouvernement ouvert (PGO), et lisez les anciens
         plans de même que les plans actuels qui ont servi à formaliser la
         création d’un gouvernement ouvert, imputable et transparent.</p>
-    - bid: 'open_dialog_communities'
+    - bid: 'open_dialog_principles_guidelines'
       language: 'fr'
-      title: 'Collectivités'
+      title: 'Principes et lignes directrices'
       body: |
-        <h2 class="h4"><a href="[site:url]/collectivites">Collectivités</a></h2>
-        <p>Explorez les données et l’information, et participez à des
-        discussions en fonction de vos champs d’intérêt.</p>
+        <h2 class="h4"><a href="[site:url]/contenu/principes-lignes-directrices">
+          Principes et lignes directrices
+        </a></h2>
+        <p>Voici les principes et les lignes directrices qui nous permettent de
+        définir notre approche en matière de consultation et de mobilisation
+        des Canadiens.</p>
     - bid: 'open_dialog_subscribe'
       language: 'fr'
       title: 'Inscrivez-vous aux mises à jour sur le Gouvernement Ouvert'
@@ -378,6 +381,22 @@ source:
         ouvert et soyez parmi les premiers à être informés des nouveaux jeux de
         données, des nouvelles sources d’information, des consultations à
         venir et des blogues actuels.</p>
+    - bid: 'open_dialog_communities'
+      language: 'fr'
+      title: 'Collectivités'
+      body: |
+        <h2 class="h4"><a href="[site:url]/collectivites">Collectivités</a></h2>
+        <p>Explorez les données et l’information, et participez à des
+        discussions en fonction de vos champs d’intérêt.</p>
+    - bid: 'open_dialog_consult'
+      language: 'fr'
+      title: 'Consultations auprès des Canadiens'
+      body: |
+        <h2 class="h4"><a href="http://www1.canada.ca/consultationdescanadiens/">
+        Consultations auprès des Canadiens</a></h2>
+        <p>Vous trouverez ici les informations sur la façon de trouver et de
+        participer dans le gouvernement des activités de consultation Canada.
+        </p>
     - bid: 'open_dialog_blog'
       language: 'fr'
       title: 'Blogue sur le Gouvernement ouvert'
@@ -388,23 +407,6 @@ source:
         ont à dire à propos des activités, des projets, des nouvelles et des
         événements en lien avec le gouvernement ouvert, et formulez des
         commentaires à ce sujet.</p>
-    - bid: 'open_dialog_consult'
-      language: 'fr'
-      title: 'Consultations auprès des Canadiens'
-      body: |
-        <h2 class="h4"><a href="http://www1.canada.ca/consultationdescanadiens/">
-        Consultations auprès des Canadiens</a></h2>
-        <p>Vous trouverez ici les informations sur la façon de trouver et de
-        participer dans le gouvernement des activités de consultation Canada.
-        </p>
-    - bid: 'open_dialog_account_login'
-      language: 'fr'
-      title: 'Se connecter'
-      body: |
-        <h2 class="h4"><a href="[site:url]/login">
-        Se connecter</a></h2>
-        <p>Connectez-vous à votre compte sur le Gouvernement ouvert ou créez un
-        nouveau compte.</p>
     - bid: 'open_dialog_gazette'
       language: 'fr'
       title: 'Gazette du Canada'
@@ -414,6 +416,14 @@ source:
         <p>Vous trouverez ici les informations sur la façon de trouver et de
         participer à des consultations réglementaires qui inclut les questions
         actuelles et passées de la Gazette du Canada.</p>
+    - bid: 'open_dialog_account_login'
+      language: 'fr'
+      title: 'Se connecter'
+      body: |
+        <h2 class="h4"><a href="[site:url]/login">
+        Se connecter</a></h2>
+        <p>Connectez-vous à votre compte sur le Gouvernement ouvert ou créez un
+        nouveau compte.</p>
     - bid: 'open_dialog_interact'
       language: 'fr'
       title: 'Interagir'

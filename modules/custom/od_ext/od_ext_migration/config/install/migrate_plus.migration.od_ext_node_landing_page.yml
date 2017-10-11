@@ -348,7 +348,7 @@ source:
               label: Body
               label_display: 0
               region: top_left
-              weight: 1
+              weight: 2
             -
               id: 'entity_block:open_dialog'
               label: Media
@@ -371,8 +371,8 @@ source:
               view_mode: full
               weight: 0
             -
-              id: 'block_content:open_dialog_communities'
-              label: 'Communities'
+              id: 'block_content:open_dialog_principles_guidelines'
+              label: 'Principles and Guidelines'
               label_display: 0
               region: bottom_middle
               view_mode: full
@@ -385,8 +385,8 @@ source:
               view_mode: full
               weight: 5
             -
-              id: 'block_content:open_dialog_blog'
-              label: 'Open Government Blog'
+              id: 'block_content:open_dialog_communities'
+              label: 'Communities'
               label_display: 0
               region: bottom_middle
               view_mode: full
@@ -399,8 +399,8 @@ source:
               view_mode: full
               weight: 10
             -
-              id: 'block_content:open_dialog_account_login'
-              label: 'Account login'
+              id: 'block_content:open_dialog_blog'
+              label: 'Open Government Blog'
               label_display: 0
               region: bottom_middle
               view_mode: full
@@ -410,6 +410,13 @@ source:
               label: 'Canada Gazette'
               label_display: 0
               region: bottom_left
+              view_mode: full
+              weight: 15
+            -
+              id: 'block_content:open_dialog_account_login'
+              label: 'Account login'
+              label_display: 0
+              region: bottom_middle
               view_mode: full
               weight: 15
             -
@@ -447,6 +454,7 @@ source:
                 wrapper: div
                 classes:
                   col-sm-6: col-sm-6
+                  mrgn-tp-lg: mrgn-tp-lg
                 add_region_classes: 1
                 attributes: ''
               middle:

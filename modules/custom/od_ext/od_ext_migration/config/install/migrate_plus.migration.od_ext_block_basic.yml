@@ -336,19 +336,21 @@ source:
       language: 'en'
       title: 'Canada’s Plans to the Open Government Partnership'
       body: |
-        <h2 class="h4"><a href="[site:url]/open-dialogue">
+        <h2 class="h4"><a href="[site:url]/content/canadas-plans-open-government-partnership">
           Canada’s Plans to the Open Government Partnership
         </a></h2>
         <p>Learn about Canada’s commitment to the international Open Government
         Partnership (OGP) and read the past and current plans to formalize an
         open, accountable, and transparent government.</p>
-    - bid: 'open_dialog_communities'
+    - bid: 'open_dialog_principles_guidelines'
       language: 'en'
-      title: 'Communities'
+      title: 'Principles and Guidelines'
       body: |
-        <h2 class="h4"><a href="[site:url]/communities">Communities</a></h2>
-        <p>Explore data, information, and discussions based on your area of
-        interest.</p>
+        <h2 class="h4"><a href="[site:url]/content/principles-and-guidelines">
+          Principles and Guidelines
+        </a></h2>
+        <p>Here are the principles and guidelines that inform our approach to
+        consulting and engaging with Canadians.</p>
     - bid: 'open_dialog_subscribe'
       language: 'en'
       title: 'Subscribe to receive Open Government updates'
@@ -358,6 +360,21 @@ source:
         <p>Sign up to receive the Open Government email and be among the first
         to hear about new datasets, new information resources, upcoming
         consultations, and current blogs.</p>
+    - bid: 'open_dialog_communities'
+      language: 'en'
+      title: 'Communities'
+      body: |
+        <h2 class="h4"><a href="[site:url]/communities">Communities</a></h2>
+        <p>Explore data, information, and discussions based on your area of
+        interest.</p>
+    - bid: 'open_dialog_consult'
+      language: 'en'
+      title: 'Consulting with Canadians'
+      body: |
+        <h2 class="h4"><a href="http://www1.canada.ca/consultingcanadians/">
+        Consulting with Canadians</a></h2>
+        <p>Here you will find information on how to locate and participate in
+        Government of Canada consultation activities.</p>
     - bid: 'open_dialog_blog'
       language: 'en'
       title: 'Open Government Blog'
@@ -367,22 +384,6 @@ source:
         <p>Read and comment on what the Open Government team and community have
         to say about current Open Government activities, projects, news and
         events.</p>
-    - bid: 'open_dialog_consult'
-      language: 'en'
-      title: 'Consulting with Canadians'
-      body: |
-        <h2 class="h4"><a href="http://www1.canada.ca/consultingcanadians/">
-        Consulting with Canadians</a></h2>
-        <p>Here you will find information on how to locate and participate in
-        Government of Canada consultation activities.</p>
-    - bid: 'open_dialog_account_login'
-      language: 'en'
-      title: 'Account login'
-      body: |
-        <h2 class="h4"><a href="[site:url]/login">
-        Account login</a></h2>
-        <p>Log in to your Open Government account, or register for a new
-        account.</p>
     - bid: 'open_dialog_gazette'
       language: 'en'
       title: 'Canada Gazette'
@@ -392,6 +393,14 @@ source:
         <p>Here you will find information on how to locate and participate in
         regulatory consultations which includes current and past issues of the
         Canada Gazette.</p>
+    - bid: 'open_dialog_account_login'
+      language: 'en'
+      title: 'Account login'
+      body: |
+        <h2 class="h4"><a href="[site:url]/login">
+        Account login</a></h2>
+        <p>Log in to your Open Government account, or register for a new
+        account.</p>
     - bid: 'open_dialog_interact'
       language: 'en'
       title: 'Interact'

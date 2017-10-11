@@ -251,16 +251,93 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
-    position: 1
+    display_title: Consultations
+    position: 2
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
+      display_description: ''
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          view_to_insert: 'consultation:block_2'
+          inherit_arguments: false
+          plugin_id: view
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h3>Past Consultations</h3>'
+            format: full_html
+          plugin_id: text
+      defaults:
+        header: false
+        pager: false
+      pager:
+        type: some
+        options:
+          items_per_page: 10
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Current Consultations'
+    position: 1
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      display_description: ''
+      footer: {  }
+      defaults:
+        footer: false
+        title: false
+        header: false
+        pager: false
+      title: 'Current Consultations'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<h3>Current Consultations</h3>'
+            format: full_html
+          plugin_id: text
+      pager:
+        type: some
+        options:
+          items_per_page: 1
+          offset: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
