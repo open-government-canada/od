@@ -2913,11 +2913,18 @@ source:
               region: top
               weight: 1
             -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: top
+              view_mode: full
+              weight: 2
+            -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
               region: top
-              weight: 2
+              weight: 3
             -
               id: 'block_content:open_gov_across_canada_events'
               label: 'Events Calendar'
@@ -3184,6 +3191,13 @@ source:
               label_display: 0
               region: left
               weight: 5
+            -
+              id: 'block_content:pillars'
+              label: Pillars
+              label_display: 0
+              region: left
+              view_mode: full
+              weight: 7
             -
               id: 'views_block:solr_inventory-block_1'
               label: ''

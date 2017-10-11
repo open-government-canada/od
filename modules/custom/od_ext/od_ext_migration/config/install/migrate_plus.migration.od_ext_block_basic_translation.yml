@@ -641,6 +641,93 @@ source:
           </section></li>
           </ol>
         </div>
+        <table aria-label="Événements nationaux" class="table wb-tables wb-tables-inited dataTable no-footer" role="grid">
+          <caption>Événements nationaux partout au Canada.</caption>
+          <thead>
+          <tr role="row">
+          <th aria-label="Événement: activer pour trier par ordre croissant" class="sorting" colspan="1" rowspan="1" tabindex="0">Événement</th>
+          <th aria-label="Date: activer pour trier par ordre croissant" class="sorting" colspan="1" rowspan="1" tabindex="0">Date</th>
+          <th aria-label="Emplacement: activer pour trier par ordre croissant" class="sorting" colspan="1" rowspan="1" tabindex="0">Emplacement</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          <td class="sorting_3"><a href="https://www.meetup.com/YOW_CT/">Ottawa Civic Tech</a></td>
+          <td>Tous les mardis</td>
+          <td>Ottawa (Ontario)</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="http://civictech.ca/codeacross-toronto-2017/">CODE Across Toronto</a></td>
+          <td><time datetime="2017-03-04">4 mars 2017</time></td>
+          <td>Toronto (Ontario)</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="http://opendataday.org/">Open Data Day</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-03-04">4 mars 2017</time></td>
+          <td>Multiples endroits</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="http://www.ci-oic.gc.ca/transparenceconference/index.html">Transparence pour le 21<sup>e</sup> siècle</a></td>
+          <td><time datetime="2017-03-21">21</time>-<time datetime="2017-03-23">23 mars 2017</time></td>
+          <td>Ottawa (Ontario)</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="https://carleton.ca/cuids/4-0/">Data Day 4.0</a></td>
+          <td><time datetime="2017-03-29">29 mars 2017</time></td>
+          <td>Université Carleton, Ottawa (Ontario)</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="https://www.eventbrite.ca/e/discover-data-with-thomson-reuters-thinkdata-works-and-odx-webinar-tickets-33437505479">WEBINAR: Discover Data with Thomson Reuters and ThinkData Works</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-04-18">18 avril 2017</time></td>
+          <td>En ligne</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="http://codx.ca/odx-begins-cross-canada-tour-open-data-blueprint/">ODX Cross-Canada Tour: Western Canada</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-04-24">24</time>-<time datetime="2017-04-26">26 avril, 2017</time></td>
+          <td>À travers le Canada</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="https://summit.creativecommons.org/">Creative Commons Summit</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-04-28">28</time>-<time datetime="2017-04-30">30 avril, 2017</time></td>
+          <td>Toronto, ON</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="https://2017.spaceappschallenge.org/locations/?q=Canada">Space Apps Challenge 2017</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-04-28">28</time>-<time datetime="2017-04-30">30 avril, 2017</time></td>
+          <td>Toronto, Waterloo et Ottawa, ON</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="http://go-opendata.ca/">Go Open Data Conference</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-05-05">5</time>-<time datetime="2017-05-06">6 mai 2017</time></td>
+          <td>Bibliothèque publique de London, Citi Plaza, 251 Dundas St, London, ON N6A 6H9</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="https://techleadership.ca/">Tech Leadership Conference</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-05-10">10</time>-<time datetime="2017-05-11">11 mai, 2017</time></td>
+          <td>Waterloo, ON</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="https://od-business-data-curation.eventbrite.com/?aff=opengovcanada">Open data for business webinar: Tackling machine-learning complexity for data curation</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-05-23">23 mai, 2017</time></td>
+          <td>Communitech Data Hub, Waterloo, ON ou en ligne</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="http://iog.ca/third-annual-digital-governance-forum/ ">3rd Annual Digital Governance Forum</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-05-30">30</time>-<time datetime="2017-05-31">31 mai, 2017</time></td>
+          <td>Ottawa, ON</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="http://opendatasummit.ca/">Sommet canadien sur les données ouvertes</a> (disponible en anglais seulement)</td>
+          <td>Le <time datetime="2017-06-12">12</time> et <time datetime="2017-06-14">14 juin 2017</time></td>
+          <td>Edmonton, Alberta</td>
+          </tr>
+          <tr>
+          <td class="sorting_3"><a href="http://www.bigdata-toronto.com/">Big Data Conference</a> (disponible en anglais seulement)</td>
+          <td><time datetime="2017-06-30">20</time>-<time datetime="2017-06-21">21 juin, 2017</time></td>
+          <td>Toronto, ON</td>
+          </tr>
+          </tbody>
+        </table>
     - bid: 'open_gov_across_canada_toolkit'
       language: 'fr'
       title: 'Boîte à outils du gouvernement ouvert'
