@@ -7,7 +7,7 @@ description: ''
 read_only: true
 field_mappings:
   id: id
-  uuid: id
+  uuid: unique_id
   title: title_en
   field_ckan_link: id
   field_date_published: date_published
@@ -37,9 +37,7 @@ api_key_settings:
 parameters:
   list:
     q: '*:*'
-    fq: 'language:en'
     wt: json
   single:
     q: '*:*'
-    fq: 'language:en'
     wt: json
