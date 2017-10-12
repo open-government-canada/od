@@ -120,3 +120,9 @@
 .user-register-form legend {
   font-size: 18px;
   margin-bottom: 10px; }
+
+#quicktabs-suggested_ideas ul {
+  margin-left: 0px;
+  padding: 0px; }
+  #quicktabs-suggested_ideas ul li {
+    margin: 0px 15px 0px 0px; }

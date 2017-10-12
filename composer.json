@@ -355,6 +355,7 @@
         "drupal/google_analytics_reports": "3.0-beta1",
         "drupal/icon": "1.x-dev",
         "drupal/reference_table_formatter": "1.0-rc4",
+        "drupal/quicktabs": "3.0-alpha2",
         "drupal/search_api": "1.4",
         "drupal/search_api_solr": "1.0",
         "drupal/search_api_solr_datasource": "dev-8.x-1.x",

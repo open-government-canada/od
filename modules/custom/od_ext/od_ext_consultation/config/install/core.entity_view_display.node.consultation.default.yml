@@ -76,7 +76,7 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 0
+            weight: 1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: cae94fbd-4dcf-4a12-b41d-1ef71fab34f9
@@ -96,7 +96,7 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 3
+            weight: 4
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2160fee8-4e99-44a7-a866-64a70589f6ac
@@ -113,7 +113,7 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 4
+            weight: 5
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 6a99c29c-5b59-4a5d-9e98-32d744573a5b
@@ -130,27 +130,10 @@ third_party_settings:
               weight: 0
               region: content
             region: content
-            weight: 2
+            weight: 3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 48d15630-593b-4228-a0bc-6a0c3b8e1774
-          704c076c-fdf9-448f-85da-23c8e088d052:
-            id: 'entity_field:node:field_idea_reference'
-            label: 'Idea Reference'
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: above
-              type: entity_reference_revisions_entity_view
-              settings:
-                view_mode: full
-              third_party_settings: {  }
-              weight: 0
-            region: content
-            weight: 1
-            uuid: 704c076c-fdf9-448f-85da-23c8e088d052
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
           398870d8-256a-413e-b0fa-008069ceeb20:
             id: page_title_block
             label: 'Page title'

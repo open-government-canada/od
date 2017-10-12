@@ -4,3 +4,23 @@
  * @file
  * Contains od_ext_consultation.module.
  */
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ */
+function od_ext_consultation_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+  $field = $variables['field'];
+
+  // Adjust field display for Idea tags.
+  if ($view->id() == 'suggested_ideas' && $field->field == 'field_idea_tags') {
+    $items = $variables['field']->getItems($variables['row']);
+    $strTags = '<ul class="list-inline">';
+    foreach ($items as $item) {
+      $strTags .= '<li class="btn btn-default btn-xs"><span class="glyphicon glyphicon-tag"></span> ' . $item['rendered']['#plain_text'] . '</li>';
+    }
+    $strTags .= '</ul>';
+    $variables['output'] = [];
+    $variables['output']['#markup'] = $strTags;
+  }
+}

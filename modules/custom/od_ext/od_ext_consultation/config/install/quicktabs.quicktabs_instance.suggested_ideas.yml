@@ -1,0 +1,85 @@
+langcode: en
+status: true
+dependencies: {  }
+id: suggested_ideas
+label: 'Suggested Ideas'
+renderer: quick_tabs
+options:
+  accordion_tabs:
+    jquery_ui:
+      collapsible: 0
+      heightStyle: auto
+  quick_tabs:
+    ajax: '0'
+hide_empty_tabs: 0
+default_tab: '0'
+configuration_data:
+  -
+    title: Date
+    weight: '-9'
+    type: view_content
+    content:
+      block_content:
+        options:
+          bid: ''
+          block_title: ''
+          display_title: 0
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      view_content:
+        options:
+          vid: suggested_ideas
+          display: block_1
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: 'Most Popular'
+    weight: '-8'
+    type: view_content
+    content:
+      block_content:
+        options:
+          bid: ''
+          block_title: ''
+          display_title: 0
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      view_content:
+        options:
+          vid: suggested_ideas
+          display: block_2
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: 'Most Comments'
+    weight: '-7'
+    type: view_content
+    content:
+      block_content:
+        options:
+          bid: ''
+          block_title: ''
+          display_title: 0
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: '1'
+      view_content:
+        options:
+          vid: suggested_ideas
+          display: block_3
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''

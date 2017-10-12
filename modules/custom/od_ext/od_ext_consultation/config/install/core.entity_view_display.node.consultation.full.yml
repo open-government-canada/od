@@ -82,25 +82,6 @@ third_party_settings:
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 0cb86f71-ffff-44e9-b122-28802b85d59e
-          671f2c92-2e1d-4f4e-9a59-4e6c075c6dac:
-            id: 'entity_field:node:field_idea_reference'
-            label: 'Idea Reference'
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: entity_reference_revisions_entity_view
-              settings:
-                view_mode: default
-                link: ''
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: main
-            weight: 1
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: 671f2c92-2e1d-4f4e-9a59-4e6c075c6dac
           8fb362b4-b375-464b-95e9-82604f290b84:
             id: 'entity_field:node:field_share_widget'
             label: 'Share Widget'
@@ -137,6 +118,15 @@ third_party_settings:
             region: main
             weight: -3
             uuid: bb4f3762-bdf0-4a46-a56c-90770b7473d4
+            context_mapping: {  }
+          8b2ff572-82ff-451f-8913-50cafaa865a6:
+            id: 'quicktabs_block:suggested_ideas'
+            label: 'Suggested Ideas'
+            provider: quicktabs
+            label_display: visible
+            region: main
+            weight: 0
+            uuid: 8b2ff572-82ff-451f-8913-50cafaa865a6
             context_mapping: {  }
         id: panels_variant
         label: Default
