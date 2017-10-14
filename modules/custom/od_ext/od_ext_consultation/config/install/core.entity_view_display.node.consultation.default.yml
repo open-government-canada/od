@@ -140,7 +140,7 @@ third_party_settings:
             provider: core
             label_display: '0'
             region: content
-            weight: -4
+            weight: -6
             uuid: 398870d8-256a-413e-b0fa-008069ceeb20
             context_mapping: {  }
           c294d543-4dfa-42c1-853a-8aca98e1bbff:
@@ -151,7 +151,7 @@ third_party_settings:
             primary: true
             secondary: true
             region: content
-            weight: -3
+            weight: -4
             uuid: c294d543-4dfa-42c1-853a-8aca98e1bbff
             context_mapping: {  }
         id: panels_variant

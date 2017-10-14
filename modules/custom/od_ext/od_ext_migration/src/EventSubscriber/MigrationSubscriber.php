@@ -535,6 +535,10 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'region' => 'left',
                 'weight' => -5,
               ],
+              'consultation' => [
+                'region' => 'content',
+                'weight' => -3,
+              ],
               'page' => [
                 'region' => 'content',
                 'weight' => 1,
