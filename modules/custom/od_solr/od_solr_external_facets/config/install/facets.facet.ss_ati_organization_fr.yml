@@ -8,7 +8,7 @@ dependencies:
     - search_api
 id: ss_ati_organization_fr
 name: 'Nom de l''organisation'
-url_alias: organization
+url_alias: ss_ati_organization_fr
 weight: -1
 min_count: 1
 show_only_one_result: false

@@ -8,7 +8,7 @@ dependencies:
     - search_api
 id: ss_ati_year_fr
 name: Année
-url_alias: year
+url_alias: ss_ati_year_fr
 weight: -1
 min_count: 1
 show_only_one_result: false

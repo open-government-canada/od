@@ -8,7 +8,7 @@ dependencies:
     - search_api
 id: ss_ati_monthname_fr
 name: Mois
-url_alias: month
+url_alias: ss_ati_monthname_fr
 weight: -1
 min_count: 1
 show_only_one_result: false

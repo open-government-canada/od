@@ -578,7 +578,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_date_published|trim|date(''Y-m-d'') }} '
+            text: '{{ field_date_published }} '
             make_link: false
             path: ''
             absolute: false
@@ -633,6 +633,7 @@ display:
           fallback_handler: search_api
           fallback_options:
             link_to_item: false
+            multi_type: separator
             multi_separator: ', '
           entity_type: external_entity
           plugin_id: search_api_field
@@ -647,7 +648,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_date_released|trim|date(''Y-m-d'') }} '
+            text: '{{ field_date_released }} '
             make_link: false
             path: ''
             absolute: false
@@ -702,6 +703,7 @@ display:
           fallback_handler: search_api
           fallback_options:
             link_to_item: false
+            multi_type: separator
             multi_separator: ', '
           entity_type: external_entity
           plugin_id: search_api_field
