@@ -38,6 +38,7 @@ process:
   moderation_state:
     plugin: default_value
     default_value: "published"
+  field_meta_tags: metatags
   field_consultation_date/value:
     plugin: format_date
     from_format: 'Y-m-d H:i:s'

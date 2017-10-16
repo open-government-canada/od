@@ -8,11 +8,13 @@ dependencies:
     - field.field.node.idea.field_idea_status
     - field.field.node.idea.field_idea_submission_name
     - field.field.node.idea.field_idea_tags
+    - field.field.node.idea.field_meta_tags
     - field.field.node.idea.field_vud
     - node.type.idea
   module:
     - comment
     - field_group
+    - metatag
     - path
     - text
     - vud
@@ -35,7 +37,6 @@ third_party_settings:
         - field_idea_submission_name
         - field_idea_tags
         - field_idea_status
-        - field_vote
       parent_name: group_idea
       weight: 20
       format_type: tab
@@ -61,7 +62,7 @@ content:
     third_party_settings: {  }
     region: content
   comment:
-    weight: 26
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: comment_default
@@ -98,8 +99,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_vud:
-    weight: 31
+    weight: 11
     settings:
       vote_tag: vote
     third_party_settings: {  }

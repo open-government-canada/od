@@ -19,7 +19,9 @@ source:
       queue: front_page
       metatags:
         -
-          title: 'Open Government'
+          title: '[node:title]'
+          description: '[node:summary]'
+          keywords: 'Open Canada, Open Government Canada, Canada Open Government, Canada Open'
       panelizer:
         -
           view_mode: page_manager
@@ -159,6 +161,11 @@ source:
       language: en
       body: "<p>Search open data that is relevant to Canadians, learn how to work\nwith datasets, and see what people have done with open data across\nthe country.</p>\n"
       alias: /open-data
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+          keywords: 'Open Data, Open Data Canada, Canada’s Open Data'
       panelizer:
         -
           view_mode: page_manager
@@ -326,6 +333,11 @@ source:
         showcasing how you use Government of Canada datasets an
         information.</p>
       alias: /open-dialogue
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+          keywords: 'Open Dialogue, Open Dialogue Canada, Consultations, CODE, Hackathon, Communities, Blog, Open Canada, Conversations, Ideas, Input, Participating, Participate'
       panelizer:
         -
           view_mode: page_manager
@@ -499,6 +511,11 @@ source:
       language: en
       body: "<p>The goal of Open information is to provide easy access to all of the\nGovernment of Canada’s information. This provides Canadians with\ngreater transparency of government programs, activities, publications\nand spending.</p>\n"
       alias: /open-information
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+          keywords: 'Open information, virtual library, documents, publication, collection'
       panelizer:
         -
           view_mode: page_manager
@@ -666,6 +683,11 @@ source:
       language: en
       body: "<p>Open Government is about making government more accessible to\neveryone. This means giving greater access to government data and\ninformation to the Canadian public and the businesses community.</p>\n"
       alias: /about-open-government
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+          keywords: 'Open Government, openness, accountability, innovation, Canada, Canadians, government spending, action plan, licence, directive'
       panelizer:
         -
           view_mode: page_manager

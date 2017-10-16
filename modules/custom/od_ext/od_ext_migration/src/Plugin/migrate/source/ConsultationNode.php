@@ -134,6 +134,23 @@ class ConsultationNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // Metatags.
+    $metatags = $this->select('metatag', 'df')
+      ->fields('df', [
+        'data',
+      ])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('entity_type', 'node')
+      ->execute()
+      ->fetchAssoc();
+    $tmp = unserialize($metatags['data']);
+    $metatags = [
+      'title' => isset($tmp['title']['value']) ? $tmp['title']['value'] : '[current-page:title] | [site:name]',
+      'description' => isset($tmp['description']['value']) ? $tmp['description']['value'] : '[node:summary]',
+      'keywords' => isset($tmp['keywords']['value']) ? $tmp['keywords']['value'] : '',
+    ];
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -144,6 +161,7 @@ class ConsultationNode extends SqlBase {
     $row->setSourceProperty('date_start', $date_start[0]);
     $row->setSourceProperty('date_end', $date_end[0]);
     $row->setSourceProperty('node_idea', $node_idea);
+    $row->setSourceProperty('metatags', serialize($metatags));
 
     if (!empty($alias)) {
       $row->setSourceProperty('alias', '/' . end($alias));

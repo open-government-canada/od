@@ -113,6 +113,23 @@ class BlogNode extends SqlBase {
       ->execute()
       ->fetchAssoc();
 
+    // Metatags.
+    $metatags = $this->select('metatag', 'df')
+      ->fields('df', [
+        'data',
+      ])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('entity_type', 'node')
+      ->execute()
+      ->fetchAssoc();
+    $tmp = unserialize($metatags['data']);
+    $metatags = [
+      'title' => isset($tmp['title']['value']) ? $tmp['title']['value'] : '[current-page:title] | [site:name]',
+      'description' => isset($tmp['description']['value']) ? $tmp['description']['value'] : '[node:summary]',
+      'keywords' => isset($tmp['keywords']['value']) ? $tmp['keywords']['value'] : '',
+    ];
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -123,6 +140,7 @@ class BlogNode extends SqlBase {
     $row->setSourceProperty('file_fid', $file['field_featured_image_fid']);
     $row->setSourceProperty('file_alt', $file['field_featured_image_alt']);
     $row->setSourceProperty('file_title', $file['field_featured_image_title']);
+    $row->setSourceProperty('metatags', serialize($metatags));
 
     return parent::prepareRow($row);
   }

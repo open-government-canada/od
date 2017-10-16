@@ -20,7 +20,9 @@ source:
       queue: front_page
       metatags:
         -
-          title: 'Gouvernement ouvert'
+          title: '[node:title]'
+          description: '[node:summary]'
+          keywords: 'Open Canada, Open Government Canada, Canada Open Government, Canada Open'
       panelizer:
         -
           view_mode: page_manager
@@ -164,6 +166,11 @@ source:
         voir ce que les citoyens ont fait avec les données ouvertes dans
         l’ensemble du pays</p>
       alias: /donnees-ouvertes
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+          keywords: 'Open Data, Open Data Canada, Canada’s Open Data'
       panelizer:
         -
           view_mode: page_manager
@@ -334,6 +341,11 @@ source:
         quelle manière vous utilisez les jeux de données et l’information du
         gouvernement du Canada.</p>
       alias: /dialogue-ouvert
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+          keywords: 'Open Dialogue, Open Dialogue Canada, Consultations, CODE, Hackathon, Communities, Blog, Open Canada, Conversations, Ideas, Input, Participating, Participate'
       panelizer:
         -
           view_mode: page_manager
@@ -512,6 +524,11 @@ source:
         transparence quant aux programmes, activités, publications et dépenses
         du gouvernement.</p>
       alias: /information-ouverte
+      metatags:
+        -
+          title: '[node:title]'
+          description: 'L''objectif du volet Information ouverte consiste à offrir un accès facile à tous les renseignements du gouvernement du Canada.'
+          keywords: 'Open information, virtual library, documents, publication, collection'
       panelizer:
         -
           view_mode: page_manager

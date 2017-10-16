@@ -38,6 +38,7 @@ process:
   moderation_state:
     plugin: default_value
     default_value: "published"
+  field_meta_tags: metatags
 destination:
   plugin: 'entity:node'
 migration_dependencies:

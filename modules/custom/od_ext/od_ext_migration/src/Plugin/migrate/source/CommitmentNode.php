@@ -195,6 +195,23 @@ class CommitmentNode extends SqlBase {
       ->execute()
       ->fetchAllAssoc('field_deliverable_target_id');
 
+    // Metatags.
+    $metatags = $this->select('metatag', 'df')
+      ->fields('df', [
+        'data',
+      ])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('entity_type', 'node')
+      ->execute()
+      ->fetchAssoc();
+    $tmp = unserialize($metatags['data']);
+    $metatags = [
+      'title' => isset($tmp['title']['value']) ? $tmp['title']['value'] : '[current-page:title] | [site:name]',
+      'description' => isset($tmp['description']['value']) ? $tmp['description']['value'] : '[node:summary]',
+      'keywords' => isset($tmp['keywords']['value']) ? $tmp['keywords']['value'] : '',
+    ];
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
@@ -211,6 +228,7 @@ class CommitmentNode extends SqlBase {
     $row->setSourceProperty('pillars', $pillars['field_pillars_tid']);
     $row->setSourceProperty('status', $status[0]);
     $row->setSourceProperty('paragraph_deliverable', $paragraph_deliverable);
+    $row->setSourceProperty('metatags', serialize($metatags));
 
     return parent::prepareRow($row);
   }

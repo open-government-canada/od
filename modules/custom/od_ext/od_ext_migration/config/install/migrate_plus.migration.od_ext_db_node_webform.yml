@@ -38,6 +38,7 @@ process:
   moderation_state:
     plugin: default_value
     default_value: "published"
+  field_meta_tags: metatags
   webform/target_id: webform
   webform/status: webform_status
 destination:

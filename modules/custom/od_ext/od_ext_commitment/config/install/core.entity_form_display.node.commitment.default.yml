@@ -12,10 +12,12 @@ dependencies:
     - field.field.node.commitment.field_commitment_tags
     - field.field.node.commitment.field_deliverables_paragraph
     - field.field.node.commitment.field_department
+    - field.field.node.commitment.field_meta_tags
     - node.type.commitment
   module:
     - comment
     - field_group
+    - metatag
     - paragraphs
     - path
     - text
@@ -80,7 +82,7 @@ content:
     third_party_settings: {  }
     region: content
   comment:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: comment_default
@@ -149,6 +151,8 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: ''
+      closed_mode: summary
+      autocollapse: none
     third_party_settings: {  }
     region: content
   field_department:
@@ -160,6 +164,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   langcode:
     type: language_select
     weight: 1

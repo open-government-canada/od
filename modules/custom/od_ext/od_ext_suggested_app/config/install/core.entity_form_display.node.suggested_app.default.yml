@@ -4,11 +4,13 @@ dependencies:
   config:
     - field.field.node.suggested_app.body
     - field.field.node.suggested_app.comment
+    - field.field.node.suggested_app.field_meta_tags
     - field.field.node.suggested_app.field_suggested_app_dataset
     - field.field.node.suggested_app.field_vud
     - node.type.suggested_app
   module:
     - comment
+    - metatag
     - path
     - text
     - vud
@@ -20,7 +22,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
@@ -28,19 +30,25 @@ content:
     third_party_settings: {  }
     region: content
   comment:
-    weight: 34
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: comment_default
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_suggested_app_dataset:
-    weight: 33
+    weight: 9
     settings:
       rows: 5
       placeholder: ''
@@ -48,7 +56,7 @@ content:
     type: text_textarea
     region: content
   field_vud:
-    weight: 35
+    weight: 11
     settings:
       vote_tag: vote
     third_party_settings: {  }
@@ -56,13 +64,13 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   path:
     type: path
-    weight: 30
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -70,32 +78,32 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 5
     third_party_settings: {  }
     region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 6
     third_party_settings: {  }
     region: content
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
   translation:
-    weight: 10
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60

@@ -4,15 +4,18 @@ dependencies:
   config:
     - field.field.node.suggested_dataset.body
     - field.field.node.suggested_dataset.comment
+    - field.field.node.suggested_dataset.field_meta_tags
     - field.field.node.suggested_dataset.field_status
     - field.field.node.suggested_dataset.field_status_link
     - field.field.node.suggested_dataset.field_suggested_dataset_dept
     - field.field.node.suggested_dataset.field_vud
+    - field.field.node.suggested_dataset.panelizer
     - node.type.suggested_dataset
   module:
     - comment
     - field_group
     - link
+    - metatag
     - path
     - text
     - vud
@@ -73,7 +76,7 @@ content:
     third_party_settings: {  }
     region: content
   comment:
-    weight: 26
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: comment_default
@@ -84,6 +87,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_status:
     weight: 11
     settings:
@@ -109,7 +118,7 @@ content:
     type: string_textfield
     region: content
   field_vud:
-    weight: 27
+    weight: 11
     settings:
       vote_tag: vote
     third_party_settings: {  }
@@ -151,9 +160,9 @@ content:
     region: content
   translation:
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 2
@@ -163,4 +172,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  panelizer: true

@@ -44,6 +44,7 @@ process:
   moderation_state:
     plugin: default_value
     default_value: "published"
+  field_meta_tags: metatags
   field_commitment_ambition/value: ambition
   field_commitment_ambition/format:
     plugin: default_value

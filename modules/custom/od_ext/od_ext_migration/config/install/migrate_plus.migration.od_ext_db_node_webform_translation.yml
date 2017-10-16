@@ -48,6 +48,7 @@ process:
   content_translation_source:
     plugin: default_value
     default_value: "en"
+  field_meta_tags: metatags
   webform/target_id: webform
   webform/status: webform_status
 destination:

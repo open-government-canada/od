@@ -37,6 +37,7 @@ process:
   moderation_state:
     plugin: default_value
     default_value: "published"
+  field_meta_tags: metatags
   field_image/target_id:
     plugin: migration
     migration: od_ext_db_file

@@ -45,6 +45,7 @@ process:
   moderation_state:
     plugin: default_value
     default_value: "published"
+  field_meta_tags: metatags
   content_translation_source:
     plugin: default_value
     default_value: "en"
