@@ -7,6 +7,7 @@ dependencies:
       - od_ext_migration
 source:
   plugin: embedded_data
+  translations: true
   default_lang: true
   data_rows:
     # Footer.

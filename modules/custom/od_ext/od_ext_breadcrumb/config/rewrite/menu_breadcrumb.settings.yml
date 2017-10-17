@@ -10,6 +10,11 @@ home_as_site_name: false
 menu_breadcrumb_menus:
   main:
     enabled: 1
-    langhandle: 0
+    langhandle: 1
     weight: -10
+    taxattach: 0
+  main-fr:
+    enabled: 1
+    langhandle: 1
+    weight: 0
     taxattach: 0

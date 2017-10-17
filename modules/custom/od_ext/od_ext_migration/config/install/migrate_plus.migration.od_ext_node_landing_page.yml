@@ -4,7 +4,6 @@ migration_group: od
 label: 'Embedded data feed of node landing page content'
 source:
   plugin: embedded_data
-  translations: true
   data_rows:
     -
       name: homepage

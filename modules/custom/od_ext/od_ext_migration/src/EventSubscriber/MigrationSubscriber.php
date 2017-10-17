@@ -664,6 +664,92 @@ class MigrationSubscriber implements EventSubscriberInterface {
         }
       }
     }
+
+    if ($event->getMigration()->id() == 'od_ext_node_landing_page' ||
+        $event->getMigration()->id() == 'od_ext_node_landing_page_translation') {
+      $sourceBid = $event->getRow()->getSourceProperty('name');
+      $title = $event->getRow()->getSourceProperty('title');
+      $destBid = $event->getDestinationIdValues();
+      $translations = $event->getRow()->getSourceProperty('translations');
+
+      if (!empty($sourceBid)) {
+        switch ($sourceBid) {
+          case 'homepage':
+            $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+              'title' => $title,
+              'link' => ['uri' => 'internal:/node/' . $destBid[0]],
+              'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+            ]);
+            $menu_link_content->save();
+            break;
+
+          case 'open_info':
+            $links = $this->entityTypeManager->getStorage('menu_link_content')
+              ->loadByProperties(['title' => (!empty($translations)) ? 'Gouvernement ouvert' : 'Open Government']);
+            if ($link = reset($links)) {
+              $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+                'title' => $title,
+                'link' => ['uri' => 'internal:/node/' . $destBid[0]],
+                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'parent' => $link->getPluginId(),
+              ]);
+              $menu_link_content->save();
+            }
+            break;
+
+          case 'open_by_default_pilot':
+            $links = $this->entityTypeManager->getStorage('menu_link_content')
+              ->loadByProperties(['title' => (!empty($translations)) ? 'Information ouverte' : 'Open Information']);
+            if ($link = reset($links)) {
+              $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+                'title' => $title,
+                'link' => ['uri' => 'internal:/node/' . $destBid[0]],
+                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'parent' => $link->getPluginId(),
+              ]);
+              $menu_link_content->save();
+            }
+            break;
+
+          case 'open_by_default_about':
+            $links = $this->entityTypeManager->getStorage('menu_link_content')
+              ->loadByProperties(['title' => (!empty($translations)) ? 'Projet pilote de l’« Ouverture par défaut »' : 'Open by Default Pilot']);
+            if ($link = reset($links)) {
+              $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+                'title' => $title,
+                'link' => ['uri' => 'internal:/node/' . $destBid[0]],
+                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'parent' => $link->getPluginId(),
+              ]);
+              $menu_link_content->save();
+            }
+            break;
+        }
+      }
+    }
+
+    if ($event->getMigration()->id() == 'od_ext_menu_link' ||
+        $event->getMigration()->id() == 'od_ext_menu_link_translation') {
+      $sourceBid = $event->getRow()->getSourceProperty('mlid');
+      $title = $event->getRow()->getSourceProperty('link_title');
+      $destBid = $event->getDestinationIdValues();
+      $translations = $event->getRow()->getSourceProperty('translations');
+
+      if (!empty($sourceBid)) {
+        switch ($sourceBid) {
+          case 'main_home':
+            $links = $this->entityTypeManager->getStorage('menu_link_content')
+              ->loadByProperties(['title' => (!empty($translations)) ? 'Gouvernement ouvert' : 'Open Government']);
+            if ($link = end($links)) {
+              $menu_link_content = $this->entityManager->getStorage('menu_link_content')->load($destBid[0]);
+              print_r($menu_link_content->getPluginId());
+              $link->parent = $menu_link_content->getPluginId();
+              $link->save();
+            }
+            break;
+        }
+      }
+    }
   }
 
   /**
