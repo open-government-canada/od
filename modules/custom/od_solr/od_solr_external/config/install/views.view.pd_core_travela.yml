@@ -66,7 +66,7 @@ display:
       style:
         type: views_bootstrap_panel
         options:
-          panel_title_field: org_name_en_1
+          panel_title_field: org_name_en
       row:
         type: fields
         options:
@@ -127,10 +127,10 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        org_name_en_1:
-          id: org_name_en_1
+        org_name_en:
+          id: org_name_en
           table: search_api_index_pd_core_travela
-          field: org_name_en_1
+          field: org_name_en
           relationship: none
           group_type: group
           admin_label: ''
@@ -367,10 +367,10 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        org_name_en_1:
-          id: org_name_en_1
+        org_name_en:
+          id: org_name_en
           table: search_api_index_pd_core_travela
-          field: org_name_en_1
+          field: org_name_en
           relationship: none
           group_type: group
           admin_label: ''
@@ -768,10 +768,10 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
-        org_name_en_1:
-          id: org_name_en_1
+        org_name_en:
+          id: org_name_en
           table: search_api_index_pd_core_travela
-          field: org_name_en_1
+          field: org_name_en
           relationship: none
           group_type: group
           admin_label: ''

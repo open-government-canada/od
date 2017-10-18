@@ -161,7 +161,7 @@ field_settings:
     datasource_id: solr_document
     property_path: org_name_code
     type: string
-  org_name_en_1:
+  org_name_en:
     label: org_name_en
     datasource_id: solr_document
     property_path: org_name_en
