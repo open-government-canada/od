@@ -1308,14 +1308,14 @@ source:
               region: right
               weight: 5
             -
-              id: 'facet_block:grants_type_fr'
-              label: Type
+              id: 'facet_block:grant_year'
+              label: Année
               label_display: visible
               region: right
               weight: 10
             -
-              id: 'facet_block:grant_year'
-              label: Année
+              id: 'facet_block:grants_type_fr'
+              label: Type
               label_display: visible
               region: right
               weight: 15
