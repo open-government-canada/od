@@ -1363,7 +1363,7 @@ source:
           static_context: {  }
     -
       name: reclassifications
-      title: 'Search Government Position Reclassifications'
+      title: 'Rechercher la reclassification des postes du gouvernement'
       language: fr
       body: |
         <p>Le 25&nbsp;février&nbsp;2004, le gouvernement a annoncé qu'il serait
