@@ -8,6 +8,7 @@ use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Session\SessionManagerInterface;
+use Drupal\Core\Database\Connection;
 use Drupal\flag\FlagServiceInterface;
 use Drupal\media_entity\Entity\Media;
 use Drupal\migrate\Event\MigrateEvents;
@@ -23,6 +24,13 @@ use Symfony\Component\HttpFoundation\Session\Session;
  * WxT mode subscriber for controller requests.
  */
 class MigrationSubscriber implements EventSubscriberInterface {
+
+  /**
+   * The database object.
+   *
+   * @var object
+   */
+  protected $database;
 
   /**
    * The config factory.
@@ -102,6 +110,8 @@ class MigrationSubscriber implements EventSubscriberInterface {
   /**
    * Constructs a new MigrationSubscriber.
    *
+   * @param \Drupal\Core\Database\Connection $database
+   *   The database.
    * @param \Drupal\Core\Entity\EntityManagerInterface $entity_manager
    *   The entity manager service.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface $entity_type_manager
@@ -125,7 +135,8 @@ class MigrationSubscriber implements EventSubscriberInterface {
    * @param \Drupal\user\SharedTempStoreFactory $tempstore
    *   The tempstore factory.
    */
-  public function __construct(EntityManagerInterface $entity_manager, EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory, SessionManagerInterface $session_manager, Session $session, AccountInterface $current_user, FlagServiceInterface $flag_service, UuidInterface $uuid_service, CacheTagsInvalidatorInterface $invalidator, PanelizerInterface $panelizer, SharedTempStoreFactory $tempstore) {
+  public function __construct(Connection $database, EntityManagerInterface $entity_manager, EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory, SessionManagerInterface $session_manager, Session $session, AccountInterface $current_user, FlagServiceInterface $flag_service, UuidInterface $uuid_service, CacheTagsInvalidatorInterface $invalidator, PanelizerInterface $panelizer, SharedTempStoreFactory $tempstore) {
+    $this->database = $database;
     $this->entityManager = $entity_manager;
     $this->entityTypeManager = $entity_type_manager;
     $this->config = $config_factory;
@@ -681,6 +692,10 @@ class MigrationSubscriber implements EventSubscriberInterface {
               'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
             ]);
             $menu_link_content->save();
+            $this->database->update('menu_link_content_data')
+              ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
+              ->condition('id', $menu_link_content->id())
+              ->execute();
             break;
 
           case 'open_info':
@@ -694,6 +709,10 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
+              $this->database->update('menu_link_content_data')
+                ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
+                ->condition('id', $menu_link_content->id())
+                ->execute();
             }
             break;
 
@@ -708,6 +727,10 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
+              $this->database->update('menu_link_content_data')
+                ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
+                ->condition('id', $menu_link_content->id())
+                ->execute();
             }
             break;
 
@@ -722,6 +745,10 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
+              $this->database->update('menu_link_content_data')
+                ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
+                ->condition('id', $menu_link_content->id())
+                ->execute();
             }
             break;
         }
