@@ -11,9 +11,12 @@ audience: member
 group_type: department
 permissions_ui: true
 permissions:
-  - 'update own group_membership content'
-  - 'view group'
-  - 'access group_node overview'
-  - 'update any group_node:blog_post entity'
-  - 'view group_node:blog_post entity'
-  - 'view unpublished group_node:blog_post entity'
+  0: 'update own group_membership content'
+  1: 'view group'
+  2: 'access group_node overview'
+  3: 'update any group_node:blog_post entity'
+  4: 'view group_node:blog_post entity'
+  5: 'view unpublished group_node:blog_post entity'
+  12: 'update any group_node:consultation entity'
+  13: 'view group_node:consultation entity'
+  14: 'view unpublished group_node:consultation entity'

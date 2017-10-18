@@ -742,7 +742,6 @@ class MigrationSubscriber implements EventSubscriberInterface {
               ->loadByProperties(['title' => (!empty($translations)) ? 'Gouvernement ouvert' : 'Open Government']);
             if ($link = end($links)) {
               $menu_link_content = $this->entityManager->getStorage('menu_link_content')->load($destBid[0]);
-              print_r($menu_link_content->getPluginId());
               $link->parent = $menu_link_content->getPluginId();
               $link->save();
             }

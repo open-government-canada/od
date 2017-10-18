@@ -11,5 +11,6 @@ audience: anonymous
 group_type: department
 permissions_ui: true
 permissions:
-  - 'view group'
-  - 'view group_node:blog_post entity'
+  0: 'view group'
+  1: 'view group_node:blog_post entity'
+  4: 'view group_node:consultation entity'
