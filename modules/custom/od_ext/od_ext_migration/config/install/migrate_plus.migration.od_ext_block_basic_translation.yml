@@ -279,6 +279,16 @@ source:
         </h2>
         <p>Apprenez-en davantage sur les engagements du Canada envers un
         gouvernement plus ouvert, inclusif et accessible.</p>
+    - bid: 'open_info_learning_hub'
+      language: 'fr'
+      title: 'Centre d''apprentissage sur le gouvernement ouvert'
+      body: |
+        <h2 class="h4"><a href="[site:url]/centre-apprentissage">
+          Centre d’apprentissage sur le gouvernement ouvert
+        </a></h2>
+        <p>Qu’est-ce que le gouvernement ouvert? Qu’est-ce qu’il signifie pour
+        vous? Apprenez-en davantage en visitant notre Centre d’apprentissage
+        sur le gouvernement ouvert.</p>
     - bid: 'open_info_biennial_progress'
       language: 'fr'
       title: 'Système de suivi du troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert'

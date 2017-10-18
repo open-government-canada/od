@@ -737,8 +737,8 @@ source:
               view_mode: full
               weight: 5
             -
-              id: 'block_content:open_info_biennial_progress'
-              label: 'Système de suivi du troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert'
+              id: 'block_content:open_info_learning_hub'
+              label: 'Centre d''apprentissage sur le gouvernement ouvert'
               label_display: 0
               region: bottom_right
               view_mode: full
@@ -772,8 +772,8 @@ source:
               view_mode: full
               weight: 15
             -
-              id: 'block_content:open_info_faq'
-              label: 'Foire aux questions'
+              id: 'block_content:open_info_biennial_progress'
+              label: 'Système de suivi du troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert'
               label_display: 0
               region: bottom_left
               view_mode: full
@@ -785,6 +785,13 @@ source:
               region: bottom_right
               view_mode: full
               weight: 20
+            -
+              id: 'block_content:open_info_faq'
+              label: 'Foire aux questions'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 25
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'

@@ -680,7 +680,10 @@ source:
       name: about_open_gov
       title: 'About Open Government'
       language: en
-      body: "<p>Open Government is about making government more accessible to\neveryone. This means giving greater access to government data and\ninformation to the Canadian public and the businesses community.</p>\n"
+      body: |
+        <p>Open Government is about making government more accessible to
+        everyone. This means giving greater access to government data and
+        information to the Canadian public and the businesses community.</p>
       alias: /about-open-government
       metatags:
         -
@@ -725,8 +728,8 @@ source:
               view_mode: full
               weight: 5
             -
-              id: 'block_content:open_info_biennial_progress'
-              label: 'Progress tracker for the Third Biennial Plan'
+              id: 'block_content:open_info_learning_hub'
+              label: 'Open Government Learning Hub'
               label_display: 0
               region: bottom_right
               view_mode: full
@@ -760,8 +763,8 @@ source:
               view_mode: full
               weight: 15
             -
-              id: 'block_content:open_info_faq'
-              label: 'Frequently asked questions'
+              id: 'block_content:open_info_biennial_progress'
+              label: 'Progress tracker for the Third Biennial Plan'
               label_display: 0
               region: bottom_left
               view_mode: full
@@ -773,6 +776,13 @@ source:
               region: bottom_right
               view_mode: full
               weight: 20
+            -
+              id: 'block_content:open_info_faq'
+              label: 'Frequently asked questions'
+              label_display: 0
+              region: bottom_right
+              view_mode: full
+              weight: 25
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'

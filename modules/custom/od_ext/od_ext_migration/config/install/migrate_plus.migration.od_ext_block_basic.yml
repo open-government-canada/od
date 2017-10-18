@@ -265,6 +265,16 @@ source:
         </h2>
         <p>Learn more about Canada’s commitments to becoming a more open,
         inclusive, and accessible government.</p>
+    - bid: 'open_info_learning_hub'
+      language: 'en'
+      title: 'Open Government Learning Hub'
+      body: |
+        <h2 class="h4"><a href="[site:url]/learning-hub">
+          Open Government Learning Hub
+        </a></h2>
+        <p>Open Government, what is it? What does that mean for you? How can
+        you improve your open government skills and support a healthier
+        democracy? Learn more in our Open Government learning hub!</p>
     - bid: 'open_info_biennial_progress'
       language: 'en'
       title: 'Progress tracker for the Third Biennial Plan to the Open Government Partnership'
