@@ -1,10 +1,10 @@
-# French translation of Drupal Install Profile (od)
+# French translation of Gouvernement ouvert
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-10-11 00:29+0000\n"
-"PO-Revision-Date: 2017-10-11 00:29+0000\n"
+"POT-Creation-Date: 2017-10-18 22:52+0000\n"
+"PO-Revision-Date: 2017-10-18 22:52+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -15,11 +15,8 @@ msgstr ""
 msgid "403 access denied"
 msgstr "403 accès refusé"
 
-msgid "User Account"
-msgstr "Compte de l'utilisateur"
-
-msgid "WxT Search form"
-msgstr "Formulaire de recherche WxT"
+msgid "Brand"
+msgstr "Marque"
 
 msgid "First Name"
 msgstr "Prénom"
@@ -27,11 +24,20 @@ msgstr "Prénom"
 msgid "Last Name"
 msgstr "Nom de famille"
 
+msgid "WxT Search form"
+msgstr "Formulaire de recherche WxT"
+
 msgid "Front Page"
 msgstr "Page d'accueil"
 
 msgid "Open Maps"
 msgstr "Cartes ouvertes"
+
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+msgid "WxT Language switcher"
+msgstr "Switcher de langue WxT"
 
 msgid "Mid footer"
 msgstr "Pied de page supérieur"
@@ -39,20 +45,17 @@ msgstr "Pied de page supérieur"
 msgid "Mid footer menu."
 msgstr "Menu pied de page supérieur"
 
-msgid "Brand"
-msgstr "Marque"
-
 msgid "Date Modified"
 msgstr "Date de modification"
 
-msgid "WxT Language switcher"
-msgstr "Switcher de langue WxT"
-
-msgid "Sidebar"
-msgstr "Barre latérale"
+msgid "User Account"
+msgstr "Compte de l'utilisateur"
 
 msgid "Landing page (Home)"
 msgstr "Page d'atterrissage (Accueil)"
+
+msgid "Device Formats"
+msgstr "Types d'appareil"
 
 msgid "Blog comments"
 msgstr "Commentaires de blogs"
@@ -69,13 +72,6 @@ msgstr "Derniers billets"
 msgid "{{ arguments.uid }}'s blog"
 msgstr "{{ arguments.uid }}'s blogue"
 
-msgid ""
-"<p class=\"text-danger\"><span class=\"mrgn-rght-md glyphicon "
-"glyphicon-unchecked\"></span>Behind Schedule</p>"
-msgstr ""
-"<p class=\"text-danger\"><span class=\"mrgn-rght-md glyphicon "
-"glyphicon-unchecked\"></span>En retard</p>"
-
 msgid "Analytics"
 msgstr "Analytique"
 
@@ -91,25 +87,8 @@ msgstr "Pourcentages des visites du site par pays"
 msgid "Number of Visits"
 msgstr "Nombre de visites"
 
-msgid ""
-"<p class=\"text-primary\"><span class=\"mrgn-rght-md glyphicon "
-"glyphicon-ok-circle\"></span>On Schedule</p>"
-msgstr ""
-"<p class=\"text-primary\"><span class=\"mrgn-rght-md glyphicon "
-"glyphicon-ok-circle\"></span>Conforme au calendrier</p>"
-
 msgid "Departments"
 msgstr "Organisations"
-
-msgid ""
-"<p class=\"text-success\"><span class=\"mrgn-rght-md glyphicon "
-"glyphicon-ok-sign\"></span>Completed</p>"
-msgstr ""
-"<p class=\"text-success\"><span class=\"mrgn-rght-md glyphicon "
-"glyphicon-ok-sign\"></span>Complété</p>"
-
-msgid "Commitment"
-msgstr "Engagement"
 
 msgid "Developed by"
 msgstr "Conception"
@@ -120,17 +99,8 @@ msgstr "Nom de l'auteur"
 msgid "Datasets Used"
 msgstr "Jeux de données utilisés"
 
-msgid "Subscriptions"
-msgstr "Abonnements"
-
 msgid "More apps by"
 msgstr "Plus d'applications par"
-
-msgid "Date Published"
-msgstr "Date de publication"
-
-msgid "End Date"
-msgstr "Date d'achèvement"
 
 msgid "Open Government Stream"
 msgstr "Volet du gouvernement ouvert"
@@ -144,31 +114,44 @@ msgstr "Ministère(s) responable(s)"
 msgid "Ambition"
 msgstr "Vision"
 
+msgid "Date Released"
+msgstr "Date de diffusion"
+
+msgid "Started"
+msgstr "Commencé"
+
+msgid ""
+"<p class=\"text-danger\"><span class=\"mrgn-rght-md glyphicon "
+"glyphicon-unchecked\"></span>Behind Schedule</p>"
+msgstr ""
+"<p class=\"text-danger\"><span class=\"mrgn-rght-md glyphicon "
+"glyphicon-unchecked\"></span>En retard</p>"
+
+msgid ""
+"<p class=\"text-primary\"><span class=\"mrgn-rght-md glyphicon "
+"glyphicon-ok-circle\"></span>On Schedule</p>"
+msgstr ""
+"<p class=\"text-primary\"><span class=\"mrgn-rght-md glyphicon "
+"glyphicon-ok-circle\"></span>Conforme au calendrier</p>"
+
+msgid ""
+"<p class=\"text-success\"><span class=\"mrgn-rght-md glyphicon "
+"glyphicon-ok-sign\"></span>Completed</p>"
+msgstr ""
+"<p class=\"text-success\"><span class=\"mrgn-rght-md glyphicon "
+"glyphicon-ok-sign\"></span>Complété</p>"
+
+msgid "Commitment"
+msgstr "Engagement"
+
 msgid "<p class=\"well\">No content available at this time.</p>"
 msgstr "<p class=\"well\">Aucun contenu disponsible à ce moment.</p>"
 
+msgid "Substantial"
+msgstr "Subsantiel"
+
 msgid "<h3>Past Consultations</h3>"
 msgstr "<h3>Dialogue ouvert</h3>"
-
-msgid ""
-"name:\n"
-"  '#title': Name\n"
-"  '#type': textfield\n"
-"email:\n"
-"  '#title': "
-"'Your Email'\n"
-"  '#type': email\n"
-"  '#default_value': "
-"'[webform-authenticated-user:mail]'"
-msgstr ""
-"name:\n"
-"  '#title': Nom\n"
-"email:\n"
-"  '#title': 'Vote Courriel'\n"
-""
-
-msgid "Device Formats"
-msgstr "Types d'appareil"
 
 msgid "Related information and services"
 msgstr "Informations et services connexes"
@@ -178,12 +161,6 @@ msgstr "Prochaines étapes"
 
 msgid "Completion Level"
 msgstr "Niveau d’achèvement"
-
-msgid "Started"
-msgstr "Commencé"
-
-msgid "Substantial"
-msgstr "Subsantiel"
 
 msgid ""
 "<span class=\"glyphicon glyphicon-thumbs-up\"></span> "
@@ -198,17 +175,40 @@ msgstr "Ministère(s)"
 msgid "Submitted By"
 msgstr "Soumis par"
 
-msgid "Suggested Dataset"
-msgstr "Jeu de donnée"
+msgid "Subscriptions"
+msgstr "Abonnements"
+
+msgid "End Date"
+msgstr "Date d'achèvement"
+
+msgid "Date Published"
+msgstr "Date de publication"
 
 msgid "Organization Name"
 msgstr "Nom du organisation"
+
+msgid ""
+"&quot;Informal Request for ATI Records Previously Released&quot; "
+"webform."
+msgstr ""
+"&quot;Demande d'accès à l'information informelle dossiers "
+"précédemment publiés&quot; webform."
 
 msgid "Suggested App"
 msgstr "Application suggérées"
 
 msgid "Name of dataset"
 msgstr "Nom du jeu de données"
+
+msgid ""
+"Your informal request for ATI records previously released has been "
+"submitted."
+msgstr ""
+"Votre demande informelle pour des dossiers de demande d'accès à "
+"l'information déjà émis a été soumise."
+
+msgid "Suggested Dataset"
+msgstr "Jeu de donnée"
 
 msgid "Suggested Datasets"
 msgstr "Jeu de données"
@@ -248,23 +248,6 @@ msgstr ""
 "publiés"
 
 msgid ""
-"&quot;Informal Request for ATI Records Previously Released&quot; "
-"webform."
-msgstr ""
-"&quot;Demande d'accès à l'information informelle dossiers "
-"précédemment publiés&quot; webform."
-
-msgid "Suggest a Idea for Action Plan"
-msgstr "Proposez une idée pour le Consultation Plan d'action"
-
-msgid ""
-"Your informal request for ATI records previously released has been "
-"submitted."
-msgstr ""
-"Votre demande informelle pour des dossiers de demande d'accès à "
-"l'information déjà émis a été soumise."
-
-msgid ""
 "This is an automated e-mail. You are receiving this because you "
 "contacted an organization about an ATI Request. Here are the values "
 "that you submitted:<br />\n"
@@ -295,6 +278,23 @@ msgstr ""
 ""
 
 msgid ""
+"name:\n"
+"  '#title': Name\n"
+"  '#type': textfield\n"
+"email:\n"
+"  '#title': "
+"'Your Email'\n"
+"  '#type': email\n"
+"  '#default_value': "
+"'[webform-authenticated-user:mail]'"
+msgstr ""
+"name:\n"
+"  '#title': Nom\n"
+"email:\n"
+"  '#title': 'Vote Courriel'\n"
+""
+
+msgid ""
 "result_map_js_archive:\n"
 "  '#type': managed_file\n"
 "  '#multiple': "
@@ -316,26 +316,6 @@ msgstr ""
 
 msgid "Submit Your App"
 msgstr "Soumettre votre application"
-
-msgid "Suggest a Dataset"
-msgstr "Proposez un jeu de données"
-
-msgid ""
-"<h2>Thank you for your participation!</h2>\r\n"
-"\r\n"
-"<p>Your idea or "
-"comment should appear within two business days.</p>"
-msgstr ""
-"<h2>Nous vous remercions de votre "
-"participation!</h2>\r\n"
-"\r\n"
-"<p>Votre idée ou commentaire devrait "
-"apparaître d’ici deux jours ouvrables.</p>"
-
-msgid "Suggest an Idea for the Open Government Action Plan 2.0 Consultation"
-msgstr ""
-"Proposez une idée pour le 2.0 Consultation Plan d'action sur la "
-"transparence gouvernementale"
 
 msgid ""
 "&lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br "
@@ -364,6 +344,29 @@ msgstr ""
 "/>\r\n"
 "[webform_submission:url]\r\n"
 ""
+
+msgid "Suggest a Dataset"
+msgstr "Proposez un jeu de données"
+
+msgid ""
+"<h2>Thank you for your participation!</h2>\r\n"
+"\r\n"
+"<p>Your idea or "
+"comment should appear within two business days.</p>"
+msgstr ""
+"<h2>Nous vous remercions de votre "
+"participation!</h2>\r\n"
+"\r\n"
+"<p>Votre idée ou commentaire devrait "
+"apparaître d’ici deux jours ouvrables.</p>"
+
+msgid "Suggest an Idea for the Open Government Action Plan 2.0 Consultation"
+msgstr ""
+"Proposez une idée pour le 2.0 Consultation Plan d'action sur la "
+"transparence gouvernementale"
+
+msgid "Suggest a Idea for Action Plan"
+msgstr "Proposez une idée pour le Consultation Plan d'action"
 
 msgid "Suggest a new idea for the Action Plan on Open Government"
 msgstr ""
@@ -445,8 +448,44 @@ msgstr ""
 "renseignements.'\r\n"
 ""
 
-msgid "Publishers"
-msgstr "Éditeurs"
+msgid "Position Number"
+msgstr "Numéro du poste"
+
+msgid "Position Title"
+msgstr "Titre du poste en Anglais"
+
+msgid "Reason for Reclassification"
+msgstr "Raison de la decision en anglais"
+
+msgid "Previous Position Classification Group"
+msgstr "Groupe de classification du poste précédent"
+
+msgid "Previous Position Classification Level Number"
+msgstr "Niveau de classification du poste précédent"
+
+msgid ""
+"<a href=\"/form/ati-records?org={{ ss_ati_organization_en "
+"}}&req_num={{ i18n_ts_en_ati_request_number }}&disp={{ "
+"ss_ati_disposition_en }}&year={{ ss_ati_year_en }}&month={{ "
+"ss_ati_monthname_en }}&pages={{ ss_ati_number_of_pages_en "
+"}}&req_sum={{ i18n_ts_en_ati_request_summary }}&email={{ "
+"ss_ati_contact_email_en }}&req_pages={{ ss_ati_number_of_pages_en }}\" "
+"title=\"Contact this organization about this ATI Request.\">Make an "
+"informal request for: {{ i18n_ts_en_ati_request_number }} ({{ "
+"ss_ati_org_shortform_en }})</a>"
+msgstr ""
+"<a href=\"/fr/formulaires/contacte-ai-org?org={{ "
+"ss_ati_organization_fr }}&req_num={{ i18n_ts_fr_ati_request_number "
+"}}&disp={{ ss_ati_disposition_fr }}&year={{ ss_ati_year_fr }}&month={{ "
+"ss_ati_monthname_fr }}&pages={{ ss_ati_number_of_pages_fr "
+"}}&req_sum={{ i18n_ts_fr_ati_request_summary }}&email={{ "
+"ss_ati_contact_email_fr }}&req_pages={{ ss_ati_number_of_pages_fr }}\" "
+"title=\"Contactez cette organisation au sujet de cette demande "
+"d'accès.\">Effectuer une demande informelle pour : {{ "
+"i18n_ts_fr_ati_request_number }} ({{ ss_ati_org_shortform_fr }})</a>"
+
+msgid "Proactive Disclosure"
+msgstr "Divulgation proactive"
 
 msgid "publishers"
 msgstr "éditeurs"
@@ -465,9 +504,6 @@ msgstr "Frais d'accueil gouvernementaux"
 
 msgid "Government Reclassification"
 msgstr "Reclassification de poste du gouvernement"
-
-msgid "Government Travel Expense"
-msgstr "Frais de voyage gouvernementaux"
 
 msgid "Acts of Founded Wrongdoings"
 msgstr "Actes répréhensibles fondés"
@@ -493,51 +529,32 @@ msgstr "Coordonnées"
 msgid "Request Summary"
 msgstr "Sommaire de la demande"
 
-msgid ""
-"<a href=\"/form/ati-records?org={{ ss_ati_organization_en "
-"}}&req_num={{ i18n_ts_en_ati_request_number }}&disp={{ "
-"ss_ati_disposition_en }}&year={{ ss_ati_year_en }}&month={{ "
-"ss_ati_monthname_en }}&pages={{ ss_ati_number_of_pages_en "
-"}}&req_sum={{ i18n_ts_en_ati_request_summary }}&email={{ "
-"ss_ati_contact_email_en }}&req_pages={{ ss_ati_number_of_pages_en }}\" "
-"title=\"Contact this organization about this ATI Request.\">Make an "
-"informal request for: {{ i18n_ts_en_ati_request_number }} ({{ "
-"ss_ati_org_shortform_en }})</a>"
-msgstr ""
-"<a href=\"/fr/formulaires/contacte-ai-org?org={{ "
-"ss_ati_organization_fr }}&req_num={{ i18n_ts_fr_ati_request_number "
-"}}&disp={{ ss_ati_disposition_fr }}&year={{ ss_ati_year_fr }}&month={{ "
-"ss_ati_monthname_fr }}&pages={{ ss_ati_number_of_pages_fr "
-"}}&req_sum={{ i18n_ts_fr_ati_request_summary }}&email={{ "
-"ss_ati_contact_email_fr }}&req_pages={{ ss_ati_number_of_pages_fr }}\" "
-"title=\"Contactez cette organisation au sujet de cette demande "
-"d'accès.\">Effectuer une demande informelle pour : {{ "
-"i18n_ts_fr_ati_request_number }} ({{ ss_ati_org_shortform_fr }})</a>"
+msgid "Search Results"
+msgstr "Résultats de la recherche"
+
+msgid "Reference Number"
+msgstr "Numéro de référence"
 
 msgid "Description of work"
 msgstr "Description du travail"
 
+msgid "Country of Origin"
+msgstr "Pays d'origine"
+
 msgid "Contract Date"
 msgstr "Date du contrat"
-
-msgid "Vendor Name"
-msgstr "Nom du fournisseur"
-
-msgid "Search Results"
-msgstr "Résultats de la recherche"
 
 msgid "Agreement Type"
 msgstr "Code de type de produit"
 
-msgid ""
-"<a href=\"/search/contracts/reference/{{ id }}\"><strong>View detailed "
-"information about this disclosure</strong></a>"
-msgstr ""
-"<a href=\"/fr/search/contracts/reference/{{ id }}\"><strong>Voir la "
-"fiche détaillée de cette divulgation</strong></a>"
+msgid "Vendor Name"
+msgstr "Nom du fournisseur"
 
-msgid "Reference Number"
-msgstr "Numéro de référence"
+msgid "Contract Value"
+msgstr "Valeur de contrat"
+
+msgid "Commodity Type"
+msgstr "Type de produit"
 
 msgid "Procurement Identification Number"
 msgstr "Numéro d'identification d'approvisionnement"
@@ -575,28 +592,8 @@ msgstr "Potentiel d'exploitation commerciale"
 msgid "Former Public Servant in receipt of a PSSA pension"
 msgstr "Ancien fonctionnaire recevant une pension en vertu de la LPFP"
 
-msgid "Commodity Type"
-msgstr "Type de produit"
-
-msgid "Proactive Disclosure"
-msgstr "Divulgation proactive"
-
-msgid "Contract Value"
-msgstr "Valeur de contrat"
-
-msgid "Country of Origin"
-msgstr "Pays d'origine"
-
 msgid "Reporting Period"
 msgstr "Période de déclaration"
-
-msgid ""
-"<a class=\"btn btn-sm btn-primary\" href=\"/search/contracts\">Back to "
-"Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
-msgstr ""
-"<a class=\"btn btn-sm btn-primary\" "
-"href=\"/fr/search/contracts\">Retour à la recherche&nbsp;<span "
-"class=\"fa fa-undo\"></span></a>"
 
 msgid "Recipient Name"
 msgstr "Nom du recipient"
@@ -664,58 +661,6 @@ msgstr ""
 msgid "Program Activity Architecture"
 msgstr "Architecture des activités de programme"
 
-msgid "Open Government Portal Url"
-msgstr "URL dans le portail du gouvernement ouvert"
-
-msgid "Position Number"
-msgstr "Numéro du poste"
-
-msgid "Position Title"
-msgstr "Titre du poste en Anglais"
-
-msgid ""
-"<a href=\"/search/reclassification/reference/{{ id }}\"><strong>View "
-"detailed information about this disclosure</strong></a>"
-msgstr ""
-"<a href=\"/fr/search/inventory/reference/{{ id }}\"><strong>Voir la "
-"fiche détaillée de cette divulgation</strong></a>"
-
-msgid "Reason for Reclassification"
-msgstr "Raison de la decision en anglais"
-
-msgid "Previous Position Classification Group"
-msgstr "Groupe de classification du poste précédent"
-
-msgid "Previous Position Classification Level Number"
-msgstr "Niveau de classification du poste précédent"
-
-msgid "Reclassified Position Classification Group"
-msgstr ""
-"\r\n"
-"Groupe de classification de poste reclassifié"
-
-msgid "Reclassified Position Classification Level Number"
-msgstr "Numéro de niveau de la classification du poste reclassifié"
-
-msgid ""
-"<a class=\"btn btn-sm btn-primary\" "
-"href=\"/search/reclassification\">Back to Search&nbsp;<span class=\"fa "
-"fa-undo\"></span></a>"
-msgstr ""
-"<a class=\"btn btn-sm btn-primary\" "
-"href=\"/fr/search/reclassification\">Retour à la recherche&nbsp;<span "
-"class=\"fa fa-undo\"></span></a>"
-
-msgid ""
-"<a href=\"/search/travela/reference/{{ id }}\"><strong>View detailed "
-"information about this disclosure</strong></a>"
-msgstr ""
-"<a href=\"/fr/search/travela/reference/{{ id }}\"><strong>Voir la "
-"fiche détaillée de cette divulgation</strong></a>"
-
-msgid "Total Amount"
-msgstr "Montant total"
-
 msgid "very good"
 msgstr "très bon"
 
@@ -743,10 +688,10 @@ msgid ""
 "btn-sm btn-primary\" href=\"/search/travela\">Back to "
 "Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
 msgstr ""
-"<p><strong> Travel Public servants - Explanation of Significant "
-"Variance:</strong>{{ public_servant_compared_fiscal_year_fr }}</p> "
-"<p><strong> Travel Non-Public Servants - Explanation of Significant "
-"Variance:</strong>{{ non_public_servant_compared_fiscal_year_fr ?: ' "
+"<p><strong> Voyages des fonctionnaires - Explication d’un écart "
+"important :</strong>{{ public_servant_compared_fiscal_year_fr }}</p> "
+"<p><strong> Voyages des non-fonctionnaires - Explication d’un écart "
+"important :</strong>{{ non_public_servant_compared_fiscal_year_fr ?: ' "
 "N/A' }}</p> <p><strong> Accueil - Explication d’un écart important "
 ":</strong>{{ hospitality_compared_fiscal_year_fr }}</p> <p><strong> "
 "Frais de participation aux conférence - Explication d’un écart "
@@ -757,79 +702,8 @@ msgstr ""
 "btn-sm btn-primary\" href=\"/fr/search/travela\">Retour à la "
 "recherche&nbsp;<span class=\"fa fa-undo\"></span></a>"
 
-msgid "Airfare"
-msgstr "Frais aériens"
-
-msgid "Travel Start Date"
-msgstr "Date du début du voyage"
-
-msgid "Travel End Date"
-msgstr "Date de fin du voyage"
-
-msgid ""
-"<a href=\"/search/travelq/reference/{{ id }}\"><strong>View detailed "
-"information about this disclosure</strong></a>"
-msgstr ""
-"<a href=\"/fr/search/travelq/reference/{{ id }}\"><strong>Voir la "
-"fiche détaillée de cette divulgation</strong></a>"
-
-msgid "Purpose of Travel"
-msgstr "But du voyage"
-
-msgid "Other Transportation"
-msgstr "Autres frais de transport"
-
-msgid "Accomodation"
-msgstr "Autres frais de logement"
-
-msgid "Meals and Incidentals"
-msgstr "Autres frais de repas"
-
-msgid ""
-"<a class=\"btn btn-sm btn-primary\" href=\"/search/travelq\">Back to "
-"Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
-msgstr ""
-"<a class=\"btn btn-sm btn-primary\" href=\"/fr/search/travelq\">Retour "
-"à la recherche&nbsp;<span class=\"fa fa-undo\"></span></a>"
-
-msgid "File Identification Number"
-msgstr "Numéro d’identification du fichier"
-
-msgid "File Identification Date"
-msgstr "Date d’identification du fichier"
-
-msgid ""
-"<a href=\"/search/wrongdoing/reference/{{ id }}\"><strong>View "
-"detailed information about this disclosure</strong></a>"
-msgstr ""
-"<a href=\"/fr/search/wrongdoing/reference/{{ id }}\"><strong>Voir la "
-"fiche détaillée de cette divulgation</strong></a>"
-
-msgid "English Case Description"
-msgstr "Description anglaise"
-
-msgid "English Recommendations and Corrective Measures"
-msgstr "Recommendations et mesures Correctives anglaises"
-
-msgid ""
-"<a class=\"btn btn-sm btn-primary\" href=\"/search/wrongdoing\">Back "
-"to Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
-msgstr ""
-"<a class=\"btn btn-sm btn-primary\" "
-"href=\"/fr/search/wrongdoing\">Retour à la recherche&nbsp;<span "
-"class=\"fa fa-undo\"></span></a>"
-
-msgid "Date Released"
-msgstr "Date de diffusion"
-
 msgid "organization"
 msgstr "organisation"
-
-msgid "Current Search"
-msgstr "Recherche en cours"
-
-msgid "Clear all"
-msgstr "Effacer tous"
 
 msgid "Read more"
 msgstr "Lire la suite"
@@ -886,9 +760,6 @@ msgstr "Ouvrir le dossier CKAN"
 
 msgid "View external entity"
 msgstr "Afficher une entité externe"
-
-msgid "Expand all"
-msgstr "Déplier tous"
 
 msgid "We couldn't find that Web page"
 msgstr "Nous n'avons pas pu trouver cette page Web"
@@ -1301,17 +1172,100 @@ msgstr ""
 "renseignements.'\r\n"
 ""
 
-msgid "Latest blogs"
-msgstr "Les billets de blogue les plus récents"
+msgid "Total Amount"
+msgstr "Montant total"
 
-msgid "Government of Canada"
-msgstr "Gouvernement du Canada"
+msgid "Clear all"
+msgstr "Effacer tous"
+
+msgid "Reclassified Position Classification Group"
+msgstr ""
+"\r\n"
+"Groupe de classification de poste reclassifié"
+
+msgid "Reclassified Position Classification Level Number"
+msgstr "Numéro de niveau de la classification du poste reclassifié"
+
+msgid ""
+"<a href=\"/search/travela/reference/{{ id }}\"><strong>View detailed "
+"information about this disclosure</strong></a>"
+msgstr ""
+"<a href=\"/fr/search/travela/reference/{{ id }}\"><strong>Voir la "
+"fiche détaillée de cette divulgation</strong></a>"
+
+msgid "Airfare"
+msgstr "Frais aériens"
+
+msgid "Travel Start Date"
+msgstr "Date du début du voyage"
+
+msgid "Travel End Date"
+msgstr "Date de fin du voyage"
+
+msgid ""
+"<a href=\"/search/travelq/reference/{{ id }}\"><strong>View detailed "
+"information about this disclosure</strong></a>"
+msgstr ""
+"<a href=\"/fr/search/travelq/reference/{{ id }}\"><strong>Voir la "
+"fiche détaillée de cette divulgation</strong></a>"
+
+msgid "Purpose of Travel"
+msgstr "But du voyage"
+
+msgid "Other Transportation"
+msgstr "Autres frais de transport"
+
+msgid "Accomodation"
+msgstr "Autres frais de logement"
+
+msgid "Meals and Incidentals"
+msgstr "Autres frais de repas"
+
+msgid ""
+"<a class=\"btn btn-sm btn-primary\" href=\"/search/travelq\">Back to "
+"Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
+msgstr ""
+"<a class=\"btn btn-sm btn-primary\" href=\"/fr/search/travelq\">Retour "
+"à la recherche&nbsp;<span class=\"fa fa-undo\"></span></a>"
+
+msgid "File Identification Number"
+msgstr "Numéro d’identification du fichier"
+
+msgid "File Identification Date"
+msgstr "Date d’identification du fichier"
+
+msgid ""
+"<a href=\"/search/wrongdoing/reference/{{ id }}\"><strong>View "
+"detailed information about this disclosure</strong></a>"
+msgstr ""
+"<a href=\"/fr/search/wrongdoing/reference/{{ id }}\"><strong>Voir la "
+"fiche détaillée de cette divulgation</strong></a>"
+
+msgid "English Case Description"
+msgstr "Description anglaise"
+
+msgid "English Recommendations and Corrective Measures"
+msgstr "Recommendations et mesures Correctives anglaises"
+
+msgid ""
+"<a class=\"btn btn-sm btn-primary\" href=\"/search/wrongdoing\">Back "
+"to Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
+msgstr ""
+"<a class=\"btn btn-sm btn-primary\" "
+"href=\"/fr/search/wrongdoing\">Retour à la recherche&nbsp;<span "
+"class=\"fa fa-undo\"></span></a>"
+
+msgid "Current Search"
+msgstr "Recherche en cours"
 
 msgid "Search Canada.ca"
 msgstr "Rechercher dans Canada.ca"
 
-msgid "Government of Canada activities and initiatives"
-msgstr "Activités et initiatives du Gouvernement du Canada"
+msgid "Open Government"
+msgstr "Gouvernement ouvert"
+
+msgid "Open Dialogue"
+msgstr "Dialogue ouvert"
 
 msgid "About this site"
 msgstr "À propos de ce site"
@@ -1322,14 +1276,14 @@ msgstr "Haut de page"
 msgid "Date modified:"
 msgstr "Date de modification :"
 
-msgid "Open Government"
-msgstr "Gouvernement ouvert"
+msgid "Latest blogs"
+msgstr "Les billets de blogue les plus récents"
 
-msgid "Open Information"
-msgstr "Information ouverte"
+msgid "Expand all"
+msgstr "Déplier tous"
 
-msgid "Open Dialogue"
-msgstr "Dialogue ouvert"
+msgid "Publishers"
+msgstr "Éditeurs"
 
 msgid ""
 "name_of_dataset:\n"
@@ -1673,41 +1627,8 @@ msgstr ""
 "  '#title': 'Votre idée'\r\n"
 ""
 
-msgid ": "
-msgstr " : "
-
-msgid "Edit facet"
-msgstr "Modifier la facette"
-
-msgid "View all blogs"
-msgstr "Voir tous les blogs"
-
-msgid "Skip to \"About this site\""
-msgstr "Passer &agrave; &laquo;&nbsp;&Agrave; propos de ce site&nbsp;&raquo;"
-
-msgid "Search Data"
-msgstr "Recherche de données"
-
-msgid "Find"
-msgstr "Trouvez"
-
-msgid "<span class=\"glyphicon glyphicon-chevron-right small\">"
-msgstr "<span class=\"glyphicon glyphicon-chevron-right small\">"
-
-msgid "Search and menus"
-msgstr "Recherche et menus"
-
-msgid "Topics Menu"
-msgstr "Menu des Sujets"
-
 msgid "Topics menu"
 msgstr "Menu des sujets"
-
-msgid "Access Government of Canada activities and initiatives"
-msgstr "Accédez aux activités et initiatives du gouvernement du Canada"
-
-msgid "Write"
-msgstr "Écrire"
 
 msgid "next"
 msgstr "suivant"
@@ -1759,6 +1680,155 @@ msgstr ""
 msgid "The section/group that I identify most with is:"
 msgstr "Le secteur d’activité me représentant le mieux est :"
 
-msgid "The section/group that I identify most with is:"
-msgstr "Le secteur d’activité me représentant le mieux est :"
+msgid "<span class=\"glyphicon glyphicon-chevron-right small\">"
+msgstr "<span class=\"glyphicon glyphicon-chevron-right small\">"
+
+msgid "Skip to \"About this site\""
+msgstr "Passer &agrave; &laquo;&nbsp;&Agrave; propos de ce site&nbsp;&raquo;"
+
+msgid "Search and menus"
+msgstr "Recherche et menus"
+
+msgid "Topics Menu"
+msgstr "Menu des Sujets"
+
+msgid "Access Government of Canada activities and initiatives"
+msgstr "Accédez aux activités et initiatives du gouvernement du Canada"
+
+msgid "Write"
+msgstr "Écrire"
+
+msgid "Search Data"
+msgstr "Recherche de données"
+
+msgid "Find"
+msgstr "Trouvez"
+
+msgid "View all blogs"
+msgstr "Voir tous les blogs"
+
+msgid ": "
+msgstr " : "
+
+msgid ""
+"<a href=\"/search/contracts/reference/{{ id }}\"><strong>View detailed "
+"information about this disclosure</strong></a>"
+msgstr ""
+"<a href=\"/fr/search/contracts/reference/{{ id }}\"><strong>Voir la "
+"fiche détaillée de cette divulgation</strong></a>"
+
+msgid "Government Travel Expense"
+msgstr "Frais de voyage gouvernementaux"
+
+msgid ""
+"<a class=\"btn btn-sm btn-primary\" href=\"/search/contracts\">Back to "
+"Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
+msgstr ""
+"<a class=\"btn btn-sm btn-primary\" "
+"href=\"/fr/search/contracts\">Retour à la recherche&nbsp;<span "
+"class=\"fa fa-undo\"></span></a>"
+
+msgid ""
+"<p><strong> Travel Public servants - Explanation of Significant "
+"Variance:</strong> {{ public_servant_compared_fiscal_year_en "
+"}}</p>\n"
+"<p><strong> Travel Non-Public Servants - Explanation of "
+"Significant Variance:</strong> {{ "
+"non_public_servant_compared_fiscal_year_en ?:  ' N/A' "
+"}}</p>\n"
+"<p><strong> Hospitality - Explanation of Significant "
+"Variance:</strong> {{ hospitality_compared_fiscal_year_en "
+"}}</p>\n"
+"<p><strong> Conference Fees - Explanation of Significant "
+"Variance:</strong> {{ conference_fees_compared_fiscal_year_en "
+"}}</p>\n"
+"<p><strong> International Travel by Minister and Minister’s "
+"Staff - Explanation of Significant Variance:</strong> {{ "
+"minister_compared_fiscal_year_en ?: ' N/A' }}</p>\n"
+"<a class=\"btn "
+"btn-sm btn-primary\" href=\"/search/travela\">Back to "
+"Search&nbsp;<span class=\"fa fa-undo\"></span></a>"
+msgstr ""
+"<p><strong> Voyages des fonctionnaires - Explication d’un écart "
+"important :</strong>{{ public_servant_compared_fiscal_year_fr }}</p> "
+"<p><strong> Voyages des non-fonctionnaires - Explication d’un écart "
+"important :</strong>{{ non_public_servant_compared_fiscal_year_fr ?: ' "
+"N/A' }}</p> <p><strong> Accueil - Explication d’un écart important "
+":</strong>{{ hospitality_compared_fiscal_year_fr }}</p> <p><strong> "
+"Frais de participation aux conférence - Explication d’un écart "
+"important :</strong>{{ conference_fees_compared_fiscal_year_fr }}</p> "
+"<p><strong> Voyages internationaux du ministre et du personnel du "
+"ministre - Explication d’un écart important :</strong>{{ "
+"minister_compared_fiscal_year_fr ?: ' N/A' }}</p> <a class=\"btn "
+"btn-sm btn-primary\" href=\"/fr/search/travela\">Retour à la "
+"recherche&nbsp;<span class=\"fa fa-undo\"></span></a>"
+
+msgid "Open Government Portal Url"
+msgstr "URL dans le portail du gouvernement ouvert"
+
+msgid ""
+"<a href=\"/search/reclassification/reference/{{ id }}\"><strong>View "
+"detailed information about this disclosure</strong></a>"
+msgstr ""
+"<a href=\"/fr/search/inventory/reference/{{ id }}\"><strong>Voir la "
+"fiche détaillée de cette divulgation</strong></a>"
+
+msgid ""
+"<a class=\"btn btn-sm btn-primary\" "
+"href=\"/search/reclassification\">Back to Search&nbsp;<span class=\"fa "
+"fa-undo\"></span></a>"
+msgstr ""
+"<a class=\"btn btn-sm btn-primary\" "
+"href=\"/fr/search/reclassification\">Retour à la recherche&nbsp;<span "
+"class=\"fa fa-undo\"></span></a>"
+
+msgid "Government of Canada"
+msgstr "Gouvernement du Canada"
+
+msgid "Government of Canada activities and initiatives"
+msgstr "Activités et initiatives du Gouvernement du Canada"
+
+msgid "Annual Travel, Hospitality and Conference Fees Report:"
+msgstr "Frais de voyage gouvernementaux :"
+
+msgid "Department:"
+msgstr "Organisation :"
+
+msgid "Expenditure Category"
+msgstr "Catégorie de dépenses"
+
+msgid "Expenditures for the year ending March 31, @date ($)"
+msgstr "Dépenses pour l'exercice se terminant le 31 mars @date ($)"
+
+msgid "Expenditures for the previous year ending March 31, @date ($)"
+msgstr ""
+"Dépenses pour l'exercice précédent se terminant le 31 mars @date "
+"($)"
+
+msgid "Change ($)"
+msgstr "Écart ($)"
+
+msgid "Travel - Public Servants"
+msgstr "Voyages – Fonctionnaires"
+
+msgid "Travel - Non-Public Servants"
+msgstr "Voyages – Non–fonctionnaires"
+
+msgid "Total Travel"
+msgstr "Total des voyages"
+
+msgid "Hospitality"
+msgstr "Hospitalité"
+
+msgid "Conference Fees"
+msgstr "Frais de participation aux conférences"
+
+msgid "International Travel by Minister and Minister's Staff"
+msgstr "Voyages internationaux du ministre et du personnel du ministre"
+
+msgid "Open Information"
+msgstr "Information ouverte"
+
+msgid "Edit facet"
+msgstr "Modifier la facette"
 
