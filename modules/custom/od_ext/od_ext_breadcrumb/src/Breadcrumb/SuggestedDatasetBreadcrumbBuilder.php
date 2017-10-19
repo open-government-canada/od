@@ -153,7 +153,9 @@ class SuggestedDatasetBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $pathEnd = end($path_elements);
 
     // Content type determination.
-    if (!empty($parameters['node']) && $parameters['node']->getType() == 'suggested_dataset') {
+    if (!empty($parameters['node']) &&
+        is_object($parameters['node']) &&
+        $parameters['node']->getType() == 'suggested_dataset') {
       return TRUE;
     }
     elseif (!empty($pathEnd) && $pathEnd == 'suggested-datasets') {

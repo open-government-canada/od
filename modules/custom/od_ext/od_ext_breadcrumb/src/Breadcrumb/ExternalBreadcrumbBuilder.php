@@ -151,6 +151,7 @@ class ExternalBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
     // Content type determination.
     if (!empty($parameters['external_entity']) &&
+        is_object($parameters['external_entity']) &&
         ($parameters['external_entity']->getType() == 'ckan' ||
         $parameters['external_entity']->getType() == 'solr_inventory')) {
       return TRUE;

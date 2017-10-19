@@ -153,7 +153,9 @@ class AppBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $pathEnd = end($path_elements);
 
     // Content type determination.
-    if (!empty($parameters['node']) && $parameters['node']->getType() == 'app') {
+    if (!empty($parameters['node']) &&
+        is_object($parameters['node']) &&
+        $parameters['node']->getType() == 'app') {
       return TRUE;
     }
     elseif (!empty($pathEnd) && $pathEnd == 'apps') {

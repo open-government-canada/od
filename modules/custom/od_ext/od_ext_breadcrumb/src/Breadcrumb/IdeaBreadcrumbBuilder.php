@@ -150,7 +150,9 @@ class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $parameters = $route_match->getParameters()->all();
 
     // Content type determination.
-    if (!empty($parameters['node']) && $parameters['node']->getType() == 'idea') {
+    if (!empty($parameters['node']) &&
+        is_object($parameters['node']) &&
+        $parameters['node']->getType() == 'idea') {
       return TRUE;
     }
   }
