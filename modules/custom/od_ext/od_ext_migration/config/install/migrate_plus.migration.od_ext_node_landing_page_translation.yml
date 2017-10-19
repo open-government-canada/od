@@ -855,7 +855,7 @@ source:
           static_context: {  }
     -
       name: about_open_maps
-      title: 'Cartes ouvertes'
+      title: 'Au sujet Cartes ouvertes'
       language: fr
       body: |
         <p>Les Cartes ouvertes regroupent les données, les applications et les
@@ -886,7 +886,7 @@ source:
         Cartes ouvertes, ainsi que vous en servir pour réaliser vos travaux de
         recherche et de développement d’applications, ou d’autres activités
         autorisées, en vertu de la <a href="http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada">licence du gouvernement ouvert</a>.</p>
-      alias: /cartes-ouvertes
+      alias: /au-sujet-cartes-ouvertes
       panelizer:
         -
           view_mode: page_manager
