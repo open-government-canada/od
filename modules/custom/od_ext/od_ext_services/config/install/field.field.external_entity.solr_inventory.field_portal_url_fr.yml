@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - external_entities.type.solr_inventory
+    - field.storage.external_entity.field_portal_url_fr
+id: external_entity.solr_inventory.field_portal_url_fr
+field_name: field_portal_url_fr
+entity_type: external_entity
+bundle: solr_inventory
+label: 'Enregistrement de la portail du Gouvernement ouvert'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

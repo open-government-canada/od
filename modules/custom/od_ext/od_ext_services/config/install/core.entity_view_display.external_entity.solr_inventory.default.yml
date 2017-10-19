@@ -9,9 +9,13 @@ dependencies:
     - field.field.external_entity.solr_inventory.field_desc_en
     - field.field.external_entity.solr_inventory.field_desc_fr
     - field.field.external_entity.solr_inventory.field_external_comment
+    - field.field.external_entity.solr_inventory.field_language_en
+    - field.field.external_entity.solr_inventory.field_language_fr
     - field.field.external_entity.solr_inventory.field_org_name_en
     - field.field.external_entity.solr_inventory.field_org_name_fr
     - field.field.external_entity.solr_inventory.field_organization_code
+    - field.field.external_entity.solr_inventory.field_portal_url_en
+    - field.field.external_entity.solr_inventory.field_portal_url_fr
     - field.field.external_entity.solr_inventory.field_prog_align_arch_en
     - field.field.external_entity.solr_inventory.field_prog_align_arch_fr
     - field.field.external_entity.solr_inventory.field_publisher_en
@@ -28,7 +32,7 @@ bundle: solr_inventory
 mode: default
 content:
   field_ckan_link:
-    weight: 7
+    weight: 14
     label: hidden
     settings:
       link_to_entity: false
@@ -36,7 +40,7 @@ content:
     type: string
     region: content
   field_date_published:
-    weight: 5
+    weight: 12
     label: above
     settings:
       link_to_entity: false
@@ -44,7 +48,7 @@ content:
     type: string
     region: content
   field_date_released:
-    weight: 6
+    weight: 13
     label: above
     settings:
       link_to_entity: false
@@ -66,7 +70,7 @@ content:
     type: text_default
     region: content
   field_external_comment:
-    weight: 8
+    weight: 15
     label: above
     settings:
       view_mode: default
@@ -74,15 +78,7 @@ content:
     third_party_settings: {  }
     type: external_comment_default
     region: content
-  field_org_name_en:
-    weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_org_name_fr:
+  field_language_en:
     weight: 4
     label: above
     settings:
@@ -90,6 +86,62 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_language_fr:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_org_name_en:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_org_name_fr:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_portal_url_en:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_portal_url_fr:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prog_align_arch_en:
+    type: string
+    weight: 8
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_prog_align_arch_fr:
+    type: string
+    weight: 9
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_vud:
     weight: 0
     label: above
@@ -99,8 +151,6 @@ content:
     region: content
 hidden:
   field_organization_code: true
-  field_prog_align_arch_en: true
-  field_prog_align_arch_fr: true
   field_publisher_en: true
   field_publisher_fr: true
   field_title_fr: true
