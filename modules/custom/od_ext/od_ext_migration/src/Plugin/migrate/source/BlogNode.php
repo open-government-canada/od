@@ -130,11 +130,23 @@ class BlogNode extends SqlBase {
       'keywords' => isset($tmp['keywords']['value']) ? $tmp['keywords']['value'] : '',
     ];
 
+    // URL alias.
+    $alias = $this->select('url_alias', 'db')
+      ->fields('db', ['alias'])
+      ->condition('source', 'node/' . $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
     elseif (!empty($row->getSourceProperty('translations'))) {
       return FALSE;
+    }
+
+    if (!empty($alias)) {
+      $row->setSourceProperty('alias', '/' . end($alias));
     }
     $row->setSourceProperty('body', $body[0]);
     $row->setSourceProperty('file_fid', $file['field_featured_image_fid']);
