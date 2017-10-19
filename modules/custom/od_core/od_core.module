@@ -57,3 +57,20 @@ function od_core_tokens($type, $tokens, array $data = [], array $options = []) {
 
   return $replacements;
 }
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function od_core_views_pre_render(ViewExecutable $view) {
+  $language_manager = \Drupal::service('language_manager');
+  $currentLang = $language_manager->getCurrentLanguage()->getId();
+
+  if ($currentLang == 'fr') {
+    foreach ($view->field as $id => $field) {
+      if ($view->field[$id]->options['label'] && $view->field[$id]->options['element_label_colon']) {
+        $view->field[$id]->options['label'] .= ' ';
+      }
+    }
+  }
+
+}

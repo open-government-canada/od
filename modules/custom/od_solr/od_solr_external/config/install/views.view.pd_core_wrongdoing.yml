@@ -837,7 +837,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: '<div class="mrgn-bttm-md"><strong>Displaying @start - @end of @total</strong></div>'
+          content: '<strong>Displaying @start - @end of @total</strong>'
           plugin_id: result
     cache_metadata:
       max-age: -1

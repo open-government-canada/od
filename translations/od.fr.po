@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-10-19 03:57+0000\n"
-"PO-Revision-Date: 2017-10-19 03:57+0000\n"
+"POT-Creation-Date: 2017-10-19 15:26+0000\n"
+"PO-Revision-Date: 2017-10-19 15:26+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -1201,9 +1201,6 @@ msgstr ""
 "<a href=\"/fr/search/hospitalityq/reference/{{ id }}\"><strong>Voir la "
 "fiche détaillée de cette divulgation</strong></a>"
 
-msgid "Disclosure Group"
-msgstr "Groupe de divulgation"
-
 msgid "Attendees (Government of Canada Employees)"
 msgstr "Participants (employés du gouvernement du Canada)"
 
@@ -1227,6 +1224,9 @@ msgstr ""
 
 msgid "Program Activity Architecture"
 msgstr "Architecture des activités de programme"
+
+msgid "Disclosure Group"
+msgstr "Groupe de divulgation"
 
 msgid ""
 "<p><strong> Travel Public servants - Explanation of Significant "
@@ -1315,12 +1315,6 @@ msgstr ""
 "les ministères du gouvernement du Canada dans le but de répondre à "
 "ma demande de renseignements.'\n"
 ""
-
-msgid "Open CKAN Record"
-msgstr "Ouvrir le dossier CKAN"
-
-msgid "View external entity"
-msgstr "Afficher une entité externe"
 
 msgid ""
 "title:\n"
@@ -1852,6 +1846,12 @@ msgstr "Nous n'avons pas pu trouver cette page Web"
 msgid "Error 404"
 msgstr "Erreur 404"
 
+msgid "Open CKAN Record"
+msgstr "Ouvrir le dossier CKAN"
+
+msgid "View external entity"
+msgstr "Afficher une entité externe"
+
 msgid ""
 "name_of_dataset:\n"
 "  '#type': textfield\n"
@@ -2345,6 +2345,11 @@ msgstr ""
 "href=\"/fr/search/reclassification\">Retour à la recherche&nbsp;<span "
 "class=\"fa fa-undo\"></span></a>"
 
+msgid ""
+"<div class=\"mrgn-bttm-md\"><strong>Displaying @start - @end of "
+"@total</strong></div>"
+msgstr "<strong>Affiche @start à @end de @total</strong>"
+
 msgid "External comment type"
 msgstr "Type de commentaire externe"
 
@@ -2401,6 +2406,9 @@ msgstr "Voyages internationaux du ministre et du personnel du ministre"
 msgid "Open Information"
 msgstr "Information ouverte"
 
+msgid "@count results found"
+msgstr "@count résultats trouvés"
+
 msgid "Edit facet"
 msgstr "Modifier la facette"
 
@@ -2414,4 +2422,10 @@ msgid "We're sorry you ended up here. Sometimes a page gets moved or deleted."
 msgstr ""
 "Nous sommes désolés que vous ayez abouti ici. Il arrive parfois "
 "qu'une page ait été déplacée ou supprimée."
+
+msgid "<strong>Displaying @start - @end of @total</strong>"
+msgstr "<strong>Affiche @start à @end de @total</strong>"
+
+msgid "View all Departments"
+msgstr "Aperçu de tous les ministères"
 
