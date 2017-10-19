@@ -6,6 +6,7 @@ use Drupal\Core\Cache\CacheTagsInvalidatorInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Path\AliasManagerInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Session\SessionManagerInterface;
 use Drupal\Core\Database\Connection;
@@ -108,6 +109,13 @@ class MigrationSubscriber implements EventSubscriberInterface {
   protected $tempstore;
 
   /**
+   * The alias manager.
+   *
+   * @var \Drupal\Core\Path\AliasManagerInterface
+   */
+  protected $aliasManager;
+
+  /**
    * Constructs a new MigrationSubscriber.
    *
    * @param \Drupal\Core\Database\Connection $database
@@ -134,8 +142,22 @@ class MigrationSubscriber implements EventSubscriberInterface {
    *   The Panelizer service.
    * @param \Drupal\user\SharedTempStoreFactory $tempstore
    *   The tempstore factory.
+   * @param \Drupal\Core\Path\AliasManager $alias_manager
+   *   The alias manager.
    */
-  public function __construct(Connection $database, EntityManagerInterface $entity_manager, EntityTypeManagerInterface $entity_type_manager, ConfigFactoryInterface $config_factory, SessionManagerInterface $session_manager, Session $session, AccountInterface $current_user, FlagServiceInterface $flag_service, UuidInterface $uuid_service, CacheTagsInvalidatorInterface $invalidator, PanelizerInterface $panelizer, SharedTempStoreFactory $tempstore) {
+  public function __construct(Connection $database,
+                              EntityManagerInterface $entity_manager,
+                              EntityTypeManagerInterface $entity_type_manager,
+                              ConfigFactoryInterface $config_factory,
+                              SessionManagerInterface $session_manager,
+                              Session $session,
+                              AccountInterface $current_user,
+                              FlagServiceInterface $flag_service,
+                              UuidInterface $uuid_service,
+                              CacheTagsInvalidatorInterface $invalidator,
+                              PanelizerInterface $panelizer,
+                              SharedTempStoreFactory $tempstore,
+                              AliasManagerInterface $alias_manager) {
     $this->database = $database;
     $this->entityManager = $entity_manager;
     $this->entityTypeManager = $entity_type_manager;
@@ -148,6 +170,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
     $this->invalidator = $invalidator;
     $this->panelizer = $panelizer;
     $this->tempstore = $tempstore;
+    $this->aliasManager = $alias_manager;
   }
 
   /**
@@ -685,6 +708,12 @@ class MigrationSubscriber implements EventSubscriberInterface {
 
       if (!empty($sourceBid)) {
         switch ($sourceBid) {
+          case 'contracts':
+            if ($event->getMigration()->id() == 'od_ext_node_landing_page_translation') {
+              $this->aliasManager->save($destBid[0], '/search/contrats', 'fr');
+            }
+            break;
+
           case 'homepage':
             $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
               'title' => $title,

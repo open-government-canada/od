@@ -1,6 +1,6 @@
 services:
   od_ext_migration.migration_subscriber:
     class: Drupal\od_ext_migration\EventSubscriber\MigrationSubscriber
-    arguments: ['@database', '@entity.manager', '@entity_type.manager', '@config.factory', '@session_manager', '@session',  '@current_user', '@flag', '@uuid', '@cache_tags.invalidator', '@panelizer', '@user.shared_tempstore']
+    arguments: ['@database', '@entity.manager', '@entity_type.manager', '@config.factory', '@session_manager', '@session',  '@current_user', '@flag', '@uuid', '@cache_tags.invalidator', '@panelizer', '@user.shared_tempstore', '@path.alias_manager']
     tags:
       - { name: event_subscriber }
