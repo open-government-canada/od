@@ -254,13 +254,12 @@ class MigrationSubscriber implements EventSubscriberInterface {
       $entity = reset($entities);
       $destinationIds = $event->getDestinationIdValues();
       $user = $this->entityTypeManager->getStorage('user')->load($destinationIds[0]);
-      $group_roles[4] = 'department-tbs_editor';
-      $group_roles[5] = 'department-web_content_manager';
-      $group_roles[9] = 'department-content_reviewer';
-      $row = $event->getRow();
+      $group_roles['administrator'] = 'department-tbs_editor';
+      $group_roles['creator'] = 'department-web_content_manager';
+      $group_roles['reviewer'] = 'department-content_reviewer';
       $options_list = [];
-      if (count($row->getSourceProperty('user_roles')) > 0) {
-        $source_roles = array_keys($row->getSourceProperty('user_roles'));
+      if (count($event->getRow()->getSourceProperty('user_roles')) > 0) {
+        $source_roles = array_values($event->getRow()->getSourceProperty('user_roles'));
         foreach ($source_roles as $key) {
           if (isset($group_roles[$key])) {
             $options[] = $group_roles[$key];

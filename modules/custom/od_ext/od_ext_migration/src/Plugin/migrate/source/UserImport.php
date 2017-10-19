@@ -139,6 +139,78 @@ class UserImport extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    $tmp_roles = [];
+    if (!empty($user_roles)) {
+      foreach ($user_roles as $user_role) {
+        $role = 'anonymous';
+        switch ($user_role['rid']) {
+          case 1:
+            // Role: anonymous => anonymous @ site wide.
+            $role = 'anonymous';
+            break;
+
+          case 2:
+            // Role: authenticated => authenticated @ site wide.
+            $role = 'authenticated';
+            break;
+
+          case 3:
+            // Role: administrator => administrator @ site wide.
+            $role = 'administrator';
+            break;
+
+          case 4:
+            // Role: tbs_editor => administrator @ site wide.
+            // Role: tbs_editor => department-tbs_editor @ groups.
+            $role = 'administrator';
+            break;
+
+          case 5:
+            // Role: web_content_manager => creator @ site wide.
+            // Role: web_content_manager => dept-web_content_manager @ groups.
+            $role = 'creator';
+            break;
+
+          case 6:
+            // Role: blog_editor => creator @ site wide.
+            // Role: blog_editor => department-web_content_manager @ groups.
+            $role = 'creator';
+            break;
+
+          case 7:
+            // Role: comment_moderator => comment_moderator @ site wide.
+            $role = 'comment_moderator';
+            break;
+
+          case 8:
+            // Role: unverified_user => anomymous @ site wide.
+            // Note: legacy db used logintoboggan for this role.
+            $role = 'authenticated';
+            break;
+
+          case 9:
+            // Role: content_reviewer => reviewer @ site wide.
+            // Role: content_reviewer => department-content_reviewer @ groups.
+            $role = 'reviewer';
+            break;
+
+          case 10:
+            // Role: user_admin_subscriptions => authenticated @ site wide.
+            // Note: legacy db only had 1 user.
+            $role = 'authenticated';
+            break;
+
+          case 11:
+            // Role: tbs_moderator => authenticated @ site wide.
+            // Note: legacy db only had 1 user.
+            $role = 'authenticated';
+            break;
+        }
+
+        $tmp_roles[] = $role;
+      }
+    }
+
     $row->setSourceProperty('country_code', $address['field_address1_country']);
     $row->setSourceProperty('administrative_area', $address['field_address1_administrative_area']);
     $row->setSourceProperty('locality', $address['field_address1_locality']);
@@ -151,7 +223,7 @@ class UserImport extends SqlBase {
     $row->setSourceProperty('given_name', $address['field_address1_first_name']);
     $row->setSourceProperty('additional_name', '');
     $row->setSourceProperty('family_name', $address['field_address1_last_name']);
-    $row->setSourceProperty('user_roles', $user_roles);
+    $row->setSourceProperty('user_roles', $tmp_roles);
     $row->setSourceProperty('subscribe_message', $subscribe_message[0]);
     $row->setSourceProperty('subscribe_updates', $subscribe_updates[0]);
 
