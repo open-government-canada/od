@@ -48,6 +48,7 @@ process:
   'field_address/given_name': given_name
   'field_address/additional_name': additional_name
   'field_address/family_name': family_name
+  roles: user_roles
 destination:
   plugin: entity:user
 migration_dependencies:
