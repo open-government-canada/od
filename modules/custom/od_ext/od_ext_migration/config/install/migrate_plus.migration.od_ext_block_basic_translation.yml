@@ -554,7 +554,7 @@ source:
       language: 'fr'
       title: 'Veuillez noter'
       body: |
-        <section class="alert alert-info mrgn-tp-lg"><h2>Please note:</h2>
+        <section class="alert alert-info mrgn-tp-lg"><h2>Veuillez noter :</h2>
         <p>Le projet pilote « Ouvert par défaut » donne accès aux documents de
         travail utilisés par le gouvernement du Canada. La plupart de ces
         renseignements ne sont pas publiés et peuvent inclure des erreurs ou

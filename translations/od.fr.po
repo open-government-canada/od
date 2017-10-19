@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-10-19 02:42+0000\n"
-"PO-Revision-Date: 2017-10-19 02:42+0000\n"
+"POT-Creation-Date: 2017-10-19 03:19+0000\n"
+"PO-Revision-Date: 2017-10-19 03:19+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -71,6 +71,18 @@ msgstr "Derniers billets"
 
 msgid "{{ arguments.uid }}'s blog"
 msgstr "{{ arguments.uid }}'s blogue"
+
+msgid "Full external comment"
+msgstr "Commentaire externe complet"
+
+msgid "Publish external comment"
+msgstr "Publier un commentaire externe"
+
+msgid "Save external comment"
+msgstr "Enregistrer le commentaire externe"
+
+msgid "Unpublish external comment"
+msgstr "Annuler la publication du commentaire externe"
 
 msgid "Analytics"
 msgstr "Analytique"
@@ -180,6 +192,9 @@ msgstr "Abonnements"
 
 msgid "End Date"
 msgstr "Date d'achèvement"
+
+msgid "External Comment"
+msgstr "Commentaire externes"
 
 msgid "Date Published"
 msgstr "Date de publication"
@@ -1782,6 +1797,15 @@ msgstr ""
 "<a class=\"btn btn-sm btn-primary\" "
 "href=\"/fr/search/reclassification\">Retour à la recherche&nbsp;<span "
 "class=\"fa fa-undo\"></span></a>"
+
+msgid "External comment type"
+msgstr "Type de commentaire externe"
+
+msgid "External comments"
+msgstr "Commentaires externes"
+
+msgid "External comment types"
+msgstr "Types de commentaire externe"
 
 msgid "Government of Canada"
 msgstr "Gouvernement du Canada"
