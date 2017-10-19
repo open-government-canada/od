@@ -1903,19 +1903,19 @@ source:
               id: page_title_block
               label: '[node:title]'
               label_display: visible
-              region: left
+              region: top
               weight: 0
             -
               id: local_tasks_block
               label: Tabs
               label_display: '0'
-              region: left
+              region: top
               weight: 1
             -
               id: 'entity_field:node:body'
               label: Body
               label_display: 0
-              region: left
+              region: top
               weight: 5
             -
               id: 'block_content:pillars'

@@ -435,7 +435,7 @@ display:
         groups:
           1: AND
       display_description: ''
-      title: App
+      title: ''
       fields:
         field_ribbon:
           id: field_ribbon

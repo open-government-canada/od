@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-10-18 23:43+0000\n"
-"PO-Revision-Date: 2017-10-18 23:43+0000\n"
+"POT-Creation-Date: 2017-10-19 02:42+0000\n"
+"PO-Revision-Date: 2017-10-19 02:42+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -661,12 +661,6 @@ msgstr ""
 msgid "Program Activity Architecture"
 msgstr "Architecture des activités de programme"
 
-msgid "very good"
-msgstr "très bon"
-
-msgid "Not so poor"
-msgstr "Pas si pauvre"
-
 msgid ""
 "<p><strong> Travel Public servants - Explanation of Significant "
 "Variance:</strong>{{ public_servant_compared_fiscal_year_en "
@@ -1285,6 +1279,12 @@ msgstr "Déplier tous"
 msgid "Publishers"
 msgstr "Éditeurs"
 
+msgid "Not so poor"
+msgstr "Pas si pauvre"
+
+msgid "very good"
+msgstr "très bon"
+
 msgid ""
 "name_of_dataset:\n"
 "  '#type': textfield\n"
@@ -1832,4 +1832,10 @@ msgstr "Information ouverte"
 
 msgid "Edit facet"
 msgstr "Modifier la facette"
+
+msgid "User Contributed"
+msgstr "Contribution des utilisateurs"
+
+msgid "Search..."
+msgstr "Recherche..."
 
