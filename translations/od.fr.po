@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-10-19 23:54+0000\n"
-"PO-Revision-Date: 2017-10-19 23:54+0000\n"
+"POT-Creation-Date: 2017-10-20 02:27+0000\n"
+"PO-Revision-Date: 2017-10-20 02:27+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -195,6 +195,9 @@ msgstr "Abonnements"
 
 msgid "End Date"
 msgstr "Date d'achèvement"
+
+msgid "Vote"
+msgstr "Votez"
 
 msgid "External Comment"
 msgstr "Commentaire externes"
@@ -2278,7 +2281,7 @@ msgid "Find"
 msgstr "Trouvez"
 
 msgid "View all blogs"
-msgstr "Voir tous les blogs"
+msgstr "Consulter tous les blogues"
 
 msgid ": "
 msgstr " : "
@@ -2434,6 +2437,9 @@ msgstr "Contribution des utilisateurs"
 
 msgid "Search..."
 msgstr "Recherche..."
+
+msgid "Vote up!"
+msgstr "Votez!"
 
 msgid "We're sorry you ended up here. Sometimes a page gets moved or deleted."
 msgstr ""

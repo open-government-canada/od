@@ -578,7 +578,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_date_published }} '
+            text: "{% set date_published = field_date_published|trim|slice(0,10)%}\n{{ date_published }}"
             make_link: false
             path: ''
             absolute: false
@@ -648,7 +648,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ field_date_released }} '
+            text: "{% set field_date_released = field_date_released|trim|slice(0,10)%}\n{{ field_date_released }}"
             make_link: false
             path: ''
             absolute: false
