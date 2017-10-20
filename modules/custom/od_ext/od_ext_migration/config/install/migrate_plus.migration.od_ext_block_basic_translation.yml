@@ -892,7 +892,7 @@ source:
       title: 'Feedback'
       body: |
         <p>
-          <a class="btn btn-default" href="http://[site:url]/formulaire/faites-nous-part-de-vos-commentaires">
+          <a class="btn btn-default" href="[site:url]/formulaire/faites-nous-part-de-vos-commentaires">
           <span class="glyphicon glyphicon-comment mrgn-rght-sm">&nbsp;</span>
           Rétroaction
           <span class="wb-inv"> sur le site Web Gouvernment ouvert</span>

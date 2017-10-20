@@ -435,7 +435,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
 
           case 1969:
             $uri = 'http://open.canada.ca/fr/blogue/communication-repertoire-donnees-ouvertes-aidez-nous-a-prioriser-donnees-ouvertes-plus';
-            $title = 'Communication du répertoire de données ouvertes';
+            $title = 'Blogue : Répertoire de données ouvertes?';
             break;
 
           case 1970:
