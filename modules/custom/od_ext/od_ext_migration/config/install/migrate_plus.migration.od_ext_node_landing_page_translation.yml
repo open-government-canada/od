@@ -973,7 +973,7 @@ source:
           static_context: {  }
     -
       name: suggested_datasets
-      title: 'Suggest a Dataset'
+      title: 'Proposez un jeu de données'
       language: fr
       body: |
         <p>Y a-t-il des données du gouvernement du Canada que vous aimeriez
