@@ -226,7 +226,7 @@ class CommitmentNode extends SqlBase {
     $row->setSourceProperty('end_date', $end_date[0]);
     $row->setSourceProperty('tags', $tags);
     $row->setSourceProperty('pillars', $pillars['field_pillars_tid']);
-    $row->setSourceProperty('status', $status[0]);
+    $row->setSourceProperty('commitment_status', $status[0]);
     $row->setSourceProperty('paragraph_deliverable', $paragraph_deliverable);
     $row->setSourceProperty('metatags', serialize($metatags));
 

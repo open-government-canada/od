@@ -143,7 +143,7 @@ class SuggestedDatasetNode extends SqlBase {
     }
     $row->setSourceProperty('body', $body[0]);
     $row->setSourceProperty('department', $department[0]);
-    $row->setSourceProperty('status', $status[0]);
+    $row->setSourceProperty('dataset_status', $status[0]);
     $row->setSourceProperty('url', $url[0]);
     $row->setSourceProperty('likes', $likes);
 

@@ -77,7 +77,7 @@ process:
     plugin: migration
     migration: od_ext_db_taxonomy_term
     source: pillars
-  field_commitment_status/value: status
+  field_commitment_status/value: commitment_status
   field_commitment_status/format:
     plugin: default_value
     default_value: rich_text

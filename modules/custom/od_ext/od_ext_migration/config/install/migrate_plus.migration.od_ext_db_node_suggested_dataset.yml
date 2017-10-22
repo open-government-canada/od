@@ -38,7 +38,7 @@ process:
     plugin: default_value
     default_value: "published"
   field_suggested_dataset_dept/value: department
-  field_status/value: status
+  field_status/value: dataset_status
   field_status_link/uri: url
   field_status_link/title:
     plugin: default_value

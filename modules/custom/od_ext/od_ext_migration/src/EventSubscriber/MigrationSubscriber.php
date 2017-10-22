@@ -6,7 +6,7 @@ use Drupal\Core\Cache\CacheTagsInvalidatorInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\Path\AliasManagerInterface;
+use Drupal\Core\Path\AliasStorageInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Session\SessionManagerInterface;
 use Drupal\Core\Database\Connection;
@@ -109,11 +109,11 @@ class MigrationSubscriber implements EventSubscriberInterface {
   protected $tempstore;
 
   /**
-   * The alias manager.
+   * The path alias storage.
    *
-   * @var \Drupal\Core\Path\AliasManagerInterface
+   * @var \Drupal\Core\Path\AliasStorageInterface
    */
-  protected $aliasManager;
+  protected $aliasStorage;
 
   /**
    * Constructs a new MigrationSubscriber.
@@ -142,8 +142,8 @@ class MigrationSubscriber implements EventSubscriberInterface {
    *   The Panelizer service.
    * @param \Drupal\user\SharedTempStoreFactory $tempstore
    *   The tempstore factory.
-   * @param \Drupal\Core\Path\AliasManager $alias_manager
-   *   The alias manager.
+   * @param \Drupal\Core\Path\AliasStorageInterface $alias_storage
+   *   The path alias storage.
    */
   public function __construct(Connection $database,
                               EntityManagerInterface $entity_manager,
@@ -157,7 +157,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                               CacheTagsInvalidatorInterface $invalidator,
                               PanelizerInterface $panelizer,
                               SharedTempStoreFactory $tempstore,
-                              AliasManagerInterface $alias_manager) {
+                              AliasStorageInterface $alias_storage) {
     $this->database = $database;
     $this->entityManager = $entity_manager;
     $this->entityTypeManager = $entity_type_manager;
@@ -170,7 +170,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
     $this->invalidator = $invalidator;
     $this->panelizer = $panelizer;
     $this->tempstore = $tempstore;
-    $this->aliasManager = $alias_manager;
+    $this->aliasStorage = $alias_storage;
   }
 
   /**
@@ -576,6 +576,10 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'region' => 'content',
                 'weight' => 1,
               ],
+              'suggested_dataset' => [
+                'region' => 'top_right',
+                'weight' => -2,
+              ],
             ];
             foreach ($content_types as $type => $value) {
               $uuid = $this->uuidService;
@@ -685,10 +689,34 @@ class MigrationSubscriber implements EventSubscriberInterface {
         }
 
         switch ($sourceBid) {
+          case 'open_gov_partnership':
+          case 'open_gov_receive_updates':
+          case 'open_gov_across_canada':
+            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('open_data');
+            $items = $entity_subqueue->get('items')->getValue();
+            $items[] = ['target_id' => $destBid[0]];
+            $entity_subqueue->set('items', $items);
+            $entity_subqueue->save();
+            break;
+        }
+
+        switch ($sourceBid) {
           case 'open_gov_across_canada':
           case 'open_gov_receive_updates':
           case 'open_gov_partnership':
             $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('open_maps');
+            $items = $entity_subqueue->get('items')->getValue();
+            $items[] = ['target_id' => $destBid[0]];
+            $entity_subqueue->set('items', $items);
+            $entity_subqueue->save();
+            break;
+        }
+
+        switch ($sourceBid) {
+          case 'open_gov_receive_updates':
+          case 'open_gov_partnership':
+          case 'open_gov_across_canada':
+            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('access_info');
             $items = $entity_subqueue->get('items')->getValue();
             $items[] = ['target_id' => $destBid[0]];
             $entity_subqueue->set('items', $items);
@@ -709,7 +737,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
         switch ($sourceBid) {
           case 'contracts':
             if ($event->getMigration()->id() == 'od_ext_node_landing_page_translation') {
-              $this->aliasManager->save($destBid[0], '/search/contrats', 'fr');
+              $this->aliasStorage->save('/' . $destBid[0], '/search/contrats', 'fr');
             }
             break;
 

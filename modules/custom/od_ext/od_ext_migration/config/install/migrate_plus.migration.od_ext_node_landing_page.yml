@@ -2996,21 +2996,21 @@ source:
               id: 'block_content:open_gov_across_canada_license'
               label: 'License'
               label_display: visible
-              region: top_right
+              region: bottom_right
               view_mode: full
               weight: 5
             -
               id: 'block_content:open_gov_across_canada_dev_toolkit'
               label: 'Developers Toolkit: Code for Canada'
               label_display: visible
-              region: top_left
+              region: bottom_left
               view_mode: full
-              weight: 10
+              weight: 5
           id: panels_variant
-          label: Default
-          uuid: 5f833455-c610-41c5-ae17-149ada3d74a5
+          uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
+          label: 'Two Column'
           weight: 0
-          layout: wxt_topic
+          layout: bs_2col_bricked
           layout_settings:
             layout:
               wrapper: div
@@ -3028,13 +3028,13 @@ source:
               top_left:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
+                  col-md-6: col-md-6
                 add_region_classes: 1
                 attributes: ''
               top_right:
                 wrapper: div
                 classes:
-                  col-sm-6: col-sm-6
+                  col-md-6: col-md-6
                 add_region_classes: 1
                 attributes: ''
               middle:
@@ -3046,19 +3046,13 @@ source:
               bottom_left:
                 wrapper: div
                 classes:
-                  col-sm-4: col-sm-4
-                add_region_classes: 1
-                attributes: ''
-              bottom_middle:
-                wrapper: div
-                classes:
-                  col-sm-4: col-sm-4
+                  col-sm-6: col-sm-6
                 add_region_classes: 1
                 attributes: ''
               bottom_right:
                 wrapper: div
                 classes:
-                  col-sm-4: col-sm-4
+                  col-sm-6: col-sm-6
                 add_region_classes: 1
                 attributes: ''
               bottom:
@@ -3069,7 +3063,7 @@ source:
                 attributes: ''
           page_title: '[node:title]'
           storage_type: panelizer_default
-          storage_id: 'node:landing_page:full:wxt'
+          storage_id: 'node:landing_page:full:two_column'
           pattern: panelizer
           builder: ipe
           static_context: {  }
