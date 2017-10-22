@@ -126,3 +126,17 @@
   padding: 0px; }
   #quicktabs-suggested_ideas ul li {
     margin: 0px 15px 0px 0px; }
+
+.external-comment-external-comment-form {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.external-comment-external-comment-form .js-comment {
+  margin-bottom: 30px;
+  margin-bottom: 30px; }
+
+.external-comment-external-comment-form .field--name-title {
+  font-weight: bold;
+  font-size: 26px;
+  margin-top: 38px;
+  margin-bottom: 20px; }
