@@ -62,7 +62,7 @@ od_open_communities:
       label: 'Middle Left'
       classes:
         - col-sm-4
-    middle_middle:
+    middle_center:
       label: 'Middle Middle'
       classes:
         - col-sm-4

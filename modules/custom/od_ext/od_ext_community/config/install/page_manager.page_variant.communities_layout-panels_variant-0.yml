@@ -33,7 +33,7 @@ variant_settings:
       label_display: '0'
       views_label: ''
       items_per_page: none
-      region: middle_middle
+      region: middle_center
       weight: -2
       uuid: 94c28207-dffb-45b9-8d97-78e86a276bc6
       context_mapping: {  }
@@ -66,8 +66,29 @@ variant_settings:
         third_party_settings: {  }
         weight: 0
       region: top
-      weight: -2
+      weight: -10
       uuid: a38ad86b-bdcb-4f65-8b3b-5d2b3536ef99
+      context_mapping:
+        entity: taxonomy_term
+    5f8aff9f-c512-4ae6-b719-b55c899ef25f:
+      id: 'entity_field:taxonomy_term:field_links'
+      label: Links
+      provider: ctools_block
+      label_display: visible
+      formatter:
+        label: hidden
+        type: link
+        settings:
+          trim_length: 80
+          url_only: false
+          url_plain: false
+          rel: '0'
+          target: '0'
+        third_party_settings: {  }
+        weight: 0
+      region: middle_right
+      weight: 0
+      uuid: 5f8aff9f-c512-4ae6-b719-b55c899ef25f
       context_mapping:
         entity: taxonomy_term
   id: panels_variant
@@ -107,7 +128,7 @@ variant_settings:
           text-left: text-left
         add_region_classes: 1
         attributes: ''
-      middle_middle:
+      middle_center:
         wrapper: div
         classes:
           text-left: text-left
@@ -118,7 +139,7 @@ variant_settings:
         classes:
           text-left: text-left
         add_region_classes: 1
-        attributes: ''
+        attributes: well
       middle:
         wrapper: div
         classes:

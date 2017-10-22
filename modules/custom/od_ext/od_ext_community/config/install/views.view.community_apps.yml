@@ -61,14 +61,14 @@ display:
         type: views_bootstrap_grid
         options:
           grouping: {  }
-          row_class: ''
+          row_class: 'community-apps well'
           default_row_class: true
           alignment: horizontal
           columns: '3'
-          col_xs: col-xs-12
-          col_sm: col-sm-12
-          col_md: col-md-12
-          col_lg: col-lg-12
+          col_xs: col-xs-4
+          col_sm: col-sm-4
+          col_md: col-md-4
+          col_lg: col-lg-4
       row:
         type: fields
       fields:
@@ -82,8 +82,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<div class="text-right mrgn-bttm-md mrgn-tp-md h4"><span class="label label-info">{{ field_app_developer }}</span></div>'
             make_link: false
             path: ''
             absolute: false
@@ -139,9 +139,6 @@ display:
           id: title
           table: node_field_data
           field: title
-          settings:
-            link_to_entity: true
-          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -178,9 +175,9 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: mrgn-bttm-md
           element_default_classes: true
           empty: ''
           hide_empty: false
@@ -188,6 +185,8 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -198,6 +197,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          plugin_id: field
         body:
           id: body
           table: node__body
@@ -208,7 +208,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: ''
             make_link: false
             path: ''
@@ -224,7 +224,7 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 200
+            max_length: 220
             word_boundary: true
             ellipsis: true
             more_link: false
@@ -370,10 +370,10 @@ display:
       display_extenders: {  }
       block_description: 'Community Apps'
       block_category: 'Open Data Taxonomy'
+      rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - 'user.node_grants:view'

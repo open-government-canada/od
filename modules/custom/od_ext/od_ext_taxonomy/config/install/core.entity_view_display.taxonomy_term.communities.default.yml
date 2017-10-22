@@ -2,11 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.taxonomy_comment.default
+    - field.field.taxonomy_term.communities.field_links
     - field.field.taxonomy_term.communities.field_taxonomy_comments
     - taxonomy.vocabulary.communities
   module:
     - comment
+    - link
+    - panelizer
     - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.communities.default
 targetEntityType: taxonomy_term
 bundle: communities
@@ -19,8 +29,20 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_taxonomy_comments:
+  field_links:
+    type: link
     weight: 1
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_taxonomy_comments:
+    weight: 2
     label: above
     settings:
       view_mode: default

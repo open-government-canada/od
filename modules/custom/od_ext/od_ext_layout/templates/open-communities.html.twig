@@ -52,27 +52,24 @@
   </div>
 
   <div class="col-md-4">
-    <h4>{{ 'Open Data'|t }}</h4>
-    {% if middle_left.content %}
+    <h2>{{ 'Open Data'|t }}</h2>
     <{{ middle_left.wrapper }}{{ middle_left.attributes }}>
       {{ middle_left.content }}
     </{{ middle_left.wrapper }}>
-    {% endif %}
   </div>
   <div class="col-md-4">
-    <h4>{{ 'Open Information'|t }}</h4>
-    {% if middle_center.content %}
+    <h2>{{ 'Open Information'|t }}</h2>
     <{{ middle_center.wrapper }}{{ middle_center.attributes }}>
       {{ middle_center.content }}
     </{{ middle_center.wrapper }}>
-    {% endif %}
   </div>
   <div class="col-md-4">
-    {% if middle_right.content %}
-    <{{ middle_right.wrapper }}{{ middle_right.attributes }}>
-      {{ middle_right.content }}
-    </{{ middle_right.wrapper }}>
-    {% endif %}
+    <h2></h2>
+    <div class="well">
+      <{{ middle_right.wrapper }}{{ middle_right.attributes }}>
+        {{ middle_right.content }}
+      </{{ middle_right.wrapper }}>
+    </div>
   </div>
 
   {% if middle.content %}
@@ -104,7 +101,7 @@
   </div>
 
   {% if bottom.content %}
-  <h4>{{ 'Applications'|t }}</h4>
+  <h2>{{ 'Applications'|t }}</h2>
   <{{ bottom.wrapper }}{{ bottom.attributes }}>
     {{ bottom.content }}
   </{{ bottom.wrapper }}>

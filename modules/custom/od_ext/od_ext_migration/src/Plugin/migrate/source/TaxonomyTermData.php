@@ -146,18 +146,35 @@ class TaxonomyTermData extends SqlBase {
 
     // Links.
     $links = $this->select('field_data_field_taxonomy_links', 'db')
-      ->fields('db', ['field_taxonomy_links_url', 'field_taxonomy_links_title'])
+      ->fields('db', [
+        'field_taxonomy_links_url',
+        'field_taxonomy_links_title',
+      ])
       ->condition('entity_id', $row->getSourceProperty('tid'))
       ->condition('revision_id', $row->getSourceProperty('tid'))
       ->condition('language', $row->getSourceProperty('language'))
       ->condition('bundle', $vid)
       ->execute()
-      ->fetchAllAssoc('links');
+      ->fetchAll();
 
     $row->setSourceProperty('vid', $vid);
     $row->setSourceProperty('parent_id', $parent_id[0]);
 
-    $row->setSourceProperty('links', $links);
+    if (count($links) > 0) {
+      foreach ($links as $key => &$link) {
+        $link['title'] = $link['field_taxonomy_links_title'];
+        $link['url'] = $link['field_taxonomy_links_url'];
+        // Fix www links.
+        if (strpos($link['url'], 'www') == 0 && (!strpos($link['url'], 'http://wwww'))) {
+          $link['url'] = 'http://' . $link['url'];
+        }
+        unset($link['field_taxonomy_links_url']);
+        unset($link['field_taxonomy_links_title']);
+        $links[$key] = $link;
+      }
+
+      $row->setSourceProperty('links', $links);
+    }
 
     return parent::prepareRow($row);
   }
