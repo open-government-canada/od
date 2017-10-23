@@ -309,7 +309,7 @@
             },
             "drupal/votingapi": {
                 "Enter drupal/votingapi patch #2731101 description here":
-                "https://www.drupal.org/files/issues/votingapi-views-relationships-for-vote-result-2731101-12_0.patch",
+                "https://www.drupal.org/files/issues/views_relationship_for-2731101-15.patch",
                 "Enter drupal/votingapi patch #2846341 description here":
                 "https://www.drupal.org/files/issues/2846341-anonymous-votes-5.patch",
                 "Enter drupal/votingapi patch #2872435 description here":
