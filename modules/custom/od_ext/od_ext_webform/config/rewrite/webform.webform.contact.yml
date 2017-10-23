@@ -1,3 +1,4 @@
+config_rewrite: replace
 langcode: en
 status: open
 dependencies:
@@ -97,10 +98,6 @@ access:
     roles:
       - anonymous
       - authenticated
-      - anonymous
-      - authenticated
-      - anonymous
-      - authenticated
     users: {  }
     permissions: {  }
   view_any:
@@ -152,7 +149,7 @@ handlers:
       from_options: {  }
       from_name: default
       subject: '[webform_submission:values:subject:value]'
-      body: '[webform_submission:values:message:value]'
+      body: '&lt;p&gt;Submitted values are:&lt;/p&gt; [webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -183,7 +180,7 @@ handlers:
       from_options: {  }
       from_name: '[webform_submission:values:subject:value]'
       subject: '[webform_submission:values:subject:value]'
-      body: '[webform_submission:values:message:value]'
+      body: '&lt;p&gt;Submitted values are:&lt;/p&gt; [webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
