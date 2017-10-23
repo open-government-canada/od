@@ -47,6 +47,7 @@ migration_dependencies:
     - od_ext_db_taxonomy_term
     - od_ext_db_user
     - od_ext_db_node_commitment_translation
+    - od_ext_db_node_blog_translation
     - od_ext_db_node_consultation_translation
     - od_ext_db_node_webform_translation
-    - od_ext_db_node
+    - od_ext_db_node_page

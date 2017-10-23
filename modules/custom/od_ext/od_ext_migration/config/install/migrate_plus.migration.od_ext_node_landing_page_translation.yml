@@ -938,7 +938,8 @@ source:
               top_right:
                 wrapper: div
                 classes:
-                  col-md-6: col-md-6
+                  col-sm-6: col-sm-6
+                  mrgn-tp-lg: mrgn-tp-lg
                 add_region_classes: 1
                 attributes: ''
               middle:
