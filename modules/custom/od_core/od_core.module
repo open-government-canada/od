@@ -23,6 +23,9 @@ function od_core_views_query_alter(ViewExecutable $view, QueryPluginBase $query)
     if (!empty($view->relationship['flag_relationship'])) {
       $query->getTableInfo('flagging_node_field_data')['join']->field .= '::bigint';
     }
+    if (!empty($view->relationship['node_vote_result_vote_count'])) {
+      $query->getTableInfo('votingapi_result_node_field_data')['join']->field .= '::bigint';
+    }
   }
 }
 
