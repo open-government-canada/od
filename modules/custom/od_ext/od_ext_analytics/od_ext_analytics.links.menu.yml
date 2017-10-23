@@ -1,0 +1,6 @@
+od_ext_analytics.analytics:
+  title: 'Analytics'
+  parent: system.admin_reports
+  description: 'Analytics with corresponding visualizations.'
+  route_name: od_ext_analytics.analytics
+  weight: -50

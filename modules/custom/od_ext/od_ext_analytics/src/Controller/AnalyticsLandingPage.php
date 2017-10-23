@@ -15,7 +15,7 @@ class AnalyticsLandingPage extends ControllerBase {
    */
   public function analytics() {
 
-    return new RedirectResponse('analytics/summary');
+    return new RedirectResponse('analytics/visualizations');
   }
 
 }
