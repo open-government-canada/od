@@ -4,3 +4,33 @@
  * @file
  * Contains od_ext_suggested_dataset.module.
  */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function od_ext_suggested_dataset_page_attachments(array &$page) {
+  $language = \Drupal::languageManager()->getCurrentLanguage();
+  if ($language->getId() == 'fr') {
+    $path = \Drupal::service('path.alias_manager')->getPathByAlias('/jeux-de-donnees-suggeres', $language->getId());
+  }
+  else {
+    $path = \Drupal::service('path.alias_manager')->getPathByAlias('/suggested-datasets', $language->getId());
+  }
+
+  $routeMatch = \Drupal::routeMatch();
+  $node = $routeMatch->getParameter('node');
+  if (preg_match('/node\/(\d+)/', $path, $matches) && is_object($node)) {
+    if ($matches[1] = $routeMatch->getParameter('node')->nid->value) {
+      $routeMatch->getRouteObject()->setOption('_no_big_pipe', TRUE);
+    }
+  }
+
+}
+
+function od_ext_suggested_dataset_module_implements_alter(&$implementations, $hook) {
+  if ($hook == 'page_attachments') {
+    $group = $implementations['big_pipe'];
+    unset($implementations['big_pipe']);
+    $implementations['big_pipe'] = $group;
+  }
+}
