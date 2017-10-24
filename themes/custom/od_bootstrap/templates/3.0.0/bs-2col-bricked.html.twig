@@ -49,19 +49,23 @@
   </{{ middle.wrapper }}>
   {% endif %}
 
-<div class="wxt-eqht">
-  {% if bottom_left.content %}
-  <{{ bottom_left.wrapper }}{{ bottom_left.attributes }}>
-    {{ bottom_left.content }}
-  </{{ bottom_left.wrapper }}>
-  {% endif %}
+{% if (bottom_left.content) or (bottom_right.content) %}
+  <div class="wxt-eqht col-md-12">
+    <div class="row">
+      {% if bottom_left.content %}
+      <{{ bottom_left.wrapper }}{{ bottom_left.attributes }}>
+        {{ bottom_left.content }}
+      </{{ bottom_left.wrapper }}>
+      {% endif %}
 
-  {% if bottom_right.content %}
-  <{{ bottom_right.wrapper }}{{ bottom_right.attributes }}>
-    {{ bottom_right.content }}
-  </{{ bottom_right.wrapper }}>
-  {% endif %}
-</div>
+      {% if bottom_right.content %}
+      <{{ bottom_right.wrapper }}{{ bottom_right.attributes }}>
+        {{ bottom_right.content }}
+      </{{ bottom_right.wrapper }}>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
 
   {% if bottom.content %}
   <{{ bottom.wrapper }}{{ bottom.attributes }}>

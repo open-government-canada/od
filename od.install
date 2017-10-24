@@ -30,7 +30,7 @@ function _od_setup_base_configurations() {
     ->set('mail', 'od-do@canada.ca')
     ->save();
 
-  $config = \Drupal::languageManager()->getLanguageConfigOverride('en', 'system.site');
+  $config = \Drupal::languageManager()->getLanguageConfigOverride('fr', 'system.site');
   $config->set('name', 'Gouvernement ouvert')
     ->save();
 
