@@ -160,6 +160,7 @@ source:
       language: en
       body: "<p>Search open data that is relevant to Canadians, learn how to work\nwith datasets, and see what people have done with open data across\nthe country.</p>\n"
       alias: /open-data
+      queue: open_data
       metatags:
         -
           title: '[node:title]'
@@ -258,6 +259,13 @@ source:
               region: bottom_right
               view_mode: full
               weight: 15
+            -
+              id: 'views_block:blocks-block_1'
+              label: Spotlight
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -510,6 +518,7 @@ source:
       language: en
       body: "<p>The goal of Open information is to provide easy access to all of the\nGovernment of Canada’s information. This provides Canadians with\ngreater transparency of government programs, activities, publications\nand spending.</p>\n"
       alias: /open-information
+      queue: access_info
       metatags:
         -
           title: '[node:title]'
@@ -615,6 +624,13 @@ source:
               region: bottom_left
               view_mode: full
               weight: 20
+            -
+              id: 'views_block:blocks-block_1'
+              label: Spotlight
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -872,6 +888,10 @@ source:
         application development, or other purposes as allowed under the
         licence.</p>
       alias: /about-open-maps
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -963,6 +983,10 @@ source:
       language: en
       body: "<p>Is there Government of Canada data that you would like to see? Let\nus know your ideas by using our\n<a href=\"[site:url]/forms/suggest-dataset\">Suggest a\nDataset form</a>, but first search below to see if someone else has\nalready requested the same dataset. If you find it, you can check on\nits status and add your request by clicking on thumbs up.</p>\n"
       alias: /suggested-datasets
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1042,6 +1066,10 @@ source:
       language: en
       body: "<p>A policy on the mandatory publication of contracts over $10,000 was\nannounced by the Government of Canada in 2004 and updated in 2008 to\ninclude disclosure of contract amendments valued over $10,000. For\nfurther information on the disclosure of contracts please see the\n<a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?section=text&amp;id=14676\">\n<em>Guidelines on the Proactive Disclosure of Contracts</em></a>.</p>\n\n<p>Information on contracts issued/amended by or on behalf of federal\ninstitutions can be searched here using keyword, institution, quarter,\nand year. Effective November 2014, contracts awarded by the federal\ngovernment in will be available for review and updated every three\nmonths.</p>\n\n<p>The Treasury Board\n<a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?section=text&amp;id=14494\">\nContracting Policy</a> outlines the rules and principles governing\ngovernment contracting. The objective is to procure contracting of\ngoods and services in a manner that enhances access, competition and\nfairness and results in best value to Canada. For further information\non federal government procurement, please visit\n<a href=\"https://buyandsell.gc.ca/\">Buyandsell.gc.ca</a>.</p>\n\n<p>This site adheres to <em>Access to Information Act</em> and\n<em>Privacy Act</em> requirements.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b\">\nDownload datasets of the Proactive Disclosure - Contracts</a>.</p>\n"
       alias: /search/contracts
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1168,6 +1196,10 @@ source:
       language: en
       body: "<p>On October 21, 2005, the Government announced its commitment to\nproactively disclose the awarding of grants and contributions over\n$25,000 as part of its Management Improvement Agenda.</p>\n\n<p>The rules and principles governing government grants and\ncontributions are outlined in the Treasury Board\n<a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=13525\">\nPolicy on Transfer Payments</a>. Transfer payments are transfers of\nmoney, goods, services or assets made from an appropriation to\nindividuals, organizations or other levels of government, without the\nfederal government directly receiving goods or services in return,\nbut which may require the recipient to provide a report or other\ninformation subsequent to receiving payment. These expenditures are\nreported in the\n<a href=\"http://www.tpsgc-pwgsc.gc.ca/recgen/txt/72-eng.html\">\nPublic Accounts of Canada</a>. The major types of transfer payments are\ngrants, contributions and 'other transfer payments'.</p>\n\n<p>Included in this category, but not to be reported under proactive\ndisclosure of awards, are (1) transfers to other levels of government\nsuch as Equalization payments as well as Canada Health and Social\nTransfer payments. (2) Grants and contributions reallocated or\notherwise redistributed by the recipient to third parties; and (3)\ninformation that would normally be withheld under the\n<a href=\"http://laws-lois.justice.gc.ca/eng/acts/A-1/index.html\">\n<em>Access to Information Act</em></a> and the\n<a href=\"http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html\">\n<em>Privacy Act</em></a>.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/432527ab-7aac-45b5-81d6-7597107a7013\">\nDownload datasets of the Proactive Disclosure - Grants and\nContributions</a>.</p>\n"
       alias: /search/grants
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1276,6 +1308,10 @@ source:
       language: en
       body: "<p>On February 25,&nbsp;2004, the government announced the mandatory\npublication of information concerning the reclassification of positions\nin the Public Service of Canada.</p>\n\n<p>This web site provides information on the reclassification of\npositions by department and agencies on a quarterly basis.</p>\n\n<p>The rules and principles governing the reclassification of positions\nare outlined in the Appendix I of the&nbsp;\n<a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=28700\">\nDirective on Classification</a>.</p>\n\n<p>Reclassification of positions in the Public Service of Canada is an\nimportant and necessary business management option. However, when\ncontemplating changes to a position that may result in\nreclassification, management must endeavour to ensure the proper,\neffective and efficient use of public money. The cost implication\nassociated with upward reclassification must be known, transparent and\nsupport accountability for classification decisions.</p>\n\n<p><a href=\"http://www.tbs-sct.gc.ca/hgw-cgf/finances/rgs-erdg/pd-dp/index-eng.asp\">\nGovernment-Wide Position Reclassification Departmental Web Sites</a>\ninformation on these websites will be updated every three months,\nstarting in October&nbsp;2004.</p>\n\n<p>Please note that information that would normally be withheld under\nthe&nbsp;<a href=\"http://laws-lois.justice.gc.ca/eng/acts/A-1/index.html\">\nAccess to Information Act</a>&nbsp;or the&nbsp;\n<a href=\"http://laws-lois.justice.gc.ca/eng/acts/P-21/index.html\">\nPrivacy Act</a>&nbsp;does not appear on this web site.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/f132b8a6-abad-43d6-b6ad-2301e778b1b6\">\nDownload datasets of the Proactive Disclosure - Position\nReclassification</a>.</p>\n"
       alias: /search/reclassification
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1378,6 +1414,10 @@ source:
       language: en
       body: "<p>As per the <a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855\">\nDirective on the Management of Expenditures on Travel, Hospitality and\nConferences</a>, here are the annual reports of expenditures on travel,\nhospitality and conference:</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/4ae27978-0931-49ab-9c17-0b119c0ba92f\">\nDownload datasets of the Proactive Disclosure - Annual Expenditures on\nTravel, Hospitality and Conferences</a>.</p>\n"
       alias: /search/travela
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1474,6 +1514,10 @@ source:
       language: en
       body: "<p>On December 12, 2003, the Prime Minister announced a new policy on\nthe mandatory publication of travel and hospitality expenses for\nselected government officials.</p>\n\n<p>The rules and principles governing travel are outlined in the\n<a href=\"http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-eng.asp\">\nPolicies for Ministers' Offices</a> and in Treasury Board's\n<a href=\"http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php\">\nTravel Directive</a> and <a href=\"http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php\">\nSpecial Travel Authorities</a>. The purpose of these instruments is to\nprovide for the reimbursement of reasonable expenses necessarily\nincurred during travel on government business.</p>\n\n<p>The Government of Canada extends hospitality in accordance with the\nrules and principles outlined in the Guidelines for Ministers' Offices\nand the Treasury Board <a href=\"http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=19855\">\nDirective on the Management of Expenditures on Travel, Hospitality and\nConferences</a>. The objective of the policy is to ensure that\nhospitality is extended in an economical and affordable way when it\nfacilitates government business or is considered desirable as a matter\nof courtesy and protocol.</p>\n\n<p>The information on this web site will be updated every three months,\nbeginning on March 31, 2004.</p>\n\n<p>Please note that information that would normally be withheld under\nthe <a href=\"http://laws-lois.justice.gc.ca/eng/acts/a-1/index.html\"><em>\nAccess to Information Act</em></a> or the <a href=\"http://laws-lois.justice.gc.ca/eng/acts/p-21/index.html\"><em>\nPrivacy Act</em></a> does not appear on this web site.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/b9f51ef4-4605-4ef2-8231-62a2edda1b54\">\nDownload datasets of the Proactive Disclosure - Hospitality\nExpenses</a>.</p>\n"
       alias: /search/hospitalityq
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1576,6 +1620,10 @@ source:
       language: en
       body: "<p>On December 12, 2003, the Prime Minister announced a new policy on\nthe mandatory publication of travel and hospitality expenses for\nselected government officials.</p>\n\n<p>The rules and principles governing travel are outlined in the\n<a href=\"http://www.tbs-sct.gc.ca/pubs_pol/hrpubs/mg-ldm/2011/pgmo-pldcmtb-eng.asp\">\nPolicies for Ministers' Offices</a> and in Treasury Board's\n<a href=\"http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php\">\nTravel Directive</a> and\n<a href=\"http://www.njc-cnm.gc.ca/directive/travel-voyage/index-eng.php\">\nSpecial Travel Authorities</a>. The purpose of these instruments is to\nprovide for the reimbursement of reasonable expenses necessarily\nincurred during travel on government business.</p>\n\n<p>Please note that information that would normally be withheld under\nthe <a href=\"http://laws-lois.justice.gc.ca/eng/acts/a-1/index.html\">\n<em>Access to Information Act</em></a> or the\n<a href=\"http://laws-lois.justice.gc.ca/eng/acts/p-21/index.html\">\n<em>Privacy Act</em></a> does not appear on this web site.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/009f9a49-c2d9-4d29-a6d4-1a228da335ce\">\nDownload datasets of the Proactive Disclosure - Travel\nExpenses</a>.</p>\n"
       alias: /search/travelq
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1678,6 +1726,10 @@ source:
       language: en
       body: "<p>The Public Servants Disclosure Protection Act (PSDPA) offers federal\npublic sector employees and other persons a secure and confidential\nprocess for the disclosure of serious wrongdoing in the workplace, as\nwell as protection against reprisal.</p>\n\n<p>The PSDPA defines wrongdoing as follows:</p>\n<ul><li>a contravention of any Act of Parliament or of the legislature\nof a province, or of any regulations made under any such Act;</li>\n<li>a misuse of public funds or a public asset;</li>\n<li>a gross mismanagement;</li>\n<li>a serious breach of a code of conduct;</li>\n<li>an act or omission that creates a substantial and specific danger\nto the life, health or safety of persons, or to the environment;</li>\n<li>knowingly directing or counselling a person to commit a\nwrongdoing.</li>\n</ul><p><span style=\"line-height: 1.4375;\">Under paragraph 1(c) of the\nPSDPA, chief executives shall promptly provide public access to\ninformation on founded wrongdoing.</span></p>\n\n<p>Information to which public access is provided must describe the\nwrongdoing, including the identity of the person found to have\ncommitted it if necessary in order to describe the wrongdoing\nadequately; the recommendations, if any, set out in any report made to\nthe chief executive; and any corrective action taken by the chief\nexecutive or the reasons why no corrective action was taken.</p>\n\n<p><a href=\"http://open.canada.ca/data/en/dataset/6e75f19c-d19d-48aa-984e-609c8d9bc403\">\nDownload datasets of the Proactive Disclosure - Acts of Founded\nWrongdoing</a>.</p>\n"
       alias: /search/wrongdoing
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1780,6 +1832,10 @@ source:
       language: en
       body: "<p>Search the summaries of completed Access to Information (ATI) requests\nto find information about ATI requests previously made to the Government\nof Canada. If you find a summary of interest, you can request a copy of\nthe records at no cost. For additional information, please see the\n“<a href=\"/en/content/about-access-information-requests\">About Access to\nInformation Requests</a>” webpage.</p>\n<p>Download datasets of the <a href=\"http://data.gc.ca/data/en/dataset/0797e893-751e-4695-8229-a5066e4fe43c\">\nsummaries of completed access to information requests</a>.</p>\n<p>If you don’t find what you are looking for you can request additional\ngovernment records under an institution’s control by contacting the\ninstitution’s <a href=\"http://www.tbs-sct.gc.ca/atip-aiprp/apps/coords/index-eng.ASP\">\nAccess to Information and Privacy Coordinator</a>.</p>\n<p><strong>Enter keywords (e.g. institution, topic, field of interest,\netc.)</strong><br>*All information provided will incorporate the\nnecessary exemptions and exclusions as per the <em>Access to Information\nAct</em> and the <em>Privacy Act</em>.</p>\n"
       alias: /search/ati
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1895,6 +1951,10 @@ source:
       language: en
       body: "<p class=\"margin-top-large\">One of the benefits of Open Data is the\nability to create applications. On this page you will find mobile and\nweb-based applications, created within the Government of Canada, the\npublic, and Canadian Open Data Experience (CODE) winners and\nparticipants. Applications submitted by the public have incorporated\ndata licensed by the Government of Canada under the\n<a href=\"/en/open-government-licence-canada\"><em>Open Government\nLicence</em></a>. Click on the app, log in, and let us know what you\nthink of it by providing a rating.</p>\n\n<p>The applications created by the public have been developed, and are\noperated and owned by third parties. The Government of Canada does not\nendorse, approve, or certify the applications or the developers, nor\ndoes it make any representation or warranty that the information based\non which the applications have been developed, including information\nlicensed under the <em>Open Government Licence</em>, is accurate,\ncomplete, or correct. Your use of the applications and the information\ncontained therein, including information licensed under the\n<em>Open Government Licence</em>, is at your sole risk.</p>\n"
       alias: /apps
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2076,6 +2136,10 @@ source:
         </div>
         </div>
       alias: /proactive-disclosure
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2153,6 +2217,10 @@ source:
         consultations, starting with those that opened most recently and see
         what consultations have been hearing from Canadians.</p>
       alias: /consultations
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2249,6 +2317,10 @@ source:
       language: en
       body: "<p>This page is currently under construction.</p>\n"
       alias: /commitments
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2342,6 +2414,11 @@ source:
         continued compliance and promotion of the Access to Information Act and
         related activities.</p>
       alias: /access-to-information
+      queue: access_info
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2414,6 +2491,13 @@ source:
               region: bottom_left
               view_mode: full
               weight: 10
+            -
+              id: 'views_block:blocks-block_1'
+              label: Spotlight
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -2489,6 +2573,10 @@ source:
         you think</a>.</p>
       alias: /open-maps
       queue: open_maps
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2656,6 +2744,10 @@ source:
         Canadians, so we believe you should know what we’re doing
         behind-the-scenes.</p>
       alias: /open-by-default-pilot
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2831,6 +2923,10 @@ source:
         <a href="[site:url]/open-government-licence-canada">Open Government
         Licence</a>.</p>
       alias: /about-open-by-default
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2943,6 +3039,10 @@ source:
         </div>
       alias: /maps/open-data-canada
       queue: front_page
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2991,7 +3091,7 @@ source:
               id: 'block_content:open_gov_across_canada_toolkit'
               label: 'Open Government Toolkit'
               label_display: visible
-              region: top_left
+              region: bottom_left
               view_mode: full
               weight: 5
             -
@@ -3007,7 +3107,7 @@ source:
               label_display: visible
               region: bottom_left
               view_mode: full
-              weight: 5
+              weight: 10
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -3126,6 +3226,10 @@ source:
           specific to the Open Government Action Plan 2.0.</li>
         </ul>
       alias: /consultations/consultation-plan-discussion-action-plan-20-discussions
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -3203,6 +3307,10 @@ source:
         review the <a href="/en/frequently-asked-questions">frequently asked
         questions</a>.</p>
       alias: /search/inventory
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager

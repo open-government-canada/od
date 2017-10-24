@@ -166,6 +166,7 @@ source:
         voir ce que les citoyens ont fait avec les données ouvertes dans
         l’ensemble du pays</p>
       alias: /donnees-ouvertes
+      queue: open_data
       metatags:
         -
           title: '[node:title]'
@@ -264,6 +265,13 @@ source:
               region: bottom_right
               view_mode: full
               weight: 15
+            -
+              id: 'views_block:blocks-block_1'
+              label: Projecteur
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -524,6 +532,7 @@ source:
         transparence quant aux programmes, activités, publications et dépenses
         du gouvernement.</p>
       alias: /information-ouverte
+      queue: access_info
       metatags:
         -
           title: '[node:title]'
@@ -629,6 +638,13 @@ source:
               region: bottom_left
               view_mode: full
               weight: 20
+            -
+              id: 'views_block:blocks-block_1'
+              label: Projecteur
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -699,6 +715,10 @@ source:
         everyone. This means giving greater access to government data and
         information to the Canadian public and the businesses community.</p>
       alias: /apropos-gouvernement-ouvert
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -887,6 +907,10 @@ source:
         recherche et de développement d’applications, ou d’autres activités
         autorisées, en vertu de la <a href="http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada">licence du gouvernement ouvert</a>.</p>
       alias: /au-sujet-cartes-ouvertes
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -984,6 +1008,10 @@ source:
         vérifier son état et ajouter votre proposition en cliquant sur « en
         accord ».</p>
       alias: /jeux-de-donnees-suggeres
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1096,6 +1124,10 @@ source:
         <p><a href="http://open.canada.ca/data/fr/dataset/d8f85d91-7dec-4fd1-8055-483b77225d8b">
         Téléchargez les jeux de données de la divulgation des contrats</a>.</p>
       alias: /search/contracts
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1260,6 +1292,10 @@ source:
         Téléchargez les jeux de données de la divulgation des octrois de
         subventions et de contributions</a>.</p>
       alias: /search/grants
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1402,6 +1438,10 @@ source:
         Téléchargez les jeux de données de la divulgation des reclassifications
         des postes</a>.</p>
       alias: /search/reclassification
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1511,6 +1551,10 @@ source:
         Download datasets of the Proactive Disclosure - Annual Expenditures on
         Travel, Hospitality and Conferences</a>.</p>
       alias: /search/travela
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1641,6 +1685,10 @@ source:
         <p><a href="http://ouvert.canada.ca/data/fr/dataset/b9f51ef4-4605-4ef2-8231-62a2edda1b54">
         Téléchargez les jeux de données de la divulgation des frais d'accueil</a>.</p>
       alias: /search/hospitalityq
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1768,6 +1816,10 @@ source:
         Téléchargez les jeux de données de la divulgation des frais de
         voyage</a>.</p>
       alias: /search/travelq
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -1900,6 +1952,10 @@ source:
         Téléchargez les jeux de données de la divulgation des constatations
         d'actes répréhensibles</a>.</p>
       alias: /search/wrongdoing
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2022,6 +2078,10 @@ source:
         obligatoires en vertu de la <em>Loi sur l’accès à l’information</em> et
         de la <em>Loi sur la protection des renseignements personnels</em>.</p>
       alias: /search/ati
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2157,6 +2217,10 @@ source:
         qu’elles comportent, y compris l’information sous licence en vertu de
         la <em>Licence du gouvernement ouvert</em>, à vos propres risques.</p>
       alias: /apps
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2353,6 +2417,10 @@ source:
         </div>
         </div>
       alias: /divulgation-proactive
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2431,6 +2499,10 @@ source:
         celles qui ont débuté récemment. Voyez ce que les Canadiens ont dit lors
         des consultations.</p>
       alias: /consultations
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2528,6 +2600,10 @@ source:
       body: |
         <p>Cette page est actuellement en construction.</p>
       alias: /engagements
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2621,6 +2697,11 @@ source:
         est sa conformité constante avec la Loi sur l’accès à l’information, la
         promotion de celle-ci et les activités connexes.</p>
       alias: /acces-linformation
+      queue: access_info
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2693,6 +2774,13 @@ source:
               region: bottom_left
               view_mode: full
               weight: 10
+            -
+              id: 'views_block:blocks-block_1'
+              label: Projecteur
+              label_display: 0
+              region: bottom
+              view_mode: full
+              weight: 0
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -2770,6 +2858,10 @@ source:
         faites-nous part de vos commentaires.</a></p>
       alias: /cartes-ouvertes
       queue: open_maps
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -2938,6 +3030,10 @@ source:
         travaille pour les Canadiens et donc nous croyons que vous devriez
         savoir ce que nous faisons en arrière-scène.</p>
       alias: /pilote-ouverture-par-defaut
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -3132,6 +3228,10 @@ source:
         veuillez consulter la <a href="http://ouvert.canada.ca/fr/licence-du-gouvernement-ouvert-canada">
         licence du gouvernement ouvert</a> du Canada.</p>
       alias: /au-sujet-pilote-ouvert-par-defaut
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -3255,6 +3355,10 @@ source:
         </div>
       alias: /cartes/donnees-ouvertes-au-canada
       queue: front_page
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -3303,7 +3407,7 @@ source:
               id: 'block_content:open_gov_across_canada_toolkit'
               label: 'Boîte à outils du gouvernement ouvert'
               label_display: visible
-              region: top_left
+              region: bottom_left
               view_mode: full
               weight: 5
             -
@@ -3319,7 +3423,7 @@ source:
               label_display: visible
               region: bottom_left
               view_mode: full
-              weight: 5
+              weight: 10
           id: panels_variant
           uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
           label: 'Two Column'
@@ -3446,6 +3550,10 @@ source:
           ouvert 2.0.</li>
         </ul>
       alias: /consultations/plan-daction-du-canada-pour-un-gouvernement-ouvert
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
@@ -3526,6 +3634,10 @@ source:
         gouvernement du Canada, consultez la <a href="/fr/contenu/foire-aux-questions">
         foire aux questions</a>.</p>
       alias: /search/inventory
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
       panelizer:
         -
           view_mode: page_manager
