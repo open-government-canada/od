@@ -160,9 +160,9 @@ class UserImport extends SqlBase {
             break;
 
           case 4:
-            // Role: tbs_editor => administrator @ site wide.
+            // Role: tbs_editor => editor @ site wide.
             // Role: tbs_editor => department-tbs_editor @ groups.
-            $role = 'administrator';
+            $role = 'editor';
             break;
 
           case 5:
