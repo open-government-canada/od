@@ -736,8 +736,9 @@ class MigrationSubscriber implements EventSubscriberInterface {
       if (!empty($sourceBid)) {
         switch ($sourceBid) {
           case 'contracts':
+
             if ($event->getMigration()->id() == 'od_ext_node_landing_page_translation') {
-              $this->aliasStorage->save('/' . $destBid[0], '/search/contrats', 'fr');
+              $this->aliasStorage->save('/node/' . $destBid[0], '/search/contrats', 'fr');
             }
             break;
 

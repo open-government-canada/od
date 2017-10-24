@@ -53,9 +53,8 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 100
           offset: 0
       style:
         type: table
@@ -535,7 +534,8 @@ display:
     display_title: 'Suggested Datasets'
     position: 1
     display_options:
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender: {  }
       display_description: ''
       block_description: 'Suggested Datasets'
       rendering_language: '***LANGUAGE_entity_translation***'
