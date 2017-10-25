@@ -345,7 +345,7 @@ source:
       language: 'fr'
       title: 'Foire aux questions'
       body: |
-        <h2 class="h4"><a href="[site:url]/contenu/foire-aux-questionss">
+        <h2 class="h4"><a href="[site:url]/contenu/foire-aux-questions">
         Foire aux questions</a>
         </h2>
         <p>Réponses aux questions courantes concernant les activités sur le

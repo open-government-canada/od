@@ -833,6 +833,28 @@ class MigrationSubscriber implements EventSubscriberInterface {
         }
       }
     }
+
+    if ($event->getMigration()->id() == 'od_ext_db_taxonomy_term') {
+      $name = $event->getRow()->getSourceProperty('translated_name');
+      $description = $event->getRow()->getSourceProperty('translated_description');
+      $destBid = $event->getDestinationIdValues();
+      $storageTerm = $this->entityTypeManager->getStorage('taxonomy_term');
+
+      if (!empty($name)) {
+        $term = $storageTerm->load($destBid[0]);
+        if ($term && !$term->hasTranslation('fr')) {
+          $entity_array = $term->toArray();
+          $translated_fields = [];
+          $translated_fields['name'] = $name;
+          $translated_fields['description'] = [
+            'value' => $description,
+            'format' => 'rich_text',
+          ];
+          $translated_entity_array = array_merge($entity_array, $translated_fields);
+          $term->addTranslation('fr', $translated_entity_array)->save();
+        }
+      }
+    }
   }
 
   /**

@@ -29,7 +29,7 @@ class Comment extends PreprocessBase {
     $date = $variables['comment']->getCreatedTime();
 
     // Adjust submitted display.
-    $variables['created'] = \Drupal::service('date.formatter')->format($date, 'custom', 'M d, Y');
+    $variables['created'] = \Drupal::service('date.formatter')->format($date, 'wxt_standard');
     $variables['submitted'] = $this->t('@username - <span class="comments-ago">@datetime </span>', ['@username' => $variables['author'], '@datetime' => $variables['created']]);
   }
 

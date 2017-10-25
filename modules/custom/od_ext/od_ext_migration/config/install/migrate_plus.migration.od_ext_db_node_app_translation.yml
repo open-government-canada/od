@@ -53,7 +53,7 @@ process:
   field_app_url/uri: url
   field_app_url/title:
     plugin: default_value
-    default_value: 'Get the App'
+    default_value: 'Téléchargez l''application'
   field_app_name/value: name
   field_app_developer/value: dev
   field_app_submitter/value: submitter

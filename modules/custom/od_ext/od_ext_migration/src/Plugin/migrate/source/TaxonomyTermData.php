@@ -137,6 +137,60 @@ class TaxonomyTermData extends SqlBase {
         $vid = 'wxt_categories';
     }
 
+    // Name Field.
+    $name = $this->select('field_data_name_field', 'db')
+      ->fields('db', ['name_field_value'])
+      ->condition('entity_id', $row->getSourceProperty('entity_id'))
+      ->condition('revision_id', $row->getSourceProperty('revision_id'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('entity_type', 'taxonomy_term')
+      ->execute()
+      ->fetchCol();
+
+    if (!empty($name)) {
+      $row->setSourceProperty('name', $name[0]);
+    }
+
+    $translated_name = $this->select('field_data_name_field', 'db')
+      ->fields('db', ['name_field_value'])
+      ->condition('entity_id', $row->getSourceProperty('entity_id'))
+      ->condition('revision_id', $row->getSourceProperty('revision_id'))
+      ->condition('language', 'fr')
+      ->condition('entity_type', 'taxonomy_term')
+      ->execute()
+      ->fetchCol();
+
+    if (!empty($translated_name)) {
+      $row->setSourceProperty('translated_name', $translated_name[0]);
+    }
+
+    // Description Field.
+    $description = $this->select('field_data_description_field', 'db')
+      ->fields('db', ['description_field_value'])
+      ->condition('entity_id', $row->getSourceProperty('entity_id'))
+      ->condition('revision_id', $row->getSourceProperty('revision_id'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->condition('entity_type', 'taxonomy_term')
+      ->execute()
+      ->fetchCol();
+
+    if (!empty($description)) {
+      $row->setSourceProperty('description', $description[0]);
+    }
+
+    $translated_description = $this->select('field_data_description_field', 'db')
+      ->fields('db', ['description_field_value'])
+      ->condition('entity_id', $row->getSourceProperty('entity_id'))
+      ->condition('revision_id', $row->getSourceProperty('revision_id'))
+      ->condition('language', 'fr')
+      ->condition('entity_type', 'taxonomy_term')
+      ->execute()
+      ->fetchCol();
+
+    if (!empty($translated_description)) {
+      $row->setSourceProperty('translated_description', $translated_description[0]);
+    }
+
     // Parent ID Term.
     $parent_id = $this->select('taxonomy_term_hierarchy', 'th')
       ->fields('th', ['parent'])

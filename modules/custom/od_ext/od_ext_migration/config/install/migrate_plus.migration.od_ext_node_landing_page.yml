@@ -1119,8 +1119,8 @@ source:
               region: right
               weight: 5
             -
-              id: 'facet_block:contracts_agreement_type_en'
-              label: 'Agreement Type'
+              id: 'facet_block:contracts_year'
+              label: Year
               label_display: visible
               region: right
               weight: 10
@@ -1131,20 +1131,20 @@ source:
               region: right
               weight: 15
             -
-              id: 'facet_block:contracts_contract_value_en'
-              label: 'Contract Value'
-              label_display: visible
-              region: right
-              weight: 20
-            -
               id: 'facet_block:contracts_country_of_origin_en'
               label: 'Country of Origin'
               label_display: visible
               region: right
+              weight: 20
+            -
+              id: 'facet_block:contracts_agreement_type_en'
+              label: 'Agreement Type'
+              label_display: visible
+              region: right
               weight: 25
             -
-              id: 'facet_block:contracts_year'
-              label: Year
+              id: 'facet_block:contracts_contract_value_en'
+              label: 'Contract Value'
               label_display: visible
               region: right
               weight: 30

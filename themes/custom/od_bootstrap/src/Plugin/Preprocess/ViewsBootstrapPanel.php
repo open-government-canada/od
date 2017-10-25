@@ -2,6 +2,7 @@
 
 namespace Drupal\od_bootstrap\Plugin\Preprocess;
 
+use Drupal\Core\Render\Markup;
 use Drupal\bootstrap\Plugin\Preprocess\PreprocessBase;
 use Drupal\bootstrap\Utility\Variables;
 
@@ -38,7 +39,7 @@ class ViewsBootstrapPanel extends PreprocessBase {
       foreach ($variables['rows'] as $id => $row) {
         if ($title = $view->style_plugin->getField($id, $panel_title_field)) {
           $label = $view->field[$panel_title_field]->label();
-          $variables['rows'][$id]['title'] = $label . $this->t(': ') . $title;
+          $variables['rows'][$id]['title'] = Markup::Create($label . $this->t(': ') . $title);
         }
       }
     }

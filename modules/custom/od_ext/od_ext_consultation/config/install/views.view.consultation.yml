@@ -230,7 +230,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<section><h3>Interact</h3>\n        <ul class=\"lst-spcd\"><li><a href=\"suggested-datasets\">Suggest a\n        dataset</a></li>\n          <li><a href=\"/en/forms/suggest-open-information\">Suggest an\n          information resource</a></li>\n          <li><a href=\"apps\">Apps gallery</a></li>\n        </ul>\n        </section>"
+            value: "<section><h3>Interact</h3>\n        <ul class=\"lst-spcd\"><li><a href=\"[site:url]/suggested-datasets\">Suggest a\n        dataset</a></li>\n          <li><a href=\"[site:url]/forms/suggest-open-information\">Suggest an\n          information resource</a></li>\n          <li><a href=\"[site:url]/apps\">Apps gallery</a></li>\n        </ul>\n        </section>"
             format: full_html
           plugin_id: text
       empty: {  }
@@ -285,6 +285,7 @@ display:
       defaults:
         header: false
         pager: false
+        footer: true
       pager:
         type: some
         options:
