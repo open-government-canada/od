@@ -1030,6 +1030,19 @@ source:
         email.</p>
         <p>Required fields are marked with an
         asterisk(<span class="asterisk-red">*</span>).</p>
+    - bid: 'consultation_closed'
+      language: 'en'
+      title: 'Consultation closed'
+      body: |
+        <section class="alert alert-info"><p>Read
+        <a href="/en/content/third-biennial-plan-open-government-partnership">
+        Canada’s Third Biennial Plan to the Open Government Partnership
+        (2016-18)</a>.</p>
+        <p>The consultation period on this draft is closed, but we want this to
+        be an ongoing dialogue. Please
+        <a href="http://open.canada.ca/en/forms/contact-us">contact us</a> at
+        any time.</p>
+        </section>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

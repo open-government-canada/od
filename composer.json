@@ -303,6 +303,12 @@
                 "Enter drupal/google_analytics_reports patch #2878932 description here":
                 "https://www.drupal.org/files/issues/custom_variables_or-2878932-6.patch"
             },
+            "drupal/quicktabs": {
+                "Enter drupal/quicktabs patch #2918890 description here":
+                "https://www.drupal.org/files/issues/add_additional_theme-2918890-2.patch",
+                "Enter drupal/quicktabs patch #2918891 description here":
+                "https://www.drupal.org/files/issues/views_content_isn_t-2918891-2.patch"
+            },
             "drupal/search_api_solr": {
                 "Enter drupal/search_api_solr patch #2882009 description here":
                 "https://www.drupal.org/files/issues/notice_undefined-2882009-2.patch"

@@ -1098,6 +1098,19 @@ source:
           l'auteur en sera avisé par courriel.</p>
           <p>Les champs obligatoires sont accompagnés d'un astérisque
           (<span class="asterisk-red">*</span>).</p>
+    - bid: 'consultation_closed'
+      language: 'fr'
+      title: 'Consultation terminée'
+      body: |
+        <section class="alert alert-info"><p>Lisez
+        <a href="/fr/contenu/troisieme-plan-biannuel-partenariat-gouvernement-ouvert">
+        Le troisième Plan biannuel dans le cadre du Partenariat pour un
+        Gouvernement Ouvert (2016-2018)</a>.</p>
+        <p>La période de consultation sur cette ébauche est terminée, mais nous
+        voulons que le dialogue se poursuive.
+        <a href="http://ouvert.canada.ca/fr/formulaire/faites-nous-part-de-vos-commentaires">
+        Communiquez avec nous</a> en tout temps.</p>
+        </section>
   # Under 'ids', we identify source fields populated above which will uniquely
   # identify each imported item. The 'type' makes sure the migration map table
   # uses the proper schema type for stored the IDs.

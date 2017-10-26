@@ -562,21 +562,61 @@ class MigrationSubscriber implements EventSubscriberInterface {
             $block->save();
             break;
 
+          case 'consultation_closed':
+            $content_types = [
+              'consultation' => [
+                'display' => 'full',
+                'region' => 'content',
+                'weight' => -2,
+              ],
+            ];
+            foreach ($content_types as $type => $value) {
+              $uuid = $this->uuidService;
+              $uuid = $uuid->generate();
+              $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);
+              $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, 'default');
+              $tmpDisplay = $value['display'];
+              $display = $displays[$tmpDisplay];
+              $display->addBlock([
+                'id' => 'block_content:' . $block_content->uuid(),
+                'label' => 'Consultation closed',
+                'provider' => 'block_content',
+                'label_display' => 0,
+                'status' => 1,
+                'info' => '',
+                'view_mode' => 'full',
+                'region' => $value['region'],
+                'weight' => $value['weight'],
+                'uuid' => $uuid,
+                'context_mapping' => [],
+              ]);
+              $this->panelizer->setDefaultPanelsDisplay('default', 'node', $type, $tmpDisplay, $display);
+              $this->panelizer->setDisplayStaticContexts('default', 'node', $type, $tmpDisplay, []);
+              $this->invalidator->invalidateTags(["panelizer_default:node:{$type}:{$tmpDisplay}:default"]);
+              $this->tempstore->get('panelizer.wizard')->delete("node__{$type}__{$tmpDisplay}__default");
+              $this->tempstore->get('panels_ipe')->delete("node__{$type}__{$tmpDisplay}__default");
+            }
+            break;
+
           case 'pillars':
             $content_types = [
               'blog_post' => [
+                'display' => 'default',
                 'region' => 'left',
                 'weight' => -5,
               ],
               'consultation' => [
+                'display' => 'full',
                 'region' => 'content',
                 'weight' => -3,
               ],
               'page' => [
+                'display' => 'default',
                 'region' => 'content',
                 'weight' => 1,
               ],
               'suggested_dataset' => [
+                'display' => 'default',
                 'region' => 'top_right',
                 'weight' => -2,
               ],
@@ -586,7 +626,8 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $uuid = $uuid->generate();
               $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);
               $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, 'default');
-              $display = $displays['default'];
+              $tmpDisplay = $value['display'];
+              $display = $displays[$tmpDisplay];
               $display->addBlock([
                 'id' => 'block_content:' . $block_content->uuid(),
                 'label' => 'Pillars',
@@ -600,11 +641,11 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'uuid' => $uuid,
                 'context_mapping' => [],
               ]);
-              $this->panelizer->setDefaultPanelsDisplay('default', 'node', $type, 'default', $display);
-              $this->panelizer->setDisplayStaticContexts('default', 'node', $type, 'default', []);
-              $this->invalidator->invalidateTags(["panelizer_default:node:{$type}:default:default"]);
-              $this->tempstore->get('panelizer.wizard')->delete("node__{$type}__default__default");
-              $this->tempstore->get('panels_ipe')->delete("node__{$type}__default__default");
+              $this->panelizer->setDefaultPanelsDisplay('default', 'node', $type, $tmpDisplay, $display);
+              $this->panelizer->setDisplayStaticContexts('default', 'node', $type, $tmpDisplay, []);
+              $this->invalidator->invalidateTags(["panelizer_default:node:{$type}:{$tmpDisplay}:default"]);
+              $this->tempstore->get('panelizer.wizard')->delete("node__{$type}__{$tmpDisplay}__default");
+              $this->tempstore->get('panels_ipe')->delete("node__{$type}__{$tmpDisplay}__default");
             }
 
             $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);

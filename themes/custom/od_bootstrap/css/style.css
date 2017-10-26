@@ -126,6 +126,8 @@
   padding: 0px; }
   #quicktabs-suggested_ideas ul li {
     margin: 0px 15px 0px 0px; }
+    #quicktabs-suggested_ideas ul li.active {
+      font-weight: bold; }
 
 .external-comment-external-comment-form {
   margin-top: 30px;

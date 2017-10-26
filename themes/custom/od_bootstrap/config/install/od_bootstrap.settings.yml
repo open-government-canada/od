@@ -22,3 +22,9 @@ wxt_gcweb_cdn: 1
 wxt_gcweb_cdn_goc_init: 1
 wxt_gcweb_footer: 0
 wxt_gcweb_search: 1
+# Comment overrides.
+features:
+  comment_user_picture: false
+  comment_user_verification: false
+  favicon: true
+  node_user_picture: false

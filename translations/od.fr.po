@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-10-25 03:30+0000\n"
-"PO-Revision-Date: 2017-10-25 03:30+0000\n"
+"POT-Creation-Date: 2017-10-25 20:09+0000\n"
+"PO-Revision-Date: 2017-10-25 20:09+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -2907,4 +2907,16 @@ msgstr ""
 "        "
 "</ul>\r\n"
 "        </section>"
+
+msgid "Suggested Ideas"
+msgstr "Idées suggérées"
+
+msgid "Most Popular"
+msgstr "Popularité"
+
+msgid "Most Comments"
+msgstr "Nombre de commentaires"
+
+msgid "Browse by:"
+msgstr "Trouver des idées selon :"
 

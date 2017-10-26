@@ -40,8 +40,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: main
-            weight: 0
+            region: top_right
+            weight: -1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 5af47936-b1a4-4fe0-9252-cf1e4a15334d
@@ -60,8 +60,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: main
-            weight: 3
+            region: top_right
+            weight: 2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2d895eea-c264-493a-8f0b-4e51e0f7ade6
@@ -77,8 +77,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: main
-            weight: 4
+            region: top_right
+            weight: 3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 0cb86f71-ffff-44e9-b122-28802b85d59e
@@ -94,8 +94,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: main
-            weight: 2
+            region: top_right
+            weight: 1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 8fb362b4-b375-464b-95e9-82604f290b84
@@ -104,8 +104,8 @@ third_party_settings:
             label: 'Page title'
             provider: core
             label_display: '0'
-            region: main
-            weight: -4
+            region: top_right
+            weight: -3
             uuid: 7502a36b-699a-4ecf-98cb-c72e663cc1a4
             context_mapping: {  }
           bb4f3762-bdf0-4a46-a56c-90770b7473d4:
@@ -115,8 +115,8 @@ third_party_settings:
             label_display: '0'
             primary: true
             secondary: true
-            region: main
-            weight: -3
+            region: top_right
+            weight: -2
             uuid: bb4f3762-bdf0-4a46-a56c-90770b7473d4
             context_mapping: {  }
           8b2ff572-82ff-451f-8913-50cafaa865a6:
@@ -124,16 +124,76 @@ third_party_settings:
             label: 'Suggested Ideas'
             provider: quicktabs
             label_display: visible
-            region: main
+            region: top_right
             weight: 0
             uuid: 8b2ff572-82ff-451f-8913-50cafaa865a6
+            context_mapping: {  }
+          78ab1c64-c8d7-46e8-b228-f3ccc32f431d:
+            id: 'views_block:comments_combined-block_1'
+            label: ''
+            provider: views
+            label_display: visible
+            views_label: ''
+            items_per_page: none
+            region: top_left
+            weight: 0
+            uuid: 78ab1c64-c8d7-46e8-b228-f3ccc32f431d
             context_mapping: {  }
         id: panels_variant
         label: Default
         uuid: 7fb824fd-1918-4cb7-93ca-65e6716f6664
         weight: 0
-        layout: bs_1col
-        layout_settings: {  }
+        layout: bs_2col_bricked
+        layout_settings:
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            top:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+            top_left:
+              wrapper: div
+              classes:
+                col-sm-3: col-sm-3
+              add_region_classes: 1
+              attributes: ''
+            top_right:
+              wrapper: div
+              classes:
+                col-sm-9: col-sm-9
+              add_region_classes: 1
+              attributes: ''
+            middle:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+            bottom_left:
+              wrapper: div
+              classes:
+                col-sm-6: col-sm-6
+              add_region_classes: 1
+              attributes: ''
+            bottom_right:
+              wrapper: div
+              classes:
+                col-sm-6: col-sm-6
+              add_region_classes: 1
+              attributes: ''
+            bottom:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
         page_title: '[node:title]'
         storage_type: panelizer_default
         storage_id: 'node:consultation:full:default'
