@@ -140,8 +140,8 @@ class TaxonomyTermData extends SqlBase {
     // Name Field.
     $name = $this->select('field_data_name_field', 'db')
       ->fields('db', ['name_field_value'])
-      ->condition('entity_id', $row->getSourceProperty('entity_id'))
-      ->condition('revision_id', $row->getSourceProperty('revision_id'))
+      ->condition('entity_id', $row->getSourceProperty('tid'))
+      ->condition('revision_id', $row->getSourceProperty('tid'))
       ->condition('language', $row->getSourceProperty('language'))
       ->condition('entity_type', 'taxonomy_term')
       ->execute()
@@ -153,8 +153,8 @@ class TaxonomyTermData extends SqlBase {
 
     $translated_name = $this->select('field_data_name_field', 'db')
       ->fields('db', ['name_field_value'])
-      ->condition('entity_id', $row->getSourceProperty('entity_id'))
-      ->condition('revision_id', $row->getSourceProperty('revision_id'))
+      ->condition('entity_id', $row->getSourceProperty('tid'))
+      ->condition('revision_id', $row->getSourceProperty('tid'))
       ->condition('language', 'fr')
       ->condition('entity_type', 'taxonomy_term')
       ->execute()
@@ -167,8 +167,8 @@ class TaxonomyTermData extends SqlBase {
     // Description Field.
     $description = $this->select('field_data_description_field', 'db')
       ->fields('db', ['description_field_value'])
-      ->condition('entity_id', $row->getSourceProperty('entity_id'))
-      ->condition('revision_id', $row->getSourceProperty('revision_id'))
+      ->condition('entity_id', $row->getSourceProperty('tid'))
+      ->condition('revision_id', $row->getSourceProperty('tid'))
       ->condition('language', $row->getSourceProperty('language'))
       ->condition('entity_type', 'taxonomy_term')
       ->execute()
@@ -180,8 +180,8 @@ class TaxonomyTermData extends SqlBase {
 
     $translated_description = $this->select('field_data_description_field', 'db')
       ->fields('db', ['description_field_value'])
-      ->condition('entity_id', $row->getSourceProperty('entity_id'))
-      ->condition('revision_id', $row->getSourceProperty('revision_id'))
+      ->condition('entity_id', $row->getSourceProperty('tid'))
+      ->condition('revision_id', $row->getSourceProperty('tid'))
       ->condition('language', 'fr')
       ->condition('entity_type', 'taxonomy_term')
       ->execute()
