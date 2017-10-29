@@ -13,6 +13,9 @@ dependencies:
     - field.field.node.commitment.field_commitment_tags
     - field.field.node.commitment.field_deliverables_paragraph
     - field.field.node.commitment.field_department
+    - field.field.node.commitment.field_meta_tags
+    - field.field.node.commitment.field_reference_landing
+    - field.field.node.commitment.panelizer
     - node.type.commitment
   module:
     - comment
@@ -42,8 +45,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top
-            weight: -10
+            region: top_right
+            weight: 1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: ed2d1887-02a1-4a83-a68b-031e5dbe1f48
@@ -61,8 +64,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: bottom
-            weight: -6
+            region: top_right
+            weight: 5
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 37670e37-6055-4dd3-99a4-3a07a4046cb5
@@ -78,8 +81,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: bottom
-            weight: -7
+            region: top_right
+            weight: 4
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 08fafceb-8d72-4705-9674-358ea4a56c20
@@ -95,8 +98,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: left
-            weight: -1
+            region: top_right
+            weight: 0
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: aa401e84-ab63-4bce-ba30-9a966f195216
@@ -113,8 +116,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: left
-            weight: -2
+            region: top_right
+            weight: -1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 39256d07-038d-483e-892b-b4272af962bc
@@ -130,8 +133,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: bottom
-            weight: -8
+            region: top_right
+            weight: 3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: c5ba1c45-a5a3-4d2b-8c60-6c69d90847cd
@@ -147,7 +150,7 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: right
+            region: top_right
             weight: -4
             context_mapping:
               entity: '@panelizer.entity_context:entity'
@@ -165,8 +168,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: left
-            weight: -3
+            region: top_right
+            weight: -2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 92474ba0-1a3e-48e3-9e8d-aac21f501047
@@ -186,8 +189,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: bottom
-            weight: -9
+            region: top_right
+            weight: 2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: c1eb6b8a-90b3-4da6-aef9-3b04cfa67174
@@ -200,20 +203,40 @@ third_party_settings:
               label: inline
               type: entity_reference_label
               settings:
-                link: true
+                link: false
               third_party_settings: {  }
               weight: 0
               region: content
-            region: left
-            weight: -4
+            region: top_right
+            weight: -3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: accd3456-06c6-47fa-9710-6e1e58785136
+          0f2a5971-7e74-4983-876c-313ad04d2c67:
+            id: page_title_block
+            label: 'Page title'
+            provider: core
+            label_display: '0'
+            region: top_right
+            weight: -6
+            uuid: 0f2a5971-7e74-4983-876c-313ad04d2c67
+            context_mapping: {  }
+          996afa8b-a361-4995-9bd0-92bbe36df7b6:
+            id: local_tasks_block
+            label: Tabs
+            provider: core
+            label_display: '0'
+            primary: true
+            secondary: true
+            region: top_right
+            weight: -5
+            uuid: 996afa8b-a361-4995-9bd0-92bbe36df7b6
+            context_mapping: {  }
         id: panels_variant
         label: Default
         uuid: b5d551b2-b622-404d-ac25-573e207a696e
         weight: 0
-        layout: bs_2col_stacked
+        layout: bs_2col_bricked
         layout_settings:
           layout:
             wrapper: div
@@ -228,18 +251,36 @@ third_party_settings:
                 col-sm-12: col-sm-12
               add_region_classes: 1
               attributes: class|mrgn-bttm-lg
-            left:
+            top_left:
+              wrapper: div
+              classes:
+                col-sm-3: col-sm-3
+              add_region_classes: 1
+              attributes: ''
+            top_right:
+              wrapper: div
+              classes:
+                col-sm-9: col-sm-9
+              add_region_classes: 1
+              attributes: ''
+            middle:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+            bottom_left:
               wrapper: div
               classes:
                 col-sm-6: col-sm-6
               add_region_classes: 1
               attributes: ''
-            right:
+            bottom_right:
               wrapper: div
               classes:
                 col-sm-6: col-sm-6
               add_region_classes: 1
-              attributes: class|well
+              attributes: ''
             bottom:
               wrapper: div
               classes:
@@ -336,10 +377,23 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_reference_landing:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
     weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
+  workbench_moderation_control:
+    weight: -20
+    region: content
 hidden:
+  field_meta_tags: true
   langcode: true
+  panelizer: true

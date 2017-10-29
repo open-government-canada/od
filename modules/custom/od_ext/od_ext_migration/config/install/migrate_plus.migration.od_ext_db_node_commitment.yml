@@ -31,6 +31,7 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: language
+  path: alias
   created: created
   changed: changed
   status: status

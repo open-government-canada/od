@@ -3,12 +3,15 @@ status: true
 dependencies:
   module:
     - user
-    - search_api
     - node
+    - search_api
   config:
     - field.storage.node.field_ribbon
     - field.storage.node.field_device_formats
     - field.storage.node.field_app_categories
+    - field.storage.node.field_department
+    - field.storage.node.field_idea_tags
+    - field.storage.node.field_idea_reference
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
 id: default_solr_index
@@ -121,6 +124,41 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_app_categories
+  field_department:
+    label: Department
+    datasource_id: 'entity:node'
+    property_path: field_department
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_department
+  field_idea_tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: field_idea_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_idea_tags
+  field_idea_reference:
+    label: 'Idea Reference'
+    datasource_id: 'entity:node'
+    property_path: field_idea_reference
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_idea_reference
+  field_ref_idea_tags:
+    label: 'Idea Reference » Content » Tags'
+    datasource_id: 'entity:node'
+    property_path: 'field_idea_reference:entity:field_idea_tags'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_idea_reference
+        - field.storage.node.field_idea_tags
+      module:
+        - node
 datasource_settings:
   'entity:node':
     plugin_id: 'entity:node'
@@ -198,6 +236,7 @@ processor_settings:
       b: 2
       em: 1
       u: 1
+    all_fields: false
   rendered_item:
     plugin_id: rendered_item
     settings:
@@ -216,6 +255,7 @@ processor_settings:
       weights:
         preprocess_index: -10
         preprocess_query: -10
+    all_fields: false
 tracker_settings:
   default: {  }
 options:

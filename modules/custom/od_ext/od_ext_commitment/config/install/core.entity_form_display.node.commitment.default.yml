@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.commitment.field_deliverables_paragraph
     - field.field.node.commitment.field_department
     - field.field.node.commitment.field_meta_tags
+    - field.field.node.commitment.field_reference_landing
     - node.type.commitment
   module:
     - comment
@@ -38,10 +39,11 @@ third_party_settings:
       label: Commitment
     group_basic_info:
       children:
+        - field_reference_landing
+        - field_commitment_pillars
         - field_commitment_status
         - field_department
         - field_commitment_tags
-        - field_commitment_pillars
       parent_name: group_commitment
       weight: 20
       format_type: tab
@@ -110,7 +112,7 @@ content:
     type: text_textarea
     region: content
   field_commitment_pillars:
-    weight: 17
+    weight: 20
     settings:
       match_operator: CONTAINS
       size: 60
@@ -127,13 +129,13 @@ content:
     type: text_textarea
     region: content
   field_commitment_status:
-    weight: 14
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_commitment_tags:
-    weight: 16
+    weight: 23
     settings:
       match_operator: CONTAINS
       size: 60
@@ -147,16 +149,16 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
+      edit_mode: closed
       closed_mode: summary
       autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: deliverable
     third_party_settings: {  }
     region: content
   field_department:
-    weight: 15
+    weight: 22
     settings:
       match_operator: CONTAINS
       size: 60
@@ -170,6 +172,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_reference_landing:
+    weight: 19
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   langcode:
     type: language_select
     weight: 1

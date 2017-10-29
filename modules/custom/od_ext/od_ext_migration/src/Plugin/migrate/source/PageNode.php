@@ -71,6 +71,8 @@ class PageNode extends SqlBase {
    */
   public function prepareRow(Row $row) {
 
+    $content_type = 'page';
+
     // Translation support.
     if (!empty($row->getSourceProperty('translations'))) {
       $row->setSourceProperty('language', 'fr');
@@ -104,6 +106,31 @@ class PageNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    $path = end($alias);
+    if (!empty($path)) {
+      switch ($path) {
+        case 'content/10-purpose':
+        case 'content/20-scope-application':
+        case 'content/30-guiding-principles-federal-regulatory-policy':
+        case 'content/40-regulatory-lifecycle-approach':
+        case 'content/50-development-regulations':
+        case 'content/60-regulatory-management':
+        case 'content/70-review-and-results':
+        case 'content/80-supporting-policies':
+          $content_type = 'page';
+          $path = str_replace('content/', 'appendices/', $path);
+          break;
+
+        case 'content/appendices':
+          $content_type = 'landing_page';
+          $path = 'appendices';
+          break;
+      }
+    }
+
+    $path = str_replace('commitment/', 'commitment/mtsar/2016-2018/', $path);
+    $path = str_replace('engagements/', 'engagements/mtsar/2016-2018/', $path);
+
     // Metatags.
     $metatags = $this->select('metatag', 'df')
       ->fields('df', [
@@ -129,10 +156,11 @@ class PageNode extends SqlBase {
     }
     $row->setSourceProperty('body', $body[0]);
 
-    if (!empty($alias)) {
-      $row->setSourceProperty('alias', '/' . end($alias));
+    if (!empty($path)) {
+      $row->setSourceProperty('alias', '/' . $path);
     }
     $row->setSourceProperty('metatags', serialize($metatags));
+    $row->setSourceProperty('content_type', $content_type);
 
     return parent::prepareRow($row);
   }

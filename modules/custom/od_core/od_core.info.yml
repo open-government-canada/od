@@ -8,6 +8,7 @@ package: 'Open Data'
 dependencies:
   - drupal:datetime_range
   - drupal:entityqueue
+  - drupal:menu_block
   - drupal:paragraphs
   - drupal:reference_table_formatter
   - drupal:views_bootstrap

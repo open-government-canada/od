@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__solr_search_content__solr_consultation
+name: 'search_api:views_block__solr_search_content__solr_consultation'
+filter_key: consultation
+url_processor: query_string
+breadcrumb:
+  active: false
+  group: false

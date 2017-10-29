@@ -215,6 +215,45 @@ class MigrationSubscriber implements EventSubscriberInterface {
         $this->tempstore->get('panels_ipe')->delete("node__{$type}__default__default");
       }
     }
+
+    if ($event->getMigration()->id() == 'od_ext_node_commitment' ||
+        $event->getMigration()->id() == 'od_ext_node_commitment_translation') {
+
+      $table = ($event->getMigration()->id() == 'od_ext_node_commitment_translation') ? 'migrate_map_od_ext_db_node_commitment_translation' : 'migrate_map_od_ext_db_node_commitment';
+      $translations = ($event->getMigration()->id() == 'od_ext_node_commitment_translation') ? TRUE : FALSE;
+      $results = $this->database->select($table, 'et')
+        ->fields('et')
+        ->execute();
+        ->fetchAllAssoc('destid1');
+
+      $titleEn = 'Mid-Term Self-Assessment Report on Canada''s Action Plan on Open Government 2014-16';
+      $titleFr = 'Rapport d’auto-évaluation à mi-parcours du Plan d’action pour un gouvernement ouvert 2014-2016';
+
+      foreach ($results as $result) {
+        $links = $this->entityTypeManager->getStorage('menu_link_content')
+          ->loadByProperties(['title' => (!empty($translations)) ? $titleFr : $titleEn]);
+        if ($link = reset($links)) {
+          $links = $this->entityTypeManager->getStorage('menu_link_content')
+            ->loadByProperties(['parent' => $link->getPluginId()]);
+          $count = count($links);
+          $node = $this->entityTypeManager->getStorage('node')
+            ->load($result->destid1);
+          $translation = $node->getTranslation((!empty($translations)) ? 'fr' : 'en');
+          $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+            'title' => $translation->getTitle(),
+            'link' => ['uri' => 'internal:/node/' . $result->destid1],
+            'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+            'parent' => $link->getPluginId(),
+            'weight' => $count,
+          ]);
+          $menu_link_content->save();
+          $this->database->update('menu_link_content_data')
+            ->fields(['link__uri' => 'entity:node/' . $result->destid1])
+            ->condition('id', $menu_link_content->id())
+            ->execute();
+        }
+      }
+    }
   }
 
   /**
@@ -490,6 +529,20 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
+    if ($event->getMigration()->id() == 'od_ext_db_node_page') {
+      $sourceBid = $event->getRow()->getSourceProperty('nid');
+      $contentType = $event->getRow()->getSourceProperty('content_type');
+      $destBid = $event->getDestinationIdValues();
+
+      if (!empty($contentType) && $contentType == 'landing_page') {
+        $storage = $this->entityManager->getStorage('node');
+        $node = $storage->load($destBid[0]);
+        $type = 'landing_page';
+        $tmpDisplay = 'full';
+        $this->panelizer->setPanelsDisplay($node, 'full', 'two_column');
+      }
+    }
+
     if ($event->getMigration()->id() == 'od_ext_block_basic') {
       $sourceBid = $event->getRow()->getSourceProperty('bid');
       $destBid = $event->getDestinationIdValues();
@@ -565,7 +618,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           case 'consultation_closed':
             $content_types = [
               'consultation' => [
-                'display' => 'full',
+                'display' => 'default',
                 'region' => 'content',
                 'weight' => -2,
               ],
@@ -574,8 +627,8 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $uuid = $this->uuidService;
               $uuid = $uuid->generate();
               $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);
-              $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, 'default');
               $tmpDisplay = $value['display'];
+              $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, $tmpDisplay);
               $display = $displays[$tmpDisplay];
               $display->addBlock([
                 'id' => 'block_content:' . $block_content->uuid(),
@@ -606,7 +659,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'weight' => -5,
               ],
               'consultation' => [
-                'display' => 'full',
+                'display' => 'default',
                 'region' => 'content',
                 'weight' => -3,
               ],
@@ -625,8 +678,8 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $uuid = $this->uuidService;
               $uuid = $uuid->generate();
               $block_content = $this->entityTypeManager->getStorage('block_content')->load($destBid[0]);
-              $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, 'default');
               $tmpDisplay = $value['display'];
+              $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, $tmpDisplay);
               $display = $displays[$tmpDisplay];
               $display->addBlock([
                 'id' => 'block_content:' . $block_content->uuid(),
@@ -767,6 +820,48 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
+    if ($event->getMigration()->id() == 'od_ext_node_commitment' ||
+        $event->getMigration()->id() == 'od_ext_node_commitment_translation') {
+      $sourceBid = $event->getRow()->getSourceProperty('name');
+      $title = $event->getRow()->getSourceProperty('title');
+      $destBid = $event->getDestinationIdValues();
+      $translations = $event->getRow()->getSourceProperty('translations');
+      $menuName = $event->getRow()->getSourceProperty('menu_name');
+
+      $titleEn = 'Commitments';
+      $titleFr = 'Engagements';
+
+      if (!empty($menuName)) {
+        switch ($menuName) {
+          case 'mtsar__2016_2018':
+            $titleEn = 'Draft for Consultation: Mid-term Self-assessment on Third Biennial Plan to the Open Government Partnership (2016-2018)';
+            $titleFr = 'Ébauche aux fins de consultation : Auto évaluation de mi parcours sur le troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert (2016-2018)';
+            break;
+
+        }
+      }
+
+      $links = $this->entityTypeManager->getStorage('menu_link_content')
+        ->loadByProperties(['title' => (!empty($translations)) ? $titleFr : $titleEn]);
+      if ($link = reset($links)) {
+        $links = $this->entityTypeManager->getStorage('menu_link_content')
+          ->loadByProperties(['parent' => $link->getPluginId()]);
+        $count = count($links);
+        $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+          'title' => $title,
+          'link' => ['uri' => 'internal:/node/' . $destBid[0]],
+          'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+          'parent' => $link->getPluginId(),
+          'weight' => $count,
+        ]);
+        $menu_link_content->save();
+        $this->database->update('menu_link_content_data')
+          ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
+          ->condition('id', $menu_link_content->id())
+          ->execute();
+      }
+    }
+
     if ($event->getMigration()->id() == 'od_ext_node_landing_page' ||
         $event->getMigration()->id() == 'od_ext_node_landing_page_translation') {
       $sourceBid = $event->getRow()->getSourceProperty('name');
@@ -776,8 +871,66 @@ class MigrationSubscriber implements EventSubscriberInterface {
 
       if (!empty($sourceBid)) {
         switch ($sourceBid) {
-          case 'contracts':
+          case 'commitments':
+            $menu_link_content = [];
+            $links = $this->entityTypeManager->getStorage('menu_link_content')
+              ->loadByProperties(['title' => (!empty($translations)) ? 'Gouvernement ouvert' : 'Open Government']);
+            if ($link = reset($links)) {
+              $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+                'title' => $title,
+                'link' => ['uri' => 'internal:/node/' . $destBid[0]],
+                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'parent' => $link->getPluginId(),
+              ]);
+              $menu_link_content->save();
+              $this->database->update('menu_link_content_data')
+                ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
+                ->condition('id', $menu_link_content->id())
+                ->execute();
+            }
 
+            $content_types = [
+              'commitment' => [
+                'display' => 'default',
+                'region' => 'top_left',
+                'weight' => 0,
+              ],
+            ];
+            foreach ($content_types as $type => $value) {
+              $uuid = $this->uuidService;
+              $uuid = $uuid->generate();
+              $tmpDisplay = $value['display'];
+              $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, $tmpDisplay);
+              $display = $displays[$tmpDisplay];
+              $display->addBlock([
+                'id' => 'menu_block:' . (!empty($translations)) ? 'main-fr' : 'main',
+                'label' => 'Main navigation',
+                'provider' => 'menu_block',
+                'label_display' => 'visible',
+                'level' => 1,
+                'custom_level' => '1',
+                'hide_children' => 0,
+                'depth' => 2,
+                'expand' => 1,
+                'expand_only_active_trails' => 1,
+                'parent' => 'main:menu_link_content:' . $menu_link_content->uuid(),
+                'render_parent' => FALSE,
+                'follow' => 1,
+                'suggestion' => sidebar,
+                'region' => top_left,
+                'weight' => 0,
+                'uuid' => $uuid,
+                'context_mapping' => [],
+              ]);
+              $this->panelizer->setDefaultPanelsDisplay('default', 'node', $type, $tmpDisplay, $display);
+              $this->panelizer->setDisplayStaticContexts('default', 'node', $type, $tmpDisplay, []);
+              $this->invalidator->invalidateTags(["panelizer_default:node:{$type}:{$tmpDisplay}:default"]);
+              $this->tempstore->get('panelizer.wizard')->delete("node__{$type}__{$tmpDisplay}__default");
+              $this->tempstore->get('panels_ipe')->delete("node__{$type}__{$tmpDisplay}__default");
+            }
+            break;
+
+          case 'contracts':
             if ($event->getMigration()->id() == 'od_ext_node_landing_page_translation') {
               $this->aliasStorage->save('/node/' . $destBid[0], '/search/contrats', 'fr');
             }
@@ -794,6 +947,42 @@ class MigrationSubscriber implements EventSubscriberInterface {
               ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
               ->condition('id', $menu_link_content->id())
               ->execute();
+            break;
+
+          case 'mtsar__2014_2016':
+            $links = $this->entityTypeManager->getStorage('menu_link_content')
+              ->loadByProperties(['title' => (!empty($translations)) ? 'Engagements' : 'Commitments']);
+            if ($link = reset($links)) {
+              $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+                'title' => $title,
+                'link' => ['uri' => 'internal:/node/' . $destBid[0]],
+                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'parent' => $link->getPluginId(),
+              ]);
+              $menu_link_content->save();
+              $this->database->update('menu_link_content_data')
+                ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
+                ->condition('id', $menu_link_content->id())
+                ->execute();
+            }
+            break;
+
+          case 'mtsar__2016_2018':
+            $links = $this->entityTypeManager->getStorage('menu_link_content')
+              ->loadByProperties(['title' => (!empty($translations)) ? 'Engagements' : 'Commitments']);
+            if ($link = reset($links)) {
+              $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
+                'title' => $title,
+                'link' => ['uri' => 'internal:/node/' . $destBid[0]],
+                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'parent' => $link->getPluginId(),
+              ]);
+              $menu_link_content->save();
+              $this->database->update('menu_link_content_data')
+                ->fields(['link__uri' => 'entity:node/' . $destBid[0]])
+                ->condition('id', $menu_link_content->id())
+                ->execute();
+            }
             break;
 
           case 'open_info':

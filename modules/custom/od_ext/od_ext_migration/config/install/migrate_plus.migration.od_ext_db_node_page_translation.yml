@@ -23,9 +23,7 @@ process:
     plugin: migration
     migration: od_ext_db_user
     source: uid
-  type:
-    plugin: default_value
-    default_value: page
+  type: content_type
   sticky:
     plugin: default_value
     default_value: 0

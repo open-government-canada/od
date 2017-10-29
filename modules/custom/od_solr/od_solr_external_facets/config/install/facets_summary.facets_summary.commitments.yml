@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.default_solr_index
+    - views.view.solr_search_content
+  module:
+    - search_api
+id: commitments
+name: Commitments
+facets:
+  commitment_department:
+    checked: true
+    label: Department
+    separator: ', '
+    show_count: true
+    weight: 0
+facet_source_id: 'search_api:views_block__solr_search_content__solr_commitment'
+processor_configs:
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '-8'
+    settings:
+      link_text: 'Clear all'
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '-9'
+    settings: {  }
+  show_summary:
+    processor_id: show_summary
+    weights:
+      build: '-7'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '-6'
+    settings:
+      text:
+        value: 'There is no current search in progress.'
+        format: plain_text

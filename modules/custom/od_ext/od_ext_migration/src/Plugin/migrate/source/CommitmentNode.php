@@ -195,6 +195,14 @@ class CommitmentNode extends SqlBase {
       ->execute()
       ->fetchAllAssoc('field_deliverable_target_id');
 
+    // URL alias.
+    $alias = $this->select('url_alias', 'db')
+      ->fields('db', ['alias'])
+      ->condition('source', 'node/' . $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->execute()
+      ->fetchCol();
+
     // Metatags.
     $metatags = $this->select('metatag', 'df')
       ->fields('df', [
@@ -217,6 +225,10 @@ class CommitmentNode extends SqlBase {
     }
     elseif (!empty($row->getSourceProperty('translations'))) {
       return FALSE;
+    }
+
+    if (!empty($alias)) {
+      $row->setSourceProperty('alias', '/' . end($alias));
     }
     $row->setSourceProperty('body', $body[0]);
     $row->setSourceProperty('department', $department);
