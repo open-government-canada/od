@@ -71,8 +71,6 @@ class PageNode extends SqlBase {
    */
   public function prepareRow(Row $row) {
 
-    $content_type = 'page';
-
     // Translation support.
     if (!empty($row->getSourceProperty('translations'))) {
       $row->setSourceProperty('language', 'fr');
@@ -117,12 +115,10 @@ class PageNode extends SqlBase {
         case 'content/60-regulatory-management':
         case 'content/70-review-and-results':
         case 'content/80-supporting-policies':
-          $content_type = 'page';
           $path = str_replace('content/', 'appendices/', $path);
           break;
 
         case 'content/appendices':
-          $content_type = 'landing_page';
           $path = 'appendices';
           break;
       }
@@ -160,7 +156,6 @@ class PageNode extends SqlBase {
       $row->setSourceProperty('alias', '/' . $path);
     }
     $row->setSourceProperty('metatags', serialize($metatags));
-    $row->setSourceProperty('content_type', $content_type);
 
     return parent::prepareRow($row);
   }

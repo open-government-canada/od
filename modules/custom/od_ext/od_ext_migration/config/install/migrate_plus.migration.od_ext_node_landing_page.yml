@@ -4309,6 +4309,224 @@ source:
           <time datetime="2017-09-01T16:00">September 1, 2017 at 4:00 PM
           EST</time>.</p>
         </section>
+        <section>
+          <h2>Commitment summary</h2>
+          <p>This table provides a summary of the status for each commitment in
+          the Third Biennial Plan. The commitment title links to the detail page
+          for that commitment.</p>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr class="active">
+                <th id="tbl6">Commitment</th>
+                <th id="tbl7">Status as of June 30, 2017</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="2" id="tbl10">Open by default</th>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-1-enhance-access-information">
+                  1: Enhance access to information</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl10">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-2-streamline-requests-personal-information">
+                  2: Streamline requests for personal information</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl10">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-3-expand-and-improve-open-data">
+                  3: Expand and improve open data</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl10">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-4-provide-and-preserve-open-information">
+                  4: Provide and preserve open information</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl10">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-5-define-approach-measuring-open-government-performance">
+                  5: Define an approach for measuring open government
+                  performance</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl10">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-6-develop-open-government-skills-across-federal-public-service">
+                  6: Develop open government skills across the federal public
+                  service</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl10">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-7-embed-transparency-requirements-federal-service-strategy">
+                  7: Embed transparency requirements in the federal service
+                  strategy</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl10">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-8-enhance-access-culture-heritage-collections">
+                  8: Enhance access to culture and heritage collections</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl10">Behind schedule</td>
+              </tr>
+              <tr>
+                <th colspan="2" id="tbl48">Fiscal transparency</th>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl48">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-9-enhance-openness-information-government-spending-and-procurement">
+                  9: Enhance openness of information on government spending and
+                  procurement</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl48">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl48">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-10-increase-transparency-budget-and-other-department-finance-information">
+                  10: Increase transparency of Budget and other Department of
+                  Finance information</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl48">Ahead of
+                schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl48">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-11-increase-transparency-grants-and-contributions-funding">
+                  11: Increase transparency of grants and contributions
+                  funding</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl48">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl48">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-12-improve-public-information-canadian-corporations">
+                  12: Improve public information on Canadian corporations</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl48">On schedule</td>
+              </tr>
+              <tr>
+                <th colspan="2" id="tbl68">Innovation, prosperity, and
+                sustainable development</th>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-13-increase-availability-and-usability-geospatial-data">
+                  13: Increase the availability and usability of geospatial
+                  data</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl68">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-14-increase-openness-federal-science-activities-open-science">
+                  14: Increase openness of federal science activities (open
+                  science)</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl68">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-15-stimulate-innovation-through-canadas-open-data-exchange-odx">
+                  15: Stimulate innovation through Canada’s Open Data Exchange
+                  (ODX)</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl68">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-16-align-open-data-across-canada-open-data-canada">
+                  16: Align open data across Canada (Open Data Canada)</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl68">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-17-implement-extractives-sector-transparency-measures-act">
+                  17: Implement the Extractives Sector Transparency Measures
+                  Act</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl68">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-18-support-openness-and-transparency-initiatives-around-world">
+                  18: Support openness and transparency initiatives around the
+                  world</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl68">On schedule</td>
+              </tr>
+              <tr>
+                <th colspan="2" id="tbl96">Engaging Canadians and the world</th>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl96">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-19-engage-civil-society-open-government">
+                  19: Engage civil society on open government</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl96">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl96">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-20-enable-open-dialogue-and-open-policy-making">
+                  20: Enable open dialogue and open policy making</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl96">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl96">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-21-promote-open-government-globally">
+                  21: Promote open government globally</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl96">On schedule</td>
+              </tr>
+              <tr>
+                <td headers="tbl6 tbl96">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/commitment-22-engage-canadians-improve-key-canada-revenue-agency-services">
+                  22: Engage Canadians to improve key Canada Revenue Agency
+                  Services</a>
+                </td>
+                <td class="text-center" headers="tbl7 tbl96">On schedule</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       alias: /commitment/mtsar/2016-2018/draft-consultation-mid-term-self-assessment-third-biennial-plan-open-government-partnership
       metatags:
         -

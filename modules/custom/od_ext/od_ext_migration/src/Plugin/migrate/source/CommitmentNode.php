@@ -203,6 +203,10 @@ class CommitmentNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    $path = end($alias);
+    $path = str_replace('commitment/', 'commitment/mtsar/2016-2018/', $path);
+    $path = str_replace('engagements/', 'engagements/mtsar/2016-2018/', $path);
+
     // Metatags.
     $metatags = $this->select('metatag', 'df')
       ->fields('df', [
@@ -227,8 +231,8 @@ class CommitmentNode extends SqlBase {
       return FALSE;
     }
 
-    if (!empty($alias)) {
-      $row->setSourceProperty('alias', '/' . end($alias));
+    if (!empty($path)) {
+      $row->setSourceProperty('alias', '/' . $path);
     }
     $row->setSourceProperty('body', $body[0]);
     $row->setSourceProperty('department', $department);

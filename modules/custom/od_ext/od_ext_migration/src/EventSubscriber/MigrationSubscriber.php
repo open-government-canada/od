@@ -223,16 +223,16 @@ class MigrationSubscriber implements EventSubscriberInterface {
       $translations = ($event->getMigration()->id() == 'od_ext_node_commitment_translation') ? TRUE : FALSE;
       $results = $this->database->select($table, 'et')
         ->fields('et')
-        ->execute();
+        ->execute()
         ->fetchAllAssoc('destid1');
 
-      $titleEn = 'Mid-Term Self-Assessment Report on Canada''s Action Plan on Open Government 2014-16';
-      $titleFr = 'Rapport d’auto-évaluation à mi-parcours du Plan d’action pour un gouvernement ouvert 2014-2016';
+      $titleEn = "Mid-Term Self-Assessment Report on Canada's Action Plan on Open Government 2014-16";
+      $titleFr = "Rapport d’auto-évaluation à mi-parcours du Plan d’action pour un gouvernement ouvert 2014-2016";
 
       foreach ($results as $result) {
         $links = $this->entityTypeManager->getStorage('menu_link_content')
           ->loadByProperties(['title' => (!empty($translations)) ? $titleFr : $titleEn]);
-        if ($link = reset($links)) {
+        if ($link = end($links)) {
           $links = $this->entityTypeManager->getStorage('menu_link_content')
             ->loadByProperties(['parent' => $link->getPluginId()]);
           $count = count($links);
@@ -913,11 +913,11 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'depth' => 2,
                 'expand' => 1,
                 'expand_only_active_trails' => 1,
-                'parent' => 'main:menu_link_content:' . $menu_link_content->uuid(),
+                'parent' => (!empty($translations)) ? 'main-fr' : 'main' . ':menu_link_content:' . $menu_link_content->uuid(),
                 'render_parent' => FALSE,
                 'follow' => 1,
-                'suggestion' => sidebar,
-                'region' => top_left,
+                'suggestion' => 'sidebar',
+                'region' => 'top_left',
                 'weight' => 0,
                 'uuid' => $uuid,
                 'context_mapping' => [],

@@ -4715,6 +4715,253 @@ source:
           <time datetime="2017-09-01T16:00">1 septembre 2017 à 16h00 HNE
           </time>.</p>
         </section>
+        <section>
+          <h2>Sommaire des engagements</h2>
+          <p>Ce tableau présente un sommaire de l’état de chacun des engagements
+          indiqués dans le troisième plan biannuel. Le titre de l’engagement est
+          lié à la page détaillée portant sur celui-ci.</p>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr class="active">
+                <th id="ftbl6">Engagement</th>
+                <th id="ftbl7">État au 30&nbsp;juin&nbsp;2017</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="2" id="ftbl10">Ouvert par défaut</th>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-1-ameliorer-lacces-a-linformation">
+                  1&nbsp;: Améliorer l’accès à l’information</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl10">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-2-simplifier-demandes-renseignements-personnels">
+                  2&nbsp;: Simplifier les demandes de renseignements
+                  personnels</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl10">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-3-etendre-ameliorer-donnees-ouvertes">
+                  3&nbsp;: Étendre et améliorer les données ouvertes</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl10">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-4-fournir-preserver-linformation-ouverte">
+                  4&nbsp;: Fournir et préserver l’information ouverte</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl10">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-5-definir-approche-mesure-du-rendement-gouvernement-ouvert">
+                  5&nbsp;: Définir une approche de mesure du rendement pour un
+                  gouvernement ouvert</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl10">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-6-developper-competences-relatives-au-gouvernement-ouvert-lensemble-fonction">
+                  6&nbsp;: Développer les compétences relatives au gouvernement
+                  ouvert dans l’ensemble de la fonction publique fédérale</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl10">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-7-integrer-exigences-matiere-transparence-strategie-relative-aux-services">
+                  7&nbsp;: Intégrer les exigences en matière de transparence dans
+                  la Stratégie relative aux services fédéraux</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl10">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl10">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-8-ameliorer-lacces-aux-collections-culturelles-patrimoniales">
+                  8&nbsp;: Améliorer l’accès aux collections culturelles et
+                  patrimoniales</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl10">En retard</td>
+              </tr>
+              <tr>
+                <th colspan="2" id="ftbl48">Transparence fiscale</th>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl48">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-9-ameliorer-louverture-linformation-depenses-lapprovisionnement-au-gouvernement">
+                  9&nbsp;: Améliorer l’ouverture de l’information sur les
+                  dépenses et l’approvisionnement au gouvernement</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl48">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl48">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-10-accroitre-transparence-du-budget-autres-renseignements-du-ministere-finances">
+                  10&nbsp;: Accroître la transparence des données budgétaires et
+                  des analyses économiques et financières</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl48">En avance</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl48">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-11-accroitre-transparence-financement-a-laide-subventions-contributions">
+                  11&nbsp;: Accroître la transparence sur le financement à l’aide
+                  de subventions et de contributions</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl48">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl48">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-12-ameliorer-linformation-publique-societes-canadiennes">
+                  12&nbsp;: Améliorer l’information publique sur les sociétés
+                  canadiennes</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl48">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <th colspan="2" id="ftbl68">Innovation, prospérité et
+                développement durable</th>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-13-accroitre-disponibilite-lutilite-donnees-geospatiales">
+                  13&nbsp;: Accroître la disponibilité et l’utilité des données
+                  géospatiales</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl68">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-14-accroitre-louverture-activites-scientifiques-federales-science-ouverte">
+                  14&nbsp;: Accroître l’ouverture des activités scientifiques
+                  fédérales (Science ouverte)</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl68">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-15-stimuler-linnovation-lintermediaire-linstitut-donnees-ouvertes-du-canada">
+                  15&nbsp;: Stimuler l’innovation par l’intermédiaire de
+                  l’Institut des données ouvertes du Canada (Open Data Exchange
+                  ou ODX)</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl68">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-16-harmoniser-donnees-ouvertes-a-echelle-du-canada-donnees-ouvertes-canada">
+                  16&nbsp;: Harmoniser les données ouvertes à l’échelle du Canada
+                  (Données ouvertes Canada)</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl68">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-17-mettre-oeuvre-loi-mesures-transparence-du-secteur-extractif">
+                  17&nbsp;: Mettre en œuvre la Loi sur les mesures de
+                  transparence du secteur extractif t</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl68">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl68">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-18-appuyer-initiatives-douverture-transparence-monde-entier">
+                  18&nbsp;: Appuyer les initiatives d’ouverture et de
+                  transparence dans le monde entier</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl68">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <th colspan="2" id="ftbl96">Engager les Canadiens, les
+                Canadiennes et le monde</th>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl96">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-19-mobiliser-societe-civile-enjeux-lies-au-gouvernement-ouvert">
+                  19&nbsp;: Mobiliser la société civile sur les enjeux liés au
+                  gouvernement ouvert</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl96">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl96">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-20-permettre-dialogue-ouvert-lelaboration-politiques-ouverte">
+                  20&nbsp;: Permettre le dialogue ouvert et l’élaboration de
+                  politiques ouverte</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl96">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl96">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-21-promouvoir-gouvernement-ouvert-a-lechelle-mondiale">
+                  21&nbsp;: Promouvoir le gouvernement ouvert à l’échelle
+                  mondiale</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl96">Selon le
+                calendrier</td>
+              </tr>
+              <tr>
+                <td headers="ftbl6 ftbl96">
+                  <a href=
+                  "[site:url]/commitment/mtsar/2016-2018/engagement-22-mobiliser-canadiens-canadiennes-ameliorer-principaux-services-lagence-du">
+                  22&nbsp;: Mobiliser les Canadiens et les Canadiennes pour
+                  améliorer les principaux services de l’Agence du revenu du
+                  Canada</a>
+                </td>
+                <td class="text-center" headers="ftbl7 ftbl96">Selon le
+                calendrier</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       alias: /commitment/mtsar/2016-2018/draft-consultation-mid-term-self-assessment-third-biennial-plan-open-government-partnership
       metatags:
         -
