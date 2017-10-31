@@ -15,13 +15,13 @@ dependencies:
     - field.storage.external_entity.field_date_released
     - field.storage.external_entity.field_desc_en
     - field.storage.external_entity.field_desc_fr
-    - search_api.server.default_solr_server
+    - search_api.server.ext_core_inventory
   module:
     - search_api
     - external_entities
 id: inventory
-name: Inventory
-description: "Inventory content index created by the Solr Search Defaults module\r\n"
+name: 'External: Inventory Index'
+description: ''
 read_only: false
 field_settings:
   id:
@@ -163,4 +163,4 @@ tracker_settings:
 options:
   index_directly: true
   cron_limit: 50
-server: default_solr_server
+server: ext_core_inventory
