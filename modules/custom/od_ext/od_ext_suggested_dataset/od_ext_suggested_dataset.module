@@ -28,9 +28,12 @@ function od_ext_suggested_dataset_page_attachments(array &$page) {
 }
 
 function od_ext_suggested_dataset_module_implements_alter(&$implementations, $hook) {
-  if ($hook == 'page_attachments') {
-    $group = $implementations['big_pipe'];
-    unset($implementations['big_pipe']);
-    $implementations['big_pipe'] = $group;
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('big_pipe')){
+    if ($hook == 'page_attachments') {
+      $group = $implementations['big_pipe'];
+      unset($implementations['big_pipe']);
+      $implementations['big_pipe'] = $group;
+    }
   }
 }
