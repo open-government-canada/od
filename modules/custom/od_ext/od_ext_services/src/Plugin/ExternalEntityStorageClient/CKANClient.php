@@ -63,8 +63,18 @@ class CKANClient extends ExternalEntityStorageClientBase {
       $this->configuration['endpoint'],
       $options
     );
-    $result = $this->decoder->getDecoder($this->configuration['format'])->decode($response->getBody());
-    return (object) $result['result']['results'][0];
+    if ($response->getStatusCode() == 200) {
+      $result = $this->decoder->getDecoder($this->configuration['format'])->decode($response->getBody());
+      if (!empty($result['result']) && $result['result']['count'] == 0) {
+        return (object) [];
+      }
+      else {
+        return (object) $result['result']['results'][0];
+      }
+    }
+    else {
+      return (object) [];
+    }
   }
 
   /**

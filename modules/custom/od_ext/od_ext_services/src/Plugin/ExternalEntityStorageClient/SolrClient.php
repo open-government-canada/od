@@ -64,7 +64,18 @@ class SolrClient extends ExternalEntityStorageClientBase {
       $options
     );
     $result = $this->decoder->getDecoder($this->configuration['format'])->decode($response->getBody());
-    return (object) $result['response']['docs'][0];
+    if ($response->getStatusCode() == 200) {
+      $result = $this->decoder->getDecoder($this->configuration['format'])->decode($response->getBody());
+      if (!empty($result['response']) && $result['response']['numFound'] == 0) {
+        return (object) [];
+      }
+      else {
+        return (object) $result['response']['docs'][0];
+      }
+    }
+    else {
+      return (object) [];
+    }
   }
 
   /**
