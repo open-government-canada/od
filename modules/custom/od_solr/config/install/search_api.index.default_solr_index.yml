@@ -12,6 +12,7 @@ dependencies:
     - field.storage.node.field_department
     - field.storage.node.field_idea_tags
     - field.storage.node.field_idea_reference
+    - field.storage.node.field_departments
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
 id: default_solr_index
@@ -159,6 +160,14 @@ field_settings:
         - field.storage.node.field_idea_tags
       module:
         - node
+  field_departments:
+    label: 'More apps by'
+    datasource_id: 'entity:node'
+    property_path: field_departments
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_departments
 datasource_settings:
   'entity:node':
     plugin_id: 'entity:node'
@@ -192,40 +201,26 @@ processor_settings:
       weights:
         preprocess_index: -6
         preprocess_query: -4
+    weights:
+      preprocess_query: -30
   highlight:
-    plugin_id: highlight
-    settings:
-      highlight: always
-      excerpt: true
-      excerpt_length: 256
-      exclude_fields: {  }
-      prefix: '<strong>'
-      suffix: '</strong>'
-      weights:
-        postprocess_query: -9
-    prefix: '<strong>'
-    suffix: '</strong>'
-    excerpt: true
-    excerpt_length: 256
     highlight: always
     highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
     exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
   html_filter:
-    plugin_id: html_filter
-    settings:
-      fields:
-        - rendered_item
-      title: true
-      alt: true
-      tags:
-        h1: 5
-        h2: 3
-        h3: 2
-        string: 2
-        b: 2
-      weights:
-        preprocess_index: -3
-        preprocess_query: -6
+    all_fields: false
+    fields:
+      - rendered_item
+      - title
+      - author
+      - type
+      - langcode
     title: true
     alt: true
     tags:
@@ -234,9 +229,9 @@ processor_settings:
       h3: 2
       strong: 2
       b: 2
-      em: 1
-      u: 1
-    all_fields: false
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
   rendered_item:
     plugin_id: rendered_item
     settings:
@@ -244,18 +239,21 @@ processor_settings:
         add_properties: 0
         pre_index_save: -10
   transliteration:
-    plugin_id: transliteration
-    settings:
-      fields:
-        - title
-        - rendered_item
-        - author
-        - type
-        - node_grants
-      weights:
-        preprocess_index: -10
-        preprocess_query: -10
     all_fields: false
+    fields:
+      - rendered_item
+      - title
+      - author
+      - type
+      - langcode
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  hierarchy:
+    fields:
+      field_departments: taxonomy_term-parent
+    weights:
+      preprocess_index: -45
 tracker_settings:
   default: {  }
 options:
