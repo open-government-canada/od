@@ -13,7 +13,7 @@ id: contact
 title: Contact
 description: '&quot;Contact&quot; webform.'
 category: ''
-elements: "subject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\ncomments_and_feedback:\n  '#type': textarea\n  '#title': 'Comments and Feedback'\n  '#required': true\n  '#counter_type': character\n  '#counter_maximum': '2000'\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\ntitle:\n  '#type': textfield\n  '#title': Title\norganization:\n  '#type': textfield\n  '#title': Organization\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#default_value': '[webform-authenticated-user:mail]'\ntelephone:\n  '#type': tel\n  '#title': Telephone\n  '#pattern': '^\\+?\\d{0,}?(\\s|-|\\.){0,}?\\(?\\d{3}\\)?(\\s|-|\\.){0,}?\\d{3}(\\s|-|\\.){0,}?\\d{4}(\\s|-|\\.){0,}?(ex?t?|extension|x)?(\\s|-|\\.){0,}?\\d{0,}'\nconsent:\n  '#type': select\n  '#title': Consent\n  '#smart_description': false\n  '#description': 'I consent to the sharing of my personal information between Government of Canada departments for the purpose of responding to my inquiry.'\n  '#title_display': invisible\n  '#description_display': before\n  '#options': yes_no"
+elements: "subject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\ncomments_and_feedback:\n  '#type': textarea\n  '#title': 'Comments and Feedback'\n  '#required': true\n  '#counter_type': character\n  '#counter_maximum': '2000'\n  '#counter_message': 'character(s) left'\n  '#smart_description': false\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\ntitle:\n  '#type': textfield\n  '#title': Title\norganization:\n  '#type': textfield\n  '#title': Organization\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#default_value': '[webform-authenticated-user:mail]'\ntelephone:\n  '#type': tel\n  '#title': Telephone\n  '#pattern': '^\\+?\\d{0,}?(\\s|-|\\.){0,}?\\(?\\d{3}\\)?(\\s|-|\\.){0,}?\\d{3}(\\s|-|\\.){0,}?\\d{4}(\\s|-|\\.){0,}?(ex?t?|extension|x)?(\\s|-|\\.){0,}?\\d{0,}'\nconsent:\n  '#type': select\n  '#title': Consent\n  '#smart_description': false\n  '#description': 'I consent to the sharing of my personal information between Government of Canada departments for the purpose of responding to my inquiry.'\n  '#title_display': invisible\n  '#description_display': before\n  '#options': yes_no"
 css: ''
 javascript: ''
 settings:
@@ -149,7 +149,7 @@ handlers:
       from_options: {  }
       from_name: default
       subject: '[webform_submission:values:subject:value]'
-      body: '&lt;p&gt;Submitted values are:&lt;/p&gt; [webform_submission:values]'
+      body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -180,7 +180,7 @@ handlers:
       from_options: {  }
       from_name: '[webform_submission:values:subject:value]'
       subject: '[webform_submission:values:subject:value]'
-      body: '&lt;p&gt;Submitted values are:&lt;/p&gt; [webform_submission:values]'
+      body: '[webform_submission:values]'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

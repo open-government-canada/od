@@ -4,3 +4,34 @@
  * @file
  * Contains od_ext_vote.module.
  */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\votingapi\VoteInterface;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function od_ext_vote_entity_insert(EntityInterface $entity) {
+  // Only act on content entities.
+  if (!($entity instanceof FieldableEntityInterface)) {
+    return;
+  }
+  // Clear the views cache.
+  if ($entity instanceof VoteInterface) {
+    $tags = ['config:views.view.solr_inventory'];
+    \Drupal::service('cache_tags.invalidator')->invalidateTags($tags);
+  }
+}
+
+function od_ext_vote_entity_delete(EntityInterface $entity) {
+  // Only act on content entities.
+  if (!($entity instanceof FieldableEntityInterface)) {
+    return;
+  }
+  // Clear the views cache.
+  if ($entity instanceof VoteInterface) {
+    $tags = ['config:views.view.solr_inventory'];
+    \Drupal::service('cache_tags.invalidator')->invalidateTags($tags);
+  }
+}

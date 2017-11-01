@@ -19,4 +19,9 @@ function od_ext_install() {
     ],
   ];
   wxt_ext_translation_enable_translation($entities);
+
+  // Translate Date Format.
+  $dateConfig = \Drupal::languageManager()->getLanguageConfigOverride('fr', 'core.date_format.wxt_standard');
+  $dateConfig->set('pattern', 'd F Y')
+    ->save();
 }

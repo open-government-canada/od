@@ -250,7 +250,8 @@ display:
         - url.query_args
       cacheable: false
       max-age: -1
-      tags: {  }
+      tags:
+        - 'search_api_list:default_solr_index'
   feed_1:
     display_plugin: feed
     id: feed_1
@@ -273,8 +274,12 @@ display:
       style:
         type: rss
         options:
-          grouping: {  }
-          description: ''
+          grouping:
+            -
+              field: title
+              rendered: true
+              rendered_strip: false
+          description: 'Latest Apps feed provided by open.canada.ca'
       defaults:
         style: false
         row: false
@@ -374,7 +379,7 @@ display:
         groups:
           1: AND
       display_description: ''
-      title: ''
+      title: 'Latest Apps'
       fields:
         nid:
           id: nid
@@ -1070,100 +1075,7 @@ display:
             multi_separator: ', '
           entity_type: node
           plugin_id: search_api_field
-      arguments:
-        field_device_formats:
-          id: field_device_formats
-          table: search_api_index_default_solr_index
-          field: field_device_formats
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: ignore
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options: null
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          plugin_id: search_api
-        field_ribbon:
-          id: field_ribbon
-          table: search_api_index_default_solr_index
-          field: field_ribbon
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: ignore
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options: null
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          plugin_id: search_api
-        field_app_categories:
-          id: field_app_categories
-          table: search_api_index_default_solr_index
-          field: field_app_categories
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: ignore
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options: null
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          plugin_id: search_api
+      arguments: {  }
       css_class: 'apps mrgn-tp-lg'
       pager:
         type: full
@@ -1187,12 +1099,18 @@ display:
             offset_label: Offset
           quantity: 9
       path: rss/latest-apps/rss.xml
+      displays:
+        solr_app: solr_app
+        default: '0'
+        page_1: '0'
+        solr_commitment: '0'
+        solr_consultation: '0'
+      sitename_title: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
       tags:
         - 'config:field.storage.node.body'
@@ -1202,6 +1120,7 @@ display:
         - 'config:field.storage.node.field_idea_permalink'
         - 'config:field.storage.node.field_ribbon'
         - 'config:field.storage.node.field_vote'
+        - 'search_api_list:default_solr_index'
   page_1:
     display_plugin: page
     id: page_1
@@ -1223,7 +1142,8 @@ display:
         - url.query_args
       cacheable: false
       max-age: -1
-      tags: {  }
+      tags:
+        - 'search_api_list:default_solr_index'
   solr_app:
     display_plugin: block
     id: solr_app
@@ -1254,6 +1174,7 @@ display:
         arguments: false
         css_class: false
         pager: false
+        cache: false
       row:
         type: fields
         options:
@@ -1984,6 +1905,8 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      cache:
+        type: none
     cache_metadata:
       max-age: -1
       contexts:
@@ -1997,6 +1920,7 @@ display:
         - 'config:field.storage.node.field_device_formats'
         - 'config:field.storage.node.field_ribbon'
         - 'config:field.storage.node.field_vote'
+        - 'search_api_list:default_solr_index'
   solr_commitment:
     display_plugin: block
     id: solr_commitment
@@ -2324,6 +2248,7 @@ display:
         - url.query_args
       tags:
         - 'config:field.storage.node.body'
+        - 'search_api_list:default_solr_index'
   solr_consultation:
     display_plugin: block
     id: solr_consultation
@@ -2651,3 +2576,4 @@ display:
         - url.query_args
       tags:
         - 'config:field.storage.node.body'
+        - 'search_api_list:default_solr_index'

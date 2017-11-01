@@ -22,9 +22,6 @@ function od_install() {
  * Setup base site configurations.
  */
 function _od_setup_base_configurations() {
-  // Ensure the translation fields are created in the database.
-  \Drupal::service('entity.definition_update_manager')->applyUpdates();
-
   $config = \Drupal::service('config.factory')->getEditable('system.site');
   $config->set('name', 'Open Government')
     ->set('mail', 'od-do@canada.ca')
@@ -43,6 +40,10 @@ function _od_setup_base_configurations() {
     ->set('timezone.user.warn', FALSE)
     ->set('timezone.user.default', 0)
     ->save(TRUE);
+
+  // Ensure the translation fields are created in the database.
+  \Drupal::service('entity.definition_update_manager')->applyUpdates();
+
 }
 
 /**
