@@ -52,9 +52,9 @@
     <tr>
       <td>{{ 'Travel - Public Servants'|t }}</td>
       {% if (language == 'fr') %}
-        <td>{{ fields.public_servants.content|striptags|trim|number_format('2', '.', ',') ~ ' $' }}</td>
-        <td>{{ fields.public_servants_previous_year.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
-        <td>{{ fields.public_servants_change.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
+        <td>{{ fields.public_servants.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.public_servants_previous_year.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.public_servants_change.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
       {% else %}
         <td>{{ '$' ~ fields.public_servants.content|striptags|trim|number_format('2', '.', ',') }}</td>
         <td>{{ '$' ~ fields.public_servants_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
@@ -64,9 +64,9 @@
     <tr>
       <td>{{ 'Travel - Non-Public Servants'|t }}</td>
       {% if (language == 'fr') %}
-        <td>{{ fields.non_public_servants.content|striptags|trim|number_format('2', '.', ',') ~ ' $' }}</td>
-        <td>{{ fields.non_public_servants_previous_year.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
-        <td>{{ fields.non_public_servants_change.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
+        <td>{{ fields.non_public_servants.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.non_public_servants_previous_year.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.non_public_servants_change.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
       {% else %}
         <td>{{ '$' ~ fields.non_public_servants.content|striptags|trim|number_format('2', '.', ',') }}</td>
         <td>{{ '$' ~ fields.non_public_servants_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
@@ -76,9 +76,9 @@
     <tr>
       <td>{{ 'Total Travel'|t }}</td>
       {% if (language == 'fr') %}
-        <td>{{ fields.total_travel.content|striptags|trim|number_format('2', '.', ',') ~ ' $' }}</td>
-        <td>{{ fields.total_travel_previous_year.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
-        <td>{{ fields.total_travel_change.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
+        <td>{{ fields.total_travel.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.total_travel_previous_year.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.total_travel_change.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
       {% else %}
         <td>{{ '$' ~ fields.total_travel.content|striptags|trim|number_format('2', '.', ',') }}</td>
         <td>{{ '$' ~ fields.total_travel_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
@@ -88,9 +88,9 @@
     <tr>
       <td>{{ 'Hospitality'|t }}</td>
       {% if (language == 'fr') %}
-        <td>{{ fields.hospitality.content|striptags|trim|number_format('2', '.', ',') ~ ' $' }}</td>
-        <td>{{ fields.hospitality_previous_year.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
-        <td>{{ fields.hospitality_change.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
+        <td>{{ fields.hospitality.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.hospitality_previous_year.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.hospitality_change.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
       {% else %}
         <td>{{ '$' ~ fields.hospitality.content|striptags|trim|number_format('2', '.', ',') }}</td>
         <td>{{ '$' ~ fields.hospitality_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
@@ -100,9 +100,9 @@
     <tr>
       <td>{{ 'Conference Fees'|t }}</td>
       {% if (language == 'fr') %}
-        <td>{{ fields.conference_fees.content|striptags|trim|number_format('2', '.', ',') ~ ' $' }}</td>
-        <td>{{ fields.conference_fees_previous_year.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
-        <td>{{ fields.conference_fees_change.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
+        <td>{{ fields.conference_fees.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.conference_fees_previous_year.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.conference_fees_change.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
       {% else %}
         <td>{{ '$' ~ fields.conference_fees.content|striptags|trim|number_format('2', '.', ',') }}</td>
         <td>{{ '$' ~ fields.conference_fees_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
@@ -112,9 +112,9 @@
     <tr>
       <td>{{ 'Total'|t }}</td>
       {% if (language == 'fr') %}
-        <td>{{ fields.total.content|striptags|trim|number_format('2', '.', ',') ~ ' $' }}</td>
-        <td>{{ fields.total_previous_year.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
-        <td>{{ fields.total_change.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
+        <td>{{ fields.total.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.total_previous_year.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.total_change.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
       {% else %}
         <td>{{ '$' ~ fields.total.content|striptags|trim|number_format('2', '.', ',') }}</td>
         <td>{{ '$' ~ fields.total_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
@@ -124,9 +124,9 @@
     <tr>
       <td>{{ 'International Travel by Minister and Minister\'s Staff'|t }}</td>
       {% if (language == 'fr') %}
-        <td>{{ fields.minister.content|striptags|trim|number_format('2', '.', ',') ~ ' $' }}</td>
-        <td>{{ fields.minister_previous_year.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
-        <td>{{ fields.minister_change.content|striptags|trim|number_format('2', '.', ',')  ~ ' $' }}</td>
+        <td>{{ fields.minister.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.minister_previous_year.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
+        <td>{{ fields.minister_change.content|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}</td>
       {% else %}
         <td>{{ '$' ~ fields.minister.content|striptags|trim|number_format('2', '.', ',') }}</td>
         <td>{{ '$' ~ fields.minister_previous_year.content|striptags|trim|number_format('2', '.', ',') }}</td>
