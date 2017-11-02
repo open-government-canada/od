@@ -31,77 +31,41 @@
 
   {% if top.content %}
   <{{ top.wrapper }}{{ top.attributes }}>
-    <h1>{{ top.content }}</h1>
+    {{ top.content }}
   </{{ top.wrapper }}>
   {% endif %}
 
-  <div class="col-md-4">
-    {% if top_left.content %}
-    <{{ top_left.wrapper }}{{ top_left.attributes }}>
-      {{ top_left.content }}
-    </{{ top_left.wrapper }}>
-    {% endif %}
-  </div>
-
-  <div class="col-md-8">
-    {% if top_right.content %}
-    <{{ top_right.wrapper }}{{ top_right.attributes }}>
-      {{ top_right.content }}
-    </{{ top_right.wrapper }}>
-    {% endif %}
-  </div>
-
-  <div class="col-md-4">
-    <h2>{{ 'Open Data'|t }}</h2>
-    <{{ middle_left.wrapper }}{{ middle_left.attributes }}>
-      {{ middle_left.content }}
-    </{{ middle_left.wrapper }}>
-  </div>
-  <div class="col-md-4">
-    <h2>{{ 'Open Information'|t }}</h2>
-    <{{ middle_center.wrapper }}{{ middle_center.attributes }}>
-      {{ middle_center.content }}
-    </{{ middle_center.wrapper }}>
-  </div>
-  <div class="col-md-4">
-    <h2></h2>
-    <div class="well">
-      <{{ middle_right.wrapper }}{{ middle_right.attributes }}>
-        {{ middle_right.content }}
-      </{{ middle_right.wrapper }}>
-    </div>
-  </div>
-
-  {% if middle.content %}
-  <{{ middle.wrapper }}{{ middle.attributes }}>
-    {{ middle.content }}
-  </{{ middle.wrapper }}>
+  {% if top_left.content %}
+  <{{ top_left.wrapper }}{{ top_left.attributes }}>
+    {{ top_left.content }}
+  </{{ top_left.wrapper }}>
   {% endif %}
 
-  <div class="col-md-4">
-    {% if bottom_left.content %}
+  {% if top_right.content %}
+  <{{ top_right.wrapper }}{{ top_right.attributes }}>
+    {{ top_right.content }}
+  </{{ top_right.wrapper }}>
+  {% endif %}
+
+  {% if bottom_left.content %}
     <{{ bottom_left.wrapper }}{{ bottom_left.attributes }}>
       {{ bottom_left.content }}
     </{{ bottom_left.wrapper }}>
-    {% endif %}
-  </div>
-  <div class="col-md-4">
-    {% if bottom_center.content %}
-    <{{ bottom_center.wrapper }}{{ bottom_center.attributes }}>
-      {{ bottom_center.content }}
-    </{{ bottom_center.wrapper }}>
-    {% endif %}
-  </div>
-  <div class="col-md-4">
-    {% if bottom_right.content %}
+  {% endif %}
+
+  {% if bottom_middle.content %}
+    <{{ bottom_middle.wrapper }}{{ bottom_middle.attributes }}>
+      {{ bottom_middle.content }}
+    </{{ bottom_middle.wrapper }}>
+  {% endif %}
+
+  {% if bottom_right.content %}
     <{{ bottom_right.wrapper }}{{ bottom_right.attributes }}>
       {{ bottom_right.content }}
     </{{ bottom_right.wrapper }}>
-    {% endif %}
-  </div>
+  {% endif %}
 
   {% if bottom.content %}
-  <h2>{{ 'Applications'|t }}</h2>
   <{{ bottom.wrapper }}{{ bottom.attributes }}>
     {{ bottom.content }}
   </{{ bottom.wrapper }}>

@@ -18,11 +18,11 @@ variant_settings:
       id: 'views_block:community_apps-block_1'
       label: ''
       provider: views
-      label_display: '0'
+      label_display: visible
       views_label: ''
       items_per_page: none
       region: bottom
-      weight: 0
+      weight: 1
       uuid: 99793b39-ef09-49c9-a2d3-ea4c1cf1eaea
       context_mapping:
         tid: taxonomy_term
@@ -30,11 +30,11 @@ variant_settings:
       id: 'views_block:community_blocks-block_1'
       label: ''
       provider: views
-      label_display: '0'
+      label_display: visible
       views_label: ''
       items_per_page: none
-      region: middle_center
-      weight: -2
+      region: bottom_middle
+      weight: 1
       uuid: 94c28207-dffb-45b9-8d97-78e86a276bc6
       context_mapping: {  }
     d04996dc-4ef6-4b91-8a0c-c4f69a64298b:
@@ -49,30 +49,13 @@ variant_settings:
         third_party_settings: {  }
         weight: 0
       region: top_right
-      weight: -9
+      weight: 2
       uuid: d04996dc-4ef6-4b91-8a0c-c4f69a64298b
-      context_mapping:
-        entity: taxonomy_term
-    a38ad86b-bdcb-4f65-8b3b-5d2b3536ef99:
-      id: 'entity_field:taxonomy_term:name'
-      label: Name
-      provider: ctools_block
-      label_display: '0'
-      formatter:
-        label: hidden
-        type: string
-        settings:
-          link_to_entity: false
-        third_party_settings: {  }
-        weight: 0
-      region: top
-      weight: -10
-      uuid: a38ad86b-bdcb-4f65-8b3b-5d2b3536ef99
       context_mapping:
         entity: taxonomy_term
     5f8aff9f-c512-4ae6-b719-b55c899ef25f:
       id: 'entity_field:taxonomy_term:field_links'
-      label: Links
+      label: 'External Links'
       provider: ctools_block
       label_display: visible
       formatter:
@@ -86,11 +69,20 @@ variant_settings:
           target: '0'
         third_party_settings: {  }
         weight: 0
-      region: middle_right
-      weight: 0
+      region: bottom_right
+      weight: 1
       uuid: 5f8aff9f-c512-4ae6-b719-b55c899ef25f
       context_mapping:
         entity: taxonomy_term
+    ff83f132-1f87-44d6-bb3b-952b70c7fef4:
+      id: page_title_block
+      label: 'Page title'
+      provider: core
+      label_display: '0'
+      region: top_right
+      weight: 1
+      uuid: ff83f132-1f87-44d6-bb3b-952b70c7fef4
+      context_mapping: {  }
   id: panels_variant
   uuid: 4a377b5e-2664-4679-8aa4-19cddcf3155e
   label: null
@@ -113,37 +105,13 @@ variant_settings:
       top_left:
         wrapper: div
         classes:
-          text-center: text-center
+          col-sm-2: col-sm-2
         add_region_classes: 1
         attributes: ''
       top_right:
         wrapper: div
         classes:
-          text-left: text-left
-        add_region_classes: 1
-        attributes: ''
-      middle_left:
-        wrapper: div
-        classes:
-          text-left: text-left
-        add_region_classes: 1
-        attributes: ''
-      middle_center:
-        wrapper: div
-        classes:
-          text-left: text-left
-        add_region_classes: 1
-        attributes: ''
-      middle_right:
-        wrapper: div
-        classes:
-          text-left: text-left
-        add_region_classes: 1
-        attributes: well
-      middle:
-        wrapper: div
-        classes:
-          text-left: text-left
+          col-sm-10: col-sm-10
         add_region_classes: 1
         attributes: ''
       bottom_left:
@@ -163,14 +131,14 @@ variant_settings:
         classes:
           col-sm-4: col-sm-4
         add_region_classes: 1
-        attributes: ''
+        attributes: class|well
       bottom:
         wrapper: div
         classes:
           col-sm-12: col-sm-12
         add_region_classes: 1
         attributes: ''
-  page_title: ''
+  page_title: '[term:name]'
   storage_type: page_manager
   storage_id: communities_layout-panels_variant-0
   builder: ipe

@@ -18,6 +18,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
+use Drupal\taxonomy\TermInterface;
 
 class MainBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
@@ -146,7 +147,13 @@ class MainBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
    * {@inheritdoc}
    */
   public function applies(RouteMatchInterface $route_match) {
-    return TRUE;
+    if ($route_match->getRouteName() == 'entity.taxonomy_term.canonical' &&
+        $route_match->getParameter('taxonomy_term') instanceof TermInterface) {
+      return FALSE;
+    }
+    else {
+      return TRUE;
+    }
   }
 
   /**

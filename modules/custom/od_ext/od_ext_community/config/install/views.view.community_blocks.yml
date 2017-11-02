@@ -202,7 +202,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      title: 'Communities (Info)'
+      title: 'Open Information'
     cache_metadata:
       max-age: -1
       contexts:

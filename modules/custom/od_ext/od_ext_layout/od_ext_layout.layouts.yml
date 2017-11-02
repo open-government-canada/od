@@ -53,27 +53,11 @@ od_open_communities:
     top_left:
       label: 'Top Left'
       classes:
-        - col-sm-4
+        - col-sm-2
     top_right:
       label: 'Top Right'
       classes:
-        - col-sm-8
-    middle_left:
-      label: 'Middle Left'
-      classes:
-        - col-sm-4
-    middle_center:
-      label: 'Middle Middle'
-      classes:
-        - col-sm-4
-    middle_right:
-      label: 'Middle Right'
-      classes:
-        - col-sm-4
-    middle:
-      label: 'Middle'
-      classes:
-        - col-sm-12
+        - col-sm-10
     bottom_left:
       label: 'Bottom Left'
       classes:
