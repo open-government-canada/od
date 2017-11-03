@@ -59,11 +59,11 @@ display:
           row_class: mrgn-bttm-md
           default_row_class: true
           alignment: horizontal
-          columns: '1'
-          col_xs: col-xs-12
-          col_sm: col-sm-12
-          col_md: col-md-12
-          col_lg: col-lg-12
+          columns: '3'
+          col_xs: col-xs-4
+          col_sm: col-sm-4
+          col_md: col-md-4
+          col_lg: col-lg-4
       row:
         type: fields
         options:
@@ -370,6 +370,8 @@ display:
         fields: false
         arguments: false
         title: false
+        style: false
+        row: false
       arguments:
         tid:
           id: tid
@@ -415,6 +417,25 @@ display:
       display_description: ''
       title: Datasets
       block_description: Datasets
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: mrgn-bttm-md
+          default_row_class: true
+          alignment: horizontal
+          columns: '1'
+          col_xs: col-xs-12
+          col_sm: col-sm-12
+          col_md: col-md-12
+          col_lg: col-lg-12
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
