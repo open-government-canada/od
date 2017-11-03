@@ -101,18 +101,29 @@ function od_solr_external_preprocess_views_view_fields(&$variables) {
   if ($view->id() == 'ext_core_ckan' && $view->current_display == 'block_1' ||
       $view->id() == 'ext_core_ckan' && $view->current_display == 'block_3') {
     $language = Drupal::languageManager()->getCurrentLanguage();
+    $id = $variables['fields']['id']->content->__toString();
     $str = $variables['fields']['nothing']->content->__toString();
     $str = html_entity_decode($str);
     $str = json_decode($str, TRUE);
-    $id = $str['id'];
-    $org = $str['organization']['title'];
-    $org = explode('|', $org);
     if ($language->getId() == 'fr') {
-      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $org[1] . '</a>');
+      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $str['fr'] . '</a>');
     }
     else {
-      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $org[0] . '</a>');
+      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $str['en'] . '</a>');
     }
+    unset($variables['fields']['id']);
     $variables['fields']['nothing']->content = $str;
+
+    if ($view->current_display == 'block_3') {
+      $str = $variables['fields']['nothing_1']->content->__toString();
+      $str = html_entity_decode($str);
+      $str = json_decode($str, TRUE);
+      if ($language->getId() == 'fr') {
+        $variables['fields']['nothing_1']->content = $str['fr'];
+      }
+      else {
+        $variables['fields']['nothing_1']->content = $str['en'];
+      }
+    }
   }
 }

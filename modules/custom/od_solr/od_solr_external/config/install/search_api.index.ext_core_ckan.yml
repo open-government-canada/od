@@ -131,11 +131,6 @@ field_settings:
     datasource_id: solr_document
     property_path: private
     type: string
-  ready_to_publish:
-    label: ready_to_publish
-    datasource_id: solr_document
-    property_path: ready_to_publish
-    type: string
   res_description:
     label: res_description
     datasource_id: solr_document
@@ -206,6 +201,16 @@ field_settings:
     datasource_id: solr_document
     property_path: urls
     type: string
+  extras_title_translated:
+    label: 'Extras title translated'
+    datasource_id: solr_document
+    property_path: extras_title_translated
+    type: text
+  extras_org_title_at_publication:
+    label: 'Extras org title at publication'
+    datasource_id: solr_document
+    property_path: extras_org_title_at_publication
+    type: text
 datasource_settings:
   solr_document:
     id_field: id
