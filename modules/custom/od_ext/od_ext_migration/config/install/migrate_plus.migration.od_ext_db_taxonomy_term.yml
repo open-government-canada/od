@@ -38,6 +38,8 @@ process:
       uri: url
       title: title
       options: attributes
+  field_icon: icon
+  field_ckan: solr
 destination:
   plugin: 'entity:taxonomy_term'
 migration_dependencies: {  }
