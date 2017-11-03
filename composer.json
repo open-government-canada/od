@@ -259,7 +259,9 @@
                 "Enter drupal/external_entities patch #2882887 description here":
                 "https://www.drupal.org/files/issues/allow_for_uuid_to_be-2882887-2.patch",
                 "Enter drupal/external_entities patch #2887193 description here":
-                "https://www.drupal.org/files/issues/allow_for-2887193-2.patch"
+                "https://www.drupal.org/files/issues/allow_for-2887193-2.patch",
+                "Enter drupal/external_entities patch #2887193 description here":
+                "https://www.drupal.org/files/issues/externalentitystorage-2920779-2.patch"
             },
             "drupal/facets": {
                 "Enter drupal/facets patch #2877004 description here":
