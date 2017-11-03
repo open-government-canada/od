@@ -4,3 +4,15 @@
  * @file
  * Contains od_ext_taxonomy.module.
  */
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function od_ext_taxonomy_views_pre_render(ViewExecutable $view) {
+  if ($view->id() === 'taxonomy_term' &&
+      $view->getRequest()->get('taxonomy_term')->bundle() === 'communities') {
+    $view->result = [];
+  }
+}
