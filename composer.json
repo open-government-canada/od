@@ -251,6 +251,10 @@
                 "Enter drupal/address patch #2514126 description here":
                 "https://www.drupal.org/files/issues/2514126-102.field-behavior-settings.patch  "
             },
+            "drupal/core": {
+                "Enter drupal/address patch #2599228 description here":
+                "https://www.drupal.org/files/issues/2599228-31.patch"
+            },
             "drupal/external_entities": {
                 "Enter drupal/external_entities patch #2875436 description here":
                 "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch",
