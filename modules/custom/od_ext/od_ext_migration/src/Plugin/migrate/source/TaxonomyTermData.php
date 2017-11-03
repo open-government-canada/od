@@ -122,6 +122,29 @@ class TaxonomyTermData extends SqlBase {
 
       case 17:
         $vid = 'communities';
+
+        // Icon.
+        $icon = $this->select('field_data_field_taxonomy_icon', 'db')
+          ->fields('db', ['field_taxonomy_icon_bundle'])
+          ->condition('entity_id', $row->getSourceProperty('tid'))
+          ->condition('revision_id', $row->getSourceProperty('tid'))
+          ->condition('language', 'und')
+          ->condition('bundle', 'communities')
+          ->execute()
+          ->fetchCol();
+        $row->setSourceProperty('icon', $icon[0]);
+
+        // CKAN Solr.
+        $solr = $this->select('field_data_field_taxonomy_solr', 'db')
+          ->fields('db', ['field_taxonomy_solr_all_value'])
+          ->condition('entity_id', $row->getSourceProperty('tid'))
+          ->condition('revision_id', $row->getSourceProperty('tid'))
+          ->condition('language', 'und')
+          ->condition('bundle', 'communities')
+          ->execute()
+          ->fetchCol();
+        $row->setSourceProperty('solr', $solr[0]);
+
         break;
 
       case 18:

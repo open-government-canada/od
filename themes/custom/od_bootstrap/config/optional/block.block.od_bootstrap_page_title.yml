@@ -27,3 +27,4 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'

@@ -989,6 +989,86 @@ source:
             </div>
           </div>
         </div>
+    - bid: 'form_privacy_statement_voluntary'
+      language: 'fr'
+      title: 'Privacy Notice'
+      body: |
+        <div class="module-info module-simplify">
+          <div class="alert alert-info">
+            <p>La communication de l’information demandée sur ce formulaire
+            n’est pas obligatoire. L’information est recueillie dans le but
+            de répondre à votre demande de renseignements ou à vos
+            commentaires et d’améliorer notre ensemble de produits et de
+            services en ligne. Les renseignements personnels que vous
+            fournissez sont protégés en vertu de la <a href=
+            "http://laws-lois.justice.gc.ca/fra/lois/P-21/index.html"><em>Loi
+            sur la protection des renseignements personnels</em></a>, une loi
+            fédérale. Veuillez <strong>ne pas inclure de renseignements
+            personnels à caractère délicat</strong> dans le message, comme
+            votre numéro d’assurance sociale, des renseignements financiers
+            personnels et vos antécédents médicaux ou professionnels.</p>
+            <div class="clear">
+              &nbsp;
+            </div>
+            <div class="mrgn-rght-lg mrgn-lft-0">
+              <details>
+                <summary class="bg-primary mrgn-bttm-md">
+                  Lisez la Déclaration sur la protection des renseignements
+                  personnels du présent site Web.
+                </summary>
+                <p>La collecte et l’utilisation de vos renseignements
+                personnels sont autorisées en vertu de l’article 7 de la
+                <em>Loi sur la gestion des finances publiques</em>. La
+                collecte et l’utilisation de vos renseignements personnels
+                pour donnees.gc.ca se feront conformément à la <a href=
+                "http://laws-lois.justice.gc.ca/fra/lois/P-21/index.html"><em>
+                Loi sur la protection des renseignements personnels</em></a>,
+                une loi fédérale. Vos renseignements personnels sont utilisés
+                pour répondre à vos demandes de renseignements, s’il y a
+                lieu, et peuvent être utilisés pour évaluer l’efficacité du
+                programme quand vient le temps de répondre aux besoins des
+                clients. Dans des circonstances exceptionnelles (p. ex.,
+                enquête sur les pirates informatiques ou sur les personnes
+                qui font des menaces ou des remarques méprisantes, etc.), des
+                renseignements personnels peuvent être communiqués sans votre
+                consentement aux termes du paragraphe 8(2) de la <em>Loi sur
+                la protection des renseignements personnels</em>.</p>
+                <p>Tous les renseignements personnels qui peuvent être
+                recueillis sont décrits dans le fichier de renseignements
+                personnels ordinaire intitulé Communications publiques (POU
+                914), qui se trouve dans la publication <a href=
+                "http://www.infosource.gc.ca/index-fra.asp"><em>Info
+                Source</em></a> du Secrétariat du Conseil du Trésor du Canada
+                (SCT). Les renseignements personnels recueillis seront
+                conservés par le SCT pendant une période de 18 mois seulement
+                après l’achèvement de l’activité, après quoi tous les
+                renseignements d’identification seront supprimés.</p>
+                <p>En vertu de la <em>Loi sur la protection des
+                renseignements personnels</em>, vous avez le droit de
+                demander l’accès à vos renseignements personnels et de les
+                modifier si vous en avez fourni. Notez toutefois que, pour
+                exercer l’un ou l’autre de ces droits, vous devez présenter
+                une demande d’accès à vos renseignements personnels avant la
+                fin de la période de conservation. Pour obtenir de plus
+                amples renseignements sur votre droit d’accès, s’il vous
+                plaît lire <a href=
+                "http://www.infosource.gc.ca/emp/emp01-fra.asp">À propos du
+                programme d’accèss à l’information</a>.</p>
+                <p>Si vous avez besoin de précisions au sujet de cette
+                déclaration, veuillez communiquer avec le coordonnateur de la
+                protection des renseignements personnels du SCT au
+                613-957-7154. Pour obtenir de plus amples renseignements au
+                sujet de vos droits en matière de protection des
+                renseignements personnels et de la <em>Loi sur la protection
+                des renseignements personnels</em>, consultez le commissaire
+                à la protection de la vie privée par <a href=
+                "https://www.priv.gc.ca/index_f.asp">le site du commissariat
+                à la protection de la vie privée du canada</a> ou au
+                1-800-282-1376.</p>
+              </details>
+            </div>
+          </div>
+        </div>
     - bid: 'pd_transitional_period'
       language: 'fr'
       title: 'Période de transition'

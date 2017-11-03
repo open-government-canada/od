@@ -47,4 +47,14 @@ use Drupal\icon\Plugin\Icon\IconSetBase;
  */
 class OpenGovSet extends IconSetBase {
 
+  /**
+   * {@inheritdoc}
+   */
+  public function process() {
+    $icons = $this->pluginDefinition['icons'];
+    foreach ($icons as $key => $val) {
+      $this->setIcon(['id' => $val], 'opengov-' . $key);
+    }
+  }
+
 }

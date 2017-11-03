@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_display.comment.taxonomy_comment.default
+    - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.communities.field_ckan
     - field.field.taxonomy_term.communities.field_icon
     - field.field.taxonomy_term.communities.field_links
@@ -11,7 +12,6 @@ dependencies:
     - taxonomy.vocabulary.communities
   module:
     - comment
-    - icon_field
     - link
     - panelizer
     - text
@@ -37,24 +37,24 @@ third_party_settings:
               weight: 0
               region: content
             region: top_right
-            weight: -1
+            weight: -2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2dda2175-c048-4fd3-88c1-94bbb65dee33
           a704c6a3-e22c-49ca-ae63-fa177ff25830:
             id: 'entity_field:taxonomy_term:field_links'
-            label: Links
+            label: 'External Links'
             provider: ctools_block
-            label_display: '0'
+            label_display: visible
             formatter:
-              label: above
+              label: hidden
               type: link
               settings:
                 trim_length: 80
                 url_only: false
                 url_plain: false
-                rel: ''
-                target: ''
+                rel: '0'
+                target: '0'
               third_party_settings: {  }
               weight: 0
               region: content
@@ -105,31 +105,65 @@ third_party_settings:
             weight: -2
             uuid: 97a3c12f-965c-42b3-8152-abb691e07bfb
             context_mapping: {  }
-          68285a1b-d24c-4bb4-8a4e-353ceceaa0a7:
+          3152eba9-4052-4287-9a56-479fc820bdc2:
             id: page_title_block
             label: 'Page title'
             provider: core
             label_display: '0'
             region: top_right
-            weight: -2
-            uuid: 68285a1b-d24c-4bb4-8a4e-353ceceaa0a7
+            weight: -4
+            uuid: 3152eba9-4052-4287-9a56-479fc820bdc2
             context_mapping: {  }
-          bac599a5-481c-4428-9e4c-d6c15c1c9694:
+          a39c7b09-13f1-4e3f-a60c-2d9768923c85:
             id: 'entity_field:taxonomy_term:field_icon'
             label: Icon
             provider: ctools_block
-            label_display: visible
+            label_display: '0'
             formatter:
-              label: above
+              label: hidden
               type: icon_list
               settings: {  }
               third_party_settings: {  }
               weight: 0
-            region: top
-            weight: 0
-            uuid: bac599a5-481c-4428-9e4c-d6c15c1c9694
+            region: top_left
+            weight: -10
+            uuid: a39c7b09-13f1-4e3f-a60c-2d9768923c85
             context_mapping:
               entity: '@panelizer.entity_context:entity'
+          7bfdaabc-ab9c-4d36-b5aa-a8b372645407:
+            id: 'views_block:ext_core_ckan-block_3'
+            label: ''
+            provider: views
+            label_display: visible
+            views_label: ''
+            items_per_page: none
+            region: bottom_left
+            weight: -4
+            uuid: 7bfdaabc-ab9c-4d36-b5aa-a8b372645407
+            context_mapping:
+              'null': '@panelizer.entity_context:entity'
+          d606e592-67d4-4d7a-adb1-2d0a87d35a2e:
+            id: local_tasks_block
+            label: Tabs
+            provider: core
+            label_display: '0'
+            primary: true
+            secondary: true
+            region: top_right
+            weight: -3
+            uuid: d606e592-67d4-4d7a-adb1-2d0a87d35a2e
+            context_mapping: {  }
+          b59bbfaa-a695-4751-b8e8-14701269865a:
+            id: 'views_block:communities_topics-block_1'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: bottom_left
+            weight: -3
+            uuid: b59bbfaa-a695-4751-b8e8-14701269865a
+            context_mapping: {  }
         id: panels_variant
         label: Default
         uuid: d6d4c4cf-f844-420a-b768-6e809bba4e03
@@ -178,7 +212,7 @@ third_party_settings:
               classes:
                 col-sm-4: col-sm-4
               add_region_classes: 1
-              attributes: class|well
+              attributes: ''
             bottom:
               wrapper: div
               classes:
@@ -187,14 +221,14 @@ third_party_settings:
               attributes: ''
         page_title: '[term:name]'
         storage_type: panelizer_default
-        storage_id: 'taxonomy_term:communities:default:default'
+        storage_id: 'taxonomy_term:communities:full:default'
         builder: ipe
         pattern: panelizer
         static_context: {  }
-id: taxonomy_term.communities.default
+id: taxonomy_term.communities.full
 targetEntityType: taxonomy_term
 bundle: communities
-mode: default
+mode: full
 content:
   description:
     label: hidden
@@ -203,21 +237,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_ckan:
-    weight: 4
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_icon:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: icon_list
-    region: content
   field_links:
     type: link
     weight: 1
@@ -240,5 +259,7 @@ content:
     type: comment_default
     region: content
 hidden:
+  field_ckan: true
+  field_icon: true
   langcode: true
   panelizer: true

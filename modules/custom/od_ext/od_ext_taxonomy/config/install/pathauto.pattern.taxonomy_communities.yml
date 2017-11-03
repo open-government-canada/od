@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: taxonomy_communities
+label: 'Taxonomy Communities'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'community/[term:name]'
+selection_criteria:
+  8b277af2-df01-4d66-a285-9c3363e45a71:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      communities: communities
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 8b277af2-df01-4d66-a285-9c3363e45a71
+selection_logic: and
+weight: -5
+relationships: {  }

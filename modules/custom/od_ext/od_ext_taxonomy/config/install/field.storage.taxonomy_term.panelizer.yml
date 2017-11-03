@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - panelizer
+    - taxonomy
+id: taxonomy_term.panelizer
+field_name: panelizer
+entity_type: taxonomy_term
+type: panelizer
+settings: {  }
+module: panelizer
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

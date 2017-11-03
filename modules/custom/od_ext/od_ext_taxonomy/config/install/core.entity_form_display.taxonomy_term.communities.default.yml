@@ -2,12 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.communities.field_ckan
+    - field.field.taxonomy_term.communities.field_icon
     - field.field.taxonomy_term.communities.field_links
     - field.field.taxonomy_term.communities.field_taxonomy_comments
+    - field.field.taxonomy_term.communities.panelizer
     - taxonomy.vocabulary.communities
   module:
     - comment
+    - icon_field
     - link
+    - panelizer
     - path
     - text
 id: taxonomy_term.communities.default
@@ -23,6 +28,20 @@ content:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
+  field_ckan:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_icon:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: icon_select
+    region: content
   field_links:
     type: link_default
     weight: 4
@@ -51,9 +70,20 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  panelizer:
+    type: panelizer
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

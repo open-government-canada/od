@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.panelizer
+    - taxonomy.vocabulary.communities
+  module:
+    - panelizer
+id: taxonomy_term.communities.panelizer
+field_name: panelizer
+entity_type: taxonomy_term
+bundle: communities
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer
