@@ -252,16 +252,14 @@
                 "https://www.drupal.org/files/issues/2514126-102.field-behavior-settings.patch  "
             },
             "drupal/external_entities": {
-                "Enter drupal/external_entities patch #2872506 description here":
-                "https://www.drupal.org/files/issues/loosen_doloadmultiple-2872506-2.patch",
                 "Enter drupal/external_entities patch #2875436 description here":
                 "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch",
                 "Enter drupal/external_entities patch #2882887 description here":
                 "https://www.drupal.org/files/issues/allow_for_uuid_to_be-2882887-2.patch",
                 "Enter drupal/external_entities patch #2887193 description here":
                 "https://www.drupal.org/files/issues/allow_for-2887193-2.patch",
-                "Enter drupal/external_entities patch #2887193 description here":
-                "https://www.drupal.org/files/issues/externalentitystorage-2920779-2.patch"
+                "Enter drupal/external_entities patch #2920779 description here":
+                "https://www.drupal.org/files/issues/externalentitystorage-2920779-3.patch"
             },
             "drupal/facets": {
                 "Enter drupal/facets patch #2877004 description here":
