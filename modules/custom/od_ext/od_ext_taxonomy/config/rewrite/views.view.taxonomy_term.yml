@@ -414,6 +414,7 @@ display:
           plugin_id: taxonomy_index_tid
       defaults:
         arguments: false
+      enabled: true
     cache_metadata:
       contexts:
         - 'languages:language_content'
