@@ -135,7 +135,7 @@ class TaxonomyTermData extends SqlBase {
         $row->setSourceProperty('icon', $icon[0]);
 
         // CKAN Solr.
-        $solr = $this->select('field_data_field_taxonomy_solr', 'db')
+        $solr = $this->select('field_data_field_taxonomy_solr_all', 'db')
           ->fields('db', ['field_taxonomy_solr_all_value'])
           ->condition('entity_id', $row->getSourceProperty('tid'))
           ->condition('revision_id', $row->getSourceProperty('tid'))

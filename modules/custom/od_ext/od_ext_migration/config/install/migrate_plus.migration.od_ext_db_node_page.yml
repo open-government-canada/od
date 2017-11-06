@@ -32,6 +32,9 @@ process:
   created: created
   changed: changed
   status: status
+  type:
+    plugin: default_value
+    default_value: page
   moderation_state:
     plugin: default_value
     default_value: "published"
