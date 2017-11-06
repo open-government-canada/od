@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-11-01 14:41-0400\n"
-"PO-Revision-Date: 2017-11-01 14:41-0400\n"
+"POT-Creation-Date: 2017-11-05 14:22-0500\n"
+"PO-Revision-Date: 2017-11-05 14:22-0500\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,9 @@ msgstr "Your message has been sent."
 
 msgid "Lead Department(s)"
 msgstr "Ministère(s) responable(s)"
+
+msgid "Lead implementing department(s)"
+msgstr "Responsable de la mise en œuvre"
 
 msgid ""
 "<p class=\"text-danger\"><span class=\"mrgn-rght-md glyphicon "
