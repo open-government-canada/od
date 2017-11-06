@@ -4,18 +4,18 @@ dependencies:
   module:
     - node
 id: commitment
-label: commitment
+label: Commitment
 type: 'canonical_entities:node'
 pattern: 'commitment/[node:title]'
 selection_criteria:
-  4a10296d-64a1-4388-87c0-584f7622bf10:
+  ab6c1b56-7587-431f-b620-2c8d6834eac9:
     id: node_type
     bundles:
       commitment: commitment
     negate: false
     context_mapping:
       node: node
-    uuid: 4a10296d-64a1-4388-87c0-584f7622bf10
+    uuid: ab6c1b56-7587-431f-b620-2c8d6834eac9
 selection_logic: and
-weight: -5
+weight: -8
 relationships: {  }

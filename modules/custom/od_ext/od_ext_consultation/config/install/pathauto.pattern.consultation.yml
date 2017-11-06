@@ -4,18 +4,18 @@ dependencies:
   module:
     - node
 id: consultation
-label: consultation
+label: Consultation
 type: 'canonical_entities:node'
 pattern: 'consultations/[node:title]'
 selection_criteria:
-  01293bce-7704-45a3-a0fe-723f0d8f3916:
+  6f10b853-a8a6-4c39-bca8-a97ab1f9939f:
     id: node_type
     bundles:
       consultation: consultation
     negate: false
     context_mapping:
       node: node
-    uuid: 01293bce-7704-45a3-a0fe-723f0d8f3916
+    uuid: 6f10b853-a8a6-4c39-bca8-a97ab1f9939f
 selection_logic: and
-weight: -5
+weight: -7
 relationships: {  }

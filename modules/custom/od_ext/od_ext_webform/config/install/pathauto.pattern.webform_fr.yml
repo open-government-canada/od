@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: webform_fr
+label: Webform
+type: 'canonical_entities:node'
+pattern: 'formulaires/[node:title]'
+selection_criteria:
+  cd8c1001-6faf-4326-b673-052bd4370e57:
+    id: node_type
+    bundles:
+      webform: webform
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cd8c1001-6faf-4326-b673-052bd4370e57
+  c87043f2-49d5-4ec2-9170-c14e37578dfe:
+    id: language
+    langcodes:
+      fr: fr
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: c87043f2-49d5-4ec2-9170-c14e37578dfe
+selection_logic: and
+weight: 4
+relationships:
+  'node:langcode:language':
+    label: Language

@@ -4,18 +4,18 @@ dependencies:
   module:
     - node
 id: app
-label: app
+label: App
 type: 'canonical_entities:node'
 pattern: 'app/[node:title]'
 selection_criteria:
-  ed19ac07-1399-445d-a4b5-a59008f0bed5:
+  e74fcb7d-7312-408c-a5fd-79a93d5226d5:
     id: node_type
     bundles:
       app: app
     negate: false
     context_mapping:
       node: node
-    uuid: ed19ac07-1399-445d-a4b5-a59008f0bed5
+    uuid: e74fcb7d-7312-408c-a5fd-79a93d5226d5
 selection_logic: and
-weight: -5
+weight: -10
 relationships: {  }
