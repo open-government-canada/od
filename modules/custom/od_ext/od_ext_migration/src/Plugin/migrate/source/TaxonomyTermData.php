@@ -125,7 +125,7 @@ class TaxonomyTermData extends SqlBase {
 
         // Icon.
         $icon = $this->select('field_data_field_taxonomy_icon', 'db')
-          ->fields('db', ['field_taxonomy_icon_bundle'])
+          ->fields('db', ['field_taxonomy_icon_icon'])
           ->condition('entity_id', $row->getSourceProperty('tid'))
           ->condition('revision_id', $row->getSourceProperty('tid'))
           ->condition('language', 'und')

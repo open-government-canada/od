@@ -251,10 +251,6 @@
                 "Enter drupal/address patch #2514126 description here":
                 "https://www.drupal.org/files/issues/2514126-102.field-behavior-settings.patch  "
             },
-            "drupal/core": {
-                "Enter drupal/address patch #2599228 description here":
-                "https://www.drupal.org/files/issues/2599228-31.patch"
-            },
             "drupal/external_entities": {
                 "Enter drupal/external_entities patch #2875436 description here":
                 "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch",
@@ -313,13 +309,17 @@
                 "Enter drupal/quicktabs patch #2918891 description here":
                 "https://www.drupal.org/files/issues/views_content_isn_t-2918891-2.patch"
             },
+            "drupal/reference_table_formatter": {
+                "Enter drupal/reference_table_formatter patch #2921456 description here":
+                "https://www.drupal.org/files/issues/leveraging_table_of-2921456-2.patch"
+            },
             "drupal/search_api_solr": {
                 "Enter drupal/search_api_solr patch #2882009 description here":
                 "https://www.drupal.org/files/issues/notice_undefined-2882009-2.patch"
             },
             "drupal/votingapi": {
                 "Enter drupal/votingapi patch #2731101 description here":
-                "https://www.drupal.org/files/issues/views_relationship_for-2731101-15.patch",
+                "https://www.drupal.org/files/issues/views_relationship_for-2731101-16.patch",
                 "Enter drupal/votingapi patch #2846341 description here":
                 "https://www.drupal.org/files/issues/2846341-anonymous-votes-5.patch",
                 "Enter drupal/votingapi patch #2872435 description here":

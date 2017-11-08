@@ -793,8 +793,8 @@ display:
           label: Value
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ value|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -1764,8 +1764,8 @@ display:
           label: Value
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ value|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false

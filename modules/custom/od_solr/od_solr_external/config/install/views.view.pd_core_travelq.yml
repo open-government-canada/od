@@ -1077,8 +1077,8 @@ display:
           label: Airfare
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ airfare|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -1233,8 +1233,8 @@ display:
           label: Total
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ total|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -2136,8 +2136,8 @@ display:
           label: Airfare
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ airfare|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -2292,8 +2292,8 @@ display:
           label: 'Other Transportation'
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ other_transport|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -2344,8 +2344,8 @@ display:
           label: Accomodation
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ accomodation|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -2396,8 +2396,8 @@ display:
           label: 'Meals and Incidentals'
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ meals|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -2448,8 +2448,8 @@ display:
           label: 'Total Amount'
           exclude: false
           alter:
-            alter_text: true
-            text: '${{ total|trim|number_format(2,''.'','','') }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
