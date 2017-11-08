@@ -1465,7 +1465,7 @@ source:
               label: Year
               label_display: visible
               region: right
-              weight: 0
+              weight: 5
           id: panels_variant
           uuid: df0d1b37-8cd5-46d3-b900-f18df4825325
           label: default
