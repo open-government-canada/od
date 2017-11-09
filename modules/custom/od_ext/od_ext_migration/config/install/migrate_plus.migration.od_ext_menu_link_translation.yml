@@ -182,6 +182,5 @@ destination:
   plugin: entity:menu_link_content
 migration_dependencies:
   required:
-    # modules
-    - menu
     - od_ext_menu_link
+    - od_ext_node_landing_page_translation

@@ -248,6 +248,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
             'title' => $translation->getTitle(),
             'link' => ['uri' => 'internal:/node/' . $result->destid1],
             'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+            'langcode' => (!empty($translations)) ? 'fr' : 'en',
             'parent' => $link->getPluginId(),
             'weight' => $count,
           ]);
@@ -580,6 +581,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
+    // Block logic for panelizer / blocks assignment.
     if ($event->getMigration()->id() == 'od_ext_block_basic') {
       $sourceBid = $event->getRow()->getSourceProperty('bid');
       $destBid = $event->getDestinationIdValues();
@@ -803,6 +805,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
+    // Block logic for queue assignment.
     if ($event->getMigration()->id() == 'od_ext_block_spotlight') {
       $sourceBid = $event->getRow()->getSourceProperty('bid');
       $destBid = $event->getDestinationIdValues();
@@ -888,6 +891,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           'title' => $title,
           'link' => ['uri' => 'internal:/node/' . $destBid[0]],
           'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+          'langcode' => (!empty($translations)) ? 'fr' : 'en',
           'parent' => $link->getPluginId(),
           'weight' => $count,
         ]);
@@ -917,6 +921,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
                 'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+                'langcode' => (!empty($translations)) ? 'fr' : 'en',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -939,22 +944,23 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $tmpDisplay = $value['display'];
               $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, $tmpDisplay);
               $display = $displays[$tmpDisplay];
+              $menu_name = (!empty($translations)) ? 'main_fr' : 'main';
               $display->addBlock([
-                'id' => 'menu_block:' . (!empty($translations)) ? 'main_fr' : 'main',
+                'id' => 'menu_block:' . $menu_name,
                 'label' => 'Main navigation',
-                'provider' => 'menu_block',
-                'label_display' => 'visible',
+                'provider' => menu_block,
+                'label_display' => visible,
                 'level' => 1,
                 'custom_level' => '1',
                 'hide_children' => 0,
-                'depth' => 2,
+                'depth' => 0,
                 'expand' => 1,
                 'expand_only_active_trails' => 1,
-                'parent' => (!empty($translations)) ? 'main_fr' : 'main' . ':menu_link_content:' . $menu_link_content->uuid(),
+                'parent' => $menu_name . ':menu_link_content:' . $menu_link_content->uuid(),
                 'render_parent' => FALSE,
                 'follow' => 1,
-                'suggestion' => 'sidebar',
-                'region' => 'top_left',
+                'suggestion' => sidebar,
+                'region' => top_left,
                 'weight' => 0,
                 'uuid' => $uuid,
                 'context_mapping' => [],
@@ -978,6 +984,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               'title' => $title,
               'link' => ['uri' => 'internal:/node/' . $destBid[0]],
               'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+              'langcode' => (!empty($translations)) ? 'fr' : 'en',
             ]);
             $menu_link_content->save();
             $this->database->update('menu_link_content_data')
@@ -994,6 +1001,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
                 'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+                'langcode' => (!empty($translations)) ? 'fr' : 'en',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -1012,6 +1020,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
                 'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+                'langcode' => (!empty($translations)) ? 'fr' : 'en',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -1030,6 +1039,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
                 'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+                'langcode' => (!empty($translations)) ? 'fr' : 'en',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -1048,6 +1058,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
                 'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+                'langcode' => (!empty($translations)) ? 'fr' : 'en',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -1066,6 +1077,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
                 'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+                'langcode' => (!empty($translations)) ? 'fr' : 'en',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -1079,6 +1091,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
+    // Menu Link logic for menu assignment.
     if ($event->getMigration()->id() == 'od_ext_menu_link' ||
         $event->getMigration()->id() == 'od_ext_menu_link_translation') {
       $sourceBid = $event->getRow()->getSourceProperty('mlid');
