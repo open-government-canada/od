@@ -4,8 +4,8 @@ dependencies:
   module:
     - search_api_solr
 id: ext_core_inventory
-name: 'External: Inventory'
-description: 'External: Inventory'
+name: 'External Entity: Inventory'
+description: 'External Entity: Inventory'
 backend: search_api_solr
 backend_config:
   connector: standard
@@ -14,7 +14,7 @@ backend_config:
     host: solr
     port: '8983'
     path: /solr
-    core: core_inventory
+    core: drupal
     timeout: 5
     index_timeout: 5
     optimize_timeout: 10

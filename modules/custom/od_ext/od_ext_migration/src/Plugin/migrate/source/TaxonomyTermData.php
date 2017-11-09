@@ -132,7 +132,7 @@ class TaxonomyTermData extends SqlBase {
           ->condition('bundle', 'communities')
           ->execute()
           ->fetchCol();
-        $row->setSourceProperty('icon', $icon[0]);
+        $row->setSourceProperty('icon', 'opengov:opengov-' . $icon[0]);
 
         // CKAN Solr.
         $solr = $this->select('field_data_field_taxonomy_solr_all', 'db')

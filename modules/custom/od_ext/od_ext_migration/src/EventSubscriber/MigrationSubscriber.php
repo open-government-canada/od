@@ -14,6 +14,7 @@ use Drupal\flag\FlagServiceInterface;
 use Drupal\media_entity\Entity\Media;
 use Drupal\migrate\Event\MigrateEvents;
 use Drupal\migrate\Event\MigrateImportEvent;
+use Drupal\migrate\Event\MigratePreRowSaveEvent;
 use Drupal\migrate\Event\MigratePostRowSaveEvent;
 use Drupal\panelizer\PanelizerInterface;
 use Drupal\Component\Uuid\UuidInterface;
@@ -177,6 +178,8 @@ class MigrationSubscriber implements EventSubscriberInterface {
    * Code to run after a migration has been imported.
    */
   public function onMigrationPostImport(MigrateImportEvent $event) {
+
+    // Landing Page logic.
     if ($event->getMigration()->id() == 'od_ext_node_landing_page') {
       // Set front page to panelized "homepage".
       $this->config->getEditable('system.site')
@@ -184,6 +187,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
         ->save(TRUE);
     }
 
+    // Block logic for panelizer assignment.
     if ($event->getMigration()->id() == 'od_ext_block_basic') {
       $content_types = [
         'suggested_dataset' => [
@@ -216,6 +220,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
+    // Commitment logic for menu creation.
     if ($event->getMigration()->id() == 'od_ext_node_commitment' ||
         $event->getMigration()->id() == 'od_ext_node_commitment_translation') {
 
@@ -242,7 +247,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
             'title' => $translation->getTitle(),
             'link' => ['uri' => 'internal:/node/' . $result->destid1],
-            'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+            'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
             'parent' => $link->getPluginId(),
             'weight' => $count,
           ]);
@@ -259,8 +264,36 @@ class MigrationSubscriber implements EventSubscriberInterface {
   /**
    * Code to run after a migration row has been saved.
    */
+  public function onMigrationPreRowSave(MigratePreRowSaveEvent $event) {
+
+    // Webform Submissions logic to convert tid.
+    if ($event->getMigration()->id() == 'od_ext_db_webform_submissions') {
+      $data = $event->getRow()->getSourceProperty('webform_data');
+      $id = $event->getRow()->getSourceProperty('webform_id');
+
+      if ($id == 'receive_email' && !empty($data['sectors'])) {
+        $sectors = explode('_', $data['sectors']);
+        if (!empty($sectors[1])) {
+          $results = $this->database->select('migrate_map_od_ext_db_taxonomy_term', 'et')
+            ->fields('et')
+            ->condition('sourceid1', $sectors[1])
+            ->execute()
+            ->fetchAssoc('destid1');
+
+          $data['sectors'] = $results['destid1'];
+          $event->getRow()->setDestinationProperty('data', $data);
+        }
+      }
+    }
+
+  }
+
+  /**
+   * Code to run after a migration row has been saved.
+   */
   public function onMigrationPostRowSave(MigratePostRowSaveEvent $event) {
 
+    // Application logic to gather votes.
     if ($event->getMigration()->id() == 'od_ext_db_node_app') {
       $votes = $event->getRow()->getSourceProperty('votes');
       $destinationIds = $event->getDestinationIdValues();
@@ -280,6 +313,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
+    // Blog logic for group assignment.
     if ($event->getMigration()->id() == 'od_ext_db_node_blog') {
       $entities = $this->entityTypeManager->getStorage('group')->loadByProperties(['field_shortcode' => 'tbs-sct']);
       $entity = reset($entities);
@@ -288,6 +322,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       $entity->addContent($node, 'group_node:blog_post');
     }
 
+    // User logic for group assignment.
     if ($event->getMigration()->id() == 'od_ext_db_user') {
       $entities = $this->entityTypeManager->getStorage('group')->loadByProperties(['field_shortcode' => 'tbs-sct']);
       $entity = reset($entities);
@@ -312,6 +347,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
     }
 
+    // Consultation logic for group assignment.
     if ($event->getMigration()->id() == 'od_ext_db_node_consultation') {
       $entities = $this->entityTypeManager->getStorage('group')->loadByProperties(['field_shortcode' => 'tbs-sct']);
       $entity = reset($entities);
@@ -320,6 +356,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       $entity->addContent($node, 'group_node:consultation');
     }
 
+    // Media logic for image link localization.
     if ($event->getMigration()->id() == 'od_ext_db_media_image') {
       $sourceMid = $event->getRow()->getSourceProperty('fid');
       $destMid = $event->getDestinationIdValues();
@@ -850,7 +887,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
         $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
           'title' => $title,
           'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-          'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+          'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
           'parent' => $link->getPluginId(),
           'weight' => $count,
         ]);
@@ -879,7 +916,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -903,7 +940,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, $tmpDisplay);
               $display = $displays[$tmpDisplay];
               $display->addBlock([
-                'id' => 'menu_block:' . (!empty($translations)) ? 'main-fr' : 'main',
+                'id' => 'menu_block:' . (!empty($translations)) ? 'main_fr' : 'main',
                 'label' => 'Main navigation',
                 'provider' => 'menu_block',
                 'label_display' => 'visible',
@@ -913,7 +950,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
                 'depth' => 2,
                 'expand' => 1,
                 'expand_only_active_trails' => 1,
-                'parent' => (!empty($translations)) ? 'main-fr' : 'main' . ':menu_link_content:' . $menu_link_content->uuid(),
+                'parent' => (!empty($translations)) ? 'main_fr' : 'main' . ':menu_link_content:' . $menu_link_content->uuid(),
                 'render_parent' => FALSE,
                 'follow' => 1,
                 'suggestion' => 'sidebar',
@@ -940,7 +977,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
             $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
               'title' => $title,
               'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-              'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+              'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
             ]);
             $menu_link_content->save();
             $this->database->update('menu_link_content_data')
@@ -956,7 +993,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -974,7 +1011,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -992,7 +1029,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -1010,7 +1047,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -1028,7 +1065,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
                 'title' => $title,
                 'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-                'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+                'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
                 'parent' => $link->getPluginId(),
               ]);
               $menu_link_content->save();
@@ -1091,6 +1128,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
+    $events[MigrateEvents::PRE_ROW_SAVE] = 'onMigrationPreRowSave';
     $events[MigrateEvents::POST_ROW_SAVE] = 'onMigrationPostRowSave';
     $events[MigrateEvents::POST_IMPORT] = 'onMigrationPostImport';
     return $events;

@@ -76,16 +76,17 @@ class WebformSubmissions extends SqlBase {
    */
   private function getWebformId($nid) {
     $map = [
-      287998 => 'app_ideas',
-      52 => 'contact',
+      14 => 'frequently_asked_questions',
       51 => 'suggest_dataset',
+      52 => 'contact',
       53 => 'submit_app',
-      381508 => 'suggest_idea_action_plan',
+      287998 => 'app_ideas',
+      381508 => 'suggest_idea',
       390716 => 'ati_records',
       390733 => 'suggest_open_information',
       390748 => 'receive_email',
       556613 => 'submit_event',
-      564523 => 'suggest_idea',
+      564523 => 'suggest_idea_action_plan',
     ];
     if (isset($map[$nid])) {
       return $map[$nid];
@@ -120,6 +121,17 @@ class WebformSubmissions extends SqlBase {
       else {
         $item = $wf_submission['data'];
       }
+
+      switch ($wf_submission['form_key']) {
+        case 'strongfederal_government_institution_that_publishes_the_dataset_strong':
+          $wf_submission['form_key'] = 'federal_government_institution';
+          break;
+
+        case 'strongdescription_of_the_dataset_you_would_like_to_make_available_strong':
+          $wf_submission['form_key'] = 'description_dataset';
+          break;
+      }
+
       $submitted_data[$wf_submission['form_key']] = $item;
     }
     return $submitted_data;

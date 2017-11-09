@@ -20,7 +20,7 @@ dependencies:
     - search_api
     - external_entities
 id: inventory
-name: 'External: Inventory Index'
+name: 'External Entity: Inventory Index'
 description: ''
 read_only: false
 field_settings:

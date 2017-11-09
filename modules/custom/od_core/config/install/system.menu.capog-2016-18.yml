@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: capog-2016-18
-label: 'CAPOG 2016–18'
-description: 'Appears on the Open Gov Action Plan 2016-18 consultation pages'
-locked: false

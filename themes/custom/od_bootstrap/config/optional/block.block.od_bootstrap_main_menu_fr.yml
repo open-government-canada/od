@@ -8,19 +8,19 @@ dependencies:
     - system
   theme:
     - od_bootstrap
-id: od_bootstrap_main_menu-fr
+id: od_bootstrap_main_menu_fr
 theme: od_bootstrap
 region: navigation
 weight: -8
 provider: null
-plugin: 'system_menu_block:main-fr'
+plugin: 'system_menu_block:main_fr'
 settings:
-  id: 'system_menu_block:main-fr'
+  id: 'system_menu_block:main_fr'
   label: 'Menu principal'
   provider: system
   label_display: '0'
   level: 1
-  depth: 2
+  depth: 1
 visibility:
   language:
     id: language

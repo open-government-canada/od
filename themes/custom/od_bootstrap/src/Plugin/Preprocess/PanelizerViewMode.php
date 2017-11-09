@@ -32,10 +32,10 @@ class PanelizerViewMode extends PreprocessBase {
       foreach ($children as $value) {
         $block = $variables['content']['top_left'][$value];
         if (!empty($block['#base_plugin_id']) && $block['#base_plugin_id'] == 'menu_block') {
-          if ($language == 'en' && strpos($block['#plugin_id'], '-fr') !== FALSE) {
+          if ($language == 'en' && strpos($block['#plugin_id'], '_fr') !== FALSE) {
             $variables['content']['top_left'][$value]['#access'] = FALSE;
           }
-          if ($language == 'fr' && strpos($block['#plugin_id'], '-fr') === FALSE) {
+          if ($language == 'fr' && strpos($block['#plugin_id'], '_fr') === FALSE) {
             $variables['content']['top_left'][$value]['#access'] = FALSE;
           }
         }

@@ -1,7 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: nrcan-fr
-label: 'NRCAN French'
-description: ''
-locked: false

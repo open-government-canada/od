@@ -9,7 +9,7 @@ id: frequently_asked_questions
 title: 'Frequently Asked Questions'
 description: '&quot;Frequently Asked Questions&quot; webform.'
 category: null
-elements: "name:\n  '#title': Name\n  '#type': textfield\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#default_value': '[webform-authenticated-user:mail]'"
+elements: "name:\n  '#title': Name\n  '#type': textfield\ne_mail:\n  '#title': 'Your Email'\n  '#type': email\n  '#default_value': '[webform-authenticated-user:mail]'\nsectors:\n  '#type': webform_entity_radios\n  '#title': 'The sector/group that I identify most with is:'\n  '#target_type': taxonomy_term\n  '#selection_handler': 'default:taxonomy_term'\n  '#selection_settings':\n    target_bundles:\n      subscriptions: subscriptions\n    sort:\n      field: name"
 css: ''
 javascript: ''
 settings:
@@ -48,7 +48,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }

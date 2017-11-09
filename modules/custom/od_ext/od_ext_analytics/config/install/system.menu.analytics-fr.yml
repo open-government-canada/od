@@ -1,7 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: analytics-fr
-label: 'Analytics Menu'
-description: 'Analytics Menu French'
-locked: false

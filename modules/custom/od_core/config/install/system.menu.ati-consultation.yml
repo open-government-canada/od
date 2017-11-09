@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: ati-consultation
-label: 'ATI Consultation'
-description: 'ATI Consultation Pages will show this menu'
-locked: false

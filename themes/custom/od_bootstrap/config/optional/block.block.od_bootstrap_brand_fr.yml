@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.brand-fr
+    - system.menu.brand_fr
   module:
     - block_class
     - language
@@ -13,14 +13,14 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: od_bootstrap_brand-fr
+id: od_bootstrap_brand_fr
 theme: od_bootstrap
 region: branding
 weight: 0
 provider: null
-plugin: 'system_menu_block:brand-fr'
+plugin: 'system_menu_block:brand_fr'
 settings:
-  id: 'system_menu_block:brand-fr'
+  id: 'system_menu_block:brand_fr'
   label: Brand
   provider: system
   label_display: visible

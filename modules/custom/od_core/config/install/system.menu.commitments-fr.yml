@@ -1,7 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: commitments-fr
-label: 'Commitments French'
-description: ''
-locked: false

@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.inventory
+    - views.view.solr_inventory
+  module:
+    - search_api
+id: solr_inventory
+name: Inventory
+facets:
+  inventory_organization_name_en:
+    checked: true
+    label: 'Organization Name'
+    separator: ', '
+    weight: 0
+    show_count: false
+  inventory_organization_name_fr:
+    checked: true
+    label: 'Nom du l''organisation'
+    separator: ', '
+    weight: 0
+    show_count: false
+facet_source_id: 'search_api:views_block__solr_inventory__block_1'
+processor_configs:
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '-8'
+    settings:
+      link_text: 'Clear all'
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '-9'
+    settings: {  }
+  show_summary:
+    processor_id: show_summary
+    weights:
+      build: '-7'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '-6'
+    settings:
+      text:
+        value: 'There is no current search in progress.'
+        format: plain_text

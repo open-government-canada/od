@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer-fr
+    - system.menu.footer_fr
   module:
     - block_class
     - language
@@ -13,14 +13,14 @@ dependencies:
 third_party_settings:
   block_class:
     classes: ''
-id: od_bootstrap_footer-fr
+id: od_bootstrap_footer_fr
 theme: od_bootstrap
 region: footer
 weight: 0
 provider: null
-plugin: 'system_menu_block:footer-fr'
+plugin: 'system_menu_block:footer_fr'
 settings:
-  id: 'system_menu_block:footer-fr'
+  id: 'system_menu_block:footer_fr'
   label: Footer
   provider: system
   label_display: visible
