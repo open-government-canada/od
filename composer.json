@@ -345,7 +345,9 @@
                 "Enter drupal/vote_up_down patch #2913874 description here":
                 "https://www.drupal.org/files/issues/ajax_counter_issues-2913874-4.patch",
                 "Enter drupal/vote_up_down patch #2914766 description here":
-                "https://www.drupal.org/files/issues/evaluating_vote_up_down-2914766-2.patch"
+                "https://www.drupal.org/files/issues/evaluating_vote_up_down-2914766-2.patch",
+                "Enter drupal/vote_up_down patch #2922521 description here":
+                "https://www.drupal.org/files/issues/panelizer_entity_field-2922521-2.patch"
             }
         }
     },
