@@ -779,7 +779,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               'plugin' => 'block_content:' . $block_content->uuid(),
               'region' => 'header',
               'provider' => 'block_content',
-              'weight' => -9,
+              'weight' => -8,
               'theme' => $this->config->get('system.theme')->get('default'),
               'visibility' => [
                 'request_path' => [

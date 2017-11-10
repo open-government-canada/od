@@ -47,7 +47,11 @@
     sticky ? 'sticky-enabled',
   ]
 %}
+{% if (language == 'fr') %}
 <table{{ attributes.addClass(classes).setAttribute('data-wb-tables', '{ "lengthMenu": [ [10, -1], [10, "All"] ], "aaSorting": [ ] }') }}>
+{% else %}
+<table{{ attributes.addClass(classes).setAttribute('data-wb-tables', '{ "lengthMenu": [ [10, -1], [10, "Tout"] ], "aaSorting": [ ] }') }}>
+{% endif %}
   {% if caption_needed %}
     <caption>
       {% if caption %}

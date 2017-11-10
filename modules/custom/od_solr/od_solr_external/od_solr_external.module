@@ -99,6 +99,7 @@ function od_solr_external_preprocess_views_view_fields(&$variables) {
 
   // Grab titles (en + fr) from data_dict in json response.
   if ($view->id() == 'ext_core_ckan' && $view->current_display == 'block_1' ||
+      $view->id() == 'ext_core_ckan' && $view->current_display == 'block_2' ||
       $view->id() == 'ext_core_ckan' && $view->current_display == 'block_3') {
     $language = Drupal::languageManager()->getCurrentLanguage();
     $id = $variables['fields']['id']->content->__toString();

@@ -49,7 +49,7 @@ process:
   field_status_link/uri: url
   field_status_link/title:
     plugin: default_value
-    default_value: 'Get the Suggested Dataset'
+    default_value: 'Obtenir le jeu de données suggéré'
   content_translation_source:
     plugin: default_value
     default_value: "en"

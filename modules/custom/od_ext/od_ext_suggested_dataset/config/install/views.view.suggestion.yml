@@ -297,7 +297,7 @@ display:
             external: false
             replace_spaces: false
             path_case: none
-            trim_whitespace: false
+            trim_whitespace: true
             alt: ''
             rel: ''
             link_class: ''
@@ -311,9 +311,9 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: false
+            strip_tags: true
             trim: true
-            preserve_tags: ''
+            preserve_tags: '<p><a><br><ul><li>'
             html: false
           element_type: span
           element_class: ''

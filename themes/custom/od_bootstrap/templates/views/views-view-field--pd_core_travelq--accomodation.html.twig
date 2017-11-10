@@ -21,7 +21,7 @@
  */
 #}
 {% if (language == 'fr') %}
-  {{ output|striptags|trim|number_format('2', ',', ' ') ~ ' $' }}
+  {{ output|striptags|trim|number_format('2', ',', '  ') ~ ' $' }}
 {% else %}
   {{ '$' ~ output|striptags|trim|number_format('2', '.', ',') }}
 {% endif %}

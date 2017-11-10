@@ -46,7 +46,7 @@ source:
       title: 'Pillars'
       body: |
         <section class="pillars mrgn-tp-md mrgn-bttm-md">
-          <h2>Suivre:</h2>
+          <h2>Suivre :</h2>
           <ul>
             <li>
               <a href="https://twitter.com/GouvOuvertCan" title="Twitter">
@@ -136,8 +136,8 @@ source:
       language: 'fr'
       title: 'L''abc des données ouvertes'
       body: |
-        <h2 class="h4"><a href="[site:url]/jeux-de-donnees-suggeres">L'abc des
-        données ouvertes</a></h2>
+        <h2 class="h4"><a href="[site:url]/principes-de-donnees-ouvertes">L'abc
+        des données ouvertes</a></h2>
         <p>Découvrez ce que sont les données ouvertes, apprenez comment en
         tirer le maximum et explorez les principes qui orientent les
         initiatives de Données ouvertes du gouvernement du Canada.</p>
@@ -395,7 +395,7 @@ source:
       language: 'fr'
       title: 'Collectivités'
       body: |
-        <h2 class="h4"><a href="[site:url]/collectivites">Collectivités</a></h2>
+        <h2 class="h4"><a href="[site:url]/dialogue-ouvert">Collectivités</a></h2>
         <p>Explorez les données et l’information, et participez à des
         discussions en fonction de vos champs d’intérêt.</p>
     - bid: 'open_dialog_consult'
@@ -411,7 +411,7 @@ source:
       language: 'fr'
       title: 'Blogue sur le Gouvernement ouvert'
       body: |
-        <h2 class="h4"><a href="[site:url]/blogue">
+        <h2 class="h4"><a href="[site:url]/blog">
         Blogue sur le Gouvernement ouvert</a></h2>
         <p>Découvrez ce que l’équipe et la collectivité du Gouvernement ouvert
         ont à dire à propos des activités, des projets, des nouvelles et des
@@ -1172,7 +1172,7 @@ source:
               </details></div>
             </div>
           </div>
-          <p>Veuillez consulter nos <a href="http://ouvert.canada.ca/fr/regles-de-participation">
+          <p>Veuillez consulter nos <a href="http://ouvert.canada.ca/fr/regles-dengagement">
           règles de participation</a> avant de poster des messages sur le
           blogue. Les commentaires non conformes ne seront pas affichés, et
           l'auteur en sera avisé par courriel.</p>
