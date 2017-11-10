@@ -8,6 +8,7 @@ package: 'Open Data'
 dependencies:
   - drupal:od_ext_analytics
   - drupal:od_ext_app
+  - drupal:od_ext_blog
   - drupal:od_ext_breadcrumb
   - drupal:od_ext_commitment
   - drupal:od_ext_community
@@ -26,5 +27,4 @@ dependencies:
   - drupal:od_ext_user
   - drupal:od_ext_vote
   - drupal:od_ext_webform
-  - drupal:wxt_ext_blog
   - drupal:wxt_ext_page
