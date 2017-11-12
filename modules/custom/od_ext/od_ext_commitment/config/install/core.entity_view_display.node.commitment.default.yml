@@ -45,8 +45,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: 1
+            region: top_middle
+            weight: -1
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: ed2d1887-02a1-4a83-a68b-031e5dbe1f48
@@ -64,8 +64,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: 5
+            region: middle
+            weight: -2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 37670e37-6055-4dd3-99a4-3a07a4046cb5
@@ -81,8 +81,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: 4
+            region: middle
+            weight: -3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 08fafceb-8d72-4705-9674-358ea4a56c20
@@ -98,8 +98,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: 0
+            region: top_middle
+            weight: -2
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: aa401e84-ab63-4bce-ba30-9a966f195216
@@ -116,8 +116,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: -1
+            region: top_middle
+            weight: -3
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 39256d07-038d-483e-892b-b4272af962bc
@@ -133,8 +133,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: 3
+            region: middle
+            weight: -4
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: c5ba1c45-a5a3-4d2b-8c60-6c69d90847cd
@@ -151,7 +151,7 @@ third_party_settings:
               weight: 0
               region: content
             region: top_right
-            weight: -4
+            weight: -10
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 97e03bb6-d356-4ba0-8f3b-972acabbeb58
@@ -168,8 +168,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: -2
+            region: top_middle
+            weight: -4
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 92474ba0-1a3e-48e3-9e8d-aac21f501047
@@ -189,8 +189,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: 2
+            region: middle
+            weight: -5
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: c1eb6b8a-90b3-4da6-aef9-3b04cfa67174
@@ -207,8 +207,8 @@ third_party_settings:
               third_party_settings: {  }
               weight: 0
               region: content
-            region: top_right
-            weight: -3
+            region: top_middle
+            weight: -5
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: accd3456-06c6-47fa-9710-6e1e58785136
@@ -217,8 +217,8 @@ third_party_settings:
             label: 'Page title'
             provider: core
             label_display: '0'
-            region: top_right
-            weight: -6
+            region: top
+            weight: -5
             uuid: 0f2a5971-7e74-4983-876c-313ad04d2c67
             context_mapping: {  }
           996afa8b-a361-4995-9bd0-92bbe36df7b6:
@@ -228,15 +228,15 @@ third_party_settings:
             label_display: '0'
             primary: true
             secondary: true
-            region: top_right
-            weight: -5
+            region: top
+            weight: -4
             uuid: 996afa8b-a361-4995-9bd0-92bbe36df7b6
             context_mapping: {  }
         id: panels_variant
         label: Default
         uuid: b5d551b2-b622-404d-ac25-573e207a696e
         weight: 0
-        layout: bs_2col_bricked
+        layout: od_open_commitments
         layout_settings:
           layout:
             wrapper: div
@@ -250,17 +250,23 @@ third_party_settings:
               classes:
                 col-sm-12: col-sm-12
               add_region_classes: 1
-              attributes: class|mrgn-bttm-lg
+              attributes: ''
             top_left:
               wrapper: div
               classes:
                 col-sm-3: col-sm-3
               add_region_classes: 1
               attributes: ''
-            top_right:
+            top_middle:
               wrapper: div
               classes:
                 col-sm-9: col-sm-9
+              add_region_classes: 1
+              attributes: ''
+            top_right:
+              wrapper: div
+              classes:
+                col-sm-3: col-sm-3
               add_region_classes: 1
               attributes: ''
             middle:
@@ -272,13 +278,19 @@ third_party_settings:
             bottom_left:
               wrapper: div
               classes:
-                col-sm-6: col-sm-6
+                col-sm-4: col-sm-4
+              add_region_classes: 1
+              attributes: ''
+            bottom_middle:
+              wrapper: div
+              classes:
+                col-sm-4: col-sm-4
               add_region_classes: 1
               attributes: ''
             bottom_right:
               wrapper: div
               classes:
-                col-sm-6: col-sm-6
+                col-sm-4: col-sm-4
               add_region_classes: 1
               attributes: ''
             bottom:
@@ -286,7 +298,7 @@ third_party_settings:
               classes:
                 col-sm-12: col-sm-12
               add_region_classes: 1
-              attributes: class|mrgn-tp-lg
+              attributes: ''
         page_title: '[node:title]'
         storage_type: panelizer_default
         storage_id: 'node:commitment:default:default'
