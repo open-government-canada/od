@@ -70,6 +70,8 @@ class TaxonomyTermData extends SqlBase {
       $row->setSourceProperty('language', 'fr');
     }
 
+    $name_field = 'name_field';
+
     // Taxonomy vocabularies brought in statically for dependency reasons with
     // field configs yet we still need some internal mappings for subsequent
     // db migration to work based on old vid key.
@@ -122,6 +124,7 @@ class TaxonomyTermData extends SqlBase {
 
       case 17:
         $vid = 'communities';
+        $name_field = 'title_field';
 
         // Icon.
         $icon = $this->select('field_data_field_taxonomy_icon', 'db')
@@ -161,8 +164,8 @@ class TaxonomyTermData extends SqlBase {
     }
 
     // Name Field.
-    $name = $this->select('field_data_name_field', 'db')
-      ->fields('db', ['name_field_value'])
+    $name = $this->select('field_data_' . $name_field, 'db')
+      ->fields('db', [$name_field . '_value'])
       ->condition('entity_id', $row->getSourceProperty('tid'))
       ->condition('revision_id', $row->getSourceProperty('tid'))
       ->condition('language', $row->getSourceProperty('language'))
@@ -174,8 +177,8 @@ class TaxonomyTermData extends SqlBase {
       $row->setSourceProperty('name', $name[0]);
     }
 
-    $translated_name = $this->select('field_data_name_field', 'db')
-      ->fields('db', ['name_field_value'])
+    $translated_name = $this->select('field_data_' . $name_field, 'db')
+      ->fields('db', [$name_field . '_value'])
       ->condition('entity_id', $row->getSourceProperty('tid'))
       ->condition('revision_id', $row->getSourceProperty('tid'))
       ->condition('language', 'fr')

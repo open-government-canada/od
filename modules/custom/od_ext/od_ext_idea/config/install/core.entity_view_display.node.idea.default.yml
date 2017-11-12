@@ -19,10 +19,134 @@ dependencies:
     - vud
 third_party_settings:
   panelizer:
-    enable: false
+    enable: true
     custom: false
     allow: false
     default: default
+    displays:
+      default:
+        blocks:
+          7f99740c-766c-4130-b166-4038a30b027c:
+            id: 'entity_field:node:body'
+            label: Details
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 3
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 7f99740c-766c-4130-b166-4038a30b027c
+          bcb1156d-b8cd-41f4-b088-cea3b0fc4654:
+            id: 'entity_field:node:comment'
+            label: Comments
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: comment_default
+              settings:
+                view_mode: default
+                pager_id: 0
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 6
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: bcb1156d-b8cd-41f4-b088-cea3b0fc4654
+          788ce800-59d6-4a0d-98be-17f579655070:
+            id: 'entity_field:node:field_idea_submission_name'
+            label: 'Submitted By'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 788ce800-59d6-4a0d-98be-17f579655070
+          64a41bc3-e8f7-4a00-abb4-b762be21dcb3:
+            id: 'entity_field:node:field_idea_tags'
+            label: Tags
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 1
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 64a41bc3-e8f7-4a00-abb4-b762be21dcb3
+          586f8722-f31b-4247-ab8c-ba04b3895f30:
+            id: 'entity_field:node:field_vud'
+            label: VUD
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: vote_up_down_formatter_type
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            region: main
+            weight: 5
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            uuid: 586f8722-f31b-4247-ab8c-ba04b3895f30
+          7a196576-d6e9-418d-8613-665628f90c57:
+            id: page_title_block
+            label: 'Page title'
+            provider: core
+            label_display: '0'
+            region: main
+            weight: 0
+            uuid: 7a196576-d6e9-418d-8613-665628f90c57
+            context_mapping: {  }
+          58e35245-5c3c-462e-9270-55324da5d7bb:
+            id: local_tasks_block
+            label: Tabs
+            provider: core
+            label_display: '0'
+            primary: true
+            secondary: true
+            region: main
+            weight: 0
+            uuid: 58e35245-5c3c-462e-9270-55324da5d7bb
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: dd6b044d-9b41-4555-befb-2af0e1f97eea
+        weight: 0
+        layout: bs_1col_stacked
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: panelizer_default
+        storage_id: 'node:idea:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
 id: node.idea.default
 targetEntityType: node
 bundle: idea

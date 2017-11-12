@@ -11,7 +11,7 @@
 function od_ext_taxonomy_install() {
   // Enable translation for our core entities/bundles.
   $entities = [
-    'taxonomy_vocabulary' => [
+    'taxonomy_term' => [
       'app_categories',
       'app_ribbon',
       'app_freetags',
