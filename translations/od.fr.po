@@ -5644,3 +5644,28 @@ msgctxt "Address label"
 msgid "Postal code"
 msgstr "code postal"
 
+msgid "Annual Report on Travel, Hospitality and Conference Expenditures:"
+msgstr "Rapport annuel sur les dépenses de voyages, d’accueil et de conferences :"
+
+msgid "As required by the Treasury Board Directive on Travel, Hospitality, Conference and Event Expenditures, this report provides information on the annual expenditures for each of travel, hospitality and conference fees for the @department for the fiscal year ending March 31, @date. It also provides the variance explanations from the previous fiscal year in each of these areas."
+msgstr "Comme l'exige la Directive sur les dépenses de voyages, d'accueil, de conférences et d'événements du Conseil du Trésor, le présent rapport fournit de l'information sur les dépenses annuelles totales de voyages, d'accueil et de conférences du @department pour l'exercice se terminant le 31 mars @date"
+
+msgid "This information is updated annually and does not contain information withheld under the Access to Information Act or the Privacy Act."
+msgstr "Ces données sont mises à jour chaque année et ne comportent aucun renseignement non divulgué en vertu de la Loi sur l'accès à l'information ou de la Loi sur la protection des renseignements personnels."
+
+msgid "Expenditures on travel, hospitality and conference fees incurred by federal departments and agencies are related to activities that support a departmental or agency mandate and the government’s priorities."
+msgstr "Les dépenses de voyages, d'accueil et de conférences engagées par les ministères et les organismes fédéraux sont liées à des activités à l'appui du mandat du ministère ou de l'organisme et des priorités gouvernementales."
+
+msgid "Departmental Mandate:"
+msgstr "Mandat ministériel :"
+
+msgid "Expenditures for the year ending March 31, @date ($ thousands)"
+msgstr "Dépenses pour l'exercice se terminant le 31 mars @date (Milliers de dollars)"
+
+msgid "Expenditures for the previous year ending March 31, @date ($ thousands)"
+msgstr ""
+"Dépenses pour l'exercice précédent se terminant le 31 mars @date "
+"(Milliers de dollars)"
+
+msgid "Change ($ thousands)"
+msgstr "Écart (Milliers de dollars)"
