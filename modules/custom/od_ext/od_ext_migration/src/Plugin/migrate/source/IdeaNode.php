@@ -147,11 +147,23 @@ class IdeaNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // URL alias.
+    $alias = $this->select('url_alias', 'db')
+      ->fields('db', ['alias'])
+      ->condition('source', 'node/' . $row->getSourceProperty('nid'))
+      ->condition('language', $row->getSourceProperty('language'))
+      ->execute()
+      ->fetchCol();
+
     if (!empty($title[0])) {
       $row->setSourceProperty('title', $title[0]);
     }
     elseif (!empty($row->getSourceProperty('translations'))) {
       return FALSE;
+    }
+
+    if (!empty($alias)) {
+      $row->setSourceProperty('alias', '/' . end($alias));
     }
     $row->setSourceProperty('body', $body[0]);
     $row->setSourceProperty('freetags', $freetags);

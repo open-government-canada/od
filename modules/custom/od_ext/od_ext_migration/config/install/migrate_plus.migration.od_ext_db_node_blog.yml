@@ -31,7 +31,10 @@ process:
     plugin: default_value
     default_value: rich_text
   langcode: language
-  path: alias
+  'path/pathauto':
+    plugin: default_value
+    default_value: 0
+  'path/alias': alias
   created: created
   changed: changed
   status: status
