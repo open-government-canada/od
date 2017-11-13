@@ -5,7 +5,7 @@ dependencies:
     - search_api.server.pd_core_ati
   module:
     - search_api
-    - search_api_solr_datasource
+    - search_api_solr
 id: pd_core_ati
 name: 'Proactive Disclosure: ATI Index'
 description: ''

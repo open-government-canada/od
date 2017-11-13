@@ -45,10 +45,6 @@
         },
         {
           "type": "vcs",
-          "url": "http://github.com/sylus/search_api_solr_datasource.git"
-        },
-        {
-          "type": "vcs",
           "url": "http://github.com/open-data/external_comment.git"
         },
         {
@@ -313,10 +309,6 @@
                 "Enter drupal/reference_table_formatter patch #2921456 description here":
                 "https://www.drupal.org/files/issues/leveraging_table_of-2921456-2.patch"
             },
-            "drupal/search_api_solr": {
-                "Enter drupal/search_api_solr patch #2882009 description here":
-                "https://www.drupal.org/files/issues/notice_undefined-2882009-2.patch"
-            },
             "drupal/votingapi": {
                 "Enter drupal/votingapi patch #2731101 description here":
                 "https://www.drupal.org/files/issues/views_relationship_for-2731101-16.patch",
@@ -356,10 +348,9 @@
         "cweagans/composer-patches": "^1.6.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
         "drupalwxt/wxt": "dev-8.x-2.x",
-        "drupal/address": "1.1",
+        "drupal/address": "1.2",
         "drupal/chosen": "2.4",
         "drupal/csv_serialization": "1.0",
-        "drupal/dlike": "1.x-dev",
         "drupal/entityqueue": "1.0-alpha7",
         "drupal/external_comment": "dev-8.x-1.x",
         "drupal/external_entities": "1.x-dev",
@@ -373,16 +364,15 @@
         "drupal/icon": "1.x-dev",
         "drupal/reference_table_formatter": "1.0-rc4",
         "drupal/quicktabs": "3.0-alpha2",
-        "drupal/search_api": "1.4",
-        "drupal/search_api_solr": "1.0",
-        "drupal/search_api_solr_datasource": "dev-8.x-1.x",
+        "drupal/search_api": "1.5",
+        "drupal/search_api_solr": "2.0-alpha1",
         "drupal/votingapi": "3.0-alpha2",
         "drupal/votingapi_widgets": "1.0-alpha3",
         "drupal/views_data_export": "1.0-alpha4",
         "drupal/views_field_view": "1.0-beta2",
         "drupal/views_templates": "1.0-alpha1",
         "drupal/vud": "1.0-alpha1",
-        "drupal/xls_serialization": "1.0-alpha2",
+        "drupal/xls_serialization": "1.0-beta1",
         "fortawesome/font-awesome": "^4.7",
         "harvesthq/chosen": "1.6.1"
     },

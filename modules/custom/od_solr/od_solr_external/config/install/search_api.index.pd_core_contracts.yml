@@ -5,7 +5,7 @@ dependencies:
     - search_api.server.pd_core_contracts
   module:
     - search_api
-    - search_api_solr_datasource
+    - search_api_solr
 id: pd_core_contracts
 name: 'Proactive Disclosure: Contracts Index'
 description: ''

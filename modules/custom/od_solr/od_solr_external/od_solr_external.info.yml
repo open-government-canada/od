@@ -9,4 +9,3 @@ dependencies:
   - drupal:od_solr
   - drupal:search_api
   - drupal:search_api_solr
-  - drupal:search_api_solr_datasource

@@ -6,5 +6,4 @@ package: 'Open Data'
 
 # Required modules
 dependencies:
-  - drupal:dlike
   - drupal:flag

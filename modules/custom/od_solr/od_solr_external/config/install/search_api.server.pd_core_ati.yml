@@ -6,7 +6,7 @@ dependencies:
 id: pd_core_ati
 name: 'Proactive Disclosure: ATI'
 description: 'Proactive Disclosure: ATI'
-backend: search_api_solr
+backend: search_api_solr_any_schema
 backend_config:
   connector: standard
   connector_config:
@@ -24,7 +24,7 @@ backend_config:
   retrieve_data: true
   highlight_data: false
   excerpt: false
-  skip_schema_check: false
+  skip_schema_check: true
   site_hash: true
   suggest_suffix: true
   suggest_corrections: true

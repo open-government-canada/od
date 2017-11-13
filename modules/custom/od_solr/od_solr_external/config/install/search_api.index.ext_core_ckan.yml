@@ -5,7 +5,7 @@ dependencies:
     - search_api.server.ext_core_ckan
   module:
     - search_api
-    - search_api_solr_datasource
+    - search_api_solr
 id: ext_core_ckan
 name: 'External: CKAN Index'
 description: ''
