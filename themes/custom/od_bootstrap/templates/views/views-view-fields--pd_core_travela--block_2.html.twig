@@ -34,9 +34,9 @@
 {% set prev_year = fields.year.content|striptags|trim - 1 %}
 <h2>{{ 'Annual Report on Travel, Hospitality and Conference Expenditures:'|t ~ ' ' ~ prev_year ~ ' - ' ~ fields.year.content|striptags|trim }}</h2>
 {% if (language == 'fr') %}
-{$ set organization_name = fields['org_name_fr'].content %}
+{% set organization_name = fields['org_name_fr'].content %}
 {% else %}
-{$ set organization_name = fields['org_name_en'].content %}
+{% set organization_name = fields['org_name_en'].content %}
 {% endif %}
 <p>{{ 'As required by the Treasury Board Directive on Travel, Hospitality, Conference and Event Expenditures, this report provides information on the annual expenditures for each of travel, hospitality and conference fees for the @department for the fiscal year ending March 31, @date. It also provides the variance explanations from the previous fiscal year in each of these areas.'|t( { '@department': organization_name, '@date': fields.year.content }) }}</p>
 <p>{{ 'This information is updated annually and does not contain information withheld under the Access to Information Act or the Privacy Act.'|t }}</p>

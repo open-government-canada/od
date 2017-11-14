@@ -395,7 +395,7 @@ source:
       language: 'fr'
       title: 'Collectivités'
       body: |
-        <h2 class="h4"><a href="[site:url]/dialogue-ouvert">Collectivités</a></h2>
+        <h2 class="h4"><a href="[site:url]/communities">Collectivités</a></h2>
         <p>Explorez les données et l’information, et participez à des
         discussions en fonction de vos champs d’intérêt.</p>
     - bid: 'open_dialog_consult'
@@ -895,7 +895,7 @@ source:
           <a class="btn btn-default" href="[site:url]/formulaire/faites-nous-part-de-vos-commentaires">
           <span class="glyphicon glyphicon-comment mrgn-rght-sm">&nbsp;</span>
           Rétroaction
-          <span class="wb-inv"> sur le site Web Gouvernment ouvert</span>
+          <span class="wb-inv"> sur le site Web Gouvernement ouvert</span>
           </a>
         </p>
     - bid: 'communities_related_info'

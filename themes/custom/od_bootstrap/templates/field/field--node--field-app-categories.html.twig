@@ -80,7 +80,11 @@
       <div class="field__items">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field--item') }}><a href="{{ base_url ~ '/' ~ language ~ '/apps' ~ '?app[0]=subject:' ~ tid[loop.index0]|drupal_escape }}">{{ item.content }}</a></div>
+      {% if (language == 'fr') %}
+        <div{{ item.attributes.addClass('field--item') }}><a href="{{ base_url ~ '/' ~ language ~ '/apps?app[0]=' ~ 'sujet:'|url_encode ~ tid[loop.index0]|drupal_escape }}">{{ item.content }}</a></div>
+      {% else %}
+        <div{{ item.attributes.addClass('field--item') }}><a href="{{ base_url ~ '/' ~ language ~ '/apps?app[0]=' ~ 'subject:'|url_encode ~ tid[loop.index0]|drupal_escape }}">{{ item.content }}</a></div>
+      {% endif %}
     {% endfor %}
     {% if multiple %}
       </div>
