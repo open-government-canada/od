@@ -544,11 +544,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           case 'open_dialogue':
           case 'open_info':
           case 'about_open_gov':
-            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('pillars');
-            $items = $entity_subqueue->get('items')->getValue();
-            $items[] = ['target_id' => $destBid[0]];
-            $entity_subqueue->set('items', $items);
-            $entity_subqueue->save();
+            $this->entityQueueCreate('pillars', $destBid);
             break;
 
           case 'feedback_form':
@@ -767,11 +763,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           case 'open_gov_across_canada':
           case 'open_maps':
           case 'open_gov_partnership':
-            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('front_page');
-            $items = $entity_subqueue->get('items')->getValue();
-            $items[] = ['target_id' => $destBid[0]];
-            $entity_subqueue->set('items', $items);
-            $entity_subqueue->save();
+            $this->entityQueueCreate('front_page', $destBid);
             break;
         }
 
@@ -779,11 +771,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           case 'open_gov_partnership':
           case 'open_gov_receive_updates':
           case 'open_gov_across_canada':
-            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('open_data');
-            $items = $entity_subqueue->get('items')->getValue();
-            $items[] = ['target_id' => $destBid[0]];
-            $entity_subqueue->set('items', $items);
-            $entity_subqueue->save();
+            $this->entityQueueCreate('open_data', $destBid);
             break;
         }
 
@@ -791,11 +779,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           case 'open_gov_across_canada':
           case 'open_gov_receive_updates':
           case 'open_gov_partnership':
-            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('open_maps');
-            $items = $entity_subqueue->get('items')->getValue();
-            $items[] = ['target_id' => $destBid[0]];
-            $entity_subqueue->set('items', $items);
-            $entity_subqueue->save();
+            $this->entityQueueCreate('open_maps', $destBid);
             break;
         }
 
@@ -803,11 +787,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           case 'open_gov_receive_updates':
           case 'open_gov_partnership':
           case 'open_gov_across_canada':
-            $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load('access_info');
-            $items = $entity_subqueue->get('items')->getValue();
-            $items[] = ['target_id' => $destBid[0]];
-            $entity_subqueue->set('items', $items);
-            $entity_subqueue->save();
+            $this->entityQueueCreate('access_info', $destBid);
             break;
         }
       }
@@ -1010,6 +990,17 @@ class MigrationSubscriber implements EventSubscriberInterface {
     $events[MigrateEvents::POST_ROW_SAVE] = 'onMigrationPostRowSave';
     $events[MigrateEvents::POST_IMPORT] = 'onMigrationPostImport';
     return $events;
+  }
+
+  /**
+   * Add a specific entityqueue.
+   */
+  public function entityQueueCreate($queue, $destBid) {
+    $entity_subqueue = $this->entityManager->getStorage('entity_subqueue')->load($queue);
+    $items = $entity_subqueue->get('items')->getValue();
+    $items[] = ['target_id' => $destBid[0]];
+    $entity_subqueue->set('items', $items);
+    $entity_subqueue->save();
   }
 
   /**
