@@ -55,7 +55,7 @@ variant_settings:
           col-sm-12: col-sm-12
         add_region_classes: 1
         attributes: ''
-  page_title: 'Acts of Founded Wrongdoings'
+  page_title: 'Acts of Founded Wrongdoing'
   storage_type: page_manager
   storage_id: pd_query-panels_variant-7
   builder: ipe

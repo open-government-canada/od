@@ -1,0 +1,45 @@
+display:
+  default:
+    display_title: Maître
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Éléments par page'
+            items_per_page_options_all_label: '- Tout -'
+            offset_label: Décalage
+          tags: {  }
+      fields:
+        title: {  }
+      header:
+        area:
+          content:
+            value: '<h3>Dialogue ouvert</h3>'
+            format: full_html
+      title: 'Informations et services connexes'
+      footer:
+        area:
+          content:
+            value: "<section><h3>Interagir</h3>\r\n        <ul class=\"lst-spcd\"><li><a href=\"[site:url]/jeux-de-donnees-suggeres\">Proposez un jeu de données</a></li>\r\n          <li><a href=\"[site:url]/proposer-de-linformation-ouverte\">Proposer de l'information ouverte</a></li>\r\n          <li><a href=\"[site:url]/apps\">Galerie d'applications</a></li>\r\n        </ul>\r\n        </section>"
+            format: full_html
+  block_1:
+    display_options:
+      header:
+        area:
+          content:
+            value: '<h3>Dialogue ouvert</h3>'
+            format: full_html
+  block_2:
+    display_title: 'Consultations actives'
+    display_options:
+      title: 'Consultations actives'
+      header:
+        area:
+          content:
+            value: '<h3>Consultations actives</h3>'
+            format: full_html
