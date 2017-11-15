@@ -27,6 +27,9 @@ function od_ext_suggested_dataset_page_attachments(array &$page) {
 
 }
 
+/**
+ * Implements hook_module_implements_alter().
+ */
 function od_ext_suggested_dataset_module_implements_alter(&$implementations, $hook) {
   $moduleHandler = \Drupal::service('module_handler');
   if ($moduleHandler->moduleExists('big_pipe')) {

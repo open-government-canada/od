@@ -356,7 +356,6 @@
         "drupal/external_entities": "1.x-dev",
         "drupal/facets": "1.0-alpha11",
         "drupal/flag": "4.0-alpha2",
-        "drupal/field_default_token": "1.x-dev",
         "drupal/fontawesome":  "1.x-dev",
         "drupal/google_analytics": "2.2",
         "drupal/google_analytics_reports": "3.0-beta1",
