@@ -100,23 +100,6 @@ third_party_settings:
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 2160fee8-4e99-44a7-a866-64a70589f6ac
-          6a99c29c-5b59-4a5d-9e98-32d744573a5b:
-            id: 'entity_field:node:field_consultation_status'
-            label: Status
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: above
-              type: entity_reference_rss_category
-              settings: {  }
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: content
-            weight: 5
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: 6a99c29c-5b59-4a5d-9e98-32d744573a5b
           48d15630-593b-4228-a0bc-6a0c3b8e1774:
             id: 'entity_field:node:field_share_widget'
             label: 'Share Widget'

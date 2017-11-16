@@ -49,8 +49,6 @@ class ConsultationNode extends SqlBase {
       'created' => $this->t('Created'),
       'changed' => $this->t('Changed'),
       'status' => $this->t('Status'),
-      'date_start' => $this->t('Date Start'),
-      'date_end' => $this->t('Date End'),
     ];
 
     return $fields;
@@ -118,6 +116,16 @@ class ConsultationNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // Consultation Status.
+    $consult_status = $this->select('field_data_field_consultation_status', 'df')
+      ->fields('df', ['field_consultation_status_tid'])
+      ->condition('entity_id', $row->getSourceProperty('nid'))
+      ->condition('revision_id', $row->getSourceProperty('vid'))
+      ->condition('language', 'und')
+      ->condition('bundle', 'consultation')
+      ->execute()
+      ->fetchCol();
+
     // Node Idea.
     $node_idea = $this->select('field_data_field_consultation', 'df')
       ->fields('df', ['entity_id'])
@@ -158,6 +166,7 @@ class ConsultationNode extends SqlBase {
       return FALSE;
     }
     $row->setSourceProperty('body', $body[0]);
+    $row->setSourceProperty('consult_status', $consult_status[0]);
     $row->setSourceProperty('date_start', $date_start[0]);
     $row->setSourceProperty('date_end', $date_end[0]);
     $row->setSourceProperty('node_idea', $node_idea);

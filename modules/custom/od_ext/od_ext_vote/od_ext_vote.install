@@ -29,7 +29,6 @@ function od_ext_vote_install() {
     'edit own vote on node:app:field_vote',
     'vote on node:app:field_vote',
     'access vote up/down statistics',
-    'administer vote up/down',
     'reset vote up/down votes',
     'use vote up/down',
   ]);

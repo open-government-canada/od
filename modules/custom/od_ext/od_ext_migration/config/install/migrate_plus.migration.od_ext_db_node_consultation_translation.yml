@@ -49,16 +49,20 @@ process:
     plugin: default_value
     default_value: "published"
   field_meta_tags: metatags
-  field_consultation_date/value:
+  'field_consultation_date/value':
     plugin: format_date
     from_format: 'Y-m-d H:i:s'
-    to_format: 'Y-m-d H:i:s'
+    to_format: 'Y-m-d\TH:i:s'
     source: date_start
-  field_consultation_date/end_value:
+  'field_consultation_date/end_value':
     plugin: format_date
     from_format: 'Y-m-d H:i:s'
-    to_format: 'Y-m-d H:i:s'
+    to_format: 'Y-m-d\TH:i:s'
     source: date_end
+  'field_consultation_status/target_id':
+    plugin: migration
+    migration: od_ext_db_taxonomy_term
+    source: consult_status
   field_idea_reference:
     plugin: iterator
     source: node_idea
