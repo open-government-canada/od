@@ -277,7 +277,9 @@
                 "Enter drupal/group patch #2888588 description here":
                 "https://www.drupal.org/files/issues/node-access-refactor-2888588-18.patch",
                 "Enter drupal/group patch #2895988 description here":
-                "https://www.drupal.org/files/issues/2895988-4.patch"
+                "https://www.drupal.org/files/issues/2895988-4.patch",
+                "Enter drupal/group patch #2895988 description here":
+                 "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch"
             },
             "drupal/icon": {
                 "Enter drupal/icon patch #2864333 description here":
