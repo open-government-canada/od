@@ -296,6 +296,68 @@ class MigrationSubscriber implements EventSubscriberInterface {
         }
       }
 
+      if ($id == 'ati_records' && !empty($data['consent'])) {
+        $consent = $data['consent'];
+        if (!empty($consent)) {
+          foreach ($consent as $key => $value) {
+            $data['consent'] = ucwords($value);
+          }
+          $event->getRow()->setDestinationProperty('data', $data);
+        }
+      }
+
+      if ($id == 'ati_records') {
+        $data['address_fieldset']['address'];
+        if (!empty($data['street_address'])) {
+          $data['address_fieldset']['address'] .= $data['street_address'];
+          unset($data['street_address']);
+        }
+        if (!empty($data['street_name'])) {
+          $data['address_fieldset']['address'] .= ' ' . $data['street_name'];
+          unset($data['street_name']);
+        }
+        if (!empty($data['apartment_suite_unit_number'])) {
+          $data['address_fieldset']['address'] .= ' ' . $data['apartment_suite_unit_number'];
+          unset($data['apartment_suite_unit_number']);
+        }
+
+        $data['address_fieldset']['address_2'];
+        if (!empty($data['post_office_box'])) {
+          $data['address_fieldset']['address_2'] .= $data['post_office_box'];
+          unset($data['post_office_box']);
+        }
+        if (!empty($data['other_region'])) {
+          $data['address_fieldset']['address_2'] .= ' ' . $data['other_region'];
+          unset($data['other_region']);
+        }
+
+        $data['address_fieldset']['city'];
+        if (!empty($data['city'])) {
+          $data['address_fieldset']['city'] .= $data['city'];
+          unset($data['city']);
+        }
+
+        $data['address_fieldset']['country'];
+        if (!empty($data['country'])) {
+          $data['address_fieldset']['country'] .= $data['country'];
+          unset($data['country']);
+        }
+
+        $data['address_fieldset']['postal_code'];
+        if (!empty($data['postal_code'])) {
+          $data['address_fieldset']['postal_code'] .= $data['postal_code'];
+          unset($data['postal_code']);
+        }
+
+        $data['address_fieldset']['state_province'];
+        if (!empty($data['state_province'])) {
+          $data['address_fieldset']['state_province'] .= $data['state_province'];
+          unset($data['state_province']);
+        }
+
+        $event->getRow()->setDestinationProperty('data', $data);
+      }
+
     }
 
   }

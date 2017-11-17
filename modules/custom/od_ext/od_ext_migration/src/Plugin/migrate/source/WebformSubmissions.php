@@ -135,6 +135,14 @@ class WebformSubmissions extends SqlBase {
         case 'strongdescription_of_the_dataset_you_would_like_to_make_available_strong':
           $wf_submission['form_key'] = 'description_dataset';
           break;
+
+        case 'postal_zip_code':
+          $wf_submission['form_key'] = 'postal_code';
+          break;
+
+        case 'province_state':
+          $wf_submission['form_key'] = 'state_province';
+          break;
       }
 
       $submitted_data[$wf_submission['form_key']] = $item;
