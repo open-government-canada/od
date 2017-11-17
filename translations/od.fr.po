@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2017-11-14 17:15+0000\n"
-"PO-Revision-Date: 2017-11-14 17:15+0000\n"
+"POT-Creation-Date: 2017-11-17 03:51+0000\n"
+"PO-Revision-Date: 2017-11-17 03:51+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 msgid "Drupal"
-msgstr "Gouvernment ouvert"
+msgstr "Gouvernement ouvert"
 
 msgid "Subject"
 msgstr "Sujet"
@@ -210,6 +210,35 @@ msgstr "Idées suggérées"
 
 msgid "<h3>Past Consultations</h3>"
 msgstr "<h3>Dialogue ouvert</h3>"
+
+msgid ""
+"<section><h3>Interact</h3>\n"
+"        <ul class=\"lst-spcd\"><li><a "
+"href=\"[site:url]/suggested-datasets\">Suggest a\n"
+"        "
+"dataset</a></li>\n"
+"          <li><a "
+"href=\"[site:url]/forms/suggest-open-information\">Suggest an\n"
+"       "
+"   information resource</a></li>\n"
+"          <li><a "
+"href=\"[site:url]/apps\">Apps gallery</a></li>\n"
+"        </ul>\n"
+"      "
+"  </section>"
+msgstr ""
+"<section><h3>Interagir</h3>\r\n"
+"        <ul class=\"lst-spcd\"><li><a "
+"href=\"[site:url]/jeux-de-donnees-suggeres\">Proposez un jeu de "
+"données</a></li>\r\n"
+"          <li><a "
+"href=\"[site:url]/proposer-de-linformation-ouverte\">Proposer de "
+"l'information ouverte</a></li>\r\n"
+"          <li><a "
+"href=\"[site:url]/apps\">Galerie d'applications</a></li>\r\n"
+"        "
+"</ul>\r\n"
+"        </section>"
 
 msgid "Related information and services"
 msgstr "Informations et services connexes"
@@ -2342,14 +2371,11 @@ msgstr "Aperçu de tous les ministères"
 msgid "Open Government"
 msgstr "Gouvernement ouvert"
 
-msgid "Show less"
-msgstr "Montre moins"
-
-msgid "Show more"
-msgstr "Montre plus"
-
 msgid "Edit facet"
 msgstr "Modifier la facette"
+
+msgid "Show less"
+msgstr "Montre moins"
 
 msgid "City/Town"
 msgstr "ville"
@@ -2359,9 +2385,6 @@ msgstr "zip / code postal"
 
 msgid "Opens in new window"
 msgstr "Ouvre dans une nouvelle fenêtre"
-
-msgid "Expand all"
-msgstr "Déplier tous"
 
 msgid ""
 "<span class=\"glyphicon glyphicon-thumbs-up\"></span> "
@@ -2547,6 +2570,9 @@ msgstr "Écart (Milliers de dollars)"
 
 msgid "Open Dialogue"
 msgstr "Dialogue ouvert"
+
+msgid "Expand all"
+msgstr "Déplier tous"
 
 msgid ""
 "name_of_dataset:\n"
@@ -3991,12 +4017,6 @@ msgstr ""
 msgid "The section/group that I identify most with is"
 msgstr "Le secteur d’activité me représentant le mieux est"
 
-msgid "next"
-msgstr "suivant"
-
-msgid "last"
-msgstr "dernier"
-
 msgid ""
 "<div class=\"mrgn-bttm-md\"><strong>Displaying @start - @end of "
 "@total</strong></div>"
@@ -4111,6 +4131,9 @@ msgstr ""
 "courriels à cette adresse. L'adresse électronique ne sera pas rendue "
 "publique et ne sera utilisée que pour la réception d'un nouveau mot "
 "de passe ou pour la réception de certaines notifications désirées."
+
+msgid "last"
+msgstr "dernier"
 
 msgid ""
 "title:\n"
@@ -5020,4 +5043,10 @@ msgstr "Télécharger les exigences"
 
 msgid "Add new external comment"
 msgstr "Ajouter un nouveau commentaire externe"
+
+msgid "Show more"
+msgstr "Montre plus"
+
+msgid "next"
+msgstr "suivant"
 

@@ -45,26 +45,6 @@ third_party_settings:
             context_mapping:
               entity: '@panelizer.entity_context:entity'
             uuid: 5af47936-b1a4-4fe0-9252-cf1e4a15334d
-          2d895eea-c264-493a-8f0b-4e51e0f7ade6:
-            id: 'entity_field:node:field_consultation_date'
-            label: Date
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: above
-              type: daterange_default
-              settings:
-                separator: '-'
-                format_type: medium
-                timezone_override: ''
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            region: top_right
-            weight: 2
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            uuid: 2d895eea-c264-493a-8f0b-4e51e0f7ade6
           0cb86f71-ffff-44e9-b122-28802b85d59e:
             id: 'entity_field:node:field_consultation_status'
             label: Status

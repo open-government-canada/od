@@ -40,6 +40,7 @@ permissions:
   - 'administer facets'
   - 'administer image styles'
   - 'administer menu'
+  - 'administer nodes'
   - 'administer pages'
   - 'administer pane access'
   - 'administer panelizer node app content'
