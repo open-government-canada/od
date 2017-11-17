@@ -113,9 +113,14 @@ class WebformSubmissions extends SqlBase {
     $wf_submissions = $query->condition('sid', $sid)->execute();
 
     $submitted_data = [];
+    $multiple = '';
     foreach ($wf_submissions as $wf_submission) {
       $extra = unserialize($wf_submission['extra']);
       if (!empty($extra['multiple'])) {
+        if ($wf_submission['form_key'] != $multiple) {
+          $item = [];
+        }
+        $multiple = $wf_submission['form_key'];
         $item[$wf_submission['no']] = $wf_submission['data'];
       }
       else {

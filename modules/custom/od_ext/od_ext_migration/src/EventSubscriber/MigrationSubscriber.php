@@ -285,6 +285,17 @@ class MigrationSubscriber implements EventSubscriberInterface {
           $event->getRow()->setDestinationProperty('data', $data);
         }
       }
+
+      if ($id == 'submit_app' && !empty($data['language'])) {
+        $languages = $data['language'];
+        if (!empty($languages)) {
+          foreach ($languages as $key => $language) {
+            $data['language'][$key] = ucwords($language);
+          }
+          $event->getRow()->setDestinationProperty('data', $data);
+        }
+      }
+
     }
 
   }
