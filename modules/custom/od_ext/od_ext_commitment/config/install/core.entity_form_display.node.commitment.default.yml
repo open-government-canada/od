@@ -19,8 +19,8 @@ dependencies:
   module:
     - comment
     - field_group
+    - inline_entity_form
     - metatag
-    - paragraphs
     - path
     - text
     - workbench_moderation
@@ -145,17 +145,17 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_deliverables_paragraph:
-    type: paragraphs
+    type: inline_entity_form_complex
     weight: 9
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: summary
-      autocollapse: all
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: deliverable
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      empty_mode: ''
+      match_operator: CONTAINS
+      override_labels: false
     third_party_settings: {  }
     region: content
   field_department:

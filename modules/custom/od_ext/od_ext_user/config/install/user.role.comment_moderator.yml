@@ -21,4 +21,5 @@ permissions:
   - 'create content translations'
   - 'edit own comments'
   - 'post comments'
+  - 'skip comment approval'
   - 'update content translations'
