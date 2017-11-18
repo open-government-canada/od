@@ -1999,7 +1999,7 @@ source:
               view_mode: full
               weight: -1
             -
-              id: 'facet_block:app_departments'
+              id: 'facet_block:app_publishers'
               label: Publishers
               label_display: visible
               region: right
