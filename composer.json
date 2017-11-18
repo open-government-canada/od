@@ -309,7 +309,9 @@
             },
             "drupal/reference_table_formatter": {
                 "Enter drupal/reference_table_formatter patch #2921456 description here":
-                "https://www.drupal.org/files/issues/leveraging_table_of-2921456-2.patch"
+                "https://www.drupal.org/files/issues/leveraging_table_of-2921456-2.patch",
+                "Enter drupal/reference_table_formatter patch #2921456 description here":
+                "https://www.drupal.org/files/issues/reference_table_formatter-moderation-entity_reference_revisions-2924657.patch"
             },
             "drupal/votingapi": {
                 "Enter drupal/votingapi patch #2731101 description here":
