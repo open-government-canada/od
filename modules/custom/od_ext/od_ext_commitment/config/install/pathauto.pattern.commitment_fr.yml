@@ -4,29 +4,29 @@ dependencies:
   module:
     - language
     - node
-id: commitment
+id: commitment_fr
 label: Commitment
 type: 'canonical_entities:node'
-pattern: 'commitment/[node:title]'
+pattern: 'engagements/[node:title]'
 selection_criteria:
-  ba7e7b3f-438f-4f79-879a-a7c7111887fe:
+  2b0c148f-dd32-4d4a-90b2-11d5674f6210:
     id: node_type
     bundles:
       commitment: commitment
     negate: false
     context_mapping:
       node: node
-    uuid: ba7e7b3f-438f-4f79-879a-a7c7111887fe
-  d91a14e2-7ba5-480f-9462-2482046e7619:
+    uuid: 2b0c148f-dd32-4d4a-90b2-11d5674f6210
+  c9383165-5e8b-4268-93ae-48193a22eb58:
     id: language
     langcodes:
-      en: en
+      fr: fr
     negate: false
     context_mapping:
       language: 'node:langcode:language'
-    uuid: d91a14e2-7ba5-480f-9462-2482046e7619
+    uuid: c9383165-5e8b-4268-93ae-48193a22eb58
 selection_logic: and
-weight: -8
+weight: -7
 relationships:
   'node:langcode:language':
     label: Language
