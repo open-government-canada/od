@@ -10,7 +10,7 @@ dependencies:
     - block_content
     - entityqueue
     - link
-    - media_entity
+    - media
     - text
     - views_bootstrap
 id: blocks

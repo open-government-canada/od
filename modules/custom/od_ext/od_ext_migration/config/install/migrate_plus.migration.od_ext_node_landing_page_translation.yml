@@ -5109,5 +5109,6 @@ migration_dependencies:
     - od_ext_block_basic_translation
     - od_ext_block_search_translation
     - od_ext_block_spotlight_translation
+    - od_ext_menu_link_translation
     - od_ext_media_slideshow
     - od_ext_db_user

@@ -4664,4 +4664,5 @@ migration_dependencies:
     - od_ext_block_search
     - od_ext_block_spotlight
     - od_ext_media_slideshow
+    - od_ext_menu_link
     - od_ext_db_user

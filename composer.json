@@ -12,16 +12,16 @@
         "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "~2.8",
-        "drush/drush": "8.1.12",
-        "drupal/drupal-extension": "~3.2.0",
+        "symfony/css-selector": "~2.8|~3.0",
+        "drush/drush": "~8.0|^9.0.0-beta7",
+        "drupal/drupal-extension": "~3.3.0",
         "behat/behat": "^3.0",
         "drupal/coder": "~8.2.0",
         "phing/phing": "^2.14",
         "drupal/devel": "^1.0",
         "squizlabs/php_codesniffer": "2.*",
         "se/selenium-server-standalone": "^2.53",
-        "drupal/console": "^1.0",
+        "drupal/console": "1.0.1",
         "jakoch/phantomjs-installer": "1.9.8",
         "composer/composer": "^1.4",
         "grasmash/yaml-cli": "^1.0"
@@ -222,6 +222,9 @@
                 "type:bower-asset",
                 "type:npm-asset"
             ],
+            "html/libraries/fontawesome": [
+                "fortawesome/font-awesome"
+            ],
             "html/modules/custom/{$name}": [
                 "drupal/wxt_library"
             ],
@@ -270,6 +273,10 @@
                 "https://www.drupal.org/files/issues/new_index_for_flagging-2888664-12.patch"
             },
             "drupal/fontawesome": {
+                "Enter drupal/fontawesome patch #2650614 description here":
+                "https://www.drupal.org/files/issues/fontawesome-remove_libraries_dependency-2650614-15.patch",
+                "Enter drupal/fontawesome patch #2851613 description here":
+                "https://www.drupal.org/files/issues/fix_configuration_schema-2851613-2.patch",
                 "Enter drupal/fontawesome patch #2881431 description here":
                 "https://www.drupal.org/files/issues/unable_to_find_the-2881431-2.patch"
             },
@@ -360,7 +367,7 @@
         "drupal/external_entities": "1.x-dev",
         "drupal/facets": "1.0-alpha11",
         "drupal/flag": "4.0-alpha2",
-        "drupal/fontawesome":  "1.x-dev",
+        "drupal/fontawesome":  "1.2",
         "drupal/google_analytics": "2.2",
         "drupal/google_analytics_reports": "3.0-beta1",
         "drupal/honeypot": "1.27",

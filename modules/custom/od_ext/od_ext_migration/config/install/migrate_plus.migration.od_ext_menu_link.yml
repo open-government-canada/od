@@ -199,4 +199,3 @@ destination:
 migration_dependencies:
   required:
     - od_ext_db_user
-    - od_ext_node_landing_page
