@@ -351,8 +351,8 @@ display:
           relationship: node_vote_result_vote_count
           group_type: group
           admin_label: ''
-          label: Value
-          exclude: true
+          label: 'Raw Vote'
+          exclude: false
           alter:
             alter_text: false
             text: ''
