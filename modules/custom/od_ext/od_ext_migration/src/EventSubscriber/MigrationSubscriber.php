@@ -307,9 +307,14 @@ class MigrationSubscriber implements EventSubscriberInterface {
       }
 
       if ($id == 'ati_records') {
+        // Address consolidation from Drupal 7.
         $data['address_fieldset']['address'];
         if (!empty($data['street_address'])) {
-          $data['address_fieldset']['address'] .= $data['street_address'];
+          $data['address_fieldset']['address'] .= $data['street_number'];
+          unset($data['street_number']);
+        }
+        if (!empty($data['street_address'])) {
+          $data['address_fieldset']['address'] .= ' ' . $data['street_address'];
           unset($data['street_address']);
         }
         if (!empty($data['street_name'])) {
@@ -317,10 +322,12 @@ class MigrationSubscriber implements EventSubscriberInterface {
           unset($data['street_name']);
         }
         if (!empty($data['apartment_suite_unit_number'])) {
-          $data['address_fieldset']['address'] .= ' ' . $data['apartment_suite_unit_number'];
+          $data['address_fieldset']['address'] .= ' #' . $data['apartment_suite_unit_number'];
           unset($data['apartment_suite_unit_number']);
         }
+        $data['address_fieldset']['address'] = trim($data['address_fieldset']['address']);
 
+        // Address consolidation from Drupal 7.
         $data['address_fieldset']['address_2'];
         if (!empty($data['post_office_box'])) {
           $data['address_fieldset']['address_2'] .= $data['post_office_box'];
@@ -330,25 +337,30 @@ class MigrationSubscriber implements EventSubscriberInterface {
           $data['address_fieldset']['address_2'] .= ' ' . $data['other_region'];
           unset($data['other_region']);
         }
+        $data['address_fieldset']['address_2'] = trim($data['address_fieldset']['address_2']);
 
+        // City consolidation from Drupal 7.
         $data['address_fieldset']['city'];
         if (!empty($data['city'])) {
           $data['address_fieldset']['city'] .= $data['city'];
           unset($data['city']);
         }
 
+        // Country consolidation from Drupal 7.
         $data['address_fieldset']['country'];
         if (!empty($data['country'])) {
           $data['address_fieldset']['country'] .= $data['country'];
           unset($data['country']);
         }
 
+        // Postal Code consolidation from Drupal 7.
         $data['address_fieldset']['postal_code'];
         if (!empty($data['postal_code'])) {
           $data['address_fieldset']['postal_code'] .= $data['postal_code'];
           unset($data['postal_code']);
         }
 
+        // Province consolidation from Drupal 7.
         $data['address_fieldset']['state_province'];
         if (!empty($data['state_province'])) {
           $data['address_fieldset']['state_province'] .= $data['state_province'];
