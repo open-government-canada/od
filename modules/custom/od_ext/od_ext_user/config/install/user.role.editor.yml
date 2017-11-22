@@ -200,6 +200,7 @@ permissions:
   - 'update content translations'
   - 'update media'
   - 'use advanced search'
+  - 'use archived_draft transition'
   - 'use archived_published transition'
   - 'use draft_draft transition'
   - 'use draft_needs_review transition'
