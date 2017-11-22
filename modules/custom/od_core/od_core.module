@@ -11,6 +11,23 @@ use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\Core\Database\Query\AlterableInterface;
 
 /**
+ * Implements hook_inline_entity_form_table_fields_alter().
+ */
+function od_core_inline_entity_form_table_fields_alter(&$fields, $context) {
+  if ($context['parent_entity_type'] == 'node' && ($context['parent_bundle'] == 'commitment')) {
+    if (isset($context['field_name']) && $context['field_name'] == 'field_deliverables_paragraph') {
+      unset($fields['status']);
+      unset($fields['label']);
+      $fields['field_title'] = [
+        'type' => 'field',
+        'label' => t('Title'),
+        'weight' => 1,
+      ];
+    }
+  }
+}
+
+/**
  * Implements hook_views_query_alter().
  */
 function od_core_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
@@ -33,7 +50,7 @@ function od_core_views_query_alter(ViewExecutable $view, QueryPluginBase $query)
 /**
  * Implements hook_query_TAG_alter() for comment_filter tag.
  */
-function od_core_query_comment_filter_alter(AlterableInterface $query) {
+function od_core_query_comment_filter_alter2(AlterableInterface $query) {
   // Change comment order to DESC for 'comment' field.
   if ($query->getMetaData('base_table') == 'comment') {
     /** @var \Drupal\Core\Database\Query\SelectInterface $query */
