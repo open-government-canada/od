@@ -1,0 +1,35 @@
+id: od_ext_db_taxonomy_term_post
+migration_tags: null
+migration_group: od_external
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Post processing for Taxonomy Terms from legacy Drupal database'
+source:
+  plugin: post_process_taxonomy
+  target: default
+  key: default
+process:
+  tid: tid
+  vid: vid
+  name: name
+  'description/value':
+    -
+      plugin: wxt_uuid_link
+      source: description__value
+  'description/format':
+    plugin: default_value
+    default_value: rich_text
+  langcode: langcode
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies:
+  required:
+    - od_ext_db_file
+    - od_ext_db_taxonomy_term
+    - od_ext_db_user
+    - od_ext_db_node_blog
+    - od_ext_db_node_consultation
+    - od_ext_db_node_page
+    - od_ext_db_node_webform
