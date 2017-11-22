@@ -11,7 +11,9 @@ use Drupal\views\ViewExecutable;
  * Implements hook_views_pre_render().
  */
 function od_ext_taxonomy_views_pre_render(ViewExecutable $view) {
+  $taxonomy = $view->getRequest()->get('taxonomy_term');
   if ($view->id() === 'taxonomy_term' &&
+      !empty($taxonomy) &&
       $view->getRequest()->get('taxonomy_term')->bundle() === 'communities') {
     $view->result = [];
   }
