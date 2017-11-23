@@ -25,6 +25,7 @@ class TaxonomyTermData extends SqlBase {
         'vid',
         'name',
         'description',
+        'weight',
         'language',
       ]
     );
@@ -41,8 +42,8 @@ class TaxonomyTermData extends SqlBase {
       'vid' => $this->t('Vocabulary ID'),
       'name' => $this->t('Name'),
       'description' => $this->t('Description'),
+      'weight' => $this->t('Weight'),
       'language' => $this->t('Language'),
-      'parent_id' => $this->t('Parent ID'),
     ];
 
     return $fields;
