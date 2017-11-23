@@ -4621,7 +4621,9 @@ process:
     plugin: default_value
     default_value: 0
   path/alias: alias
-  status: status
+  status:
+    plugin: default_value
+    default_value: 1
   moderation_state:
     plugin: default_value
     default_value: "published"

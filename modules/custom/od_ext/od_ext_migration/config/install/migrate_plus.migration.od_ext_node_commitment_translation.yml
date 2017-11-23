@@ -8,6 +8,7 @@ source:
   data_rows:
     -
       name: mtsar_commitment_1
+      nid: mtsar_commitment_1
       title: 'Améliorer l’accès à l’information - Engagement 1'
       language: fr
       body: |
@@ -326,6 +327,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_2
+      nid: mtsar_commitment_2
       title: 'Simplifier les demandes de renseignements personnels - Engagement 2'
       language: fr
       body: |
@@ -528,6 +530,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_3
+      nid: mtsar_commitment_3
       title: 'Étendre et améliorer les données ouvertes - Engagement 3'
       language: fr
       body: |
@@ -1101,6 +1104,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_4
+      nid: mtsar_commitment_4
       title: 'Fournir et préserver l’information ouverte - Engagement 4'
       language: fr
       body: |
@@ -1461,6 +1465,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_5
+      nid: mtsar_commitment_5
       title: 'Définir une approche de mesure du rendement pour un gouvernement ouvert - Engagement 5'
       language: fr
       body: |
@@ -1722,6 +1727,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_6
+      nid: mtsar_commitment_6
       title: 'Développer les compétences relatives au gouvernement ouvert dans l’ensemble de la fonction publique fédérale - Engagement 6'
       language: fr
       body: |
@@ -2150,6 +2156,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_7
+      nid: mtsar_commitment_7
       title: 'Intégrer les exigences en matière de transparence dans la Stratégie relative aux services fédéraux - Engagement 7'
       language: fr
       body: |
@@ -2364,6 +2371,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_8
+      nid: mtsar_commitment_8
       title: 'Améliorer l’accès aux collections culturelles et patrimoniales - Engagement 8'
       language: fr
       body: |
@@ -2647,6 +2655,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_9
+      nid: mtsar_commitment_9
       title: 'Améliorer l’ouverture de l’information sur les dépenses et l’approvisionnement au gouvernement - Engagement 9'
       language: fr
       body: |
@@ -3056,6 +3065,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_10
+      nid: mtsar_commitment_10
       title: 'Accroître la transparence du budget et des autres renseignements du ministère des Finances - Engagement 10'
       language: fr
       body: |
@@ -3287,6 +3297,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_11
+      nid: mtsar_commitment_11
       title: 'Accroître la transparence sur le financement à l’aide de subventions et de contributions - Engagement 11'
       language: fr
       body: |
@@ -3657,6 +3668,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_12
+      nid: mtsar_commitment_12
       title: 'Améliorer l’information publique sur les sociétés canadiennes - Engagement 12'
       language: fr
       body: |
@@ -3872,6 +3884,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_13
+      nid: mtsar_commitment_13
       title: 'Accroître la disponibilité et l’utilité des données géospatiales - Engagement 13'
       language: fr
       body: |
@@ -4220,6 +4233,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_14
+      nid: mtsar_commitment_14
       title: 'Accroître l’ouverture des activités scientifiques fédérales (Science ouverte) - Engagement 14'
       language: fr
       body: |
@@ -4594,6 +4608,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_15
+      nid: mtsar_commitment_15
       title: 'Stimuler l’innovation par l’intermédiaire de l’Institut des données ouvertes du Canada (Open Data Exchange ou ODX) - Engagement 15'
       language: fr
       body: |
@@ -4874,6 +4889,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_16
+      nid: mtsar_commitment_16
       title: 'Harmoniser les données ouvertes à l’échelle du Canada (Données ouvertes Canada) - Engagement 16'
       language: fr
       body: |
@@ -5205,6 +5221,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_17
+      nid: mtsar_commitment_17
       title: 'Mettre en œuvre la Loi sur les mesures de transparence du secteur extractif - Engagement 17'
       language: fr
       body: |
@@ -5453,6 +5470,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_18
+      nid: mtsar_commitment_18
       title: 'Appuyer les initiatives d’ouverture et de transparence dans le monde entier - Engagement 18'
       language: fr
       body: |
@@ -5916,6 +5934,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_19
+      nid: mtsar_commitment_19
       title: 'Mobiliser la société civile sur les enjeux liés au gouvernement ouvert - Engagement 19'
       language: fr
       body: |
@@ -6177,6 +6196,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_20
+      nid: mtsar_commitment_20
       title: 'Permettre le dialogue ouvert et l’élaboration de politiques ouverte - Engagement 20'
       language: en
       body: |
@@ -6523,6 +6543,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_21
+      nid: mtsar_commitment_21
       title: 'Promouvoir le gouvernement ouvert à l’échelle mondiale - Engagement 21'
       language: fr
       body: |
@@ -6873,6 +6894,7 @@ source:
           static_context: {  }
     -
       name: mtsar_commitment_22
+      nid: mtsar_commitment_22
       title: 'Mobiliser les Canadiens et les Canadiennes pour améliorer les principaux services de l’Agence du revenu du Canada - Engagement 22'
       language: fr
       body: |
@@ -7164,7 +7186,7 @@ process:
   nid:
     plugin: migration
     migration: od_ext_node_commitment
-    source: name
+    source: nid
   uid:
     plugin: default_value
     default_value: 1
@@ -7190,7 +7212,9 @@ process:
     plugin: default_value
     default_value: 0
   path/alias: alias
-  status: status
+  status:
+    plugin: default_value
+    default_value: 1
   moderation_state:
     plugin: default_value
     default_value: "published"

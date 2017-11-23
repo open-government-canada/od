@@ -8,6 +8,7 @@ source:
   data_rows:
     -
       name: homepage
+      nid: homepage
       title: 'Gouvernement ouvert'
       language: fr
       body: |
@@ -158,6 +159,7 @@ source:
           static_context: {  }
     -
       name: open_data
+      nid: open_data
       title: 'Données ouvertes'
       language: fr
       body: |
@@ -335,6 +337,7 @@ source:
           static_context: {  }
     -
       name: open_dialogue
+      nid: open_dialogue
       title: 'Dialogue ouvert'
       language: fr
       body: |
@@ -523,6 +526,7 @@ source:
           static_context: {  }
     -
       name: open_info
+      nid: open_info
       title: 'Information ouverte'
       language: fr
       body: |
@@ -708,6 +712,7 @@ source:
           static_context: {  }
     -
       name: about_open_gov
+      nid: about_open_gov
       title: 'Au sujet du gouvernement ouvert'
       language: fr
       body: |
@@ -875,6 +880,7 @@ source:
           static_context: {  }
     -
       name: about_open_maps
+      nid: about_open_maps
       title: 'Au sujet Cartes ouvertes'
       language: fr
       body: |
@@ -998,6 +1004,7 @@ source:
           static_context: {  }
     -
       name: suggested_datasets
+      nid: suggested_datasets
       title: 'Proposez un jeu de données'
       language: fr
       body: |
@@ -1087,6 +1094,7 @@ source:
           static_context: {  }
     -
       name: contracts
+      nid: contracts
       title: 'Rechercher des contrats gouvernementaux'
       language: fr
       body: |
@@ -1250,6 +1258,7 @@ source:
           static_context: {  }
     -
       name: grants
+      nid: grants
       title: 'Rechercher des octrois de subventions gouvernementaux'
       language: fr
       body: |
@@ -1400,6 +1409,7 @@ source:
           static_context: {  }
     -
       name: reclassifications
+      nid: reclassifications
       title: 'Rechercher la reclassification des postes du gouvernement'
       language: fr
       body: |
@@ -1540,6 +1550,7 @@ source:
           static_context: {  }
     -
       name: travela
+      nid: travela
       title: 'Rechercher les divulgation des dépenses anuelles de voyages, d''accueil et de conférences'
       language: fr
       body: |
@@ -1649,6 +1660,7 @@ source:
           static_context: {  }
     -
       name: hospitalityq
+      nid: hospitalityq
       title: 'Rechercher des frais d''accueil gouvernementaux'
       language: fr
       body: |
@@ -1789,6 +1801,7 @@ source:
           static_context: {  }
     -
       name: travelq
+      nid: travelq
       title: 'Rechercher des dépenses de voyage gouvernementaux'
       language: fr
       body: |
@@ -1920,6 +1933,7 @@ source:
           static_context: {  }
     -
       name: wrongdoing
+      nid: wrongdoing
       title: 'Recherche d’actes répréhensibles fondés au sein du gouvernement'
       language: fr
       body: |
@@ -2056,6 +2070,7 @@ source:
           static_context: {  }
     -
       name: ati_request
+      nid: ati_request
       title: 'Demandes d’accès à l’information complétées'
       language: fr
       body: |
@@ -2195,6 +2210,7 @@ source:
           static_context: {  }
     -
       name: apps
+      nid: apps
       title: 'Galerie d''applis'
       language: fr
       body: |
@@ -2328,6 +2344,7 @@ source:
           static_context: {  }
     -
       name: pd
+      nid: pd
       title: 'Divulgation proactive'
       language: fr
       body: |
@@ -2492,6 +2509,7 @@ source:
           static_context: {  }
     -
       name: consultations
+      nid: consultations
       title: 'Consultations'
       language: fr
       body: |
@@ -2609,6 +2627,7 @@ source:
           static_context: {  }
     -
       name: commitments
+      nid: commitments
       title: 'Engagements'
       language: fr
       body: |
@@ -2725,6 +2744,7 @@ source:
           static_context: {  }
     -
       name: ati
+      nid: ati
       title: 'Accès à l''information'
       language: fr
       body: |
@@ -2879,6 +2899,7 @@ source:
           static_context: {  }
     -
       name: open_maps
+      nid: open_maps
       title: 'Cartes ouvertes'
       language: fr
       body: |
@@ -3053,6 +3074,7 @@ source:
           static_context: {  }
     -
       name: open_by_default_pilot
+      nid: open_by_default_pilot
       title: 'Projet pilote de l’« Ouverture par défaut »'
       language: fr
       body: |
@@ -3189,6 +3211,7 @@ source:
           static_context: {  }
     -
       name: open_by_default_about
+      nid: open_by_default_about
       title: 'Au sujet du projet pilote « Ouvert par défaut »'
       language: fr
       body: |
@@ -3336,6 +3359,7 @@ source:
           static_context: {  }
     -
       name: open_gov_across_canada
+      nid: open_gov_across_canada
       title: 'Gouvernement ouvert à travers le Canada'
       language: fr
       body: |
@@ -3522,6 +3546,7 @@ source:
           static_context: {  }
     -
       name: consultation_action_plan_2_disc
+      nid: consultation_action_plan_2_disc
       title: 'Discussion relative au plan de consultation – Discussions sur le Plan d’action du Canada pour un gouvernement ouvert 2.0'
       language: fr
       body: |
@@ -3651,6 +3676,7 @@ source:
           static_context: {  }
     -
       name: solr_inventory
+      nid: solr_inventory
       title: 'Répertoire de données ouvertes'
       language: fr
       body: |
@@ -3772,6 +3798,7 @@ source:
           static_context: {  }
     -
       name: mtsar__2014_2016
+      nid: mtsar__2014_2016
       title: 'Rapport d’auto-évaluation à mi-parcours du Plan d’action pour un gouvernement ouvert 2014-2016'
       language: fr
       body: |
@@ -4668,6 +4695,7 @@ source:
           static_context: {  }
     -
       name: mtsar__2016_2018
+      nid: mtsar__2016_2018
       title: 'Ébauche aux fins de consultation : Auto évaluation de mi parcours sur le troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert (2016-2018)'
       language: fr
       body: |
@@ -5065,7 +5093,9 @@ process:
     plugin: default_value
     default_value: 0
   path/alias: alias
-  status: status
+  status:
+    plugin: default_value
+    default_value: 1
   moderation_state:
     plugin: default_value
     default_value: "published"

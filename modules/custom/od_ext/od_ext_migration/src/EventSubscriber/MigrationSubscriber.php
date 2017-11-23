@@ -238,7 +238,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
           $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
             'title' => $translation->getTitle(),
             'link' => ['uri' => 'internal:/node/' . $result->destid1],
-            'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+            'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
             'langcode' => (!empty($translations)) ? 'fr' : 'en',
             'parent' => $link->getPluginId(),
             'weight' => $count,
@@ -939,7 +939,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $tmpDisplay = $value['display'];
               $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, $tmpDisplay);
               $display = $displays[$tmpDisplay];
-              $menu_name = (!empty($translations)) ? 'main_fr' : 'main';
+              $menu_name = (!empty($translations)) ? 'main-fr' : 'main';
               $display->addBlock([
                 'id' => 'menu_block:' . $menu_name,
                 'label' => 'Main navigation',
@@ -1095,7 +1095,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
     $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
       'title' => $title,
       'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-      'menu_name' => (!empty($translations)) ? 'main_fr' : 'main',
+      'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
       'langcode' => (!empty($translations)) ? 'fr' : 'en',
       'parent' => $link,
       'weight' => $weight,
