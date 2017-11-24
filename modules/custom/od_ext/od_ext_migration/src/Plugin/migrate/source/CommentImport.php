@@ -161,25 +161,26 @@ class CommentImport extends SqlBase {
 
     // Lookup the correct tid / type / comment field for community taxonomy.
     $nid = $row->getSourceProperty('nid');
+    $tid = '';
     switch ($nid) {
       case 390755:
-        $nid = 1229;
+        $tid = 1229;
         break;
 
       case 390769:
-        $nid = 1241;
+        $tid = 1241;
         break;
 
       case 467947:
-        $nid = 1225;
+        $tid = 1225;
         break;
     }
-    if (\Drupal::database()->schema()->tableExists("migrate_map_od_ext_db_taxonomy_term")) {
-      $tid = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_taxonomy_term} WHERE sourceid1 = :sourceId", [':sourceId' => $nid])->fetchField();
+    if (!empty($tid) && \Drupal::database()->schema()->tableExists("migrate_map_od_ext_db_taxonomy_term")) {
+      $tid = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_taxonomy_term} WHERE sourceid1 = :sourceId", [':sourceId' => $tid])->fetchField();
       if (!empty($tid)) {
         $found = TRUE;
         $entity_type = 'taxonomy_term';
-        $comment_type = 'taxonomy_comments';
+        $comment_type = 'taxonomy_comment';
         $row->setSourceProperty('nid', $tid);
         $row->setSourceProperty('field_name', 'field_taxonomy_comments');
       }

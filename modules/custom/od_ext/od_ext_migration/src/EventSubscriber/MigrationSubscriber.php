@@ -309,7 +309,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       if ($id == 'ati_records') {
         // Address consolidation from Drupal 7.
         $data['address_fieldset']['address'];
-        if (!empty($data['street_address'])) {
+        if (!empty($data['street_number'])) {
           $data['address_fieldset']['address'] .= $data['street_number'];
           unset($data['street_number']);
         }
