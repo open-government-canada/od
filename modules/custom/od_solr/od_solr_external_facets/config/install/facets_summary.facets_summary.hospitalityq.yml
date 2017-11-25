@@ -21,6 +21,12 @@ facets:
     separator: ', '
     show_count: true
     weight: 0
+  hospitalityq_org_name_fr:
+    checked: true
+    label: 'Nom de l''organisation'
+    separator: ', '
+    weight: 0
+    show_count: false
 facet_source_id: 'search_api:views_block__pd_core_hospitalityq__block_1'
 processor_configs:
   reset_facets:
