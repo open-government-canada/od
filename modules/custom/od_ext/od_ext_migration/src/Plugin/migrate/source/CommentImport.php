@@ -159,7 +159,7 @@ class CommentImport extends SqlBase {
       }
     }
 
-    // Lookup the correct entity_id / type / comment field for community taxonomy.
+    // Lookup the entity_id / type / comment field for community taxonomy.
     $entity_id = $row->getSourceProperty('nid');
     $tid = '';
     switch ($entity_id) {
