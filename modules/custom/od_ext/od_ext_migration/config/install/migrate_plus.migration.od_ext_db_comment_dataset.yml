@@ -21,7 +21,7 @@ process:
   subject: subject
   uid:
     plugin: default_value
-    default_value: 1
+    default_value: 0
   name: name
   mail: mail
   homepage: homepage

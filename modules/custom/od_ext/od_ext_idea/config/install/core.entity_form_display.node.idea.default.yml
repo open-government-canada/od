@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.idea.field_idea_tags
     - field.field.node.idea.field_meta_tags
     - field.field.node.idea.field_vud
+    - field.field.node.idea.panelizer
     - node.type.idea
   module:
     - comment
@@ -115,7 +116,8 @@ content:
   langcode:
     type: language_select
     weight: 1
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   path:
@@ -162,3 +164,5 @@ content:
     region: content
 hidden:
   field_idea_permalink: true
+  panelizer: true
+  status: true

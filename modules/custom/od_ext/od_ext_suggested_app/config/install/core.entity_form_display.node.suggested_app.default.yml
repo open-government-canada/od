@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.suggested_app.field_meta_tags
     - field.field.node.suggested_app.field_suggested_app_dataset
     - field.field.node.suggested_app.field_vud
+    - field.field.node.suggested_app.panelizer
     - node.type.suggested_app
   module:
     - comment
@@ -65,7 +66,8 @@ content:
   langcode:
     type: language_select
     weight: 1
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   path:
@@ -110,4 +112,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  panelizer: true
+  status: true

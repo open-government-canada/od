@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.idea.field_idea_submission_name
     - field.field.node.idea.field_idea_tags
     - field.field.node.idea.field_vud
+    - field.field.node.idea.panelizer
     - node.type.idea
   module:
     - comment
@@ -89,7 +90,7 @@ third_party_settings:
               label: hidden
               type: entity_reference_label
               settings:
-                link: true
+                link: false
               third_party_settings: {  }
               weight: 0
               region: content
@@ -205,3 +206,4 @@ hidden:
   field_idea_permalink: true
   field_idea_status: true
   langcode: true
+  panelizer: true

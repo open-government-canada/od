@@ -125,5 +125,6 @@ hidden:
   langcode: true
   panelizer: true
   promote: true
+  status: true
   sticky: true
   uid: true

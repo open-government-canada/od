@@ -109,7 +109,7 @@ class CommentImport extends SqlBase {
     // Default comment field.
     $row->setSourceProperty('field_name', 'comment');
 
-    // Lookup the correct nid / bundle / comment field for node(s).
+    // Lookup the correct entity_id / bundle / comment field for node(s).
     $lookup = [
       'app',
       'blog',
@@ -130,10 +130,10 @@ class CommentImport extends SqlBase {
     ];
     foreach ($lookup as $bundle) {
       if (\Drupal::database()->schema()->tableExists("migrate_map_od_ext_db_node_$bundle")) {
-        $nid = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_node_$bundle} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('nid')])->fetchField();
-        if (!empty($nid)) {
+        $entity_id = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_node_$bundle} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('nid')])->fetchField();
+        if (!empty($entity_id)) {
           $found = TRUE;
-          $row->setSourceProperty('nid', $nid);
+          $row->setSourceProperty('entity_id', $entity_id);
           if ($bundle == 'blog') {
             $row->setSourceProperty('field_name', 'field_blog_comments');
           }
@@ -141,28 +141,28 @@ class CommentImport extends SqlBase {
       }
     }
 
-    // Lookup the correct nid / type / comment field for paragraph(s).
+    // Lookup the correct entity_id / type / comment field for paragraph(s).
     $lookup = [
       'deliverable',
       'deliverable_translation',
     ];
     foreach ($lookup as $bundle) {
       if (\Drupal::database()->schema()->tableExists("migrate_map_od_ext_db_paragraph_$bundle")) {
-        $nid = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_paragraph_$bundle} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('nid')])->fetchField();
-        if (!empty($nid)) {
+        $entity_id = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_paragraph_$bundle} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('nid')])->fetchField();
+        if (!empty($entity_id)) {
           $found = TRUE;
           $entity_type = 'paragraph';
           $comment_type = 'paragraphs_comments';
-          $row->setSourceProperty('nid', $nid);
+          $row->setSourceProperty('entity_id', $entity_id);
           $row->setSourceProperty('field_name', 'field_comment');
         }
       }
     }
 
-    // Lookup the correct tid / type / comment field for community taxonomy.
-    $nid = $row->getSourceProperty('nid');
+    // Lookup the correct entity_id / type / comment field for community taxonomy.
+    $entity_id = $row->getSourceProperty('nid');
     $tid = '';
-    switch ($nid) {
+    switch ($entity_id) {
       case 390755:
         $tid = 1229;
         break;
@@ -181,7 +181,7 @@ class CommentImport extends SqlBase {
         $found = TRUE;
         $entity_type = 'taxonomy_term';
         $comment_type = 'taxonomy_comment';
-        $row->setSourceProperty('nid', $tid);
+        $row->setSourceProperty('entity_id', $tid);
         $row->setSourceProperty('field_name', 'field_taxonomy_comments');
       }
     }
@@ -192,6 +192,10 @@ class CommentImport extends SqlBase {
     }
 
     // Comment properties.
+    $uid = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_user} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('uid')])->fetchField();
+    if (!empty($uid)) {
+      $row->setSourceProperty('uid', $uid);
+    }
     $row->setSourceProperty('comment_body', $body['comment_body_value']);
     $row->setSourceProperty('entity_type', $entity_type);
     $row->setSourceProperty('comment_type', $comment_type);

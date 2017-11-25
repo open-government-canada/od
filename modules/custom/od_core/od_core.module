@@ -50,7 +50,7 @@ function od_core_views_query_alter(ViewExecutable $view, QueryPluginBase $query)
 /**
  * Implements hook_query_TAG_alter() for comment_filter tag.
  */
-function od_core_query_comment_filter_alter2(AlterableInterface $query) {
+function od_core_query_comment_filter_alter(AlterableInterface $query) {
   // Change comment order to DESC for 'comment' field.
   if ($query->getMetaData('base_table') == 'comment') {
     /** @var \Drupal\Core\Database\Query\SelectInterface $query */

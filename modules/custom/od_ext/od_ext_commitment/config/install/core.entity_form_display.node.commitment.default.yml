@@ -185,7 +185,8 @@ content:
   langcode:
     type: language_select
     weight: 1
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
     region: content
   path:
@@ -232,3 +233,4 @@ content:
     region: content
 hidden:
   panelizer: true
+  status: true
