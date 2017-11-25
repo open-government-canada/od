@@ -21,6 +21,16 @@ class UserRouteSubscriber extends RouteSubscriberBase {
         '_title' => 'Registration Page',
       ]);
     }
+
+    $path = '/admin/help';
+    foreach ($collection->all() as $route) {
+      if (substr($route->getPath(), 0, 11) == $path) {
+        $route->setRequirement(
+          '_custom_access',
+          '\Drupal\od_ext_user\AccessChecks\UserAccessChecks::access'
+        );
+      }
+    }
   }
 
 }
