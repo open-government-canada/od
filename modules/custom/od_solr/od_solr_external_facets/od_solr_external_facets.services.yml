@@ -1,0 +1,6 @@
+services:
+  od_solr_external_facets.path_processor:
+    class: Drupal\od_solr_external_facets\PathProcessor\FacetsPathProcessor
+    arguments: ['@language_manager']
+    tags:
+      - { name: path_processor_outbound, priority: -10 }
