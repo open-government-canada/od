@@ -13,30 +13,20 @@ facets:
     checked: true
     label: Department
     separator: ', '
-    show_count: true
     weight: 0
+    show_count: false
 facet_source_id: 'search_api:views_block__solr_search_content__solr_commitment'
 processor_configs:
   reset_facets:
     processor_id: reset_facets
     weights:
-      build: '-8'
+      build: '-7'
     settings:
       link_text: 'Clear all'
-  show_count:
-    processor_id: show_count
-    weights:
-      build: '-9'
-    settings: {  }
-  show_summary:
-    processor_id: show_summary
-    weights:
-      build: '-7'
-    settings: {  }
   show_text_when_empty:
     processor_id: show_text_when_empty
     weights:
-      build: '-6'
+      build: '-8'
     settings:
       text:
         value: 'There is no current search in progress.'

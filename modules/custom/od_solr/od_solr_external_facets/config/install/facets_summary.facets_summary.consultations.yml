@@ -15,18 +15,20 @@ facets:
     separator: ', '
     weight: 0
     show_count: false
+  idea_ref_content_tags:
+    checked: true
+    label: Tags
+    separator: ', '
+    weight: 0
+    show_count: false
 facet_source_id: 'search_api:views_block__solr_search_content__solr_consultation'
 processor_configs:
-  show_count:
-    processor_id: show_count
+  reset_facets:
+    processor_id: reset_facets
     weights:
-      build: '-9'
-    settings: {  }
-  show_summary:
-    processor_id: show_summary
-    weights:
-      build: '-7'
-    settings: {  }
+      build: '-10'
+    settings:
+      link_text: 'Clear all'
   show_text_when_empty:
     processor_id: show_text_when_empty
     weights:

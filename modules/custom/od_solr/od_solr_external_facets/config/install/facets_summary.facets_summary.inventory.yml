@@ -13,8 +13,8 @@ facets:
     checked: true
     label: Inventory
     separator: ', '
-    show_count: true
     weight: 0
+    show_count: false
   inventory_org_name_fr:
     checked: true
     label: Inventory
@@ -26,23 +26,13 @@ processor_configs:
   reset_facets:
     processor_id: reset_facets
     weights:
-      build: '-10'
+      build: '-7'
     settings:
       link_text: 'Clear all'
-  show_count:
-    processor_id: show_count
-    weights:
-      build: '-10'
-    settings: {  }
-  show_summary:
-    processor_id: show_summary
-    weights:
-      build: '-10'
-    settings: {  }
   show_text_when_empty:
     processor_id: show_text_when_empty
     weights:
-      build: '-10'
+      build: '-8'
     settings:
       text:
         value: 'There is no current search in progress.'

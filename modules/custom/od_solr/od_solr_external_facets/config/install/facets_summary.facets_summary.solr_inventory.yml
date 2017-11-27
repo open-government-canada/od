@@ -13,36 +13,26 @@ facets:
     checked: true
     label: 'Organization Name'
     separator: ', '
-    show_count: true
     weight: 0
+    show_count: false
   inventory_organization_name_fr:
     checked: true
     label: 'Nom du l''organisation'
     separator: ', '
-    show_count: true
     weight: 0
+    show_count: false
 facet_source_id: 'search_api:views_block__solr_inventory__block_1'
 processor_configs:
   reset_facets:
     processor_id: reset_facets
     weights:
-      build: '-10'
+      build: '-8'
     settings:
       link_text: 'Clear all'
-  show_count:
-    processor_id: show_count
-    weights:
-      build: '-10'
-    settings: {  }
-  show_summary:
-    processor_id: show_summary
-    weights:
-      build: '-10'
-    settings: {  }
   show_text_when_empty:
     processor_id: show_text_when_empty
     weights:
-      build: '-10'
+      build: '-9'
     settings:
       text:
         value: 'There is no current search in progress.'

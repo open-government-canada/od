@@ -261,10 +261,10 @@
                 "https://www.drupal.org/files/issues/externalentitystorage-2920779-3.patch"
             },
             "drupal/facets": {
-                "Enter drupal/facets patch #2877004 description here":
-                "https://www.drupal.org/files/issues/facets_empty_facet_2877004_3.patch",
-                "Enter drupal/facets patch #2878851 description here":
-                "https://www.drupal.org/files/issues/facet_summary_show_a-2878851-7.patch"
+                "Enter drupal/facets patch #2926335 description here":
+                "https://www.drupal.org/files/issues/2926335-by-sylus-empty-facet-summary-precedence.patch",
+                "Enter drupal/facets patch #2926335 description here":
+                "https://www.drupal.org/files/issues/facet-summary-clear-filter-custom-class-2926339.patch"
             },
             "drupal/flag": {
                 "Enter drupal/flag patch #2846111 description here":
@@ -365,7 +365,7 @@
         "drupal/entityqueue": "1.0-alpha7",
         "drupal/external_comment": "dev-8.x-1.x",
         "drupal/external_entities": "1.x-dev",
-        "drupal/facets": "1.0-alpha11",
+        "drupal/facets": "dev-1.x#103bd0d",
         "drupal/flag": "4.0-alpha2",
         "drupal/fontawesome":  "1.2",
         "drupal/google_analytics": "2.2",
