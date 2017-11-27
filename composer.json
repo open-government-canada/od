@@ -252,6 +252,10 @@
             },
             "drupal/external_entities": {
                 "Enter drupal/external_entities patch #2875436 description here":
+                "https://www.drupal.org/files/issues/2823684-check-field-access-2.patch",
+                "Enter drupal/external_entities patch #2875436 description here":
+                "https://www.drupal.org/files/issues/2858171-view-label-2.patch",
+                "Enter drupal/external_entities patch #2875436 description here":
                 "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch",
                 "Enter drupal/external_entities patch #2882887 description here":
                 "https://www.drupal.org/files/issues/allow_for_uuid_to_be-2882887-2.patch",
@@ -358,20 +362,20 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
-        "drupalwxt/wxt": "dev-8.x-2.x",
+        "drupalwxt/wxt": "2.0.0-rc2",
         "drupal/address": "1.3",
         "drupal/chosen": "2.4",
         "drupal/csv_serialization": "1.0",
         "drupal/entityqueue": "1.0-alpha7",
-        "drupal/external_comment": "dev-8.x-1.x",
-        "drupal/external_entities": "1.x-dev",
+        "drupal/external_comment": "1.0.0-rc1",
+        "drupal/external_entities": "1.0-alpha2",
         "drupal/facets": "dev-1.x#103bd0d",
         "drupal/flag": "4.0-alpha2",
         "drupal/fontawesome":  "1.2",
         "drupal/google_analytics": "2.2",
         "drupal/google_analytics_reports": "3.0-beta1",
         "drupal/honeypot": "1.27",
-        "drupal/icon": "1.x-dev",
+        "drupal/icon": "dev-1.x#2bcdf76",
         "drupal/reference_table_formatter": "1.0-rc4",
         "drupal/quicktabs": "3.0-alpha2",
         "drupal/redirect": "1.0-beta1",
