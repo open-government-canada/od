@@ -1233,7 +1233,7 @@ display:
       link_display: page_1
       link_url: ''
       block_description: 'Top pages'
-      block_category: 'Analytics (Views)'
+      block_category: 'Analytics'
       filters:
         start_date:
           id: start_date
@@ -1572,7 +1572,7 @@ display:
       header: {  }
       display_description: ''
       block_description: 'Top keywords'
-      block_category: 'Analytics (Views)'
+      block_category: 'Analytics'
       filters:
         start_date:
           id: start_date
@@ -1857,7 +1857,7 @@ display:
       header: {  }
       display_description: ''
       block_description: 'Top sources'
-      block_category: 'Analytics (Views)'
+      block_category: 'Analytics'
     cache_metadata:
       max-age: -1
       contexts:

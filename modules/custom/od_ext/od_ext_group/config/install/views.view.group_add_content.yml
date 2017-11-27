@@ -407,7 +407,7 @@ display:
     display_options:
       display_extenders:
         metatag_display_extender: {  }
-      block_category: 'Open Data Groups'
+      block_category: 'Groups'
     cache_metadata:
       max-age: -1
       contexts:

@@ -369,7 +369,7 @@ display:
     display_options:
       display_extenders: {  }
       block_description: 'Community Apps'
-      block_category: 'Open Data Taxonomy'
+      block_category: 'Taxonomy'
       rendering_language: '***LANGUAGE_language_interface***'
     cache_metadata:
       max-age: -1
