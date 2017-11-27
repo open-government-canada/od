@@ -12,6 +12,7 @@ dependencies:
   - drupal:menu_block
   - drupal:paragraphs
   - drupal:reference_table_formatter
+  - drupal:redirect
   - drupal:views_bootstrap
   - drupal:wxt_admin
   - drupal:wxt_ext_blocks
