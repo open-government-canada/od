@@ -96,7 +96,7 @@ function od_core_query_comment_filter_alter(AlterableInterface $query) {
 function od_core_token_info() {
   $info['tokens']['site']['url-abs'] = [
     'name' => t('Absolute URL'),
-    'description' => t('Url of the site, no language prefix garanted'),
+    'description' => t('Url of the site with no language prefix'),
   ];
   return $info;
 }
