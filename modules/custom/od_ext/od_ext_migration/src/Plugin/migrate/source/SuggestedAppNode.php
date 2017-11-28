@@ -29,6 +29,7 @@ class SuggestedAppNode extends SqlBase {
         'created',
         'changed',
         'status',
+        'comment',
       ])
       ->condition('n.type', 'suggested_applications');
 
@@ -48,6 +49,7 @@ class SuggestedAppNode extends SqlBase {
       'body' => $this->t('Body'),
       'created' => $this->t('Created'),
       'changed' => $this->t('Changed'),
+      'comment' => $this->t('Comment'),
       'status' => $this->t('Status'),
       'file_fid' => $this->t('File fid'),
       'file_alt' => $this->t('File alt'),

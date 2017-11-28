@@ -41,6 +41,7 @@ process:
   'path/alias': alias
   created: created
   changed: changed
+  comment: comment
   status: status
   type:
     plugin: default_value

@@ -50,6 +50,7 @@ process:
   'path/alias': alias
   created: created
   changed: changed
+  comment: comment
   status: status
   moderation_state:
     plugin: default_value

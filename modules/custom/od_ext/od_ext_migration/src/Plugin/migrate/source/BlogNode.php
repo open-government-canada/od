@@ -29,6 +29,7 @@ class BlogNode extends SqlBase {
         'created',
         'changed',
         'status',
+        'comment',
       ])
       ->condition('n.type', 'blog_post');
 
@@ -48,6 +49,7 @@ class BlogNode extends SqlBase {
       'body' => $this->t('Body'),
       'created' => $this->t('Created'),
       'changed' => $this->t('Changed'),
+      'comment' => $this->t('Comment'),
       'status' => $this->t('Status'),
       'file_fid' => $this->t('File fid'),
       'file_alt' => $this->t('File alt'),

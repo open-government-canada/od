@@ -29,6 +29,7 @@ class SuggestedDatasetNode extends SqlBase {
         'created',
         'changed',
         'status',
+        'comment',
       ])
       ->condition('n.type', 'suggested_datasets');
 
@@ -48,6 +49,7 @@ class SuggestedDatasetNode extends SqlBase {
       'body' => $this->t('Body'),
       'created' => $this->t('Created'),
       'changed' => $this->t('Changed'),
+      'comment' => $this->t('Comment'),
       'status' => $this->t('Status'),
     ];
 

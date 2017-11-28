@@ -29,6 +29,7 @@ class IdeaNode extends SqlBase {
         'created',
         'changed',
         'status',
+        'comment',
       ])
       ->condition('n.type', 'idea');
 
@@ -48,9 +49,9 @@ class IdeaNode extends SqlBase {
       'body' => $this->t('Body'),
       'created' => $this->t('Created'),
       'changed' => $this->t('Changed'),
+      'comment' => $this->t('Comment'),
       'status' => $this->t('Status'),
       'freetags' => $this->t('Tags'),
-      'status' => $this->t('Status'),
       'submission_name' => $this->t('Submission Name'),
       'idea_permalink' => $this->t('Idea Permalink'),
       'tags' => $this->t('Tags'),

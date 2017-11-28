@@ -29,6 +29,7 @@ class CommitmentNode extends SqlBase {
         'created',
         'changed',
         'status',
+        'comment',
       ])
       ->condition('n.type', 'commitment');
 
@@ -48,6 +49,7 @@ class CommitmentNode extends SqlBase {
       'body' => $this->t('Body'),
       'created' => $this->t('Created'),
       'changed' => $this->t('Changed'),
+      'comment' => $this->t('Comment'),
       'status' => $this->t('Status'),
       'department' => $this->t('Department'),
       'relevance' => $this->t('Relevance'),
