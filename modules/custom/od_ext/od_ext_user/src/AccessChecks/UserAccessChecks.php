@@ -4,6 +4,7 @@ namespace Drupal\od_ext_user\AccessChecks;
 
 use Drupal\Core\Routing\Access\AccessInterface;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Access\AccessResultAllowed;
 use Symfony\Component\Routing\Route;
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -25,7 +26,11 @@ class UserAccessChecks implements AccessInterface {
    */
   public function access(Route $route, RouteMatchInterface $route_match, AccountInterface $account) {
     $roles = $account->getRoles();
-    return AccessResultAllowed::allowedIf(!in_array('creator', $roles) === TRUE);
+    $count = count($roles);
+    if ($count == 1) {
+      return AccessResultAllowed::allowedIf(!in_array('authenticated', $roles) === TRUE);
+    }
+    return AccessResult::neutral();
   }
 
 }
