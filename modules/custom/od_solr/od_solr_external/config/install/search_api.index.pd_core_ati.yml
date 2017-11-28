@@ -151,6 +151,16 @@ field_settings:
     datasource_id: solr_document
     property_path: text
     type: text
+  i18n_content_en:
+    label: 'I18n content en'
+    datasource_id: solr_document
+    property_path: i18n_content_en
+    type: text
+  i18n_content_fr:
+    label: 'I18n content fr'
+    datasource_id: solr_document
+    property_path: i18n_content_fr
+    type: text
 datasource_settings:
   solr_document:
     id_field: id
@@ -190,6 +200,7 @@ processor_settings:
     weights:
       preprocess_index: -10
       preprocess_query: -10
+    all_fields: false
 tracker_settings:
   default: {  }
 options:
