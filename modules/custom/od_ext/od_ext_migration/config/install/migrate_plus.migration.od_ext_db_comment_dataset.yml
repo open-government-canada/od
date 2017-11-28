@@ -34,7 +34,7 @@ process:
   'comment_body/value': comment_body
   'comment_body/format':
     plugin: default_value
-    default_value: rich_text
+    default_value: plain_text
 destination:
   plugin: entity:external_comment
 migration_dependencies:
