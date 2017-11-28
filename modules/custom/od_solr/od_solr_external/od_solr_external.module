@@ -28,6 +28,11 @@ function od_solr_external_search_api_solr_query_alter(SolariumQuery $solarium_qu
     $solarium_query->createFilterQuery('od_solr_external_language')->setQuery('ss_language:' . $language->getId());
   }
 
+  $params = $solarium_query->getParams();
+  if (!isset($params['q.op'])) {
+    $solarium_query->addParam('q.op', 'OR');
+  }
+
 }
 
 /**
