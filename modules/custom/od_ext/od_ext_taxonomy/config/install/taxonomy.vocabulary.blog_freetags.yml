@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Blog FreeTags'
-vid: blog_freetags
-description: 'Blog with "Free Tagging" support.'
-hierarchy: 0
-weight: 0
