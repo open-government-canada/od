@@ -1,0 +1,34 @@
+id: od_ext_db_media_document
+migration_tags: null
+migration_group: od_external
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Database import for all document files from legacy Drupal database'
+source:
+  plugin: media_document
+  target: source_migration
+process:
+  mid: fid
+  vid: fid
+  # Media bundle.
+  bundle:
+    plugin: default_value
+    default_value: document
+  # Use image title as media name.
+  name: filename
+  status:
+    plugin: default_value
+    default_value: 1
+  langcode: language
+  content_translation_source:
+    plugin: default_value
+    default_value: "en"
+destination:
+  plugin: entity:media
+migration_dependencies:
+  required:
+    # migrations
+    - od_ext_db_file
+    - od_ext_db_user
