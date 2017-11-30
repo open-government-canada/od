@@ -5137,3 +5137,9 @@ msgstr "suivant"
 
 msgid "Show less"
 msgstr "Montre moins"
+
+msgid "Signed in as"
+msgstr "Connecté en tant que"
+
+msgid "Sign out"
+msgstr "Déconnexion"
