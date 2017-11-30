@@ -9,6 +9,17 @@
  * Implements hook_install().
  */
 function od_ext_user_install() {
+  // Enable default permissions.
+  user_role_grant_permissions('creator', [
+    'translate blog_post node',
+    'translate consultation node',
+  ]);
+
+  user_role_grant_permissions('reviewer', [
+    'translate blog_post node',
+    'translate consultation node',
+  ]);
+
   // Rebuild user entity form display for new fields.
   $storage = \Drupal::entityTypeManager()->getStorage('entity_form_display');
 
