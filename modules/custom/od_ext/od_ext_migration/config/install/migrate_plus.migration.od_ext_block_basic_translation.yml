@@ -213,7 +213,7 @@ source:
       language: 'fr'
       title: 'Projet pilote « Ouvert par défaut »'
       body: |
-        <h2 class="h4"><a href="[site:url]/pilote-ouverture-par-defaut">
+        <h2 class="h4"><a href="http://pilot.open.canada.ca/fr">
         Projet pilote « Ouvert par défaut »</a></h2>
         <p>Explorez les documents de travail fournis par quatre ministères du
         gouvernement du Canada dans le cadre de notre engagement à rendre le
@@ -430,7 +430,7 @@ source:
       language: 'fr'
       title: 'Se connecter'
       body: |
-        <h2 class="h4"><a href="[site:url]/login">
+        <h2 class="h4"><a href="[site:url]/user/login">
         Se connecter</a></h2>
         <p>Connectez-vous à votre compte sur le Gouvernement ouvert ou créez un
         nouveau compte.</p>
@@ -459,7 +459,7 @@ source:
       language: 'fr'
       title: 'Demande d’accès à l’information'
       body: |
-        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/tbsf-fsct/350-57-fra.aspp">
+        <h2 class="h4"><a href="http://www.tbs-sct.gc.ca/tbsf-fsct/350-57-fra.asp">
         Demande d’accès à l’information</a></h2>
         <p>Présenter une demande d’accès à l’information en ligne pour les
         ministères et organismes fédéraux.</p>

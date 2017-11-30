@@ -37,7 +37,10 @@ msgid "403 access denied"
 msgstr "403 accès refusé"
 
 msgid "Your message has been sent."
-msgstr "Your message has been sent."
+msgstr "Votre message a été envoyé."
+
+msgid "The email address %value is already taken."
+msgstr "L'adresse courriel %value est déjà prise."
 
 msgid "First Name"
 msgstr "Prénom"
@@ -786,8 +789,9 @@ msgid ""
 "Your informal request for ATI records previously released has been "
 "submitted."
 msgstr ""
-"Your informal request for ATI records previously released has been "
-"submitted."
+"
+Votre demande informelle d'enregistrements ATI précédemment publiés "
+"a été soumise."
 
 msgid ""
 "&lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br "

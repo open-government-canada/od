@@ -348,7 +348,7 @@ display:
           id: value
           table: votingapi_result
           field: value
-          relationship: node_vote_result_vote_count
+          relationship: node_vote_result_vote_sum
           group_type: group
           admin_label: ''
           label: 'Raw Vote'
@@ -557,7 +557,7 @@ display:
           id: value
           table: votingapi_result
           field: value
-          relationship: node_vote_result_vote_count
+          relationship: node_vote_result_vote_sum
           group_type: group
           admin_label: ''
           order: DESC
@@ -586,13 +586,13 @@ display:
       footer: {  }
       empty: {  }
       relationships:
-        node_vote_result_vote_count:
-          id: node_vote_result_vote_count
+        node_vote_result_vote_sum:
+          id: node_vote_result_vote_sum
           table: node_field_data
-          field: node_vote_result_vote_count
+          field: node_vote_result_vote_sum
           relationship: none
           group_type: group
-          admin_label: 'Vote Result "Count" for content items'
+          admin_label: 'Vote Result "Sum" for content items'
           required: false
           entity_type: node
           plugin_id: standard

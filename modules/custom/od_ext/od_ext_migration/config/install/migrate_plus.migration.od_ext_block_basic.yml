@@ -202,7 +202,7 @@ source:
       language: 'en'
       title: 'Open by Default Pilot'
       body: |
-        <h2 class="h4"><a href="[site:url]/open-by-default-pilot">
+        <h2 class="h4"><a href="http://pilot.open.canada.ca/en">
         Open by Default Pilot</a></h2>
         <p>Explore working documents provided by four Government of Canada
         departments as part of our commitment to making government more open
@@ -407,7 +407,7 @@ source:
       language: 'en'
       title: 'Account login'
       body: |
-        <h2 class="h4"><a href="[site:url]/login">
+        <h2 class="h4"><a href="[site:url]/user/login">
         Account login</a></h2>
         <p>Log in to your Open Government account, or register for a new
         account.</p>
