@@ -48,9 +48,9 @@
   ]
 %}
 {% if (language == 'fr') %}
-<table{{ attributes.addClass(classes).setAttribute('data-wb-tables', '{ "lengthMenu": [ [10, -1], [10, "All"] ], "columnDefs": [ { "visible": false, "targets": 4 }, { "orderData": 4, "targets": 5 } ], "order": [[ 5, "desc" ]] }') }}>
-{% else %}
 <table{{ attributes.addClass(classes).setAttribute('data-wb-tables', '{ "lengthMenu": [ [10, -1], [10, "Tout"] ], "columnDefs": [ { "visible": false, "targets": 4 }, { "orderData": 4, "targets": 5 } ], "order": [[ 5, "desc" ]] }') }}>
+{% else %}
+<table{{ attributes.addClass(classes).setAttribute('data-wb-tables', '{ "lengthMenu": [ [10, -1], [10, "All"] ], "columnDefs": [ { "visible": false, "targets": 4 }, { "orderData": 4, "targets": 5 } ], "order": [[ 5, "desc" ]] }') }}>
 {% endif %}
   {% if caption_needed %}
     <caption>

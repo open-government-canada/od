@@ -98,6 +98,14 @@ class PageNode extends SqlBase {
       ->execute()
       ->fetchCol();
 
+    // Hack to get around some content mismatch issues.
+    if ($row->getSourceProperty('translations') {
+      $body = str_replace('engagement-', 'contenu/engagement-', $body);
+    }
+    else {
+      $body = str_replace('commitment-', 'content/commitment-', $body);
+    }
+
     // URL alias.
     $alias = $this->select('url_alias', 'db')
       ->fields('db', ['alias'])
