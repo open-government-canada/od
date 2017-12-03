@@ -2,16 +2,10 @@ langcode: en
 status: true
 dependencies:
   module:
-    - workbench_moderation
+    - content_moderation
 third_party_settings:
-  workbench_moderation:
-    enabled: 0
-    allowed_moderation_states:
-      - published
-      - archived
-      - draft
-      - needs_review
-    default_moderation_state: draft
+  lightning_workflow:
+    workflow: editorial
 id: deliverable
 label: Deliverable
 icon_uuid: null

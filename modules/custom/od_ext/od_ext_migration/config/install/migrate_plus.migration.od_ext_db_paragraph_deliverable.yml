@@ -31,9 +31,6 @@ process:
   created: created
   changed: changed
   status: status
-  moderation_state:
-    plugin: default_value
-    default_value: "published"
   field_deliverable_next_steps/value: next_steps
   field_deliverable_next_steps/format:
     plugin: default_value

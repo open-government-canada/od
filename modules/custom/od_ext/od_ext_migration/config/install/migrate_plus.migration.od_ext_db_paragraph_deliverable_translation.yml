@@ -46,9 +46,6 @@ process:
   created: created
   changed: changed
   status: status
-  moderation_state:
-    plugin: default_value
-    default_value: "published"
   field_body/value:
     plugin: wxt_media_tags
     source: body

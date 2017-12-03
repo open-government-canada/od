@@ -789,8 +789,7 @@ msgid ""
 "Your informal request for ATI records previously released has been "
 "submitted."
 msgstr ""
-"
-Votre demande informelle d'enregistrements ATI précédemment publiés "
+"Votre demande informelle d'enregistrements ATI précédemment publiés "
 "a été soumise."
 
 msgid ""
@@ -1162,7 +1161,7 @@ msgid "< Previous"
 msgstr "< précédente"
 
 msgid "New submission added to [webform:title]."
-msgstr "Nouvelle soumission ajoutée à [webform: title]."
+msgstr "Nouvelle soumission ajoutée à [webform:title]."
 
 msgid "Back to form"
 msgstr "Retour au formulaire"
@@ -1951,7 +1950,7 @@ msgstr ""
 "No: Non"
 
 msgid "Address"
-msgstr "Adresse"
+msgstr "adresse"
 
 msgid "Address 2"
 msgstr "adresse 2"
@@ -5143,3 +5142,9 @@ msgstr "Connecté en tant que"
 
 msgid "Sign out"
 msgstr "Déconnexion"
+
+msgid "There is no current search in progress."
+msgstr "Il n'y a pas de recherche en cours."
+
+msgid "Country"
+msgstr "pays"

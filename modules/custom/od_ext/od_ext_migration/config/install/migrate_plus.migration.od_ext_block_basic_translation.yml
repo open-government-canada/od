@@ -109,7 +109,7 @@ source:
       language: 'fr'
       title: 'Effectuez une recherche dans le portail des données ouvertes'
       body: |
-        <h2 class="h4"><a href="[site:url-abs]/ckan/fr/dataset">Effectuez une
+        <h2 class="h4"><a href="[site:url-abs]/data/fr/dataset">Effectuez une
         recherche dans le portail des données ouvertes</a></h2>
         <p>Vous souhaitez obtenir des renseignements sur les services du
         gouvernement du Canada ou consulter des données financières, des
@@ -180,7 +180,7 @@ source:
       language: 'fr'
       title: 'Effectuez une recherche dans le Portail d’information ouverte'
       body: |
-        <h2 class="h4"><a href="[site:url-abs]/ckan/fr/dataset?portal_type=info&q=">
+        <h2 class="h4"><a href="[site:url-abs]/data/fr/dataset?portal_type=info&q=">
         Effectuez une recherche dans le Portail d’information ouverte</a></h2>
         <p>Explorez notre Portail d’information ouverte afin d’accéder aux
         publications électroniques. N’hésitez pas à nous faire part de vos
@@ -527,7 +527,7 @@ source:
       language: 'fr'
       title: 'Explorer les documents ouverts par défaut'
       body: |
-        <h2 class="h4"><a href="[site:url-abs]/ckan/fr/dataset">
+        <h2 class="h4"><a href="http://pilot.open.canada.ca/fr">
         Explorer les documents ouverts par défaut</a></h2>
         <p>Recherchez et parcourez les documents de travail fournis par le
         gouvernement du Canada.</p>

@@ -9,8 +9,8 @@ dependencies:
     - field.field.paragraph.deliverable.field_title
     - paragraphs.paragraphs_type.deliverable
   module:
+    - content_moderation
     - text
-    - workbench_moderation
 id: paragraph.deliverable.default
 targetEntityType: paragraph
 bundle: deliverable

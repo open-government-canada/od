@@ -105,7 +105,7 @@ source:
       language: 'en'
       title: 'Search through our Open data portal'
       body: |
-        <h2 class="h4"><a href="[site:url-abs]/ckan/en/dataset">Search through our
+        <h2 class="h4"><a href="[site:url-abs]/data/en/dataset">Search through our
         Open data portal</a></h2>
         <p>Looking for data about Government of Canada services, financials,
         national demographic information or high resolution maps? Discover that
@@ -172,7 +172,7 @@ source:
       language: 'en'
       title: 'Search through our open information portal'
       body: |
-        <h2 class="h4"><a href="[site:url-abs]/ckan/en/dataset?portal_type=info&q=">
+        <h2 class="h4"><a href="[site:url-abs]/data/en/dataset?portal_type=info&q=">
         Search through our open information portal</a></h2>
         <p>Explore our open information portal which provides access to digital
         information resources. Let us know what you think by
@@ -499,7 +499,7 @@ source:
       language: 'en'
       title: 'Explore Open by Default documents'
       body: |
-        <h2 class="h4"><a href="[site:url-abs]/ckan/en/dataset">
+        <h2 class="h4"><a href="http://pilot.open.canada.ca/en">
         Explore Open by Default documents</a></h2>
         <p>Search and browse working documents provided by the Government of
         Canada.</p>

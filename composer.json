@@ -251,9 +251,9 @@
                 "https://www.drupal.org/files/issues/2514126-102.field-behavior-settings.patch  "
             },
             "drupal/external_entities": {
-                "Enter drupal/external_entities patch #2875436 description here":
+                "Enter drupal/external_entities patch #2823684 description here":
                 "https://www.drupal.org/files/issues/2823684-check-field-access-2.patch",
-                "Enter drupal/external_entities patch #2875436 description here":
+                "Enter drupal/external_entities patch #2858171 description here":
                 "https://www.drupal.org/files/issues/2858171-view-label-2.patch",
                 "Enter drupal/external_entities patch #2875436 description here":
                 "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch",
@@ -290,7 +290,9 @@
                 "Enter drupal/group patch #2864721 description here":
                 "https://www.drupal.org/files/issues/group-translate_content_permission-2864721-5.patch",
                 "Enter drupal/group patch #2895988 description here":
-                "https://www.drupal.org/files/issues/2895988-4.patch"
+                "https://www.drupal.org/files/issues/2895988-4.patch",
+                "Enter drupal/group patch #2908830 description here":
+                "https://www.drupal.org/files/issues/2908830-04.patch"
             },
             "drupal/icon": {
                 "Enter drupal/icon patch #2864333 description here":
@@ -319,9 +321,7 @@
                 "https://www.drupal.org/files/issues/views_content_isn_t-2918891-2.patch"
             },
             "drupal/reference_table_formatter": {
-                "Enter drupal/reference_table_formatter patch #2921456 description here":
-                "https://www.drupal.org/files/issues/leveraging_table_of-2921456-2.patch",
-                "Enter drupal/reference_table_formatter patch #2921456 description here":
+                "Enter drupal/reference_table_formatter patch #2924657 description here":
                 "https://www.drupal.org/files/issues/reference_table_formatter-moderation-entity_reference_revisions-2924657.patch"
             },
             "drupal/votingapi": {
@@ -369,7 +369,7 @@
         "drupal/entityqueue": "1.0-alpha7",
         "drupal/external_comment": "1.0.0-rc1",
         "drupal/external_entities": "1.0-alpha2",
-        "drupal/facets": "dev-1.x#103bd0d",
+        "drupal/facets": "1.0-beta1",
         "drupal/flag": "4.0-alpha2",
         "drupal/fontawesome":  "1.2",
         "drupal/google_analytics": "2.2",

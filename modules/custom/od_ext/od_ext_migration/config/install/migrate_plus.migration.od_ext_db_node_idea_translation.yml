@@ -46,9 +46,6 @@ process:
   changed: changed
   comment: comment
   status: status
-  moderation_state:
-    plugin: default_value
-    default_value: "published"
   field_idea_tags:
     plugin: iterator
     source: freetags

@@ -99,7 +99,7 @@ class PageNode extends SqlBase {
       ->fetchCol();
 
     // Hack to get around some content mismatch issues.
-    if ($row->getSourceProperty('translations') {
+    if ($row->getSourceProperty('translations')) {
       $body = str_replace('engagement-', 'contenu/engagement-', $body);
     }
     else {

@@ -13,13 +13,13 @@ dependencies:
     - field.field.node.idea.panelizer
     - node.type.idea
   module:
+    - content_moderation
     - comment
     - field_group
     - metatag
     - path
     - text
     - vud
-    - workbench_moderation
 third_party_settings:
   field_group:
     group_idea:

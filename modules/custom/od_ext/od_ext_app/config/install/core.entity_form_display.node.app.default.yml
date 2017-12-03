@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.app.panelizer
     - node.type.app
   module:
+    - content_moderation
     - comment
     - datetime
     - entity_browser
@@ -33,7 +34,6 @@ dependencies:
     - path
     - text
     - votingapi_widgets
-    - workbench_moderation
 third_party_settings:
   field_group:
     group_app:

@@ -25,7 +25,7 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-  workbench_moderation_control:
+  content_moderation_control:
     weight: -20
 hidden:
   field_meta_tags: true

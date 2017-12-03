@@ -10,12 +10,12 @@ dependencies:
     - field.field.node.suggested_app.panelizer
     - node.type.suggested_app
   module:
+    - content_moderation
     - comment
     - metatag
     - path
     - text
     - vud
-    - workbench_moderation
 id: node.suggested_app.default
 targetEntityType: node
 bundle: suggested_app

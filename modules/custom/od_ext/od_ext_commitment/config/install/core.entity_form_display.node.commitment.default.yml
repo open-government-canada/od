@@ -17,13 +17,13 @@ dependencies:
     - field.field.node.commitment.panelizer
     - node.type.commitment
   module:
+    - content_moderation
     - comment
     - field_group
     - inline_entity_form
     - metatag
     - path
     - text
-    - workbench_moderation
 third_party_settings:
   field_group:
     group_commitment:

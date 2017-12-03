@@ -11,13 +11,13 @@ dependencies:
     - field.field.node.consultation.panelizer
     - node.type.consultation
   module:
+    - content_moderation
     - datetime_range
     - field_group
     - inline_entity_form
     - metatag
     - path
     - text
-    - workbench_moderation
 third_party_settings:
   field_group:
     group_consult:
