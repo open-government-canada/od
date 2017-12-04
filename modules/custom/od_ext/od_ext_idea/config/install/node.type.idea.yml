@@ -8,8 +8,6 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-  lightning_workflow:
-    workflow: editorial
 name: Idea
 type: idea
 description: 'Possible idea''s for areas of improvement related to Open Government.'
