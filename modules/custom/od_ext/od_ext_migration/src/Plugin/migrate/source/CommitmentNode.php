@@ -206,8 +206,8 @@ class CommitmentNode extends SqlBase {
       ->fetchCol();
 
     $path = end($alias);
-    $path = str_replace('commitment/', 'commitment/mtsar/2016-2018/', $path);
-    $path = str_replace('engagements/', 'engagements/mtsar/2016-2018/', $path);
+    $path = str_replace('commitment/', 'commitment/mtsar/2014-2016/', $path);
+    $path = str_replace('engagements/', 'engagements/mtsar/2014-2016/', $path);
 
     // Metatags.
     $metatags = $this->select('metatag', 'df')

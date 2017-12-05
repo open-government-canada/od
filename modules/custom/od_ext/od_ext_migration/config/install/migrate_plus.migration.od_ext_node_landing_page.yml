@@ -4592,6 +4592,987 @@ source:
           pattern: panelizer
           builder: ipe
           static_context: {  }
+    -
+      name: tracker__third_biennial_partnership
+      title: 'Progress tracker for the Third Biennial Plan to the Open Government Partnership'
+      language: en
+      body: |
+        <p>The Open Government Tracker provides quarterly updates on the
+          Government of Canada’s progress on our <a href=
+          "/en/content/third-biennial-plan-open-government-partnership">open
+          government commitments</a>. We hope this tool will make it easier to
+          stay in-the-know, find opportunities to participate, and ask questions
+          about the work we’re doing to make government more open and
+          transparent.
+        </p>
+      alias: /commitment/tracker/third-biennial/progress-tracker-third-biennial-plan-open-government-partnership
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: main
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: main
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: main
+              weight: 5
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: draft_sar__2014_2016
+      title: 'Draft for Consultation: End-of-term Self-assessment on Action Plan on Open Government 2014-2016'
+      language: en
+      body: |
+        <section class="alert alert-info">
+          <p>The consultation period on this draft is closed, but we want this
+          to be an ongoing dialogue. Please&nbsp;<a href=
+          "[site:url]/forms/contact-us">contact us</a>&nbsp;at any time.</p>
+        </section>
+        <p><a href=
+        "http://open.canada.ca/en/content/canadas-action-plan-open-government-2014-16">
+        Canada’s Action Plan on Open Government 2014-16</a>, Canada’s second
+        open government plan to the <a href=
+        "http://www.opengovpartnership.org/">Open Government Partnership
+        (OGP)</a> sought to advance a series of commitments to help modernize
+        how Government operates to reflect the evolving values and expectations
+        of Canadians.</p>
+        <p>Canada’s 2014-16 Plan was launched on <time datetime=
+        "2014-07-01">July 1, 2014</time> . It was built around three streams of
+        activity to structure our work:</p>
+        <ol>
+          <li><strong>Open data</strong> – making raw data available in
+          machine-ready formats to be used by Canadians;</li>
+          <li><strong>Open information</strong> – proactively releasing
+          information on Government activities, and making it more accessible;
+          and</li>
+          <li><strong>Open dialogue</strong> – providing the opportunity for
+          two-way dialogue with the Government of Canada and its citizens on
+          the development and delivery of policies and priorities.</li>
+        </ol>
+        <p>The plan highlighted twelve commitments with deliverables and
+        activities designed to increase transparency, civic participation,
+        public accountability and access to new technologies for openness.</p>
+        <p>The Open Government team learned important lessons in delivering the
+        2014-2016 Plan—as you’ll find in each commitment linked from the
+        summary table below—which will inform our work going forward. However,
+        we would like to hear from Canadians on your assessment of our progress
+        throughout the Action Plan 2014-2016 implementation period (
+        <time datetime="2014-07-01">July 1, 2014</time> to <time datetime=
+        "2016-06-30">June 30, 2016</time> ).</p>
+        <section>
+          <h2>There are two ways you can participate in this consultation:</h2>
+          <ol>
+            <li>Comment on the results of individual commitments by following
+            the links in the summary table below.</li>
+            <li>You can also comment by sending an email to <a href=
+            "mailto:open-ouvert@tbs-sct.gc.ca">open-ouvert@tbs-sct.gc.ca</a>.
+            Please note that your comments may be made public (without personal
+            identifiers) as part of the What We Heard report to be published
+            after the consultation period. &nbsp;
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h2>Commitment Summary</h2>
+          <p>This table provides a summary of the status of Canada’s
+          implementation of its 2014-16 Plan commitments as of <time datetime=
+          "2016-06-30">June 30, 2016</time> . The commitment title links to the
+          detail page for that commitment.</p>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr class="active">
+                <th id="tbl1-r1-c1"><strong>Action Plan
+                Commitment</strong></th>
+                <th class="text-center" id="tbl1-r1-c2"><strong>Overall
+                Status</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r2-c1"><strong>Foundational
+                Commitments</strong></th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r2-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-1-directive-open-government">1.
+                  Directive on Open Government</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r2-c1">Substantial</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r4-c1"><strong>Open Data
+                Commitments</strong></th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href="[site:url]/commitment/draft/sar/2014-2016/commitment-2-open-data-canada">2.
+                  Open Data Canada</a>
+                </td>
+                <td class="btn-danger text-center" headers=
+                "tbl1-r1-c2 tbl1-r4-c1">Incomplete</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-3-canadian-open-data-exchange-odx">
+                  3. Canadian Open Data Exchange (ODX)</a>
+                </td>
+                <td class="btn-danger text-center" headers=
+                "tbl1-r1-c2 tbl1-r4-c1">Incomplete</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-4-open-data-development-od4d">4.
+                  Open Data for Development (OD4D)</a>
+                </td>
+                <td class="btn-success text-center" headers=
+                "tbl1-r1-c2 tbl1-r4-c1">Complete</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-5-open-data-core-commitment">5.
+                  Open Data Core Commitment</a>
+                </td>
+                <td class="btn-success text-center" headers=
+                "tbl1-r1-c2 tbl1-r4-c1">Complete</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r9-c1"><strong>Open Information
+                Commitments</strong></th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href="[site:url]/commitment/draft/sar/2014-2016/commitment-6-open-science">6.
+                  Open Science</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-7-mandatory-reporting-extractives">
+                  7. Mandatory Reporting on Extractives</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href="[site:url]/commitment/draft/sar/2014-2016/commitment-8-open-contracting">8.
+                  Open Contracting</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-9-open-information-budgets-and-expenditures">
+                  9. Open Information on Budgets and Expenditures</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-10-digital-literacy">10.
+                  Digital Literacy</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-11-open-information-core-commitment">
+                  11. Open Information Core Commitment</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantial</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r16-c1"><strong>Open Dialogue
+                Commitments</strong></th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r16-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/commitment-12-consulting-canadians">12.
+                  Consulting with Canadians</a>
+                </td>
+                <td class="btn-danger text-center" headers=
+                "tbl1-r1-c2 tbl1-r16-c1">Incomplete</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      alias: /commitment/draft/sar/2014-2016/draft-consultation-end-term-self-assessment-action-plan-open-government-2014-2016
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: main
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: main
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: main
+              weight: 5
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: sar__2014_2016
+      title: 'End-of-Term Self-Assessment Report on Action Plan on Open Government 2014-2016'
+      language: en
+      body: |
+        <section>
+          <h2>1. Introduction and Background</h2>
+          <p>This report offers a self-assessment of progress on <a href=
+          "[site:url]/content/canadas-action-plan-open-government-2014-16">Canada’s
+          Action Plan on Open Government 2014-16</a>, Canada’s second open
+          government plan to the <a href=
+          "http://www.opengovpartnership.org/">Open Government Partnership
+          (OGP)</a>. The plan sought to advance a series of commitments to help
+          modernize how Government operates to reflect the evolving values and
+          expectations of Canadians.</p>
+          <p>Canada’s 2014-16 Plan was launched on <time datetime=
+          "2014-07-01">July 1, 2014</time> . It was built around three streams
+          of activity to structure our work:</p>
+          <ol>
+            <li><strong>Open data</strong> – making raw data available in
+            machine-ready formats to be used by Canadians;</li>
+            <li><strong>Open information</strong> – proactively releasing
+            information on Government activities, and making it more
+            accessible; and</li>
+            <li><strong>Open dialogue</strong> – providing the opportunity for
+            two-way dialogue with the Government of Canada and its citizens on
+            the development and delivery of policies and priorities.</li>
+          </ol>
+          <p>The plan highlighted twelve commitments with deliverables and
+          activities designed to increase transparency, civic participation,
+          public accountability and access to new technologies for openness.
+          The commitments focused on improvements in the OGP Grand Challenge
+          areas of: improving public services; increasing public integrity;
+          more effectively managing public resources; and, increasing corporate
+          accountability.</p>
+          <p>This first End-of-term Self-assessment report is part of Canada’s
+          commitment to the OGP. It outlines the implementation process for the
+          completed 2014-16 Plan and summarizes progress achieved and lessons
+          learned with regards to Canada’s objectives for 2014-2016.</p>
+        </section>
+        <section>
+          <h2>2. Action Plan Process</h2>
+          <p>In developing the 2014-16 Plan, Canada sought to apply lessons
+          learned during implementation of the first two-year plan in an effort
+          to ensure that the plan reflected Canadians’ concerns and
+          priorities.</p>
+          <p>In 2014, Canadians, civil society organizations, government
+          departments and agencies, academics, and the private sector across
+          the country were invited to participate in online and in-person
+          consultation events to explore potential open government activities,
+          refine them into a set of commitments, and define concrete actions
+          for each. The action plan was posted online for public review and
+          comment. All the feedback received from online comments or in-person
+          sessions was compiled into a <a href=
+          "[site:url]/consultations/what-we-heard-summary-report">“What We
+          Heard” summary report</a> published in <time datetime=
+          "2014-11">November 2014</time> .</p>
+          <p>Canada’s open government platform, Open.Canada.ca, was an
+          important tool in developing and delivering the 2014-16 Plan. It
+          served to disseminate information and collect views, opinions and
+          priorities from citizens and civil society, and to encourage
+          continuous conversations on topics of interest to Canadian
+          stakeholders. Canada regularly sought and received input from the
+          public and from civil society, academic, and private sector experts
+          on the development and delivery of past and present open government
+          action plans.</p>
+          <p>The Open Government team learned numerous important lessons in
+          delivering the 2014-16 Plan. For example, it became clear that
+          citizens feel strongly that broad public engagement must be an
+          essential component of open government, both in developing and
+          implementing initiatives. We determined that engagement works best
+          when we ask questions that help us define problems, not just consult
+          on solutions to pre-selected issues. We learned that for government
+          departments to put open government policies and practices in place,
+          clear and consistent guidance and standards are required. We
+          discovered that limited financial and human resources sometimes
+          constrained the team’s ability to deliver fully on all commitments.
+          Finally, we learned that the amount of cultural and process
+          transformation needed within the Government of Canada’s working
+          environment is greater than originally thought.</p>
+          <p>Integrating all these lessons has been challenging. For example,
+          the broad commitment to meaningfully engage citizens on all elements
+          of developing and implementing open government commitments requires
+          more effort than was able to be provided in delivering on the 2014-16
+          Plan. However, these lessons have informed our current 2016-2018 Plan
+          and additional resources are being allocated to support the
+          Government’s ambitions.</p>
+          <p>This report reflects the Government of Canada’s assessment of
+          progress in delivering our action plan commitments. A draft of
+          Canada’s self-assessment was shared online for public review,
+          comments, and input over a two-week period. Invitations to review
+          were sent from the Government of Canada’s Open Government Secretariat
+          mailing list, and civil society stakeholders were directly invited to
+          share their views on Canada’s progress over the two-year timeframe.
+          Additional feedback on the Government’s continuing work to become
+          more transparent and accountable is always welcome via the
+          Open.Canada.ca site.</p>
+        </section>
+        <section>
+          <h2>3. Independent Reporting Mechanism Recommendations</h2>
+          <p>With the 2014-16 Plan, the Government of Canada looked to address
+          many of the recommendations made by the OGP’s Independent Reporting
+          Mechanism (IRM) researcher regarding the development and delivery of
+          the <a href="[site:url]/canadas-action-plan-open-government">2012-14
+          Plan</a>. In creating commitments that were more specific and
+          ambitious than in the past, Canada was better able to engage
+          interested stakeholders in productive dialogue, as well as to measure
+          progress more effectively. Expanding open government initiatives
+          beyond open data allowed Canada to make more information of interest
+          available to citizens, including providing single window access to
+          information that is proactively disclosed by departments and
+          agencies.</p>
+          <p>The Open Government team also responded to IRM recommendations by
+          committing to improved public consultation and citizen engagement. In
+          doing so, we shared our progress on specific commitments with more
+          than just government entities. For example, we engaged with
+          provincial, territorial, and municipal governments as co-chair of the
+          Open Data Canada Working Group. In <time datetime="2016-04">April
+          2016</time> , open government leaders from governments across Canada
+          met in Saint John, New Brunswick to discuss future priorities for
+          open data in Canada. We also engaged with Canadian and foreign
+          stakeholders on aid transparency, a measure that was part of our open
+          data core commitment, during extensive consultations that took place
+          on Canada’s International Assistance Review over spring and summer
+          2016.</p>
+          <p>We also recognized the opportunity to modernize elements of our
+          legislative framework. In <time datetime="2016-03">March 2016</time>
+          , the Government announced that it would take a two-step approach to
+          revitalize access to information: first, it will move forward in the
+          near term on concrete proposals to improve the Act, followed by a
+          full review of the Act in 2018. To make early progress on its plans,
+          in <time datetime="2016-05">May 2016</time> , the President of the
+          Treasury Board issued an Interim Directive on the Administration of
+          the Access to Information Act. The Directive directs federal
+          officials to take into account the purpose of the Act – strengthening
+          the accountability of government to its citizens – when administering
+          the Act; to waive all access to information fees apart from the $5
+          filing fee; and to release information in user friendly formats
+          whenever possible. The Interim Directive sends a strong message
+          across federal institutions that government information belongs to
+          the people it serves and should be open by default.</p>
+          <p>In <time datetime="2016-05">May</time> and <time datetime=
+          "2016-06">June 2016</time> , we consulted Canadians and stakeholders
+          on how best to implement initial proposals to revitalize access to
+          information. Feedback from Canadians and stakeholders will be helpful
+          to the upcoming reforms of the Act. The Government has committed to
+          bring forward changes to improve access to information in early
+          2017.</p>
+          <p>Finally, consistent with IRM recommendations, the Open Government
+          team increased our ambition to help lead a progressive shift to
+          government that is open by default. The Government of Canada extended
+          efforts beyond the Open Government team in support of this process,
+          committing to improvements across a broad mix of departments in the
+          areas of transparency, accountability, and responsiveness.</p>
+        </section>
+        <section>
+          <h2>4. Implementation of Action Plan Commitments</h2>
+          <p>This table provides a summary of the status of Canada’s
+          implementation of its 2014-16 Plan commitments as of <time datetime=
+          "2016-05-30">June 30, 2016</time> . The commitment title links to the
+          detail page for that commitment.</p>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr class="active">
+                <th id="tbl1-r1-c1">Action Plan Commitment</th>
+                <th class="text-center" id="tbl1-r1-c2">Overall Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r2-c1">Foundational Commitments</th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r2-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-1-directive-open-government">
+                  1. Directive on Open Government</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r2-c1">
+                Substantial</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r4-c1">Open Data Commitments</th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-2-open-data-canada">
+                  2. Open Data Canada</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r4-c1">
+                Incomplete</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-3-canadian-open-data-exchange-odx">
+                  3. Canadian Open Data Exchange (ODX)</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r4-c1">
+                Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-4-open-data-development-od4d">
+                  4. Open Data for Development (OD4D)</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r4-c1">
+                Complete</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-5-open-data-core-action-plan-commitment">
+                  5. Open Data Core Action Plan Commitment</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r4-c1">
+                Complete</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r9-c1">Open Information
+                Commitments</th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-6-open-science">6.
+                  Open Science</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-7-mandatory-reporting-extractives">
+                  7. Mandatory Reporting on Extractives</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-8-open-contracting">
+                  8. Open Contracting</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-9-open-information-budgets-and-expenditures">
+                  9. Open Information on Budgets and Expenditures</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-10-digital-literacy">
+                  10. Digital Literacy</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantial</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-11-open-information-core-action-plan-commitment">
+                  11. Open Information Core Action Plan Commitment</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantial</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r16-c1">Open Dialogue Commitments</th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r16-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/action-plan-commitment-12-consulting-canadians">
+                  12. Consulting with Canadians</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r16-c1">
+                Incomplete</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h2>5. Conclusion and Next Steps</h2>
+          <p>In the spirit of the OGP, Canada made ambitious commitments in its
+          2014-16 Plan. Despite best efforts, Canada did not meet all of its
+          goals. This End-of-term Self-assessment report attempts to highlight
+          our successes but also ensure transparency in sharing our hard-earned
+          lessons.</p>
+          <p>This End-of-term Self-assessment report is one way in which
+          citizens and stakeholders can monitor Canada’s progress on meeting
+          its action plan commitments. The 2014-2016 Plan experimented with new
+          and innovative open government activities, and started to lay the
+          foundation towards greater openness and transparency.</p>
+          <p>Canada continues to strive toward transforming the work
+          environment, processes, and culture of the public service into one
+          where programs, services, and information are both open by default
+          and open by design. The Government of Canada is working closely with
+          civil society and Canadians to provide greater insight into how
+          government operates and foster greater participation and dialogue
+          around government activities. As this report demonstrates, the
+          commitment to advancing open government is shared across federal
+          departments and agencies. In the future, the Government of Canada
+          will look to deepen engagement and collaboration with other orders of
+          government, civil society, and implicated stakeholders.</p>
+          <section>
+            <h3>Next steps</h3>
+            <p>Canada’s open government efforts drove change across the federal
+            public service. There was significant progress on implementing the
+            2014-16 Plan on open government, but there is still much to be done
+            in the coming years to deliver on increasingly ambitious
+            commitments to Canadians.</p>
+            <p>Tell us what you think. Let the Open Government team know your
+            thoughts on this report, and on what Canada accomplished. Give us
+            ideas that can help us overcome the challenges we face. You can
+            always reach us at <a href=
+            "mailto:open-ouvert@tbs-sct.gc.ca">open-ouvert@tbs-sct.gc.ca</a>.</p>
+            <p>In the medium term, we aim to begin embedding open government
+            practices in mainstream, Government of Canada processes, policies,
+            and programs. The goal is to increasingly apply an open government
+            lens to policy and program development and implementation.</p>
+            <p>Going forward, the Government of Canada is committed to
+            accelerating, expanding, and enhancing its transparency and
+            accountability. This commitment is reflected in Canada’s new plan
+            for 2016-2018, the <a href=
+            "[site:url]/content/third-biennial-plan-open-government-partnership">
+            Third Biennial Plan to the Open Government Partnership</a>.</p>
+          </section>
+        </section>
+        <section>
+          <h2>Annex: Addressing OGP Grand Challenges</h2>
+          <p>Each of the commitments in Canada’s Action Plan on Open Government
+          2014-16 provides support to one or more of the five Grand Challenges
+          identified by the Open Government Partnership (OGP):</p>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr class="active">
+                <th id="tbl6" rowspan="2">Commitment</th>
+                <th colspan="5" id="tbl7">Grand Challenges</th>
+              </tr>
+              <tr class="active">
+                <th headers="tbl7" id="tbl10">GC1 <sup id=
+                "table1-fn1-rf"><a class="fn-lnk" href=
+                "#table1-fn1"><span class="wb-inv">table 1 note</span>
+                1</a></sup></th>
+                <th headers="tbl7" id="tbl11">GC2 <sup id=
+                "table1-fn2-rf"><a class="fn-lnk" href=
+                "#table1-fn2"><span class="wb-inv">table 1 note</span>
+                2</a></sup></th>
+                <th headers="tbl7" id="tbl12">GC3 <sup id=
+                "table1-fn3-rf"><a class="fn-lnk" href=
+                "#table1-fn3"><span class="wb-inv">table 1 note</span>
+                3</a></sup></th>
+                <th headers="tbl7" id="tbl13">GC4 <sup id=
+                "table1-fn4-rf"><a class="fn-lnk" href=
+                "#table1-fn4"><span class="wb-inv">table 1 note</span>
+                4</a></sup></th>
+                <th headers="tbl7" id="tbl14">GC5 <sup id=
+                "table1-fn5-rf"><a class="fn-lnk" href=
+                "#table1-fn5"><span class="wb-inv">table 1 note</span>
+                5</a></sup></th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td colspan="6">
+                  <section class="wb-fnote">
+                    <h2 class="wb-inv" id="table1-fn">Table 1 Notes</h2>
+                    <dl>
+                      <dt>Table 1 Note 1</dt>
+                      <dd id="table1-fn1">
+                        <p>GC1 - Improving Public Services</p>
+                        <p class="fn-rtn"><a href="#table1-fn1-rf"><span class=
+                        "wb-inv">Return to table 1 note</span> 1 <span class=
+                        "wb-inv">referrer</span></a></p>
+                      </dd>
+                      <dt>Table 1 Note 2</dt>
+                      <dd id="table1-fn2">
+                        <p>GC2 - Increasing Public Integrity</p>
+                        <p class="fn-rtn"><a href="#table1-fn2-rf"><span class=
+                        "wb-inv">Return to table 1 note</span> 2 <span class=
+                        "wb-inv">referrer</span></a></p>
+                      </dd>
+                      <dt>Table 1 Note 3</dt>
+                      <dd id="table1-fn3">
+                        <p>GC3 - Effectively Managing Public Resources</p>
+                        <p class="fn-rtn"><a href="#table1-fn3-rf"><span class=
+                        "wb-inv">Return to table 1 note</span> 3 <span class=
+                        "wb-inv">referrer</span></a></p>
+                      </dd>
+                      <dt>Table 1 Note 4</dt>
+                      <dd id="table1-fn4">
+                        <p>GC4 - Creating Safer Communities</p>
+                        <p class="fn-rtn"><a href="#table1-fn4-rf"><span class=
+                        "wb-inv">Return to table 1 note</span> 4 <span class=
+                        "wb-inv">referrer</span></a></p>
+                      </dd>
+                      <dt>Table 1 Note 5</dt>
+                      <dd id="table1-fn5">
+                        <p>GC5 - Increasing Corporate Accountability</p>
+                        <p class="fn-rtn"><a href="#table1-fn5-rf"><span class=
+                        "wb-inv">Return to table 1 note</span> 5 <span class=
+                        "wb-inv">referrer</span></a></p>
+                      </dd>
+                    </dl>
+                  </section>
+                </td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <th class="active" colspan="6" id="tbl17">Foundational
+                commitments</th>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl17" id="tbl20">1. Directive on Open
+                Government</th>
+                <td headers="tbl7 tbl10 tbl17 tbl20">Yes</td>
+                <td headers="tbl7 tbl11 tbl17 tbl20">Yes</td>
+                <td headers="tbl7 tbl12 tbl17 tbl20">Yes</td>
+                <td headers="tbl7 tbl13 tbl17 tbl20"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl17 tbl20"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th class="active" colspan="6" id="tbl37">Open data
+                commitments</th>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl37" id="tbl40">2. Open Data Canada</th>
+                <td headers="tbl7 tbl10 tbl37 tbl40">Yes</td>
+                <td headers="tbl7 tbl11 tbl37 tbl40"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl12 tbl37 tbl40"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl13 tbl37 tbl40"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl37 tbl40"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl37" id="tbl50">3. Canadian Open Data
+                Exchange (ODX)</th>
+                <td headers="tbl7 tbl10 tbl37 tbl50">Yes</td>
+                <td headers="tbl7 tbl11 tbl37 tbl50"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl12 tbl37 tbl50"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl13 tbl37 tbl50"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl37 tbl50"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl37" id="tbl59">4. Open Data for
+                Development (OD4D)</th>
+                <td headers="tbl7 tbl10 tbl37 tbl59">Yes</td>
+                <td headers="tbl7 tbl11 tbl37 tbl59">Yes</td>
+                <td headers="tbl7 tbl12 tbl37 tbl59">Yes</td>
+                <td headers="tbl7 tbl13 tbl37 tbl59"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl37 tbl59"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl37" id="tbl68">5. Open Data Core
+                Commitment</th>
+                <td headers="tbl7 tbl10 tbl37 tbl68">Yes</td>
+                <td headers="tbl7 tbl11 tbl37 tbl68"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl12 tbl37 tbl68">Yes</td>
+                <td headers="tbl7 tbl13 tbl37 tbl68"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl37 tbl68"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th class="active" colspan="6" id="tbl77">Open information
+                commitments</th>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl80">6. Open Science</th>
+                <td headers="tbl7 tbl10 tbl77 tbl80">Yes</td>
+                <td headers="tbl7 tbl11 tbl77 tbl80"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl12 tbl77 tbl80">Yes</td>
+                <td headers="tbl7 tbl13 tbl77 tbl80"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl80"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl90">7. Mandatory Reporting on
+                Extractives</th>
+                <td headers="tbl7 tbl10 tbl77 tbl90">Yes</td>
+                <td headers="tbl7 tbl11 tbl77 tbl90">Yes</td>
+                <td headers="tbl7 tbl12 tbl77 tbl90">Yes</td>
+                <td headers="tbl7 tbl13 tbl77 tbl90"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl90">Yes</td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl99">8. Open Contracting</th>
+                <td headers="tbl7 tbl10 tbl77 tbl99">Yes</td>
+                <td headers="tbl7 tbl11 tbl77 tbl99"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl12 tbl77 tbl99"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl13 tbl77 tbl99"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl99"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl108">9. Open Info on Budgets
+                &amp; Expenditures</th>
+                <td headers="tbl7 tbl10 tbl77 tbl108">Yes</td>
+                <td headers="tbl7 tbl11 tbl77 tbl108">Yes</td>
+                <td headers="tbl7 tbl12 tbl77 tbl108">Yes</td>
+                <td headers="tbl7 tbl13 tbl77 tbl108"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl108"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl117">10. Digital Literacy</th>
+                <td headers="tbl7 tbl10 tbl77 tbl117">Yes</td>
+                <td headers="tbl7 tbl11 tbl77 tbl117"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl12 tbl77 tbl117"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl13 tbl77 tbl117"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl117"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl126">11. Open Information Core
+                Commitment</th>
+                <td headers="tbl7 tbl10 tbl77 tbl126">Yes</td>
+                <td headers="tbl7 tbl11 tbl77 tbl126">Yes</td>
+                <td headers="tbl7 tbl12 tbl77 tbl126">Yes</td>
+                <td headers="tbl7 tbl13 tbl77 tbl126"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl126"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+              <tr>
+                <th class="active" colspan="6" id="tbl135">Open dialogue
+                commitments</th>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl135" id="tbl138">12. Consulting with
+                Canadians</th>
+                <td headers="tbl7 tbl10 tbl135 tbl138">Yes</td>
+                <td headers="tbl7 tbl11 tbl135 tbl138"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl12 tbl135 tbl138"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl13 tbl135 tbl138"><span class=
+                "wb-inv">No</span></td>
+                <td headers="tbl7 tbl14 tbl135 tbl138"><span class=
+                "wb-inv">No</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      alias: /commitment/sar/2014-2016/end-of-term-self-assessment-report-action-plan-open-government-2014-2016
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: main
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: main
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: main
+              weight: 5
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
   ids:
     name:
       type: string

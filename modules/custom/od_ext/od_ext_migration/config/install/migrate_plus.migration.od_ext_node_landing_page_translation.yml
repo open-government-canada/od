@@ -3303,7 +3303,7 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top
               weight: 1
@@ -3316,7 +3316,7 @@ source:
               weight: 2
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: main
               weight: 1
@@ -3627,13 +3627,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: top
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: main
               weight: 1
@@ -3719,13 +3719,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: left
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: left
               weight: 5
@@ -4646,13 +4646,13 @@ source:
               weight: 0
             -
               id: local_tasks_block
-              label: Tabs
+              label: Onglets
               label_display: '0'
               region: main
               weight: 1
             -
               id: 'entity_field:node:body'
-              label: Body
+              label: Corps
               label_display: 0
               region: main
               weight: 5
@@ -4991,6 +4991,1071 @@ source:
           </table>
         </section>
       alias: /commitment/mtsar/2016-2018/draft-consultation-mid-term-self-assessment-third-biennial-plan-open-government-partnership
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: main
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Onglets
+              label_display: '0'
+              region: main
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Corps
+              label_display: 0
+              region: main
+              weight: 5
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: tracker__third_biennial_partnership
+      nid: tracker__third_biennial_partnership
+      title: 'Système du suivi du troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert'
+      language: fr
+      body: |
+        <p>Le système du suivi du gouvernement ouvert fournit des mises à jour
+        trimestrielles sur les progrès du gouvernement du Canada par rapport à
+        nos <a href=
+        "/fr/contenu/troisieme-plan-biannuel-partenariat-gouvernement-ouvert">engagements
+        relatifs au gouvernement ouvert</a>. Nous souhaitons que, grâce à cet
+        outil, il soit plus facile de se tenir au courant, de trouver des
+        possibilités de participation et de poser des questions sur nos efforts
+        afin de veiller à ce que le gouvernement soit plus ouvert et
+        transparent.
+        </p>
+      alias: /commitment/tracker/third-biennial/systeme-du-suivi-du-troisieme-plan-biannuel-cadre-du-partenariat-gouvernement-ouvert
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: main
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Onglets
+              label_display: '0'
+              region: main
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Corps
+              label_display: 0
+              region: main
+              weight: 5
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: draft_sar__2014_2016
+      nid: draft_sar__2014_2016
+      title: 'Ébauche pour consultation : Auto évaluation en fin de parcours du Plan d''action pour un gouvernement ouvert 2014-2016'
+      language: fr
+      body: |
+        <section class="alert alert-info">
+          <p>La période de consultation de cette ébauche a maintenant pris fin,
+          mais nous voulons entretenir un dialogue soutenu à cet égard.
+          Veuillez&nbsp;<a href=
+          "[site:url]/formulaire/faites-nous-part-de-vos-commentaires">nous
+          joindre</a>&nbsp;quand bon vous semblera.</p>
+        </section>
+        <p>Le <a href=
+        "http://ouvert.canada.ca/fr/contenu/plan-daction-du-canada-gouvernement-ouvert-2014-2016">
+        Plan d'action du Canada pour un gouvernement ouvert&nbsp;2014-2016</a>,
+        le deuxième Plan du Canada pour un gouvernement ouvert présenté au
+        <a href="http://www.opengovpartnership.org/">Partenariat pour un
+        gouvernement transparent (PGT)</a> (en anglais seulement) cherchait à
+        faire progresser une série d'engagements en vue de contribuer à
+        moderniser la façon dont le gouvernement mène ses activités et de
+        refléter les valeurs et les attentes en évolution des Canadiens et des
+        Canadiennes.</p>
+        <p>Le Plan du Canada de 2014-2016 a été lancé le <time datetime=
+        "2014-07-01">1<sup>er</sup>&nbsp;juillet&nbsp;2014</time> . Il
+        s'articulait autour de trois volets d'activités pour structurer notre
+        travail, soit&nbsp;:</p>
+        <ul>
+          <li><strong>Données ouvertes</strong> – Offrir des données brutes
+          dans des formats lisibles par machine que les Canadiens et les
+          Canadiennes peuvent utiliser.</li>
+          <li><strong>Information ouverte</strong> – Divulguer de façon
+          proactive de l'information sur les activités du gouvernement et la
+          rendre plus accessible.</li>
+          <li><strong>Dialogue ouvert</strong> – Offrir la possibilité d'avoir
+          un dialogue bidirectionnel avec le gouvernement du Canada et ses
+          citoyens sur l'élaboration et l'exécution de politiques et de
+          priorités.</li>
+        </ul>
+        <p>Le Plan a présenté 12 engagements, ainsi que leurs produits
+        livrables et activités connexes conçus pour accroître la transparence,
+        la mobilisation de la collectivité, la reddition de comptes publique et
+        l'accès à de nouvelles technologies pour l'ouverture.</p>
+        <p>L'équipe du gouvernement ouvert a tiré des leçons importantes de
+        l'exécution du Plan de 2014-2016 – comme vous pourrez le constater dans
+        chacun des engagements liés au tableau sommaire qui figure ci-dessous
+        &nbsp;– et ces leçons nous guideront dans notre travail dorénavant.
+        Toutefois, nous aimerions savoir ce que les Canadiens et les
+        Canadiennes ont à dire sur votre évaluation des progrès que nous avons
+        réalisés tout au long de la période de mise en œuvre du Plan d'action
+        de 2014-2016 période (du <time datetime="2014-07-01">1<sup>er</sup>
+        juillet</time> 2014 au <time datetime="2016-06-30">30 juin 2016</time>
+        ).</p>
+        <section>
+          <h2>Vous pouvez participer à la consultation de deux différentes
+          façons&nbsp;:</h2>
+          <ol>
+            <li>Vous pouvez formuler vos commentaires sur les résultats qui ont
+            été réalisés par rapport à chaque engagement, en cliquant sur les
+            liens qui se trouvent dans le tableau sommaire ci- dessous.</li>
+            <li>Vous pouvez également nous faire parvenir vos commentaires par
+            courriel, à&nbsp;: open-ouvert@tbs-sct.gc.ca. Veuillez prendre note
+            qu'il est possible que vos commentaires soient publiés (sans
+            identificateur personnel) dans le rapport <em>Vous nous avez
+            dit</em>, qui sera publié après la période de consultation.</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Résumé des engagements</h2>
+          <p>Le tableau qui suit présente un sommaire de l'état de la mise en
+          œuvre, par le Canada, des engagements indiqués dans le Plan de
+          2014-2016 au <time datetime=
+          "2016-06-30">30&nbsp;juin&nbsp;2016</time> . Le titre de l'engagement
+          renvoie à la page sur les détails ayant trait à celui-ci.</p>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr class="active">
+                <th id="tbl1-r1-c1"><strong>Engagement du Plan
+                d'action</strong></th>
+                <th class="text-center" id="tbl1-r1-c2"><strong>Situation
+                générale</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r2-c1"><strong>Engagements
+                fondamentaux</strong></th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r2-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-1-directive-gouvernement-ouvert">
+                  1. Directive sur le gouvernement ouvert</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r2-c1">Substantiel</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r4-c1"><strong>Engagements relatifs
+                aux données ouvertes</strong></th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-2-donnees-ouvertes-du-canada">2.
+                  Données ouvertes du Canada</a>
+                </td>
+                <td class="btn-danger text-center" headers=
+                "tbl1-r1-c2 tbl1-r4-c1">Incomplète</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-3-institut-donnees-ouvertes">3.
+                  Institut des données ouvertes</a>
+                </td>
+                <td class="btn-danger text-center" headers=
+                "tbl1-r1-c2 tbl1-r4-c1">Incomplète</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-4-donnees-ouvertes-developpement-dod">
+                  4. Données ouvertes pour le développement (DOD)</a>
+                </td>
+                <td class="btn-success text-center" headers=
+                "tbl1-r1-c2 tbl1-r4-c1">Exécuté</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-5-contenu/engagement-fondamental-relatif-aux-donnees-ouvertes">
+                  5. Engagement fondamental relatif aux données ouvertes</a>
+                </td>
+                <td class="btn-success text-center" headers=
+                "tbl1-r1-c2 tbl1-r4-c1">Exécuté</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r9-c1"><strong>Engagements relatifs à
+                l'information ouverte</strong></th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href="[site:url]/commitment/draft/sar/2014-2016/engagement-6-science-ouverte">6.
+                  Science ouverte</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-7-declaration-obligatoire-secteur-extractif">
+                  7. Déclaration obligatoire pour le secteur extractif</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-8-processus-ouvert-doctroi-contrats">
+                  8. Processus ouvert d'octroi de contrats</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-9-information-ouverte-budgets-depenses">
+                  9. Information ouverte sur les budgets et les dépenses</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-10-alphabetisation-numerique">10.
+                  Alphabétisation numérique</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-11-contenu/engagement-fondamental-relatif-a-linformation-ouverte">
+                  11. Engagement fondamental relatif à l'information
+                  ouverte</a>
+                </td>
+                <td class="btn-warning text-center" headers=
+                "tbl1-r1-c2 tbl1-r9-c1">Substantiel</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r16-c1"><strong>Engagement relatif au
+                dialogue ouvert</strong></th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r16-c1">
+                  <a href=
+                  "[site:url]/commitment/draft/sar/2014-2016/engagement-12-consultations-aupres-canadiens">
+                  12. Consultations auprès des Canadiens et des Canadiennes</a>
+                </td>
+                <td class="btn-danger text-center" headers=
+                "tbl1-r1-c2 tbl1-r16-c1">Incomplète</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      alias: /commitment/draft/sar/2014-2016/ebauche-consultation-auto-evaluation-fin-parcours-du-plan-daction-gouvernement-ouvert-2014
+      metatags:
+        -
+          title: '[node:title]'
+          description: '[node:summary]'
+      panelizer:
+        -
+          view_mode: page_manager
+          default: two_column
+          blocks:
+            -
+              id: page_title_block
+              label: '[node:title]'
+              label_display: visible
+              region: main
+              weight: 0
+            -
+              id: local_tasks_block
+              label: Tabs
+              label_display: '0'
+              region: main
+              weight: 1
+            -
+              id: 'entity_field:node:body'
+              label: Body
+              label_display: 0
+              region: main
+              weight: 5
+          id: panels_variant
+          uuid: 0d005dcd-2e72-42a5-8a63-17ee65b3f1d3
+          label: null
+          weight: 0
+          layout: bs_1col_stacked
+          layout_settings:
+            layout:
+              wrapper: div
+              classes:
+                row: row
+              add_layout_class: 1
+              attributes: ''
+            regions:
+              top:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              main:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+              bottom:
+                wrapper: div
+                classes:
+                  col-sm-12: col-sm-12
+                add_region_classes: 1
+                attributes: ''
+          page_title: '[node:title]'
+          storage_type: panelizer_default
+          storage_id: 'node:landing_page:full:one_column'
+          pattern: panelizer
+          builder: ipe
+          static_context: {  }
+    -
+      name: sar__2014_2016
+      nid: sar__2014_2016
+      title: 'Rapport d’auto évaluation en fin de parcours du Plan d’action pour un gouvernement ouvert 2014-2016'
+      language: fr
+      body: |
+        <section>
+          <h2>1. Introduction et mise en contexte</h2>
+          <p>Le présent rapport expose une auto-évaluation des progrès réalisés
+          par rapport au <a href=
+          "[site:url]/contenu/plan-daction-du-canada-gouvernement-ouvert-2014-2016">
+          Plan d’action du Canada pour un gouvernement
+          ouvert&nbsp;2014-2016</a>, le deuxième Plan du Canada pour un
+          gouvernement ouvert présenté au <a href=
+          "http://www.opengovpartnership.org/">Partenariat pour un gouvernement
+          ouvert (PGO)</a> (en anglais seulement). Ce Plan cherchait à faire
+          progresser une série d’engagements en vue de contribuer à moderniser
+          la façon dont le gouvernement mène ses activités et de refléter les
+          valeurs et les attentes en évolution des Canadiens et des
+          Canadiennes.</p>
+          <p>Le Plan du Canada de 2014-2016 a été lancé le <time datetime=
+          "2014-07-01">1<sup>er</sup>&nbsp;juillet&nbsp;2014</time> . Il
+          s’articulait autour de trois volets d’activités pour structurer notre
+          travail, soit&nbsp;:</p>
+          <ol>
+            <li><strong>Données ouvertes</strong> – Offrir des données brutes
+            dans des formats lisibles par machine que les Canadiens et les
+            Canadiennes peuvent utiliser.</li>
+            <li><strong>Information ouverte</strong> – Divulguer de façon
+            proactive de l’information sur les activités du gouvernement et la
+            rendre plus accessible.</li>
+            <li><strong>Dialogue ouvert</strong> – Offrir la possibilité
+            d’avoir un dialogue bidirectionnel avec le gouvernement du Canada
+            et ses citoyens sur l’élaboration et l’exécution de politiques et
+            de priorités.</li>
+          </ol>
+          <p>Le Plan a présenté 12 engagements, ainsi que leurs produits
+          livrables et activités connexes conçus pour accroître la
+          transparence, la mobilisation de la collectivité, la reddition de
+          comptes publique et l’accès à de nouvelles technologies pour
+          l’ouverture. Les engagements portaient sur des améliorations à
+          apporter pour relever les grands défis qui suivent du PGO&nbsp;:
+          améliorer les services au public; accroître l’intégrité publique;
+          gérer plus efficacement les ressources publiques; et accroître la
+          responsabilisation des entreprises.</p>
+          <p>Ce premier rapport d’auto-évaluation de fin de parcours s’inscrit
+          dans l’engagement du Canada à l’égard du PGO. Il expose le processus
+          de mise en œuvre du Plan de 2014-2016 terminé et résume les progrès
+          réalisés et les leçons retenues par rapport aux objectifs du Canada
+          pour la période de 2014 à 2016.</p>
+        </section>
+        <section>
+          <h2>2. Processus du Plan d’action</h2>
+          <p>Au moment d’élaborer le Plan de 2014-2016, le Canada a cherché à
+          mettre en application les leçons retenues au cours de la mise en
+          œuvre du premier plan de deux ans en vue de garantir que ce dernier
+          représentait les préoccupations et les priorités des Canadiens et des
+          Canadiennes.</p>
+          <p>En 2014, les Canadiens, les Canadiennes, les organismes de la
+          société civile, les ministères et les organismes du gouvernement, le
+          milieu universitaire et le secteur privé ont été invités à l’échelle
+          du pays à prendre part à des activités de consultation en ligne et en
+          personne afin d’explorer d’éventuelles activités de gouvernement
+          ouvert, les mettre au point pour former un ensemble d’engagements et
+          définir des mesures concrètes pour chacun. Le Plan d’action a été
+          affiché en ligne aux fins d’examen et de commentaires publics.
+          L’ensemble de la rétroaction reçue dans les commentaires en ligne ou
+          à la suite de séances en personne a été compilée sous la forme d’un
+          rapport <a href=
+          "[site:url]/consultations/vous-nous-avez-dit-rapport-recapitulatif">Vous
+          nous avez dit – Rapport récapitulatif</a> publié en <time datetime=
+          "2014-11">novembre&nbsp;2014</time> .</p>
+          <p>La plateforme de gouvernement ouvert du Canada, ouvert.canada.ca,
+          s’est avérée un outil important dans l’élaboration et l’exécution du
+          Plan de 2014-2016. Cet outil a permis la diffusion de l’information,
+          et de recueillir les points de vue, les opinions et les priorités des
+          citoyens et de la société civile, en plus d’encourager les
+          conversations continues sur des sujets d’intérêt pour les
+          intervenants canadiens. Le Canada a régulièrement sollicité et reçu
+          des commentaires du public et de la société civile, du milieu
+          universitaire et d’experts du secteur privé sur l’élaboration et
+          l’exécution de plans d’action passés et actuels pour un gouvernement
+          ouvert.</p>
+          <p>L’équipe du Gouvernement ouvert a tiré de nombreuses leçons
+          importantes de l’exécution du Plan de 2014-2016. À titre d’exemple,
+          il est devenu clair que les citoyens croyaient fortement qu’une
+          mobilisation élargie du public doit être une composante essentielle
+          d’un gouvernement ouvert, au moment d’élaborer et de mettre en œuvre
+          des initiatives. Nous avons déterminé que la mobilisation est
+          optimale lorsque nous posons des questions qui nous aident à définir
+          des problèmes, et pas uniquement lorsque nous menons des
+          consultations sur des solutions à des questions choisies d’avance.
+          Nous avons appris que, pour permettre aux ministères gouvernementaux
+          de mettre en place des politiques et des pratiques de gouvernement
+          ouvert, il nous faut posséder des directives et des normes claires et
+          uniformes. Nous avons découvert que les ressources financières et
+          humaines limitées ont parfois nui à la capacité de l’équipe de
+          respecter entièrement tous les engagements. Enfin, nous avons appris
+          que la quantité de transformation culturelle et de processus requise
+          dans l’environnement de travail du gouvernement du Canada est
+          supérieure à ce que nous croyions au départ.</p>
+          <p>Il s’est avéré difficile d’intégrer toutes ces leçons. À titre
+          d’exemple, l’engagement général à mobiliser concrètement les citoyens
+          sur tous les aspects de l’élaboration et de la mise en œuvre
+          d’engagements pour un gouvernement ouvert exige de déployer plus
+          d’efforts que ce qu’il était possible de faire au moment d’exécuter
+          le Plan de 2014-2016. Ces leçons ont toutefois alimenté notre Plan de
+          2016-2018 actuel et des ressources supplémentaires sont attribuées
+          afin d’appuyer les ambitions du gouvernement.</p>
+          <p>Ce rapport représente l’évaluation du gouvernement du Canada sur
+          les progrès qu’il a réalisés afin d’exécuter les engagements contenus
+          dans son Plan d’action. Une ébauche du rapport d’auto-évaluation du
+          Canada a été présentée en ligne aux fins d’examen, de commentaires et
+          d’idées du public sur une période de deux semaines. Des invitations à
+          examiner ont été envoyées à la liste d’envoi du Secrétariat du
+          gouvernement ouvert du gouvernement du Canada et des intervenants de
+          la société civile ont été directement invités à faire part de leurs
+          points de vue sur les progrès réalisés par le Canada au cours de ces
+          deux années. Il est toujours possible de formuler des commentaires
+          supplémentaires sur les efforts que le gouvernement déploie
+          continuellement pour devenir plus transparent et plus responsable par
+          l’intermédiaire du site Web ouvert.canada.ca.</p>
+        </section>
+        <section>
+          <h2>3. Recommandations liées au mécanisme indépendant d’établissement
+          de rapports</h2>
+          <p>Avec le Plan de 2014-2016, le gouvernement du Canada cherchait à
+          répondre à bon nombre des recommandations formulées par le chercheur
+          du mécanisme indépendant d’établissement de rapports (MIER) du PGO
+          sur l’élaboration et l’exécution du <a href=
+          "[site:url]/plan-daction-du-canada-pour-un-gouvernement-ouvert">Plan
+          de 2012-2014</a> . Au moment de concevoir des engagements plus précis
+          et plus ambitieux qu’auparavant, le Canada est parvenu à mieux
+          mobiliser les intervenants intéressés à l’égard d’un dialogue
+          productif, et à mesurer les progrès plus efficacement. En étendant
+          les initiatives de gouvernement ouvert au-delà des données ouvertes,
+          le Canada a pu offrir une plus grande quantité d’information aux
+          citoyens, y compris l’offre d’un accès au moyen d’un guichet unique à
+          des renseignements que les ministères et organismes divulguent de
+          façon proactive.</p>
+          <p>L’équipe du Gouvernement ouvert a aussi répondu aux
+          recommandations issues du MIER en s’engageant à améliorer la
+          consultation du public et la mobilisation des citoyens. Ce faisant,
+          nous avons présenté les progrès que nous avons réalisés par rapport à
+          des engagements précis à d’autres que des entités gouvernementales
+          seulement. Par exemple, nous avons mobilisé les gouvernements
+          provinciaux, territoriaux et municipaux en tant que coprésidents du
+          Groupe de travail sur données ouvertes du Canada. En <time datetime=
+          "2016-04">avril&nbsp;2016</time> , des chefs de file de gouvernement
+          ouvert de gouvernements à l’échelle du Canada se sont réunis à Saint
+          John (Nouveau-Brunswick) afin de discuter des priorités à venir pour
+          les données ouvertes au Canada. Nous avons aussi mobilisé des
+          intervenants canadiens et étrangers sur la transparence de l’aide,
+          une mesure qui faisait partie de notre engagement central en matière
+          de données ouvertes, dans le cadre de consultations approfondies qui
+          se sont déroulées pendant l’examen de l’aide internationale au
+          printemps et à l’été&nbsp;2016.</p>
+          <p>Nous avons également reconnu que nous avions l’occasion de
+          moderniser des éléments de notre cadre législatif. En <time datetime=
+          "2016-03">mars&nbsp;2016</time> , le gouvernement a annoncé qu’il
+          adopterait une approche en deux étapes pour dynamiser l’accès à
+          l’information&nbsp;: il passera d’abord à l’acte à court terme en
+          adoptant des propositions concrètes pour améliorer la Loi, qui sera
+          suivie d’un examen complet de la Loi en 2018. Afin de réaliser des
+          progrès rapides par rapport à ses plans, en <time datetime=
+          "2016-05">mai&nbsp;2016</time> , le président du Conseil du Trésor a
+          émis une Directive provisoire concernant l’administration de la Loi
+          sur l’accès à l’information. La Directive exige aux responsables
+          fédéraux de tenir compte du but de la Loi – soit de renforcer la
+          reddition de compte du gouvernement à l’égard de ses citoyens – au
+          moment de l’administrer; de renoncer aux frais d’accès à
+          l’information, hormis les frais de dépôt de 5&nbsp;$; et de divulguer
+          l’information dans des formats conviviaux, dans la mesure du
+          possible. La Directive provisoire envoie un message solide à
+          l’échelle des institutions fédérales selon laquelle l’information du
+          gouvernement appartient aux personnes qu’il sert et qu’elle devrait
+          être ouverte par défaut.</p>
+          <p>En <time datetime="2016-05">mai</time> et en <time datetime=
+          "2016-05">juin&nbsp;2016</time> , nous avons consulté les Canadiens,
+          les Canadiennes et des intervenants sur la meilleure façon de mettre
+          en œuvre les premières propositions en vue de dynamiser l’accès à
+          l’information. La rétroaction formulée par les Canadiens, les
+          Canadiennes et les intervenants servira à apporter les réformes
+          prochaines de la Loi. Le gouvernement s’est engagé à présenter des
+          changements en vue d’améliorer l’accès à l’information au début de
+          l’année&nbsp;2017.</p>
+          <p>Enfin, conformément aux recommandations issues du MIER, l’équipe
+          du Gouvernement ouvert s’est montrée plus ambitieuse afin d’aider à
+          diriger une transition progressive vers un gouvernement ouvert par
+          défaut. Le gouvernement du Canada a déployé des efforts au-delà de
+          l’équipe du Gouvernement ouvert à l’appui de ce processus, par son
+          engagement à apporter des améliorations à l’échelle d’un vaste
+          éventail de ministères dans les domaines de la transparence, de la
+          reddition de comptes et de la réceptivité.</p>
+        </section>
+        <section>
+          <h2>4. Mise en œuvre des engagements du Plan d’action</h2>
+          <p>Le tableau qui suit présente un sommaire de l’état de la mise en
+          œuvre, par le Canada, des engagements indiqués dans le Plan de
+          2014-2016 au <time datetime=
+          "2016-05-30">30&nbsp;juin&nbsp;2016</time> . Des renseignements
+          détaillés sur l’état de chacun de ces engagements sont présentés
+          ci-dessous.</p>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr class="active">
+                <th id="tbl1-r1-c1">Engagement du Plan d’action</th>
+                <th class="text-center" id="tbl1-r1-c2">Situation générale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r2-c1">Engagements fondamentaux</th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r2-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-1-directive-gouvernement-ouvert">
+                  1. Directive sur le gouvernement ouvert</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r2-c1">
+                Substantiel</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r4-c1">Engagements relatifs aux
+                données ouvertes</th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-2-donnees-ouvertes-du-canada">
+                  2. Données ouvertes du Canada</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r4-c1">
+                Incomplète</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-3-institut-donnees-ouvertes">
+                  3. Institut des données ouvertes</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r4-c1">
+                Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-4-donnees-ouvertes-developpement-dod">
+                  4. Données ouvertes pour le développement (DOD)</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r4-c1">
+                Exécuté</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r4-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-5-contenu/engagement-du-plan-daction-fondamental-relatif-aux-donnees">
+                  5. Engagement du Plan d'action fondamental relatif aux
+                  données ouvertes</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r4-c1">
+                Exécuté</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r9-c1">Engagements relatifs à
+                l’information ouverte</th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-6-science-ouverte">
+                  6. Science ouverte</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-7-declaration-obligatoire-secteur-extractif">
+                  7. Déclaration obligatoire pour le secteur extractif</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-8-processus-ouvert-doctroi-contrats">
+                  8. Processus ouvert d’octroi de contrats</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-9-information-ouverte-budgets-depenses">
+                  9. Information ouverte sur les budgets et les dépenses</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-10-alphabetisation-numerique">
+                  10. Alphabétisation numérique</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantiel</td>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r9-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-11-contenu/engagement-plan-action-fondamental-relatif-information-ouverte">
+                  11. Engagement du Plan d'action fondamental relatif à
+                  l’information ouverte</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r9-c1">
+                Substantiel</td>
+              </tr>
+              <tr class="active">
+                <th colspan="2" id="tbl1-r16-c1">Engagement relatif au dialogue
+                ouvert</th>
+              </tr>
+              <tr>
+                <td headers="tbl1-r1-c1 tbl1-r16-c1">
+                  <a href=
+                  "[site:url]/commitment/sar/2014-2016/engagement-du-plan-daction-12-consultations-aupres-canadiens">
+                  12. Consultations auprès des Canadiens et des Canadiennes</a>
+                </td>
+                <td class="text-center" headers="tbl1-r1-c2 tbl1-r16-c1">
+                Incomplète</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h2>5. Conclusion et prochaines étapes</h2>
+          <p>Dans l’esprit du PGO, le Canada a pris des engagements ambitieux
+          dans son Plan de 2014-2016. En dépit des meilleurs efforts qu’il a
+          déployés, le Canada n’a pas atteint l’ensemble de ses buts. Le
+          présent rapport d’auto-évaluation de fin de parcours se veut une
+          tentative de souligner nos réussites, mais aussi de garantir la
+          transparence, par l’échange de nos leçons louables.</p>
+          <p>Le présent rapport d’auto-évaluation de fin de parcours est l’une
+          des façons qui permettent aux citoyens et aux intervenants de
+          surveiller les progrès que le Canada réalise en vue d’atteindre les
+          engagements présentés dans son Plan d’action. Le Plan de 2014-2016 a
+          fait l’expérience de nouvelles activités novatrices de gouvernement
+          ouvert et il a commencé à jeter les bases de l’accroissement de
+          l’ouverture et de la transparence.</p>
+          <p>Le Canada poursuit ses efforts afin de transformer
+          l’environnement, les processus et la culture de travail de la
+          fonction publique afin d’en faire un où les programmes, les services
+          et l’information sont à la fois ouverts par défaut et ouverts par
+          conception. Le gouvernement du Canada collabore étroitement avec la
+          société civile et les Canadiens en vue de faire mieux comprendre le
+          fonctionnement du gouvernement et de favoriser l’accroissement de la
+          participation et du dialogue relativement aux activités du
+          gouvernement. Comme le montre le présent rapport, l’engagement à
+          faire progresser le gouvernement ouvert est partagé entre les
+          ministères et organismes fédéraux. À l’avenir, le gouvernement du
+          Canada cherchera à approfondir l’engagement et la collaboration avec
+          d’autres ordres de gouvernements, la société civile et les
+          intervenants en jeu.</p>
+          <section>
+            <h3>Prochaines étapes&nbsp;:</h3>
+            <p>Les efforts déployés par le Canada à l’égard du gouvernement
+            ouvert ont généré un changement à l’échelle de la fonction publique
+            fédérale. Des progrès considérables ont été réalisés par rapport à
+            la mise en œuvre du Plan de 2014-2016 pour un gouvernement ouvert,
+            mais il reste beaucoup à faire au cours des prochaines années pour
+            respecter des engagements de plus en plus ambitieux pour les
+            Canadiens et les Canadiennes.</p>
+            <p>Dites-nous ce que vous en pensez. Faites part de vos réflexions
+            à propos de ce rapport et des réalisations du Canada à l’équipe du
+            Gouvernement ouvert. Donnez-nous des idées qui nous aideront à
+            surmonter les défis avec lesquels nous sommes aux prises. Il vous
+            est toujours possible de communiquer avec nous, à <a href=
+            "mailto:open-ouvert@tbs-sct.gc.ca">open-ouvert@tbs-sct.gc.ca</a>.</p>
+            <p>À moyen terme, nous nous fixons le but de commencer à intégrer
+            les pratiques de gouvernement ouvert dans les processus, les
+            politiques et les programmes généraux du gouvernement du Canada.
+            Nous avons comme objectif de mettre de plus en plus en application
+            une optique de gouvernement ouvert à l’élaboration et à la mise en
+            œuvre de politiques et de programmes.</p>
+            <p>À l’avenir, le gouvernement du Canada est résolu à accélérer, à
+            étendre et à accroître sa transparence et sa reddition de comptes.
+            Cet engagement se reflète dans le nouveau plan du Canada pour
+            2016-2018, le <a href=
+            "[site:url]/contenu/troisieme-plan-biannuel-partenariat-gouvernement-ouvert">
+            troisième Plan biannuel dans le cadre du Partenariat pour un
+            gouvernement ouvert</a>.</p>
+          </section>
+        </section>
+        <section>
+          <h2>Annexe&nbsp;: S’attaquer aux grands défis du PGO</h2>
+          <p>Chacun des engagements du Plan d’action du Canada pour un
+          gouvernement ouvert de 2014-2016 appuie l’un des cinq grands défis
+          cernés par le Partenariat pour un gouvernement ouvert (PGO) ou
+          plusieurs d’entre eux&nbsp;:</p>
+          <table class="table table-bordered table-condensed">
+            <thead>
+              <tr class="active">
+                <th id="tbl6" rowspan="2">Engagements</th>
+                <th colspan="5" id="tbl7">Grands défis</th>
+              </tr>
+              <tr class="active">
+                <th headers="tbl7" id="tbl10">GD1 <sup id=
+                "table1-fn1-rf"><a class="fn-lnk" href=
+                "#table1-fn1"><span class="wb-inv">Voir la note</span> 1
+                <span class="wb-inv">du tableau 1</span></a></sup></th>
+                <th headers="tbl7" id="tbl11">GD2 <sup id=
+                "table1-fn2-rf"><a class="fn-lnk" href=
+                "#table1-fn2"><span class="wb-inv">Voir la note</span> 2
+                <span class="wb-inv">du tableau 1</span></a></sup></th>
+                <th headers="tbl7" id="tbl12">GD3 <sup id=
+                "table1-fn3-rf"><a class="fn-lnk" href=
+                "#table1-fn3"><span class="wb-inv">Voir la note</span> 3
+                <span class="wb-inv">du tableau 1</span></a></sup></th>
+                <th headers="tbl7" id="tbl13">GD4 <sup id=
+                "table1-fn4-rf"><a class="fn-lnk" href=
+                "#table1-fn4"><span class="wb-inv">Voir la note</span> 4
+                <span class="wb-inv">du tableau 1</span></a></sup></th>
+                <th headers="tbl7" id="tbl14">GD5 <sup id=
+                "table1-fn5-rf"><a class="fn-lnk" href=
+                "#table1-fn5"><span class="wb-inv">Voir la note</span> 5
+                <span class="wb-inv">du tableau 1</span></a></sup></th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td colspan="6">
+                  <section class="wb-fnote">
+                    <h2 class="wb-inv" id="table1-fn">Notes du tableau 1</h2>
+                    <dl>
+                      <dt>Note 1 du tableau 1</dt>
+                      <dd id="table1-fn1">
+                        <p>GD1 - Améliorer les services publics</p>
+                        <p class="fn-rtn"><a href="#table1-fn1-rf"><span class=
+                        "wb-inv">Retour à la référence de la note</span> 1
+                        <span class="wb-inv">du tableau 1</span></a></p>
+                      </dd>
+                      <dt>Note 2 du tableau 1</dt>
+                      <dd id="table1-fn2">
+                        <p>GD2 - Accroître l’intégrité publique</p>
+                        <p class="fn-rtn"><a href="#table1-fn2-rf"><span class=
+                        "wb-inv">Retour à la référence de la note</span> 2
+                        <span class="wb-inv">du tableau 1</span></a></p>
+                      </dd>
+                      <dt>Note 3 du tableau 1</dt>
+                      <dd id="table1-fn3">
+                        <p>GD3 - Gérer efficacement les ressources
+                        publiques</p>
+                        <p class="fn-rtn"><a href="#table1-fn3-rf"><span class=
+                        "wb-inv">Retour à la référence de la note</span> 3
+                        <span class="wb-inv">du tableau 1</span></a></p>
+                      </dd>
+                      <dt>Note 4 du tableau 1</dt>
+                      <dd id="table1-fn4">
+                        <p>GD4 - Créer des collectivités plus sûres</p>
+                        <p class="fn-rtn"><a href="#table1-fn4-rf"><span class=
+                        "wb-inv">Retour à la référence de la note</span> 4
+                        <span class="wb-inv">du tableau 1</span></a></p>
+                      </dd>
+                      <dt>Note 5 du tableau 1</dt>
+                      <dd id="table1-fn5">
+                        <p>GD5 - Accroître la responsabilisation des
+                        entreprises</p>
+                        <p class="fn-rtn"><a href="#table1-fn5-rf"><span class=
+                        "wb-inv">Retour à la référence de la note</span> 5
+                        <span class="wb-inv">du tableau 1</span></a></p>
+                      </dd>
+                    </dl>
+                  </section>
+                </td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <th class="active" colspan="6" id="tbl17">Engagements
+                fondamentaux</th>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl17" id="tbl20">1. Directive sur le
+                gouvernement ouvert</th>
+                <td headers="tbl7 tbl10 tbl17 tbl20">oui</td>
+                <td headers="tbl7 tbl11 tbl17 tbl20">oui</td>
+                <td headers="tbl7 tbl12 tbl17 tbl20">oui</td>
+                <td headers="tbl7 tbl13 tbl17 tbl20"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl17 tbl20"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th class="active" colspan="6" id="tbl37">Engagements relatifs
+                aux données ouvertes</th>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl37" id="tbl40">2. Données ouvertes du
+                Canada</th>
+                <td headers="tbl7 tbl10 tbl37 tbl40">oui</td>
+                <td headers="tbl7 tbl11 tbl37 tbl40"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl12 tbl37 tbl40"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl13 tbl37 tbl40"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl37 tbl40"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl37" id="tbl50">3. Institut des données
+                ouvertes</th>
+                <td headers="tbl7 tbl10 tbl37 tbl50">oui</td>
+                <td headers="tbl7 tbl11 tbl37 tbl50"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl12 tbl37 tbl50"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl13 tbl37 tbl50"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl37 tbl50"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl37" id="tbl59">4. Données ouvertes pour le
+                développement (DOD)</th>
+                <td headers="tbl7 tbl10 tbl37 tbl59">oui</td>
+                <td headers="tbl7 tbl11 tbl37 tbl59">oui</td>
+                <td headers="tbl7 tbl12 tbl37 tbl59">oui</td>
+                <td headers="tbl7 tbl13 tbl37 tbl59"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl37 tbl59"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl37" id="tbl68">5. Engagement fondamental
+                relatif aux données ouvertes</th>
+                <td headers="tbl7 tbl10 tbl37 tbl68">oui</td>
+                <td headers="tbl7 tbl11 tbl37 tbl68"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl12 tbl37 tbl68">oui</td>
+                <td headers="tbl7 tbl13 tbl37 tbl68"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl37 tbl68"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th class="active" colspan="6" id="tbl77">Engagements relatifs
+                à l’information ouverte</th>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl80">6. Science ouverte</th>
+                <td headers="tbl7 tbl10 tbl77 tbl80">oui</td>
+                <td headers="tbl7 tbl11 tbl77 tbl80"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl12 tbl77 tbl80">oui</td>
+                <td headers="tbl7 tbl13 tbl77 tbl80"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl80"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl90">7. Déclaration obligatoire
+                pour le secteur extractif</th>
+                <td headers="tbl7 tbl10 tbl77 tbl90">oui</td>
+                <td headers="tbl7 tbl11 tbl77 tbl90">oui</td>
+                <td headers="tbl7 tbl12 tbl77 tbl90">oui</td>
+                <td headers="tbl7 tbl13 tbl77 tbl90"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl90">oui</td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl99">8. Processus ouvert
+                d’octroi de contrats</th>
+                <td headers="tbl7 tbl10 tbl77 tbl99">oui</td>
+                <td headers="tbl7 tbl11 tbl77 tbl99"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl12 tbl77 tbl99"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl13 tbl77 tbl99"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl99"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl108">9. Information ouverte sur
+                les budgets et les dépenses</th>
+                <td headers="tbl7 tbl10 tbl77 tbl108">oui</td>
+                <td headers="tbl7 tbl11 tbl77 tbl108">oui</td>
+                <td headers="tbl7 tbl12 tbl77 tbl108">oui</td>
+                <td headers="tbl7 tbl13 tbl77 tbl108"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl108"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl117">10. Alphabétisation
+                numérique</th>
+                <td headers="tbl7 tbl10 tbl77 tbl117">oui</td>
+                <td headers="tbl7 tbl11 tbl77 tbl117"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl12 tbl77 tbl117"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl13 tbl77 tbl117"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl117"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl77" id="tbl126">11. Engagement fondamental
+                relatif à l’information ouverte</th>
+                <td headers="tbl7 tbl10 tbl77 tbl126">oui</td>
+                <td headers="tbl7 tbl11 tbl77 tbl126">oui</td>
+                <td headers="tbl7 tbl12 tbl77 tbl126">oui</td>
+                <td headers="tbl7 tbl13 tbl77 tbl126"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl77 tbl126"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+              <tr>
+                <th class="active" colspan="6" id="tbl135">Engagement relatif
+                au dialogue ouvert</th>
+              </tr>
+              <tr>
+                <th headers="tbl6 tbl135" id="tbl138">12. Consultations auprès
+                des Canadiens</th>
+                <td headers="tbl7 tbl10 tbl135 tbl138">oui</td>
+                <td headers="tbl7 tbl11 tbl135 tbl138"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl12 tbl135 tbl138"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl13 tbl135 tbl138"><span class=
+                "wb-inv">non</span></td>
+                <td headers="tbl7 tbl14 tbl135 tbl138"><span class=
+                "wb-inv">non</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      alias: /commitment/sar/2014-2016/rapport-dauto-evaluation-fin-parcours-du-plan-daction-gouvernement-ouvert-2014-2016
       metatags:
         -
           title: '[node:title]'

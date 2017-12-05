@@ -891,11 +891,25 @@ class MigrationSubscriber implements EventSubscriberInterface {
 
       if (!empty($menuName)) {
         switch ($menuName) {
+          case 'draft_sar__2014_2016':
+            $titleEn = 'Draft for Consultation: End-of-term Self-assessment on Action Plan on Open Government 2014-2016';
+            $titleFr = 'Ébauche pour consultation : Auto évaluation en fin de parcours du Plan d’action pour un gouvernement ouvert 2014-2016';
+            break;
+
+          case 'sar__2014_2016':
+            $titleEn = 'End-of-Term Self-Assessment Report on Action Plan on Open Government 2014-2016';
+            $titleFr = 'Rapport d’auto évaluation en fin de parcours du Plan d’action pour un gouvernement ouvert 2014-2016';
+            break;
+
           case 'mtsar__2016_2018':
             $titleEn = 'Draft for Consultation: Mid-term Self-assessment on Third Biennial Plan to the Open Government Partnership (2016-2018)';
             $titleFr = 'Ébauche aux fins de consultation : Auto évaluation de mi parcours sur le troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert (2016-2018)';
             break;
 
+          case 'tracker__third_biennial_partnership':
+            $titleEn = 'Progress tracker for the Third Biennial Plan to the Open Government Partnership';
+            $titleFr = 'Système du suivi du troisième Plan biannuel dans le cadre du Partenariat pour un gouvernement ouvert';
+            break;
         }
       }
 
@@ -979,14 +993,10 @@ class MigrationSubscriber implements EventSubscriberInterface {
             break;
 
           case 'mtsar__2014_2016':
-            $links = $this->entityTypeManager->getStorage('menu_link_content')
-              ->loadByProperties(['title' => (!empty($translations)) ? 'Engagements' : 'Commitments']);
-            if ($link = reset($links)) {
-              $this->menuLinkDependency($title, $link->getPluginId(), $translations, $destBid);
-            }
-            break;
-
+          case 'draft_sar__2014_2016':
+          case 'sar__2014_2016':
           case 'mtsar__2016_2018':
+          case 'tracker__third_biennial_partnership':
             $links = $this->entityTypeManager->getStorage('menu_link_content')
               ->loadByProperties(['title' => (!empty($translations)) ? 'Engagements' : 'Commitments']);
             if ($link = reset($links)) {
