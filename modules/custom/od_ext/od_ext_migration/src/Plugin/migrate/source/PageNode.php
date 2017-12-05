@@ -118,6 +118,7 @@ class PageNode extends SqlBase {
     if (!empty($path)) {
       switch ($path) {
 
+        // grgca-ldrosc groupings.
         case 'content/consultation-guidelines-reporting-grants-and-contributions-awards':
         case 'content/appendices-guidelines-reporting-grants-and-contributions-awards':
         case 'content/appendix-b-fields-and-field-descriptions':
@@ -134,6 +135,7 @@ class PageNode extends SqlBase {
           $path = str_replace('contenu/', 'grgca-ldrosc/', $path);
           break;
 
+        // cabinet-directive groupings.
         case 'content/public-consultation-draft-cabinet-directive-regulation':
         case 'content/10-purpose':
         case 'content/20-scope-application':
@@ -161,6 +163,7 @@ class PageNode extends SqlBase {
           $path = str_replace('contenu/', 'consult/draft/cabinet-directive/', $path);
           break;
 
+        // DIY toolkit groupings.
         case 'content/1-diy-open-data-toolkit-story':
         case 'content/2-say-hello-open':
         case 'content/3-getting-started':
@@ -179,6 +182,29 @@ class PageNode extends SqlBase {
         case 'contenu/6-maintenir-mobilisation-communaute':
         case 'contenu/7-chemin-a-parcourir':
           $path = str_replace('contenu/', 'toolkit/diy/', $path);
+          break;
+
+        // Misc groupings.
+        case 'content/engagement-schedule-canadas-4th-plan-open-government':
+        case 'content/creating-canadas-4th-plan-open-government-2018-20':
+          $path = str_replace('content/', '4plan/', $path);
+          break;
+
+        case 'contenu/horaire-lactivite-4e-plan-du-canada-gouvernement-ouvert':
+        case 'contenu/elaborer-quatrieme-plan-du-canada-gouvernement-ouvert-2018-2020':
+          $path = str_replace('contenu/', '4plan/', $path);
+          break;
+
+        case 'content/about-open-government-consultations':
+        case 'content/open-government-partnership':
+        case 'content/multi-stakeholder-forum-open-government':
+          $path = str_replace('content/', '', $path);
+          break;
+
+        case 'contenu/au-sujet-consultations-gouvernement-ouvert':
+        case 'contenu/partenariat-gouvernement-ouvert':
+        case 'contenu/forum-multi-intervenants-gouvernement-ouvert':
+          $path = str_replace('contenu/', '', $path);
           break;
       }
     }
