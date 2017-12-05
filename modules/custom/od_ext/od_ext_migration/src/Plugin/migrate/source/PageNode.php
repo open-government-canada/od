@@ -117,6 +117,24 @@ class PageNode extends SqlBase {
     $path = end($alias);
     if (!empty($path)) {
       switch ($path) {
+
+        case 'content/consultation-guidelines-reporting-grants-and-contributions-awards':
+        case 'content/appendices-guidelines-reporting-grants-and-contributions-awards':
+        case 'content/appendix-b-fields-and-field-descriptions':
+        case 'content/appendix-b-field-population-guidance':
+        case 'content/guidelines-reporting-grants-and-contributions-awards':
+          $path = str_replace('content/', 'grgca-ldrosc/', $path);
+          break;
+
+        case 'contenu/consultation-lignes-directrices-rapports-visant-loctroi-subventions-contributions':
+        case 'contenu/annexes-lignes-directrices-rapports-visant-loctroi-subventions-contributions':
+        case 'contenu/annexe-b-champs-descriptions-champs':
+        case 'contenu/annexe-b-guide-linscription-champs':
+        case 'contenu/lignes-directrices-rapports-visant-loctroi-subventions-contributions':
+          $path = str_replace('contenu/', 'grgca-ldrosc/', $path);
+          break;
+
+        case 'content/public-consultation-draft-cabinet-directive-regulation':
         case 'content/10-purpose':
         case 'content/20-scope-application':
         case 'content/30-guiding-principles-federal-regulatory-policy':
@@ -125,11 +143,42 @@ class PageNode extends SqlBase {
         case 'content/60-regulatory-management':
         case 'content/70-review-and-results':
         case 'content/80-supporting-policies':
-          $path = str_replace('content/', 'appendices/', $path);
+        case 'content/appendices':
+          $path = str_replace('content/', 'consult/draft/cabinet-directive/', $path);
           break;
 
-        case 'content/appendices':
-          $path = 'appendices';
+        case 'content/consultation-publique-lebauche-directive-cabinet-reglementation':
+        case 'contenu/10-but':
+        case 'contenu/20-champ-dapplication':
+        case 'contenu/30-principes-directeurs-politique-federale-matiere-reglementation':
+        case 'contenu/40-demarche-relative-au-cycle-vie-dun-reglement':
+        case 'contenu/50-elaboration-reglements':
+        case 'contenu/60-gestion-reglementation':
+        case 'contenu/70-examen-resultats':
+        case 'contenu/80-politiques-jacentes':
+        case 'contenu/annexes':
+          $path = str_replace('content/', 'consult/draft/cabinet-directive/', $path);
+          $path = str_replace('contenu/', 'consult/draft/cabinet-directive/', $path);
+          break;
+
+        case 'content/1-diy-open-data-toolkit-story':
+        case 'content/2-say-hello-open':
+        case 'content/3-getting-started':
+        case 'content/4-lets-make-plan':
+        case 'content/5-putting-pilot-project-plan-action':
+        case 'content/6-ongoing-community-engagement':
+        case 'content/7-road-ahead':
+          $path = str_replace('content/', 'toolkit/diy/', $path);
+          break;
+
+        case 'contenu/1-lexperience-trousse-doutils-maison-donnees-ouvertes':
+        case 'contenu/2-dites-bonjour-a-communaute-donnees-ouvertes':
+        case 'contenu/3-commencer':
+        case 'contenu/4-elaborons-plan':
+        case 'contenu/5-mettre-oeuvre-projet-pilote':
+        case 'contenu/6-maintenir-mobilisation-communaute':
+        case 'contenu/7-chemin-a-parcourir':
+          $path = str_replace('contenu/', 'toolkit/diy/', $path);
           break;
       }
     }
