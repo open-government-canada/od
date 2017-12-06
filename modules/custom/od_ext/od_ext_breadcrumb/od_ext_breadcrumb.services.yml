@@ -16,7 +16,7 @@ services:
      - { name: breadcrumb_builder, priority: 1015 }
   od_ext_breadcrumb.commitment_breadcrumb:
     class: Drupal\od_ext_breadcrumb\Breadcrumb\CommitmentBreadcrumbBuilder
-    arguments: ['@router.request_context', '@access_manager', '@router', '@path_processor_manager', '@config.factory',  '@title_resolver', '@current_user', '@path.current', '@language_manager', '@path.validator', '@path.alias_manager']
+    arguments: ['@router.request_context', '@access_manager', '@router', '@path_processor_manager', '@config.factory',  '@title_resolver', '@current_user', '@path.current', '@language_manager', '@path.validator', '@path.alias_manager', '@entity.manager']
     tags:
      - { name: breadcrumb_builder, priority: 1015 }
   od_ext_breadcrumb.consultation_breadcrumb:

@@ -209,9 +209,6 @@ class PageNode extends SqlBase {
       }
     }
 
-    $path = str_replace('commitment/', 'commitment/mtsar/2016-2018/', $path);
-    $path = str_replace('engagements/', 'engagements/mtsar/2016-2018/', $path);
-
     // Metatags.
     $metatags = $this->select('metatag', 'df')
       ->fields('df', [

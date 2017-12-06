@@ -933,12 +933,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
       if (!empty($sourceBid)) {
         switch ($sourceBid) {
           case 'commitments':
-            $menu_link_content = [];
-            $links = $this->entityTypeManager->getStorage('menu_link_content')
-              ->loadByProperties(['title' => (!empty($translations)) ? 'Gouvernement ouvert' : 'Open Government']);
-            if ($link = reset($links)) {
-              $menu_link_content = $this->menuLinkDependency($title, $link->getPluginId(), $translations, $destBid);
-            }
+            $menu_link_content = $this->menuLinkDependency($title, '', $translations, $destBid, 0, 'commitments');
 
             $content_types = [
               'commitment' => [
@@ -953,7 +948,7 @@ class MigrationSubscriber implements EventSubscriberInterface {
               $tmpDisplay = $value['display'];
               $displays = $this->panelizer->getDefaultPanelsDisplays('node', $type, $tmpDisplay);
               $display = $displays[$tmpDisplay];
-              $menu_name = (!empty($translations)) ? 'main-fr' : 'main';
+              $menu_name = (!empty($translations)) ? 'commitments-fr' : 'commitments';
               $display->addBlock([
                 'id' => 'menu_block:' . $menu_name,
                 'label' => 'Main navigation',
@@ -1101,11 +1096,11 @@ class MigrationSubscriber implements EventSubscriberInterface {
   /**
    * Add a menu link with dependency support.
    */
-  public function menuLinkDependency($title, $link, $translations, $destBid, $weight = 0) {
+  public function menuLinkDependency($title, $link, $translations, $destBid, $weight = 0, $menu = 'main') {
     $menu_link_content = $this->entityManager->getStorage('menu_link_content')->create([
       'title' => $title,
       'link' => ['uri' => 'internal:/node/' . $destBid[0]],
-      'menu_name' => (!empty($translations)) ? 'main-fr' : 'main',
+      'menu_name' => (!empty($translations)) ? $menu . '-fr' : $menu,
       'langcode' => (!empty($translations)) ? 'fr' : 'en',
       'parent' => $link,
       'weight' => $weight,

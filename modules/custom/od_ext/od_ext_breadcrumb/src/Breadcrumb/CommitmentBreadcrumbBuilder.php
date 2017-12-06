@@ -7,6 +7,7 @@ use Drupal\system\PathBasedBreadcrumbBuilder;
 use Drupal\Core\Access\AccessManagerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Controller\TitleResolverInterface;
+use Drupal\Core\Entity\EntityManagerInterface;
 use Drupal\Core\Language\LanguageManagerInterface;
 use Drupal\Core\Link;
 use Drupal\Core\Path\AliasManagerInterface;
@@ -93,6 +94,13 @@ class CommitmentBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $aliasManager;
 
   /**
+   * The entity manager service.
+   *
+   * @var \Drupal\Core\Entity\EntityManagerInterface
+   */
+  protected $entityManager;
+
+  /**
    * Constructs the CommitmentBreadcrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
@@ -117,6 +125,8 @@ class CommitmentBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
    *   The path validator.
    * @param \Drupal\Core\Path\AliasManager $alias_manager
    *   The alias manager.
+   * @param \Drupal\Core\Entity\EntityManagerInterface $entity_manager
+   *   The entity manager.
    */
   public function __construct(
     RequestContext $context,
@@ -129,7 +139,8 @@ class CommitmentBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     CurrentPathStack $current_path,
     LanguageManagerInterface $language_manager,
     PathValidator $pathValidator,
-    AliasManagerInterface $alias_manager) {
+    AliasManagerInterface $alias_manager,
+    EntityManagerInterface $entity_manager) {
     $this->context = $context;
     $this->accessManager = $access_manager;
     $this->router = $router;
@@ -141,6 +152,7 @@ class CommitmentBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $this->languageManager = $language_manager;
     $this->pathValidator = $pathValidator;
     $this->aliasManager = $alias_manager;
+    $this->entityManager = $entity_manager;
   }
 
   /**
@@ -170,6 +182,8 @@ class CommitmentBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $breadcrumb = new Breadcrumb();
     $links = [];
 
+    $node = $route_match->getParameter('node');
+
     // General path-based breadcrumbs. Use the actual request path, prior to
     // resolving path aliases, so the breadcrumb can be defined by simply
     // creating a hierarchy of path aliases.
@@ -198,10 +212,18 @@ class CommitmentBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
         if (!empty($open_dialogue) && !empty($commitments)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
           $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
-          $linkBlog = Link::createFromRoute($this->t('Commitments'), $commitments->getRouteName(), $commitments->getRouteParameters());
+          $linkCommitment = Link::createFromRoute($this->t('Commitments'), $commitments->getRouteName(), $commitments->getRouteParameters());
+
           $pathEnd = end($path_elements);
           if (!empty($pathEnd) && $pathEnd != 'commitments') {
-            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkBlog);
+            if (!empty($node->field_reference_landing->entity)) {
+              $linkTrans = $this->entityManager->getTranslationFromContext($node->field_reference_landing->entity);
+              $linkLanding = $linkTrans->toLink();
+              array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkCommitment, $linkLanding);
+            }
+            else {
+              array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkCommitment);
+            }
           }
           else {
             array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue);
