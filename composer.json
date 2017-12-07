@@ -380,7 +380,7 @@
         "drupal/quicktabs": "3.0-alpha2",
         "drupal/redirect": "1.0-beta1",
         "drupal/search_api": "1.5",
-        "drupal/search_api_solr": "2.0-alpha1",
+        "drupal/search_api_solr": "2.0-alpha2",
         "drupal/votingapi": "3.0-alpha2",
         "drupal/votingapi_widgets": "1.0-alpha3",
         "drupal/views_data_export": "1.0-alpha4",
