@@ -14,10 +14,10 @@ process:
     plugin: migration
     migration: od_ext_db_comment
     source: pid
-  entity_id: entity_id
+  entity_id: nid
   entity_type: entity_type
-  field_name: field_name
   comment_type: comment_type
+  field_name: field_name
   subject: subject
   uid: uid
   name: name

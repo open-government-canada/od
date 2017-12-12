@@ -18,27 +18,10 @@ class CommentImport extends SqlBase {
    * {@inheritdoc}
    */
   public function query() {
-    $query = $this->select('comment', 'c')
-      ->fields('c',
-      [
-        'cid',
-        'pid',
-        'nid',
-        'uid',
-        'subject',
-        'hostname',
-        'created',
-        'changed',
-        'status',
-        'thread',
-        'name',
-        'mail',
-        'homepage',
-        'language',
-        'uuid',
-      ]
-    );
-
+    $query = $this->select('comment', 'c')->fields('c');
+    $query->innerJoin('node', 'n', 'c.nid = n.nid');
+    $query->addField('n', 'type', 'node_type');
+    $query->orderBy('c.created');
     return $query;
   }
 
@@ -133,7 +116,7 @@ class CommentImport extends SqlBase {
         $entity_id = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_node_$bundle} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('nid')])->fetchField();
         if (!empty($entity_id)) {
           $found = TRUE;
-          $row->setSourceProperty('entity_id', $entity_id);
+          $row->setSourceProperty('nid', $entity_id);
           if ($bundle == 'blog') {
             $row->setSourceProperty('field_name', 'field_blog_comments');
           }
@@ -153,7 +136,7 @@ class CommentImport extends SqlBase {
           $found = TRUE;
           $entity_type = 'paragraph';
           $comment_type = 'paragraphs_comments';
-          $row->setSourceProperty('entity_id', $entity_id);
+          $row->setSourceProperty('nid', $entity_id);
           $row->setSourceProperty('field_name', 'field_comment');
         }
       }
@@ -181,7 +164,7 @@ class CommentImport extends SqlBase {
         $found = TRUE;
         $entity_type = 'taxonomy_term';
         $comment_type = 'taxonomy_comment';
-        $row->setSourceProperty('entity_id', $tid);
+        $row->setSourceProperty('nid', $tid);
         $row->setSourceProperty('field_name', 'field_taxonomy_comments');
       }
     }

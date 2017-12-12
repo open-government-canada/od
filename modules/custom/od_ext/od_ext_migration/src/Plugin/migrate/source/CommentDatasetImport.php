@@ -18,27 +18,10 @@ class CommentDatasetImport extends SqlBase {
    * {@inheritdoc}
    */
   public function query() {
-    $query = $this->select('comment', 'c')
-      ->fields('c',
-      [
-        'cid',
-        'pid',
-        'nid',
-        'uid',
-        'subject',
-        'hostname',
-        'created',
-        'changed',
-        'status',
-        'thread',
-        'name',
-        'mail',
-        'homepage',
-        'language',
-        'uuid',
-      ]
-    );
-
+    $query = $this->select('comment', 'c')->fields('c');
+    $query->innerJoin('node', 'n', 'c.nid = n.nid');
+    $query->addField('n', 'type', 'node_type');
+    $query->orderBy('c.created');
     return $query;
   }
 
