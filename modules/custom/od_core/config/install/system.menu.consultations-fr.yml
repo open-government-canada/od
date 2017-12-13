@@ -3,5 +3,5 @@ status: true
 dependencies: {  }
 id: consultations-fr
 label: Consultations
-description: ''
+description: 'Consultations menu.'
 locked: false

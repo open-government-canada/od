@@ -3,5 +3,5 @@ status: true
 dependencies: {  }
 id: commitments
 label: Commitments
-description: ''
+description: 'Consulations menu.'
 locked: false

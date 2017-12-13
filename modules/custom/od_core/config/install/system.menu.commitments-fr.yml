@@ -3,5 +3,5 @@ status: true
 dependencies: {  }
 id: commitments-fr
 label: Engagements
-description: ''
+description: 'Engagements menu.'
 locked: false
