@@ -12,7 +12,7 @@ Feature: Webform Management
      When I fill in "name_of_application" with "Test App from Behat"
      And  I fill in "description_of_app" with "Description from behat test for App Ideas form"
      And  I select "Yes" from "sharing_consent"
-     Then I press "op"
+     Then I press "Submit"
      Then I should get a "200" HTTP response
 
    @webform
@@ -24,7 +24,7 @@ Feature: Webform Management
      And  I fill in "comments_and_feedback" with "Comment and Feedback from Behat for Contact form"
      And  I fill in "e_mail_address" with "behat-test@example.com"
      And  I select "Yes" from "consent"
-     Then I press "op"
+     Then I press "Submit"
      Then I should get a "200" HTTP response
 
    @webform
@@ -34,7 +34,7 @@ Feature: Webform Management
      Then I should see "Frequently Asked Questions"
      When I fill in "name" with "Behat Test"
      And  I fill in "e_mail" with "behat-test@example.com"
-     Then I press "op"
+     Then I press "Submit"
      Then I should get a "200" HTTP response
 
    @webform
@@ -54,7 +54,7 @@ Feature: Webform Management
      And  I fill in "address_fieldset[postal_code]" with "K2B8B7"
      And  I fill in "address_fieldset[country]" with "Canada"
      And  I select "Yes" from "consent"
-     Then I press "op"
+     Then I press "Submit"
      Then I should get a "200" HTTP response
 
    @webform
@@ -64,7 +64,7 @@ Feature: Webform Management
      Then I should see "Receive Open Government Email Form"
      When I fill in "e_mail" with "behat-test@example.com"
      And  I fill in "name" with "Behat Test"
-     Then I press "op"
+     Then I press "Submit"
      Then I should get a "200" HTTP response
 
    @webform
