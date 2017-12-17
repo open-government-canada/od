@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0301361df89f190ecd668484d2d696cd",
+    "content-hash": "6b16092f0795a0bfaef01e5c1040fd23",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -157,7 +157,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Enter acquia/lightning patch #2927504 description here": "https://www.drupal.org/files/issues/2927504-composer-vendor-bin-06.patch"
+                    "Enter acquia/lightning patch #2927504 description here": "https://www.drupal.org/files/issues/2927504-composer-vendor-bin-06.patch",
+                    "Enter acquia/lightning patch #2929997 description here": "https://www.drupal.org/files/issues/2929997-5.patch"
                 }
             },
             "autoload": {
@@ -7987,16 +7988,16 @@
         },
         {
             "name": "drupalwxt/wxt",
-            "version": "2.0.0-rc6",
+            "version": "2.0.0-rc7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
-                "reference": "fa7afb0925d0b7606829c909861fba716473be7e"
+                "reference": "ca04af43df0f0f1f389dd94b87ee3cafef56aa3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/fa7afb0925d0b7606829c909861fba716473be7e",
-                "reference": "fa7afb0925d0b7606829c909861fba716473be7e",
+                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/ca04af43df0f0f1f389dd94b87ee3cafef56aa3e",
+                "reference": "ca04af43df0f0f1f389dd94b87ee3cafef56aa3e",
                 "shasum": ""
             },
             "require": {
@@ -8107,7 +8108,8 @@
                 "enable-patching": true,
                 "patches": {
                     "acquia/lightning": {
-                        "Enter acquia/lightning patch #2927504 description here": "https://www.drupal.org/files/issues/2927504-composer-vendor-bin-06.patch"
+                        "Enter acquia/lightning patch #2927504 description here": "https://www.drupal.org/files/issues/2927504-composer-vendor-bin-06.patch",
+                        "Enter acquia/lightning patch #2929997 description here": "https://www.drupal.org/files/issues/2929997-5.patch"
                     },
                     "drupal/bootstrap": {
                         "Enter drupal/bootstrap patch #2834732 description here": "https://www.drupal.org/files/issues/temporarily_disable-2881978-2.patch",
@@ -8203,7 +8205,7 @@
                 "GPL-2.0+"
             ],
             "description": "Project template for Drupal 8 sites built with the WxT distribution.",
-            "time": "2017-12-17T20:16:16+00:00"
+            "time": "2017-12-17T23:18:20+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
