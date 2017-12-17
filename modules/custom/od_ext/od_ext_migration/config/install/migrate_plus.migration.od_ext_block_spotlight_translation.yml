@@ -58,7 +58,7 @@ source:
       type: string
 process:
   id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_block_spotlight
     source: bid
   info: title
@@ -76,7 +76,7 @@ process:
     source: fid
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_media_image
         source: id
   content_translation_source:

@@ -15,7 +15,7 @@ process:
     method: row
     source: title
   uid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_user
     source: uid
   type:

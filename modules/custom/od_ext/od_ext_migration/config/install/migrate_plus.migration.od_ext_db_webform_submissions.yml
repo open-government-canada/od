@@ -20,7 +20,7 @@ process:
   current_page: {}
   remote_addr: remote_addr
   uid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_user
     source: uid
   langcode:
@@ -30,7 +30,7 @@ process:
     plugin: default_value
     default_value: 'node'
   entity_id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_node_webform
     source: nid
   sticky: {}

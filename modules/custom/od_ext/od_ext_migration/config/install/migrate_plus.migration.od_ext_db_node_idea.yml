@@ -15,7 +15,7 @@ process:
     method: row
     source: title
   uid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_user
     source: uid
   type:
@@ -44,11 +44,11 @@ process:
     source: freetags
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_taxonomy_term
         source: field_idea_tags_tid
   field_idea_status/target_id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_taxonomy_term
     source: status
   field_idea_submission_name/value: submission_name

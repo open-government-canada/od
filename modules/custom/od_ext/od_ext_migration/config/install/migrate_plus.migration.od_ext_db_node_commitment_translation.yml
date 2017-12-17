@@ -16,11 +16,11 @@ process:
     method: row
     source: title
   nid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_node_commitment
     source: nid
   uid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_user
     source: uid
   type:
@@ -59,7 +59,7 @@ process:
     source: department
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_taxonomy_term
         source: field_department_tid
   field_commitment_relevance/value: relevance
@@ -75,11 +75,11 @@ process:
     source: tags
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_taxonomy_term
         source: field_commitment_tags_tid
   field_commitment_pillars/target_id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_taxonomy_term
     source: pillars
   field_commitment_status/value: commitment_status
@@ -92,7 +92,7 @@ process:
     process:
       target_id:
         -
-          plugin: migration
+          plugin: migration_lookup
           migration: od_ext_db_paragraph_deliverable
           source: field_deliverable_target_id
         -
@@ -101,7 +101,7 @@ process:
             - '0'
       target_revision_id:
         -
-          plugin: migration
+          plugin: migration_lookup
           migration: od_ext_db_paragraph_deliverable
           source: field_deliverable_target_id
         -

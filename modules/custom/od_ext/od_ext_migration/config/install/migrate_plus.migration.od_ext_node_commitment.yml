@@ -19348,7 +19348,7 @@ process:
       plugin: callback
       callable: serialize
   field_reference_landing:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_node_landing_page
     source: ref_landing
   field_commitment_end_date/value: commitment_date

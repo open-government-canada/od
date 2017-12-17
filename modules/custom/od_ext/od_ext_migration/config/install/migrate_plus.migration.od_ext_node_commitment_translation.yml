@@ -20853,7 +20853,7 @@ process:
     method: row
     source: title
   nid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_node_commitment
     source: nid
   uid:
@@ -20896,7 +20896,7 @@ process:
       plugin: callback
       callable: serialize
   field_reference_landing:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_node_landing_page_translation
     source: ref_landing
   field_commitment_end_date/value: commitment_date

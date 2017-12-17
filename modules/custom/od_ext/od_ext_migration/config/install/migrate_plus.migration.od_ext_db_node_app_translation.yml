@@ -16,11 +16,11 @@ process:
     method: row
     source: title
   nid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_node_app
     source: nid
   uid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_user
     source: uid
   type:
@@ -72,7 +72,7 @@ process:
     source: file
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_file
         source: field_application_screenshots_fid
       alt: field_application_screenshots_alt
@@ -84,7 +84,7 @@ process:
     source: app_freetags
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_taxonomy_term
         source: field_app_tags_tid
   field_app_categories:
@@ -92,7 +92,7 @@ process:
     source: app_categories
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_taxonomy_term
         source: field_application_categories_target_id
   field_community:
@@ -100,7 +100,7 @@ process:
     source: community
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_taxonomy_term
         source: field_community_tid
   field_departments:
@@ -108,7 +108,7 @@ process:
     source: departments
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_taxonomy_term
         source: field_departments_target_id
   field_device_formats:
@@ -116,11 +116,11 @@ process:
     source: device_formats
     process:
       target_id:
-        plugin: migration
+        plugin: migration_lookup
         migration: od_ext_db_taxonomy_term
         source: field_device_formats_target_id
   field_ribbon/target_id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_taxonomy_term
     source: ribbon
   content_translation_source:

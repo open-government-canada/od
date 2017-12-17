@@ -11,7 +11,7 @@ source:
   target: source_migration
 process:
   pid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_comment
     source: pid
   entity_id: nid

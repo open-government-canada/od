@@ -35,7 +35,7 @@ source:
       type: string
 process:
   id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_group
     source: machine_name
   label:

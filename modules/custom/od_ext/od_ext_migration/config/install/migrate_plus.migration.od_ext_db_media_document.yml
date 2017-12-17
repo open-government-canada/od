@@ -23,7 +23,7 @@ process:
     default_value: 1
   langcode: language
   'field_document/target_id':
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_file
     source: fid
   content_translation_source:

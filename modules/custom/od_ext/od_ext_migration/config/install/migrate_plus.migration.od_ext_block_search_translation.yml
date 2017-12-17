@@ -87,7 +87,7 @@ source:
       type: string
 process:
   id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_block_search
     source: bid
   info: title

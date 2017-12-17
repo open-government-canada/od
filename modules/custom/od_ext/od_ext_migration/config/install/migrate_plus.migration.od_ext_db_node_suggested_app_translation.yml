@@ -13,11 +13,11 @@ source:
 process:
   title: title
   nid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_node_suggested_app
     source: nid
   uid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_user
     source: uid
   type:

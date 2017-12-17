@@ -16,11 +16,11 @@ process:
     method: row
     source: title
   nid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_node_consultation
     source: nid
   uid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_user
     source: uid
   type:
@@ -61,7 +61,7 @@ process:
     to_format: 'Y-m-d\TH:i:s'
     source: date_end
   'field_consultation_status/target_id':
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_taxonomy_term
     source: consult_status
   field_idea_reference:
@@ -70,12 +70,12 @@ process:
     process:
       target_id:
         -
-          plugin: migration
+          plugin: migration_lookup
           migration: od_ext_db_node_idea
           source: entity_id
       target_revision_id:
         -
-          plugin: migration
+          plugin: migration_lookup
           migration: od_ext_db_node_idea
           source: entity_id
   content_translation_source:

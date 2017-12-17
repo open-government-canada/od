@@ -16,11 +16,11 @@ process:
     method: row
     source: title
   nid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_node_blog
     source: nid
   uid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_user
     source: uid
   type:
@@ -51,13 +51,13 @@ process:
     default_value: "published"
   field_meta_tags: metatags
   field_image/target_id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_file
     source: file_fid
   field_image/alt: file_alt
   field_image/title: file_title
   field_avatar_image/target_id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_db_file
     source: file_fid
   field_avatar_image/alt: file_alt

@@ -1199,7 +1199,7 @@ source:
       type: string
 process:
   id:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_block_basic
     source: bid
   info: title

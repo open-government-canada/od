@@ -6129,7 +6129,7 @@ process:
     method: row
     source: title
   nid:
-    plugin: migration
+    plugin: migration_lookup
     migration: od_ext_node_landing_page
     source: name
   uid:
