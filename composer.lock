@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b16092f0795a0bfaef01e5c1040fd23",
+    "content-hash": "a2c7605b37f0f74fe04b1b8520b07a56",
     "packages": [
         {
             "name": "acquia/lightning",
@@ -2336,7 +2336,8 @@
                     "Enter drupal/core patch #2893029 description here": "https://www.drupal.org/files/issues/2893029-9.patch",
                     "Enter drupal/core patch #2898119 description here": "https://www.drupal.org/files/issues/doctrine_common_version_below_2.8-2898119-11.patch",
                     "Enter drupal/core patch #2914233 description here": "https://www.drupal.org/files/issues/node_preview_error-2914233-5.patch",
-                    "Enter drupal/core patch #2920637 description here": "https://www.drupal.org/files/issues/taxonomy-context-provider-2920637-3.patch"
+                    "Enter drupal/core patch #2920637 description here": "https://www.drupal.org/files/issues/taxonomy-context-provider-2920637-3.patch",
+                    "Enter drupal/core patch #2930599 description here": "https://www.drupal.org/files/issues/content_moderation-path_alias-2930599-09.patch"
                 }
             },
             "autoload": {
@@ -7988,16 +7989,16 @@
         },
         {
             "name": "drupalwxt/wxt",
-            "version": "2.0.0-rc7",
+            "version": "2.0.0-rc8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupalwxt/wxt.git",
-                "reference": "ca04af43df0f0f1f389dd94b87ee3cafef56aa3e"
+                "reference": "393533a25695c6cb287f06d51cdb6da6ef6c5027"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/ca04af43df0f0f1f389dd94b87ee3cafef56aa3e",
-                "reference": "ca04af43df0f0f1f389dd94b87ee3cafef56aa3e",
+                "url": "https://api.github.com/repos/drupalwxt/wxt/zipball/393533a25695c6cb287f06d51cdb6da6ef6c5027",
+                "reference": "393533a25695c6cb287f06d51cdb6da6ef6c5027",
                 "shasum": ""
             },
             "require": {
@@ -8149,7 +8150,8 @@
                         "Enter drupal/core patch #2893029 description here": "https://www.drupal.org/files/issues/2893029-9.patch",
                         "Enter drupal/core patch #2898119 description here": "https://www.drupal.org/files/issues/doctrine_common_version_below_2.8-2898119-11.patch",
                         "Enter drupal/core patch #2914233 description here": "https://www.drupal.org/files/issues/node_preview_error-2914233-5.patch",
-                        "Enter drupal/core patch #2920637 description here": "https://www.drupal.org/files/issues/taxonomy-context-provider-2920637-3.patch"
+                        "Enter drupal/core patch #2920637 description here": "https://www.drupal.org/files/issues/taxonomy-context-provider-2920637-3.patch",
+                        "Enter drupal/core patch #2930599 description here": "https://www.drupal.org/files/issues/content_moderation-path_alias-2930599-09.patch"
                     },
                     "drupal/ctools": {
                         "Enter drupal/ctools patch #2667652 description here": "https://www.drupal.org/files/issues/ctools-option_to_expose-2667652-3.patch",
@@ -8205,7 +8207,7 @@
                 "GPL-2.0+"
             ],
             "description": "Project template for Drupal 8 sites built with the WxT distribution.",
-            "time": "2017-12-17T23:18:20+00:00"
+            "time": "2017-12-17T23:48:52+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
