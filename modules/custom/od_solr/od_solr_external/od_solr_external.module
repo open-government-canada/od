@@ -112,10 +112,10 @@ function od_solr_external_preprocess_views_view_fields(&$variables) {
     $str = html_entity_decode($str);
     $str = json_decode($str, TRUE);
     if ($language->getId() == 'fr') {
-      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $str['fr'] . '</a>');
+      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $str['fr'] . '</a>');
     }
     else {
-      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/' . $language->getId() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $str['en'] . '</a>');
+      $str = Markup::Create('<a href="' . \Drupal::request()->getSchemeAndHttpHost() . '/data/' . $language->getId() . '/dataset/' . $id . '">' . $str['en'] . '</a>');
     }
     unset($variables['fields']['id']);
     $variables['fields']['nothing']->content = $str;
