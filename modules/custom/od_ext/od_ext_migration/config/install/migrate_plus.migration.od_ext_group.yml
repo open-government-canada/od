@@ -11,6 +11,8 @@ source:
   plugin: url
   data_fetcher_plugin: http
   data_parser_plugin: json
+  headers:
+    Accept: application/json
   urls: 'http://open.canada.ca/data/api/action/organization_list?all_fields=true'
   item_selector: result
   fields:
