@@ -20,7 +20,7 @@ use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
 
-class ConsultationBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
+class CommunityBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
   use StringTranslationTrait;
 
@@ -86,14 +86,14 @@ class ConsultationBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
   protected $pathValidator;
 
   /**
-   * The alias manager.
+   * The path matcher.
    *
-   * @var \Drupal\Core\Path\AliasManagerInterface
+   * @var \Drupal\Core\Path\PathMatcherInterface
    */
-  protected $aliasManager;
+  protected $pathMatcher;
 
   /**
-   * Constructs the ConsultationBreadcrumbBuilder.
+   * Constructs the CommunityBreadcrumbBuilder.
    *
    * @param \Drupal\Core\Routing\RequestContext $context
    *   The router request context.
@@ -115,6 +115,8 @@ class ConsultationBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
    *   The language manager.
    * @param \Drupal\Core\Path\PathValidator $pathValidator
    *   The path validator.
+   * @param \Drupal\Core\Path\PathMatcherInterface $path_matcher
+   *   The path matcher.
    * @param \Drupal\Core\Path\AliasManager $alias_manager
    *   The alias manager.
    */
@@ -147,19 +149,14 @@ class ConsultationBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
    * {@inheritdoc}
    */
   public function applies(RouteMatchInterface $route_match) {
-    $parameters = $route_match->getParameters()->all();
+
     $path = trim($this->context->getPathInfo(), '/');
     $path_elements = explode('/', $path);
-    $pathEnd = end($path_elements);
-
-    // Content type determination.
-    if (!empty($parameters['node']) &&
-        is_object($parameters['node']) &&
-        $parameters['node']->getType() == 'consultation') {
+    if ((isset($path_elements[1])) && ($path_elements[1] == 'community')) {
       return TRUE;
     }
-    elseif (!empty($pathEnd) && $pathEnd == 'consultations') {
-      return TRUE;
+    else {
+      return FALSE;
     }
   }
 
@@ -169,13 +166,6 @@ class ConsultationBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
   public function build(RouteMatchInterface $route_match) {
     $breadcrumb = new Breadcrumb();
     $links = [];
-
-    // General path-based breadcrumbs. Use the actual request path, prior to
-    // resolving path aliases, so the breadcrumb can be defined by simply
-    // creating a hierarchy of path aliases.
-    $path = trim($this->context->getPathInfo(), '/');
-    $path_elements = explode('/', $path);
-
     $links[] = Link::createFromRoute($this->t('Home'), '<front>');
     $breadcrumb->setLinks(array_reverse($links));
 
@@ -193,20 +183,13 @@ class ConsultationBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
         $nid = $this->aliasManager->getPathByAlias('/open-dialogue', 'en');
         $open_dialogue = $this->pathValidator->getUrlIfValid($nid);
-        $nid = $this->aliasManager->getPathByAlias('/consultations', 'en');
-        $consultation = $this->pathValidator->getUrlIfValid($nid);
-        if (!empty($open_dialogue) && !empty($consultation)) {
-          $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
-          $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
-          $linkConsultation = Link::createFromRoute($this->t('Consultations'), $consultation->getRouteName(), $consultation->getRouteParameters());
-          $pathEnd = end($path_elements);
-          if (!empty($pathEnd) && $pathEnd != 'consultations') {
-            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkConsultation);
-          }
-          else {
-            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue);
-          }
-        }
+        $nid = $this->aliasManager->getPathByAlias('/communities', 'en');
+        $communities = $this->pathValidator->getUrlIfValid($nid);
+
+        $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
+        $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
+        $linkCommunities = Link::createFromRoute($this->t('Communities'), $communities->getRouteName(), $communities->getRouteParameters());
+        array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkCommunities);
       }
 
       $breadcrumb = new Breadcrumb();
