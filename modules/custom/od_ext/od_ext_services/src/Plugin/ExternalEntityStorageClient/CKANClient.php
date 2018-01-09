@@ -65,7 +65,7 @@ class CKANClient extends ExternalEntityStorageClientBase {
     );
     if ($response->getStatusCode() == 200) {
       $result = $this->decoder->getDecoder($this->configuration['format'])->decode($response->getBody());
-      if (!empty($result['result']) && $result['result']['count'] == 0) {
+      if ((empty($result)) || (!empty($result['result']) && $result['result']['count'] == 0)) {
         return NULL;
       }
       else {
