@@ -161,6 +161,7 @@ class ProactiveDisclosureBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
           'ati',
           'contracts',
           'contractsa',
+          'contrats',
           'grants',
           'hospitalitya',
           'hospitalityq',
@@ -174,7 +175,7 @@ class ProactiveDisclosureBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
         }
       }
     }
-    elseif (!empty($pathEnd) && $pathEnd == 'proactive-disclosure') {
+    elseif ((!empty($pathEnd)) && (($pathEnd == 'proactive-disclosure') || ($pathEnd == 'divulgation-proactive'))) {
       return TRUE;
     }
   }
