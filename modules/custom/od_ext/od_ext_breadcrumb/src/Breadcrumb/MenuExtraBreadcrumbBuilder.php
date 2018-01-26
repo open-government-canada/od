@@ -139,6 +139,13 @@ class MenuExtraBreadcrumbBuilder implements BreadcrumbBuilderInterface {
   private $lock;
 
   /**
+   * The breadcrumb object for the parent menu.
+   *
+   * @var \Drupal\menu_breadcrumb\MenuBasedBreadcrumbBuilder
+   */
+  private $menu_breadcrumb;
+
+  /**
    * {@inheritdoc}
    */
   public function __construct(
@@ -172,16 +179,16 @@ class MenuExtraBreadcrumbBuilder implements BreadcrumbBuilderInterface {
    */
   public function applies(RouteMatchInterface $route_match) {
     $parameters = $route_match->getParameters()->all();
-    return ((!empty($parameters['node'])) && (is_object($parameters['node'])) && (count($this->menuActiveTrail->getActiveTrailIds('main')) == 1));
+    $this->menu_breadcrumb = new MenuBasedBreadcrumbBuilder($this->configFactory, $this->menuActiveTrail, $this->menuLinkManager, $this->adminContext, $this->titleResolver, $this->requestStack, $this->languageManager, $this->entityTypeManager, $this->config);
+
+    return ((!empty($parameters['node'])) && (is_object($parameters['node'])) && (count($this->menuActiveTrail->getActiveTrailIds('main')) == 1) && ($this->menu_breadcrumb->applies($route_match)));
   }
 
   /**
    * {@inheritdoc}
    */
   public function build(RouteMatchInterface $route_match) {
-    $menu_breadcrumb = new MenuBasedBreadcrumbBuilder($this->configFactory, $this->menuActiveTrail, $this->menuLinkManager, $this->adminContext, $this->titleResolver, $this->requestStack, $this->languageManager, $this->entityTypeManager, $this->config);
-    $menu_breadcrumb->applies($route_match);
-    $menu_breadcrumb_object = $menu_breadcrumb->build($route_match);
+    $menu_breadcrumb_object = $this->menu_breadcrumb->build($route_match);
     $links = $menu_breadcrumb_object->getLinks();
     $breadcrumb = new Breadcrumb();
 

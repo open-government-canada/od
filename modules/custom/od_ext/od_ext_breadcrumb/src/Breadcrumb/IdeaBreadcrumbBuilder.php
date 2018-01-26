@@ -19,6 +19,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Url;
 use Symfony\Component\Routing\Matcher\RequestMatcherInterface;
+use Drupal\node\Entity\Node;
 
 class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
@@ -152,8 +153,9 @@ class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     // Content type determination.
     if (!empty($parameters['node']) &&
         is_object($parameters['node']) &&
-        $parameters['node']->getType() == 'idea') {
-      return TRUE;
+        $parameters['node']->getType() == 'idea') { 
+
+     return TRUE;
     }
   }
 
@@ -174,7 +176,10 @@ class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $breadcrumb->setLinks(array_reverse($links));
 
     $route = $route_match->getRouteObject();
-    if ($route && !$route->getOption('_admin_route')) {
+    $current_node_id = $route_match->getParameter('node')->id();
+    $current_language = $route_match->getParameter('node')->langcode->value; 
+
+   if ($route && !$route->getOption('_admin_route')) {
       $links = $breadcrumb->getLinks();
       if (!empty($links) && $links[0]->getText() == $this->t('Home')) {
         $url = 'https://www.canada.ca/en.html';
@@ -186,27 +191,33 @@ class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
 
         $nid = $this->aliasManager->getPathByAlias('/open-dialogue', 'en');
         $open_dialogue = $this->pathValidator->getUrlIfValid($nid);
-        $nid = $this->aliasManager->getPathByAlias('/consultations', 'en');
-        $consultation = $this->pathValidator->getUrlIfValid($nid);
-        if (!empty($open_dialogue) && !empty($consultation)) {
+        if (!empty($open_dialogue)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
           $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
-          $linkConsultation = Link::createFromRoute($this->t('Consultations'), $consultation->getRouteName(), $consultation->getRouteParameters());
-          $pathEnd = end($path_elements);
-          if (!empty($pathEnd) && $pathEnd != 'consultations') {
-            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkConsultation);
-          }
-          else {
+ 
+          $query = \Drupal::entityQuery('node');
+          $query->condition('field_idea_reference', $current_node_id);
+          $nids = $query->execute();
+          if (count($nids) > 0) {
+	    $nid = array_pop($nids);
+
+            $parent_node = Node::load($nid);
+            $parent_nid = $parent_node->id();
+            $parent_node = $parent_node->getTranslation($current_language);
+            $parent_title = $parent_node->title->value;
+
+            $parent_route = $this->pathValidator->getUrlIfValid($this->aliasManager->getPathByAlias('/node/' . $parent_nid, $current_language));
+            $linkParent = Link::createFromRoute($parent_title, $parent_route->getRouteName(), $parent_route->getRouteParameters());
+            array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkParent);
+          } else {
             array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue);
           }
         }
       }
-
       $breadcrumb = new Breadcrumb();
       $breadcrumb->addCacheContexts(['url.path.parent']);
       $breadcrumb->setLinks($links);
     }
-
     return $breadcrumb;
   }
 
