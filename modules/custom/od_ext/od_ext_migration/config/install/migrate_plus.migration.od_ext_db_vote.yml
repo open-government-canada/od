@@ -1,0 +1,20 @@
+id: od_ext_db_vote
+migration_tags: null
+migration_group: od_external
+dependencies:
+  enforced:
+    module:
+      - od_ext_migration
+label: 'Database import for vote from legacy Drupal database'
+source:
+  plugin: vote_import
+  target: source_migration
+process:
+  entity_id: nid
+  type: type
+  title: title
+destination:
+  plugin: entity:node
+migration_dependencies:
+  required:
+    - od_ext_db_user
