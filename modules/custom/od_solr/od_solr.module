@@ -28,7 +28,7 @@ function od_solr_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_form_FORM_ID_alter().
  */
 function od_solr_form_wxt_search_block_form_alter(&$form, FormStateInterface $form_state) {
-  $form['#action'] = '/search/site';
+  $form['langs']['#value'] = (\Drupal::languageManager()->getCurrentLanguage()->getId() != 'fr' ? 'eng' : 'fra');
 }
 
 /**
