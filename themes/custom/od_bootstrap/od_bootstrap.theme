@@ -6,3 +6,14 @@
  *
  * Place your custom PHP code in this file.
  */
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function od_bootstrap_theme_suggestions_html_alter(array &$suggestions, array $variables) {
+  if ($external_entity = \Drupal::routeMatch()->getParameter('external_entity')) {
+    $ajax = \Drupal::request()->query->get('ajaxonly');
+    if ($ajax == "true") {
+      $suggestions[] = 'html__ajax';
+    }
+  }
+}
