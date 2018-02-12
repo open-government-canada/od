@@ -2,7 +2,6 @@
 
 namespace Drupal\od_ext_services\Plugin\ExternalEntityStorageClient;
 
-use GuzzleHttp\Exception\RequestException;
 use Drupal\external_entities\ExternalEntityInterface;
 use Drupal\external_entities\ExternalEntityStorageClientBase;
 
@@ -52,7 +51,7 @@ class CKANClient extends ExternalEntityStorageClientBase {
    */
   public function load($id) {
     $options = [
-      'http_errors' => false,
+      'http_errors' => FALSE,
       'headers' => $this->getHttpHeaders(),
       'query' => [
         'fq' => 'id:' . $id,
@@ -117,7 +116,7 @@ class CKANClient extends ExternalEntityStorageClientBase {
     $response = $this->httpClient->get(
       $this->configuration['endpoint'],
       [
-        'http_errors' => false,
+        'http_errors' => FALSE,
         'query' => $parameters + $this->configuration['parameters']['list'],
         'headers' => $this->getHttpHeaders(),
       ]

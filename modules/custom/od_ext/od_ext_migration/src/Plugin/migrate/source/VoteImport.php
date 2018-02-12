@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   id = "vote_import"
  * )
  */
-class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, DependentPluginInterface  {
+class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, DependentPluginInterface {
 
   /**
    * The entity manager.
@@ -59,12 +59,12 @@ class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, Dep
       [
         'nid',
         'type',
-	'title',
+        'title',
         'language',
       ])
-      ->condition('type',array('opendata_package'),'IN')
+      ->condition('type', ['opendata_package'], 'IN')
       ->orderBy('nid');
-      return $query;
+    return $query;
   }
 
   /**
@@ -101,12 +101,14 @@ class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, Dep
     $entity_id = $row->getSourceProperty('nid');
 
     $votes = $this->select('votingapi_vote', 'vv')
-        ->fields('vv', ['value'])
-        ->condition('entity_id', $entity_id)
-        ->condition('entity_type', 'node')
-        ->execute()
-        ->fetchCol();
-    if (count($votes) == 0) return false;
+      ->fields('vv', ['value'])
+      ->condition('entity_id', $entity_id)
+      ->condition('entity_type', 'node')
+      ->execute()
+      ->fetchCol();
+    if (count($votes) == 0) {
+      return FALSE;
+    }
 
     $new_entity_id = NULL;
     if ($entity_type == 'opendata_package') {
@@ -123,7 +125,8 @@ class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, Dep
         $ckan_uuid = explode('/', $row->getSourceProperty('alias'));
         $new_entity_id = 'ckan-' . end($ckan_uuid);
       }
-    } else if ($entity_type == 'inventory_solr') {
+    }
+    elseif ($entity_type == 'inventory_solr') {
       // Lookup the ID.
       $query = Index::load('inventory')->query();
       $query->addCondition('uuid', $row->getSourceProperty('title'));
@@ -139,7 +142,8 @@ class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, Dep
       }
       unset($query);
       unset($data);
-    } else {
+    }
+    else {
       // Lookup the correct entity_id / bundle / comment field for node(s).
       $lookup = [
         'app',
@@ -163,7 +167,7 @@ class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, Dep
         if (\Drupal::database()->schema()->tableExists("migrate_map_od_ext_db_node_$bundle")) {
           $new_entity_id = (int) \Drupal::database()->query("SELECT destid1 FROM {migrate_map_od_ext_db_node_$bundle} WHERE sourceid1 = :sourceId", [':sourceId' => $row->getSourceProperty('nid')])->fetchField();
         }
-      }     
+      }
       $new_entity_type = 'node';
     }
 
@@ -171,11 +175,15 @@ class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, Dep
       foreach ($votes as $vote) {
         $storage = $this->entityManager->getStorage('vote');
         $data = $vote;
-        if (($entity_type == 'app') || ($entity_type == 'opendata_package')) $data = $vote * 0.05;
-        
-	$field_name = 'field_vud';
-	if ($entity_type == 'app') $field_name = 'field_vote';
-	$voteData = [
+        if (($entity_type == 'app') || ($entity_type == 'opendata_package')) {
+          $data = $vote * 0.05;
+        }
+
+        $field_name = 'field_vud';
+        if ($entity_type == 'app') {
+          $field_name = 'field_vote';
+        }
+        $voteData = [
           'entity_type' => $new_entity_type,
           'entity_id'   => $new_entity_id,
           'type'      => 'vote',
@@ -184,11 +192,11 @@ class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, Dep
         ];
 
         echo $entity_type . "," . $entity_id . "," . $new_entity_type . "," . $new_entity_id . "\n";
- 
+
         $vote = $storage->create($voteData);
         $vote->setValue($data);
         $vote->save();
-     
+
       }
       unset($votes);
       unset($row);
@@ -197,7 +205,7 @@ class VoteImport extends SqlBase implements ContainerFactoryPluginInterface, Dep
     $manager = \Drupal::service('plugin.manager.votingapi.resultfunction');
     $manager->recalculateResults($new_entity_type, $new_entity_id, 'vote');
 
-    return false;
+    return FALSE;
   }
 
   /**

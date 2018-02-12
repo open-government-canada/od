@@ -153,9 +153,9 @@ class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     // Content type determination.
     if (!empty($parameters['node']) &&
         is_object($parameters['node']) &&
-        $parameters['node']->getType() == 'idea') { 
+        $parameters['node']->getType() == 'idea') {
 
-     return TRUE;
+      return TRUE;
     }
   }
 
@@ -166,20 +166,14 @@ class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
     $breadcrumb = new Breadcrumb();
     $links = [];
 
-    // General path-based breadcrumbs. Use the actual request path, prior to
-    // resolving path aliases, so the breadcrumb can be defined by simply
-    // creating a hierarchy of path aliases.
-    $path = trim($this->context->getPathInfo(), '/');
-    $path_elements = explode('/', $path);
-
     $links[] = Link::createFromRoute($this->t('Home'), '<front>');
     $breadcrumb->setLinks(array_reverse($links));
 
     $route = $route_match->getRouteObject();
     $current_node_id = $route_match->getParameter('node')->id();
-    $current_language = $route_match->getParameter('node')->langcode->value; 
+    $current_language = $route_match->getParameter('node')->langcode->value;
 
-   if ($route && !$route->getOption('_admin_route')) {
+    if ($route && !$route->getOption('_admin_route')) {
       $links = $breadcrumb->getLinks();
       if (!empty($links) && $links[0]->getText() == $this->t('Home')) {
         $url = 'https://www.canada.ca/en.html';
@@ -194,12 +188,12 @@ class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
         if (!empty($open_dialogue)) {
           $linkOpenGov = Link::createFromRoute($this->t('Open Government'), '<front>');
           $linkOpenDialogue = Link::createFromRoute($this->t('Open Dialogue'), $open_dialogue->getRouteName(), $open_dialogue->getRouteParameters());
- 
+
           $query = \Drupal::entityQuery('node');
           $query->condition('field_idea_reference', $current_node_id);
           $nids = $query->execute();
           if (count($nids) > 0) {
-	    $nid = array_pop($nids);
+            $nid = array_pop($nids);
 
             $parent_node = Node::load($nid);
             $parent_nid = $parent_node->id();
@@ -209,7 +203,8 @@ class IdeaBreadcrumbBuilder extends PathBasedBreadcrumbBuilder {
             $parent_route = $this->pathValidator->getUrlIfValid($this->aliasManager->getPathByAlias('/node/' . $parent_nid, $current_language));
             $linkParent = Link::createFromRoute($parent_title, $parent_route->getRouteName(), $parent_route->getRouteParameters());
             array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue, $linkParent);
-          } else {
+          }
+          else {
             array_unshift($links, $link, $linkOpenGov, $linkOpenDialogue);
           }
         }
