@@ -315,11 +315,11 @@
             },
             "drupal/lightning": {
                 "Enter drupal/google_analytics_reports patch #2901225 description here":
-                "https://www.drupal.org/files/issues/2901225-15.patch",
+                "https://www.drupal.org/files/issues/2901225-15.patch"
             },
             "drupal/password_policy": {
                 "Enter drupal/password_policy patch #2862906 description here":
-                "https://www.drupal.org/files/issues/password_policy-2862906-2.patch",
+                "https://www.drupal.org/files/issues/password_policy-2862906-2.patch"
             },
             "drupal/quicktabs": {
                 "Enter drupal/quicktabs patch #2918890 description here":
