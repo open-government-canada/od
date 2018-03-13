@@ -313,7 +313,7 @@
                 "Enter drupal/google_analytics_reports patch #2878932 description here":
                 "https://www.drupal.org/files/issues/custom_variables_or-2878932-6.patch"
             },
-            "drupal/lightning": {
+            "acquia/lightning": {
                 "Enter drupal/google_analytics_reports patch #2901225 description here":
                 "https://www.drupal.org/files/issues/2901225-15.patch"
             },
