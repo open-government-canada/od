@@ -371,7 +371,7 @@
         "drupal/chosen": "2.4",
         "drupal/csv_serialization": "1.0",
         "drupal/entityqueue": "1.0-alpha7",
-        "drupal/external_comment": "1.0.0-rc3",
+        "drupal/external_comment": "1.0.0-rc4",
         "drupal/external_entities": "1.0-alpha2",
         "drupal/facets": "1.0-beta1",
         "drupal/flag": "4.0-alpha2",
