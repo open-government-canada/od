@@ -6,5 +6,4 @@ package: 'Open Data'
 
 # Required modules
 dependencies:
-  - drupal:od_ext_flag
   - drupal:od_ext_vote

@@ -246,118 +246,100 @@
         "enable-patching": true,
         "patches": {
             "drupal/address": {
-                "Enter drupal/address patch #2514126 description here":
-                "https://www.drupal.org/files/issues/2514126-102.field-behavior-settings.patch  "
+                "Add field settings for global overrides of required/optional behavior (update to patch 146, see if this is required)":
+                "https://www.drupal.org/files/issues/2514126-102.field-behavior-settings.patch"
             },
             "drupal/external_entities": {
-                "Enter drupal/external_entities patch #2823684 description here":
+                "checkFieldAccess on ExternalEntityAccessControlHandler returns boolean when it shouldn't (most recent checks are failing, committed in 8.x-1.x dev branch)":
                 "https://www.drupal.org/files/issues/2823684-check-field-access-2.patch",
-                "Enter drupal/external_entities patch #2858171 description here":
+                "Grant access to all request to 'view label' in ExternalEntityAccessControlHandler (committed in 8.x-1.x dev branch)":
                 "https://www.drupal.org/files/issues/2858171-view-label-2.patch",
-                "Enter drupal/external_entities patch #2875436 description here":
+                "Allow implemented ExternalEntityStorageClient's to set count (OD only, related to SolrClient and CKANClient not getting the correct query result count)":
                 "https://www.drupal.org/files/issues/allow_implemented-2875436-2.patch",
-                "Enter drupal/external_entities patch #2882887 description here":
+                "Enter drupal/external_entities patch #2882887 description here (OD only, for JSONAPI, sends bundle key instead of UUID for use with external_comment)":
                 "https://www.drupal.org/files/issues/allow_for_uuid_to_be-2882887-2.patch",
-                "Enter drupal/external_entities patch #2887193 description here":
+                "Allow for differentiation between external entities field mapping / regular drupal field mapping (OD only)":
                 "https://www.drupal.org/files/issues/allow_for-2887193-3.patch",
-                "Enter drupal/external_entities patch #2920779 description here":
+                "ExternalEntityStorage doLoadMultiple should handle NULL values (OD only)":
                 "https://www.drupal.org/files/issues/externalentitystorage-2920779-3.patch"
             },
             "drupal/facets": {
-                "Enter drupal/facets patch #2926335 description here":
-                "https://www.drupal.org/files/issues/2926335-by-sylus-empty-facet-summary-precedence.patch",
-                "Enter drupal/facets patch #2926339 description here":
-                "https://www.drupal.org/files/issues/facet-summary-clear-filter-custom-class-2926339.patch"
+                "Empty facet summary precedence over 'show_text_when_empty' (empty current search box, very close to being included in next release)":
+                "https://www.drupal.org/files/issues/2926335-by-sylus-empty-facet-summary-precedence.patch"
             },
             "drupal/flag": {
-                "Enter drupal/flag patch #2846111 description here":
+                "AJAX link not working when used in views (Flag not used in OD)":
                 "https://www.drupal.org/files/issues/viewsAjaxLink_2846111_11.patch",
-                "Enter drupal/flag patch #2888664 description here":
+                "New index for flagging performance in views relationships (Flag not used in OD)":
                 "https://www.drupal.org/files/issues/new_index_for_flagging-2888664-12.patch"
             },
-            "drupal/fontawesome": {
-                "Enter drupal/fontawesome patch #2650614 description here":
-                "https://www.drupal.org/files/issues/fontawesome-remove_libraries_dependency-2650614-15.patch",
-                "Enter drupal/fontawesome patch #2851613 description here":
-                "https://www.drupal.org/files/issues/fix_configuration_schema-2851613-2.patch",
-                "Enter drupal/fontawesome patch #2881431 description here":
-                "https://www.drupal.org/files/issues/unable_to_find_the-2881431-2.patch"
-            },
             "drupal/group": {
-                "Enter drupal/group patch #2817109 description here":
-                 "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
-                "Enter drupal/group patch #2864721 description here":
+                "How to redirect to the owning group after adding a gnode? (Redirects user to group homepage instead of node)":
+                "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
+                "Permission to translate content (restricts translate permission to only group content, revised patch available)":
                 "https://www.drupal.org/files/issues/group-translate_content_permission-2864721-5.patch",
-                "Enter drupal/group patch #2895988 description here":
-                "https://www.drupal.org/files/issues/2895988-4.patch",
-                "Enter drupal/group patch #2908830 description here":
-                "https://www.drupal.org/files/issues/2908830-04.patch"
-            },
-            "drupal/icon": {
-                "Enter drupal/icon patch #2864333 description here":
-                "https://www.drupal.org/files/issues/migrate_icon_field_to_d8-2864333-5.patch"
+                "Improve performance of the membership loader (revised patch available)":
+                "https://www.drupal.org/files/issues/2895988-4.patch"
             },
             "drupal/google_analytics_reports": {
-                "Enter drupal/google_analytics_reports patch #2795115 description here":
+                "Use state system for storage of access token":
                 "https://www.drupal.org/files/issues/2795115-6.patch",
-                "Enter drupal/google_analytics_reports patch #2825775 description here":
+                "Cannot set granular date filter":
                 "https://www.drupal.org/files/issues/2825775-2.patch",
-                "Enter drupal/google_analytics_reports patch #2825785 description here":
+                "Views query always queries google_analytics_reports_api_profiles_list()":
                 "https://www.drupal.org/files/issues/2825785-2.patch",
-                "Enter drupal/google_analytics_reports patch #2846360 description here":
+                "View omits '0' index in results array":
                 "https://www.drupal.org/files/issues/google_analytics_reports-view_omits_zero_index-2846360-2.patch",
-                "Enter drupal/google_analytics_reports patch #2850463 description here":
+                "Error when saving either google_analytics_reports view":
                 "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch",
-                "Enter drupal/google_analytics_reports patch #2877092 description here":
+                "Proxy support for Guzzle client not working (not required)":
                 "https://gist.githubusercontent.com/sylus/47915c8e1cc35c3628f0edfcbe8a2a86/raw/9a91ec728966ba3ba7376d193bcb2d18c0f5b43a/proxy_support_for-2877092-2.patch",
-                "Enter drupal/google_analytics_reports patch #2878932 description here":
+                "Custom Variables or Columns: Custom Dimension XX":
                 "https://www.drupal.org/files/issues/custom_variables_or-2878932-6.patch"
             },
+            "drupal/icon": {
+                "Migrate Icon Field to D8":
+                "https://www.drupal.org/files/issues/migrate_icon_field_to_d8-2864333-5.patch"
+            },
+            "drupal/page_manager": {
+                "Page variants cannot be selected":
+                "https://www.drupal.org/files/issues/page_manager-page_variants_selection-2868216-7.patch"
+            },
             "drupal/password_policy": {
-                "Enter drupal/password_policy patch #2862906 description here":
+                "Remove 'bypass password policies' permission (so admins must follow password policies)":
                 "https://www.drupal.org/files/issues/password_policy-2862906-2.patch"
             },
             "drupal/quicktabs": {
-                "Enter drupal/quicktabs patch #2918890 description here":
+                "Add additional theme suggestions for item_list with QuickTabs TabRenderer (OD only, minor theming change)":
                 "https://www.drupal.org/files/issues/add_additional_theme-2918890-2.patch",
-                "Enter drupal/quicktabs patch #2918891 description here":
+                "Views Content isn't display configured pager in Quick (OD only, may not be needed, involving pagination not showing)":
                 "https://www.drupal.org/files/issues/views_content_isn_t-2918891-2.patch"
             },
             "drupal/reference_table_formatter": {
-                "Enter drupal/reference_table_formatter patch #2924657 description here":
+                "Allow reference_table_formatter to work with moderation + entity_reference_revisions (OD only)":
                 "https://www.drupal.org/files/issues/reference_table_formatter-moderation-entity_reference_revisions-2924657.patch"
             },
             "drupal/votingapi": {
-                "Enter drupal/votingapi patch #2731101 description here":
-                "https://www.drupal.org/files/issues/views_relationship_for-2731101-16.patch",
-                "Enter drupal/votingapi patch #2846341 description here":
-                "https://www.drupal.org/files/issues/2846341-anonymous-votes-5.patch",
-                "Enter drupal/votingapi patch #2872435 description here":
-                "https://www.drupal.org/files/issues/voting_api_getting_an-2872435-10.patch",
-                "Enter drupal/votingapi patch #2898847 description here":
-                "https://www.drupal.org/files/issues/2898847-2.patch"
+                "Vote list cache tag not invalidated when saving a vote":
+                "https://www.drupal.org/files/issues/2898847-2.patch",
+                "Voting API: Getting an access denied or 403 response using GET method (only partially merged)":
+                "https://www.drupal.org/files/issues/voting_api_getting_an-2872435-10.patch"
             },
             "drupal/votingapi_widgets": {
-                "Enter drupal/votingapi_widgets patch #2855514 description here":
+                "Asynchronous JS issues 'function not found' (Fixes conflict with barrating.js five leaf, committed in dev)":
                 "https://www.drupal.org/files/issues/barrating_not_found-2855514-4.patch",
-                "Enter drupal/votingapi_widgets patch #2860009 description here":
+                "Display cancel/save buttons so that user explicitly cast their vote (For five leaf, might be able to remove)":
                 "https://www.drupal.org/files/issues/display_cancel_save-2860009-4.patch"
             },
             "drupal/vote_up_down": {
-                "Enter drupal/vote_up_down patch #2906689 description here":
-                "https://www.drupal.org/files/issues/2906689-voting-widget-not-visible-to-anonymous-users.patch",
-                "Enter drupal/vote_up_down patch #2910780 description here":
-                "https://www.drupal.org/files/issues/vote_up_down-js-prototype-bug-2910780-2-D8.patch",
-                "Enter drupal/vote_up_down patch #2910893 description here":
+                "VUD disable regex mathching ID allowing for Strings (for compatibility with external_entities, from WxT)":
                 "https://www.drupal.org/files/issues/vud_disable_regex-2910893-4.patch",
-                "Enter drupal/vote_up_down patch #2912243 description here":
+                "Add AJAX to counter (revised patch available)":
                 "https://www.drupal.org/files/issues/vote_up_down_6.patch",
-                "Enter drupal/vote_up_down patch #2913874 description here":
+                "AJAX counter issues (lang prefix + support for other types) (OD only)":
                 "https://www.drupal.org/files/issues/ajax_counter_issues-2913874-4.patch",
-                "Enter drupal/vote_up_down patch #2914766 description here":
-                "https://www.drupal.org/files/issues/evaluating_vote_up_down-2914766-2.patch",
-                "Enter drupal/vote_up_down patch #2922521 description here":
-                "https://www.drupal.org/files/issues/panelizer_entity_field-2922521-2.patch"
+                "Evaluating vote_up_down issue with postgres (OD only, from WxT)":
+                "https://www.drupal.org/files/issues/evaluating_vote_up_down-2914766-2.patch"
             }
         }
     },
@@ -373,9 +355,9 @@
         "drupal/entityqueue": "1.0-alpha7",
         "drupal/external_comment": "1.0.0-rc4",
         "drupal/external_entities": "1.0-alpha2",
-        "drupal/facets": "1.0-beta1",
+        "drupal/facets": "1.0-beta2",
         "drupal/flag": "4.0-alpha2",
-        "drupal/fontawesome":  "1.2",
+        "drupal/fontawesome":  "1.3",
         "drupal/google_analytics": "2.2",
         "drupal/google_analytics_reports": "3.0-beta1",
         "drupal/honeypot": "1.27",
@@ -390,12 +372,12 @@
         "drupal/search_api": "1.5",
         "drupal/search_api_solr": "2.0-alpha2",
 	"drupal/session_limit": "1.0.0-beta1",
-        "drupal/votingapi": "3.0-alpha2",
+        "drupal/votingapi": "3.0-alpha6",
         "drupal/votingapi_widgets": "1.0-alpha3",
         "drupal/views_data_export": "1.0-alpha4",
         "drupal/views_field_view": "1.0-beta2",
         "drupal/views_templates": "1.0-alpha1",
-        "drupal/vud": "1.0-alpha1",
+        "drupal/vud": "1.0-alpha4",
         "drupal/xls_serialization": "1.0-beta1",
         "fortawesome/font-awesome": "^4.7",
         "harvesthq/chosen": "1.6.1"

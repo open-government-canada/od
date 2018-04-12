@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\FieldableEntityInterface;
 use Drupal\votingapi\VoteInterface;
 
@@ -34,4 +35,17 @@ function od_ext_vote_entity_delete(EntityInterface $entity) {
     $tags = ['config:views.view.solr_inventory'];
     \Drupal::service('cache_tags.invalidator')->invalidateTags($tags);
   }
+}
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ */
+function od_ext_vote_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  if ($entity_type->id() == 'vote') {
+    $fields['vote_source']->setDefaultValueCallback('od_ext_vote_vote_source');
+  }
+}
+
+function od_ext_vote_vote_source() {
+  return session_id();
 }
