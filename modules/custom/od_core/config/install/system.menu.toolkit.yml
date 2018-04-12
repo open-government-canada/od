@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: toolkit
-label: Toolkit
-description: 'Toolkit menu.'
-locked: false

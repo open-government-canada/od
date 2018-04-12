@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: commitments-fr
-label: Engagements
-description: 'Engagements menu.'
-locked: false

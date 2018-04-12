@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: commitments
-label: Commitments
-description: 'Consulations menu.'
-locked: false

@@ -1,9 +1,0 @@
-name: 'Open Data Extend Flag'
-description: 'Provides various configuration / implementations related to Flag.'
-type: module
-core: 8.x
-package: 'Open Data'
-
-# Required modules
-dependencies:
-  - drupal:flag

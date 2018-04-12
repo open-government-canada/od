@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: Communities
-vid: communities
-description: 'Communities hierarchy for Open Data.'
-hierarchy: 0
-weight: 0

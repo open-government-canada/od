@@ -1,9 +1,0 @@
-name: 'Open Data Extend Idea'
-description: 'New idea.'
-type: module
-core: 8.x
-package: 'Open Data'
-
-# Required modules
-dependencies:
-  - drupal:od_ext_vote

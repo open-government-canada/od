@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Idea FreeTags'
-vid: idea_freetags
-description: 'Idea with "Free Tagging" support.'
-hierarchy: 0
-weight: 0

@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: Subscriptions
-vid: subscriptions
-description: 'Subscriptions for Open Government.'
-hierarchy: 0
-weight: 0

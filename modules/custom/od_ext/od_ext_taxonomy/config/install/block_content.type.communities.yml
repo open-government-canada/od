@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: communities
-label: Communities
-revision: 1
-description: 'A Communities block contains a title and a body. It then gets displayed on the communities taxonomy pages.'

@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'App FreeTags'
-vid: app_freetags
-description: 'App with "Free Tagging" support.'
-hierarchy: 0
-weight: 0

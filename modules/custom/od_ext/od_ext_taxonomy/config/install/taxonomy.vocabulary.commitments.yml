@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: Commitments
-vid: commitments
-description: 'Commitments for Canada''s Action Plan on Open Government.'
-hierarchy: 0
-weight: 0
