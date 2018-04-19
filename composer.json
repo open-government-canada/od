@@ -326,6 +326,10 @@
                 "https://www.drupal.org/files/issues/display_cancel_save-2860009-4.patch"
             },
             "drupal/vote_up_down": {
+		"Add AJAX to counter":
+		"https://www.drupal.org/files/issues/2018-04-19/vote_up_down.5.patch",
+		"AJAX counter issues (lang prefix + support for other types)":
+		"https://www.drupal.org/files/issues/2018-04-19/ajax_counter_issues-2913874-5.patch",
                 "VUD disable regex mathching ID allowing for Strings (for compatibility with external_entities, from WxT)":
                 "https://www.drupal.org/files/issues/vud_disable_regex-2910893-4.patch",
                 "Evaluating vote_up_down issue with postgres (OD only, from WxT)":
