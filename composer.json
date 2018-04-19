@@ -246,8 +246,8 @@
         "enable-patching": true,
         "patches": {
             "drupal/address": {
-                "Add field settings for global overrides of required/optional behavior (update to patch 146, see if this is required)":
-                "https://www.drupal.org/files/issues/2514126-102.field-behavior-settings.patch"
+                "Add field settings for global overrides of required/optional behavior (may not be required)":
+                "https://www.drupal.org/files/issues/2514126-146.field-behavior-settings.patch"
             },
             "drupal/external_entities": {
                 "checkFieldAccess on ExternalEntityAccessControlHandler returns boolean when it shouldn't (most recent checks are failing, committed in 8.x-1.x dev branch)":
@@ -268,18 +268,16 @@
                 "https://www.drupal.org/files/issues/2926335-by-sylus-empty-facet-summary-precedence.patch"
             },
             "drupal/flag": {
-                "AJAX link not working when used in views (Flag not used in OD)":
-                "https://www.drupal.org/files/issues/viewsAjaxLink_2846111_11.patch",
                 "New index for flagging performance in views relationships (Flag not used in OD)":
                 "https://www.drupal.org/files/issues/new_index_for_flagging-2888664-12.patch"
             },
             "drupal/group": {
                 "How to redirect to the owning group after adding a gnode? (Redirects user to group homepage instead of node)":
                 "https://www.drupal.org/files/issues/2817109-by-rachel_norfolk-ericras-How-to-redir.patch",
-                "Permission to translate content (restricts translate permission to only group content, revised patch available)":
-                "https://www.drupal.org/files/issues/group-translate_content_permission-2864721-5.patch",
-                "Improve performance of the membership loader (revised patch available)":
-                "https://www.drupal.org/files/issues/2895988-4.patch"
+                "Permission to translate content (restricts translate permission to only group content)":
+                "https://www.drupal.org/files/issues/group-translate_content_permission-2864721-9.patch",
+                "Improve performance of the membership loader":
+                "https://www.drupal.org/files/issues/2895988-6.patch"
             },
             "drupal/google_analytics_reports": {
                 "Use state system for storage of access token":
@@ -292,8 +290,6 @@
                 "https://www.drupal.org/files/issues/google_analytics_reports-view_omits_zero_index-2846360-2.patch",
                 "Error when saving either google_analytics_reports view":
                 "https://www.drupal.org/files/issues/error_when_saving-2850463-2.patch",
-                "Proxy support for Guzzle client not working (not required)":
-                "https://gist.githubusercontent.com/sylus/47915c8e1cc35c3628f0edfcbe8a2a86/raw/9a91ec728966ba3ba7376d193bcb2d18c0f5b43a/proxy_support_for-2877092-2.patch",
                 "Custom Variables or Columns: Custom Dimension XX":
                 "https://www.drupal.org/files/issues/custom_variables_or-2878932-6.patch"
             },
@@ -321,9 +317,7 @@
             },
             "drupal/votingapi": {
                 "Vote list cache tag not invalidated when saving a vote":
-                "https://www.drupal.org/files/issues/2898847-2.patch",
-                "Voting API: Getting an access denied or 403 response using GET method (only partially merged)":
-                "https://www.drupal.org/files/issues/voting_api_getting_an-2872435-10.patch"
+                "https://www.drupal.org/files/issues/2898847-2.patch"
             },
             "drupal/votingapi_widgets": {
                 "Asynchronous JS issues 'function not found' (Fixes conflict with barrating.js five leaf, committed in dev)":
@@ -334,10 +328,6 @@
             "drupal/vote_up_down": {
                 "VUD disable regex mathching ID allowing for Strings (for compatibility with external_entities, from WxT)":
                 "https://www.drupal.org/files/issues/vud_disable_regex-2910893-4.patch",
-                "Add AJAX to counter (revised patch available)":
-                "https://www.drupal.org/files/issues/vote_up_down_6.patch",
-                "AJAX counter issues (lang prefix + support for other types) (OD only)":
-                "https://www.drupal.org/files/issues/ajax_counter_issues-2913874-4.patch",
                 "Evaluating vote_up_down issue with postgres (OD only, from WxT)":
                 "https://www.drupal.org/files/issues/evaluating_vote_up_down-2914766-2.patch"
             }
@@ -347,16 +337,16 @@
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "1.6.4",
         "drupal-composer/drupal-scaffold": "^2.0.0",
-        "drupalwxt/wxt": "2.1.1",
+        "drupalwxt/wxt": "2.1.2",
         "drupal/address": "1.3",
 	"drupal/autologout": "1.0.0",
         "drupal/chosen": "2.4",
-        "drupal/csv_serialization": "1.0",
+        "drupal/csv_serialization": "1.3",
         "drupal/entityqueue": "1.0-alpha7",
         "drupal/external_comment": "1.0.0-rc4",
         "drupal/external_entities": "1.0-alpha2",
         "drupal/facets": "1.0-beta2",
-        "drupal/flag": "4.0-alpha2",
+        "drupal/flag": "4.0-alpha3",
         "drupal/fontawesome":  "1.3",
         "drupal/google_analytics": "2.2",
         "drupal/google_analytics_reports": "3.0-beta1",
@@ -368,9 +358,9 @@
 	"drupal/purge": "3.0.0-beta8",
         "drupal/quicktabs": "3.0-alpha2",
         "drupal/reference_table_formatter": "1.0-rc4",
-        "drupal/redirect": "1.0-beta1",
-        "drupal/search_api": "1.5",
-        "drupal/search_api_solr": "2.0-alpha2",
+        "drupal/redirect": "1.1",
+        "drupal/search_api": "1.7",
+        "drupal/search_api_solr": "2.0-beta1",
 	"drupal/session_limit": "1.0.0-beta1",
         "drupal/votingapi": "3.0-alpha6",
         "drupal/votingapi_widgets": "1.0-alpha3",

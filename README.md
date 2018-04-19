@@ -1,9 +1,5 @@
 # Open Data
 
-[![Build Status][travisci-badge]][travisci]
-
-## Important
-
 This project is still under active development.
 
 [acquia]:               https://acquia.com
