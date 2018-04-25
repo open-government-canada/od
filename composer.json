@@ -317,7 +317,9 @@
             },
             "drupal/votingapi": {
                 "Vote list cache tag not invalidated when saving a vote":
-                "https://www.drupal.org/files/issues/2898847-2.patch"
+                "https://www.drupal.org/files/issues/2898847-2.patch",
+                "Add support for UUID field to votingapi_result table":
+                "https://www.drupal.org/files/issues/2018-04-24/votingapi-uuid-2965603-2-D8.patch"
             },
             "drupal/votingapi_widgets": {
                 "Asynchronous JS issues 'function not found' (Fixes conflict with barrating.js five leaf, committed in dev)":
@@ -333,9 +335,7 @@
                 "VUD disable regex mathching ID allowing for Strings (for compatibility with external_entities, from WxT)":
                 "https://www.drupal.org/files/issues/vud_disable_regex-2910893-4.patch",
                 "Evaluating vote_up_down issue with postgres (OD only, from WxT)":
-                "https://www.drupal.org/files/issues/evaluating_vote_up_down-2914766-2.patch",
-                "Add support for UUID field to votingapi_result table":
-                "https://www.drupal.org/files/issues/2018-04-24/votingapi-uuid-2965603-2-D8.patch"
+                "https://www.drupal.org/files/issues/evaluating_vote_up_down-2914766-2.patch"
             }
         }
     },
