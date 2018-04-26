@@ -18,4 +18,5 @@ dependencies:
   - drupal:od_ext_taxonomy
   - drupal:od_ext_user
   - drupal:od_ext_vote
+  - drupal:od_ext_webform
   - drupal:wxt_ext_page
