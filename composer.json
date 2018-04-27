@@ -249,6 +249,10 @@
                 "Add field settings for global overrides of required/optional behavior (may not be required)":
                 "https://www.drupal.org/files/issues/2514126-146.field-behavior-settings.patch"
             },
+            "drupal/core": {
+                "No reliable method exists for clearing the Twig cache":
+                "https://www.drupal.org/files/issues/2752961-130.patch"
+            },
             "drupal/external_entities": {
                 "checkFieldAccess on ExternalEntityAccessControlHandler returns boolean when it shouldn't (most recent checks are failing, committed in 8.x-1.x dev branch)":
                 "https://www.drupal.org/files/issues/2823684-check-field-access-2.patch",
