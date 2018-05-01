@@ -213,7 +213,7 @@
         "fontawesome": {
             "type"    : "package",
             "package" : {
-                "name"    : "fortawesome/fontawesome",
+                "name"    : "fortawesome/font-awesome",
                 "version" : "4.7.0",
                 "type"    : "drupal-library",
                 "dist"    : {
