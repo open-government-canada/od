@@ -84,13 +84,13 @@
             "type": "package",
             "package": {
                 "name": "ckeditor/autogrow",
-                "version": "4.8.0+2018-04-18-security-patch",
+                "version": "4.8.0",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "ckeditor.autogrow"
                 },
                 "dist": {
-                    "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.8.0+2018-04-18-security-patch.zip",
+                    "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.8.0.zip",
                     "type": "zip"
                 },
                 "require": {
@@ -122,13 +122,13 @@
             "type": "package",
             "package": {
                 "name": "ckeditor/fakeobjects",
-                "version": "4.8.0+2018-04-18-security-patch",
+                "version": "4.8.0",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "ckeditor.fakeobjects"
                 },
                 "dist": {
-                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.8.0+2018-04-18-security-patch.zip",
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.8.0.zip",
                     "type": "zip"
                 },
                 "require": {
@@ -141,13 +141,13 @@
             "type": "package",
             "package": {
                 "name": "ckeditor/image",
-                "version": "4.8.0+2018-04-18-security-patch",
+                "version": "4.8.0",
                 "type": "drupal-library",
                 "extra": {
                     "installer-name": "ckeditor.image"
                 },
                 "dist": {
-                    "url": "https://download.ckeditor.com/image/releases/image_4.8.0+2018-04-18-security-patch.zip",
+                    "url": "https://download.ckeditor.com/image/releases/image_4.8.0.zip",
                     "type": "zip"
                 },
                 "require": {
@@ -685,10 +685,10 @@
         }
     },
     "require": {
-        "ckeditor/autogrow": "4.8.0+2018-04-18-security-patch",
+        "ckeditor/autogrow": "4.8.0",
         "ckeditor/codemirror": "v1.17.3",
-        "ckeditor/fakeobjects": "4.8.0+2018-04-18-security-patch",
-        "ckeditor/image": "4.8.0+2018-04-18-security-patch",
+        "ckeditor/fakeobjects": "4.8.0",
+        "ckeditor/image": "4.8.0",
         "ckeditor/link": "4.6.2",
         "codemirror/codemirror": "5.31.0",
 	    "composer/installers": "^1.2",
