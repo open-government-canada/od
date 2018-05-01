@@ -32,7 +32,7 @@
             "minConnections": 5
         }
     },
-    "repositories": [
+    "repositories": {
         "composer-drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
@@ -540,7 +540,7 @@
                 }
             }
         }
-    ],
+    },
     "scripts": {
         "post-install-cmd": [
             "@composer drupal-scaffold"
