@@ -193,6 +193,40 @@
                 }
             }
         },
+        "dropzone": {
+            "type"    : "package",
+            "package" : {
+                "name"    : "enyo/dropzone",
+                "version" : "v5.3.1",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://gitlab.com/meno/dropzone/builds/artifacts/master/download?job=release",
+                    "type" : "zip"
+                },
+                "source"  : {
+                    "url"       : "https://gitlab.com/meno/dropzone.git",
+                    "type"      : "git",
+                    "reference" : "v5.3.1"
+                }
+            }
+        },
+        "fontawesome": {
+            "type"    : "package",
+            "package" : {
+                "name"    : "fortawesome/fontawesome",
+                "version" : "v4.7.0",
+                "type"    : "drupal-library",
+                "dist"    : {
+                    "url"  : "https://github.com/FortAwesome/Font-Awesome/archive/v4.7.0.zip",
+                    "type" : "zip"
+                },
+                "source"  : {
+                    "url"       : "https://github.com/FortAwesome/Font-Awesome.git",
+                    "type"      : "git",
+                    "reference" : "v4.7.0"
+                }
+            }
+        },
         "jquery.geocomplete": {
             "_webform": true,
             "type": "package",
