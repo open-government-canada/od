@@ -608,13 +608,13 @@
             "html/core": [
                 "type:drupal-core"
             ],
+            "html/libraries/fontawesome": [
+                "fortawesome/font-awesome"
+            ],
             "html/libraries/{$name}" : [
                 "type:drupal-library",
                 "type:bower-asset",
                 "type:npm-asset"
-            ],
-            "html/libraries/fontawesome": [
-                "fortawesome/font-awesome"
             ],
             "html/modules/custom/{$name}": [
                 "drupal/wxt_library"
