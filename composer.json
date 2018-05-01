@@ -197,7 +197,7 @@
             "type"    : "package",
             "package" : {
                 "name"    : "enyo/dropzone",
-                "version" : "v5.3.1",
+                "version" : "5.3.1",
                 "type"    : "drupal-library",
                 "dist"    : {
                     "url"  : "https://gitlab.com/meno/dropzone/builds/artifacts/master/download?job=release",
@@ -214,7 +214,7 @@
             "type"    : "package",
             "package" : {
                 "name"    : "fortawesome/fontawesome",
-                "version" : "v4.7.0",
+                "version" : "4.7.0",
                 "type"    : "drupal-library",
                 "dist"    : {
                     "url"  : "https://github.com/FortAwesome/Font-Awesome/archive/v4.7.0.zip",
@@ -761,7 +761,7 @@
         "drupal/views_templates": "1.0-alpha1",
         "drupal/vud": "1.0-alpha4",
         "drupal/xls_serialization": "1.0-beta1",
-        "enyo/dropzone": "5.5.1",
+        "enyo/dropzone": "^5.3",
         "fortawesome/font-awesome": "^4.7",
         "jquery/geocomplete": "1.7.0",
         "jquery/icheck": "1.0.2 ",
