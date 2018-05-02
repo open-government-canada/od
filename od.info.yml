@@ -11,11 +11,6 @@ base profile: wxt
 # Language
 keep_english: true
 
-# Required modules
-dependencies:
-  # custom (od)
-  - drupal:od_core
-
 themes:
   - bartik
   - seven
