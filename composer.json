@@ -45,6 +45,10 @@
           "type": "vcs",
           "url": "http://github.com/open-data/external_comment.git"
         },
+        "od_bootstrap": {
+          "type": "vcs",
+          "url": "http://github.com/open-data/od_bootstrap.git"
+        },
         "chosen": {
             "type"    : "package",
             "package" : {
@@ -782,6 +786,7 @@
         "drupal/xls_serialization": "1.0-beta1",
         "enyo/dropzone": "^5.3",
         "fortawesome/font-awesome": "^4.7",
+        "harvesthq/chosen": "1.6.1",
         "jquery/geocomplete": "1.7.0",
         "jquery/icheck": "1.0.2 ",
         "jquery/image-picker": "0.3.0",
@@ -792,7 +797,7 @@
         "jquery/timepicker": "1.11.12",
         "jquery/toggles": "4.0.0",
         "jquery/word-and-character-counter": "2.5.1",
-        "harvesthq/chosen": "1.6.1",
+        "open-data/od_bootstrap": "dev-8.x-2.x",
         "progress-tracker/progress-tracker": "1.4.0",
         "signature_pad/signature_pad": "2.3.0"		
     },

@@ -1,6 +1,0 @@
-global-styling:
-  js:
-    js/drupal.od_bootstrap.js: {}
-  css:
-    theme:
-      css/style.css: {}
